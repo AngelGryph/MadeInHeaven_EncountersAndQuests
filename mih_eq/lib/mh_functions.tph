@@ -1,0 +1,327 @@
+// Made in Heaven function library
+
+
+DEFINE_ACTION_FUNCTION mh_run_task
+  INT_VAR
+  no_log	= 0
+  STR_VAR
+  task		= "???"
+BEGIN
+  ACTION_IF NOT FILE_EXISTS "%MOD_FOLDER%/run/%task%.mih"
+  BEGIN
+    PRINT ~Running task %task%...~
+
+    ACTION_IF NOT FILE_EXISTS "%MOD_FOLDER%/tasks/%task%.tpa"
+    BEGIN
+      FAIL ~Command file "%task%.tpa" not found!~
+    END
+
+    ACTION_IF !no_log
+    BEGIN
+      COPY "%MOD_FOLDER%/dummy.mih" "%MOD_FOLDER%/run/%task%.mih"
+    END
+
+    ACTION_IF FILE_EXISTS "%MOD_FOLDER%/language/%LANGUAGE%/%task%.tra"
+    BEGIN
+      WITH_TRA "%MOD_FOLDER%/language/%LANGUAGE%/%task%.tra"
+      BEGIN
+        PRINT "Using tra file %MOD_FOLDER%/language/%LANGUAGE%/%task%.tra..."
+
+        INCLUDE "%MOD_FOLDER%/tasks/%task%.tpa"
+      END
+    END
+    ELSE
+    BEGIN
+      INCLUDE "%MOD_FOLDER%/tasks/%task%.tpa"
+    END
+  END
+  ELSE
+  BEGIN
+    PRINT ~Skipping task %task%...~
+  END
+END
+
+
+DEFINE_ACTION_MACRO mh_process_ini_file
+BEGIN
+  ACTION_IF FILE_EXISTS "%MOD_FOLDER%/setup-%MOD_FOLDER%.ini"
+  BEGIN
+    COPY - "%MOD_FOLDER%/setup-%MOD_FOLDER%.ini" "override"
+      READ_2DA_ENTRIES_NOW ini_array 2
+      FOR (i = 0; i < ini_array; ++i) BEGIN
+        READ_2DA_ENTRY_FORMER ini_array i 0 key
+        READ_2DA_ENTRY_FORMER ini_array i 1 value
+        TO_LOWER key
+        SPRINT $ini_hash(~%key%~) ~%value%~
+      END
+  END
+END
+
+
+DEFINE_PATCH_MACRO mh_remove_all_area_actors
+BEGIN
+  FOR (i = SHORT_AT 0x0058; i > 0; --i)
+  BEGIN
+    LAUNCH_PATCH_FUNCTION fj_are_structure
+      INT_VAR
+      fj_delete_mode            = i - 1
+      STR_VAR
+      fj_structure_type         = "actor"
+    END
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION mh_add_area_actor
+BEGIN
+  PATCH_IF FILE_EXISTS_IN_GAME "%cre_resref%.cre"
+  BEGIN
+    INNER_PATCH_FILE "%cre_resref%.cre"
+    BEGIN
+      READ_STRREF 0x0008 cre_name
+    END
+  END
+  ELSE
+  BEGIN
+    PATCH_FAIL "Adding non-existent actor %cre_resref% to area!"
+  END
+
+  LAUNCH_PATCH_FUNCTION fj_are_structure
+    INT_VAR
+    fj_loc_x                    = x_position
+    fj_loc_y                    = y_position
+    fj_dest_x                   = x_position
+    fj_dest_y                   = y_position
+    fj_orientation              = orientation
+    STR_VAR
+    fj_structure_type           = "actor"
+    fj_name                     = "%cre_name%"
+    fj_cre_resref               = "%cre_resref%"
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION mh_add_area_actors_from_2da
+  STR_VAR
+  path_to_2da           = "none"
+BEGIN
+  PATCH_IF FILE_EXISTS "%path_to_2da%"
+  BEGIN
+    INNER_PATCH_FILE "%path_to_2da%"
+    BEGIN
+      COUNT_2DA_COLS cols
+      COUNT_2DA_ROWS cols rows
+      READ_2DA_ENTRIES_NOW __actor_data cols
+    END
+
+    FOR (i = 0; i < rows; ++i)
+    BEGIN
+      READ_2DA_ENTRY_FORMER __actor_data i 0 cre_resref
+      READ_2DA_ENTRY_FORMER __actor_data i 1 x_position
+      READ_2DA_ENTRY_FORMER __actor_data i 2 y_position
+      READ_2DA_ENTRY_FORMER __actor_data i 3 orientation
+
+      LAUNCH_PATCH_FUNCTION mh_add_area_actor
+        INT_VAR
+        x_position
+        y_position
+        orientation
+        STR_VAR
+        cre_resref
+      END
+    END
+  END
+  ELSE
+  BEGIN
+    PATCH_FAIL "mh_add_area_actors_from_2da called with invalid path %path_to_2da%!"
+  END
+END
+
+
+DEFINE_ACTION_FUNCTION mh_erase_journal_entries_on_bg2_transition
+  STR_VAR
+  dialog    = "dummy"
+BEGIN
+  ACTION_IF GAME_IS "bgt" AND FILE_EXISTS_IN_GAME "aram00.bcs"
+  BEGIN
+    COPY_EXISTING - "%dialog%.dlg" "%MOD_FOLDER%/work"
+      GET_OFFSET_ARRAY trans_array 0x0014 4 0x0010 4 0 0 0x0020
+      PHP_EACH trans_array AS int => trans_offset
+      BEGIN
+        PATCH_IF (LONG_AT (trans_offset) & BIT4)
+    BEGIN
+      READ_SLONG (trans_offset + 0x0008) strref
+      PATCH_IF strref > 0
+      BEGIN
+        DEFINE_ASSOCIATIVE_ARRAY journal_entries
+        BEGIN
+          "%strref%" => "1"
+        END
+      END
+    END
+      END
+
+    COPY_EXISTING "aram00.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      PHP_EACH journal_entries AS strref => int
+      BEGIN
+        REPLACE_TEXTUALLY CASE_SENSITIVE EXACT_MATCH
+	 ~SetGlobal("A6StartARAM00","ARAM00",10)~
+	 ~SetGlobal("A6StartARAM00","ARAM00",10)
+	  EraseJournalEntry(%strref%)~
+      END
+    END
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION mh_prevent_spell_effect_stacking
+  INT_VAR
+  match_opcode        = 142
+BEGIN
+  PATCH_IF ENGINE_IS "iwd1 how totlm"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION CLONE_EFFECT
+      INT_VAR
+      match_opcode
+      multi_match	= 1
+      silent		= 1	// Don't care about warnings
+      opcode		= 254	// Remove effects by resource
+      timing		= 0	// Duration
+      duration		= 0
+      parameter1	= 0
+      parameter2	= 0
+      STR_VAR
+      insert		= "first"
+      resource		= "%DEST_RES%"
+    END
+  END
+
+  PATCH_IF ENGINE_IS "bgee bg2ee"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION CLONE_EFFECT
+      INT_VAR
+      match_opcode
+      multi_match	= 1
+      silent		= 1	// Don't care about warnings
+      opcode		= 321	// Remove effects by resource
+      timing		= 0	// Duration
+      duration		= 0
+      parameter1	= 0
+      parameter2	= 0
+      STR_VAR
+      insert		= "first"
+      resource		= "%DEST_RES%"
+    END
+  END
+
+  PATCH_IF ENGINE_IS "bg2 tob"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION CLONE_EFFECT
+      INT_VAR
+      match_opcode
+      multi_match	= 1
+      silent		= 1	// Don't care about warnings
+      opcode		= 206	// Spell Effect: Immunity Spell
+      parameter1	= RESOLVE_STR_REF ("Multiple castings of this spell have no effect.")
+      parameter2	= 0	// Default (IWD1)
+      STR_VAR
+      insert		= "last"
+      resource		= "%DEST_RES%"
+    END
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION mh_make_magical
+  INT_VAR
+  enchantment   = "-1"
+  lore          = "-1"
+  flag_silver	= 0
+  flag_iron	= 0
+BEGIN
+  WRITE_LONG    0x0018 (THIS | BIT6)
+
+  PATCH_IF flag_silver
+  BEGIN
+    WRITE_LONG    0x0018 (THIS | BIT8)
+  END
+
+  PATCH_IF flag_iron
+  BEGIN
+    WRITE_LONG    0x0018 (THIS | BIT9)
+  END
+
+
+  PATCH_IF enchantment >= 0
+  BEGIN
+    WRITE_LONG  0x0060 enchantment
+  END
+
+  PATCH_IF lore >= 0
+  BEGIN
+    WRITE_SHORT 0x0042 lore
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION mh_make_summon
+  INT_VAR
+  power_level	= "-1"
+BEGIN
+  WRITE_LONG	0x0010 (THIS | BIT1)	// No corpse
+  WRITE_LONG	0x0014 0		// XP
+  WRITE_LONG	0x001c 0		// Gold
+  WRITE_BYTE	0x0270 IDS_OF_SYMBOL("ea" "neutral")
+
+  // Play nice with Remove Summoning Cap from D0Tweak
+  PATCH_IF FILE_EXISTS "override/no_summoning_cap.d0"
+  BEGIN
+    WRITE_BYTE	0x0275 20	// D0Tweak alt. value
+  END
+  ELSE
+  BEGIN
+    WRITE_BYTE	0x0275 IDS_OF_SYMBOL("gender" "summoned")
+  END
+
+  // Add unstealable&undroppable flags to carried items
+  GET_OFFSET_ARRAY itm_array CRE_V10_ITEMS
+  PHP_EACH itm_array AS int => itm_offset
+  BEGIN
+    WRITE_LONG (itm_offset + 0x0010) (THIS | (BIT1 | BIT3))
+  END
+
+  // Handle power level if specified
+  PATCH_IF (power_level >= 0)
+  BEGIN
+    WRITE_LONG	0x0018 power_level
+  END
+END
+
+
+DEFINE_PATCH_FUNCTION mh_make_illusion
+  INT_VAR
+  power_level	= "-1"
+BEGIN
+  WRITE_LONG	0x0010 (THIS | BIT1)	// No corpse
+  WRITE_LONG	0x0014 0		// XP
+  WRITE_LONG	0x001c 0		// Gold
+  WRITE_BYTE	0x0270 IDS_OF_SYMBOL("ea" "neutral")
+  WRITE_BYTE	0x0275 IDS_OF_SYMBOL("gender" "illusionary")
+
+  // Add unstealable&undroppable flags to carried items
+  GET_OFFSET_ARRAY itm_array CRE_V10_ITEMS
+  PHP_EACH itm_array AS int => itm_offset
+  BEGIN
+    WRITE_LONG (itm_offset + 0x0010) (THIS | (BIT1 | BIT3))
+  END
+
+  // Handle power level if specified
+  PATCH_IF (power_level >= 0)
+  BEGIN
+    WRITE_LONG	0x0018 power_level
+  END
+END
+
+
