@@ -1,0 +1,58 @@
+// Enhanced Dread Wolves
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#acfir.itm"
+BEGIN
+  COPY "%MOD_FOLDER%/items/mh#acfir.itm" "override"
+
+  ADD_SPELL "%MOD_FOLDER%/spells/mh#afrdn.spl" 3 1 MH_ACID_FIRE_DOWN
+  ADD_SPELL "%MOD_FOLDER%/spells/mh#afrup.spl" 3 1 MH_ACID_FIRE_RISE
+END
+
+COMPILE "%MOD_FOLDER%/scripts/mh#wlfdr.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+COPY_EXISTING "p1-10.itm" "override/mh#wlfdr.itm"
+  LAUNCH_PATCH_FUNCTION ADD_ITEM_EQEFFECT
+    INT_VAR
+    opcode		= 98	// HP: Regeneration
+    target		= 1	// Self
+    timing		= 2	// While equipped
+    parameter1		= 2
+    parameter2		= 3
+  END
+
+  LAUNCH_PATCH_FUNCTION ADD_ITEM_EFFECT
+    INT_VAR
+    type		= 1	// Melee
+    opcode		= 78	// Disease
+    target		= 2	// Pre-target
+    duration		= 2400
+    parameter1		= 360
+    parameter2		= 3
+    saving_throw	= 4	// Death/Poison
+  END
+
+  LAUNCH_PATCH_FUNCTION ADD_ITEM_EFFECT
+    INT_VAR
+    type		= 1	// Melee
+    opcode		= 142	// Graphics: Display SFX Icon
+    target		= 2	// Pre-target
+    duration		= 2400
+    parameter2		= 7
+    saving_throw	= 4	// Death/Poison
+  END
+
+
+COPY_EXISTING "wolfdr.cre" "override"
+              "wolfd1.cre" "override"
+              "wolfdr01.cre" "override"
+  WRITE_BYTE 0x0271 IDS_OF_SYMBOL("general" "undead")
+  WRITE_ASCII SCRIPT_OVERRIDE "mh#wlfdr"
+
+  REPLACE_CRE_ITEM "minhp1" #0 #0 #0 "unstealable&undroppable" "amulet"
+  REPLACE_CRE_ITEM "ring95" #0 #0 #0 "unstealable&undroppable" "lring"
+  REPLACE_CRE_ITEM "trollimm" #0 #0 #0 "unstealable&undroppable" "rring"
+  REPLACE_CRE_ITEM "mh#wlfdr" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
+
+  IF_EXISTS	// Not all are in all games.
+
+

@@ -1,0 +1,31 @@
+IF HasItem("minhp1", Myself)
+   !Global("mh#DreadWolf_state", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    DestroyItem("minhp1")
+END
+
+IF HasItem("mh#acfir", Myself)
+   !Global("mh#DreadWolf_state", "LOCALS", 1)
+THEN
+  RESPONSE #100
+    DestroyItem("mh#acfir")
+END
+
+IF HPLT(Myself, 2)
+   Global("mh#DreadWolf_state", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#DreadWolf_state", "LOCALS", 1)
+    ApplySpell(Myself, MH_ACID_FIRE_DOWN)
+    PlayDead(300)
+END
+
+IF Global("mh#DreadWolf_state", "LOCALS", 1)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#DreadWolf_state", "LOCALS", 2)
+    ApplySpell(Myself, MH_ACID_FIRE_RISE)
+END
+
+
