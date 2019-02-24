@@ -1,0 +1,15 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself), 10)
+  !GlobalTimerNotExpired("mh#WinterWolf_breath", "LOCALS")
+THEN
+  RESPONSE #40
+    SetGlobalTimer("mh#WinterWolf_breath", "LOCALS", 60)
+    FaceObject(LastSeenBy(Myself))
+    ForceSpell(LastSeenBy(Myself), MH_WINTER_WOLF_BREATH)
+    Wait(2)
+  RESPONSE #60
+    Continue()
+END
+
+

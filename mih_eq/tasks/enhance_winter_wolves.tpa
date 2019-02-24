@@ -1,0 +1,36 @@
+// Enhanced Winter Wolves
+
+ADD_SPELL "%MOD_FOLDER%/spells/mh#frost.spl" 3 1 MH_WINTER_WOLF_BREATH
+  SAY NAME1 "Frost Breath"
+
+
+COPY_EXISTING "p2-8.itm" "override/mh#wlfwi.itm"
+  LAUNCH_PATCH_FUNCTION ADD_ITEM_EFFECT
+    INT_VAR
+    type		= 1	// Melee
+    opcode		= 12	// HP: Damage
+    target		= 2	// Pre-target
+    timing		= 1	// Permanent
+    parameter2		= 131072
+    dicenumber		= 1
+    dicesize		= 3
+  END
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#wlfwi.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_EXISTING "wolfwi.cre" "override"
+              "wolfwi01.cre" "override"
+              "wolfwisu.cre" "override"
+              "wolfwwsu.cre" "override"
+	      "obsice03.cre" "override"
+  WRITE_ASCII SCRIPT_OVERRIDE "mh#wlfwi"
+  WRITE_ASCII SCRIPT_DEFAULT "wtasight"
+
+  REPLACE_CRE_ITEM "mh#wlfwi" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
+  REMOVE_CRE_ITEM "wolfwi1" "wolfwi2"
+
+  IF_EXISTS	// Different versions in games.
+
+
