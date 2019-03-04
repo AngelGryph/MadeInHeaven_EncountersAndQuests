@@ -1,0 +1,18 @@
+// Enhanced Mutamin's Garden
+
+COPY_EXISTING "basilg.cre" "override/mh#bgcut.cre"
+  WRITE_ASCII DEATHVAR "mh#CutSceneBasilisk" #32
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#bgcut.baf"
+        "%MOD_FOLDER%/dialog/mutamins_garden.d"
+ USING "%MOD_FOLDER%/language/%LANGUAGE%/mutamins_garden.tra"
+
+
+COPY_EXISTING "%MutaminsGarden%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/mutamins_garden.2da"
+  END
+
+

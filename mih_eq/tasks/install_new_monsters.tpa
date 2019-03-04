@@ -1,0 +1,27 @@
+// Young Black Dragon
+
+COPY_EXISTING "s1-8.itm" "override/mh#drbly.itm"
+  LAUNCH_PATCH_FUNCTION mh_make_magical
+    INT_VAR
+    enchantment		= 3
+  END
+
+  LAUNCH_PATCH_FUNCTION ALTER_ITEM_HEADER
+    INT_VAR
+    header_type		= 1	// Melee
+    dicenumber		= 3
+  END
+
+
+ADD_SPELL "%MOD_FOLDER%/spells/mh#black.spl" 3 1 MH_BLACK_DRAGON_BREATH
+  SAY NAME1 "Acid Breath"
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#drbly.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#drbly.cre" "override"
+  SAY NAME1 "Young Black Dragon"
+  SAY NAME2 "Young Black Dragon"
+
+

@@ -1,0 +1,17 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself), 30)
+  !GlobalTimerNotExpired("mh#BlackDragon_breath", "LOCALS")
+  GlobalLT("mh#BlackDragon_breath_uses", "LOCALS", 3)
+THEN
+  RESPONSE #40
+    SetGlobalTimer("mh#BlackDragon_breath", "LOCALS", 60)
+    IncrementGlobal("mh#BlackDragon_breath_uses", "LOCALS", 1)
+    FaceObject(LastSeenBy(Myself))
+    ForceSpell(LastSeenBy(Myself), MH_BLACK_DRAGON_BREATH)
+    Wait(2)
+  RESPONSE #60
+    Continue()
+END
+
+
