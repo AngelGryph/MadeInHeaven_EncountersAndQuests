@@ -1,0 +1,15 @@
+IF
+  HPPercentLT(Myself,100)
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 30)
+  !GlobalTimerNotExpired("mh#BlazingBones_blaze", "LOCALS")
+THEN
+  RESPONSE 70
+    SetGlobalTimer("mh#BlazingBones_blaze", "LOCALS", ONE_TURN)
+    ForceSpell(Myself, MH_BONE_BLAZE)
+    PlayDead(6)
+  RESPONSE 30
+    Continue()
+END
+
+

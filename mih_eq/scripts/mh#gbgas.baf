@@ -3,7 +3,7 @@ IF
   Delay(15)
 THEN
   RESPONSE #100
-    ForceSpell(Myself,MH_BASILISK_GASCLOUD)
+    ForceSpell(Myself, MH_BASILISK_GASCLOUD)
 END
 
 

@@ -1,6 +1,9 @@
 // Young Black Dragon
 
 COPY_EXISTING "s1-8.itm" "override/mh#drbly.itm"
+  SAY NAME1 ~Attack~
+  SAY NAME2 ~Attack~
+
   LAUNCH_PATCH_FUNCTION mh_make_magical
     INT_VAR
     enchantment		= 3
@@ -14,14 +17,33 @@ COPY_EXISTING "s1-8.itm" "override/mh#drbly.itm"
 
 
 ADD_SPELL "%MOD_FOLDER%/spells/mh#black.spl" 3 1 MH_BLACK_DRAGON_BREATH
-  SAY NAME1 "Acid Breath"
+  SAY NAME1 ~Acid Breath~
 
 
 COMPILE "%MOD_FOLDER%/scripts/mh#drbly.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY "%MOD_FOLDER%/actors/mh#drbly.cre" "override"
-  SAY NAME1 "Young Black Dragon"
-  SAY NAME2 "Young Black Dragon"
+  SAY NAME1 ~Young Black Dragon~
+  SAY NAME2 ~Young Black Dragon~
+
+
+// Blazing Bones
+
+COPY "%MOD_FOLDER%/items/mh#blaze.itm" "override"
+  SAY NAME1 ~Attack~
+  SAY NAME2 ~Attack~
+
+
+ADD_SPELL "%MOD_FOLDER%/spells/mh#blaze.spl" 3 1 MH_BONE_BLAZE
+  SAY NAME1 ~Bone Blaze~
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#blaze.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#blaze.cre" "override"
+  SAY NAME1 ~Blazing Bones~
+  SAY NAME2 ~Blazing Bones~
 
 

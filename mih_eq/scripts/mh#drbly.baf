@@ -1,6 +1,6 @@
 IF
   See(NearestEnemyOf(Myself))
-  Range(NearestEnemyOf(Myself), 30)
+  Range(LastSeenBy(Myself), 30)
   !GlobalTimerNotExpired("mh#BlackDragon_breath", "LOCALS")
   GlobalLT("mh#BlackDragon_breath_uses", "LOCALS", 3)
 THEN

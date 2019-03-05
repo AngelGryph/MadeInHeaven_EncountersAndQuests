@@ -1,6 +1,6 @@
 IF
   See(NearestEnemyOf(Myself))
-  Range(NearestEnemyOf(Myself), 10)
+  Range(LastSeenBy(Myself), 10)
   !GlobalTimerNotExpired("mh#WinterWolf_breath", "LOCALS")
 THEN
   RESPONSE #40
