@@ -1,0 +1,17 @@
+IF
+  !See(NearestEnemyOf(Myself))
+  NotStateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    Hide()
+END
+
+IF
+  Range(NearestEnemyOf(Myself), 15)
+  Delay(15)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself, MH_MUSTARD_JELLY_VAPOR)
+END
+
+

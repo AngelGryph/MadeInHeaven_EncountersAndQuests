@@ -1,0 +1,57 @@
+// Enhanced Mustard Jellies
+
+ADD_SPELL "%MOD_FOLDER%/spells/mh#musjl.spl" 3 1 MH_MUSTARD_JELLY_VAPOR
+  SAY NAME1 "Gas Cloud"
+
+
+COPY "%MOD_FOLDER%/items/mh#musjl.itm" "override"
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#musjl.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_EXISTING "jellmu.cre" "override"
+              "jellmul.cre" "override"
+              "jellymu.cre" "override"
+              "bdjellmu.cre" "override"
+              "bpjlmu01.cre" "override"
+	      "jelmus01.cre" "override"
+	      "jellmusu.cre" "override"
+  REPLACE_CRE_ITEM "mh#musjl" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
+
+  WRITE_LONG	0x0014 4000	// XP value
+  WRITE_BYTE	0x0045 90	// Hide in shadows
+  WRITE_BYTE	0x0053 2	// # of attacks
+  WRITE_BYTE	0x005d 10	// Magic resistance
+  WRITE_BYTE	0x0068 90	// Stealth
+
+  WRITE_ASCII	SCRIPT_CLASS "mh#musjl"
+  WRITE_ASCII	SCRIPT_DEFAULT "wtasight"
+
+  LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
+    INT_VAR
+    opcode		= 63	// State: Infravision
+    target		= 1	// Self
+    timing		= 9	// Permanent after death
+    parameter2		= 1
+  END
+
+  LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
+    INT_VAR
+    opcode		= 83	// Protection: From Projectile
+    target		= 1	// Self
+    timing		= 9	// Permanent after death
+    parameter2		= IDS_OF_SYMBOL("projectl" "magicmis")
+  END
+
+  LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
+    INT_VAR
+    opcode		= 292	// Protection: Backstab
+    target		= 1	// Self
+    timing		= 9	// Permanent after death
+    parameter2		= 1
+  END
+
+  IF_EXISTS
+
+

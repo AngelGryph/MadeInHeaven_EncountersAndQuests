@@ -63,17 +63,6 @@ LANGUAGE ~English~
 	 ~%MOD_FOLDER%/language/english/setup-%MOD_FOLDER%.tra~
 
 
-// Enhanced Xvart Village
-
-BEGIN ~Enhanced Xvart Village~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_xvart_village"
-END
-
-
 // Enhanced Mutamin's Garden
 
 BEGIN ~Enhanced Mutamin's Garden~
@@ -88,6 +77,34 @@ END
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_mutamins_garden"
+END
+
+
+// Enhanced Ulcaster Ruins
+
+BEGIN ~Enhanced Ulcaster Ruins~
+GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_new_monsters"
+END
+
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_ulcaster_ruins"
+END
+
+
+// Enhanced Xvart Village
+
+BEGIN ~Enhanced Xvart Village~
+GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_xvart_village"
 END
 
 
@@ -113,6 +130,17 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// Enhanced Mustard Jellies
+
+BEGIN ~Enhanced Mustard Jellies~
+GROUP ~Enhanced Monsters~
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_mustard_jellies"
+END
+
+
 // Enhanced Winter Wolves
 
 BEGIN ~Enhanced Winter Wolves~
@@ -121,6 +149,17 @@ GROUP ~Enhanced Monsters~
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_winter_wolves"
+END
+
+
+// Enhanced Wraith Spiders
+
+BEGIN ~Enhanced Wraith Spiders~
+GROUP ~Enhanced Monsters~
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_wraith_spiders"
 END
 
 

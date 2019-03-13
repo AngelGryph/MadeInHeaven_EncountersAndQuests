@@ -3,7 +3,7 @@ APPEND "kirian"
 IF ~~
 BEGIN whatever
   SAY @5
-    COPY_TRANS "kirian" 2
+    COPY_TRANS SAFE "kirian" 2
 END
 
 IF ~~

@@ -1,0 +1,13 @@
+// Enhanced Wraith Spiders
+
+COPY "%MOD_FOLDER%/items/mh#spdwr.itm" "override"
+
+
+COPY_EXISTING "spidwr.cre" "override"
+              "spidwr01.cre" "override"
+              "ttspid.cre" "override"
+  REPLACE_CRE_ITEM "mh#spdwr" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
+
+  IF_EXISTS
+
+
