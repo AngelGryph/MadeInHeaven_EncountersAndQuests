@@ -1,9 +1,6 @@
 // Young Black Dragon
 
 COPY_EXISTING "s1-8.itm" "override/mh#drbly.itm"
-  SAY NAME1 ~Attack~
-  SAY NAME2 ~Attack~
-
   LAUNCH_PATCH_FUNCTION mh_make_magical
     INT_VAR
     enchantment		= 3
@@ -16,34 +13,50 @@ COPY_EXISTING "s1-8.itm" "override/mh#drbly.itm"
   END
 
 
-ADD_SPELL "%MOD_FOLDER%/spells/mh#black.spl" 3 1 MH_BLACK_DRAGON_BREATH
-  SAY NAME1 ~Acid Breath~
+LAUNCH_ACTION_FUNCTION mh_install_spell
+  INT_VAR
+  spell_name_strref	= RESOLVE_STR_REF(@0)
+  spell_level		= 1
+  STR_VAR
+  spell_res		= "mh#black"
+  spell_ids		= "MH_BLACK_DRAGON_BREATH"
+  spell_type		= "innate"
+  spell_dir		= "spells"
+  item_dir		= "none"
+END
 
 
 COMPILE "%MOD_FOLDER%/scripts/mh#drbly.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY "%MOD_FOLDER%/actors/mh#drbly.cre" "override"
-  SAY NAME1 ~Young Black Dragon~
-  SAY NAME2 ~Young Black Dragon~
+  SAY NAME1 @1
+  SAY NAME2 @1
 
 
 // Blazing Bones
 
 COPY "%MOD_FOLDER%/items/mh#blaze.itm" "override"
-  SAY NAME1 ~Attack~
-  SAY NAME2 ~Attack~
 
 
-ADD_SPELL "%MOD_FOLDER%/spells/mh#blaze.spl" 3 1 MH_BONE_BLAZE
-  SAY NAME1 ~Bone Blaze~
+LAUNCH_ACTION_FUNCTION mh_install_spell
+  INT_VAR
+  spell_name_strref	= RESOLVE_STR_REF(@2)
+  spell_level		= 1
+  STR_VAR
+  spell_res		= "mh#blaze"
+  spell_ids		= "MH_BONE_BLAZE"
+  spell_type		= "innate"
+  spell_dir		= "spells"
+  item_dir		= "none"
+END
 
 
 COMPILE "%MOD_FOLDER%/scripts/mh#blaze.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY "%MOD_FOLDER%/actors/mh#blaze.cre" "override"
-  SAY NAME1 ~Blazing Bones~
-  SAY NAME2 ~Blazing Bones~
+  SAY NAME1 @3
+  SAY NAME2 @3
 
 

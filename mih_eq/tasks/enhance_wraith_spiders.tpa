@@ -6,7 +6,12 @@ COPY "%MOD_FOLDER%/items/mh#spdwr.itm" "override"
 COPY_EXISTING "spidwr.cre" "override"
               "spidwr01.cre" "override"
               "ttspid.cre" "override"
+  WRITE_ASCII SCRIPT_DEFAULT "wtasight"
+
   REPLACE_CRE_ITEM "mh#spdwr" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
+  REPLACE_CRE_ITEM "mh#spdwr" #0 #0 #0 "unstealable&undroppable" "weapon2"
+  REPLACE_CRE_ITEM "mh#spdwr" #0 #0 #0 "unstealable&undroppable" "weapon3"
+  REPLACE_CRE_ITEM "mh#spdwr" #0 #0 #0 "unstealable&undroppable" "weapon4"
 
   IF_EXISTS
 

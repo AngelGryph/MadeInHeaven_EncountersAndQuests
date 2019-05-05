@@ -1,9 +1,0 @@
-IF
-  Range(NearestEnemyOf(Myself),15)
-  Delay(15)
-THEN
-  RESPONSE #100
-    ForceSpell(Myself, MH_BASILISK_GASCLOUD)
-END
-
-
