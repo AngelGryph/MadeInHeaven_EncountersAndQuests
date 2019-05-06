@@ -110,7 +110,6 @@ END
 
 // Enhanced Minor BG1 Quests
 
-/*
 BEGIN ~Enhanced Minor BG1 Quests~
 GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
 
@@ -118,7 +117,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_minor_bg1_quests"
 END
-*/
 
 
 // Enhanced Ankhegs

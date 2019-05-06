@@ -1,0 +1,50 @@
+// Spawn Gerde and her ankhegs later.
+
+COPY_EXISTING "%FishingVillage%.are" "override"
+  FOR (SET i = 11; i >= 5; --i)
+  BEGIN
+    LAUNCH_PATCH_FUNCTION fj_are_structure
+      INT_VAR
+      fj_delete_mode	= i - 1
+      STR_VAR
+      fj_structure_type	= "actor"
+    END
+  END
+
+
+COMPILE "%MOD_FOLDER%/dialog/gerde_fenten.d" USING "%MOD_FOLDER%/dummy.tra"
+
+
+EXTEND_BOTTOM "%FishingVillage_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_gerde.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+// Spawn Quint's ankheg later and make Nester's dagger unique.
+
+COPY_EXISTING "%WyrmsCrossing%.are" "override"
+  LAUNCH_PATCH_FUNCTION fj_are_structure
+    INT_VAR
+    fj_delete_mode	= 5
+    STR_VAR
+    fj_structure_type	= "actor"
+  END
+
+
+EXTEND_BOTTOM "%WyrmsCrossing_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_quinns_ankheg.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_LARGE "%MOD_FOLDER%/bams/mh#nesdg.bam" "override"
+
+
+COPY_EXISTING "dagg06.itm" "override"
+  SAY IDENTIFIED_DESC @0
+
+  WRITE_ASCII 0x003a "mh#nesdg"
+
+  LAUNCH_PATCH_FUNCTION ALTER_ITEM_HEADER
+    INT_VAR
+    thac0_bonus		= 1
+    STR_VAR
+    icon		= "mh#nesdg"
+  END
+
+

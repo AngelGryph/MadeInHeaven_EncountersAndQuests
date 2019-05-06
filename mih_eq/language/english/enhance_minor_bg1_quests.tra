@@ -1,0 +1,13 @@
+@0    = ~This is Nester's dagger which you recovered from the ankheg that slew him.  A masterwork weapon, this dagger seems to have been treasured and taken really good care of.  Perhaps if you give this to Quinn, he can have some closure.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d4 (piercing)
+Speed Factor: 2
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
