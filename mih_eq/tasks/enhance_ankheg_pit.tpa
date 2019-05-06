@@ -1,0 +1,73 @@
+// Enhanced Ankheg Pit encounter (BG1)
+
+COPY_EXISTING "ankheg.cre" "override/mh#ankh1.cre"
+  WRITE_LONG 0x0014 650	// XP gained
+  WRITE_SHORT 0x0024 56	// Current HP
+  WRITE_SHORT 0x0026 56	// Current HP
+
+  WRITE_BYTE 0x0234 7	// Level/HD
+  WRITE_BYTE 0x0238 18	// Strength
+  WRITE_BYTE 0x0239 25	// Strength EX
+
+  WRITE_ASCII DEATHVAR "mh#RandomAnkheg" #32
+
+
+COPY_EXISTING "ankheg.cre" "override/mh#ankh2.cre"
+  WRITE_LONG 0x0014 420	// XP gained
+  WRITE_SHORT 0x0024 48	// Current HP
+  WRITE_SHORT 0x0026 48	// Current HP
+
+  WRITE_BYTE 0x0234 6	// Level/HD
+  WRITE_BYTE 0x0238 18	// Strength
+  WRITE_BYTE 0x0239 01	// Strength EX
+  WRITE_BYTE 0x023d 15	// Constitution
+
+  WRITE_ASCII DEATHVAR "mh#RandomAnkheg" #32
+
+
+COPY_EXISTING "ankheg.cre" "override/mh#ankh3.cre"
+  WRITE_LONG 0x0014 300	// XP gained
+  WRITE_SHORT 0x0024 40	// Current HP
+  WRITE_SHORT 0x0026 40	// Current HP
+
+  WRITE_BYTE 0x0234 5	// Level/HD
+  WRITE_BYTE 0x0238 17	// Strength
+  WRITE_BYTE 0x023d 15	// Constitution
+
+  WRITE_ASCII DEATHVAR "mh#RandomAnkheg" #32
+
+
+COPY_EXISTING "ankheg.cre" "override/mh#ankh4.cre"
+  WRITE_LONG 0x0014 240	// XP gained
+  WRITE_SHORT 0x0024 40	// Current HP
+  WRITE_SHORT 0x0026 40	// Current HP
+
+  WRITE_BYTE 0x0234 4	// Level/HD
+  WRITE_BYTE 0x0238 16	// Strength
+  WRITE_BYTE 0x023d 13	// Constitution
+
+  WRITE_ASCII DEATHVAR "mh#RandomAnkheg" #32
+
+
+COPY_EXISTING "ankheg.cre" "override/mh#ankh5.cre"
+  WRITE_LONG 0x0014 175	// XP gained
+  WRITE_SHORT 0x0024 32	// Current HP
+  WRITE_SHORT 0x0026 32	// Current HP
+
+  WRITE_BYTE 0x0234 3	// Level/HD
+  WRITE_BYTE 0x0238 12	// Strength
+  WRITE_BYTE 0x023d 11	// Constitution
+
+  WRITE_ASCII DEATHVAR "mh#RandomAnkheg" #32
+
+
+COPY_EXISTING "%FishingVillage_AnkhegPit%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/ankheg_pit.2da"
+  END
+
+
+EXTEND_BOTTOM "%FishingVillage_AnkhegPit_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_random_ankhegs.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+

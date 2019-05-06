@@ -108,6 +108,39 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// Enhanced Minor BG1 Quests
+
+/*
+BEGIN ~Enhanced Minor BG1 Quests~
+GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_minor_bg1_quests"
+END
+*/
+
+
+// Enhanced Ankhegs
+
+BEGIN ~Enhanced Ankhegs~
+GROUP ~Enhanced Monsters~
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_ankhegs"
+END
+
+
+ACTION_IF GAME_INCLUDES "bg1"
+BEGIN
+  LAUNCH_ACTION_FUNCTION mh_run_task
+    STR_VAR
+    task		= "enhance_ankheg_pit"
+  END
+END
+
+
 // Enhanced Basilisks
 
 BEGIN ~Enhanced Basilisks~
