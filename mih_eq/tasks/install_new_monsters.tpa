@@ -60,3 +60,19 @@ COPY "%MOD_FOLDER%/actors/mh#blaze.cre" "override"
   SAY NAME2 @3
 
 
+// Hags - Annis & Green Hag
+
+COMPILE "%MOD_FOLDER%/scripts/mh#annis.baf"
+        "%MOD_FOLDER%/scripts/mh#grhag.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#annis.cre" "override"
+  SAY NAME1 "Annis"
+  SAY NAME2 "Annis"
+
+
+COPY "%MOD_FOLDER%/actors/mh#grhag.cre" "override"
+  SAY NAME1 "Green Hag"
+  SAY NAME2 "Green Hag"
+
+

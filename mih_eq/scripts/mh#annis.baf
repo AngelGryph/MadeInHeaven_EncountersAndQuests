@@ -1,0 +1,106 @@
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_STONE_SKIN)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_STONE_SKIN)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_BLUR)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_BLUR)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+  Or(3)
+    StateCheck(LastSeenBy(Myself), STATE_HASTED)
+    StateCheck(LastSeenBy(Myself), STATE_MIRRORIMAGE)
+    StateCheck(LastSeenBy(Myself), STATE_BLUR)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_DISPEL_MAGIC)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_HOLD_PERSON)
+  NotStateCheck(LastSeenBy(Myself), STATE_HELPLESS)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_HOLD_PERSON)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MONSTER_SUMMONING_2)
+  NumCreatureLT([ENEMY], 4)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MONSTER_SUMMONING_2)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MONSTER_SUMMONING_1)
+  NumCreatureLT([ENEMY], 4)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MONSTER_SUMMONING_1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_COLOR_SPRAY)
+  NotStateCheck(LastSeenBy(Myself), STATE_HELPLESS)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_COLOR_SPRAY)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(LastAttackerOf(Myself))
+  HaveSpell(WIZARD_BURNING_HANDS)
+  Range(LastSeenBy(Myself), 5)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BURNING_HANDS)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(LastAttackerOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #70
+    Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(LastAttackerOf(Myself))
+  HaveSpell(WIZARD_RAY_OF_ENFEEBLEMENT)
+THEN
+  RESPONSE #30
+    Spell(LastSeenBy(Myself), WIZARD_RAY_OF_ENFEEBLEMENT)
+  RESPONSE #70
+    Continue()
+END
+

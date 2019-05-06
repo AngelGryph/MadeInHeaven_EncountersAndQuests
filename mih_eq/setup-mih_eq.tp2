@@ -73,7 +73,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   task			= "install_new_monsters"
 END
 
-
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_mutamins_garden"
@@ -90,7 +89,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   task			= "install_new_monsters"
 END
 
-
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_ulcaster_ruins"
@@ -105,6 +103,22 @@ GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_xvart_village"
+END
+
+
+// Enhanced Zombie Farm
+
+BEGIN ~Enhanced Zombie Farm~
+GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_new_monsters"
+END
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_zombie_farm"
 END
 
 
@@ -128,7 +142,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_ankhegs"
 END
-
 
 ACTION_IF GAME_INCLUDES "bg1"
 BEGIN
