@@ -1,0 +1,34 @@
+// Cloakwood Assassins
+
+COPY_EXISTING "scrl3b.itm" "override/mh#cwass.itm"
+  SAY UNIDENTIFIED_DESC @0
+ 
+
+COPY "%MOD_FOLDER%/actors/mh#drikx.cre" "override"
+  SAY NAME1 @1
+  SAY NAME2 @1
+
+
+COPY "%MOD_FOLDER%/actors/mh#gnung.cre" "override"
+  SAY NAME1 @2
+  SAY NAME2 @2
+
+
+COPY "%MOD_FOLDER%/actors/mh#strok.cre" "override"
+  SAY NAME1 @3
+  SAY NAME2 @3
+
+
+COMPILE "%MOD_FOLDER%/dialog/cloakwood_assassins.d"
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#cwass.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_EXISTING "%CloakwoodWyverns%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/cloakwood_assassins.2da"
+  END
+
+

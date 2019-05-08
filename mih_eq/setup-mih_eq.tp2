@@ -122,9 +122,9 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
-// Real Spider Plague
+// A Real Spider Plague
 
-BEGIN ~Real Spider Plague~
+BEGIN ~A Real Spider Plague~
 GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
@@ -135,6 +135,17 @@ END
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_spider_plague"
+END
+
+
+// Cloakwood Assassins
+
+BEGIN ~Cloakwood Assassins~
+GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_cloakwood_assassins"
 END
 
 
