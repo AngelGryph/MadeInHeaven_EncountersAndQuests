@@ -1,0 +1,12 @@
+IF
+  Global("SurgeonStory", "GLOBAL", 2)
+  Dead("Davaeorn")
+  !Dead("mh#SurgeonCloakwood")
+  Global("mh#SpawnedSurgeonBG2300", "MYAREA", 0)
+THEN
+  RESPONSE #100
+    CreateCreature("mh#surg2", [1500.3100], 1)
+    SetGlobal("mh#SpawnedSurgeonBG2300", "MYAREA", 1)
+END
+
+

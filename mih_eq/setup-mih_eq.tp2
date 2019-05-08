@@ -66,7 +66,7 @@ LANGUAGE ~English~
 // Enhanced Mutamin's Garden
 
 BEGIN ~Enhanced Mutamin's Garden~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -82,7 +82,7 @@ END
 // Enhanced Ulcaster Ruins
 
 BEGIN ~Enhanced Ulcaster Ruins~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -98,7 +98,7 @@ END
 // Enhanced Xvart Village
 
 BEGIN ~Enhanced Xvart Village~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -109,7 +109,7 @@ END
 // Enhanced Zombie Farm
 
 BEGIN ~Enhanced Zombie Farm~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -125,7 +125,7 @@ END
 // A Real Spider Plague
 
 BEGIN ~A Real Spider Plague~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -141,7 +141,7 @@ END
 // Cloakwood Assassins
 
 BEGIN ~Cloakwood Assassins~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -149,10 +149,21 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// The Surgeon's Plight
+
+BEGIN ~The Surgeon's Plight~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_surgeons_plight"
+END
+
+
 // Enhanced Minor BG1 Quests
 
 BEGIN ~Enhanced Minor BG1 Quests~
-GROUP ~BG1 Encounters~ GAME_INCLUDES "bg1"
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR

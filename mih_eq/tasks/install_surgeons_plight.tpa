@@ -1,0 +1,48 @@
+// The Surgeon's Plight
+
+
+COPY_EXISTING "surgeo.cre" "override"
+  WRITE_ASCII	DEATHVAR	"mh#SurgeonSwordCoast" #32
+
+  
+COPY_EXISTING "%tutu_var%surgeo.cre" "override/mh#surg1.cre"
+  REMOVE_CRE_ITEM "potn34"
+  ADD_CRE_ITEM "scrl56" #2 #0 #0 "none" "inv"
+  ADD_CRE_ITEM "scrl61" #1 #0 #0 "none" "inv"
+
+  WRITE_ASCII	SCRIPT_OVERRIDE	"initdlg" #8
+  WRITE_ASCII	DIALOG		"mh#surg1" #8
+  WRITE_ASCII	DEATHVAR	"mh#SurgeonCloakwood" #32
+
+
+COPY_EXISTING "surgeo.cre" "override/mh#surg2.cre"
+  REMOVE_CRE_ITEM "%tutu_var%potn34"
+  ADD_CRE_ITEM "misc41" #1 #0 #0 "none" "inv"
+  ADD_CRE_ITEM "misc44" #1 #0 #0 "none" "inv"
+
+  WRITE_ASCII	SCRIPT_OVERRIDE	"initdlg" #8
+  WRITE_ASCII	DIALOG		"mh#surg2" #8
+  WRITE_ASCII	DEATHVAR	"mh#SurgeonFriendlyArmInn" #32
+
+
+COMPILE "%MOD_FOLDER%/dialog/surgeons_plight.d"
+
+
+EXTEND_BOTTOM "%CloakwoodWyverns_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_surgeon_cw.baf"
+
+
+EXTEND_BOTTOM "%FriendlyArmInn_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_surgeon_fai.baf"
+END
+
+
+// Erase Journal Entries when BGT is over
+
+ACTION_FOR_EACH dialog IN "mh#surg1" "mh#surg2"
+BEGIN
+  LAUNCH_ACTION_FUNCTION erase_journal_entries_on_bg2_transition
+    STR_VAR
+    dialog
+  END
+END
+
+
