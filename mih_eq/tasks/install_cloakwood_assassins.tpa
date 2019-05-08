@@ -22,7 +22,13 @@ COPY "%MOD_FOLDER%/actors/mh#strok.cre" "override"
 COMPILE "%MOD_FOLDER%/dialog/cloakwood_assassins.d"
 
 
-COMPILE "%MOD_FOLDER%/scripts/mh#cwass.baf" USING "%MOD_FOLDER%/dummy.tra"
+COMPILE "%MOD_FOLDER%/scripts/mh#cwass.baf"
+  PATCH_IF GAME_IS "bgt"
+  BEGIN
+    REPLACE_TEXTUALLY EXACT_MATCH "31249" "46150"
+  END
+
+  USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY_EXISTING "%CloakwoodWyverns%.are" "override"

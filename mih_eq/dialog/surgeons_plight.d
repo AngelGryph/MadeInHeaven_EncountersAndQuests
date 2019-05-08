@@ -21,8 +21,8 @@ BEGIN justice_or_vengeance
   SAY @6
   = @7
   IF ""
-    DO ~GiveItem("%tutu_var%scrl56", LastTalkedToBy(Myself))
-        GiveItem("%tutu_var%scrl61", LastTalkedToBy(Myself))
+    DO ~GiveItem("scrl56", LastTalkedToBy(Myself))
+        GiveItem("scrl61", LastTalkedToBy(Myself))
 	AddexperienceParty(1000)
 	SetGlobal("SurgeonStory", "GLOBAL", 2)~
     UNSOLVED_JOURNAL @8
@@ -120,8 +120,8 @@ IF ""
 BEGIN reward
   SAY @23
   IF ""
-    DO ~GiveItem("%tutu_var%misc41", LastTalkedToBy(Myself))
-        GiveItem("%tutu_var%misc44", LastTalkedToBy(Myself))~
+    DO ~GiveItem("misc41", LastTalkedToBy(Myself))
+        GiveItem("misc44", LastTalkedToBy(Myself))~
     GOTO farewell
 END
 
