@@ -1,0 +1,24 @@
+IF
+  !GlobalTimerNotExpired("mh#SpawnSpiders", "MYAREA")
+  NumDeadLT("mh#RandomSpiders", 1000)
+THEN
+  RESPONSE #33
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", ONE_TURN)
+    CreateCreatureOffscreen("mh#rspd1", 0)
+    CreateCreatureOffscreen("mh#rspd1", 0)
+    CreateCreatureOffscreen("mh#rspd1", 0)
+    CreateCreatureOffscreen("mh#rspd1", 0)
+    CreateCreatureOffscreen("mh#rspd1", 0)
+  RESPONSE #33
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", ONE_TURN)
+    CreateCreatureOffscreen("mh#rspd2", 0)
+    CreateCreatureOffscreen("mh#rspd2", 0)
+    CreateCreatureOffscreen("mh#rspd2", 0)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", ONE_TURN)
+    CreateCreatureOffscreen("mh#rspd3", 0)
+    CreateCreatureOffscreen("mh#rspd3", 0)
+    CreateCreatureOffscreen("mh#rspd3", 0)
+END
+
+

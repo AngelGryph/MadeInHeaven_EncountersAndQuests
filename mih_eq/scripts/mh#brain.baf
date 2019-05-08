@@ -1,0 +1,11 @@
+IF
+  See(NearestEnemyOf(Myself))
+  NotStateCheck(LastSeenBy(Myself), STATE_HELPLESS)
+  !GlobalTimerNotExpired("mh#BrainSpider_EgoWhip", "LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#BrainSpider_EgoWhip", "LOCALS", THREE_ROUNDS)
+    ForceSpell(LastSeenBy(Myself), PSIONIC_EGOWHIP)
+END
+
+

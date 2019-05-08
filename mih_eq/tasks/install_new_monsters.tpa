@@ -76,3 +76,22 @@ COPY "%MOD_FOLDER%/actors/mh#grhag.cre" "override"
   SAY NAME2 "Green Hag"
 
 
+// Spiders: Hairy Spider & Brain Spider
+
+COPY "%MOD_FOLDER%/items/mh#hairy.itm" "override"
+     "%MOD_FOLDER%/items/mh#brain.itm" "override"
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#brain.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#hairy.cre" "override"
+  SAY NAME1 "Hairy Spider"
+  SAY NAME2 "Hairy Spider"
+
+
+COPY "%MOD_FOLDER%/actors/mh#brain.cre" "override"
+  SAY NAME1 "Brain Spider"
+  SAY NAME2 "Brain Spider"
+
+
