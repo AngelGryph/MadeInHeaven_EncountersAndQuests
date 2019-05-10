@@ -1,0 +1,38 @@
+// Enhanced Ramazith's Tower
+
+COPY_EXISTING "%NBaldursGate_RamazithsTower_L2%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/ramaziths_tower_l2.2da"
+  END
+
+
+COPY_EXISTING "%NBaldursGate_RamazithsTower_L3%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/ramaziths_tower_l3.2da"
+  END
+
+
+COPY_EXISTING "%NBaldursGate_RamazithsTower_L4%.are" "override"
+  LAUNCH_PATCH_MACRO mh_remove_all_area_actors
+
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/ramaziths_tower_l4.2da"
+  END
+
+
+COPY_EXISTING "%NBaldursGate_RamazithsTower_L5%.are" "override"
+  LAUNCH_PATCH_MACRO mh_remove_all_area_actors
+
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/ramaziths_tower_l5.2da"
+  END
+
+
+EXTEND_BOTTOM "ramazith.bcs" "%MOD_FOLDER%/scripts/ramazith_jelly_spawn.baf"
+  EVALUATE_BUFFER
+
+

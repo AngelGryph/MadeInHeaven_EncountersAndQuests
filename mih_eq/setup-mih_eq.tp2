@@ -79,6 +79,22 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// Enhanced Ramazith's Tower
+
+BEGIN ~Enhanced Ramazith's Tower~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_new_monsters"
+END
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_ramaziths_tower"
+END
+
+
 // Enhanced Ulcaster Ruins
 
 BEGIN ~Enhanced Ulcaster Ruins~

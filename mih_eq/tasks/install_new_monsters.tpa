@@ -34,9 +34,10 @@ COPY "%MOD_FOLDER%/actors/mh#drbly.cre" "override"
   SAY NAME2 @1
 
 
-// Blazing Bones
+// Skeletal Undead: Blazing Bones, Mohrg
 
 COPY "%MOD_FOLDER%/items/mh#blaze.itm" "override"
+     "%MOD_FOLDER%/items/mh#mohrg.itm" "override"
 
 
 LAUNCH_ACTION_FUNCTION mh_install_spell
@@ -60,7 +61,12 @@ COPY "%MOD_FOLDER%/actors/mh#blaze.cre" "override"
   SAY NAME2 @3
 
 
-// Hags - Annis & Green Hag
+COPY "%MOD_FOLDER%/actors/mh#mohrg.cre" "override"
+  SAY NAME1 ~Mohrg~
+  SAY NAME2 ~Mohrg~
+
+
+// Hags: Annis & Green Hag
 
 COMPILE "%MOD_FOLDER%/scripts/mh#annis.baf"
         "%MOD_FOLDER%/scripts/mh#grhag.baf" USING "%MOD_FOLDER%/dummy.tra"

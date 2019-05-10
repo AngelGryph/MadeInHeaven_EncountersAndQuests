@@ -1,0 +1,13 @@
+IF
+  Allegiance(Myself, ENEMY)
+  AreaCheck("%NBaldursGate_RamazithsTower_L6%")
+  Global("mh#RamazithJellySpawn", "LOCALS", 0)
+THEN
+  RESPONSE #100
+  SetGlobal("mh#RamazithJellySpawn", "LOCALS", 1)
+  CreateCreature("jellymu", [-1.-1], 0)
+  CreateCreature("jellymu", [-1.-1], 0)
+  Continue()
+END
+
+
