@@ -29,7 +29,7 @@ COPY_EXISTING "%WyrmsCrossing%.are" "override"
   END
 
 
-EXTEND_BOTTOM "%WyrmsCrossing_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_quinns_ankheg.baf" USING "%MOD_FOLDER%/dummy.tra"
+EXTEND_BOTTOM "%WyrmsCrossing_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_quinns_ankhegs.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY_LARGE "%MOD_FOLDER%/bams/mh#nesdg.bam" "override"
