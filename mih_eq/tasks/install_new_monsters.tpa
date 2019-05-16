@@ -101,3 +101,36 @@ COPY "%MOD_FOLDER%/actors/mh#brain.cre" "override"
   SAY NAME2 "Brain Spider"
 
 
+// Wight & Barrow Wight
+
+COPY "%MOD_FOLDER%/items/mh#wight.itm" "override"
+  PATCH_IF GAME_IS "bgee"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
+      INT_VAR
+      match_opcode	= 139	// Text: Display String
+      parameter1	= 25802
+    END
+  END
+
+
+COPY "%MOD_FOLDER%/actors/mh#wight.cre" "override"
+  SAY NAME1 ~Wight~
+  SAY NAME2 ~Wight~
+
+  PATCH_IF IDS_OF_SYMBOL("animate" "wight_gray") >= 0
+  BEGIN
+    WRITE_LONG 0x0028 IDS_OF_SYMBOL("animate" "wight_gray")
+  END
+
+
+COPY "%MOD_FOLDER%/actors/mh#bwght.cre" "override"
+  SAY NAME1 ~Barrow Wight~
+  SAY NAME2 ~Barrow Wight~
+
+  PATCH_IF IDS_OF_SYMBOL("animate" "wight_barrow") >= 0
+  BEGIN
+    WRITE_LONG 0x0028 IDS_OF_SYMBOL("animate" "wight_barrow")
+  END
+
+

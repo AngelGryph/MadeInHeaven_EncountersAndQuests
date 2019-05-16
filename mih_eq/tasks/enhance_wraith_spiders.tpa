@@ -1,6 +1,14 @@
 // Enhanced Wraith Spiders
 
 COPY "%MOD_FOLDER%/items/mh#spdwr.itm" "override"
+  PATCH_IF GAME_IS "bgee"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
+      INT_VAR
+      match_opcode	= 139	// Text: Display String
+      parameter1	= 25802
+    END
+  END
 
 
 COPY_EXISTING "spidwr.cre" "override"

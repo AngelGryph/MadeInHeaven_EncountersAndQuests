@@ -1,0 +1,20 @@
+IF
+  !See(NearestEnemyOf(Myself))
+  See(Myself)
+THEN
+  RESPONSE #100
+    Hide()
+END
+  
+IF
+  See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("mh#MustardJelly_vapor", "LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#MustardJelly_vapor", "LOCALS", ONE_ROUND)
+    ReallyForceSpell(Myself, MH_MUSTARD_JELLY_VAPOR)
+    Wait(2)
+    Continue()
+END
+
+

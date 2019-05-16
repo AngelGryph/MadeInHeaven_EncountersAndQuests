@@ -1,17 +1,21 @@
 // Enhanced Mustard Jellies
 
-COPY "%MOD_FOLDER%/spells/mh#mjgas.spl" "override"
-     "%MOD_FOLDER%/items/mh#musjl.itm" "override"
+COPY "%MOD_FOLDER%/items/mh#musjl.itm" "override"
 
 
-CREATE EFF "mh#mjgas"
-  WRITE_LONG	0x0010 146	// Spell: Cast Spell (at Creature)
-  WRITE_LONG	0x0014 1
-  WRITE_LONG	0x001c 1
-  WRITE_LONG	0x0020 1
-  WRITE_SHORT	0x0024 1
-  WRITE_LONG	0x002c 100
-  WRITE_ASCII	0x0030 "mh#mjgas"
+LAUNCH_ACTION_FUNCTION mh_install_spell
+  INT_VAR
+  spell_level		= 1
+  STR_VAR
+  spell_res		= "mh#mjgas"
+  spell_ids		= "MH_MUSTARD_JELLY_VAPOR"
+  spell_type		= "innate"
+  spell_dir		= "spells"
+  item_dir		= "none"
+END
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#musjl.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY_EXISTING "jellmu.cre" "override"
@@ -21,29 +25,19 @@ COPY_EXISTING "jellmu.cre" "override"
               "bpjlmu01.cre" "override"
 	      "jelmus01.cre" "override"
 	      "jellmusu.cre" "override"
-  WRITE_LONG	0x0014 4000	// XP value
   WRITE_BYTE	0x0045 90	// Hide in shadows
   WRITE_BYTE	0x0053 2	// # of attacks
+  WRITE_BYTE	0x005c 100	// Acid resistance
   WRITE_BYTE	0x005d 10	// Magic resistance
   WRITE_BYTE	0x0068 90	// Stealth
 
+  WRITE_ASCII SCRIPT_OVERRIDE "mh#musjl"
   WRITE_ASCII SCRIPT_DEFAULT "wtasight"
 
   REPLACE_CRE_ITEM "mh#musjl" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
   REPLACE_CRE_ITEM "mh#musjl" #0 #0 #0 "unstealable&undroppable" "weapon2"
   REPLACE_CRE_ITEM "mh#musjl" #0 #0 #0 "unstealable&undroppable" "weapon3"
   REPLACE_CRE_ITEM "mh#musjl" #0 #0 #0 "unstealable&undroppable" "weapon4"
-
-  LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
-    INT_VAR
-    opcode	= 272	// Spell: Apply Repeating EFF
-    target	= 1	// Self
-    timing	= 1	// Permanent (till death)
-    parameter1	= 6
-    parameter2	= 3
-    STR_VAR
-    resource	= "mh#mjgas"
-  END
 
   IF_EXISTS
 

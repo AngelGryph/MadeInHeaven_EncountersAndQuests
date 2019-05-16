@@ -1,16 +1,18 @@
 // Enhanced Greater Basilisks
 
-COPY "%MOD_FOLDER%/spells/mh#gbgas.spl" "override"
+LAUNCH_ACTION_FUNCTION mh_install_spell
+  INT_VAR
+  spell_level		= 1
+  STR_VAR
+  spell_res		= "mh#gbgas"
+  spell_ids		= "MH_GREATER_BASILISK_BREATH"
+  spell_type		= "innate"
+  spell_dir		= "spells"
+  item_dir		= "none"
+END
 
 
-CREATE EFF "mh#gbgas"
-  WRITE_LONG	0x0010 146	// Spell: Cast Spell (at Creature)
-  WRITE_LONG	0x0014 1
-  WRITE_LONG	0x001c 1
-  WRITE_LONG	0x0020 1
-  WRITE_SHORT	0x0024 1
-  WRITE_LONG	0x002c 100
-  WRITE_ASCII	0x0030 "mh#gbgas"
+COMPILE "%MOD_FOLDER%/scripts/mh#basgr.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY_EXISTING "basilg.cre" "override"
@@ -24,16 +26,8 @@ COPY_EXISTING "basilg.cre" "override"
   WRITE_BYTE 0x0052 11		// THAC0
   WRITE_BYTE 0x0053 3		// APR
 
-  LAUNCH_PATCH_FUNCTION ADD_CRE_EFFECT
-    INT_VAR
-    opcode	= 272	// Spell: Apply Repeating EFF
-    target	= 1	// Self
-    timing	= 1	// Permanent (till death)
-    parameter1	= 6
-    parameter2	= 3
-    STR_VAR
-    resource	= "mh#gbgas"
-  END
+  WRITE_ASCII SCRIPT_OVERRIDE "mh#basgr"
+  WRITE_ASCII SCRIPT_DEFAULT "wtasight"
 
   IF_EXISTS
 
