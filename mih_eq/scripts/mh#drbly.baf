@@ -8,7 +8,7 @@ THEN
     SetGlobalTimer("mh#BlackDragon_breath", "LOCALS", 60)
     IncrementGlobal("mh#BlackDragon_breath_uses", "LOCALS", 1)
     FaceObject(LastSeenBy(Myself))
-    ForceSpell(LastSeenBy(Myself), MH_BLACK_DRAGON_BREATH)
+    ForceSpell(LastSeenBy(Myself), MH_YOUNG_BLACK_DRAGON_BREATH)
     Wait(2)
   RESPONSE #60
     Continue()

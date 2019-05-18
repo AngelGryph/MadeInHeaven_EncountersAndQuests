@@ -1,0 +1,28 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 50)
+  Global("mh#EmeraldLightning", "LOCALS", 0)
+THEN
+  RESPONSE #70
+    SetGlobal("mh#EmeraldLightning", "LOCALS", 1)
+    ForceSpell(LastSeenBy(Myself), MH_EMERALD_LIGHTNING)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 20)
+  Global("mh#EmeraldCloud", "LOCALS", 0)
+THEN
+  RESPONSE #70
+    SetGlobal("mh#EmeraldCloud", "LOCALS", 1)
+    ForceSpell(Myself, MH_EMERALD_CLOUD)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+
