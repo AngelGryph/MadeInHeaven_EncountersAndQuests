@@ -1,0 +1,143 @@
+// Enhanced Durlag's Tower
+
+
+// Upgrade tower ghasts
+
+COPY_EXISTING "ghastd.cre" "override"
+  SAY NAME1 "Fell Ghast"
+  SAY NAME2 "Fell Ghast"
+
+  ADD_CRE_ITEM "immune1" #0 #0 #0 "unstealable&undroppable" "ring"
+
+  WRITE_LONG	0x0014	975	// XP value
+  WRITE_SHORT	0x0024	56	// Current HP
+  WRITE_SHORT	0x0026	56	// Maximum HP
+  WRITE_SHORT	0x0046	1	// Natural AC
+  WRITE_SHORT	0x0048	1	// Effective AC
+  WRITE_BYTE	0x0052	11	// THAC0
+  WRITE_BYTE	0x0053	9	// APR
+  WRITE_BYTE	0x0054	7	// Save vs. death
+  WRITE_BYTE	0x0055	11	// Save vs. wands
+  WRITE_BYTE	0x0056	10	// Save vs. poly
+  WRITE_BYTE	0x0057	13	// Save vs. breath
+  WRITE_BYTE	0x0058	12	// Save vs. spell
+  WRITE_BYTE	0x005d	20	// MR
+  WRITE_BYTE	0x0234	7	// Level/HD
+  WRITE_BYTE	0x0238	18	// Strength
+  WRITE_BYTE	0x0239	51	// Strength EX
+
+
+// Tower exterior
+
+COPY_EXISTING "%DurlagsTower%.are" "override"
+  LAUNCH_PATCH_FUNCTION ALTER_AREA_ACTOR
+    INT_VAR
+    x_coord		= 410
+    y_coord		= 2110
+    dest_x		= 410
+    dest_y		= 2110
+    orient		= 9
+    STR_VAR
+    actor_name		= "Greater Ghoul"
+  END
+
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_exterior.2da"
+  END
+
+
+// Upper levels
+
+COPY_EXISTING "%DurlagsTower_Cellar%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_cellar.2da"
+  END
+
+
+COPY_EXISTING "%DurlagsTower_L2%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_l2.2da"
+  END
+
+
+COPY_EXISTING "%DurlagsTower_L4%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_l4.2da"
+  END
+
+
+// Dungeon levels
+
+COPY_EXISTING "%DurlagsTower_D1%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_d1.2da"
+  END
+
+
+COPY_EXISTING "%DurlagsTower_D2%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_d2.2da"
+  END
+
+
+COMPILE "%MOD_FOLDER%/scripts/trpghast.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_EXISTING "%DurlagsTower_D3%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_d3.2da"
+  END
+
+
+COPY_EXISTING "%DurlagsTower_D4%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_d4.2da"
+  END
+
+
+// Elemental chambers
+
+LAUNCH_ACTION_FUNCTION mh_install_spell
+  INT_VAR
+  spell_name_strref	= RESOLVE_STR_REF("Ice Breath")
+  spell_level		= 1
+  STR_VAR
+  spell_res		= "mh#kbice"
+  spell_ids		= "MH_KALDRAN_ICE_BREATH"
+  spell_type		= "innate"
+  spell_dir		= "spells"
+  item_dir		= "none"
+END
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#kbice.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_EXISTING "kaldran.cre" "override"
+  WRITE_ASCII SCRIPT_OVERRIDE "mh#kbice"
+
+
+COPY_EXISTING "%DurlagsTower_AirChamber%.are" "override"
+  LAUNCH_PATCH_MACRO mh_remove_all_area_actors
+
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_air.2da"
+  END
+
+
+COPY_EXISTING "%DurlagsTower_EarthChamber%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/durlags_tower_earth.2da"
+  END
+
+
