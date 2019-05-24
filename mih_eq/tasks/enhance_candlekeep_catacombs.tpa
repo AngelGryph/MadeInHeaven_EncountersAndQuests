@@ -134,6 +134,12 @@ COMPILE "inline/arkanis_ally.d" USING "%MOD_FOLDER%/dummy.tra"
 COMPILE "%MOD_FOLDER%/dialog/oobah_blahr.d"
 
 
+COPY_LARGE "%MOD_FOLDER%/portraits/mh#oobas.bmp" "override"
+           "%MOD_FOLDER%/portraits/mh#oobal.bmp" "override"
+           "%MOD_FOLDER%/portraits/mh#blahs.bmp" "override"
+           "%MOD_FOLDER%/portraits/mh#blahl.bmp" "override"
+
+
 COPY "%MOD_FOLDER%/actors/mh#oobah.cre" "override"
   SAY NAME1 ~Oobah~
   SAY NAME2 ~Oobah~
