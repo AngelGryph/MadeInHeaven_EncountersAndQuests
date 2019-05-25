@@ -34,7 +34,7 @@ COPY "%MOD_FOLDER%/actors/mh#drbly.cre" "override"
   SAY NAME2 @1
 
 
-// Skeletal Undead: Blazing Bones, Mohrg
+// Skeletal Undead: Blazing Bones, Mohrg, Gold Skeleton
 
 COPY "%MOD_FOLDER%/items/mh#blaze.itm" "override"
      "%MOD_FOLDER%/items/mh#mohrg.itm" "override"
@@ -62,8 +62,13 @@ COPY "%MOD_FOLDER%/actors/mh#blaze.cre" "override"
 
 
 COPY "%MOD_FOLDER%/actors/mh#mohrg.cre" "override"
-  SAY NAME1 ~Mohrg~
-  SAY NAME2 ~Mohrg~
+  SAY NAME1 @4
+  SAY NAME2 @4
+
+
+COPY "%MOD_FOLDER%/actors/mh#gskel.cre" "override"
+  SAY NAME1 @5
+  SAY NAME2 @5
 
 
 // Hags: Annis & Green Hag
@@ -73,13 +78,13 @@ COMPILE "%MOD_FOLDER%/scripts/mh#annis.baf"
 
 
 COPY "%MOD_FOLDER%/actors/mh#annis.cre" "override"
-  SAY NAME1 "Annis"
-  SAY NAME2 "Annis"
+  SAY NAME1 @6
+  SAY NAME2 @6
 
 
 COPY "%MOD_FOLDER%/actors/mh#grhag.cre" "override"
-  SAY NAME1 "Green Hag"
-  SAY NAME2 "Green Hag"
+  SAY NAME1 @7
+  SAY NAME2 @7
 
 
 // Spiders: Hairy Spider & Brain Spider
@@ -92,13 +97,13 @@ COMPILE "%MOD_FOLDER%/scripts/mh#brain.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY "%MOD_FOLDER%/actors/mh#hairy.cre" "override"
-  SAY NAME1 "Hairy Spider"
-  SAY NAME2 "Hairy Spider"
+  SAY NAME1 @8
+  SAY NAME2 @8
 
 
 COPY "%MOD_FOLDER%/actors/mh#brain.cre" "override"
-  SAY NAME1 "Brain Spider"
-  SAY NAME2 "Brain Spider"
+  SAY NAME1 @9
+  SAY NAME2 @9
 
 
 // Wight & Barrow Wight
@@ -115,8 +120,8 @@ COPY "%MOD_FOLDER%/items/mh#wight.itm" "override"
 
 
 COPY "%MOD_FOLDER%/actors/mh#wight.cre" "override"
-  SAY NAME1 ~Wight~
-  SAY NAME2 ~Wight~
+  SAY NAME1 @10
+  SAY NAME2 @10
 
   PATCH_IF IDS_OF_SYMBOL("animate" "wight_gray") >= 0
   BEGIN
@@ -125,8 +130,8 @@ COPY "%MOD_FOLDER%/actors/mh#wight.cre" "override"
 
 
 COPY "%MOD_FOLDER%/actors/mh#bwght.cre" "override"
-  SAY NAME1 ~Barrow Wight~
-  SAY NAME2 ~Barrow Wight~
+  SAY NAME1 @11
+  SAY NAME2 @11
 
   PATCH_IF IDS_OF_SYMBOL("animate" "wight_barrow") >= 0
   BEGIN
@@ -134,15 +139,24 @@ COPY "%MOD_FOLDER%/actors/mh#bwght.cre" "override"
   END
 
 
-// Black Pudding
+// Crystal Ooze & Black Pudding
 
-COPY "%MOD_FOLDER%/items/mh#blkpd.itm" "override"
+COPY "%MOD_FOLDER%/items/mh#oozcr.itm" "override"
+     "%MOD_FOLDER%/items/mh#blkpd.itm" "override"
      "%MOD_FOLDER%/spells/mh#blkpd.spl" "override"
 
 
+COMPILE "%MOD_FOLDER%/scripts/mh#oozcr.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#oozcr.cre" "override"
+  SAY NAME1 @12
+  SAY NAME2 @12
+
+
 COPY "%MOD_FOLDER%/actors/mh#blkpd.cre" "override"
-  SAY NAME1 ~Black Pudding~
-  SAY NAME2 ~Black Pudding~
+  SAY NAME1 @13
+  SAY NAME2 @13
 
 
 // Ruby/Emerald/Diamond Golem
@@ -180,17 +194,35 @@ COMPILE "%MOD_FOLDER%/scripts/mh#emrdg.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY "%MOD_FOLDER%/actors/mh#rubyg.cre" "override"
-  SAY NAME1 ~Ruby Golem~
-  SAY NAME2 ~Ruby Golem~
+  SAY NAME1 @14
+  SAY NAME2 @14
 
 
 COPY "%MOD_FOLDER%/actors/mh#emrdg.cre" "override"
-  SAY NAME1 ~Emerald Golem~
-  SAY NAME2 ~Emerald Golem~
+  SAY NAME1 @15
+  SAY NAME2 @15
 
 
 COPY "%MOD_FOLDER%/actors/mh#dmndg.cre" "override"
-  SAY NAME1 ~Diamond Golem~
-  SAY NAME2 ~Diamond Golem~
+  SAY NAME1 @16
+  SAY NAME2 @16
+
+
+// Spectre
+
+COPY "%MOD_FOLDER%/items/mh#spect.itm" "override"
+  PATCH_IF GAME_IS "bgee"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
+      INT_VAR
+      match_opcode	= 139	// Text: Display String
+      parameter1	= 25803
+    END
+  END
+
+
+COPY "%MOD_FOLDER%/actors/mh#spect.cre" "override"
+  SAY NAME1 @17
+  SAY NAME2 @17
 
 

@@ -1,0 +1,89 @@
+// Enhanced Thieves' Maze & Undercity
+
+COPY_EXISTING "%ThievesMaze%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/thieves_maze.2da"
+  END
+
+
+COPY_LARGE "%MOD_FOLDER%/bams/mh#btkey.bam" "override"
+
+COPY "%MOD_FOLDER%/items/mh#btkey.itm" "override"
+  SAY NAME2 @0
+  SAY IDENTIFIED_DESC @1
+
+
+ADD_JOURNAL @1 @7 USING "%MOD_FOLDER%/language/%LANGUAGE%/temple_key_quest.tra"
+
+COMPILE "%MOD_FOLDER%/scripts/mh#temdr.baf"
+        "%MOD_FOLDER%/dialog/temple_key_quest.d"
+
+LAUNCH_ACTION_FUNCTION mh_erase_journal_entries_on_bg2_transition
+  STR_VAR
+  dialog	= "mh#temap"
+END
+
+LAUNCH_ACTION_FUNCTION mh_erase_journal_entries_on_bg2_transition
+  STR_VAR
+  dialog	= "mh#temgd"
+END
+
+
+COPY "%MOD_FOLDER%/actors/mh#temap.cre" "override"
+  SAY NAME1 @2
+  SAY NAME2 @2
+
+
+COPY_EXISTING "mh#gskel.cre" "override/mh#temgd.cre"
+  SAY NAME1 @3
+  SAY NAME2 @3
+
+  WRITE_ASCII SCRIPT_OVERRIDE "shoutdlg"
+  WRITE_ASCII DIALOG "mh#temgd"
+  WRITE_ASCII DEATHVAR "mh#temple_guardian" #32
+
+  ADD_CRE_ITEM "mh#btkey" #0 #0 #0 "unstealable" "inv"
+
+
+COPY_EXISTING "%Undercity%.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/undercity.2da"
+  END
+
+  GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
+  PHP_EACH spawn_array AS int => spawn_offset
+  BEGIN
+    WRITE_SHORT (spawn_offset + 0x0084) 6
+
+    WRITE_SHORT (spawn_offset + 0x0074) 10
+
+    WRITE_ASCII (spawn_offset + 0x0024) "ghastd" #8
+    WRITE_ASCII (spawn_offset + 0x002c) "ghoullor" #8
+    WRITE_ASCII (spawn_offset + 0x0034) "jellgr" #8
+    WRITE_ASCII (spawn_offset + 0x003c) "jelloc" #8
+    WRITE_ASCII (spawn_offset + 0x0044) "jellmu" #8
+    WRITE_ASCII (spawn_offset + 0x004c) "spidph" #8
+    WRITE_ASCII (spawn_offset + 0x0054) "spidphas" #8
+    WRITE_ASCII (spawn_offset + 0x005c) "spidwr" #8
+    WRITE_ASCII (spawn_offset + 0x0064) "dopple" #8
+    WRITE_ASCII (spawn_offset + 0x006c) "doppgr" #8
+  END
+
+  LAUNCH_PATCH_FUNCTION ALTER_AREA_DOOR
+    INT_VAR
+    flag_locked		= 1
+    flag_uses_key	= 1
+    flag_no_close	= 1
+    lock_difficulty	= 100
+    STR_VAR
+    door_name		= "Door0125"
+    door_key		= "mh#btkey"
+    door_script		= "mh#temdr"
+  END
+
+
+EXTEND_BOTTOM "%Undercity_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_temple_quest.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+

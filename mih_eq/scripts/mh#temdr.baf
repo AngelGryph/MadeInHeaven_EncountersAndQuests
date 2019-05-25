@@ -1,0 +1,9 @@
+IF
+  InActiveArea(Myself)
+  Global("mh#TempleKeyQuest", "GLOBAL", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#TempleKeyQuest", "GLOBAL", 1)
+END
+
+
