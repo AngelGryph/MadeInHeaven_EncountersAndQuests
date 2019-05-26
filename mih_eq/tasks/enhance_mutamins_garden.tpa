@@ -1,5 +1,12 @@
 // Enhanced Mutamin's Garden
 
+// Workaround for BGT lesser basilisk quirk
+ACTION_IF GAME_IS "bgt" AND NOT FILE_EXISTS_IN_GAME "basill.cre"
+BEGIN
+  COPY_EXISTING "basles01.cre" "override/basill.cre"
+END
+
+
 COPY_EXISTING "basilg.cre" "override/mh#bgcut.cre"
   WRITE_ASCII DEATHVAR "mh#CutSceneBasilisk" #32
 

@@ -1,6 +1,13 @@
 // Enhanced Durlag's Tower
 
 
+// Workaround for BGT lesser basilisk quirk
+ACTION_IF GAME_IS "bgt" AND NOT FILE_EXISTS_IN_GAME "basill.cre"
+BEGIN
+  COPY_EXISTING "basles01.cre" "override/basill.cre"
+END
+
+
 // Upgrade tower ghasts
 
 COPY_EXISTING "ghastd.cre" "override"
