@@ -5,7 +5,7 @@ COPY "%MOD_FOLDER%/items/mh#musjl.itm" "override"
 
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
-  spell_level		= 1
+  spell_level		= 5
   STR_VAR
   spell_res		= "mh#mjgas"
   spell_ids		= "MH_MUSTARD_JELLY_VAPOR"

@@ -6,7 +6,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION mh_install_spell
     INT_VAR
-    spell_level		= 1
+    spell_level		= 4
     STR_VAR
     spell_res		= "mh#afrdn"
     spell_ids		= "MH_ACID_FIRE_DOWN"
@@ -17,7 +17,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION mh_install_spell
     INT_VAR
-    spell_level		= 1
+    spell_level		= 4
     STR_VAR
     spell_res		= "mh#afrup"
     spell_ids		= "MH_ACID_FIRE_RISE"

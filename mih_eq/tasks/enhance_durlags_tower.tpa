@@ -115,7 +115,7 @@ COPY_EXISTING "%DurlagsTower_D4%.are" "override"
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
   spell_name_strref	= RESOLVE_STR_REF("Ice Breath")
-  spell_level		= 1
+  spell_level		= 5
   STR_VAR
   spell_res		= "mh#kbice"
   spell_ids		= "MH_KALDRAN_ICE_BREATH"

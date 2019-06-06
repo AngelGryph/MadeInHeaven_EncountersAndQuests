@@ -3,7 +3,7 @@
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
   spell_name_strref	= RESOLVE_STR_REF(@0)
-  spell_level		= 1
+  spell_level		= 3
   STR_VAR
   spell_res		= "mh#frost"
   spell_ids		= "MH_WINTER_WOLF_BREATH"
