@@ -16,7 +16,7 @@ COPY_EXISTING "s1-8.itm" "override/mh#drbly.itm"
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
   spell_name_strref	= RESOLVE_STR_REF(@0)
-  spell_level		= 6
+  spell_level		= 5
   STR_VAR
   spell_res		= "mh#drbly"
   spell_ids		= "MH_YOUNG_BLACK_DRAGON_BREATH"
@@ -43,7 +43,7 @@ COPY "%MOD_FOLDER%/items/mh#blaze.itm" "override"
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
   spell_name_strref	= RESOLVE_STR_REF(@2)
-  spell_level		= 1
+  spell_level		= 3
   STR_VAR
   spell_res		= "mh#blaze"
   spell_ids		= "MH_BONE_BLAZE"
@@ -168,7 +168,7 @@ COPY "%MOD_FOLDER%/items/mh#rubyg.itm" "override"
 
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
-  spell_level		= 1
+  spell_level		= 5
   STR_VAR
   spell_res		= "mh#emglb"
   spell_ids		= "MH_EMERALD_LIGHTNING"
@@ -180,7 +180,7 @@ END
 
 LAUNCH_ACTION_FUNCTION mh_install_spell
   INT_VAR
-  spell_level		= 1
+  spell_level		= 5
   STR_VAR
   spell_res		= "mh#emgck"
   spell_ids		= "MH_EMERALD_CLOUD"
