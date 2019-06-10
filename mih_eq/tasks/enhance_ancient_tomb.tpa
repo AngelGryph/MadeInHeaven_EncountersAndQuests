@@ -9,8 +9,10 @@ COPY_EXISTING "ar0801.are" "override"
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
-    WRITE_SHORT (spawn_offset + 0x0074) 3
+    WRITE_SHORT (spawn_offset + 0x0076) 20
     WRITE_SHORT (spawn_offset + 0x0084) 8
+
+    WRITE_SHORT (spawn_offset + 0x0074) 3
 
     WRITE_ASCII (spawn_offset + 0x0024) "RDSpider" #8
     WRITE_ASCII (spawn_offset + 0x002c) "RDSpid2" #8
@@ -46,8 +48,10 @@ COPY_EXISTING "ar0802.are" "override"
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
+    WRITE_SHORT (spawn_offset + 0x0076) 20
+    WRITE_SHORT (spawn_offset + 0x0084) 12
+
     WRITE_SHORT (spawn_offset + 0x0074) 3
-    WRITE_SHORT (spawn_offset + 0x0084) 6
 
     WRITE_ASCII (spawn_offset + 0x0024) "RDUndead" #8
     WRITE_ASCII (spawn_offset + 0x002c) "RDUndea2" #8

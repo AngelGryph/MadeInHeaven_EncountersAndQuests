@@ -253,6 +253,22 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// Enhanced Slum Sewers
+
+BEGIN ~Enhanced Slum Sewers~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_new_monsters"
+END
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_slum_sewers"
+END
+
+
 // Enhanced Ankhegs
 
 BEGIN ~Enhanced Ankhegs~

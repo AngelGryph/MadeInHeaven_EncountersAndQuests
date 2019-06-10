@@ -1,0 +1,36 @@
+// Enhanced Slum Sewers
+
+APPEND_COL "spawngrp.2da" "$ $ RDCarrio 15 carcra01 carcra01 carcra01 carcra01 carcra01 carcra01 * *" UNLESS "RDCarrio"
+
+
+COPY_EXISTING "ar0404.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/slum_sewers.2da"
+  END
+
+  LAUNCH_PATCH_FUNCTION ALTER_AREA_ACTOR
+    INT_VAR
+    animation		= IDS_OF_SYMBOL("animate" "gray_ooze")
+    STR_VAR
+    actor_name		= "Hobgoblin Shaman"
+    cre_file		= "mh#oozcr"
+  END
+
+  GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
+  PHP_EACH spawn_array AS int => spawn_offset
+  BEGIN
+    WRITE_SHORT (spawn_offset + 0x0076) 20
+    WRITE_SHORT (spawn_offset + 0x0084) 6
+
+    WRITE_SHORT (spawn_offset + 0x0074) 6
+
+    WRITE_ASCII (spawn_offset + 0x0024) "RDCarrio" #8
+    WRITE_ASCII (spawn_offset + 0x002c) "RDKobold" #8
+    WRITE_ASCII (spawn_offset + 0x0034) "RDSpider" #8
+    WRITE_ASCII (spawn_offset + 0x003c) "RDSpid2" #8
+    WRITE_ASCII (spawn_offset + 0x0044) "RDSlim1" #8
+    WRITE_ASCII (spawn_offset + 0x004c) "RDSlim2" #8
+  END
+
+
