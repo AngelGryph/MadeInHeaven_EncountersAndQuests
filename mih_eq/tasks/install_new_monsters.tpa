@@ -129,6 +129,23 @@ COPY "%MOD_FOLDER%/actors/mh#wight.cre" "override"
   END
 
 
+ACTION_IF ENGINE_IS "bgee bg2ee"
+BEGIN
+  // Install Barrow Wight animation if not already present
+  LAUNCH_ACTION_FUNCTION mh_batch_install_files
+    STR_VAR
+    dir_path	= "%MOD_FOLDER%/bams/barrow_wight"
+  END
+
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "e25e.ini"
+  BEGIN
+    COPY "%MOD_FOLDER%/bams/barrow_wight/e25e.ini" "override"
+    APPEND "animate.ids" "0xe25e	wight_barrow" UNLESS "wight_barrow"
+    CLEAR_IDS_MAP
+  END
+END
+
+
 COPY "%MOD_FOLDER%/actors/mh#bwght.cre" "override"
   SAY NAME1 @11
   SAY NAME2 @11

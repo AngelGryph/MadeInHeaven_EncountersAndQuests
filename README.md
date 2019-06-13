@@ -8,6 +8,10 @@ A quest pack for Baldur's Gate 1 and Baldur's Gate 2.
 
 ## Version History
 
+Version 3 - 13 June 2019
+- Added some BG2 stuff
+- Fixed many bugs
+
 Version 2 - 31 May 2019
 - Added a readme
 - Fixed installation issue on BGT
