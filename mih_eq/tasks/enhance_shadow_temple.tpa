@@ -1,0 +1,82 @@
+// Enhanced Shadow Temple
+
+APPEND_COL "spawngrp.2da" "$ $ RDMHShdw 20 shawol01 shawol01 shawol02 shawol01 shawol01 shawol02 * *" UNLESS "RDMHShdw"
+
+
+// Temple Interior
+
+COPY_EXISTING "ar1401.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/shadow_temple.2da"
+  END
+
+  GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
+  PHP_EACH spawn_array AS int => spawn_offset
+  BEGIN
+    WRITE_SHORT (spawn_offset + 0x0076) 50
+    WRITE_SHORT (spawn_offset + 0x0084) 5
+
+    WRITE_SHORT (spawn_offset + 0x0074) 4
+
+    WRITE_ASCII (spawn_offset + 0x0024) "RDUndead" #8
+    WRITE_ASCII (spawn_offset + 0x002c) "RDUndea2" #8
+    WRITE_ASCII (spawn_offset + 0x0034) "RDShad" #8
+    WRITE_ASCII (spawn_offset + 0x003c) "RDMHShdw" #8
+  END
+
+  // Fix unlogical launch point of first high-level trap
+  LAUNCH_PATCH_FUNCTION ALTER_AREA_REGION
+    INT_VAR
+    launch_x		= 745
+    launch_y		= 350
+    STR_VAR
+    region_name		= "High Level"
+  END
+
+  // Add new high level trap
+  LAUNCH_PATCH_FUNCTION ADD_AREA_REGION_TRIGGER
+    INT_VAR
+    ab_RT_BbLX		= 1640
+    ab_RT_BbLY		= 1419
+    ab_RT_BbHX		= 1707
+    ab_RT_BbHY		= 1493
+    ab_RT_VxPr		= 4
+    ab_RT_Vx_X_0	= 1694
+    ab_RT_Vx_Y_0	= 1493
+    ab_RT_Vx_X_1	= 1640
+    ab_RT_Vx_Y_1	= 1485
+    ab_RT_Vx_X_2	= 1667
+    ab_RT_Vx_Y_2	= 1419
+    ab_RT_Vx_X_3	= 1707
+    ab_RT_Vx_Y_3	= 1429
+    ab_RT_TDtD		= 100
+    ab_RT_TRmD		= 100
+    ab_RT_TSet		= 1
+    ab_RT_LPoX		= 2433
+    ab_RT_LPoY		= 1288
+
+    STR_VAR
+    ab_RT_Name		= "mh#HighLevel2"
+    ab_RT_Rbcs		= "spwndead"
+  END
+
+
+// Corrupted Temple Grounds
+
+COPY_EXISTING "ar1404.are" "override"
+  GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
+  PHP_EACH spawn_array AS int => spawn_offset
+  BEGIN
+    WRITE_SHORT (spawn_offset + 0x0084) 5
+    WRITE_SHORT (spawn_offset + 0x0076) 50
+
+    WRITE_SHORT (spawn_offset + 0x0074) 4
+
+    WRITE_ASCII (spawn_offset + 0x0024) "RDUndead" #8
+    WRITE_ASCII (spawn_offset + 0x002c) "RDUndea2" #8
+    WRITE_ASCII (spawn_offset + 0x0034) "RDShad" #8
+    WRITE_ASCII (spawn_offset + 0x003c) "RDMHShdw" #8
+  END
+
+

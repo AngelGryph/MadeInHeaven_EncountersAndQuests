@@ -1,6 +1,6 @@
 // Enhanced Slum Sewers
 
-APPEND_COL "spawngrp.2da" "$ $ RDCarrio 15 carcra01 carcra01 carcra01 carcra01 carcra01 carcra01 * *" UNLESS "RDCarrio"
+APPEND_COL "spawngrp.2da" "$ $ RDMHCarr 15 carcra01 carcra01 carcra01 carcra01 carcra01 carcra01 * *" UNLESS "RDMHCarr"
 
 
 COPY_EXISTING "ar0404.are" "override"
@@ -25,7 +25,7 @@ COPY_EXISTING "ar0404.are" "override"
 
     WRITE_SHORT (spawn_offset + 0x0074) 6
 
-    WRITE_ASCII (spawn_offset + 0x0024) "RDCarrio" #8
+    WRITE_ASCII (spawn_offset + 0x0024) "RDMHCarr" #8
     WRITE_ASCII (spawn_offset + 0x002c) "RDKobold" #8
     WRITE_ASCII (spawn_offset + 0x0034) "RDSpider" #8
     WRITE_ASCII (spawn_offset + 0x003c) "RDSpid2" #8
