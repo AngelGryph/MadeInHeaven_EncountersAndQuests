@@ -14,15 +14,13 @@ COPY_EXISTING "ar1401.are" "override"
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
-    WRITE_SHORT (spawn_offset + 0x0076) 50
-    WRITE_SHORT (spawn_offset + 0x0084) 5
+    WRITE_SHORT (spawn_offset + 0x0076) 200
+    WRITE_SHORT (spawn_offset + 0x0084) 4
 
-    WRITE_SHORT (spawn_offset + 0x0074) 4
+    WRITE_SHORT (spawn_offset + 0x0074) 2
 
-    WRITE_ASCII (spawn_offset + 0x0024) "RDUndead" #8
-    WRITE_ASCII (spawn_offset + 0x002c) "RDUndea2" #8
-    WRITE_ASCII (spawn_offset + 0x0034) "RDShad" #8
-    WRITE_ASCII (spawn_offset + 0x003c) "RDMHShdw" #8
+    WRITE_ASCII (spawn_offset + 0x0024) "RDShad" #8
+    WRITE_ASCII (spawn_offset + 0x002c) "RDMHShdw" #8
   END
 
   // Fix unlogical launch point of first high-level trap
@@ -68,15 +66,13 @@ COPY_EXISTING "ar1404.are" "override"
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
-    WRITE_SHORT (spawn_offset + 0x0084) 5
-    WRITE_SHORT (spawn_offset + 0x0076) 50
+    WRITE_SHORT (spawn_offset + 0x0084) 4
+    WRITE_SHORT (spawn_offset + 0x0076) 200
 
-    WRITE_SHORT (spawn_offset + 0x0074) 4
+    WRITE_SHORT (spawn_offset + 0x0074) 2
 
-    WRITE_ASCII (spawn_offset + 0x0024) "RDUndead" #8
-    WRITE_ASCII (spawn_offset + 0x002c) "RDUndea2" #8
-    WRITE_ASCII (spawn_offset + 0x0034) "RDShad" #8
-    WRITE_ASCII (spawn_offset + 0x003c) "RDMHShdw" #8
+    WRITE_ASCII (spawn_offset + 0x0024) "RDShad" #8
+    WRITE_ASCII (spawn_offset + 0x002c) "RDMHShdw" #8
   END
 
 

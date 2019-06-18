@@ -31,8 +31,8 @@ COPY_EXISTING "ar1200.are" "override"
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
-    WRITE_SHORT (spawn_offset + 0x0076) 30
-    WRITE_SHORT (spawn_offset + 0x0084) 6
+    WRITE_SHORT (spawn_offset + 0x0076) 200
+    WRITE_SHORT (spawn_offset + 0x0084) 4
 
     WRITE_SHORT (spawn_offset + 0x0074) 10
 
@@ -56,7 +56,7 @@ COPY_EXISTING "ar1201.are" "override"
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
-    WRITE_SHORT (spawn_offset + 0x0076) 30
+    WRITE_SHORT (spawn_offset + 0x0076) 200
     WRITE_SHORT (spawn_offset + 0x0084) 3
 
     WRITE_SHORT (spawn_offset + 0x0074) 2
