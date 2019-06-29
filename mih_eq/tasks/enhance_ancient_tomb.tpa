@@ -27,8 +27,8 @@ COPY_EXISTING "ar0801.bcs" "override"
       ~SetGlobal("FindLassal","AR0801",1)~
       ~SetGlobal("FindLassal", "AR0801", 1)
 CreateCreature("wolfva01", [460.880], 11)
-CreateCreature("mh#wight", [1250.500], 1)
-CreateCreature("mh#wight", [575.830], 1)
+CreateCreature("mh#bwght", [1250.500], 1)
+CreateCreature("mh#bwght", [575.830], 1)
 CreateCreature("wolfva01", [415.1510], 10)
 CreateCreature("wolfva01", [690.1445], 6)
 CreateCreature("wolfva01", [1985.650], 5)
