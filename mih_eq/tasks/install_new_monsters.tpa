@@ -106,7 +106,7 @@ COPY "%MOD_FOLDER%/actors/mh#brain.cre" "override"
   SAY NAME2 @9
 
 
-// Wight & Barrow Wight
+// Wight, Barrow Wight & Winter Wight
 
 COPY "%MOD_FOLDER%/items/mh#wight.itm" "override"
   PATCH_IF GAME_IS "bgee"
@@ -117,6 +117,20 @@ COPY "%MOD_FOLDER%/items/mh#wight.itm" "override"
       parameter1	= 25802
     END
   END
+
+
+COPY "%MOD_FOLDER%/items/mh#bwght.itm" "override"
+  PATCH_IF GAME_IS "bgee"
+  BEGIN
+    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
+      INT_VAR
+      match_opcode	= 139	// Text: Display String
+      parameter1	= 25803
+    END
+  END
+
+
+COPY "%MOD_FOLDER%/items/mh#wwght.itm" "override"
 
 
 COPY "%MOD_FOLDER%/actors/mh#wight.cre" "override"
@@ -149,6 +163,16 @@ END
 COPY "%MOD_FOLDER%/actors/mh#bwght.cre" "override"
   SAY NAME1 @11
   SAY NAME2 @11
+
+  PATCH_IF IDS_OF_SYMBOL("animate" "wight_barrow") >= 0
+  BEGIN
+    WRITE_LONG 0x0028 IDS_OF_SYMBOL("animate" "wight_barrow")
+  END
+
+
+COPY "%MOD_FOLDER%/actors/mh#wwght.cre" "override"
+  SAY NAME1 @18
+  SAY NAME2 @18
 
   PATCH_IF IDS_OF_SYMBOL("animate" "wight_barrow") >= 0
   BEGIN
