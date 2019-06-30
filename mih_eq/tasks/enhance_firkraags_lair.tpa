@@ -69,37 +69,15 @@ COPY_EXISTING "ar1201.are" "override"
 // Main Complex
 
 COPY_EXISTING "ar1202.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/firkraags_lair.2da"
+  END
+
   GET_OFFSET_ARRAY spawn_array ARE_V10_SPAWN_POINTS
   PHP_EACH spawn_array AS int => spawn_offset
   BEGIN
     WRITE_SHORT (spawn_offset + 0x0084) (THIS + 3)
-  END
-
-  // Add new high level trap
-  LAUNCH_PATCH_FUNCTION ADD_AREA_REGION_TRIGGER
-    INT_VAR
-    ab_RT_BbLX		= 3258
-    ab_RT_BbLY		= 461
-    ab_RT_BbHX		= 3382
-    ab_RT_BbHY		= 545
-    ab_RT_VxPr		= 4
-    ab_RT_Vx_X_0	= 3382
-    ab_RT_Vx_Y_0	= 525
-    ab_RT_Vx_X_1	= 3352
-    ab_RT_Vx_Y_1	= 545
-    ab_RT_Vx_X_2	= 3258
-    ab_RT_Vx_Y_2	= 480
-    ab_RT_Vx_X_3	= 3285
-    ab_RT_Vx_Y_3	= 461
-    ab_RT_TDtD		= 100
-    ab_RT_TRmD		= 100
-    ab_RT_TSet		= 1
-    ab_RT_LPoX		= 3245
-    ab_RT_LPoY		= 175
-
-    STR_VAR
-    ab_RT_Name		= "MiH#HighLevel3"
-    ab_RT_Rbcs		= "spwndead"
   END
 
 
