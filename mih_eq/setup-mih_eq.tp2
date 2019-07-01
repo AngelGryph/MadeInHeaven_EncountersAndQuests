@@ -345,6 +345,20 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+BEGIN ~Enhanced Forest of Mir~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_new_monsters"
+END
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_forest_temple"
+END
+
+
 BEGIN ~Enhanced Ankhegs~
 GROUP ~Enhanced Monsters~
 

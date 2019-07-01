@@ -1,0 +1,195 @@
+IF
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
+  Range(NearestEnemyOf(Myself), 15)
+THEN
+  RESPONSE #70
+    RunAwayFrom(LastSeenBy(Myself), 15)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
+  HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+THEN
+  RESPONSE #70
+    Spell(Myself, WIZARD_IMPROVED_INVISIBILITY)
+    Wait(1)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself), 15)
+  !GlobalTimerNotExpired("eye_of_flame", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_flame", "LOCALS", THREE_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_FIREBALL)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !Range(SecondNearestEnemyOf(Myself), 15)
+  !GlobalTimerNotExpired("eye_of_flame", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_flame", "LOCALS", THREE_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_FIREBALL)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !Range(ThirdNearestEnemyOf(Myself), 15)
+  !GlobalTimerNotExpired("eye_of_flame", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_flame", "LOCALS", THREE_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_FIREBALL)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !Range(FourthNearestEnemyOf(Myself), 15)
+  !GlobalTimerNotExpired("eye_of_flame", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_flame", "LOCALS", THREE_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_FIREBALL)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  !Range(FifthNearestEnemyOf(Myself), 15)
+  !GlobalTimerNotExpired("eye_of_flame", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_flame", "LOCALS", THREE_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_FIREBALL)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself), 15)
+  !GlobalTimerNotExpired("eye_of_flame", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_flame", "LOCALS", THREE_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_FIREBALL)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  Range(SixthNearestEnemyOf(Myself), 20)
+  !StateCheck(NearestEnemyOf(Myself), STATE_PANIC)
+  !GlobalTimerNotExpired("eye_of_fear", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_fear", "LOCALS", TWO_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_HORROR)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  Range(FifthNearestEnemyOf(Myself), 20)
+  !StateCheck(NearestEnemyOf(Myself), STATE_PANIC)
+  !GlobalTimerNotExpired("eye_of_fear", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_fear", "LOCALS", TWO_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_HORROR)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  Range(FourthNearestEnemyOf(Myself), 20)
+  !StateCheck(NearestEnemyOf(Myself), STATE_PANIC)
+  !GlobalTimerNotExpired("eye_of_fear", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_fear", "LOCALS", TWO_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_HORROR)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  Range(ThirdNearestEnemyOf(Myself), 20)
+  !StateCheck(NearestEnemyOf(Myself), STATE_PANIC)
+  !GlobalTimerNotExpired("eye_of_fear", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_fear", "LOCALS", TWO_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_HORROR)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  Range(SecondNearestEnemyOf(Myself), 20)
+  !StateCheck(NearestEnemyOf(Myself), STATE_PANIC)
+  !GlobalTimerNotExpired("eye_of_fear", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_fear", "LOCALS", TWO_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_HORROR)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself), 20)
+  !StateCheck(NearestEnemyOf(Myself), STATE_PANIC)
+  !GlobalTimerNotExpired("eye_of_fear", "LOCALS")
+THEN
+  RESPONSE #70
+    SetGlobalTimer("eye_of_fear", "LOCALS", TWO_ROUNDS)
+    ReallyForceSpell(LastSeenBy(Myself), WIZARD_HORROR)
+    Wait(2)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #70
+    RunAwayFrom(LastSeenBy(Myself), 15)
+  RESPONSE #30
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+

@@ -34,7 +34,7 @@ COPY "%MOD_FOLDER%/actors/mh#drbly.cre" "override"
   SAY NAME2 @1
 
 
-// Skeletal Undead: Blazing Bones, Mohrg, Gold Skeleton
+// Skeletal Undead: Blazing Bones, Mohrg, Gold Skeleton, Eye of Fear & Flame
 
 COPY "%MOD_FOLDER%/items/mh#blaze.itm" "override"
      "%MOD_FOLDER%/items/mh#mohrg.itm" "override"
@@ -69,6 +69,14 @@ COPY "%MOD_FOLDER%/actors/mh#mohrg.cre" "override"
 COPY "%MOD_FOLDER%/actors/mh#gskel.cre" "override"
   SAY NAME1 @5
   SAY NAME2 @5
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#eyeff.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#eyeff.cre" "override"
+  SAY NAME1 @19
+  SAY NAME2 @19
 
 
 // Hags: Annis & Green Hag
@@ -106,7 +114,7 @@ COPY "%MOD_FOLDER%/actors/mh#brain.cre" "override"
   SAY NAME2 @9
 
 
-// Wight, Barrow Wight & Winter Wight
+// Corporal Undead: Wight, Barrow Wight & Winter Wight
 
 COPY "%MOD_FOLDER%/items/mh#wight.itm" "override"
   PATCH_IF GAME_IS "bgee"
@@ -180,7 +188,7 @@ COPY "%MOD_FOLDER%/actors/mh#wwght.cre" "override"
   END
 
 
-// Crystal Ooze & Black Pudding
+// Oozes: Crystal Ooze & Black Pudding
 
 COPY "%MOD_FOLDER%/items/mh#oozcr.itm" "override"
      "%MOD_FOLDER%/items/mh#blkpd.itm" "override"
@@ -200,7 +208,7 @@ COPY "%MOD_FOLDER%/actors/mh#blkpd.cre" "override"
   SAY NAME2 @13
 
 
-// Ruby/Emerald/Diamond Golem
+// Golems: Ruby, Emerald and Diamond
 
 COPY "%MOD_FOLDER%/items/mh#rubyg.itm" "override"
      "%MOD_FOLDER%/items/mh#emrdg.itm" "override"
@@ -249,7 +257,7 @@ COPY "%MOD_FOLDER%/actors/mh#dmndg.cre" "override"
   SAY NAME2 @16
 
 
-// Spectre
+// Incorporal Undead: Spectre & Bodak
 
 COPY "%MOD_FOLDER%/items/mh#spect.itm" "override"
   PATCH_IF GAME_IS "bgee"
@@ -265,5 +273,16 @@ COPY "%MOD_FOLDER%/items/mh#spect.itm" "override"
 COPY "%MOD_FOLDER%/actors/mh#spect.cre" "override"
   SAY NAME1 @17
   SAY NAME2 @17
+
+
+COPY "%MOD_FOLDER%/items/mh#bodak.itm" "override"
+
+
+COMPILE "%MOD_FOLDER%/scripts/mh#bodak.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY "%MOD_FOLDER%/actors/mh#bodak.cre" "override"
+  SAY NAME1 @20
+  SAY NAME2 @20
 
 
