@@ -17,7 +17,7 @@ COPY_EXISTING "ar5202.are" "override"
     WRITE_ASCII (spawn_offset + 0x0024) "mh#wwght" #8
     WRITE_ASCII (spawn_offset + 0x002c) "mh#bodak" #8
     WRITE_ASCII (spawn_offset + 0x0034) "mh#eyeff" #8
-    WRITE_ASCII (spawn_offset + 0x003c) "mh#gbone" #8
+    WRITE_ASCII (spawn_offset + 0x003c) "mh#gskel" #8
     WRITE_ASCII (spawn_offset + 0x0044) "slaysh01" #8
   END
 

@@ -359,6 +359,15 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+BEGIN ~Enhanced Watcher's Keep~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_watchers_keep"
+END
+
+
 BEGIN ~Enhanced Ankhegs~
 GROUP ~Enhanced Monsters~
 
