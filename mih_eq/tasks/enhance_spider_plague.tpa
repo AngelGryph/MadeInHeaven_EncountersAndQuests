@@ -20,13 +20,6 @@ COPY_EXISTING "%CloakwoodNest%.are" "override"
   END
 
 
-COPY_EXISTING "%CloakwoodNestSpiderNest%.are" "override"
-  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
-    STR_VAR
-    path_to_2da		= "%MOD_FOLDER%/tables/centeols_lair.2da"
-  END
-
-
 EXTEND_BOTTOM "%SpiderWood_BCS%.bcs" "%MOD_FOLDER%/scripts/spawn_random_spiders.baf"
 
 

@@ -1,5 +1,5 @@
 IF
-  GlobalGT("Chapter", "GLOBAL", 5)
+  GlobalGT("Chapter", "GLOBAL", 6)
   Global("mh#SpawnOohahBlahr", "MYAREA", 0)
 THEN
   RESPONSE #100

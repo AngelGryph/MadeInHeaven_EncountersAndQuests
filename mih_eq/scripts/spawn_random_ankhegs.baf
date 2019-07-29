@@ -2,23 +2,23 @@ IF
   !GlobalTimerNotExpired("mh#SpawnAnkhegs", "MYAREA")
   NumDeadLT("mh#RandomAnkheg", 50)
 THEN
-  RESPONSE #25
-    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", ONE_TURN)
+  RESPONSE #40
+    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", THREE_TURNS)
     CreateCreatureOffscreen("mh#ankh1", 0)
     CreateCreatureOffscreen("mh#ankh2", 0)
     CreateCreatureOffscreen("mh#ankh2", 0)
-  RESPONSE #25
-    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", ONE_TURN)
+  RESPONSE #30
+    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", THREE_TURNS)
     CreateCreatureOffscreen("mh#ankh2", 0)
     CreateCreatureOffscreen("mh#ankh3", 0)
     CreateCreatureOffscreen("mh#ankh3", 0)
-  RESPONSE #25
-    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", ONE_TURN)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", THREE_TURNS)
     CreateCreatureOffscreen("mh#ankh3", 0)
     CreateCreatureOffscreen("mh#ankh4", 0)
     CreateCreatureOffscreen("mh#ankh4", 0)
-  RESPONSE #25
-    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", ONE_TURN)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", THREE_TURNS)
     CreateCreatureOffscreen("mh#ankh4", 0)
     CreateCreatureOffscreen("mh#ankh5", 0)
     CreateCreatureOffscreen("mh#ankh5", 0)
