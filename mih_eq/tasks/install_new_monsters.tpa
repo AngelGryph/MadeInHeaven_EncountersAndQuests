@@ -117,23 +117,13 @@ COPY "%MOD_FOLDER%/actors/mh#brain.cre" "override"
 // Corporal Undead: Wight, Barrow Wight & Winter Wight
 
 COPY "%MOD_FOLDER%/items/mh#wight.itm" "override"
+     "%MOD_FOLDER%/items/mh#bwght.itm" "override"
   PATCH_IF GAME_IS "bgee"
   BEGIN
     LAUNCH_PATCH_FUNCTION ALTER_EFFECT
       INT_VAR
       match_opcode	= 139	// Text: Display String
       parameter1	= 25802
-    END
-  END
-
-
-COPY "%MOD_FOLDER%/items/mh#bwght.itm" "override"
-  PATCH_IF GAME_IS "bgee"
-  BEGIN
-    LAUNCH_PATCH_FUNCTION ALTER_EFFECT
-      INT_VAR
-      match_opcode	= 139	// Text: Display String
-      parameter1	= 25803
     END
   END
 
