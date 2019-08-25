@@ -237,6 +237,22 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// Enhanced Korlasz' Tomb
+
+BEGIN ~Enhanced Korlasz' Tomb~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "install_new_monsters"
+END
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "enhance_korlasz_tomb"
+END
+
+
 // Enhanced Ancient Tomb
 
 BEGIN ~Enhanced Ancient Tomb~
@@ -332,7 +348,7 @@ END
 
 
 BEGIN ~Enhanced Saradush Prison~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "tob"
+GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -346,7 +362,7 @@ END
 
 
 BEGIN ~Enhanced Forest of Mir~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "tob"
+GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -360,7 +376,7 @@ END
 
 
 BEGIN ~Enhanced Watcher's Keep~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "tob"
+GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR

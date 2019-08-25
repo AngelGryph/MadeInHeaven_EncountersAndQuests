@@ -1,0 +1,12 @@
+IF
+  GlobalLT("mh#JellySplit", "LOCALS", 3)
+  !GlobalTimerNotExpired("mh#JellySplitTimer", "LOCALS")
+THEN
+  RESPONSE #100
+    IncrementGlobal("mh#JellySplit", "LOCALS", 1)
+    SetGlobalTimer("mh#JellySplitTimer", "LOCALS", ONE_ROUND)
+    CreateCreatureEffect("jelloc", "trgooyaa", [-1.-1], 0)
+    Continue()
+END
+
+

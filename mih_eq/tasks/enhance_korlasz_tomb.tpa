@@ -1,0 +1,125 @@
+// Enhance Korlasz' Tomb
+
+
+// Raise levels of Korlasz' mercenaries and followers
+
+COPY_EXISTING_REGEXP "bdkor[dm]e[0-9].cre" "override"
+                     "bdshis[0-1][0-9].cre" "override"
+  WRITE_SHORT	0x0024	(THIS + 32)	// Current HP
+  WRITE_SHORT	0x0026	(THIS + 32)	// Maximum HP
+  WRITE_BYTE	0x0052	(THIS - 4)	// THAC0
+  WRITE_BYTE	0x0054	(THIS - 4)	// Save vs. death
+  WRITE_BYTE	0x0055	(THIS - 4)	// Save vs. wands
+  WRITE_BYTE	0x0056	(THIS - 4)	// Save vs. poly
+  WRITE_BYTE	0x0057	(THIS - 4)	// Save vs. breath
+  WRITE_BYTE	0x0058	(THIS - 4)	// Save vs. spell
+  WRITE_BYTE	0x0234	(THIS + 4)	// Level/HD
+  WRITE_BYTE	0x0238	(THIS + 1)	// Strength
+  WRITE_BYTE	0x0239	25		// Strength EX
+  WRITE_BYTE	0x023d	(THIS + 2)	// Constitution
+
+  WRITE_LONG	0x0014	(BYTE_AT (0x0234) * 80)
+
+
+// Make variant skeletons slightly more challenging
+
+COPY_EXISTING_REGEXP "bdskgr0[0-6].cre" "override"
+  WRITE_SHORT	0x0024	(THIS + 24)	// Current HP
+  WRITE_SHORT	0x0026	(THIS + 24)	// Maximum HP
+  WRITE_BYTE	0x0052	(THIS - 3)	// THAC0
+  WRITE_BYTE	0x0054	(THIS - 3)	// Save vs. death
+  WRITE_BYTE	0x0055	(THIS - 3)	// Save vs. wands
+  WRITE_BYTE	0x0056	(THIS - 3)	// Save vs. poly
+  WRITE_BYTE	0x0057	(THIS - 3)	// Save vs. breath
+  WRITE_BYTE	0x0058	(THIS - 3)	// Save vs. spell
+  WRITE_BYTE	0x0234	(THIS + 3)	// Level/HD
+
+  WRITE_LONG	0x0014	(BYTE_AT (0x0234) * 80)
+
+
+// Replace lone Tattered Skeleton with Barrow Wight
+
+COPY_EXISTING "bdsarc01.bcs" "override"
+              "bdsarc04.bcs" "override"
+  DECOMPILE_AND_PATCH
+  BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH "bdskgr02" "mh#bwght"
+  END
+
+
+// More challenging ochre jelly trap
+
+COMPILE "%MOD_FOLDER%/scripts/mh#bdjex.baf" USING "%MOD_FOLDER%/dummy.tra"
+
+
+COPY_EXISTING "bdshjell.cre" "override"
+  WRITE_LONG	0x0014	975	// XP value
+  WRITE_SHORT	0x0024	91	// Current HP
+  WRITE_SHORT	0x0026	91	// Maximum HP
+  WRITE_BYTE	0x0052	8	// THAC0
+  WRITE_BYTE	0x0054	7	// Save vs. death
+  WRITE_BYTE	0x0055	9	// Save vs. wands
+  WRITE_BYTE	0x0056	8	// Save vs. poly
+  WRITE_BYTE	0x0057	9	// Save vs. breath
+  WRITE_BYTE	0x0058	10	// Save vs. spell
+  WRITE_BYTE	0x0234	10	// Level/HD
+
+  WRITE_ASCII	SCRIPT_OVERRIDE "mh#bdjex"
+
+
+COPY_EXISTING "bdshjell.cre" "override/mh#bdjex.cre"
+  REMOVE_CRE_ITEM "bdamul24"
+
+
+COPY_EXISTING "bdshslim.bcs" "override"
+  DECOMPILE_AND_PATCH
+  BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH "jelloc" "mh#bdjex"
+  END
+
+
+// Slightly larger groups of enemies
+
+COPY_EXISTING "bd0120.are" "override"
+              "bd0130.are" "override"
+  GET_OFFSET_ARRAY actor_array ARE_V10_ACTORS
+  PHP_EACH actor_array AS int => actor_offset
+  BEGIN
+    READ_ASCII (actor_offset + 0x0078) script_specific
+
+    PATCH_MATCH "%script_specific%"
+    WITH
+    "bdlnorm"
+    BEGIN
+      WRITE_ASCII (actor_offset + 0x0078) "" #8
+    END
+    "bdlcore"
+    BEGIN
+      WRITE_ASCII (actor_offset + 0x0078) "bdlnorm" #8
+    END
+    "bdlhard"
+    BEGIN
+      WRITE_ASCII (actor_offset + 0x0078) "bdlcore" #8
+    END
+    "bdlinsa"
+    BEGIN
+      WRITE_ASCII (actor_offset + 0x0078) "bdlhard" #8
+    END
+    DEFAULT
+      //
+    END
+  END
+
+
+// Additional monsters on lower level
+
+COPY_EXISTING "bd0130.are" "override"
+  LAUNCH_PATCH_FUNCTION mh_add_area_actors_from_2da
+    STR_VAR
+    path_to_2da		= "%MOD_FOLDER%/tables/korlasz_tomb_lower.2da"
+    script_specific	= "bdshsurr"
+    script_class	= "bdenshtv"
+    script_default	= "bdnonin"
+  END
+
+
