@@ -152,9 +152,10 @@ BEGIN
   ACTION_IF NOT FILE_EXISTS_IN_GAME "e25e.ini"
   BEGIN
     COPY "%MOD_FOLDER%/bams/barrow_wight/e25e.ini" "override"
-    APPEND "animate.ids" "0xe25e	wight_barrow" UNLESS "wight_barrow"
-    CLEAR_IDS_MAP
   END
+
+  APPEND "animate.ids" "0xE25E WIGHT_BARROW"	UNLESS "^0xE25E"
+  CLEAR_IDS_MAP
 END
 
 
