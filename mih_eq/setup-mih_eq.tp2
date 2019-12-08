@@ -64,6 +64,11 @@ LANGUAGE ~English~
 	 ~%MOD_FOLDER%/language/english/setup-%MOD_FOLDER%.tra~
 
 
+// ==================
+// BG1: Original Saga
+// ==================
+
+
 // Enhanced Candlekeep Catacombs
 
 BEGIN ~Enhanced Candlekeep Catacombs~
@@ -220,6 +225,11 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// =============================
+// BG1: Tales of the Sword Coast
+// =============================
+
+
 // Enhanced Durlag's Tower
 
 BEGIN ~Enhanced Durlag's Tower~
@@ -236,6 +246,11 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
+// =========================
+// BG1: Siege of Dragonspear
+// =========================
+
+
 // Enhanced Korlasz' Tomb
 
 BEGIN ~Enhanced Korlasz' Tomb~
@@ -250,6 +265,20 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_korlasz_tomb"
 END
+
+
+BEGIN ~Revised SoD Vampire Encounters~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION mh_run_task
+  STR_VAR
+  task			= "revise_sod_vampires"
+END
+
+
+// ===================
+// BG2: Shadows of Amn
+// ===================
 
 
 // Enhanced Ancient Tomb
@@ -346,6 +375,11 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_trademeet_tomb"
 END
+
+
+// ====================
+// BG2: Throne of Bhaal
+// ====================
 
 
 // Enhanced Forest of Mir

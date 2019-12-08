@@ -466,3 +466,24 @@ BEGIN
 END
 
 
+DEFINE_PATCH_FUNCTION mh_easy_alter_monster
+  INT_VAR
+  modifier	= 1
+BEGIN
+  READ_BYTE 0x0234 hd
+
+  WRITE_SHORT 0x0024 THIS + modifier * hd	// current HP
+  WRITE_SHORT 0x0026 THIS + modifier * hd	// maximum HP
+
+  WRITE_SHORT 0x0046 THIS - modifier		// base AC
+  WRITE_SHORT 0x0048 THIS - modifier		// eff. AC
+
+  WRITE_BYTE 0x0052 THIS - modifier		// THAC0
+  WRITE_BYTE 0x0054 THIS - modifier		// save vs. death
+  WRITE_BYTE 0x0055 THIS - modifier		// save vs. wand
+  WRITE_BYTE 0x0056 THIS - modifier		// save vs. poly
+  WRITE_BYTE 0x0057 THIS - modifier		// save vs. breath
+  WRITE_BYTE 0x0058 THIS - modifier		// save vs. spell
+END
+
+

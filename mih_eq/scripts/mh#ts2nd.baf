@@ -1,0 +1,13 @@
+IF
+  HPLT(Myself(), 2)
+THEN
+  RESPONSE #100
+    ClearAllActions()
+    ApplySpellRES("bpdispel", Myself())
+    TransformItem("vampreg", "ring09")
+    Polymorph(BLOB_MIST_CREATURE)
+    ChangeEnemyAlly(Myself(), NEUTRAL)
+    EscapeAreaDestroy(10)
+END
+
+

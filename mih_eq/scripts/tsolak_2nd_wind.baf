@@ -1,0 +1,16 @@
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,12)
+  Global("bd_123_tsolak_defeated", "global", 1)
+  !Global("bd_123_tsolak_dead", "global", 1)
+  Global("bd_123_tomb_clicked", "myarea", 1)
+  PartyHasItem("bdstake")
+  Global("mh#tsolak_2nd_wind", "global", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#tsolak_2nd_wind", "global", 1)
+    CreateCreature("mh#ts2nd", [-1.-1], 3)
+    DisplayStringHead(Myself, @0)
+END
+
+

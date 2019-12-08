@@ -1,0 +1,13 @@
+IF
+  Allegiance(Myself,ENEMY)
+  Global("mh#spawn_shadows", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawn_shadows", "LOCALS", 1)
+    CreateCreature("bdshad04", [-1.-1], SE)
+    CreateCreature("bdshad04", [-1.-1], SE)
+    CreateCreature("bdshad04", [-1.-1], SE)
+    Continue()
+END
+
+
