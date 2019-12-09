@@ -78,39 +78,6 @@ COPY_EXISTING "bdshslim.bcs" "override"
   END
 
 
-// Slightly larger groups of enemies
-
-COPY_EXISTING "bd0120.are" "override"
-              "bd0130.are" "override"
-  GET_OFFSET_ARRAY actor_array ARE_V10_ACTORS
-  PHP_EACH actor_array AS int => actor_offset
-  BEGIN
-    READ_ASCII (actor_offset + 0x0078) script_specific
-
-    PATCH_MATCH "%script_specific%"
-    WITH
-    "bdlnorm"
-    BEGIN
-      WRITE_ASCII (actor_offset + 0x0078) "" #8
-    END
-    "bdlcore"
-    BEGIN
-      WRITE_ASCII (actor_offset + 0x0078) "bdlnorm" #8
-    END
-    "bdlhard"
-    BEGIN
-      WRITE_ASCII (actor_offset + 0x0078) "bdlcore" #8
-    END
-    "bdlinsa"
-    BEGIN
-      WRITE_ASCII (actor_offset + 0x0078) "bdlhard" #8
-    END
-    DEFAULT
-      //
-    END
-  END
-
-
 // Additional monsters on lower level
 
 COPY_EXISTING "bd0130.are" "override"
