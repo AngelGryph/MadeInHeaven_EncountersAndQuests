@@ -1,11 +1,12 @@
 // Enhanced Ankheg Pit encounter (BG1)
 
 COPY_EXISTING "ankheg.cre" "override/mh#ankh1.cre"
-  WRITE_LONG 0x0014 650	// XP gained
-  WRITE_SHORT 0x0024 56	// Current HP
-  WRITE_SHORT 0x0026 56	// Current HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 7
+  END
 
-  WRITE_BYTE 0x0234 7	// Level/HD
+  WRITE_LONG 0x0014 650	// XP gained
   WRITE_BYTE 0x0238 18	// Strength
   WRITE_BYTE 0x0239 25	// Strength EX
 
@@ -13,11 +14,12 @@ COPY_EXISTING "ankheg.cre" "override/mh#ankh1.cre"
 
 
 COPY_EXISTING "ankheg.cre" "override/mh#ankh2.cre"
-  WRITE_LONG 0x0014 420	// XP gained
-  WRITE_SHORT 0x0024 48	// Current HP
-  WRITE_SHORT 0x0026 48	// Current HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 6
+  END
 
-  WRITE_BYTE 0x0234 6	// Level/HD
+  WRITE_LONG 0x0014 420	// XP gained
   WRITE_BYTE 0x0238 18	// Strength
   WRITE_BYTE 0x0239 01	// Strength EX
   WRITE_BYTE 0x023d 15	// Constitution
@@ -26,11 +28,12 @@ COPY_EXISTING "ankheg.cre" "override/mh#ankh2.cre"
 
 
 COPY_EXISTING "ankheg.cre" "override/mh#ankh3.cre"
-  WRITE_LONG 0x0014 300	// XP gained
-  WRITE_SHORT 0x0024 40	// Current HP
-  WRITE_SHORT 0x0026 40	// Current HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 5
+  END
 
-  WRITE_BYTE 0x0234 5	// Level/HD
+  WRITE_LONG 0x0014 270	// XP gained
   WRITE_BYTE 0x0238 17	// Strength
   WRITE_BYTE 0x023d 15	// Constitution
 
@@ -38,11 +41,12 @@ COPY_EXISTING "ankheg.cre" "override/mh#ankh3.cre"
 
 
 COPY_EXISTING "ankheg.cre" "override/mh#ankh4.cre"
-  WRITE_LONG 0x0014 240	// XP gained
-  WRITE_SHORT 0x0024 40	// Current HP
-  WRITE_SHORT 0x0026 40	// Current HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 4
+  END
 
-  WRITE_BYTE 0x0234 4	// Level/HD
+  WRITE_LONG 0x0014 175	// XP gained
   WRITE_BYTE 0x0238 16	// Strength
   WRITE_BYTE 0x023d 13	// Constitution
 
@@ -50,11 +54,12 @@ COPY_EXISTING "ankheg.cre" "override/mh#ankh4.cre"
 
 
 COPY_EXISTING "ankheg.cre" "override/mh#ankh5.cre"
-  WRITE_LONG 0x0014 175	// XP gained
-  WRITE_SHORT 0x0024 32	// Current HP
-  WRITE_SHORT 0x0026 32	// Current HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 3
+  END
 
-  WRITE_BYTE 0x0234 3	// Level/HD
+  WRITE_LONG 0x0014 120	// XP gained
   WRITE_BYTE 0x0238 12	// Strength
   WRITE_BYTE 0x023d 11	// Constitution
 

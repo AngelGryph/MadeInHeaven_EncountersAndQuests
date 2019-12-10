@@ -4,28 +4,25 @@ COPY_EXISTING "sarprovf.cre" "override"
               "sarprovm.cre" "override"
               "sarvam02.cre" "override"
               "sarvam03.cre" "override"
-  WRITE_LONG 0x0014 17500	// XP
 
-  WRITE_SHORT 0x0024 110	// Cur. HP
-  WRITE_SHORT 0x0026 110	// Max. HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 23
+    thac0_bonus	= 3
+    save_bonus	= 3
+  END
+
+  WRITE_LONG 0x0014 17500	// XP
 
   WRITE_SHORT 0x0046 0		// Nat. AC
   WRITE_SHORT 0x0048 0		// Eff. AC
 
-  WRITE_BYTE 0x0052 5		// THAC0
   WRITE_BYTE 0x0053 3		// APR
-
-  WRITE_BYTE 0x0054 6		// Save vs. Death
-  WRITE_BYTE 0x0055 6		// Save vs. Wand
-  WRITE_BYTE 0x0056 6		// Save vs. Poly
-  WRITE_BYTE 0x0057 6		// Save vs. Breath
-  WRITE_BYTE 0x0058 6		// Save vs. Spell
 
   WRITE_BYTE 0x005a 100		// Resist cold
   WRITE_BYTE 0x005b 100		// Resist elec.
   WRITE_BYTE 0x005d 50		// Resist magic
 
-  WRITE_BYTE 0x0234 23		// Level/HD
   WRITE_BYTE 0x0238 22		// Strength
   WRITE_BYTE 0x023c 21		// Dexterity
   WRITE_BYTE 0x023d 23		// Constitution

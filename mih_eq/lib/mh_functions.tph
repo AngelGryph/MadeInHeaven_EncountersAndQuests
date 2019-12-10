@@ -487,3 +487,99 @@ BEGIN
 END
 
 
+DEFINE_PATCH_FUNCTION mh_change_monster_hd
+  INT_VAR
+  hd_min	= 0
+  hd_bonus	= 0
+  hp_per_hd	= 8
+  thac0_bonus	= 0
+  save_bonus	= 0
+  thac0_line	= IDS_OF_SYMBOL("class" "cleric")
+  STR_VAR
+  save_table	= "saveprs"
+BEGIN
+  READ_SHORT 0x0026 hp_max
+  READ_SBYTE 0x0052 thac0
+  READ_SBYTE 0x0054 save_death
+  READ_SBYTE 0x0055 save_wands
+  READ_SBYTE 0x0056 save_poly
+  READ_SBYTE 0x0057 save_breath
+  READ_SBYTE 0x0058 save_spell
+  READ_BYTE 0x0234 hd
+
+  PATCH_IF hd_min > hd
+  BEGIN
+    SET hd = hd_min
+  END
+
+  SET hd = hd + hd_bonus
+  
+  INNER_PATCH_FILE "thac0.2da"
+  BEGIN
+    READ_2DA_ENTRY thac0_line hd 9 thac0_min
+  END
+
+  PATCH_IF thac0_min < thac0
+  BEGIN
+    SET thac0 = thac0_min
+  END
+
+  SET thac0 -= thac0_bonus
+
+  INNER_PATCH_FILE "%save_table%.2da"
+  BEGIN
+    READ_2DA_ENTRY 1 hd 9 save_death_min
+    READ_2DA_ENTRY 2 hd 9 save_wands_min
+    READ_2DA_ENTRY 3 hd 9 save_poly_min
+    READ_2DA_ENTRY 4 hd 9 save_breath_min
+    READ_2DA_ENTRY 5 hd 9 save_spell_min
+  END
+
+  PATCH_IF save_death_min < save_death
+  BEGIN
+    SET save_death = save_death_min
+  END
+
+  PATCH_IF save_wands_min < save_wands
+  BEGIN
+    SET save_wands = save_wands_min
+  END
+
+  PATCH_IF save_poly_min < save_poly
+  BEGIN
+    SET save_poly = save_poly_min
+  END
+
+  PATCH_IF save_breath_min < save_breath
+  BEGIN
+    SET save_breath = save_breath_min
+  END
+
+  PATCH_IF save_spell_min < save_spell
+  BEGIN
+    SET save_spell = save_spell_min
+  END
+
+  SET save_death -= save_bonus
+  SET save_wands -= save_bonus
+  SET save_poly -= save_bonus
+  SET save_breath -= save_bonus
+  SET save_spell -= save_bonus
+
+  PATCH_IF hp_max < (hd * hp_per_hd)
+  BEGIN
+    SET hp_max = hd * hp_per_hd
+  END
+
+  WRITE_SHORT 0x0024 hp_max
+  WRITE_SHORT 0x0026 hp_max
+  WRITE_BYTE 0x0052 thac0
+  WRITE_BYTE 0x0054 save_death
+  WRITE_BYTE 0x0055 save_wands
+  WRITE_BYTE 0x0056 save_poly
+  WRITE_BYTE 0x0057 save_breath
+  WRITE_BYTE 0x0058 save_spell
+  WRITE_BYTE 0x0234 hd
+END
+
+

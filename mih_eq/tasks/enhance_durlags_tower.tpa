@@ -14,22 +14,18 @@ COPY_EXISTING "ghastd.cre" "override"
   SAY NAME1 "Fell Ghast"
   SAY NAME2 "Fell Ghast"
 
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 7
+  END
+
   ADD_CRE_ITEM "immune1" #0 #0 #0 "unstealable&undroppable" "ring"
 
   WRITE_LONG	0x0014	975	// XP value
-  WRITE_SHORT	0x0024	56	// Current HP
-  WRITE_SHORT	0x0026	56	// Maximum HP
   WRITE_SHORT	0x0046	1	// Natural AC
   WRITE_SHORT	0x0048	1	// Effective AC
-  WRITE_BYTE	0x0052	11	// THAC0
   WRITE_BYTE	0x0053	9	// APR
-  WRITE_BYTE	0x0054	7	// Save vs. death
-  WRITE_BYTE	0x0055	11	// Save vs. wands
-  WRITE_BYTE	0x0056	10	// Save vs. poly
-  WRITE_BYTE	0x0057	13	// Save vs. breath
-  WRITE_BYTE	0x0058	12	// Save vs. spell
   WRITE_BYTE	0x005d	20	// MR
-  WRITE_BYTE	0x0234	7	// Level/HD
   WRITE_BYTE	0x0238	18	// Strength
   WRITE_BYTE	0x0239	51	// Strength EX
 

@@ -5,36 +5,28 @@
 
 COPY_EXISTING_REGEXP "bdkor[dm]e[0-9].cre" "override"
                      "bdshis[0-1][0-9].cre" "override"
-  WRITE_SHORT	0x0024	(THIS + 32)	// Current HP
-  WRITE_SHORT	0x0026	(THIS + 32)	// Maximum HP
-  WRITE_BYTE	0x0052	(THIS - 4)	// THAC0
-  WRITE_BYTE	0x0054	(THIS - 4)	// Save vs. death
-  WRITE_BYTE	0x0055	(THIS - 4)	// Save vs. wands
-  WRITE_BYTE	0x0056	(THIS - 4)	// Save vs. poly
-  WRITE_BYTE	0x0057	(THIS - 4)	// Save vs. breath
-  WRITE_BYTE	0x0058	(THIS - 4)	// Save vs. spell
-  WRITE_BYTE	0x0234	(THIS + 4)	// Level/HD
-  WRITE_BYTE	0x0238	(THIS + 1)	// Strength
-  WRITE_BYTE	0x0239	25		// Strength EX
-  WRITE_BYTE	0x023d	(THIS + 2)	// Constitution
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 2
+    hd_bonus	= 5
+    hp_per_hd	= 10
+    thac0_bonus	= 2
+    save_bonus	= 1
+    thac0_line	= IDS_OF_SYMBOL("class" "fighter")
+    STR_VAR
+    save_table	= "savewar"
+  END
 
-  WRITE_LONG	0x0014	(BYTE_AT (0x0234) * 80)
+  WRITE_LONG	0x0014	(BYTE_AT (0x0234) * 50)	// XP value
 
 
 // Make variant skeletons slightly more challenging
 
 COPY_EXISTING_REGEXP "bdskgr0[0-6].cre" "override"
-  WRITE_SHORT	0x0024	(THIS + 24)	// Current HP
-  WRITE_SHORT	0x0026	(THIS + 24)	// Maximum HP
-  WRITE_BYTE	0x0052	(THIS - 3)	// THAC0
-  WRITE_BYTE	0x0054	(THIS - 3)	// Save vs. death
-  WRITE_BYTE	0x0055	(THIS - 3)	// Save vs. wands
-  WRITE_BYTE	0x0056	(THIS - 3)	// Save vs. poly
-  WRITE_BYTE	0x0057	(THIS - 3)	// Save vs. breath
-  WRITE_BYTE	0x0058	(THIS - 3)	// Save vs. spell
-  WRITE_BYTE	0x0234	(THIS + 3)	// Level/HD
-
-  WRITE_LONG	0x0014	(BYTE_AT (0x0234) * 80)
+  LAUNCH_PATCH_FUNCTION mh_easy_alter_monster
+    INT_VAR
+    modifier	= 2
+  END
 
 
 // Replace lone Tattered Skeleton with Barrow Wight
@@ -53,17 +45,12 @@ COMPILE "%MOD_FOLDER%/scripts/mh#bdjex.baf" USING "%MOD_FOLDER%/dummy.tra"
 
 
 COPY_EXISTING "bdshjell.cre" "override"
-  WRITE_LONG	0x0014	975	// XP value
-  WRITE_SHORT	0x0024	91	// Current HP
-  WRITE_SHORT	0x0026	91	// Maximum HP
-  WRITE_BYTE	0x0052	8	// THAC0
-  WRITE_BYTE	0x0054	7	// Save vs. death
-  WRITE_BYTE	0x0055	9	// Save vs. wands
-  WRITE_BYTE	0x0056	8	// Save vs. poly
-  WRITE_BYTE	0x0057	9	// Save vs. breath
-  WRITE_BYTE	0x0058	10	// Save vs. spell
-  WRITE_BYTE	0x0234	10	// Level/HD
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 10
+  END
 
+  WRITE_LONG	0x0014	1400	// XP value
   WRITE_ASCII	SCRIPT_OVERRIDE "mh#bdjex"
 
 

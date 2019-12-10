@@ -27,13 +27,15 @@ COPY_EXISTING "ankheg.cre" "override"
 	      "bdankh01.cre" "override"
 	      "bdankhsu.cre" "override"
               "ankheg01.cre" "override"
-  WRITE_SHORT 0x0024 64	// Current HP
-  WRITE_SHORT 0x0026 64	// Current HP
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 8
+  END
+
   WRITE_SHORT 0x004c 1	// AC bonus vs. piercing
   WRITE_SHORT 0x004e 1	// AC bonus vs. missile
   WRITE_SHORT 0x0050 3	// AC bonus vs. slashing
 
-  WRITE_BYTE 0x0234 8	// Level/HD
   WRITE_BYTE 0x0238 18	// Strength
   WRITE_BYTE 0x0239 50	// Strength EX
   WRITE_BYTE 0x023d 17	// Constitution

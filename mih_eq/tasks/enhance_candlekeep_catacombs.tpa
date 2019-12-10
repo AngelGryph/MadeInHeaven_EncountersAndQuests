@@ -47,6 +47,15 @@ COPY_EXISTING "%CandlekeepCaves%.are" "override"
 // Improved Arkanis and Deder
 
 COPY_EXISTING "arkani3.cre" "override"
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 8
+    hp_per_hd	= 10
+    thac0_line	= IDS_OF_SYMBOL("class" "fighter")
+    STR_VAR
+    save_table	= "savewar"
+  END
+
   // Equipment
   REPLACE_CRE_ITEM "ax1h02" #0 #0 #0 "none" "weapon1" EQUIP
   REPLACE_CRE_ITEM "hamm02" #0 #0 #0 "none" "weapon2"
@@ -66,20 +75,21 @@ COPY_EXISTING "arkani3.cre" "override"
   SET_BG2_PROFICIENCY	PROFICIENCYSWORDANDSHIELD	2
 
   // Stats
-  WRITE_LONG	0x0014	975	// XP value
-  WRITE_SHORT	0x0024	56	// Current HP
-  WRITE_SHORT	0x0026	56	// Maximum HP
+  WRITE_LONG	0x0014	650	// XP value
   WRITE_BYTE	0x0053	7	// # of attacks 3/2
-  WRITE_BYTE	0x0054	8	// Save vs. Death
-  WRITE_BYTE	0x0055	10	// Save vs. Wands
-  WRITE_BYTE	0x0056	9	// Save vs. Poly
-  WRITE_BYTE	0x0057	9	// Save vs. Breath
-  WRITE_BYTE	0x0058	11	// Save vs. Spell
-  WRITE_BYTE	0x0234	9	// Level
   WRITE_BYTE	0x0273	IDS_OF_SYMBOL("class" "fighter")
 
 
 COPY_EXISTING "deder3.cre" "override"
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 9
+    hp_per_hd	= 6
+    thac0_line	= IDS_OF_SYMBOL("class" "thief")
+    STR_VAR
+    save_table	= "saverog"
+  END
+
   // Equipment
   REPLACE_CRE_ITEM "bow06" #0 #0 #0 "none" "weapon1" EQUIP
   REPLACE_CRE_ITEM "sw1h08" #0 #0 #0 "none" "weapon2"
@@ -99,15 +109,8 @@ COPY_EXISTING "deder3.cre" "override"
   SET_BG2_PROFICIENCY	PROFICIENCYSINGLEWEAPON		2
 
   // Stats
-  WRITE_LONG	0x0014	975	// XP value
-  WRITE_SHORT	0x0024	42	// Current HP
-  WRITE_SHORT	0x0026	42	// Maximum HP
+  WRITE_LONG	0x0014	650	// XP value
   WRITE_BYTE	0x0053	7	// # of attacks 3/2
-  WRITE_BYTE	0x0054	10	// Save vs. Death
-  WRITE_BYTE	0x0055	12	// Save vs. Wands
-  WRITE_BYTE	0x0056	11	// Save vs. Poly
-  WRITE_BYTE	0x0057	12	// Save vs. Breath
-  WRITE_BYTE	0x0058	13	// Save vs. Spell
   WRITE_BYTE	0x0065	50	// Set traps
   WRITE_BYTE	0x0068	70	// Stealth
   WRITE_BYTE	0x0069	70	// Find/disarm traps

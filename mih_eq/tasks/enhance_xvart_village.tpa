@@ -1,16 +1,20 @@
 // Enhanced Xvart Village
 
 COPY_EXISTING "nexlit.cre" "override"
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 4
+    hp_per_hd	= 10
+    thac0_bonus	= 1
+    save_bonus	= 1
+    thac0_line	= IDS_OF_SYMBOL("class" "fighter")
+    STR_VAR
+    save_table	= "savewar"
+  END
+
   WRITE_LONG 0x0014 120		// XP value
   WRITE_LONG 0x001c 75		// gold value
-  WRITE_BYTE 0x0052 15		// THAC0
   WRITE_BYTE 0x0053 7		// APR
-  WRITE_BYTE 0x0054 13		// Save vs. Death
-  WRITE_BYTE 0x0055 15		// Save vs. Wands
-  WRITE_BYTE 0x0056 14		// Save vs. Poly
-  WRITE_BYTE 0x0057 16		// Save vs. Breath
-  WRITE_BYTE 0x0058 16		// Save vs. Spell
-  WRITE_BYTE 0x0234 4		// Level/HD
   
   SET_BG2_PROFICIENCY PROFICIENCYSHORTSWORD 2
   ADD_CRE_ITEM "sw1h08" #0 #0 #0 "unstealable" "weapon1" EQUIP
@@ -18,22 +22,15 @@ COPY_EXISTING "nexlit.cre" "override"
 
 
 COPY_EXISTING "xvart2.cre" "override"
-  WRITE_SHORT 0x0024 14		// current HP
-  WRITE_SHORT 0x0026 14		// maximum HP
-  WRITE_BYTE 0x0052 17		// THAC0
-  WRITE_BYTE 0x0054 13		// Save vs. Death
-  WRITE_BYTE 0x0055 15		// Save vs. Wands
-  WRITE_BYTE 0x0056 14		// Save vs. Poly
-  WRITE_BYTE 0x0057 16		// Save vs. Breath
-  WRITE_BYTE 0x0058 16		// Save vs. Spell
-  WRITE_BYTE 0x0234 2		// Level/HD
-
-
-COPY_EXISTING "xvarth.cre" "override"
-  WRITE_BYTE 0x0052 18		// THAC0
-  WRITE_SHORT 0x0024 14		// current HP
-  WRITE_SHORT 0x0026 14		// maximum HP
-  WRITE_BYTE 0x0234 2		// Level/HD
+              "xvarth.cre" "override"
+  LAUNCH_PATCH_FUNCTION mh_change_monster_hd
+    INT_VAR
+    hd_min	= 2
+    hp_per_hd	= 10
+    thac0_line	= IDS_OF_SYMBOL("class" "fighter")
+    STR_VAR
+    save_table	= "savewar"
+  END
 
 
 COPY_EXISTING "%XvartVillage%.are" "override"
