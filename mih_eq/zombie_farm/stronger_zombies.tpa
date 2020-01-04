@@ -1,0 +1,41 @@
+DEFINE_ACTION_FUNCTION stronger_zombies
+BEGIN
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "b1-4=>b3-12m1"
+    editstring	= ~magical=>1 enchantment=>1 patch_ability_inline=>"ability_numdice=>3"~
+  END
+
+  MAKE_PATCH
+    strength=>18
+    strength_ex=>51
+    dexterity=>16
+    constitution=>14
+    intelligence=>12
+    wisdom=>12
+    charisma=>10
+    level=>7
+    enforce_thac0=>always
+    attacks=>2
+    hitpoints=>56
+    ac=>3
+    enforce_saves=>always
+    xp_value=>975
+    alignment=>neutral_evil
+    resist_fire=>50
+    resist_electricity=>100
+    resist_crushing=>50
+    resist_piercing=>50
+    resist_missile=>80
+    add_items=>"immune1(rring) b3-12m1(weapon1)"
+    add_effect_inline=>"opcode=>83 target=>1 timing=>9 parameter2=>36"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "zombiew"
+    edits	= "patch_data"
+  END
+END	// stronger_zombies
+
+
