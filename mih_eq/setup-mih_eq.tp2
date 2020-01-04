@@ -25,6 +25,38 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
+// ====================
+// Monster Improvements
+// ====================
+
+// P&P Ankhegs
+
+BEGIN ~P&P Ankhegs~
+GROUP ~Monster Improvements~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "pnp_ankhegs"
+  location	= "ankhegs"
+END
+
+
+// ==================
+// BG1: Original Saga
+// ==================
+
+// Harder Ankheg Pit
+
+BEGIN ~Harder Ankheg Pit~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "harder_ankheg_pit"
+  location	= "ankhegs"
+END
+
+
 // Enhanced Zombie Farm
 
 BEGIN ~Enhanced Zombie Farm~
@@ -38,11 +70,6 @@ END
 
 
 /*
-// ==================
-// BG1: Original Saga
-// ==================
-
-
 // Enhanced Candlekeep Catacombs
 
 BEGIN ~Enhanced Candlekeep Catacombs~
@@ -425,25 +452,6 @@ GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_watchers_keep"
-END
-
-
-// Enhanced Ankhegs
-
-BEGIN ~Enhanced Ankhegs~
-GROUP ~Enhanced Monsters~
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_ankhegs"
-END
-
-ACTION_IF GAME_INCLUDES "bg1"
-BEGIN
-  LAUNCH_ACTION_FUNCTION mh_run_task
-    STR_VAR
-    task		= "enhance_ankheg_pit"
-  END
 END
 
 

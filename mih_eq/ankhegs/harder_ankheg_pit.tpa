@@ -1,0 +1,40 @@
+DEFINE_ACTION_FUNCTION harder_ankheg_pit
+BEGIN
+  OUTER_FOR (i=3; i<=7; ++i)
+  BEGIN
+    LAUNCH_ACTION_FUNCTION clone_creature
+      STR_VAR
+      creature		= "ankheg=>mh#ankh%i%"
+      editstring	= ~level1=>%i% hitpoints=>"%i%*8" enforce_thac0=>at_best enforce_saves=>at_best xp_value=>"%i% from [0 0 0 120 175 270 420 650]" dv=>"mh#SpawnedAnkheg"~
+    END
+  END
+
+  MAKE_PATCH
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>95 actor_y_coord_start=>665 actor_x_coord_dest=>95 actor_y_coord_dest=>665 actor_orientation=>14~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>115 actor_y_coord_start=>1355 actor_x_coord_dest=>115 actor_y_coord_dest=>1355 actor_orientation=>11~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>760 actor_y_coord_start=>1280 actor_x_coord_dest=>760 actor_y_coord_dest=>1280 actor_orientation=>8~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>1245 actor_y_coord_start=>1370 actor_x_coord_dest=>1245 actor_y_coord_dest=>1370 actor_orientation=>6~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>1550 actor_y_coord_start=>620 actor_x_coord_dest=>1550 actor_y_coord_dest=>620 actor_orientation=>3~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>1995 actor_y_coord_start=>1210 actor_x_coord_dest=>1995 actor_y_coord_dest=>1210 actor_orientation=>6~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>2565 actor_y_coord_start=>775 actor_x_coord_dest=>2565 actor_y_coord_dest=>775 actor_orientation=>3~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>2610 actor_y_coord_start=>200 actor_x_coord_dest=>2610 actor_y_coord_dest=>200 actor_orientation=>3~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>2220 actor_y_coord_start=>590 actor_x_coord_dest=>2220 actor_y_coord_dest=>590 actor_orientation=>7~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>1795 actor_y_coord_start=>195 actor_x_coord_dest=>1795 actor_y_coord_dest=>195 actor_orientation=>12~
+    add_actor_inline=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord_start=>910 actor_y_coord_start=>370 actor_x_coord_dest=>910 actor_y_coord_dest=>370 actor_orientation=>6~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area		= "%FishingVillage_AnkhegPit%"
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area		= "%FishingVillage_AnkhegPit%"
+    script		= "spawn_random_ankhegs"
+    location		= "scripts"
+  END
+END
+
+
