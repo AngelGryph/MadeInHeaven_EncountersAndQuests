@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION setup_ankhegs
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "alter_bg1_ankheg_pit"
+    RET
+    alter_bg1_ankheg_pit	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "pnp_ankhegs"
+    tra		= "pnp_ankhegs"
+  END
+
+  ACTION_IF GAME_INCLUDES "bg1" AND alter_bg1_ankheg_pit
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "alter_bg1_ankheg_pit"
+    END
+  END
+END	// setup_ankhegs
+
+

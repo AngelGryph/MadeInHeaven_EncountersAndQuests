@@ -11,6 +11,7 @@ BEGIN
     spell		= "ankheg_acid"
     location		= "spells"
     idsname		= "INNATE_ANKHEG_ACID"
+    editstring		= "say_name=>0"
   END
 
   MAKE_PATCH

@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION harder_ankheg_pit
+DEFINE_ACTION_FUNCTION alter_bg1_ankheg_pit
 BEGIN
   OUTER_FOR (i=3; i<=7; ++i)
   BEGIN
@@ -35,6 +35,6 @@ BEGIN
     script		= "spawn_random_ankhegs"
     location		= "scripts"
   END
-END
+END	// alter_bg1_ankheg_pit
 
 

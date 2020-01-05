@@ -1,0 +1,9 @@
+DEFINE_ACTION_FUNCTION setup_wraith_spiders
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "pnp_wraith_spiders"
+  END
+END	// setup_wraith_spiders
+
+
