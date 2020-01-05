@@ -11,14 +11,16 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION edit_item
     STR_VAR
-    item	= "spidwr1"
-    editstring	= "patch_ability=>patch_data"
+    item		= "spidwr1"
+    editstring		= "patch_ability=>patch_data"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature
+     INT_VAR
+    allow_missing	= 1
     STR_VAR
-    creature	= "spidwr spidwr01 ttspid"
-    editstring	= ~general=>undead resist_cold=>100 replace_items=>"spidwr1(weapon1)"~
+    creature		= "spidwr spidwr01 ttspid"
+    editstring		= ~general=>undead resist_cold=>100 replace_items=>"spidwr1(weapon1)"~
   END
 END	// pnp_wraith_spiders
 

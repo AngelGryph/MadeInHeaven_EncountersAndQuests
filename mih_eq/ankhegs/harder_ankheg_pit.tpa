@@ -5,7 +5,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION clone_creature
       STR_VAR
       creature		= "ankheg=>mh#ankh%i%"
-      editstring	= ~level1=>%i% hitpoints=>"%i%*8" enforce_thac0=>at_best enforce_saves=>at_best xp_value=>"%i% from [0 0 0 120 175 270 420 650]" dv=>"mh#SpawnedAnkheg"~
+      editstring	= ~level1=>%i% hitpoints=>"%i% * 13 / 2" enforce_thac0=>at_best enforce_saves=>at_best xp_value=>"%i% from [0 0 0 120 175 270 420 650]" dv=>"mh#SpawnedAnkheg"~
     END
   END
 

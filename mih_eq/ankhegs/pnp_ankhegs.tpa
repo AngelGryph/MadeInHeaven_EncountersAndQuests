@@ -14,10 +14,10 @@ BEGIN
   END
 
   MAKE_PATCH
-    strength=>18
-    strength_ex=>75
-    constitution=>16
-    dexterity=>14
+    strengthGT=>18
+    strength_exGT=>75
+    constitutionGT=>16
+    dexterityGT=>14
     intelligence=>1
     level1=>8
     level2=>0
