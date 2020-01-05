@@ -41,6 +41,19 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Winter Wolves
+
+BEGIN ~P&P Winter Wolves~
+GROUP ~Monster Improvements~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "pnp_winter_wolves"
+  tra		= "pnp_winter_wolves"
+  location	= "winter_wolves"
+END
+
+
 // P&P Wraith Spiders
 
 BEGIN ~P&P Wraith Spiders~
@@ -66,6 +79,20 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "harder_ankheg_pit"
   location	= "ankhegs"
+END
+
+
+// Relocate Early Winter Wolves
+
+BEGIN ~Relocate Early Winter Wolves~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" ~This component only works on Enhanced Edition.~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "relocate_winter_wolves"
+  location	= "winter_wolves"
 END
 
 
