@@ -41,6 +41,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Wraith Spiders
+
+BEGIN ~P&P Wraith Spiders~
+GROUP ~Monster Improvements~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "pnp_wraith_spiders"
+  location	= "wraith_spiders"
+END
+
+
 // ==================
 // BG1: Original Saga
 // ==================
