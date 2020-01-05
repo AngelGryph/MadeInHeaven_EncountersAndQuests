@@ -41,6 +41,17 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Dread Wolves
+
+BEGIN ~P&P Dread Wolves~
+GROUP ~Monster Improvements~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_dread_wolves"
+  location	= "dread_wolves"
+END
+
 // P&P Winter Wolves
 
 BEGIN ~P&P Winter Wolves~

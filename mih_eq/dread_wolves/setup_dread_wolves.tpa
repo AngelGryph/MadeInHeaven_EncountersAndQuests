@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION setup_dread_wolves
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_regenerate_once"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "pnp_dread_wolves"
+  END
+END	// setup_dread_wolves
+
+

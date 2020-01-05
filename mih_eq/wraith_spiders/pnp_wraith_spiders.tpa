@@ -7,6 +7,7 @@ BEGIN
     add_effect_inline'1=>"opcode=>12 target=>2 timing=>1 parameter2=>131072 dicenum=>1 dicesize=>4"
     add_effect_inline'2=>"opcode=>216 target=>2 timing=>1 parameter1=>1"
     add_effect_inline'3=>"opcode=>78 target=>2 timing=>2 parameter1=>2 parameter2=>6 save_vs_poison=>1"
+    add_effect_inline'3=>"opcode=>142 target=>2 timing=>2 arameter2=>7 save_vs_poison=>1"
   END
 
   LAUNCH_ACTION_FUNCTION edit_item
