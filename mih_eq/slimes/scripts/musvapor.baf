@@ -1,0 +1,22 @@
+IF
+  !ActuallyInCombat()
+  See(Myself)
+  ActionListEmpty()
+  Delay(15)
+THEN
+  RESPONSE #100
+    Hide()
+END
+  
+IF
+  See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("mustard_jelly_vapor", "LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mustard_jelly_vapor", "LOCALS", ONE_ROUND)
+    ReallyForceSpell(Myself, MUSTARD_JELLY_VAPOR)
+    Wait(2)
+    Continue()
+END
+
+

@@ -1,0 +1,19 @@
+DEFINE_ACTION_FUNCTION setup_slimes
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "pnp_gray_oozes"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "pnp_mustard_jellies"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "pnp_ochre_jellies"
+  END
+END	// setup_slimes
+
+

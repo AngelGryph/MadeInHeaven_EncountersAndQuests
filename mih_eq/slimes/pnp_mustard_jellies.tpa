@@ -1,0 +1,69 @@
+DEFINE_ACTION_FUNCTION pnp_mustard_jellies
+BEGIN
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "mustard_jelly_vapor"
+    idsname		= "MUSTARD_JELLY_VAPOR"
+    location		= "spells"
+  END
+
+  MAKE_PATCH
+    delete_opcodes=>"141"
+    patch_effect_inline'1=>"resource=>mh#mus25"
+    patch_effect_inline'2=>~match=>"opcode=151" parameter2=>1~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_spell
+    STR_VAR
+    spell		= "spwi951=>mussplit"
+    edits		= "patch_data"
+  END
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_numdice=>0 ability_dicesize=>0 damage_type=>0 strength_bonus=>0~
+    delete_opcodes=>all
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>65536 dicenum=>5 dicesize=>4~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item		= "jellmu1"
+    edits		= "patch_data"
+  END
+
+  COMPILE "%mod_root%/%component_loc%/scripts/musvapor.baf"
+  COMPILE "%mod_root%/%component_loc%/scripts/mussplit.baf"
+
+  MAKE_PATCH
+    xp_value=>4000
+    resist_magic=>10
+    resist_slashing=>30
+    resist_crushing=>30
+    resist_piercing=>30
+    resist_missile=>100
+    hide_in_shadows=>90
+    move_silently=>90
+    insert_script=>"mussplit musvapor"
+    swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
+    replace_items=>"jellmu1(weapon1) jellmu1(weapon2) minhp1(amulet)"
+    add_effect_inline=>"opcode=>83 target=>1 timing=>9 parameter2=>36"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "jellmu jellmul jellmusu jellymu bdjellmu bpjlmu01 musjel01"
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "jellmu=>mh#mus25"
+    editstring		= ~xp_value=>0 hitpoints=>"hp_max / 4" remove_items=>"minhp1" strip_script=>"mussplit"~
+  END
+END	// pnp_mustard_jellies
+
+

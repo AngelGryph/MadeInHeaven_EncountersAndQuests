@@ -3,7 +3,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
     spell		= "frost_breath"
-    idsname		= "INNATE_WINTER_WOLF_BREATH"
+    idsname		= "WINTER_WOLF_BREATH"
     location		= "spells"
     editstring		= "say_name=>0"
   END

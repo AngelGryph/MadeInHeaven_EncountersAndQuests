@@ -41,6 +41,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Oozes, Slimes & Jellies
+
+BEGIN ~P&P Oozes, Slimes & Jellies~
+GROUP ~Monster Improvements~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_slimes"
+  location	= "slimes"
+END
+
+
 // P&P Dread Wolves
 
 BEGIN ~P&P Dread Wolves~
@@ -51,6 +63,7 @@ LAUNCH_ACTION_FUNCTION run
   file		= "setup_dread_wolves"
   location	= "dread_wolves"
 END
+
 
 // P&P Winter Wolves
 

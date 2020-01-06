@@ -1,0 +1,9 @@
+IF
+  HPPercentLT(Myself, 50)
+THEN
+  RESPONSE #100
+    DestroyItem("minhp1")
+    ApplySpellRES("mussplit", Myself)
+END
+
+

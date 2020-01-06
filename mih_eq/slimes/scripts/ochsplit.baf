@@ -1,0 +1,10 @@
+IF
+  HitBy([ANYONE], ELECTRICITY)
+  Delay(1)
+THEN
+  RESPONSE #100
+    ApplySpellRES("ochsplit", Myself)
+    Continue()
+END
+
+

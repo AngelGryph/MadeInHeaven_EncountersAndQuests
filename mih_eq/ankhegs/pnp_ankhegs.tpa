@@ -10,7 +10,7 @@ BEGIN
     STR_VAR
     spell		= "ankheg_acid"
     location		= "spells"
-    idsname		= "INNATE_ANKHEG_ACID"
+    idsname		= "ANKHEG_ACID_SPIT"
     editstring		= "say_name=>0"
   END
 

@@ -1,0 +1,66 @@
+DEFINE_ACTION_FUNCTION pnp_ochre_jellies
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "ochre_jelly_splits_with_lightning"
+    RET
+    ochre_jelly_splits_with_lightning	= value
+  END
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_numdice=>0 ability_dicesize=>0 damage_type=>0 strength_bonus=>0~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter1=>2 parameter2=>65536 dicenum=>1 dicesize=>10~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item		= "jelloc1"
+    edits		= "patch_data"
+  END
+
+  ACTION_IF ochre_jelly_splits_with_lightning
+  BEGIN
+    MAKE_PATCH
+      delete_opcodes=>"141 151"
+      patch_effect_inline'1=>"resource=>mh#och50"
+    END
+
+    LAUNCH_ACTION_FUNCTION clone_spell
+      STR_VAR
+      spell		= "spwi951=>ochsplit"
+      edits		= "patch_data"
+    END
+
+    COMPILE "%mod_root%/%component_loc%/scripts/ochsplit.baf"
+  END
+
+  MAKE_PATCH
+    resist_cold=>0
+    resist_magic_cold=>0
+    resist_electricity=>100
+    resist_magic=>0
+    resist_slashing=>30
+    resist_crushing=>30
+    resist_piercing=>30
+    resist_missile=>100
+    insert_script=>"ochsplit"
+    swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
+    replace_items=>"jelloc1(weapon1) jelloc1(weapon2)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "jelloc jellyco bdjelloc bdshjell bpjloc01 jeloch01"
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature		= "jelloc=>mh#och50"
+    editstring		= ~xp_value=>0 hitpoints=>"hp_current / 2"~
+  END
+END	// pnp_ochre_jellies
+
+

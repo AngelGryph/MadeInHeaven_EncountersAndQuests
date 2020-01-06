@@ -6,7 +6,7 @@ THEN
   RESPONSE #40
     SetGlobalTimer("winter_wolf_breath", "LOCALS", TEN_ROUNDS)
     FaceObject(LastSeenBy(Myself))
-    ForceSpell(LastSeenBy(Myself), INNATE_WINTER_WOLF_BREATH)
+    ForceSpell(LastSeenBy(Myself), WINTER_WOLF_BREATH)
     Wait(2)
   RESPONSE #60
     Continue()
