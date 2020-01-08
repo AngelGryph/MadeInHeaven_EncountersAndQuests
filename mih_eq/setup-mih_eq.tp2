@@ -89,6 +89,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// ======================
+// BG1: The Original Saga
+// ======================
+
 // Enhanced Zombie Farm
 
 BEGIN ~Enhanced Zombie Farm~
@@ -98,6 +102,27 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "enhance_zombie_farm"
   location	= "zombie_farm"
+END
+
+
+// =============================
+// BG1: Tales of the Sword Coast
+// =============================
+
+
+// =========================
+// BG1: Siege of Dragonspear
+// =========================
+
+// Enhanced SoD Vampire Encounters
+
+BEGIN ~Enhanced SoD Vampire Encounters~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_sod_vampires"
+  location	= "sod_vampires"
 END
 
 
@@ -242,11 +267,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
 END
 
 
-// =============================
-// BG1: Tales of the Sword Coast
-// =============================
-
-
 // Enhanced Durlag's Tower
 
 BEGIN ~Enhanced Durlag's Tower~
@@ -261,11 +281,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_durlags_tower"
 END
-
-
-// =========================
-// BG1: Siege of Dragonspear
-// =========================
 
 
 // Enhanced Korlasz' Tomb
@@ -288,11 +303,6 @@ END
 
 BEGIN ~Revised SoD Vampire Encounters~
 GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
