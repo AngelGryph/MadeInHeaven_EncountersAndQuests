@@ -12,7 +12,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_spell
       STR_VAR
       spell	= "regenerate_down"
-      idsname	= "INNATE_REGENERATE_DOWN"
+      idsname	= "REGENERATE_DOWN"
       location	= "spells"
       locbase	= "shared"
     END
@@ -20,7 +20,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_spell
       STR_VAR
       spell	= "regenerate_rise"
-      idsname	= "INNATE_REGENERATE_RISE"
+      idsname	= "REGENERATE_RISE"
       location	= "spells"
       locbase	= "shared"
     END

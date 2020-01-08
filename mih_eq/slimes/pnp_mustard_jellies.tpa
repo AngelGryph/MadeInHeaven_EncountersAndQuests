@@ -43,7 +43,8 @@ BEGIN
     resist_missile=>100
     hide_in_shadows=>90
     move_silently=>90
-    insert_script=>"mussplit musvapor"
+    insert_script'1=>"musvapor"
+    insert_script'2=>"mussplit"
     swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
     replace_items=>"jellmu1(weapon1) jellmu1(weapon2) minhp1(amulet)"
     add_effect_inline=>"opcode=>83 target=>1 timing=>9 parameter2=>36"

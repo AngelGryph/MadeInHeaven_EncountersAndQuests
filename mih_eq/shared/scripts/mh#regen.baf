@@ -17,7 +17,7 @@ IF HPLT(Myself, 2)
 THEN
   RESPONSE #100
     SetGlobal("mh#regenerate_state", "LOCALS", 1)
-    ApplySpell(Myself, INNATE_REGENERATE_DOWN)
+    ApplySpell(Myself, REGENERATE_DOWN)
     PlayDead(300)
 END
 
@@ -25,7 +25,7 @@ IF Global("mh#regenerate_state", "LOCALS", 1)
 THEN
   RESPONSE #100
     SetGlobal("mh#regenerate_state", "LOCALS", 2)
-    ApplySpell(Myself, INNATE_REGENERATE_RISE)
+    ApplySpell(Myself, REGENERATE_RISE)
 END
 
 
