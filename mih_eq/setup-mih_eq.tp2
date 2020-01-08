@@ -105,6 +105,20 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// The Surgeon's Plight
+
+BEGIN ~The Surgeon's Plight~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_surgeons_plight"
+  location	= "surgeons_plight"
+END
+
+
+// =============================
+// BG1: Tales of the Sword Coast
 // =============================
 // BG1: Tales of the Sword Coast
 // =============================

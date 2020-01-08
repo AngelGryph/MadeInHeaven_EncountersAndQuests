@@ -1,0 +1,10 @@
+DEFINE_ACTION_FUNCTION required_modifications
+BEGIN
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "surgeo"
+    editstring	= ~dv=>"TheSurgeon"~
+  END
+END	// required_modifications
+
+

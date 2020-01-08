@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION setup_surgeons_plight
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "required_modifications"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "surgeon_quest"
+    tra		= "surgeon_quest"
+  END
+END	// setup_surgeons_plight
+
+
