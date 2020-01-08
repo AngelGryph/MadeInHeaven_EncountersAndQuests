@@ -29,8 +29,8 @@ BEGIN
     edits	= "patch_data"
   END
 
-  ADD_JOURNAL @1 @2 USING "%scs_tra_loc%/%s/wenric_edits.tra"
-  COMPILE "%mod_root%/%component_loc%/dialog/wenric_edits.d" USING "%scs_tra_loc%/%s/wenric_edits.tra"
+  ADD_JOURNAL @1 @2
+  COMPILE "%mod_root%/%component_loc%/dialog/wenric_edits.d"
 
 
   // NTotSC compatibility hack

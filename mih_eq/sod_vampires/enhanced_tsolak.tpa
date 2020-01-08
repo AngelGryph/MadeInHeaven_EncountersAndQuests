@@ -61,9 +61,17 @@ BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH "wolfdi" "mh#tswlf"
     END
 
-  EXTEND_TOP "bdtsolak.bcs" "%mod_root%/%component_loc%/scripts/spawn_tsolak_shadows.baf"
+  LAUNCH_ACTION_FUNCTION extend
+    STR_VAR
+    script	= "bdtsolak"
+    top		= "scripts/spawn_tsolak_shadows"
+  END
 
-  EXTEND_TOP "bdcof01.bcs" "%mod_root%/%component_loc%/scripts/tsolak_2nd_wind.baf"
+  LAUNCH_ACTION_FUNCTION extend
+    STR_VAR
+    script	= "bdcof01"
+    top		= "scripts/tsolak_2nd_wind"
+  END
 
   COMPILE "%mod_root%/%component_loc%/scripts/mh#ts2nd.baf"
 

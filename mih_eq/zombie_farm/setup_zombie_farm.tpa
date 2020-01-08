@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION enhance_zombie_farm
+DEFINE_ACTION_FUNCTION setup_zombie_farm
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
@@ -8,7 +8,8 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "more_zombies"
+    tra		= "more_zombies"
   END
-END	// enhance_zombie_farm
+END	// setup_zombie_farm
 
 
