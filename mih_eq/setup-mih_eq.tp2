@@ -100,7 +100,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "enhance_zombie_farm"
+  file		= "setup_zombie_farm"
   location	= "zombie_farm"
 END
 

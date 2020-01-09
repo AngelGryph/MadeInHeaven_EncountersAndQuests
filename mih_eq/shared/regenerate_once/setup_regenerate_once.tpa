@@ -5,27 +5,24 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_item
       STR_VAR
       item	= "mh#regen"
-      location	= "items"
-      locbase	= "shared"
+      locbase	= "shared/regenerate_once"
     END
 
     LAUNCH_ACTION_FUNCTION install_spell
       STR_VAR
       spell	= "regenerate_down"
       idsname	= "REGENERATE_DOWN"
-      location	= "spells"
-      locbase	= "shared"
+      locbase	= "shared/regenerate_once"
     END
 
     LAUNCH_ACTION_FUNCTION install_spell
       STR_VAR
       spell	= "regenerate_rise"
       idsname	= "REGENERATE_RISE"
-      location	= "spells"
-      locbase	= "shared"
+      locbase	= "shared/regenerate_once"
     END
 
-    COMPILE "%mod_root%/shared/scripts/mh#regen.baf"
+    COMPILE "%mod_root%/shared/regenerate_once/mh#regen.baf"
   END	// NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
 END	// setup_regenerate_once
 

@@ -3,7 +3,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_regenerate_once"
-    locbase	= "shared"
+    locbase	= "shared/regenerate_once"
   END
 
   LAUNCH_ACTION_FUNCTION run
