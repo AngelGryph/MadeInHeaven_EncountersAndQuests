@@ -1,0 +1,37 @@
+DEFINE_ACTION_FUNCTION setup_barrow_wight
+BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#bwght"
+  BEGIN
+    ACTION_IF ENGINE_IS "bgee bg2ee" AND NOT FILE_EXISTS_IN_GAME "e25e.ini"
+    BEGIN
+      LAUNCH_ACTION_FUNCTION install
+        STR_VAR
+	file		= "all"
+	postfix		= "bam"
+        locbase		= "shared/barrow_wight"
+      END
+
+      LAUNCH_ACTION_FUNCTION install
+        STR_VAR
+	file		= "e25e"
+	postfix		= "ini"
+        locbase		= "shared/barrow_wight"
+      END
+    END
+
+    LAUNCH_ACTION_FUNCTION clone_item
+      STR_VAR
+      item		= "wight=>mh#bwght"
+      editstring	= ~magical=>1 enchantment=>1 patch_ability_inline=>"ability_numdice=>3 ability_dicesize=>4"~
+    END
+
+    LAUNCH_ACTION_FUNCTION install_creature
+      STR_VAR
+      creature		= "mh#bwght"
+      editstring	= ~say_both_names=>0 animation=>"wight_barrow"~
+      locbase		= "shared/barrow_wight"
+    END
+  END
+END	// setup_barrow_wight
+
+

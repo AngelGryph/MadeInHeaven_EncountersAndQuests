@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION custom_monsters
+BEGIN
+  // Barrow Wight
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_barrow_wight"
+    tra		= "setup_barrow_wight"
+    location	= "barrow_wight"
+    locbase	= "shared"
+  END
+
+
+  // Mohrg
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_mohrg"
+    tra		= "setup_mohrg"
+    location	= "mohrg"
+    locbase	= "shared"
+  END
+END
+
+

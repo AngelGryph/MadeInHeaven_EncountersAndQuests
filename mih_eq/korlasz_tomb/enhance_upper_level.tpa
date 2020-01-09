@@ -1,0 +1,26 @@
+DEFINE_ACTION_FUNCTION enhance_upper_level
+BEGIN
+  MAKE_PATCH
+    level1=>"level1 + 5"
+    level2=>"level1 + 5"
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_hp=>at_worst
+    xp_valueGT=>"level1 from [7 15 35 65 120 175 270 420 650 975 1400 2000]"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "bdkorde1 bdkorde2 bdkorde3 bdkorde4 bdkorde5 bdkorde6 bdkorde7 bdkorde8 bdkorde9 bdkorme1 bdkorme2 bdkorme3 bdkorme4 bdkorme5 bdkorme6 bdkorme7 bdkorme8 bdkorme9 bdshis01 bdshis02 bdshis03 bdshis04 bdshis05 bdshis06 bdshis07 bdshis08 bdshis09 bdshis10"
+    edits	= "patch_data"
+  END
+
+  COPY_EXISTING "bdsarc01.bcs" "override"
+                "bdsarc04.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH "bdskgr02" "mh#bwght"
+    END
+END	// enhance_upper_level
+
+
