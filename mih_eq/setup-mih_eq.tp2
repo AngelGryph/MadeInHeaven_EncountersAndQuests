@@ -126,6 +126,30 @@ END
 // BG1: Siege of Dragonspear
 // =========================
 
+// Adjust SoD Enemy Group Size
+
+BEGIN ~Adjust SoD Enemy Group Size~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "sod_group_size"
+  location	= "tweaks"
+END
+
+
+// Complete all/more Vision Quest encounters
+
+BEGIN ~Complete more/all Vision Quest encounters~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "spectacle_charges"
+  location	= "tweaks"
+END
+
+
 // Enhanced Korlasz' Tomb
 
 BEGIN ~Enhanced Korlasz' Tomb~
@@ -149,6 +173,20 @@ LAUNCH_ACTION_FUNCTION run
   location	= "sod_vampires"
 END
 
+
+// Enhanced Dwarven Dig Site
+
+BEGIN ~Enhanced Dwarven Dig Site~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_dwarven_dig_site"
+  location	= "dwarven_dig_site"
+END
+
+
+//
 
 /*
 // Enhanced Candlekeep Catacombs
@@ -304,44 +342,6 @@ END
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_durlags_tower"
-END
-
-
-// Adjust SoD Enemy Group Size
-
-BEGIN ~Always get all the monsters.~
-SUBCOMPONENT ~Adjust SoD Enemy Group Size~
-GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  INT_VAR
-  group_size		= 4
-  STR_VAR
-  task			= "adjust_sod_groups"
-END
-
-
-BEGIN ~Get the core monsters.~
-SUBCOMPONENT ~Adjust SoD Enemy Group Size~
-GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  INT_VAR
-  group_size		= 2
-  STR_VAR
-  task			= "adjust_sod_groups"
-END
-
-
-BEGIN ~Get the normal monsters.~
-SUBCOMPONENT ~Adjust SoD Enemy Group Size~
-GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  INT_VAR
-  group_size		= 1
-  STR_VAR
-  task			= "adjust_sod_groups"
 END
 
 
@@ -502,50 +502,6 @@ GROUP ~Enhanced Monsters~
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_basilisks"
-END
-
-
-// Enhanced Dread Wolves
-
-BEGIN ~Enhanced Dread Wolves~
-GROUP ~Enhanced Monsters~
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_dread_wolves"
-END
-
-
-// Enhanced Mustard Jellies
-
-BEGIN ~Enhanced Mustard Jellies~
-GROUP ~Enhanced Monsters~
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_mustard_jellies"
-END
-
-
-// Enhanced Winter Wolves
-
-BEGIN ~Enhanced Winter Wolves~
-GROUP ~Enhanced Monsters~
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_winter_wolves"
-END
-
-
-// Enhanced Wraith Spiders
-
-BEGIN ~Enhanced Wraith Spiders~
-GROUP ~Enhanced Monsters~
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_wraith_spiders"
 END
 */
 

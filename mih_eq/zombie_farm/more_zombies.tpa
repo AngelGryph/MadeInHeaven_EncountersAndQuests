@@ -1,26 +1,26 @@
 DEFINE_ACTION_FUNCTION more_zombies
 BEGIN
   MAKE_PATCH
-    add_actor_inline'01=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>640 actor_y_coord_start=>3515 actor_x_coord_dest=>640 actor_y_coord_dest=>3515 actor_orientation=>12~
-    add_actor_inline'02=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>760 actor_y_coord_start=>3495 actor_x_coord_dest=>760 actor_y_coord_dest=>3495 actor_orientation=>13~
-    add_actor_inline'03=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>635 actor_y_coord_start=>3580 actor_x_coord_dest=>635 actor_y_coord_dest=>3580 actor_orientation=>13~
-    add_actor_inline'04=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>1915 actor_y_coord_start=>2885 actor_x_coord_dest=>1915 actor_y_coord_dest=>2885 actor_orientation=>2~
-    add_actor_inline'05=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>1870 actor_y_coord_start=>2970 actor_x_coord_dest=>1870 actor_y_coord_dest=>2970 actor_orientation=>1~
-    add_actor_inline'06=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>1960 actor_y_coord_start=>3060 actor_x_coord_dest=>1960 actor_y_coord_dest=>3060 actor_orientation=>1~
-    add_actor_inline'07=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>445 actor_y_coord_start=>3115 actor_x_coord_dest=>445 actor_y_coord_dest=>3115 actor_orientation=>13~
-    add_actor_inline'08=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>545 actor_y_coord_start=>3075 actor_x_coord_dest=>545 actor_y_coord_dest=>3075 actor_orientation=>15~
-    add_actor_inline'09=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>630 actor_y_coord_start=>2435 actor_x_coord_dest=>630 actor_y_coord_dest=>2435 actor_orientation=>14~
-    add_actor_inline'10=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>640 actor_y_coord_start=>2520 actor_x_coord_dest=>640 actor_y_coord_dest=>2520 actor_orientation=>13~
-    add_actor_inline'11=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>435 actor_y_coord_start=>1965 actor_x_coord_dest=>435 actor_y_coord_dest=>1965 actor_orientation=>14~
-    add_actor_inline'12=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>520 actor_y_coord_start=>2025 actor_x_coord_dest=>520 actor_y_coord_dest=>2025 actor_orientation=>12~
-    add_actor_inline'13=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>1505 actor_y_coord_start=>1765 actor_x_coord_dest=>1505 actor_y_coord_dest=>1765 actor_orientation=>1~
-    add_actor_inline'14=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>1500 actor_y_coord_start=>1870 actor_x_coord_dest=>1500 actor_y_coord_dest=>1870 actor_orientation=>2~
-    add_actor_inline'15=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>1405 actor_y_coord_start=>1895 actor_x_coord_dest=>1405 actor_y_coord_dest=>1895 actor_orientation=>2~
-    add_actor_inline'16=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>3020 actor_y_coord_start=>565 actor_x_coord_dest=>3020 actor_y_coord_dest=>565 actor_orientation=>4~
-    add_actor_inline'17=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>3175 actor_y_coord_start=>585 actor_x_coord_dest=>3175 actor_y_coord_dest=>585 actor_orientation=>3~
-    add_actor_inline'18=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>3905 actor_y_coord_start=>285 actor_x_coord_dest=>3905 actor_y_coord_dest=>285 actor_orientation=>4~
-    add_actor_inline'19=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>3885 actor_y_coord_start=>405 actor_x_coord_dest=>3885 actor_y_coord_dest=>405 actor_orientation=>5~
-    add_actor_inline'20=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord_start=>3965 actor_y_coord_start=>395 actor_x_coord_dest=>3965 actor_y_coord_dest=>395 actor_orientation=>6~
+    add_actor_inline'01=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>640 actor_y_coord=>3515 actor_orientation=>12~
+    add_actor_inline'02=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>760 actor_y_coord=>3495 actor_orientation=>13~
+    add_actor_inline'03=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>635 actor_y_coord=>3580 actor_orientation=>13~
+    add_actor_inline'04=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>1915 actor_y_coord=>2885 actor_orientation=>2~
+    add_actor_inline'05=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>1870 actor_y_coord=>2970 actor_orientation=>1~
+    add_actor_inline'06=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>1960 actor_y_coord=>3060 actor_orientation=>1~
+    add_actor_inline'07=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>445 actor_y_coord=>3115 actor_orientation=>13~
+    add_actor_inline'08=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>545 actor_y_coord=>3075 actor_orientation=>15~
+    add_actor_inline'09=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>630 actor_y_coord=>2435 actor_orientation=>14~
+    add_actor_inline'10=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>640 actor_y_coord=>2520 actor_orientation=>13~
+    add_actor_inline'11=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>435 actor_y_coord=>1965 actor_orientation=>14~
+    add_actor_inline'12=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>520 actor_y_coord=>2025 actor_orientation=>12~
+    add_actor_inline'13=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>1505 actor_y_coord=>1765 actor_orientation=>1~
+    add_actor_inline'14=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>1500 actor_y_coord=>1870 actor_orientation=>2~
+    add_actor_inline'15=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>1405 actor_y_coord=>1895 actor_orientation=>2~
+    add_actor_inline'16=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>3020 actor_y_coord=>565 actor_orientation=>4~
+    add_actor_inline'17=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>3175 actor_y_coord=>585 actor_orientation=>3~
+    add_actor_inline'18=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>3905 actor_y_coord=>285 actor_orientation=>4~
+    add_actor_inline'19=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>3885 actor_y_coord=>405 actor_orientation=>5~
+    add_actor_inline'20=>~actor_name=>"{literal:Zombie}" actor_resource=>"zombiew" actor_x_coord=>3965 actor_y_coord=>395 actor_orientation=>6~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area

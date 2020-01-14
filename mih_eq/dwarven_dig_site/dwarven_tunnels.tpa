@@ -1,0 +1,30 @@
+DEFINE_ACTION_FUNCTION dwarven_tunnels
+BEGIN
+  MAKE_PATCH
+    add_actor_inline'01=>~actor_name=>"{literal:Huecuva}" actor_resource=>"mh#huec5" actor_x_coord=>1385 actor_y_coord=>1870 actor_orientation=>5 script_race=>bdenshtv script_default=>bdnonin~
+    add_actor_inline'02=>~actor_name=>"{literal:Huecuva}" actor_resource=>"mh#huec5" actor_x_coord=>1260 actor_y_coord=>1965 actor_orientation=>6 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+    add_actor_inline'03=>~actor_name=>"{literal:Mummy}" actor_resource=>"bdmumm01" actor_x_coord=>1280 actor_y_coord=>1815 actor_orientation=>5 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+    add_actor_inline'04=>~actor_name=>"{literal:Mummy}" actor_resource=>"bdmumm01" actor_x_coord=>1170 actor_y_coord=>1895 actor_orientation=>7 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlinsa"~
+    add_actor_inline'05=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight1" actor_x_coord=>1050 actor_y_coord=>1945 actor_orientation=>8 script_race=>bdenshtv script_default=>bdnonin~
+    add_actor_inline'06=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight1" actor_x_coord=>1250 actor_y_coord=>1650 actor_orientation=>3 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+
+    add_actor_inline'07=>~actor_name=>"{literal:Huecuva}" actor_resource=>"mh#huec5" actor_x_coord=>2560 actor_y_coord=>1250 actor_orientation=>2 script_race=>bdenshtv script_default=>bdnonin~
+    add_actor_inline'08=>~actor_name=>"{literal:Huecuva}" actor_resource=>"mh#huec5" actor_x_coord=>2600 actor_y_coord=>1420 actor_orientation=>4 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+    add_actor_inline'09=>~actor_name=>"{literal:Mummy}" actor_resource=>"bdmumm01" actor_x_coord=>2490 actor_y_coord=>1365 actor_orientation=>7 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlinsa"~
+
+    add_actor_inline'10=>~actor_name=>"{literal:Huecuva}" actor_resource=>"mh#huec5" actor_x_coord=>1615 actor_y_coord=>2545 actor_orientation=>5 script_race=>bdenshtv script_default=>bdnonin~
+    add_actor_inline'11=>~actor_name=>"{literal:Mummy}" actor_resource=>"bdmumm01" actor_x_coord=>1785 actor_y_coord=>2550 actor_orientation=>5 script_general=>"bdlhard"~
+
+    add_actor_inline'12=>~actor_name=>"{literal:Mummy}" actor_resource=>"bdmumm01" actor_x_coord=>1450 actor_y_coord=>870 actor_orientation=>5 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+
+    add_actor_inline'13=>~actor_name=>"{literal:Stone Snake}" actor_resource=>"mh#stone" actor_x_coord=>2275 actor_y_coord=>855 actor_orientation=>4 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "bd1100"
+    edits	= "patch_data"
+  END
+END	// dwarven_tunnels
+
+

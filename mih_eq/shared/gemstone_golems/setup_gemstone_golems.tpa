@@ -1,0 +1,23 @@
+DEFINE_ACTION_FUNCTION setup_gemstone_golems
+BEGIN
+  MAKE_PATCH
+    magical=>1
+    enchantment=>"object_index from [1 2 3]"
+    patch_ability_inline=>~ability_numdice=>"object_index from [3 4 5]" strength_bonus=>1~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "b1-10=>mh#gruby b1-10=>mh#gemrd b1-10=>mh#gdmnd"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#gruby mh#gemrd mh#gdmnd"
+    locbase	= "shared/gemstone_golems"
+    editstring	= ~say_both_names=>"object_index from [0 1 2]~
+  END
+END	// setup_gemstone_golems
+
+

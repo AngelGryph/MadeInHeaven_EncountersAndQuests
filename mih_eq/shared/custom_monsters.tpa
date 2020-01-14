@@ -6,8 +6,37 @@ BEGIN
     STR_VAR
     file	= "setup_barrow_wight"
     tra		= "setup_barrow_wight"
-    location	= "barrow_wight"
-    locbase	= "shared"
+    locbase	= "shared/barrow_wight"
+  END
+
+
+  // Blazing Bones
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_blazing_bones"
+    tra		= "setup_blazing_bones"
+    locbase	= "shared/blazing_bones"
+  END
+
+
+  // Gemstone Golems
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_gemstone_golems"
+    tra		= "setup_gemstone_golems"
+    locbase	= "shared/gemstone_golems"
+  END
+
+
+  // Heucuva
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_huecuva"
+    tra		= "setup_huecuva"
+    locbase	= "shared/huecuva"
   END
 
 
@@ -17,8 +46,17 @@ BEGIN
     STR_VAR
     file	= "setup_mohrg"
     tra		= "setup_mohrg"
-    location	= "mohrg"
-    locbase	= "shared"
+    locbase	= "shared/mohrg"
+  END
+
+
+  // Mohrg
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_stone_snake"
+    tra		= "setup_stone_snake"
+    locbase	= "shared/stone_snake"
   END
 END
 

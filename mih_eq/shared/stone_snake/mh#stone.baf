@@ -1,0 +1,41 @@
+IF
+  !See(NearestEnemyOf(Myself))
+  Global("in_actual_combat", "locals", 1)
+THEN
+  RESPONSE #100
+    SetGlobal("in_actual_combat", "locals", 0)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),5)
+  !StateCheck(NearestEnemyOf(Myself),STATE_STONE_DEATH)
+  Or(2)
+    !GlobalTimerExpired("try_petrification", "locals")
+    Global("in_actual_combat", "locals", 0)
+  Delay(12)
+THEN
+  RESPONSE #70
+    SetGlobal("in_actual_combat", "locals", 1)
+    SetGlobalTimer("try_petrification", "locals", TWO_ROUNDS)
+    SelectWeaponAbility(SLOT_WEAPON1, 0)
+    AttackReevaluate(LastSeenBy(Myself), 15)
+  RESPONSE #30
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),5)
+  !StateCheck(NearestEnemyOf(Myself),STATE_STONE_DEATH)
+  Delay(12)
+  GlobalTimerExpired("try_petrification", "locals")
+THEN
+  RESPONSE #100
+    SetGlobal("in_actual_combat", "locals", 1)
+    SelectWeaponAbility(SLOT_WEAPON0, 0)
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+

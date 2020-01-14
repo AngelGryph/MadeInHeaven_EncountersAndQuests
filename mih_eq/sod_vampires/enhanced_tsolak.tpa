@@ -76,10 +76,10 @@ BEGIN
   COMPILE "%mod_root%/%component_loc%/scripts/mh#ts2nd.baf"
 
   MAKE_PATCH
-    add_actor_inline'1=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord_start=>245 actor_y_coord_start=>150 actor_x_coord_dest=>245 actor_y_coord_dest=>150 actor_orientation=>2~
-    add_actor_inline'2=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord_start=>280 actor_y_coord_start=>200 actor_x_coord_dest=>280 actor_y_coord_dest=>200 actor_orientation=>1~
-    add_actor_inline'3=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord_start=>460 actor_y_coord_start=>125 actor_x_coord_dest=>460 actor_y_coord_dest=>125 actor_orientation=>3~
-    add_actor_inline'3=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord_start=>445 actor_y_coord_start=>200 actor_x_coord_dest=>445 actor_y_coord_dest=>200 actor_orientation=>4~
+    add_actor_inline'1=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord=>245 actor_y_coord=>150 actor_orientation=>2~
+    add_actor_inline'2=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord=>280 actor_y_coord=>200 actor_orientation=>1~
+    add_actor_inline'3=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord=>460 actor_y_coord=>125 actor_orientation=>3~
+    add_actor_inline'3=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord=>445 actor_y_coord=>200 actor_orientation=>4~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area

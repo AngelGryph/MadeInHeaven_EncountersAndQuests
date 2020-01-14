@@ -1,21 +1,24 @@
 DEFINE_ACTION_FUNCTION setup_mohrg
 BEGIN
-  MAKE_PATCH
-    patch_ability_inline=>"ability_numdice=>2 ability_dicesize=>6"
-    patch_effect_inline=>"save_bonus=>-4"
-  END
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#blaze.cre"
+  BEGIN
+    MAKE_PATCH
+      patch_ability_inline=>"ability_numdice=>2 ability_dicesize=>6"
+      patch_effect_inline=>"save_bonus=>-4"
+    END
 
-  LAUNCH_ACTION_FUNCTION clone_item
-    STR_VAR
-    item	= "carrio1=>mh#mohrg"
-    edits	= "patch_data"
-  END
+    LAUNCH_ACTION_FUNCTION clone_item
+      STR_VAR
+      item		= "carrio1=>mh#mohrg"
+      edits		= "patch_data"
+    END
 
-  LAUNCH_ACTION_FUNCTION install_creature
-    STR_VAR
-    creature	= "mh#mohrg"
-    locbase	= "shared/mohrg"
-    editstring	= "say_both_names=>0"
+    LAUNCH_ACTION_FUNCTION install_creature
+      STR_VAR
+      creature		= "mh#mohrg"
+      locbase		= "shared/mohrg"
+      editstring	= "say_both_names=>0"
+    END
   END
 END	// setup_mohrg
 

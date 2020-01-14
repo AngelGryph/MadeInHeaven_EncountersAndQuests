@@ -2,8 +2,11 @@ DEFINE_ACTION_FUNCTION setup_barrow_wight
 BEGIN
   ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#bwght"
   BEGIN
-    ACTION_IF ENGINE_IS "bgee bg2ee" AND NOT FILE_EXISTS_IN_GAME "e25e.ini"
+    ACTION_IF ENGINE_IS "bgee bg2ee" AND NOT GAME_INCLUDES "sod"
     BEGIN
+      // Non-SoD EE games ship without the barrow wight animation and sounds
+      // even though the animate.ids entries and e25e.ini file are there.
+
       LAUNCH_ACTION_FUNCTION install
         STR_VAR
 	file		= "all"
@@ -13,8 +16,8 @@ BEGIN
 
       LAUNCH_ACTION_FUNCTION install
         STR_VAR
-	file		= "e25e"
-	postfix		= "ini"
+	file		= "all"
+	postfix		= "wav"
         locbase		= "shared/barrow_wight"
       END
     END
