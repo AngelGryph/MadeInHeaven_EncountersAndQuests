@@ -1,0 +1,14 @@
+DEFINE_ACTION_FUNCTION setup_ramaziths_tower
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file="tower_floors"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file="ramazith_battle"
+  END
+END	// setup_ramaziths_tower
+
+

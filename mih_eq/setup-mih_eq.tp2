@@ -117,6 +117,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Ramazith's Tower
+
+BEGIN ~Enhanced Ramazith's Tower~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_ramaziths_tower"
+  location	= "ramaziths_tower"
+END
+
+
 // =============================
 // BG1: Tales of the Sword Coast
 // =============================
@@ -218,22 +230,6 @@ END
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_mutamins_garden"
-END
-
-
-// Enhanced Ramazith's Tower
-
-BEGIN ~Enhanced Ramazith's Tower~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_ramaziths_tower"
 END
 
 
