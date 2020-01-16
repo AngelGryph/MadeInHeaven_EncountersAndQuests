@@ -1,0 +1,31 @@
+DEFINE_ACTION_FUNCTION setup_basilisks
+BEGIN
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "greater_basilisk_breath"
+    idsname		= "GREATER_BASILISK_BREATH"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend
+    STR_VAR
+    script		= "gbasilsk"
+    top			= "greater_basilisk_breath"
+  END
+
+  MAKE_PATCH
+    xp_value=>7000
+    thac0LT=>11
+    attacks=>3
+    add_items=>"dragring(lring)"
+  END
+  
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "basilg basilmut basilnad bd302bas bpbasg01 basgrt01"
+    edits		= "patch_data"
+  END
+END	// setup_basilisks
+
+

@@ -41,6 +41,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Basilisks
+
+BEGIN ~P&P Basilisks~
+GROUP ~Monster Improvements~
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_basilisks"
+  location	= "basilisks"
+END
+
+
 // P&P Oozes, Slimes & Jellies
 
 BEGIN ~P&P Oozes, Slimes & Jellies~
@@ -487,17 +499,6 @@ GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_watchers_keep"
-END
-
-
-// Enhanced Basilisks
-
-BEGIN ~Enhanced Basilisks~
-GROUP ~Enhanced Monsters~
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_basilisks"
 END
 */
 

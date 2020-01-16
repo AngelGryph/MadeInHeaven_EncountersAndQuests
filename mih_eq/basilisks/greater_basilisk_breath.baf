@@ -1,0 +1,12 @@
+IF
+  Range(NearestEnemyOf(Myself), 10)
+  !GlobalTimerNotExpired("basilisk_breath", "LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("basilisk_breath", "LOCALS", ONE_ROUND)
+    ReallyForceSpell(Myself, GREATER_BASILISK_BREATH)
+    Wait(2)
+    Continue()
+END
+
+

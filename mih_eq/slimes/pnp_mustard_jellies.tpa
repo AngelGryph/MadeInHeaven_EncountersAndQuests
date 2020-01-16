@@ -4,7 +4,6 @@ BEGIN
     STR_VAR
     spell		= "mustard_jelly_vapor"
     idsname		= "MUSTARD_JELLY_VAPOR"
-    location		= "spells"
   END
 
   MAKE_PATCH
