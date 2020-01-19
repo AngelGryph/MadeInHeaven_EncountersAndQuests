@@ -19,17 +19,17 @@ END
 
 ACTION_IF NOT VARIABLE_IS_SET initialise  
 BEGIN
-  // Seed random number generator
-
-  RANDOM_SEED "null"
-
-
   // Set variables
 
   OUTER_SET initialise = 1
 
   OUTER_SPRINT modder_prefix "mh#"
   OUTER_SPRINT mod_root "%MOD_NAME%"
+
+
+  // Seed random number generator
+
+  RANDOM_SEED "null"
 
 
   // Include and initialize libraries
@@ -50,21 +50,21 @@ BEGIN
 
 
   // Read the .ini file
+
   OUTER_SPRINT ini_to_read "%mod_root%/setup-%mod_root%.ini"
-
   LAUNCH_ACTION_MACRO SFO_read_ini_file
+
+
+  // ==================
+  // Handle EE charsets
+  // ==================
+
+  LAUNCH_ACTION_FUNCTION handle_charsets_immutably
+    STR_VAR
+    tra_base	= "language"
+    RET
+    scs_tra_loc
+  END
 END	// done_init
-
-
-// ==================
-// Handle EE charsets
-// ==================
-
-LAUNCH_ACTION_FUNCTION handle_charsets_immutably
-  STR_VAR
-  tra_base	= "language"
-  RET
-  scs_tra_loc
-END
 
 
