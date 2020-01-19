@@ -105,18 +105,6 @@ END
 // BG1: The Original Saga
 // ======================
 
-// The Cloakwood Assassins
-
-BEGIN ~The Cloakwood Assassins~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_cloakwood_assassins"
-  location	= "cloakwood_assassins"
-END
-
-
 // Horrors Beneath Candlekeep
 
 BEGIN ~Horrors Beneath Candlekeep~
@@ -126,6 +114,18 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_candlekeep_catacombs"
   location	= "candlekeep_catacombs"
+END
+
+
+// The Cloakwood Assassins
+
+BEGIN ~The Cloakwood Assassins~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_cloakwood_assassins"
+  location	= "cloakwood_assassins"
 END
 
 
@@ -150,6 +150,18 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_surgeons_plight"
   location	= "surgeons_plight"
+END
+
+
+// Blazing Bones in Ulcaster
+
+BEGIN ~Blazing Bones in Ulcaster~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_ulcaster"
+  location	= "ulcaster"
 END
 
 
@@ -279,24 +291,6 @@ LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_undercity"
 END
-
-
-// Enhanced Ulcaster Ruins
-
-BEGIN ~Enhanced Ulcaster Ruins~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_ulcaster_ruins"
-END
-
-
 
 
 // A Real Spider Plague

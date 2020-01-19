@@ -1,0 +1,20 @@
+DEFINE_ACTION_FUNCTION setup_ulcaster
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "ulcaster_dialog"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "ulcaster_area_edits"
+  END
+END	// setup_ulcaster
+
+
