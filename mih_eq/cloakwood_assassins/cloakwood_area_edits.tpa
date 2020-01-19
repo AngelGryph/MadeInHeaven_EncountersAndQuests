@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION cloakwood_area_edits
+BEGIN
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Drikx}" actor_resource=>"mh#drikx" actor_x_coord=>2335 actor_y_coord=>3090 actor_orientation=>4~
+    add_actor_inline'2=>~actor_name=>"{literal:Gnung}" actor_resource=>"mh#gnung" actor_x_coord=>2395 actor_y_coord=>3100 actor_orientation=>5~
+    add_actor_inline'3=>~actor_name=>"{literal:Strok}" actor_resource=>"mh#strok" actor_x_coord=>2390 actor_y_coord=>3010 actor_orientation=>3~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%CloakwoodWyverns%"
+    edits	= "patch_data"
+  END
+END	// cloakwood_area_edits
+
+

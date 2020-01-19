@@ -1,0 +1,37 @@
+DEFINE_ACTION_FUNCTION catacombs_new_actors
+BEGIN
+  MAKE_PATCH
+    xp_value=>420
+    hitpoints=>30
+    race=>"doppleganger"
+    class=>"doppleganger"
+    alignment=>"neutral"
+    script_override=>"initdlg"
+    script_class=>null
+    script_race=>"ldchange"
+    script_general=>null
+    script_default=>"wtasight"
+    dialog=>"object_index from [erik3 mh#dopkp mh#doppr]"
+    dv=>null
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "erik=>erik3 keeper=>mh#dopkp poghma5=>mh#doppr"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#oobah mh#blahr"
+    editstring	= ~say_both_names=>"object_index from [0 1]"~
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    location	= "portraits"
+    postfix	= "bmp"
+  END
+END	// catacombs_new_actors
+
+

@@ -113,8 +113,19 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_cloakwood_assassins"
-  tra		= "setup_cloakwood_assassins"
   location	= "cloakwood_assassins"
+END
+
+
+// Horrors Beneath Candlekeep
+
+BEGIN ~Horrors Beneath Candlekeep~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_candlekeep_catacombs"
+  location	= "candlekeep_catacombs"
 END
 
 
@@ -238,22 +249,6 @@ END
 //
 
 /*
-// Enhanced Candlekeep Catacombs
-
-BEGIN ~Enhanced Candlekeep Catacombs~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_candlekeep_catacombs"
-END
-
-
 // Enhanced Mutamin's Garden
 
 BEGIN ~Enhanced Mutamin's Garden~

@@ -1,0 +1,47 @@
+DEFINE_ACTION_FUNCTION arkanis_deder_help_more
+BEGIN
+  MAKE_PATCH
+    xp_value=>650
+    class=>"fighter"
+    level1=>8
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_hp=>at_worst
+    attacks=>7
+    replace_items=>"ax1h02(weapon1) hamm03(weapon2) shld06(shield) chan02(armor) helm08(helmet) potn08(qitem1,x5) potn09(qitem2,x1) potn12(qitem3,x1)"
+    remove_items=>"iarrow01"
+    set_proficiencies=>"axe=>3 warhammer=>2 swordandshield=>2"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "arkani3"
+    edits	= "patch_data"
+  END
+
+
+  MAKE_PATCH
+    xp_value=>650
+    class=>"fighter_thief"
+    level1=>7
+    level2=>9
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_hp=>at_worst
+    set_traps=>50
+    find_traps=>70
+    hide_in_shadows=>70
+    move_silently=>70
+    set_proficiencies=>"shortsword=>2 shortbow=>2 singleweapon=>2"
+    replace_items=>"bow06(weapon1) sw1h08(weapon2) arow02(quiver1,x80) arow02(quiver2,x80) arow02(quiver3,x80) leat05(armor) potn08(qitem1,x5) potn10(qitem2,x2) potn13(qitem3,x1)"
+    add_spells=>"SET_SNARE_TRAP(2)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "deder3"
+    edits	= "patch_data"
+  END
+END	// arkanis_deder_help_more
+
+

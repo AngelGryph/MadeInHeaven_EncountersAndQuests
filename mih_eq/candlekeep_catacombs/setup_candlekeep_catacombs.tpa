@@ -1,0 +1,32 @@
+DEFINE_ACTION_FUNCTION setup_candlekeep_catacombs
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "arkanis_deder_help_more"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "catacombs_new_actors"
+    tra		= "catacombs_new_actors"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "catacombs_dialog"
+    tra		= "catacombs_dialog"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "catacombs_area_edits"
+  END
+END	// setup_candlekeep_catacombs
+
+
