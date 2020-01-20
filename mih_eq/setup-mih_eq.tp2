@@ -189,6 +189,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Minor Quest Enhancements - BG1
+
+BEGIN ~Minor Quest Enhancements - BG1~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_minor_bg1_quests"
+  location	= "minor_bg1_quests"
+END
+
+
 // =============================
 // BG1: Tales of the Sword Coast
 // =============================
@@ -317,17 +329,6 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "install_surgeons_plight"
-END
-
-
-// Enhanced Minor BG1 Quests
-
-BEGIN ~Enhanced Minor BG1 Quests~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_minor_bg1_quests"
 END
 
 

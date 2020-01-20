@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION unique_nesters_dagger
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#nesdg"
+    postfix	= "bam"
+  END
+
+  MAKE_PATCH
+    patch_ability_inline=>~to_hit=>1 ability_icon=>"mh#nesdg"~
+    icon=>"mh#nesdg"
+    say_description=>0
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dagg06"
+    edits	= "patch_data"
+  END
+END	// unique_nesters_dagger
+
+
