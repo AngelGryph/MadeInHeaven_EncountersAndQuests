@@ -22,8 +22,8 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_creature
       STR_VAR
       creature		= "mh#stone"
-      locbase		= "shared/stone_snake"
-      editstring	= "say_both_names=>0"
+      locbase
+      editstring	= "say_both_names=>11"
     END
   END
 END	// setup_stone_snake

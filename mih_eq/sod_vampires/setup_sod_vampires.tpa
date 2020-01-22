@@ -3,7 +3,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "enhanced_tsolak"
-    tra		= "enhanced_tsolak"
+    tra		= "sod_vampires"
   END
 END
 

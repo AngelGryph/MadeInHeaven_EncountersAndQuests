@@ -82,8 +82,8 @@ BEGIN
 
     add_actor_inline'3=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1755 actor_y_coord=>1255 actor_orientation=>5~
 
-    add_actor_inline'4=>~actor_name=>"{literal:Greater Basilisk}" actor_resource=>"basilg" actor_x_coord=>895 actor_y_coord=>1790 actor_orientation=>10~
-    add_actor_inline'5=>~actor_name=>"{literal:Greater Basilisk}" actor_resource=>"basilg" actor_x_coord=>765 actor_y_coord=>1340 actor_orientation=>15~
+    add_actor_inline'4=>~actor_name=>"{literal:Dracolisk}" actor_resource=>"mh#draco" actor_x_coord=>895 actor_y_coord=>1790 actor_orientation=>10~
+    add_actor_inline'5=>~actor_name=>"{literal:Dracolisk}" actor_resource=>"mh#draco" actor_x_coord=>765 actor_y_coord=>1340 actor_orientation=>15~
 
     add_actor_inline'6=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>95 actor_y_coord=>1435 actor_orientation=>9~
     add_actor_inline'7=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>200 actor_y_coord=>1565 actor_orientation=>6~

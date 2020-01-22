@@ -6,8 +6,8 @@ BEGIN
       STR_VAR
       spell		= "bone_blaze"
       idsname		= "BONE_BLAZE"
-      locbase		= "shared/blazing_bones"
-      editstring	= "say_name=>1"
+      locbase
+      editstring	= "say_name=>2"
     END
 
     COMPILE "%mod_root%/shared/blazing_bones/mh#blaze.baf"
@@ -37,8 +37,8 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_creature
       STR_VAR
       creature		= "mh#blaze"
-      locbase		= "shared/blazing_bones"
-      editstring	= "say_both_names=>0"
+      locbase
+      editstring	= "say_both_names=>1"
     END
   END
 END	// setup_blazing_bones

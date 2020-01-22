@@ -3,7 +3,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "unique_nesters_dagger"
-    tra		= "unique_nesters_dagger"
+    tra		= "minor_bg1_quests"
   END
 
   LAUNCH_ACTION_FUNCTION run

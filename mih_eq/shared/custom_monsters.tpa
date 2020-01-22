@@ -5,7 +5,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_barrow_wight"
-    tra		= "setup_barrow_wight"
+    tra		= "custom_monsters"
     locbase	= "shared/barrow_wight"
   END
 
@@ -15,8 +15,28 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_blazing_bones"
-    tra		= "setup_blazing_bones"
+    tra		= "custom_monsters"
     locbase	= "shared/blazing_bones"
+  END
+
+
+  // Crystal Ooze
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_crystal_ooze"
+    tra		= "custom_monsters"
+    locbase	= "shared/crystal_ooze"
+  END
+
+
+  // Dragonkind
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_dragonkind"
+    tra		= "custom_monsters"
+    locbase	= "shared/dragonkind"
   END
 
 
@@ -25,7 +45,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_gemstone_golems"
-    tra		= "setup_gemstone_golems"
+    tra		= "custom_monsters"
     locbase	= "shared/gemstone_golems"
   END
 
@@ -35,7 +55,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_huecuva"
-    tra		= "setup_huecuva"
+    tra		= "custom_monsters"
     locbase	= "shared/huecuva"
   END
 
@@ -45,7 +65,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_mohrg"
-    tra		= "setup_mohrg"
+    tra		= "custom_monsters"
     locbase	= "shared/mohrg"
   END
 
@@ -55,7 +75,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "setup_stone_snake"
-    tra		= "setup_stone_snake"
+    tra		= "custom_monsters"
     locbase	= "shared/stone_snake"
   END
 END

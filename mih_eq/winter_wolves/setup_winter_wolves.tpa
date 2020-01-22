@@ -10,7 +10,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "pnp_winter_wolves"
-    tra		= "pnp_winter_wolves"
+    tra		= "pnp_monsters"
   END
 
   ACTION_IF GAME_INCLUDES "bg1" AND relocate_bg1_winter_wolves

@@ -1,0 +1,26 @@
+DEFINE_ACTION_FUNCTION air_chamber
+BEGIN
+  MAKE_PATCH
+    delete_actor=>null
+    add_actor_inline=>~actor_name=>"{literal:Air Aspect}" arctor_resource=>"airaspec" actor_x_coord=>240 actor_y_coord=>625 actor_orientation=>9~
+
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>445 actor_y_coord=>885 actor_orientation=>9~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>470 actor_y_coord=>685 actor_orientation=>10~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>400 actor_y_coord=>445 actor_orientation=>11~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>500 actor_y_coord=>275 actor_orientation=>12~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>1250 actor_y_coord=>460 actor_orientation=>6~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>1030 actor_y_coord=>695 actor_orientation=>7~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>790 actor_y_coord=>710 actor_orientation=>9~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>710 actor_y_coord=>310 actor_orientation=>11~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>915 actor_y_coord=>475 actor_orientation=>8~
+    add_actor_inline=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>575 actor_y_coord=>550 actor_orientation=>10~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_AirChamber%"
+    edits	= "patch_data"
+  END
+END	// air_chamber
+
+

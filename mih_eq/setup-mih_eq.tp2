@@ -205,6 +205,17 @@ END
 // BG1: Tales of the Sword Coast
 // =============================
 
+// Dangers of Durlag's Tower
+
+BEGIN ~Dangers of Durlag's Tower~
+GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "totsc"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_durlags_tower"
+  location	= "durlags_tower"
+END
+
 
 // =========================
 // BG1: Siege of Dragonspear
@@ -280,11 +291,6 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
   task			= "enhance_mutamins_garden"
 END
 
@@ -293,11 +299,6 @@ END
 
 BEGIN ~Enhanced Thieves' Maze & Undercity~
 GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -312,39 +313,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
   task			= "enhance_spider_plague"
-END
-
-
-// The Surgeon's Plight
-
-BEGIN ~The Surgeon's Plight~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_surgeons_plight"
-END
-
-
-// Enhanced Durlag's Tower
-
-BEGIN ~Enhanced Durlag's Tower~
-GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "totsc"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_durlags_tower"
 END
 
 
@@ -360,11 +329,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
   task			= "enhance_ancient_tomb"
 END
 
@@ -373,11 +337,6 @@ END
 
 BEGIN ~Enhanced Firkraag's Lair~
 GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -392,11 +351,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
   task			= "enhance_lower_reaches"
 END
 
@@ -405,11 +359,6 @@ END
 
 BEGIN ~Enhanced Shadow Temple~
 GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -424,11 +373,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
   task			= "enhance_slum_sewers"
 END
 
@@ -437,11 +381,6 @@ END
 
 BEGIN ~Enhanced Trademeet Tomb~
 GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -461,11 +400,6 @@ GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
-  task			= "install_new_monsters"
-END
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
   task			= "enhance_forest_temple"
 END
 
@@ -474,11 +408,6 @@ END
 
 BEGIN ~Enhanced Saradush Prison~
 GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "install_new_monsters"
-END
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR

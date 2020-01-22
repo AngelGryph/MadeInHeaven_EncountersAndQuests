@@ -1,0 +1,160 @@
+DEFINE_ACTION_FUNCTION lower_levels
+BEGIN
+  // First dungeon level
+
+  MAKE_PATCH
+    add_actor_inline'01=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"%tutu_scriptbg%skelwa" actor_x_coord=>500 actor_y_coord=>1785 actor_orientation=>7~
+    add_actor_inline'02=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"%tutu_scriptbg%skelwa" actor_x_coord=>390 actor_y_coord=>1890 actor_orientation=>9~
+
+    add_actor_inline'03=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jellmu" actor_x_coord=>1070 actor_y_coord=>1960 actor_orientation=>15~
+
+    add_actor_inline'04=>~actor_name=>"{literal:Flesh Golem}" actor_resource=>"golemf2" actor_x_coord=>1975 actor_y_coord=>2300 actor_orientation=>3~
+    add_actor_inline'05=>~actor_name=>"{literal:Flesh Golem}" actor_resource=>"golemf2" actor_x_coord=>2160 actor_y_coord=>2205 actor_orientation=>10~
+
+    add_actor_inline'06=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>1280 actor_y_coord=>900 actor_orientation=>10~
+    add_actor_inline'07=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>1070 actor_y_coord=>1040 actor_orientation=>11~
+    add_actor_inline'08=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>775 actor_y_coord=>1140 actor_orientation=>2~
+
+    add_actor_inline'09=>~actor_name=>"{literal:Doom Guard}" actor_resource=>"doomgu" actor_x_coord=>380 actor_y_coord=>1170 actor_orientation=>14~
+    add_actor_inline'10=>~actor_name=>"{literal:Doom Guard}" actor_resource=>"doomgu" actor_x_coord=>325 actor_y_coord=>1085 actor_orientation=>14~
+
+    add_actor_inline'11=>~actor_name=>"{literal:Doom Guard}" actor_resource=>"doomgu" actor_x_coord=>950 actor_y_coord=>2255 actor_orientation=>14~
+    add_actor_inline'12=>~actor_name=>"{literal:Doom Guard}" actor_resource=>"doomgu" actor_x_coord=>1170 actor_y_coord=>2240 actor_orientation=>7~
+    add_actor_inline'13=>~actor_name=>"{literal:Doom Guard}" actor_resource=>"doomgu" actor_x_coord=>1325 actor_y_coord=>2345 actor_orientation=>13~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_D1%"
+    edits	= "patch_data"
+  END
+
+
+  // Second dungeon level
+
+  LAUNCH_ACTION_FUNCTION compile_rename
+    STR_VAR
+    file	= "d2_undead_trap=>trpghast"
+  END
+
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>805 actor_y_coord=>1520 actor_orientation=>9~
+    add_actor_inline'2=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>885 actor_y_coord=>1420 actor_orientation=>10~
+
+    add_actor_inline'3=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>2310 actor_y_coord=>1375 actor_orientation=>1~
+
+    add_actor_inline'4=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>2175 actor_y_coord=>900 actor_orientation=>2~
+    add_actor_inline'5=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>2325 actor_y_coord=>95 actor_orientation=>4~
+
+    add_actor_inline'6=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>2060 actor_y_coord=>590 actor_orientation=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_D2%"
+    edits	= "patch_data"
+  END
+
+
+  // Third dungeon level
+
+  MAKE_PATCH
+    add_actor_inline'01=>~actor_name=>"{literal:Greater Wyvern}" actor_resource=>"wyvernbi" actor_x_coord=>1510 actor_y_coord=>1000 actor_orientation=>10~
+    add_actor_inline'02=>~actor_name=>"{literal:Greater Wyvern}" actor_resource=>"wyvernbi" actor_x_coord=>1080 actor_y_coord=>1055 actor_orientation=>11~
+
+    add_actor_inline'03=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>1885 actor_y_coord=>2505 actor_orientation=>0~
+    add_actor_inline'04=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>1920 actor_y_coord=>2635 actor_orientation=>1~
+    add_actor_inline'05=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>1745 actor_y_coord=>2640 actor_orientation=>14~
+
+    add_actor_inline'06=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3690 actor_y_coord=>2185 actor_orientation=>6~
+    add_actor_inline'07=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3300 actor_y_coord=>1665 actor_orientation=>10~
+    add_actor_inline'08=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>2785 actor_y_coord=>2160 actor_orientation=>13~
+    add_actor_inline'09=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3340 actor_y_coord=>2015 actor_orientation=>7~
+    add_actor_inline'10=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3300 actor_y_coord=>1940 actor_orientation=>5~
+    add_actor_inline'11=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3170 actor_y_coord=>1950 actor_orientation=>8~
+    add_actor_inline'12=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3095 actor_y_coord=>2040 actor_orientation=>15~
+    add_actor_inline'13=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3340 actor_y_coord=>2095 actor_orientation=>14~
+
+    add_actor_inline'14=>~actor_name=>"{literal:Ashirukuru}" actor_resource=>"ashiru" actor_x_coord=>3810 actor_y_coord=>1790 actor_orientation=>2~
+    add_actor_inline'15=>~actor_name=>"{literal:Ashirukuru}" actor_resource=>"ashiru" actor_x_coord=>2870 actor_y_coord=>2670 actor_orientation=>10~
+    add_actor_inline'16=>~actor_name=>"{literal:Ashirukuru}" actor_resource=>"ashiru" actor_x_coord=>2465 actor_y_coord=>2275 actor_orientation=>10~
+    add_actor_inline'17=>~actor_name=>"{literal:Ashirukuru}" actor_resource=>"ashiru" actor_x_coord=>2525 actor_y_coord=>2390 actor_orientation=>9~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_D3%"
+    edits	= "patch_data"
+  END
+
+
+  // Final dungeon level
+
+  MAKE_PATCH
+    add_actor_inline'01=>~actor_name=>"{literal:Astral Phase Spider}" actor_resource=>"spidphas" actor_x_coord=>1105 actor_y_coord=>1130 actor_orientation=>14~
+    add_actor_inline'02=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1125 actor_y_coord=>1250 actor_orientation=>14~
+    add_actor_inline'03=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1285 actor_y_coord=>1355 actor_orientation=>15~
+    add_actor_inline'04=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1550 actor_y_coord=>1250 actor_orientation=>13~
+    add_actor_inline'05=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>1240 actor_y_coord=>1035 actor_orientation=>12~
+    add_actor_inline'06=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1490 actor_y_coord=>1040 actor_orientation=>0~
+    add_actor_inline'07=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>1720 actor_y_coord=>1260 actor_orientation=>12~
+    add_actor_inline'08=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>1540 actor_y_coord=>1440 actor_orientation=>1~
+    add_actor_inline'09=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1440 actor_y_coord=>1500 actor_orientation=>15~
+
+    add_actor_inline'10=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>3310 actor_y_coord=>225 actor_orientation=>1~
+    add_actor_inline'11=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>3230 actor_y_coord=>390 actor_orientation=>12~
+
+    add_actor_inline'12=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>2125 actor_y_coord=>840 actor_orientation=>14~
+
+    add_actor_inline'13=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4760 actor_y_coord=>1830 actor_orientation=>14~
+    add_actor_inline'14=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4870 actor_y_coord=>1900 actor_orientation=>14~
+    add_actor_inline'15=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4030 actor_y_coord=>1715 actor_orientation=>14~
+    add_actor_inline'16=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4140 actor_y_coord=>1790 actor_orientation=>14~
+    add_actor_inline'17=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4680 actor_y_coord=>2185 actor_orientation=>2~
+    add_actor_inline'18=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4240 actor_y_coord=>1940 actor_orientation=>14~
+    add_actor_inline'19=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>4050 actor_y_coord=>2155 actor_orientation=>10~
+    add_actor_inline'20=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>3690 actor_y_coord=>2250 actor_orientation=>14~
+    add_actor_inline'21=>~actor_name=>"{literal:Invisible Stalker}" actor_resource=>"%tutu_scriptbg%stalke" actor_x_coord=>3565 actor_y_coord=>2161 actor_orientation=>14~
+
+    add_actor_inline'22=>~actor_name=>"{literal:Battle Horror}" actor_resource=>"battho" actor_x_coord=>3735 actor_y_coord=>1905 actor_orientation=>2~
+
+    add_actor_inline'23=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>4270 actor_y_coord=>3155 actor_orientation=>6~
+    add_actor_inline'24=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>4410 actor_y_coord=>3164 actor_orientation=>5~
+    add_actor_inline'25=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>4350 actor_y_coord=>3270 actor_orientation=>6~
+    add_actor_inline'26=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>4195 actor_y_coord=>3276 actor_orientation=>9~
+
+    add_actor_inline'27=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>3660 actor_y_coord=>2985 actor_orientation=>6~
+    add_actor_inline'28=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>3520 actor_y_coord=>2890 actor_orientation=>5~
+    add_actor_inline'29=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>3675 actor_y_coord=>2830 actor_orientation=>4~
+
+    add_actor_inline'30=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>2580 actor_y_coord=>2865 actor_orientation=>11~
+    add_actor_inline'31=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>2575 actor_y_coord=>2765 actor_orientation=>13~
+
+    add_actor_inline'32=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>2585 actor_y_coord=>2150 actor_orientation=>1~
+    add_actor_inline'33=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>2435 actor_y_coord=>2270 actor_orientation=>2~
+
+    add_actor_inline'34=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>2375 actor_y_coord=>2500 actor_orientation=>12~
+    add_actor_inline'35=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>2255 actor_y_coord=>2490 actor_orientation=>13~
+
+    add_actor_inline'36=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>1755 actor_y_coord=>3040 actor_orientation=>8~
+    add_actor_inline'37=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>1915 actor_y_coord=>3070 actor_orientation=>9~
+    add_actor_inline'38=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>1630 actor_y_coord=>2950 actor_orientation=>11~
+
+    add_actor_inline'39=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>810 actor_y_coord=>2735 actor_orientation=>12~
+    add_actor_inline'40=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>935 actor_y_coord=>2730 actor_orientation=>13~
+
+    add_actor_inline'41=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>570 actor_y_coord=>2955 actor_orientation=>10~
+    add_actor_inline'42=>~actor_name=>"{literal:Crypt Crawler}" actor_resource=>"cryptcra" actor_x_coord=>690 actor_y_coord=>2940 actor_orientation=>7~
+
+    add_actor_inline'43=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"%tutu_scriptbg%skelwa" actor_x_coord=>495 actor_y_coord=>1355 actor_orientation=>14~
+    add_actor_inline'44=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"%tutu_scriptbg%skelwa" actor_x_coord=>320 actor_y_coord=>1400 actor_orientation=>13~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_D4%"
+    edits	= "patch_data"
+  END
+END	// lower_levels
+
+

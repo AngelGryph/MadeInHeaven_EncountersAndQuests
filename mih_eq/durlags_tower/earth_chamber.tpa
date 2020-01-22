@@ -1,0 +1,31 @@
+DEFINE_ACTION_FUNCTION earth_chamber
+BEGIN
+  MAKE_PATCH
+    add_actor_inline'01=>~actor_name=>"{literal:Crystal Ooze}" actor_resource=>"mh#oozec" actor_x_coord=>815 actor_y_coord=>260 actor_orientation=>12~
+    add_actor_inline'02=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>855 actor_y_coord=>355 actor_orientation=>11~
+    add_actor_inline'03=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>715 actor_y_coord=>315 actor_orientation=>11~
+    add_actor_inline'04=>~actor_name=>"{literal:Gray Ooze}" actor_resource=>"jellgr" actor_x_coord=>780 actor_y_coord=>425 actor_orientation=>10~
+    add_actor_inline'05=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jellmu" actor_x_coord=>675 actor_y_coord=>390 actor_orientation=>11~
+
+    add_actor_inline'06=>~actor_name=>"{literal:Gray Ooze}" actor_resource=>"jellgr" actor_x_coord=>1135 actor_y_coord=>525 actor_orientation=>9~
+    add_actor_inline'07=>~actor_name=>"{literal:Crystal Ooze}" actor_resource=>"mh#oozec" actor_x_coord=>1225 actor_y_coord=>605 actor_orientation=>7~
+    add_actor_inline'08=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>1040 actor_y_coord=>615 actor_orientation=>10~
+    add_actor_inline'09=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jellmu" actor_x_coord=>1070 actor_y_coord=>715 actor_orientation=>9~
+
+    add_actor_inline'10=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jellgr" actor_x_coord=>625 actor_y_coord=>745 actor_orientation=>10~
+    add_actor_inline'11=>~actor_name=>"{literal:Crystal Ooze}" actor_resource=>"mh#oozec" actor_x_coord=>740 actor_y_coord=>800 actor_orientation=>9~
+    add_actor_inline'12=>~actor_name=>"{literal:Crystal Ooze}" actor_resource=>"jellmu" actor_x_coord=>655 actor_y_coord=>895 actor_orientation=>12~
+
+    add_actor_inline'13=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jellmu" actor_x_coord=>435 actor_y_coord=>560 actor_orientation=>10~
+    add_actor_inline'14=>~actor_name=>"{literal:Gray Ooze}" actor_resource=>"jellgr" actor_x_coord=>265 actor_y_coord=>585 actor_orientation=>11~
+    add_actor_inline'15=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>285 actor_y_coord=>500 actor_orientation=>12~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_EarthChamber%"
+    edits	= "patch_data"
+  END
+END	// earth_chamber
+
+

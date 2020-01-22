@@ -14,13 +14,13 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "catacombs_new_actors"
-    tra		= "catacombs_new_actors"
+    tra		= "candlekeep_catacombs"
   END
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "catacombs_dialog"
-    tra		= "catacombs_dialog"
+    tra		= "candlekeep_catacombs"
   END
 
   LAUNCH_ACTION_FUNCTION run

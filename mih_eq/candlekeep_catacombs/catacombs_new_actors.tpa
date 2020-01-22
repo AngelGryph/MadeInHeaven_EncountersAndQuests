@@ -24,11 +24,12 @@ BEGIN
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
     creature	= "mh#oobah mh#blahr"
-    editstring	= ~say_both_names=>"object_index from [0 1]"~
+    editstring	= ~say_both_names=>"object_index from [10 11]"~
   END
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
+    file	= "all"
     location	= "portraits"
     postfix	= "bmp"
   END

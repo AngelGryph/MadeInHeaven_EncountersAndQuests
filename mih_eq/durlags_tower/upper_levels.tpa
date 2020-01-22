@@ -1,0 +1,61 @@
+DEFINE_ACTION_FUNCTION upper_levels
+BEGIN
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>1150 actor_y_coord=>385 actor_orientation=>6~
+    add_actor_inline'2=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>1065 actor_y_coord=>335 actor_orientation=>7~
+    add_actor_inline'3=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>785 actor_y_coord=>105 actor_orientation=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_Cellar%"
+    edits	= "patch_data"
+  END
+
+
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>205 actor_y_coord=>365 actor_orientation=>2~
+
+    add_actor_inline'2=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>115 actor_y_coord=>635 actor_orientation=>14~
+    add_actor_inline'3=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>165 actor_y_coord=>690 actor_orientation=>13~
+
+    add_actor_inline'4=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>465 actor_y_coord=>820 actor_orientation=>9~
+
+    add_actor_inline'5=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>115 actor_y_coord=>710 actor_orientation=>6~
+
+    add_actor_inline'6=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>1210 actor_y_coord=>375 actor_orientation=>15~
+    add_actor_inline'7=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>1145 actor_y_coord=>305 actor_orientation=>6~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_L2%"
+    edits	= "patch_data"
+  END
+
+
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>380	150 actor_orientation=>12~
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>460	140 actor_orientation=>13~
+
+    add_actor_inline'1=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>390 actor_y_coord=>380 actor_orientation=>14~
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>550 actor_y_coord=>350 actor_orientation=>15~
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>500 actor_y_coord=>435 actor_orientation=>14~
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>400 actor_y_coord=>515 actor_orientation=>12~
+
+    add_actor_inline'1=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>505 actor_y_coord=>810 actor_orientation=>6~
+
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>1115 actor_y_coord=>650 actor_orientation=>9~
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>1045 actor_y_coord=>765 actor_orientation=>10~
+    add_actor_inline'1=>~actor_name=>"{literal:Fell Ghast}" actor_resource=>"ghastd" actor_x_coord=>905 actor_y_coord=>840 actor_orientation=>3~
+    add_actor_inline'1=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>1150 actor_y_coord=>505 actor_orientation=>3~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%DurlagsTower_L4%"
+    edits	= "patch_data"
+  END
+END	// upper_levels
+
+

@@ -5,7 +5,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION ssl_to_bcs
       STR_VAR
       script	= "mh#huecu"
-      locbase	= "shared/huecuva"
+      locbase
       ssllibrary	= "%mod_root%/ssl/library"
     END
 
@@ -30,7 +30,7 @@ BEGIN
       enforce_thac0=>at_worst
       enforce_saves=>at_worst
       enforce_hp=>at_worst
-      say_both_names=>0
+      say_both_names=>9
       add_all_priest_spells=>null
       add_spells=>"CLERIC_BLESS CLERIC_SANCTUARY CLERIC_DOOM CLERIC_HOLD_PERSON CLERIC_CHARM_PERSON CLERIC_DRAW_UPON_HOLY_MIGHT CLERIC_ANIMATE_DEAD CLERIC_STRENGTH_OF_ONE"
     END
@@ -39,7 +39,7 @@ BEGIN
       STR_VAR
       creature	= "huecuva=>mh#huec5"
       edits	= "patch_data"
-      locbase	= "shared/huecuva"
+      locbase
     END
 
     MAKE_PATCH
@@ -49,7 +49,7 @@ BEGIN
       enforce_thac0=>at_worst
       enforce_saves=>at_worst
       enforce_hp=>at_worst
-      say_both_names=>0
+      say_both_names=>9
       add_all_priest_spells=>null
       add_spells=>"CLERIC_BLESS CLERIC_SANCTUARY CLERIC_DOOM CLERIC_ARMOR_OF_FAITH CLERIC_HOLD_PERSON CLERIC_CHARM_PERSON(2) CLERIC_DRAW_UPON_HOLY_MIGHT CLERIC_ANIMATE_DEAD CLERIC_UNHOLY_BLIGHT CLERIC_STRENGTH_OF_ONE CLERIC_DEFENSIVE_HARMONY CLERIC_CLOAK_OF_FEAR CLERIC_MENTAL_DOMINATION CLERIC_FLAME_STRIKE CLERIC_RIGHTEOUS_MAGIC"
     END
@@ -58,7 +58,7 @@ BEGIN
       STR_VAR
       creature	= "huecuva=>mh#huec9"
       edits	= "patch_data"
-      locbase	= "shared/huecuva"
+      locbase
     END
   END
 END	// setup_huecuva

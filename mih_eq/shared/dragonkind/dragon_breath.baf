@@ -1,0 +1,17 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 30)
+  !GlobalTimerNotExpired("%breath%_timer", "LOCALS")
+  GlobalLT("%breath%_uses", "LOCALS", 3)
+THEN
+  RESPONSE #40
+    SetGlobalTimer("%breath%_timer", "LOCALS", 60)
+    IncrementGlobal("%breath%_uses", "LOCALS", 1)
+    FaceObject(LastSeenBy(Myself))
+    ForceSpell(LastSeenBy(Myself), %breath%)
+    Wait(2)
+  RESPONSE #60
+    Continue()
+END
+
+

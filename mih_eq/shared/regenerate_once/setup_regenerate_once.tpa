@@ -5,21 +5,21 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_item
       STR_VAR
       item	= "mh#regen"
-      locbase	= "shared/regenerate_once"
+      locbase
     END
 
     LAUNCH_ACTION_FUNCTION install_spell
       STR_VAR
       spell	= "regenerate_down"
       idsname	= "REGENERATE_DOWN"
-      locbase	= "shared/regenerate_once"
+      locbase
     END
 
     LAUNCH_ACTION_FUNCTION install_spell
       STR_VAR
       spell	= "regenerate_rise"
       idsname	= "REGENERATE_RISE"
-      locbase	= "shared/regenerate_once"
+      locbase
     END
 
     COMPILE "%mod_root%/shared/regenerate_once/mh#regen.baf"

@@ -10,7 +10,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "pnp_ankhegs"
-    tra		= "pnp_ankhegs"
+    tra		= "pnp_monsters"
   END
 
   ACTION_IF GAME_INCLUDES "bg1" AND alter_bg1_ankheg_pit

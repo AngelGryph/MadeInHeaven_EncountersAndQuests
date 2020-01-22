@@ -5,7 +5,7 @@ BEGIN
     spell		= "frost_breath"
     idsname		= "WINTER_WOLF_BREATH"
     location		= "spells"
-    editstring		= "say_name=>0"
+    editstring		= "say_name=>1"
   END
 
   LAUNCH_ACTION_FUNCTION clone_item

@@ -1,6 +1,6 @@
 DEFINE_ACTION_FUNCTION setup_mohrg
 BEGIN
-  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#blaze.cre"
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#mohrg.cre"
   BEGIN
     MAKE_PATCH
       patch_ability_inline=>"ability_numdice=>2 ability_dicesize=>6"
@@ -16,10 +16,10 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install_creature
       STR_VAR
       creature		= "mh#mohrg"
-      locbase		= "shared/mohrg"
-      editstring	= "say_both_names=>0"
+      locbase
+      editstring	= "say_both_names=>10"
     END
-  END
+  END	// NOT FILE_EXISTS_IN_GAME "mh#mohrg.cre"
 END	// setup_mohrg
 
 
