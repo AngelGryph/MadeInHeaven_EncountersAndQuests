@@ -6171,6 +6171,120 @@
                                      READ_SHORT (0x74 + offset_base) value 
                           END
                           
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_base_number 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_SHORT (0x76 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_base_numberGT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF SHORT_AT (0x76 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_SHORT (0x76 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_base_numberLT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF SHORT_AT (0x76 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_SHORT (0x76 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_base_number 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_SHORT (0x76 + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_frequency 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_SHORT (0x78 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_frequencyGT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF SHORT_AT (0x78 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_SHORT (0x78 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_frequencyLT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF SHORT_AT (0x78 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_SHORT (0x78 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_frequency 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_SHORT (0x78 + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_maximum 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_SHORT (0x84 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_maximumGT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF SHORT_AT (0x84 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_SHORT (0x84 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_maximumLT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF SHORT_AT (0x84 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_SHORT (0x84 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_maximum 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_SHORT (0x84 + offset_base) value 
+                          END
+                          
  DEFINE_PATCH_FUNCTION ARE_restspawn_creature1 
                                       INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
                             BEGIN 

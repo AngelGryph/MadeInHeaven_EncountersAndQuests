@@ -1,0 +1,14 @@
+DEFINE_ACTION_FUNCTION saladrex_loot
+BEGIN
+  MAKE_PATCH
+    patch_item_inline=>~match=>"item_resource is_in [misc45 staf21]" unstealable=>0~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "gorsal"
+    edits	= "patch_data"
+  END
+END	// saladrex_loot
+
+
