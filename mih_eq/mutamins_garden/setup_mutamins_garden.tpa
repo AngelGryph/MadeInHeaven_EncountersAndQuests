@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION setup_mutamins_garden
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "more_basilisks"
+  END
+END	// setup_mutamins_garden
+
+
