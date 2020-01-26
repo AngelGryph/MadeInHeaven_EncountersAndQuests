@@ -298,6 +298,18 @@ END
 // ===================
 
 
+// Scalies in the Windspear Hills
+
+BEGIN ~Scalies in the Windspear Hills~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_firkraags_lair"
+  location	= "firkraags_lair"
+END
+
+
 // ====================
 // BG2: Throne of Bhaal
 // ====================
@@ -351,17 +363,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_ancient_tomb"
-END
-
-
-// Enhanced Firkraag's Lair
-
-BEGIN ~Enhanced Firkraag's Lair~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_firkraags_lair"
 END
 
 
