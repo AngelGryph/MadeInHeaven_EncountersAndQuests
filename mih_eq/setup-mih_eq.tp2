@@ -257,9 +257,9 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Enhanced Korlasz' Tomb
+// Evils of Korlasz' Tomb
 
-BEGIN ~Enhanced Korlasz' Tomb~
+BEGIN ~Evils of Korlasz' Tomb~
 GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -269,9 +269,9 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Enhanced SoD Vampire Encounters
+// Improved SoD Vampire Encounters
 
-BEGIN ~Enhanced SoD Vampire Encounters~
+BEGIN ~Improved SoD Vampire Encounters~
 GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -290,6 +290,18 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_dwarven_dig_site"
   location	= "dwarven_dig_site"
+END
+
+
+// New Madness in the Old Temple
+
+BEGIN ~New Madness in the Old Temple~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_cyric_temple"
+  location	= "cyric_temple"
 END
 
 

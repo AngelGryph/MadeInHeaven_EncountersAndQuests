@@ -1,0 +1,17 @@
+IF
+  Global("mh#ActivateCaryatidColums", "MYAREA", 1)
+  Allegiance(Myself, NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  Global("mh#ActivateCaryatidColums", "MYAREA", 0)
+  Allegiance(Myself, NEUTRAL)
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+

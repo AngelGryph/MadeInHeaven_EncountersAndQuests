@@ -20,6 +20,16 @@ BEGIN
   END
 
 
+  // Caryatid Column
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_caryatid_column"
+    tra		= "custom_monsters"
+    locbase	= "shared/caryatid_column"
+  END
+
+
   // Crystal Ooze
 
   LAUNCH_ACTION_FUNCTION run

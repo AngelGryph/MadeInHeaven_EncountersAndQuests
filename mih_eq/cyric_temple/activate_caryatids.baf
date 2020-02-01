@@ -1,0 +1,37 @@
+IF
+  Global("mh#ActivateCaryatidColums", "MYAREA", 1)
+  HasItem("holdring", "mh#cycy1")
+THEN
+  RESPONSE #100
+    TakeItemReplace("misc40", "holdring", "mh#cycy1")
+    CreateVisualEffectObject("spfleshs", "mh#cycy1")
+END
+
+IF
+  Global("mh#ActivateCaryatidColums", "MYAREA", 1)
+  HasItem("holdring", "mh#cycy2")
+THEN
+  RESPONSE #100
+    TakeItemReplace("misc40", "holdring", "mh#cycy2")
+    CreateVisualEffectObject("spfleshs", "mh#cycy2")
+END
+
+IF
+  Global("mh#ActivateCaryatidColums", "MYAREA", 1)
+  HasItem("holdring", "mh#cycy3")
+THEN
+  RESPONSE #100
+    TakeItemReplace("misc40", "holdring", "mh#cycy3")
+    CreateVisualEffectObject("spfleshs", "mh#cycy3")
+END
+
+IF
+  Global("mh#ActivateCaryatidColums", "MYAREA", 1)
+  HasItem("holdring", "mh#cycy4")
+THEN
+  RESPONSE #100
+    TakeItemReplace("misc40", "holdring", "mh#cycy4")
+    CreateVisualEffectObject("spfleshs", "mh#cycy4")
+END
+
+

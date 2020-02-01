@@ -1,0 +1,59 @@
+DEFINE_ACTION_FUNCTION morentherene
+BEGIN
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"opcode = 12" parameter1=>5 dicenum=>10~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_spell
+    STR_VAR
+    spell	= "drgrbrht=>drmobrth"
+    edits	= "patch_data"
+  END
+
+  COPY_EXISTING "bdmorent.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~drbrbrht~ ~drmobrht~
+    END
+
+  MAKE_PATCH
+    hitpoints=>"hp_max * 2"
+    resist_slashing=>30
+    resist_crushing=>30
+    resist_piercing=>30
+    resist_missile=>30
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "bdmorent"
+    edits	= "patch_data"
+  END
+
+
+  COPY_EXISTING "bd7210.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~bdwyvr03~ ~bddrggry~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~Greater Wyvern~ ~Young Green Dragon~
+    END
+
+  MAKE_PATCH
+    hitpoints=>"hp_max * 3 / 2"
+    resist_slashing=>30
+    resist_crushing=>30
+    resist_piercing=>30
+    resist_missile=>30
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "bddrggry"
+    edits	= "patch_data"
+  END
+END	// morentherene
+
+

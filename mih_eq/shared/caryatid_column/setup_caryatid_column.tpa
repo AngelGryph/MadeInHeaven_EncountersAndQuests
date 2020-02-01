@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION setup_caryatid_column
+BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#carya.cre"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION clone_item
+      STR_VAR
+      item	= "sw1h42=>mh#carya"
+      editstring	= "droppable=>0 displayable=>0"
+    END
+
+    COMPILE "%mod_root%/%locbase%/mh#carya.baf"
+
+    LAUNCH_ACTION_FUNCTION install_creature
+      STR_VAR
+      creature	= "mh#carya"
+      editstring	= "say_both_names=>12"
+      locbase
+    END
+  END	// NOT FILE_EXISTS_IN_GAME "mh#carya.cre"
+END	// setup_caryatid_column
+
+

@@ -1,0 +1,21 @@
+DEFINE_ACTION_FUNCTION setup_cyric_temple
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "morentherene"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "inner_temple"
+    tra		= "cyric_temple"
+  END
+END	// setup_cyric_temple
+
+
