@@ -1,0 +1,47 @@
+DEFINE_ACTION_FUNCTION trollbark_vampires
+BEGIN
+  MAKE_PATCH
+    strength=>18
+    strength_ex=>100
+    constitution=>18
+    dexterity=>17
+    intelligence=>17
+    charisma=>16
+    xp_value=>10500
+    hitpoints=>82
+    ac=>0
+    level1=>10
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    attacks=>2
+    resist_fire=>50
+    resist_cold=>50
+    resist_electricity=>50
+    resist_acid=>50
+    resist_magic=>10
+    add_effect_inline=>"opcode=>31 target=>1 timing=>9 parameter1=>50 parameter2=>1"
+    replace_items=>"immune2(rring)"
+    say_both_names=>1
+  END   
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "vamflm01=>mh#tbvam"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    patch_actor_inline'1=>~match=>"actor_resource=vamflm01" actor_name=>"{literal:Master Vampire}" actor_resource=>"mh#tbvam"~
+    patch_actor_inline'2=>~match=>"actor_resource=bdwolfva" actor_name=>"{literal:Fledgling Vampire}" actor_resource=>"vamflm01"~
+    patch_actor_inline'3=>~match=>"actor_resource=bdwolfdr" actor_name=>"{literal:Vampiric Wolf}" actor_resource=>"bdwolfva"~
+    patch_actor_inline'4=>~match=>"actor_resource=wolf" actor_name=>"{literal:Dread Wolf}" actor_resource=>"bdwolfdr"~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "bd7410"
+    edits	= "patch_data"
+  END
+END	// trollbark_vampires
+
+

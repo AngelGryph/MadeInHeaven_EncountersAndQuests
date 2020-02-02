@@ -1,12 +1,21 @@
-DEFINE_ACTION_FUNCTION enhanced_tsolak
+DEFINE_ACTION_FUNCTION tsolak_battle
 BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "vampreg2.itm"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION clone_item
+      STR_VAR
+      item		= "vampreg=>vampreg1"
+      editstring	= ~match=>"opcode=98" parameter1=>1~
+    END
+  END
+
   MAKE_PATCH
     strength=>18
     strength_ex=>100
     constitution=>18
     dexterity=>18
-    intelligence=>17
-    charisma=>18
+    intelligence=>18
+    charisma=>17
     xp_value=>12500
     hitpoints=>89
     ac=>"-1"
@@ -19,9 +28,15 @@ BEGIN
     resist_electricity=>50
     resist_acid=>50
     resist_magic=>20
-    add_effect=>"opcode=>31 target=>1 timing=>9 parameter1=>50 parameter2=>1"
-    replace_cre_item=>"immune2(rring)"
+    add_effect_inline=>"opcode=>31 target=>1 timing=>9 parameter1=>50 parameter2=>1"
+    replace_items=>"vampreg1(lring) immune2(rring)"
   END   
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature		= "bdtsolak"
+    edits		= "patch_data"
+  END
 
   LAUNCH_ACTION_FUNCTION clone_creature
     STR_VAR
@@ -88,6 +103,6 @@ BEGIN
     edits		= "patch_data"
   END
   COPY_EXISTING "bd0115.are" "override"
-END	// enhanced_tsolak
+END	// tsolak_battle
 
 
