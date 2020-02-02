@@ -305,6 +305,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Dark Trouble in Bridgefort
+
+BEGIN ~Dark Trouble in Bridgefort~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_bridgefort"
+  location	= "bridgefort"
+END
+
+
 // ===================
 // BG2: Shadows of Amn
 // ===================

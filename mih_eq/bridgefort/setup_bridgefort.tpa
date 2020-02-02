@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION setup_bridgefort
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "dark_wraith"
+    tra		= "bridgefort"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "false_priest"
+    tra		= "bridgefort"
+  END
+END	// setup_bridgefort
+
+

@@ -1,0 +1,18 @@
+DEFINE_ACTION_FUNCTION false_priest
+BEGIN
+  COPY_EXISTING "bd2000ym.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~zombie~ ~bdwight3~
+    END
+
+  COPY_EXISTING "bdjunia.dlg" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~bdwight~ ~bdmumm01~
+    END
+END	// false_priest
+
+
