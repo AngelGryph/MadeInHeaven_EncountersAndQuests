@@ -321,6 +321,17 @@ END
 // BG2: Shadows of Amn
 // ===================
 
+// What Lurks in the Lower Reaches
+
+BEGIN ~What Lurks in the Lower Reaches~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_lower_reaches"
+  location	= "lower_reaches"
+END
+
 
 // Scalies in the Windspear Hills
 
@@ -337,7 +348,6 @@ END
 // ====================
 // BG2: Throne of Bhaal
 // ====================
-
 
 // Watcher's Keep Tweaks
 
@@ -387,17 +397,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_ancient_tomb"
-END
-
-
-// Enhanced Lower Reaches
-
-BEGIN ~Enhanced Lower Reaches~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_lower_reaches"
 END
 
 

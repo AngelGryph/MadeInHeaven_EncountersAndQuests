@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION undead_city
+BEGIN
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Mohrg}" actor_resource=>"mh#mohrg" actor_x_coord=>705 actor_y_coord=>890 actor_orientation=>15~
+    add_actor_inline'1=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>400 actor_y_coord=>485 actor_orientation=>14~
+    add_actor_inline'1=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>460 actor_y_coord=>585 actor_orientation=>14~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "ar0206"
+    edits	= "patch_data"
+  END
+END	// undead_city
+
+

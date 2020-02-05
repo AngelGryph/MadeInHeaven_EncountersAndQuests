@@ -43,8 +43,10 @@ BEGIN
     END
 
     LAUNCH_ACTION_FUNCTION clone_creature
+      INT_VAR
+      allow_missing	= 1
       STR_VAR
-      creature		= "%tutu_scriptbg%basill=>mh#draco"
+      creature		= "basill=>mh#draco basles01=>mh#draco"
       edits		= "patch_data"
     END
   END	// NOT _FILE_EXISTS_IN_GAME "mh#draco"
