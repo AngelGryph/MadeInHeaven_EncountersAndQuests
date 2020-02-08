@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION setup_trademeet
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "trademeet_tomb"
+  END
+END	// setup_trademeet
+
+

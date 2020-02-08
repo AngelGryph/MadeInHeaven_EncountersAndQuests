@@ -357,6 +357,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Challenges in Trademeet
+
+BEGIN ~Challenges in Trademeet~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_trademeet"
+  location	= "trademeet"
+END
+
+
 // Scalies in the Windspear Hills
 
 BEGIN ~Scalies in the Windspear Hills~
@@ -421,17 +433,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_shadow_temple"
-END
-
-
-// Enhanced Trademeet Tomb
-
-BEGIN ~Enhanced Trademeet Tomb~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_trademeet_tomb"
 END
 
 
