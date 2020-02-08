@@ -1,0 +1,20 @@
+DEFINE_ACTION_FUNCTION setup_graveyard
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "northern_tomb"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "southern_tomb"
+  END
+END	// setup_graveyard
+
+

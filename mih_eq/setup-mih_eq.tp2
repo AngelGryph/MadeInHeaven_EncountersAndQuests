@@ -321,6 +321,18 @@ END
 // BG2: Shadows of Amn
 // ===================
 
+// The Haunted Graveyard
+
+BEGIN ~The Haunted Graveyard~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_graveyard"
+  location	= "graveyard"
+END
+
+
 // What Lurks in the Lower Reaches
 
 BEGIN ~What Lurks in the Lower Reaches~
@@ -330,6 +342,18 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_lower_reaches"
   location	= "lower_reaches"
+END
+
+
+// Slimy Slum Sewers
+
+BEGIN ~Slimy Slum Sewers~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_slum_sewers"
+  location	= "slum_sewers"
 END
 
 
@@ -389,17 +413,6 @@ END
 // ===================
 
 
-// Enhanced Ancient Tomb
-
-BEGIN ~Enhanced Ancient Tomb~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_ancient_tomb"
-END
-
-
 // Enhanced Shadow Temple
 
 BEGIN ~Enhanced Shadow Temple~
@@ -408,17 +421,6 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_shadow_temple"
-END
-
-
-// Enhanced Slum Sewers
-
-BEGIN ~Enhanced Slum Sewers~
-GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_slum_sewers"
 END
 
 
