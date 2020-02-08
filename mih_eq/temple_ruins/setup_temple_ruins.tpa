@@ -1,0 +1,20 @@
+DEFINE_ACTION_FUNCTION setup_temple_ruins
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "temple_grounds"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "temple_interior"
+  END
+END	// setup_temple_ruins
+
+
