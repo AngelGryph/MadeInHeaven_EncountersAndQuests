@@ -7,7 +7,7 @@ BEGIN
   END
 
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_maximum=>"spawn_maximum + 3"~
+    patch_spawn_inline=>~spawn_base_numberGT=>60 spawn_maximumGT=>6~
 
     add_actor_inline'01=>~actor_name=>"{literal:Revenant}" actor_resource=>"firmon04" actor_x_coord=>2800 actor_y_coord=>1160 actor_orientation=>2~
     add_actor_inline'02=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"firmon02" actor_x_coord=>2745 actor_y_coord=>1200 actor_orientation=>2~

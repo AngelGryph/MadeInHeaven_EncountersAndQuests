@@ -6324,6 +6324,44 @@
                           END
                           
  
+                          DEFINE_PATCH_FUNCTION ARE_spawn_method 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_SHORT (0x7a + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_methodGT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF SHORT_AT (0x7a + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_SHORT (0x7a + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_methodLT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF SHORT_AT (0x7a + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_SHORT (0x7a + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_method 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_SHORT (0x7a + offset_base) value 
+                          END
+                          
+ 
                           DEFINE_PATCH_FUNCTION ARE_spawn_maximum 
                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
                           BEGIN 
@@ -6359,6 +6397,386 @@
                                      INT_VAR offset_secondary=0 offset_base=0 RET value 
                           BEGIN
                                      READ_SHORT (0x84 + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight1 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x98 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight1GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x98 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x98 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight1LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x98 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x98 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight1 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x98 + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight2 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x99 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight2GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x99 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x99 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight2LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x99 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x99 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight2 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x99 + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight3 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x9a + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight3GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x9a + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x9a + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight3LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x9a + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x9a + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight3 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x9a + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight4 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x9b + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight4GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x9b + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x9b + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight4LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x9b + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x9b + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight4 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x9b + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight5 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x9c + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight5GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x9c + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x9c + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight5LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x9c + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x9c + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight5 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x9c + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight6 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x9d + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight6GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x9d + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x9d + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight6LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x9d + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x9d + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight6 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x9d + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight7 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x9e + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight7GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x9e + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x9e + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight7LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x9e + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x9e + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight7 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x9e + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight8 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0x9f + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight8GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0x9f + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0x9f + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight8LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0x9f + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0x9f + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight8 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0x9f + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight9 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0xa0 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight9GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0xa0 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0xa0 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight9LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0xa0 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0xa0 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight9 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0xa0 + offset_base) value 
+                          END
+                          
+ 
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight10 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_BYTE (0xa1 + offset_base) arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight10GT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF BYTE_AT (0xa1 + offset_base) < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_BYTE (0xa1 + offset_base) arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_spawn_ee_weight10LT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF BYTE_AT (0xa1 + offset_base) > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_BYTE (0xa1 + offset_base) arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_spawn_ee_weight10 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_BYTE (0xa1 + offset_base) value 
                           END
                           
  DEFINE_PATCH_FUNCTION ARE_restspawn_creature1 
