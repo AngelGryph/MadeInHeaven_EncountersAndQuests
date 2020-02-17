@@ -3,7 +3,7 @@ BEGIN
   APPEND_COL "spawngrp.2da" "$ $ RDShwolf 20 shawol01 shawol01 shawol02 shawol01 shawol01 shawol02 * *" UNLESS "RDShwolf"
 
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>2 spawn_maximum=>8 spawn_frequency=>80 spawn_count=>4 spawn_creature1=>"RDshad" spawn_creature2=>"RDShwolf" spawn_creature3=>"RDUndead" spawn_creature4=>"RDUndea2"~
+    patch_spawn_inline=>~spawn_method=>2 spawn_base_number=>200 spawn_maximum=>8 spawn_count=>4 spawn_creature1=>"RDshad" spawn_creature2=>"RDShwolf" spawn_creature3=>"RDUndead" spawn_creature4=>"RDUndea2"~
     patch_trigger_inline=>~match=>"launch_xloc=2433 and launch_yloc=1288" launch_xloc=>745 launch_yloc=>350~
 
     literal=>~LPF ADD_AREA_REGION_TRIGGER INT_VAR ab_RT_BbLX = 1640 ab_RT_BbLY = 1419 ab_RT_BbHX = 1707 ab_RT_BbHY = 1493 ab_RT_VxPr = 4 ab_RT_Vx_X_0 = 1694 ab_RT_Vx_Y_0 = 1493 ab_RT_Vx_X_1 = 1640 ab_RT_Vx_Y_1 = 1485 ab_RT_Vx_X_2 = 1667 ab_RT_Vx_Y_2 = 1419 ab_RT_Vx_X_3 = 1707 ab_RT_Vx_Y_3 = 1429 ab_RT_TDtD = 100 ab_RT_TRmD = 100 ab_RT_TSet = 1 ab_RT_LPoX = 2433 ab_RT_LPoY = 1288 STR_VAR ab_RT_Name = "High Level 2" ab_RT_Rbcs = "spwndead" END~

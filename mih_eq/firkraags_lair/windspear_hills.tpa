@@ -14,7 +14,7 @@ BEGIN
   END
 
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>4 spawn_base_number=>40 spawn_count=>10 spawn_creature1=>"RDBasil" spawn_creature2=>"RDAnkheg" spawn_creature3=>"RDGnoll" spawn_creature4=>"RDOrc" spawn_creature5=>"RDOrog" spawn_creature6=>"RDOgre" spawn_creature7=>"RDhobgob" spawn_creature8=>"RDliz" spawn_creature9=>"bearca01" spawn_creature10=>"bearpo01"~
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>4 spawn_base_number=>200 spawn_count=>10 spawn_creature1=>"RDBasil" spawn_creature2=>"RDAnkheg" spawn_creature3=>"RDGnoll" spawn_creature4=>"RDOrc" spawn_creature5=>"RDOrog" spawn_creature6=>"RDOgre" spawn_creature7=>"RDhobgob" spawn_creature8=>"RDliz" spawn_creature9=>"bearca01" spawn_creature10=>"bearpo01"~
 
     add_actor_inline'1=>~actor_name=>"{literal:Brundel}" actor_resource=>"mh#flpdw" actor_x_coord=>3800 actor_y_coord=>1230 actor_orientation=>9~
     add_actor_inline'2=>~actor_name=>"{literal:Aillluin}" actor_resource=>"mh#flpel" actor_x_coord=>4250 actor_y_coord=>1365 actor_orientation=>5~

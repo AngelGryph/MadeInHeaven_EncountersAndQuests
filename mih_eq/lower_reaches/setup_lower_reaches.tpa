@@ -13,7 +13,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "undead_city"
+    file	= "ghoul_town"
   END
 END	// setup_lower_reaches
 

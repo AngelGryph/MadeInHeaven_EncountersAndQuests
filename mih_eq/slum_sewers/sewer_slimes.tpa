@@ -3,7 +3,7 @@ BEGIN
   APPEND_COL "spawngrp.2da" "$ $ RDCarrio 15 carcra01 carcra01 carcra01 carcra01 carcra01 carcra01 * *" UNLESS "RDCarrio"
 
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>6 spawn_base_number=>50 spawn_count=>6 spawn_creature1=>"RDCarrio" spawn_creature2=>"RDKobold" spawn_creature3=>"RDSpider" spawn_creature4=>"RDSpid2" spawn_creature5=>"RDslim1" spawn_creature6=>"RDslim2"~
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>6 spawn_base_number=>200 spawn_count=>6 spawn_creature1=>"RDCarrio" spawn_creature2=>"RDKobold" spawn_creature3=>"RDSpider" spawn_creature4=>"RDSpid2" spawn_creature5=>"RDslim1" spawn_creature6=>"RDslim2"~
     patch_actor_inline=>~match=>"actor_resource=hobsha01" actor_name=>"{literal:Crystal Ooze}" actor_resource=>"mh#oozcr" actor_animation=>"gray_ooze"~
 
     add_actor_inline'1=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jelmus01" actor_x_coord=>245 actor_y_coord=>945 actor_orientation=>9~
