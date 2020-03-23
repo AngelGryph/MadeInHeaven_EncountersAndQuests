@@ -393,6 +393,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Improved BG2 Vampire Encounters
+
+BEGIN ~Improved BG2 Vampire Encounters~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_bg2_vampires"
+  location	= "bg2_vampires"
+END
+
+
 // ====================
 // BG2: Throne of Bhaal
 // ====================

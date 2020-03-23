@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION dace_battle
+BEGIN
+  MAKE_PATCH
+    class=>"mage"
+    add_spells=>"WIZARD_MAGIC_MISSILE(5) WIZARD_AGANNAZAR_SCORCHER(2) WIZARD_MIRROR_IMAGE(2) WIZARD_VOCALIZE WIZARD_LIGHTNING_BOLT(2) WIZARD_DISPEL_MAGIC WIZARD_GREATER_MALISON WIZARD_STONE_SKIN(2) WIZARD_BREACH WIZARD_CHAOS WIZARD_SPELL_DEFLECTION WIZARD_CHAIN_LIGHTNING WIZARD_PIERCE_MAGIC WIZARD_SPELL_TURNING WIZARD_POWER_WORD_STUN"
+    insert_script_high=>"mage14a"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "ppjoye"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "skelwa01=>mh#skw12"
+    editstring	= ~level1=>12 xp_value=>7000 attacks=>3 thac0=>6 hitpoints=>120 replace_items=>"sw2h11(weapon1)~
+  END
+
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"mh#skw12" actor_x_coord=>615 actor_y_coord=>1890 actor_orientation=>13~
+    add_actor_inline'2=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"mh#skw12" actor_x_coord=>745 actor_y_coord=>1800 actor_orientation=>15~
+    add_actor_inline'3=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"mh#skw12" actor_x_coord=>865 actor_y_coord=>1970 actor_orientation=>14~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "ar1513"
+    edits	= "patch_data"
+  END
+END
+
+
