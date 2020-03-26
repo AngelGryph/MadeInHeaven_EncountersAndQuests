@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION setup_spellhold
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "island_battles"
+    tra		= "spellhold"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "asylum_dungeon"
+    tra		= "spellhold"
+  END
+END	// setup_spellhold
+
+

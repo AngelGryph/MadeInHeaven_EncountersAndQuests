@@ -405,6 +405,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Madness of Spellhold
+
+BEGIN ~The Madness of Spellhold~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_spellhold"
+  location	= "spellhold"
+END
+
+
 // ====================
 // BG2: Throne of Bhaal
 // ====================

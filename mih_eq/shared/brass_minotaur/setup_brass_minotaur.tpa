@@ -1,0 +1,26 @@
+DEFINE_ACTION_FUNCTION setup_brass_minotaur
+BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#golbm.cre"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION install_item
+      STR_VAR
+      item		= "mh#golbm"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file		= "mh#golbm.baf"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION install_creature
+      STR_VAR
+      creature		= "mh#golbm"
+      locbase
+      editstring	= "say_both_names=>6"
+    END
+  END	// NOT FILE_EXISTS_IN_GAME "mh#golbm.cre"
+END	// brass_minotaur
+
+

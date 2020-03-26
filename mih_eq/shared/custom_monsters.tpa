@@ -50,13 +50,13 @@ BEGIN
   END
 
 
-  // Gemstone Golems
+  // Brass  Minotaur
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "setup_gemstone_golems"
+    file	= "setup_brass_minotaur"
     tra		= "custom_monsters"
-    locbase	= "shared/gemstone_golems"
+    locbase	= "shared/brass_minotaur"
   END
 
 
