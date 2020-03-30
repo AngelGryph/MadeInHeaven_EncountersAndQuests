@@ -1,0 +1,146 @@
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(EASY)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("jarlich", @2)
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+END
+
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("jarlich", @2)
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#mohrg", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#mohrg", "spraised", "jarlich")
+END
+
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    DisplayStringHead("jarlich", @2)
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#mohrg", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#mohrg", "spraised", "jarlich")
+    CreateCreatureObjectEffect("icbone01", "spraised", "jarlich")
+    CreateCreatureObjectEffect("icbone01", "spraised", "jarlich")
+END
+
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("jarlich", @2)
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#skw15", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#mohrg", "spraised", "jarlich")
+    CreateCreatureObjectEffect("mh#mohrg", "spraised", "jarlich")
+    CreateCreatureObjectEffect("icbone01", "spraised", "jarlich")
+    CreateCreatureObjectEffect("icbone01", "spraised", "jarlich")
+    CreateCreatureObjectEffect("banshe01", "spraised", "jarlich")
+    CreateCreatureObjectEffect("banshe01", "spraised", "jarlich")
+END
+
+
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player1)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player2)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player3)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player5)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player6)
+END
+
+
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARD)
+THEN
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player1)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player2)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player3)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player5)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player6)
+END
+
+
+IF
+  Allegiance("jarlich", ENEMY)
+  !Dead("jarlich")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player1)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player2)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player3)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player5)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mh#zom12", "spraised", Player6)
+END
+
+

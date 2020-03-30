@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION setup_boss_minions
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "custom_monsters"
+    locbase	= "shared"
+  END
+
+  ACTION_IF GAME_INCLUDES "sod"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "tsolak_battle"
+      tra	= "boss_minions"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "trollbark_vampires"
+      tra	= "boss_minions"
+    END
+  END
+
+  ACTION_IF GAME_INCLUDES "bg2"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "deirex_battle"
+      tra	= "boss_minions"
+    END
+  END
+END	// setup_boss_minions
+
+

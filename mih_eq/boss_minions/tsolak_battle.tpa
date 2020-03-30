@@ -1,6 +1,6 @@
 DEFINE_ACTION_FUNCTION tsolak_battle
 BEGIN
-  ACTION_IF NOT FILE_EXISTS_IN_GAME "vampreg2.itm"
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "vampreg1.itm"
   BEGIN
     LAUNCH_ACTION_FUNCTION clone_item
       STR_VAR
@@ -23,10 +23,6 @@ BEGIN
     enforce_thac0=>at_worst
     enforce_saves=>at_worst
     attacks=>2
-    resist_fire=>50
-    resist_cold=>50
-    resist_electricity=>50
-    resist_acid=>50
     resist_magic=>20
     add_effect_inline=>"opcode=>31 target=>1 timing=>9 parameter1=>50 parameter2=>1"
     replace_items=>"vampreg1(lring) immune2(rring)"
@@ -102,7 +98,6 @@ BEGIN
     area		= "bd0115"
     edits		= "patch_data"
   END
-  COPY_EXISTING "bd0115.are" "override"
 END	// tsolak_battle
 
 

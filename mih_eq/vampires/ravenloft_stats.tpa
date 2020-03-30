@@ -1,0 +1,178 @@
+DEFINE_ACTION_FUNCTION ravenloft_stats
+BEGIN
+  // Immunities data
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_all
+  BEGIN
+    resist_fireGT		=> 50
+    resist_magic_fireGT		=> 50
+    resist_coldGT		=> 50
+    resist_magic_coldGT		=> 50
+    resist_acidGT		=> 50
+    resist_electricityGT	=> 50
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_fledgling
+  BEGIN
+    strengthGT			=> 18
+    strength_exGT		=> 76
+    intelligenceGT		=> 16
+    dexterityGT			=> 16
+    charismaGT			=> 14
+    replace_items		=> "vamp(weapon1) ring95(lring) vampreg(rring) immune1(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_mature
+  BEGIN
+    strengthGT			=> 18
+    strength_exGT		=> 91
+    intelligenceGT		=> 16
+    dexterityGT			=> 17
+    charismaGT			=> 15
+    replace_items		=> "vamp(weapon1) ring95(lring) vampreg(rring) immune1(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_old
+  BEGIN
+    strengthGT			=> 18
+    strength_exGT		=> 100
+    intelligenceGT		=> 17
+    dexterityGT			=> 17
+    charismaGT			=> 16
+    replace_items		=> "vamp(weapon1) ring95(lring) vampreg(rring) immune2(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_very_old
+  BEGIN
+    strengthGT			=> 18
+    strength_exGT		=> 100
+    intelligenceGT		=> 18
+    dexterityGT			=> 18
+    charismaGT			=> 17
+    replace_items		=> "vamp1(weapon1) ring95(lring) vampreg1(rring) immune2(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_ancient
+  BEGIN
+    strengthGT			=> 19
+    intelligenceGT		=> 18
+    dexterityGT			=> 18
+    charismaGT			=> 18
+    replace_items		=> "vamp1(weapon1) ring95(lring) vampreg1(rring) immune3(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_eminent
+  BEGIN
+    strengthGT			=> 20
+    intelligenceGT		=> 19
+    dexterityGT			=> 19
+    charismaGT			=> 18
+    replace_items		=> "vamp2(weapon1) ring95(lring) vampreg1(rring) immune3(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_patriarch
+  BEGIN
+    strengthGT			=> 21
+    intelligenceGT		=> 20
+    dexterityGT			=> 20
+    charismaGT			=> 19
+    replace_items		=> "vamp2(weapon1) ring95(lring) vampreg2(rring) immune4(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_rings
+  BEGIN
+    add_effect_global_inline'1=>~opcode=>31 target=>1 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'2=>~opcode=>297 target=>1 timing=>2 parameter2=>1~
+  END
+
+  ACTION_IF ENGINE_IS "bgee bg2ee"
+  BEGIN
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_rings
+    BEGIN
+      add_effect_global_inline'3=>~opcode=>346 target=>1 timing=>2 parameter1=>4 mode=>6~
+    END
+  END
+  ELSE
+  BEGIN
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_rings
+    BEGIN
+      add_effect_global_inline'3=>~opcode=>37 target=>1 timing=>2 parameter1=>4~
+    END
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_paws
+  BEGIN
+    clone_effect_inline=>~match=>"opcode = 216" opcode=>17 target=>1 parameter1=>"parameter1 * 5" parameter2=>0~
+  END
+
+
+  // Patching starts here
+
+  COPY_EXISTING_REGEXP "^.*\.cre$" "override"
+    LPF CRE_read_race RET race = value END
+
+    PATCH_IF "%race%" STRING_EQUAL_CASE "vampire"
+    BEGIN
+      LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_all" END
+
+      LPF CRE_read_level1 RET hd = value END
+
+      PATCH_MATCH hd
+      WITH
+        8
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_fledgling" END
+	END
+
+        9
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_mature" END
+	END
+
+        10
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_old" END
+	END
+
+        11
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_very_old" END
+	END
+
+        12
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_ancient" END
+	END
+
+        13
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_eminent" END
+	END
+
+        14
+	BEGIN
+	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_patriarch" END
+	END
+
+	DEFAULT
+      END
+    END
+
+    BUT_ONLY_IF_IT_CHANGES
+
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item		= "vampreg vampreg1 vampreg2"
+    edits		= "vampire_rings"
+  END
+
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item		= "vamp vamp1 vamp2 vamp3 bodhi"
+    edits		= "vampire_paws"
+  END
+END	// ravenloft_stats
+
+

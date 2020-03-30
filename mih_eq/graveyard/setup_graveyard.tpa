@@ -15,6 +15,11 @@ BEGIN
     STR_VAR
     file	= "southern_tomb"
   END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "bodhis_lair"
+  END
 END	// setup_graveyard
 
 
