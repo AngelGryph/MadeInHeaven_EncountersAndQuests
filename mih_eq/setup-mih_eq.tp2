@@ -429,6 +429,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Depths of the Underdark
+
+BEGIN ~Depths of the Underdark~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_underdark"
+  location	= "underdark"
+END
+
+
 // ====================
 // BG2: Throne of Bhaal
 // ====================
