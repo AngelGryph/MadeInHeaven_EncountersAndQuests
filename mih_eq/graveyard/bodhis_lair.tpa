@@ -58,6 +58,12 @@ CreateCreature("mh#mohrg", [710.1810], 11)~
     edits	= "patch_data"
   END
 
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar0800 ar0808"
+    bottom	= "ch6_vampire_ambush"
+  END
+
 
   // Holy water does not slow vampires
 
