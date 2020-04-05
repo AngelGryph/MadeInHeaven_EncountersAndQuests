@@ -1,0 +1,12 @@
+IF
+  Dead("SHADEL")
+  Global("mh#RemoveBarriers","MYAREA",0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#RemoveBarriers","MYAREA",1)
+    OpenDoor("ShadowDoor01")
+    OpenDoor("ShadowDoor02")
+    OpenDoor("ShadowDoor03")
+END
+
+
