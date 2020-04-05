@@ -2,16 +2,16 @@ DEFINE_ACTION_FUNCTION setup_new_monsters
 BEGIN
   LAUNCH_ACTION_FUNCTION check_label
     STR_VAR
-    label	= "mh#new_monsters.mrk"
+    label	= "mh#new_monsters"
     RET
     installed	= value
   END
 
   ACTION_IF NOT installed
   BEGIN
-    LAUNCH_ACTION_FUNCTION check_label
+    LAUNCH_ACTION_FUNCTION make_label
       STR_VAR
-      label	= "mh#new_monsters.mrk"
+      label	= "mh#new_monsters"
     END
 
     LAUNCH_ACTION_FUNCTION run

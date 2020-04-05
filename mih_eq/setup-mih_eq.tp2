@@ -37,7 +37,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_ankhegs"
-  location	= "ankhegs"
+  location	= "general/ankhegs"
 END
 
 
@@ -49,7 +49,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_basilisks"
-  location	= "basilisks"
+  location	= "general/basilisks"
 END
 
 
@@ -61,7 +61,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_slimes"
-  location	= "slimes"
+  location	= "general/slimes"
 END
 
 
@@ -73,7 +73,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_dread_wolves"
-  location	= "dread_wolves"
+  location	= "general/dread_wolves"
 END
 
 
@@ -85,7 +85,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_winter_wolves"
-  location	= "winter_wolves"
+  location	= "general/winter_wolves"
 END
 
 
@@ -97,7 +97,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_wraith_spiders"
-  location	= "wraith_spiders"
+  location	= "general/wraith_spiders"
 END
 
 
@@ -109,7 +109,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_vampires"
-  location	= "vampires"
+  location	= "general/vampires"
 END
 
 
@@ -121,7 +121,7 @@ GROUP ~Monster Improvements~
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_boss_minions"
-  location	= "boss_minions"
+  location	= "general/boss_minions"
 END
 
 
@@ -137,7 +137,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_candlekeep_catacombs"
-  location	= "candlekeep_catacombs"
+  location	= "bg1/candlekeep_catacombs"
 END
 
 
@@ -149,7 +149,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_cloakwood_assassins"
-  location	= "cloakwood_assassins"
+  location	= "bg1/cloakwood_assassins"
 END
 
 
@@ -161,7 +161,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_mutamins_garden"
-  location	= "mutamins_garden"
+  location	= "bg1/mutamins_garden"
 END
 
 
@@ -173,7 +173,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_ramaziths_tower"
-  location	= "ramaziths_tower"
+  location	= "bg1/ramaziths_tower"
 END
 
 
@@ -185,7 +185,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_surgeons_plight"
-  location	= "surgeons_plight"
+  location	= "bg1/surgeons_plight"
 END
 
 
@@ -197,7 +197,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_ulcaster"
-  location	= "ulcaster"
+  location	= "bg1/ulcaster"
 END
 
 
@@ -209,7 +209,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_xvart_village"
-  location	= "xvart_village"
+  location	= "bg1/xvart_village"
 END
 
 
@@ -221,7 +221,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_zombie_farm"
-  location	= "zombie_farm"
+  location	= "bg1/zombie_farm"
 END
 
 
@@ -232,8 +232,8 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_minor_bg1_quests"
-  location	= "minor_bg1_quests"
+  file		= "setup_minor_quests"
+  location	= "bg1/minor_quests"
 END
 
 
@@ -249,7 +249,7 @@ GROUP ~BG1 Encounters & Quests~ GAME_INCLUDES "totsc"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_durlags_tower"
-  location	= "durlags_tower"
+  location	= "totsc/durlags_tower"
 END
 
 
@@ -289,19 +289,7 @@ GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_korlasz_tomb"
-  location	= "korlasz_tomb"
-END
-
-
-// Improved SoD Vampire Encounters
-
-BEGIN ~Improved SoD Vampire Encounters~
-GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_sod_vampires"
-  location	= "sod_vampires"
+  location	= "sod/korlasz_tomb"
 END
 
 
@@ -313,7 +301,7 @@ GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_dwarven_dig_site"
-  location	= "dwarven_dig_site"
+  location	= "sod/dwarven_dig_site"
 END
 
 
@@ -325,7 +313,7 @@ GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_cyric_temple"
-  location	= "cyric_temple"
+  location	= "sod/cyric_temple"
 END
 
 
@@ -337,7 +325,7 @@ GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_bridgefort"
-  location	= "bridgefort"
+  location	= "sod/bridgefort"
 END
 
 
@@ -353,7 +341,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_graveyard"
-  location	= "graveyard"
+  location	= "bg2/graveyard"
 END
 
 
@@ -365,7 +353,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_lower_reaches"
-  location	= "lower_reaches"
+  location	= "bg2/lower_reaches"
 END
 
 
@@ -377,7 +365,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_slum_sewers"
-  location	= "slum_sewers"
+  location	= "bg2/slum_sewers"
 END
 
 
@@ -389,7 +377,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_trademeet"
-  location	= "trademeet"
+  location	= "bg2/trademeet"
 END
 
 
@@ -401,7 +389,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_temple_ruins"
-  location	= "temple_ruins"
+  location	= "bg2/temple_ruins"
 END
 
 
@@ -413,7 +401,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_firkraags_lair"
-  location	= "firkraags_lair"
+  location	= "bg2/firkraags_lair"
 END
 
 
@@ -425,7 +413,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_spellhold"
-  location	= "spellhold"
+  location	= "bg2/spellhold"
 END
 
 
@@ -437,7 +425,7 @@ GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_underdark"
-  location	= "underdark"
+  location	= "bg2/underdark"
 END
 
 
@@ -453,7 +441,7 @@ GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_watchers_keep"
-  location	= "watchers_keep"
+  location	= "tob/watchers_keep"
 END
 
 

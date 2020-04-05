@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION minor_bg1_area_edits
+DEFINE_ACTION_FUNCTION minor_area_edits
 BEGIN
   LAUNCH_ACTION_FUNCTION edit_area
     STR_VAR
@@ -24,6 +24,6 @@ BEGIN
     area	= "%WyrmsCrossing%"
     bottom	= "spawn_quinns_ankhegs"
   END
-END	// minor_bg1_area_edits
+END	// minor_area_edits
 
 
