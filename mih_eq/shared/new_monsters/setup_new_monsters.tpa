@@ -1,0 +1,54 @@
+DEFINE_ACTION_FUNCTION setup_new_monsters
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_label
+    STR_VAR
+    label	= "mh#new_monsters.mrk"
+    RET
+    installed	= value
+  END
+
+  ACTION_IF NOT installed
+  BEGIN
+    LAUNCH_ACTION_FUNCTION check_label
+      STR_VAR
+      label	= "mh#new_monsters.mrk"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_dragonkin"
+      tra	= "new_monsters"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_golems"
+      tra	= "new_monsters"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_misc"
+      tra	= "new_monsters"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_oozes"
+      tra	= "new_monsters"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_undead"
+      tra	= "new_monsters"
+      locbase
+    END
+  END
+END	// setup_new_monsters
+
+
