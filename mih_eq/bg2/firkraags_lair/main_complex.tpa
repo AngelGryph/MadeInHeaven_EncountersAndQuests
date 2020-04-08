@@ -25,6 +25,12 @@ BEGIN
     area	= "ar1202"
     edits	= "patch_data"
   END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar1202"
+    bottom	= "ch6_spawns_main"
+  END
 END	// main_complex
 
 

@@ -1,16 +1,6 @@
-DEFINE_ACTION_FUNCTION deirex_battle
+DEFINE_ACTION_FUNCTION bg2_liches
 BEGIN
-  LAUNCH_ACTION_FUNCTION clone_creature
-    STR_VAR
-    creature	= "skelwa01=>mh#skw15"
-    editstring	= ~level1=>15 strength=>20 xp_value=>10000 hitpoints=>140 ac=>"-5" enforce_thac0=>at_worst enforce_saves=>at_worst replace_items=>"sw2h11(weapon1)" animation=>"skeleton" color_skin=>67 say_both_names=>3~
-  END
-
-  LAUNCH_ACTION_FUNCTION clone_creature
-    STR_VAR
-    creature	= "zombie01=>mh#zom12"
-    editstring	= ~level1=>12 xp_value=>3000 hitpoints=>80 ac=>0 enforce_thac0=>at_worst enforce_saves=>at_worst resist_crushing=>50 resist_missile=>85 replace_items=>"b1-8m2(weapon1) immune2(rring)" say_both_names=>4~
-  END
+  // Deirex, Ust Natha lich
 
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
@@ -18,6 +8,71 @@ BEGIN
     bottom	= "spawn_deirex_minions"
     location	= "scripts"
   END
-END	// deirex_battle
+
+
+  // Shade Lich (Kangaxx guardian)
+  
+  MAKE_PATCH
+    add_effect_global_inline'1=>~opcode=>27 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'2=>~opcode=>30 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'3=>~opcode=>31 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'4=>~opcode=>86 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'5=>~opcode=>88 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'6=>~opcode=>89 timing=>2 parameter1=>75 parameter2=>1~
+    add_effect_global_inline'7=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>3~
+    add_effect_global_inline'8=>~opcode=>120 timing=>2 parameter1=>1 parameter2=>0~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "lich=>mh#slich"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "hlshade"
+    editstring	= ~replace_items=>"mh#slich(rring)"~
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar0202"
+    bottom	= "spawn_shade_lich_minions"
+    location	= "scripts"
+  END
+
+
+  // Elemental Lich (Kangaxx guardian)
+
+  MAKE_PATCH
+    add_effect_global_inline'1=>~opcode=>27 timing=>2 parameter1=>100 parameter2=>1~
+    add_effect_global_inline'2=>~opcode=>30 timing=>2 parameter1=>100 parameter2=>1~
+    add_effect_global_inline'4=>~opcode=>86 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'5=>~opcode=>88 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'6=>~opcode=>89 timing=>2 parameter1=>75 parameter2=>1~
+    add_effect_global_inline'7=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>3~
+    add_effect_global_inline'8=>~opcode=>120 timing=>2 parameter1=>1 parameter2=>0~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "lich=>mh#elich"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "hllich"
+    editstring	= ~replace_items=>"mh#elich(rring)"~
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar0526"
+    bottom	= "spawn_elemental_lich_minions"
+    location	= "scripts"
+  END
+END	// bg2_liches
 
 

@@ -1,0 +1,131 @@
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(EASY)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hllich", @4)
+    CreateCreatureObjectEffect("elfirl01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elearl01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elairl01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elwatl01", "spdimndr", "hllich")
+END
+
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hllich", @4)
+    CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elwat01", "spdimndr", "hllich")
+END
+
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hllich", @4)
+    CreateCreatureObjectEffect("elfirg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elearg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elairg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elwatg01", "spdimndr", "hllich")
+END
+
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hllich", @4)
+    CreateCreatureObjectEffect("elfirg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elearg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elairg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elwatg01", "spdimndr", "hllich")
+END
+
+
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mepair01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mepear01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mepfir01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mepice01", "spdimndr", "hllich")
+END
+
+
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARD)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mepair01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mepear01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mepfir01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mepice01", "spdimndr", "hllich")
+END
+
+
+IF
+  Exists("hllich")
+  Allegiance("hllich", ENEMY)
+  !Dead("hllich")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mepair01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mepear01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mepfir01", "spdimndr", "hllich")
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mepice01", "spdimndr", "hllich")
+END
+
+

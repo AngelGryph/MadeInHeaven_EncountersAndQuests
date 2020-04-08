@@ -1,0 +1,153 @@
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(EASY)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hlshade", @3)
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+END
+
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hlshade", @3)
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
+END
+
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    DisplayStringHead("hlshade", @3)
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistcd01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistcd01", "spcloud3", "hlshade")
+END
+
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("hlshade", @3)
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistcd01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("mistcd01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("hgmis01", "spcloud3", "hlshade")
+    CreateCreatureObjectEffect("hgmis01", "spcloud3", "hlshade")
+END
+
+
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player1)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player2)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player3)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player5)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player6)
+END
+
+
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARD)
+THEN
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player1)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player2)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player3)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player5)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player6)
+END
+
+
+IF
+  Exists("hlshade")
+  Allegiance("hlshade", ENEMY)
+  !Dead("hlshade")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player1)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player2)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player3)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player5)
+  RESPONSE #10
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    CreateCreatureObjectEffect("mistva01", "spcloud3", Player6)
+END
+
+

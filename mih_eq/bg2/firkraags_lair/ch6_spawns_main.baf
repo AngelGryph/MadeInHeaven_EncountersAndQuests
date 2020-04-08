@@ -1,0 +1,24 @@
+IF
+  GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
+  Global("mh#ch6Spawns", "MYAREA", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#ch6Spawns", "MYAREA", 1)
+    CreateCreature("mh#ora12", [2390.2030], 3)
+    CreateCreature("mh#ora12", [2320.2085], 4)
+    CreateCreature("mh#ora12", [1985.1740], 14)
+    CreateCreature("mh#ora12", [1920.1795], 15)
+    CreateCreature("mh#orc12", [2130.1925], 1)
+    CreateCreature("mh#orc12", [2235.2000], 3)
+    CreateCreature("mh#orc12", [2145.1975], 2)
+    CreateCreature("vamanc01", [2900.1610], 6)
+    CreateCreature("vamanc01", [2650.1440], 14)
+    CreateCreature("goliro01", [1340.1310], 10)
+    CreateCreature("goliro01", [1600.650], 3)
+    CreateCreature("mh#ora12", [2260.795], 3)
+    CreateCreature("mh#ora12", [2055.600], 1)
+    CreateCreature("mh#orc12", [2150.845], 4)
+    CreateCreature("mh#orc12", [2015.700], 0)
+END
+
+
