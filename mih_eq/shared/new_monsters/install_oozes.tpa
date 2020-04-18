@@ -20,6 +20,31 @@ BEGIN
     location	= "actors"
     locbase
   END
+
+
+  // Brown Pudding
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#pudbr"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell	= "mh#pudbr"
+    location	= "spells"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#pudbr"
+    location	= "actors"
+    editstring	= "say_both_names=>17"
+    locbase
+  END
 END	// install_oozes
 
 

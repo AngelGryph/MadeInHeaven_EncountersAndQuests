@@ -71,9 +71,9 @@ IF
 THEN
   RESPONSE #100
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#ora12")
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#ora12", 0)
 END
 
 
@@ -85,11 +85,11 @@ IF
 THEN
   RESPONSE #100
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#ora12")
-    CreateCreatureOffscreen("mh#ora12")
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#ora12", 0)
+    CreateCreatureOffscreen("mh#ora12", 0)
 END
 
 
@@ -101,13 +101,13 @@ IF
 THEN
   RESPONSE #100
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#orc12")
-    CreateCreatureOffscreen("mh#ora12")
-    CreateCreatureOffscreen("mh#ora12")
-    CreateCreatureOffscreen("mh#ora12")
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#orc12", 0)
+    CreateCreatureOffscreen("mh#ora12", 0)
+    CreateCreatureOffscreen("mh#ora12", 0)
+    CreateCreatureOffscreen("mh#ora12", 0)
 END
 
 

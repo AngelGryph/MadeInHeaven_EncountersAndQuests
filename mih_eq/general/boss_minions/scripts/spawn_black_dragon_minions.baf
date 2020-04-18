@@ -1,0 +1,142 @@
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(EASY)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("dragblac", @7)
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+END
+
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("dragblac", @7)
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("elear01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("elear01", "spmonsum", "dragblac")
+END
+
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    DisplayStringHead("dragblac", @7)
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("elearg01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("elearg01", "spmonsum", "dragblac")
+END
+
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  Global("mh#SpawnMinions", "MYAREA", 0)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
+    DisplayStringHead("dragblac", @7)
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("elearg01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("elearg01", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", "dragblac")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", "dragblac")
+END
+
+
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player1, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player2, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player3, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player4, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player5, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player6, "spmonsum")
+END
+
+
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARD)
+THEN
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player1, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player2, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player3, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player4, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player5, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player6, "spmonsum")
+END
+
+
+IF
+  Allegiance("dragblac", ENEMY)
+  !Dead("dragblac")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player1, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player2, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player3, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player4, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player5, "spmonsum")
+  RESPONSE #15
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    CreateCreatureObjectEffect("mh#pudbr", Player6, "spmonsum")
+END
+
+
