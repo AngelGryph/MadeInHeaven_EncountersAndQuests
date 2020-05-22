@@ -3724,6 +3724,44 @@
                           END
                           
  
+                          DEFINE_PATCH_FUNCTION ARE_fog_probability 
+                                   INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                   LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                   PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                          WRITE_SHORT 0x4e arguments 
+                                   END 
+                                   SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_fog_probabilityGT 
+                                  INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                    LPF fail_unless_int STR_VAR value="%arguments%" expression="" END 
+                                    PATCH_IF SHORT_AT 0x4e < arguments BEGIN 
+                                           PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                     WRITE_SHORT 0x4e arguments 
+                                           END 
+                                    END 
+                                    SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_fog_probabilityLT 
+                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
+                          BEGIN 
+                                     LPF fail_unless_int STR_VAR value="%arguments%" expression="" END  
+                                     PATCH_IF SHORT_AT 0x4e > arguments BEGIN 
+                                                PATCH_IF "%arguments%" STRING_COMPARE no_change BEGIN 
+                                                          WRITE_SHORT 0x4e arguments 
+                                                END 
+                                     END 
+                                     SET value=1 
+                          END
+                          DEFINE_PATCH_FUNCTION ARE_read_fog_probability 
+                                     INT_VAR offset_secondary=0 offset_base=0 RET value 
+                          BEGIN
+                                     READ_SHORT 0x4e value 
+                          END
+                          
+ 
                           DEFINE_PATCH_FUNCTION ARE_lightning_probability 
                                    INT_VAR offset_secondary=0 offset_base=0 STR_VAR arguments="" RET value 
                           BEGIN 

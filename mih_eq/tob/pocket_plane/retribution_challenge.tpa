@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION retribution_challenge
+BEGIN
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "umbhul01=>chevil01 mindfl01=>chevil02"
+    editstring	= ~gender=>extra insert_script_high=>chaldie dv=>DEST_RES~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "behgau01=>chevil03 behobs01=>chevil04 behold01=>chevil05"
+    editstring	= ~gender=>extra2 insert_script_high=>chaldie dv=>DEST_RES~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "umbhul02=>chevil06 mindul01=>chevil07"
+    editstring	= ~gender=>extra3 insert_script_high=>chaldie dv=>DEST_RES~
+  END
+END	// retribution_challenge
+
+

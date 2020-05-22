@@ -445,6 +445,16 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+BEGIN ~Brutal Pocket Plane~
+GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_pocket_plane"
+  location	= "tob/pocket_plane"
+END
+
+
 /*
 // Enhanced Thieves' Maze & Undercity
 
@@ -481,17 +491,6 @@ GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_forest_temple"
-END
-
-
-// Enhanced Saradush Prison
-
-BEGIN ~Enhanced Saradush Prison~
-GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_saradush_prison"
 END
 */
 
