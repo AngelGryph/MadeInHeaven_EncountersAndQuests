@@ -10,11 +10,11 @@ BEGIN
   MAKE_PATCH
     match=>"level1 < 21 - %kuotoa_level_bonus%"
     level1=>"level1 + %kuotoa_level_bonus%"
-    xp_value=>"level1 from [15 35 65 120 175 270 420 650 975 1400 2000 2000 3000 4000 5000 6000 7000 8000 9000 10000]"
 
     enforce_hp=>at_worst
     enforce_thac0=>at_worst
     enforce_saves=>at_worst
+    enforce_xp=>3
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature
