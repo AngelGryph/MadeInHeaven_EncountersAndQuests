@@ -27,7 +27,7 @@ BEGIN
     resist_crushing=>50
     resist_piercing=>50
     resist_missile=>80
-    add_items=>"immune1(rring) b3-12m1(weapon1)"
+    replace_items=>"mage6(rring) immune1(amulet) b3-12m1(weapon1)"
     add_effect_inline=>"opcode=>83 target=>1 timing=>9 parameter2=>36"
   END
 

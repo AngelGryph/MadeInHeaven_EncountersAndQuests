@@ -1,6 +1,6 @@
 DEFINE_ACTION_FUNCTION install_undead
 BEGIN
-  // Barrow Wight
+  // Wights (Wight, Greater Wight, Barrow Wight)
 
   ACTION_IF FILE_EXISTS_IN_GAME "e25e.ini" AND NOT GAME_INCLUDES "sod"
   BEGIN
@@ -24,10 +24,33 @@ BEGIN
     END
   END
 
+  MAKE_PATCH
+    magical=>1
+    enchantment=>"object_index from [1 2]"
+    patch_ability_inline=>~ability_numdice=>"object_index from [1 3]" ability_dicesize=>4~
+  END
+
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item	= "wight=>mh#bwght"
-    editstring	= ~magical=>1 enchantment=>1 patch_ability_inline=>"ability_numdice=>3 ability_dicesize=>4"~
+    item	= "wight=>mh#wight wight=>mh#bwght"
+    edits	= "patch_data"
+  END
+
+  ACTION_IF IDS_OF_SYMBOL("animate" "wight_gray") != "-1"
+  BEGIN
+    OUTER_TEXT_SPRINT editstring ~say_both_names=>"object_index from [19 19 19 20]" animation=>"wight_gray"~
+  END
+  ELSE
+  BEGIN
+    OUTER_TEXT_SPRINT editstring ~say_both_names=>"object_index from [19 19 19 20]"~
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#wight mh#wght5 mh#wght6 mh#wght7"
+    editstring
+    location	= "actors"
+    locbase
   END
 
   ACTION_IF IDS_OF_SYMBOL("animate" "wight_barrow") != "-1"
@@ -144,7 +167,7 @@ BEGIN
   MAKE_PATCH
     level1=>9
     ac=>1
-    xp_value=>1400
+    xp_value=>2000
     enforce_thac0=>at_worst
     enforce_saves=>at_worst
     enforce_hp=>at_worst
@@ -181,6 +204,37 @@ BEGIN
     location	= "actors"
     locbase
     editstring	= "say_both_names=>10"
+  END
+
+
+  // Nightwalker
+
+  MAKE_PATCH
+    magical=>1
+    enchantment=>3
+    add_effect_inline'1=>"opcode=>243 target=>2 parameter1=>1"
+    add_effect_inline'2=>"opcode=>244 target=>2 parameter1=>1"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "b2-16=>mh#ngtwk"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#ngtwk.baf"
+    location	= "scripts"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#ngtwk"
+    location	= "actors"
+    locbase
+    editstring	= "say_both_names=>18"
   END
 END	// install_undead
 
