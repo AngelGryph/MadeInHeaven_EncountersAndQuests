@@ -19,7 +19,7 @@ BEGIN
     intelligenceGT		=> 16
     dexterityGT			=> 16
     charismaGT			=> 14
-    replace_items		=> "vamp(weapon1) ring95(lring) vampreg(rring) immune1(amulet)"
+    replace_items		=> "vamp(weapon1) vampreg(lring) immune1(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_mature
@@ -29,7 +29,7 @@ BEGIN
     intelligenceGT		=> 16
     dexterityGT			=> 17
     charismaGT			=> 15
-    replace_items		=> "vamp(weapon1) ring95(lring) vampreg(rring) immune1(amulet)"
+    replace_items		=> "vamp(weapon1) vampreg(lring) immune1(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_old
@@ -39,7 +39,7 @@ BEGIN
     intelligenceGT		=> 17
     dexterityGT			=> 17
     charismaGT			=> 16
-    replace_items		=> "vamp(weapon1) ring95(lring) vampreg(rring) immune2(amulet)"
+    replace_items		=> "vamp(weapon1) vampreg(lring) immune2(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_very_old
@@ -49,7 +49,7 @@ BEGIN
     intelligenceGT		=> 18
     dexterityGT			=> 18
     charismaGT			=> 17
-    replace_items		=> "vamp1(weapon1) ring95(lring) vampreg1(rring) immune2(amulet)"
+    replace_items		=> "vamp1(weapon1) vampreg1(lring) immune2(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_ancient
@@ -58,7 +58,7 @@ BEGIN
     intelligenceGT		=> 18
     dexterityGT			=> 18
     charismaGT			=> 18
-    replace_items		=> "vamp1(weapon1) ring95(lring) vampreg1(rring) immune3(amulet)"
+    replace_items		=> "vamp1(weapon1) vampreg1(lring) immune3(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_eminent
@@ -67,7 +67,7 @@ BEGIN
     intelligenceGT		=> 19
     dexterityGT			=> 19
     charismaGT			=> 18
-    replace_items		=> "vamp2(weapon1) ring95(lring) vampreg1(rring) immune3(amulet)"
+    replace_items		=> "vamp2(weapon1) vampreg1(lring) immune3(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_patriarch
@@ -76,7 +76,7 @@ BEGIN
     intelligenceGT		=> 20
     dexterityGT			=> 20
     charismaGT			=> 19
-    replace_items		=> "vamp2(weapon1) ring95(lring) vampreg2(rring) immune4(amulet)"
+    replace_items		=> "vamp2(weapon1) vampreg2(lring) immune4(rring)"
   END
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_rings

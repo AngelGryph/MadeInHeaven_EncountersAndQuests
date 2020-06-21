@@ -205,37 +205,6 @@ BEGIN
     locbase
     editstring	= "say_both_names=>10"
   END
-
-
-  // Nightwalker
-
-  MAKE_PATCH
-    magical=>1
-    enchantment=>3
-    add_effect_inline'1=>"opcode=>243 target=>2 parameter1=>1"
-    add_effect_inline'2=>"opcode=>244 target=>2 parameter1=>1"
-  END
-
-  LAUNCH_ACTION_FUNCTION clone_item
-    STR_VAR
-    item	= "b2-16=>mh#ngtwk"
-    edits	= "patch_data"
-  END
-
-  LAUNCH_ACTION_FUNCTION install
-    STR_VAR
-    file	= "mh#ngtwk.baf"
-    location	= "scripts"
-    locbase
-  END
-
-  LAUNCH_ACTION_FUNCTION install_creature
-    STR_VAR
-    creature	= "mh#ngtwk"
-    location	= "actors"
-    locbase
-    editstring	= "say_both_names=>18"
-  END
 END	// install_undead
 
 

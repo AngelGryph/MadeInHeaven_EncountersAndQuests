@@ -1,0 +1,20 @@
+DEFINE_ACTION_FUNCTION install_elementals
+BEGIN
+  // Blood Elemental
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "b3-18m3=>mh#blood"
+    editstring	= ~add_effect_inline=>"opcode=>146 target=>2 timing=>1 parameter2=>1 resource=>spin997"~
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#bldle mh#bldel mh#bldge"
+    location	= "actors"
+    locbase
+    editstring	= ~say_both_names=>"object_index from [21 22 23]"~
+  END
+END	// install_elementals
+
+

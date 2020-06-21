@@ -455,6 +455,16 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+BEGIN ~City under Siege~
+GROUP ~ToB Encounters & Quests~ GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_saradush"
+  location	= "tob/saradush"
+END
+
+
 /*
 // Enhanced Thieves' Maze & Undercity
 

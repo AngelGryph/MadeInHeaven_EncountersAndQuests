@@ -23,6 +23,13 @@ BEGIN
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
+      file	= "install_elementals"
+      tra	= "new_monsters"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
       file	= "install_golems"
       tra	= "new_monsters"
       locbase

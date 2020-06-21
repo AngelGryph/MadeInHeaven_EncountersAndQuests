@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION setup_saradush
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_new_monsters"
+    locbase	= "shared/new_monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "cursed_prison"
+    tra		= "saradush"
+  END
+END	// setup_saradush
+
+

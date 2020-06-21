@@ -1,0 +1,101 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Global("mh#SaradushVampireMinions", "LOCALS", 0)
+  Difficulty(EASY)
+THEN
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("shadfi02", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("mh#SaradushVampireMinions", "LOCALS", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("shadfi02", [-1.-1], 0)
+    CreateCreature("shadfi02", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("mh#SaradushVampireMinions", "LOCALS", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("shadfi02", [-1.-1], 0)
+    CreateCreature("shadfi02", [-1.-1], 0)
+    CreateCreature("shadfi02", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("mh#SaradushVampireMinions", "LOCALS", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+    CreateCreature("mh#mohrg", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("shadfi02", [-1.-1], 0)
+    CreateCreature("shadfi02", [-1.-1], 0)
+    CreateCreature("shadfi02", [-1.-1], 0)
+    CreateCreature("shadfi02", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+    CreateCreature("mh#wght6", [-1.-1], 0)
+  RESPONSE #25
+    SetGlobal("mh#SaradushVampireMinions", "LOCALS", 1)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+    CreateCreature("mh#zom12", [-1.-1], 0)
+END
+
+
