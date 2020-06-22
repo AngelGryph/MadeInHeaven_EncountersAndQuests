@@ -33,6 +33,7 @@ BEGIN
     STR_VAR
     area	= "ar1401"
     bottom	= "remove_barriers"
+    location	= "scripts"
   END
 END	// temple_interior
 

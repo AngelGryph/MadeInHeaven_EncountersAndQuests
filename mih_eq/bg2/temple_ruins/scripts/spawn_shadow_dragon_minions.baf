@@ -6,7 +6,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA",1)
-    DisplayStringHead("shadra01", 167629)
+    DisplayStringHead("shadra01", @0)
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
 END
@@ -19,7 +19,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("shadra01",167629)
+    DisplayStringHead("shadra01",@0)
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
     CreateCreatureObjectEffect("hgmis01", "spfleshs", "shadra01")
@@ -33,7 +33,7 @@ IF
   Difficulty(HARD)
 THEN
   RESPONSE #100
-    DisplayStringHead("shadra01",167629)  
+    DisplayStringHead("shadra01",@0)  
     SetGlobal("mh#SpawnMinions", "MYAREA",1)
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
@@ -51,7 +51,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA",1)
-    DisplayStringHead("shadra01",167629)  
+    DisplayStringHead("shadra01",@0)  
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
     CreateCreatureObjectEffect("shadfi02", "spfleshs", "shadra01")
     CreateCreatureObjectEffect("hgmis01", "spfleshs", "shadra01")

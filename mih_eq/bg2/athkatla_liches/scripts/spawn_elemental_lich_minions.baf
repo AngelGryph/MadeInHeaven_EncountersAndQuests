@@ -7,7 +7,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hllich", @4)
+    DisplayStringHead("hllich", @1)
     CreateCreatureObjectEffect("elfirl01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elearl01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elairl01", "spdimndr", "hllich")
@@ -23,7 +23,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hllich", @4)
+    DisplayStringHead("hllich", @1)
     CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
@@ -39,7 +39,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hllich", @4)
+    DisplayStringHead("hllich", @1)
     CreateCreatureObjectEffect("elfirg01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elearg01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elairg01", "spdimndr", "hllich")
@@ -55,7 +55,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hllich", @4)
+    DisplayStringHead("hllich", @1)
     CreateCreatureObjectEffect("elfirg01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elearg01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elairg01", "spdimndr", "hllich")

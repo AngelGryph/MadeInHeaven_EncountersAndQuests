@@ -7,7 +7,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hlshade", @3)
+    DisplayStringHead("hlshade", @0)
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
 END
@@ -21,7 +21,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hlshade", @3)
+    DisplayStringHead("hlshade", @0)
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
     CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")
@@ -36,7 +36,7 @@ IF
   Difficulty(HARD)
 THEN
   RESPONSE #100
-    DisplayStringHead("hlshade", @3)
+    DisplayStringHead("hlshade", @0)
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
@@ -55,7 +55,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hlshade", @3)
+    DisplayStringHead("hlshade", @0)
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
     CreateCreatureObjectEffect("mistho01", "spcloud3", "hlshade")
     CreateCreatureObjectEffect("mistwa01", "spcloud3", "hlshade")

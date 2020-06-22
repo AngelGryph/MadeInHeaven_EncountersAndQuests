@@ -30,6 +30,7 @@ BEGIN
     STR_VAR
     area	= "ar1202"
     bottom	= "ch6_spawns_main"
+    location	= "scripts"
   END
 END	// main_complex
 

@@ -1,0 +1,17 @@
+DEFINE_ACTION_FUNCTION firkraag_battle
+BEGIN
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "firkra02"
+    editstring	= "strength=>25 intelligenceGT=>20 wisdomGT=>21 dexterityGT=>21 constitutionGT=>21 charismaGT=>21"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar1203"
+    bottom	= "spawn_firkraag_minions"
+    location	= "scripts"
+  END
+END	// firkraag_battle
+
+

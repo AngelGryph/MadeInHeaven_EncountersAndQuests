@@ -15,6 +15,12 @@ BEGIN
     STR_VAR
     file	= "temple_interior"
   END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "shadow_dragon_battle"
+    tra		= "temple_ruins"
+  END
 END	// setup_temple_ruins
 
 

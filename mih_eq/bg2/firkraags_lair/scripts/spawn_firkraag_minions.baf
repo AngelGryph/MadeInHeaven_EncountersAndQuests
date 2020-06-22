@@ -7,7 +7,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("firkra02", @6)
+    DisplayStringHead("firkra02", @30)
     CreateCreatureObjectEffect("goljug01", "spfleshs", "firkra02")
     CreateCreatureObjectEffect("goljug01", "spfleshs", "firkra02")
 END
@@ -21,7 +21,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("firkra02", @6)
+    DisplayStringHead("firkra02", @30)
     CreateCreatureObjectEffect("goljug01", "spfleshs", "firkra02")
     CreateCreatureObjectEffect("goljug01", "spfleshs", "firkra02")
     CreateCreatureObjectEffect("icsalfir", "spfleshs", "firkra02")
@@ -36,7 +36,7 @@ IF
   Difficulty(HARD)
 THEN
   RESPONSE #100
-    DisplayStringHead("firkra02", @6)
+    DisplayStringHead("firkra02", @30)
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
     CreateCreatureObjectEffect("goliro01", "spfleshs", "firkra02")
     CreateCreatureObjectEffect("goliro01", "spfleshs", "firkra02")
@@ -53,7 +53,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("firkra02", @6)
+    DisplayStringHead("firkra02", @30)
     CreateCreatureObjectEffect("golada01", "spfleshs", "firkra02")
     CreateCreatureObjectEffect("golada01", "spfleshs", "firkra02")
     CreateCreatureObjectEffect("elfirg01", "spfleshs", "firkra02")

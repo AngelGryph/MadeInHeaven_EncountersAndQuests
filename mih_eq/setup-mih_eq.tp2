@@ -113,18 +113,6 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Boss Minions
-
-BEGIN ~Boss Minions~
-GROUP ~Monster Improvements~
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_boss_minions"
-  location	= "general/boss_minions"
-END
-
-
 // ======================
 // BG1: The Original Saga
 // ======================
@@ -305,6 +293,17 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Vampires of the Sword Coast
+
+BEGIN ~Vampires of the Sword Coast~
+GROUP ~SoD Encounters & Quests~ GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_sod_vampires"
+  location	= "sod/vampires"
+END
+
 // New Madness in the Old Temple
 
 BEGIN ~New Madness in the Old Temple~
@@ -426,6 +425,30 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_underdark"
   location	= "bg2/underdark"
+END
+
+
+// The Athkatla Liches
+
+BEGIN ~The Athkatla Liches~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_athkatla_liches"
+  location	= "bg2/athkatla_liches"
+END
+
+
+// Battle in Suldanessenar
+
+BEGIN ~Battle in Suldanessenar~
+GROUP ~BG2 Encounters & Quests~ GAME_INCLUDES "bg2"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_suldanessenar"
+  location	= "bg2/suldanessenar"
 END
 
 

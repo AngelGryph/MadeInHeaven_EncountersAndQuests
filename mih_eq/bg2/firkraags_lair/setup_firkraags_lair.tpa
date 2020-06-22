@@ -9,7 +9,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "windspear_hills"
-    tra		= "windspear_hills"
+    tra		= "firkraags_lair"
   END
 
   LAUNCH_ACTION_FUNCTION run
@@ -20,6 +20,12 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "main_complex"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "firkraag_battle"
+    tra		= "firkraags_lair"
   END
 END	// setup_firkraags_lair
 

@@ -14,6 +14,7 @@ BEGIN
     STR_VAR
     area	= "ar1201"
     bottom	= "ch6_spawns_mist"
+    location	= "scripts"
   END
 END	// mist_cavern
 

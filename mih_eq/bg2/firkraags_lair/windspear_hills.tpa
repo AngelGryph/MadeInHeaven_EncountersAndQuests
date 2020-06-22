@@ -5,7 +5,11 @@ BEGIN
 
   ADD_JOURNAL @5 @8 @14 @16
 
-  COMPILE "%mod_root%/%component_loc%/windspear_hills.d"
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "windspear_hills.d"
+    location	= "dialog"
+  END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR

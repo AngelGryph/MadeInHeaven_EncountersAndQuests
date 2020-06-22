@@ -75,16 +75,22 @@ BEGIN
   LAUNCH_ACTION_FUNCTION extend
     STR_VAR
     script	= "bdtsolak"
-    top		= "scripts/spawn_tsolak_shadows"
+    top		= "spawn_tsolak_shadows"
+    location	= "scripts"
   END
 
   LAUNCH_ACTION_FUNCTION extend
     STR_VAR
     script	= "bdcof01"
-    top		= "scripts/tsolak_2nd_wind"
+    top		= "tsolak_2nd_wind"
+    location	= "scripts"
   END
 
-  COMPILE "%mod_root%/%component_loc%/scripts/mh#ts2nd.baf"
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#ts2nd.baf"
+    location	= "scripts"
+  END
 
   MAKE_PATCH
     add_actor_inline'1=>~actor_name=>"{literal:Wight}" actor_resource=>"bdwight" actor_x_coord=>245 actor_y_coord=>150 actor_orientation=>2~

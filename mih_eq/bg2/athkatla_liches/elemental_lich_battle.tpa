@@ -1,0 +1,33 @@
+DEFINE_ACTION_FUNCTION elemental_lich_battle
+BEGIN
+  MAKE_PATCH
+    add_effect_global_inline'1=>~opcode=>27 timing=>2 parameter1=>100 parameter2=>1~
+    add_effect_global_inline'2=>~opcode=>30 timing=>2 parameter1=>100 parameter2=>1~
+    add_effect_global_inline'4=>~opcode=>86 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'5=>~opcode=>88 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'6=>~opcode=>89 timing=>2 parameter1=>75 parameter2=>1~
+    add_effect_global_inline'7=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>3~
+    add_effect_global_inline'8=>~opcode=>120 timing=>2 parameter1=>1 parameter2=>0~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "lich=>mh#elich"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "hllich"
+    editstring	= ~replace_items=>"mh#elich(rring)"~
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar0526"
+    bottom	= "spawn_elemental_lich_minions"
+    location	= "scripts"
+  END
+END	// elemental_lich_battle
+
+

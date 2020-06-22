@@ -1,0 +1,13 @@
+DEFINE_ACTION_FUNCTION deirex_battle
+BEGIN
+  // TODO: Add salient abilities to Deirex
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar2207"
+    bottom	= "spawn_deirex_minions"
+    location	= "scripts"
+  END
+END	// deirex_battle
+
+

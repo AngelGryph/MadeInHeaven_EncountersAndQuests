@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION shade_lich_battle
+BEGIN
+  MAKE_PATCH
+    add_effect_global_inline'1=>~opcode=>27 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'2=>~opcode=>30 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'3=>~opcode=>31 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'4=>~opcode=>86 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'5=>~opcode=>88 timing=>2 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'6=>~opcode=>89 timing=>2 parameter1=>75 parameter2=>1~
+    add_effect_global_inline'7=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>3~
+    add_effect_global_inline'8=>~opcode=>120 timing=>2 parameter1=>1 parameter2=>0~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "lich=>mh#slich"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "hlshade"
+    editstring	= ~replace_items=>"mh#slich(rring)"~
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar0202"
+    bottom	= "spawn_shade_lich_minions"
+    location	= "scripts"
+  END
+END	// shade_lich_battle
+
+

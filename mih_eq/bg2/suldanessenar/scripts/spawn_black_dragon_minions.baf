@@ -6,7 +6,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("dragblac", @7)
+    DisplayStringHead("dragblac", @0)
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
 END
@@ -19,7 +19,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("dragblac", @7)
+    DisplayStringHead("dragblac", @0)
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
     CreateCreatureObjectEffect("elear01", "spmonsum", "dragblac")
@@ -33,7 +33,7 @@ IF
   Difficulty(HARD)
 THEN
   RESPONSE #100
-    DisplayStringHead("dragblac", @7)
+    DisplayStringHead("dragblac", @0)
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
@@ -49,7 +49,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("dragblac", @7)
+    DisplayStringHead("dragblac", @0)
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
     CreateCreatureObjectEffect("smound01", "spmonsum", "dragblac")
     CreateCreatureObjectEffect("elearg01", "spmonsum", "dragblac")

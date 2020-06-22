@@ -1,0 +1,26 @@
+DEFINE_ACTION_FUNCTION setup_athkatla_liches
+BEGIN
+  /*
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_new_monsters"
+    locbase	= "shared/new_monsters"
+  END
+  */
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "shade_lich_battle"
+    tra		= "athkatla_liches"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "elemental_lich_battle"
+    tra		= "athkatla_liches"
+  END
+
+  // TODO: Kangaxx Battle
+END	// setup_athkatla_liches
+
+

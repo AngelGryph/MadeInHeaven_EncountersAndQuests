@@ -1,0 +1,11 @@
+DEFINE_ACTION_FUNCTION black_dragon_battle
+BEGIN
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar2807"
+    bottom	= "spawn_black_dragon_minions"
+    location	= "scripts"
+  END
+END	// black_dragon_battle
+
+
