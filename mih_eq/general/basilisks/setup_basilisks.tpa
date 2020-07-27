@@ -4,12 +4,13 @@ BEGIN
     STR_VAR
     spell		= "greater_basilisk_breath"
     idsname		= "GREATER_BASILISK_BREATH"
+    location		= "spells"
   END
 
-  LAUNCH_ACTION_FUNCTION extend
+  LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    script		= "gbasilsk"
-    top			= "greater_basilisk_breath"
+    file		= "mh#grbas.baf"
+    location		= "scripts"
   END
 
   MAKE_PATCH
@@ -17,6 +18,7 @@ BEGIN
     thac0LT=>11
     attacks=>3
     add_items=>"dragring(lring)"
+    insert_script=>"mh#grbas"
   END
   
   LAUNCH_ACTION_FUNCTION edit_creature

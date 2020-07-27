@@ -15,7 +15,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item		= "p1-10=>wolfdr1"
+    item		= "p1-10=>mh#drwlf"
     edits		= "patch_data"
   END
 
@@ -25,7 +25,7 @@ BEGIN
     general=>undead
     strip_script=>"dreadwlf"
     insert_script=>"mh#regen"
-    replace_items=>"wolfdr1(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
+    replace_items=>"mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

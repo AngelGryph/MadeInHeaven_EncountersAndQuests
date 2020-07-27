@@ -1,31 +1,16 @@
 IF
-  StateCheck(Myself,STATE_PANIC)
-THEN
-  RESPONSE #100
-    RandomWalkContinuous()
-END
-
-IF
   See(LastAttackerOf(Myself))
   Range(LastSeenBy(Myself), 30)
   !GlobalTimerNotExpired("ankheg_acid", "LOCALS")
   HPPercentLT(Myself, 50)
 THEN
   RESPONSE #40
-    SetGlobalTimer("mh#Ankheg_acid", "LOCALS", 1800)
+    SetGlobalTimer("mh#Ankheg_acid", "LOCALS", SIX_HOURS)
     FaceObject(LastSeenBy(Myself))
     ForceSpell(LastSeenBy(Myself), ANKHEG_ACID_SPIT)
     Wait(2)
   RESPONSE #60
     Continue()
-END
-
-IF
-  See(NearestEnemyOf(Myself))
-  ActionListEmpty()
-THEN
-  RESPONSE #100
-    AttackReevaluate(NearestEnemyOf(Myself), 15)
 END
 
 

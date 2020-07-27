@@ -10,11 +10,15 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item		= "p2-8=>wintwolf"
+    item		= "p2-8=>mh#wiwlf"
     editstring		= ~add_effect_inline=>"opcode=>12 target=>2 timing=>1 parameter2=>131072 dicenum=>1 dicesize=>6"~
   END
 
-  COMPILE "%mod_root%/%component_loc%/scripts/wintwolf.baf"
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file		= "mh#wiwlf.baf"
+    location		= "scripts"
+  END
   
   MAKE_PATCH
     strengthGT		=> 15
@@ -22,8 +26,8 @@ BEGIN
     constitutionGT	=> 15
     resist_fire		=> "-25"
     swap_script		=> "wtarsgt=>wtasight dw1ranmo=>dw1melmo"
-    insert_script	=> "wintwolf"
-    replace_items	=> "wintwolf(weapon1) wintwolf(weapon2)"
+    insert_script	=> "mh#wiwlf"
+    replace_items	=> "mh#wiwlf(weapon1) mh#wiwlf(weapon2)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature
