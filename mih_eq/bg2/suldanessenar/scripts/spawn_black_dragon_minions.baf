@@ -67,22 +67,22 @@ IF
 THEN
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player1, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player1)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player2, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player2)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player3, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player3)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player4, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player4)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player5, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player5)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player6, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player6)
 END
 
 
@@ -94,22 +94,22 @@ IF
 THEN
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player1, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player1)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player2, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player2)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player3, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player3)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player4, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player4)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player5, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player5)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player6, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player6)
 END
 
 
@@ -121,22 +121,22 @@ IF
 THEN
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player1, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player1)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player2, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player2)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player3, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player3)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player4, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player4)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player5, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player5)
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#pudbr", Player6, "spmonsum")
+    CreateCreatureObjectEffect("mh#pudbr", "spmonsum", Player6)
 END
 
 
