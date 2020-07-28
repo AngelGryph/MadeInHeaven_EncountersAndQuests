@@ -1,8 +1,16 @@
 DEFINE_ACTION_FUNCTION cursed_prison
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "prison_vampires_level_bonus"
+    RET
+    prison_vampires_level_bonus	= value
+  END
+
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
     file	= "mh#sarvm.baf"
+    location	= "scripts"
   END
 
   MAKE_PATCH
@@ -34,7 +42,7 @@ BEGIN
   END
 
   MAKE_PATCH
-    level1=>"level1 + 5"
+    level1=>"level1 + %prison_vampires_level_bonus%"
     strength=>21
     dexterity=>19
     constitution=>18
@@ -93,6 +101,7 @@ BEGIN
     STR_VAR
     area	= "ar5006"
     top		= "negative_zone"
+    location	= "scripts"
   END
 END
 

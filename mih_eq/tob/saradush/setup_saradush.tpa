@@ -11,6 +11,12 @@ BEGIN
     file	= "cursed_prison"
     tra		= "saradush"
   END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "barracks_battle"
+    tra		= "saradush"
+  END
 END	// setup_saradush
 
 
