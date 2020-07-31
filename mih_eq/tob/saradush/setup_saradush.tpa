@@ -15,6 +15,11 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "barracks_battle"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "sewer_shadows"
     tra		= "saradush"
   END
 END	// setup_saradush

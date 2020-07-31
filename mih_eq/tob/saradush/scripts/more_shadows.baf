@@ -1,0 +1,58 @@
+IF
+  GlobalGT("SpawnShadows", "AR5013", 1)
+  GlobalLT("SpawnShadows", "AR5013", 7)
+  !GlobalTimerNotExpired("mh#SpawnMoreShadows", "AR5013")
+  Difficulty(EASY)
+THEN
+  RESPONSE #100
+    IncrementGlobal("SpawnShadows", "AR5013", 1)
+    SetGlobalTimer("mh#SpawnMoreShadows", "AR5013", ONE_ROUND)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+END
+
+IF
+  GlobalGT("SpawnShadows", "AR5013", 1)
+  GlobalLT("SpawnShadows", "AR5013", 7)
+  !GlobalTimerNotExpired("mh#SpawnMoreShadows", "AR5013")
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    IncrementGlobal("SpawnShadows", "AR5013", 1)
+    SetGlobalTimer("mh#SpawnMoreShadows", "AR5013", ONE_ROUND)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+END
+
+IF
+  GlobalGT("SpawnShadows", "AR5013", 1)
+  GlobalLT("SpawnShadows", "AR5013", 7)
+  !GlobalTimerNotExpired("mh#SpawnMoreShadows", "AR5013")
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    IncrementGlobal("SpawnShadows", "AR5013", 1)
+    SetGlobalTimer("mh#SpawnMoreShadows", "AR5013", ONE_ROUND)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("slaysh01", S)
+    CreateCreatureOffScreen("slaysh01", S)
+END
+
+
