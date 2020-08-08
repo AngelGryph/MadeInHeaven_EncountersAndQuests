@@ -1,9 +1,0 @@
-DEFINE_ACTION_FUNCTION ulcaster_dialog
-BEGIN
-  LAUNCH_ACTION_FUNCTION compile_all
-    STR_VAR
-    location	= "compile_this"
-  END
-END	// ulcaster_dialog
-
-

@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION setup_minor_quests
+DEFINE_ACTION_FUNCTION setup_minor_quests_bg1
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
@@ -15,6 +15,6 @@ BEGIN
     STR_VAR
     file	= "minor_area_edits"
   END
-END	// setup_minor_quests
+END	// setup_minor_quests_bg1
 
 

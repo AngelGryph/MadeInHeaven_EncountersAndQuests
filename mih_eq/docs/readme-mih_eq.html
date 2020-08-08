@@ -21,12 +21,14 @@
 <div class="section">
   <p>This mod was designed to spice up some encounters I found too easy or otherwise boring, to make certain monsters act more like their P&amp;P counterparts, and to introduce some new encounters, monsters and quests.</p>
   <p>This isn't a strict P&amp;P mod, I use P&amp;P where it makes sense to do so, and deviate when and where needed to allow for engine limitions, avoid frustration, and make things (hopefully) more fun.</p>
-  <p>Currently this mod covers only the original saga (BG1) and, to a limited extend, Siege of Dragonspear.  I plan to later extend it to Shadows of Amn and Throne of Bhaal (BG2) as well, and perhaps even to Icewind Dale.</p>
+  <p>This mod is mainly aimed at people who have multiple quest mods installed and are thus slightly higher in level than normal.  However, this is not a hardcore tactical mod, I don't think I made things too crazy but your milleage may vary.</p>
 </div>
 <h2>Compatibility</h2>
 <div class="section">
-  <p>This mod has been designed to work with <acronym title="Baldur's Gate Enhanced Edition">BGEE</acronym>, <acronym title="Baldur's Gate 2 Enhanced Edition">BG2EE</acronym> and should be backwards compatible with <acronym title="Baldur's Gate 2: Throne of Bhaal">BG2: ToB</acronym>.  The mega-mods <acronym title="Enhanced Edition Trilogy">EET</acronym> and <acronym title="Baldur's Gate Trilogy">BGT</acronym> are also supported.  This mod is not compatible with older versions of the games.
+  <p>This mod has been designed to work with <acronym title="Baldur's Gate Enhanced Edition">BGEE</acronym>, <acronym title="Baldur's Gate 2 Enhanced Edition">BG2EE</acronym> and should be backwards compatible with <acronym title="Baldur's Gate 2: Throne of Bhaal">BG2: ToB</acronym>.  The mega-mods <acronym title="Enhanced Edition Trilogy">EET</acronym> and <acronym title="Baldur's Gate Trilogy">BGT</acronym> are also supported.  This mod is not compatible with older versions of the games or with Tutu.</p>
   <p>As a WeiDU mod, this mod should be compatible with all other WeiDU mods.  There are currently no known conflicts with other mods.  As for installation order, you should install encounters &amp; quests fairly early, before any 'tweak' mods.</p>
+  <p>This mod was explicitly made to be compatible with Sword Coast Stratagems, I consider it to be something of a "companion" mod to SCS.  It can be installed either before or after SCS, but installing it before is generally recommended.</p>
+  <p>This mod is currently untested with EET, however as far as I know there is nothing in it that requires special treatment under EET so it should work.</p>
 </div>
 <h2>Installation</h2>
 <div class="section">
@@ -56,82 +58,194 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
 <h2>Component Descriptions</h2>
 <div class="section">
   <p>This mod consists of several components, each of which can be installed or removed independently from the others.<p>
-  <h3>Baldur's Gate 1 - Original Saga</h3>
-  <p><strong>Enhanced Candlekeep Catacombs</strong><br/>
-  For an end-game dungeon I always found the Candlekeep catacombs a little too easy with only the relatively weak ghasts and dopplegangers.  This component introduces some more powerful undead in the first section (you might want to bring scrolls of Restoration).  The second section has a few new doppleganger encounters (one that I found in the game files and was apparently cut, and two of my own design).  More importantly, Arkanis and Deder are now much better prepared for their task and if they join up with you you will be able to control them as if they are party members.  And don't expect to be completely safe once you're back above ground...</p>
-  <p><strong>Enhanced Mutamin's Garden</strong><br/>
-  Ah, Mutamin's garden, normally an XP bonanza with little risk as soon as you get some decent protection from petrification.  This component introduces a few new opponents that are on-par with greater basilisks XP-wise but not so easily routed...  If you combine this with Enhanced Basilisks below, Mutamin's Garden becomes very deadly indeed.</p>
-  <p><strong>Enhanced Ramazith's Tower</strong><br/>
-  Ramazith, the wizard who turned Vail's party to stone and summoned the green slimes into Ye Olde Tavern, sounds like a very dangerous guy to mess with.  Yet his tower barely reflects that, putting you only against weak kobolds and hobgoblins.  Well, no longer says I!  Expect lots of slimes and some other nasty surprises as you scale the floors.</p>
-  <p><strong>Enhanced Thieves' Maze and Undercity</strong><br/>
-  For a final dungeon, this place is actually rather boring.  I added more opponents in the maze, and in the Undercity you can no longer just waltz into the temple as Sarevok now had the sense to lock the door behind him.  You will have to do some exploring, and there now will be more than weak zombies and skeletons prowling around...</p>
-  <p><strong>Enhanced Ulcaster Ruins</strong><br/>
-  The ghost of Ulcaster will now make his request immediately instead of having to be pestered a few times about it.  The dungeon now has a couple of new and fairly dangerous unique enemies</p>
-  <p><strong>Enhanced Xvart Village</strong><br/>
-  The xvarts are increased in number and now have the sense to guard the entrances to their village.  Nexlit has been given a better weapon and a few levels in fighter, and some of the other xvarts (those with higher than normal XP values) are a little tougher as well.  It's still perfectly doable at level 1-3 but you might want to be a little more careful.</p>
-  <p><strong>Enhanced Zombie Farm</strong><br/>
-  In my opinion, this is a wasted area with weak opponents and one boring quest with a mediocre reward.  For now I give the zombies the stats of ju-ju zombies, making them at least a bit more of a fight.  I'm still contemplating what else I can do here, suggestions are welcome!</p>
-  <p><strong>A Real Spider Plague</strong><br/>
-  The manual and some characters mention that parts of the wood are infested with spiders.  This makes them a real plague, in some areas spiders will be constantly spawning and you will have to be on your toes.  Centeol also gets a little more backup.</p>
-  <p><strong>Cloakwood Assassins</strong><br/>
-  This component introduces a new group of assassins who will be waiting for your party in the Cloakwood.  It's (hopefully) a diverting but not super-difficult fight, a refreshing break from battling the local wildlife.</p>
+  <h3>Monster Enhancements</h3>
+  <p>These modifications try to make certain monsters a bit more accurate to their pen &amp; paper counterparts and as a result a little more challenging.  In these I try to stay as close to pen &amp; paper as I can.</p>
+  <p><strong>P&amp;P Ankhegs</strong><br/>
+  In the game, ankhegs fire their spittle at you like machine guns, but according to the Monstrous Manual they cannot actually do that.  This modification changes their spittle to a single-target breath weapon they can deploy only once every six hours, and they will do so when low on HP.  To make up for this, they are given an 18/50 strength, making them more dangerous in melee.</p>
+  <p>Additionally, ankhegs can have from 3 to 8 HD.  The ones in the games have the abilities of 8 HD monsters but are treated as having only 3 HD (thus making them vulnerable to Sleep).  This component makes them proper 8 HD monsters.  For the original saga, lesser versions (3-7 HD) are added to the ankheg pit dungeon in Farmer Brun's quest.<p/>
+  <p>Tactical advice: Since you can no longer fully avoid the acid spittle, damage tends to accumulate rapidly in repeated encounters, making especially the ankheg pit quite dangerous.  Scrolls of Acid Resistance, or the Oil of Acid Resistance from my item pack are strongly recommended.</p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>P&amp;P Basilisks</strong><br/>
+  According to P&amp;P, greater basilisks have a deadly poisonous breath in addition to their stone gaze and poisoned claws.  This modification implements this in the form of a deadly gas cloud similar to iron golems.  In addition, they get dragon-like immunities (specifically, they get the "dragring" pseudo-item).  Note that on EE games this makes them immune to normal arrows.</p>
+  <p>Tactical advice: Get Protection from Poison scrolls for your melee fighters or be ready with Neutralize Poison and Elixirs of Health.  Keep everyone else far, far away.  Be especially careful when you encounter them in close quarters.</p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>P&amp;P Oozes, Slimes and Jellies</strong><br/>
+  This currently affects gray oozes, ochre jellies and mustard jellies.  Jelly splitting is currently not implemented as I haven't been able to get it right yet, but will be added in the future.<p>
+  <p><i>Gray Ooze:</i>A gray ooze's touch deals 2d8 acid damage.  They are completely immune to fire, cold, missile damage and all spells.</p>
+  <p><i>Ochre Jelly:</i>The touch of this jelly deals 1d10 acid damage.  They are completely immune to missile damage and electricity.</p>
+  <p><i>Mustard Jelly:</i>This jelly deals 5d4 acid damage with its touch.  It surrounds itself with a cloud of gas that makes nearby creatures lethargic (slow and tired) unless they are immune to disease.  A mustard jelly is not immune to magic but it has 10% magic resistance and is fully immune to Magic Missile and similar spells, as well as arrows and bullets.  Being intelligent, the mustard jelly attempts to hide itself when not in melee, with 90% stealth.</p>
+  <p>Tactical advice: As long as you keep their changed resistances in mind, these should not be significantly harder than normal.  Since they all deal acid damage now, you might want to invest in some acid resistance.</p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>P&amp;P Dread Wolves</strong><br/>
+  The games treat dread wolves more or less as normal wolves, but they are actually supposed to be hard to kill undead creatures.  Dread wolves regerate like trolls and will get up again once downed unless you quickly apply fire or acid.  However, unlike trolls they will only get up once.  Their bite carries a disease that makes the victim lose one HP per hour unless cured.  (Out of mercy to low-level parties without ready access to Cure Disease, the victim will recover after 8 hours.)</p>
+  <p>Tactical advice: Be careful with these at lower levels, their disease can be deadly.  If they go down, try to hit them immediately with a fire- or acid arrow to finish them.  Also keep in mind that they are undead and can thus be turned.</p>
+  <p><i>Source books consulted: Monstrous Compendium Annual Volume One (2145)</i></p>
+  <p><strong>P&amp;P Winter Wolves</strong><br/>
+  This component makes the breath of winter wolves a proper breath weapon that can affect multiple targets and requires no attack roll.  This makes them very dangerous to low-level parties, so out of mercy I remove them from the Nashkel Mine and surrounding areas, Fireleaf Forest and Dryad Falls.  To compensate, you will have guaranteed encounters with them in the Gibberling Mountains.  This behavior can be turned off in the ini file if desired.</p>
+  <p>Tactical advice: Avoid them until you are at least level 3 or so.  Go get the Boots of the North (or the Ring of Warmth from my item pack) as soon as you can, and find some Scrolls- or Potions of Cold Resistance.</p>
+  yy<p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>P&amp;P Wraith Spiders</strong><br/>
+  The game treats them as normal giant spiders, but wraith spiders are actually undead.  This will alter the wraith spider's bite to have its proper effects: 1d4 cold damage, one level drained and two points of Constitution damage unless the victim saves versus poison or is immune to disease.  They are also now properly flagged as undead.</p>
+  <p>Tactical advice: These are rather rare encounters and while that bite can be crippling they are not harder than usual to deal with.  You should not have much trouble.</p>
+  <p><i>Source books consulted: Monstrous Compendium Annual Volume Two (2158)</i></p>
+  <p><strong>Ravenloft-style Vampires</strong><br/>
+  This component gives vampires additional resistances, based on their abilities in the Ravenloft setting.  It does not give them new offensive abilities, but it can be combined with mods like Quest Pack or Sword Coast Stratagems that do.  Ravenloft vampires take half damage from all offensive magic (implemented as 50% reistance to fire, cold, acid, lightning and magical damage) and a +4 on their saving throws against damaging spells (implemented as +4 versus Invocation, EE only).  They are also immune to being turned, and get a stat boost depending on their age category.</p>
+  <p>Tactical advice: These make vampires very dangerous, especially combined with one of the AI-enhancing mods like SCS.  Invest heavily in anti-undead weaponry and protection items, and never take them on unprepared.</p>
+  <p><i>Source books consulted: Van Richten's Guide to Vampires (9345)</i></p>
+  <p><strong>Ravenloft-style Golems</strong><br/>
+  Similar to the vampires component, this gives the most common golems additional resistances and some stat boosts.  A few golems also gain additional abilities.</p>
+  <p><i>Flesh Golem:</i> These creatures gain 50% resistance to cold and electricity and the following stats: str 19, dex 18, con 18, int 14, wis 2, cha 6.  In addition they get the salient ability <i>hyper regeneration</i>, which revives them after a while unless destroyed with fire or acid.</p>
+  <p><i>Clay Golem:</i> These monsters get 50% resistance to crushing weapons (note that other wweapons can't damage them at all) and immunity to acid.  However, they are no longer immune to fire and cold.  They have these stats: str 20, dex 16, con 20, int 10, wis 2, cha 5.</p>
+  <p><i>Stone Golem:</i> Due to their stone construction, these get 90% resistance to slashing, piercing and missile damage, and 50% resistance to fire, cold, lightning and acid.  Their stats are: str 22, dex 17, con 20, int 9, wis 2, cha 8.</p>
+  <p><i>Iron Golem:</i> These titans gain 80% resistance to all weapons, but they lose their immunity to acid and lightning.  Their stats are str 24, dex 17, con 20, int 9, wis 2, cha 7.</p>
+  <p><i>Brain Golem:</i> These horrid creations of the illithid get a few psionic abilities like their masters.  They project an inertial barrier which makes them immune to missiles and halves all other damage to them, and they can utilize a psionic blast like their creators once per turn.  Their stats are str 20, dex 14, con 20, int 14, wis 2, cha 3.</p>
+  <p><i>Bone Golem:</i> These skeletal abominations emit a horrid laugh once every three rounds with paralyzes everyone who fails their saving throw.  Those who fail by 4 or more are instantly slain instead.  However, they lose their immunity to lightning and acid and actually become quite vulnerable to fire.  Their stats are str 19, dex 18, con 20, int 12, wis 2, cha 3.</p>
+  <p>Tactical advice: While still their stupid old selves, these resistances and abilities make golems a genuine threat.  You may have to exploit their weak points, but keep in mind that they still are immune to spells cast directly at them.  You may have to get a little creative here.  Weapons that deal additional elemental damage may help.</p>
+  <p><i>Source books consulted: Monstrous Compendium Annual Volume One (2145), Van Richten's Guide to the Created (9417)</i></p>
+  <h3>Tactical Challenges: Original Saga</h3>
+  <p>These components enhance certain battles in the Original Saga (BG1 and Tales of the Sword Coast).  Expect to see new enemies, more enemies, stronger enemies or any compination thereof.  However, I do not make major modifications in AI scripts, mostly because I don't know how to.  Use SCS or another mod for that.</p>
+  <p><strong>Enhanced Battles: Candlekeep Catacombs</strong><br/>
+  This component enhances the various encounters in the catacombs under Candlekeep, visited in chapter 6.  There will be more and stronger undead on the first level, more dopplegangers and a few other surprises on the second level, more spiders on the third level, and a final surprise as you leave Candlekeep.  However, some help is available: Arkanis and Deder are much better prepared for their task and if you convince them to help you can control them like party members.</p>
+  <p><i>New enemies: Wight, Greater Wight.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140), Lords of Darkness (9240)</i></p>
+  <p><strong>Enhanced Battles: Mutamin's Garden</strong><br/>
+  This is the area with the basilisks east of the Song of the Morning Temple.  Expect many more basilisks and a few other surprises...
+  <p><i>New enemies: Dracolisk, <strike>Pyrolisk</strike> (not implemented yet).</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>Enhanced Battles: Ramazith's Tower</strong><br/>
+  This is the tower of Ramazith just north of the Three Kegs, visited during the nymph's quest.  The enemies on the various floors are mostly pathetic, this component spices that up a great deal.  Expect some serious resistance here.</p>
+  <p><strong>Enhanced Battles: Ulcaster Ruins</strong><br/>
+  This modification adds some unique new enemies to the Ulcaster ruins, and in general spices things up quite a bit in there.</p>
+  <p><i>New enemies: Blazing Bones.</i></p>
+  <p><i>Source books consulted: Monstrous Compendium Annual Volume One (2145)</i></p>
+  <p><strong>Enhanced Battles: Xvart Village</strong><br/>
+  The xvart village is due west of Nashkel.  Let's face it, even at low levels this place is a joke.  The xvarts here (xvart2.cre) are worth slightly more XP - but have the same stats as any other xvart.  This mod gives them an extra hit dice, and their leader Nexlit is made into a proper 4th level fighter.  It's still not very difficult, but at least no longer a complete curb stomp battle.</p>
+  <p><i>Source books consulted: Fiend Folio (2132)</i></p>
+  <p><strong>Enhanced Battles: Zombie Farm</strong><br/>
+  This is the farm all the way at the north end of the map, where the farmer Wenric asks you to kill 20 zombies for 150gp.  By the time you get here, zombies are no threat whatsoever.  This component changes them to more dangerous ju-ju zombies and more than doubles their number, hopefully making it a bit more of an actual challenge.</p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>Enhanced Battles: Durlag's Tower</strong><br/>
+  The main dungeon of Tales of the Sword Coast is a fair challenge, but not that hard for veteran players.  This modificiation hopefully spices things up a notch or two.  Ghasts in the upper levels of the tower become the tougher fell ghasts, crypt crawlers get a little stronger and there will be more enemies everywhere, including some new ones.<p>
+  <p><i>New enemies: Barrow Wight, Crystal Ooze, Dracolisk.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <h3>Encounters &amp; Quests: Original Saga</h3>
+  <p>These components aren't so much about tactics (although there usually is some combat) but extend or tweak an existing encounter or quest, or add a new one.</p>
   <p><strong>The Surgeon's Plight</strong><br/>
-  The surgeon is an interesting character but gets little closure.  With this mod he will play a slightly larger role.  To start it, you must have encountered The Surgeon before you head to Cloakwood, and you must ask him to tell his story.  Doing so may get you a helpful ally.</p>
-  <p><strong>Enhanced Minor BG1 Quests</strong><br/>
-  These are some minor tweaks to existing quests that are too small by themselves to warrant a separate component.</p>
+  The Surgeon, Davaeorn's brother, is an interesting character but unfortunately the game never expands on him beyond the first encounter.  This component adds a possible new encounter with him in Cloakwood, where he might provide some help now that your quest has crossed with his.</p>
+  <p>This component is compatible with the BG1 Romantic Encounters mod, they can be installed in any order.</p>
+  <p><strong>The Cloakwood Assassins</strong><br/>
+  This component adds an encounter with a new group of assassins in Cloakwood, beyond the first bridge in the wyvern area.  Surely you you can defeat a few more of these rabble, no?</p>
+  <p><strong>Minor Quest Tweaks (BG1)</strong><br/>
+  This is a small collection of minor tweaks to existing quests, mostly to reduce frustration or close a pothole or two.</p>
   <ul>
-  <li>Gerde and the ankhegs she wants you to kill won't spawn until you've talked to Fenten in Baldur's Gate, making their related quests flow a bit smoother.</li>
-  <li>Quint's ankheg behind Tanya's house won't spawn until you have met him, and gets a little backup.  Nestor's dagger gets a unique bam and a different description to make it more obvious that it's something special.</li>
+  <li>Ulcaster's Ghost: Ulcaster will now immediately ask for the book, you don't need to continue prodding him.</li>
+  <li>Gerde and the Ankhegs: Gerde and the ankhegs she wants kiiled won't spawn until you have talked to Fenten in Baldur's Gate.</li>
+  <li>Nester's Dagger: The ankheg that drops Nester's dagger won't spawn until you talked with Quinn in Baldur's Gate, and the dagger gets a unique icon.</li>
   </ul>
-  <h3>Baldur's Gate 1 - Tales of the Sword Coast</h3>
-  <p><strong>Enhanced Durlag's Tower</strong><br/>
-  While this place is already plenty deadly, I felt there was some room for improvement.  Expect more varied and slightly more powerful opponents in most areas.</p>
-  <h3>Baldur's Gate 1 - Siege of Dragonspear</h3>
-  <p><strong>Enhanced Korlasz' Tomb</strong><br/>
-  Korlasz' minions aren't really much of a challenge for a level 7-8 party that has been through Durlag's Tower.  This modification tries to make the starter dungeon of Siege of Dragonspear a bit more of a thrill.</p>
-  <h3>Baldur's Gate 2 - Shadows of Amn</h3>
-  <p><strong>Enhanced Ancient Tomb</strong><br/>
-  This component slightly enhances the ancient tombs underneath the Athkatla graveyard district, adding a few more encounters here and there.  Bodhi's lair will also have a few more opponents, and one illogically placed spawn trap is moved to a location where you will be more likely to encounter it.</p>
-  <p><strong>Enhanced Firkraag's Lair</strong><br/>
-  This component enhances Firkraag's lair in the Umar Hills.  The Umar Hills spawn a wider selection of slightly stronger monsters, and see the return of a dangerous monster not seen since BG1, so better be prepared!  Inside King Strohm's tomb you will now encounter some creatures that were previously unused in the game.  The rest of the lair is mostly unchanged, but you may see some more orcs than before.</p>
-  <p><strong>Enhanced Lower Reaches</strong><br/>
-  This component enhances the encounters in the Lower Reaches, where the first half of the Rift Device is stored.  The spawn points have been altered to spawn more logical creatures, the hand trap now spawns wraith spiders instead of huge ones, and the high-level trap after the bridge puzzle now spawns undead instead of beholders, as at this point the Unseeing Eye doesn't want to stop you yet.  the will also be more undead in the optional Undead City below the cult's lair.</p>
-  <p><strong>Enhanced Shadow Temple</strong><br/>
-  With this, the temple ruins in the Umar Hills will have more varied undead encounters, and a few extra ones including a new high-level encounter.</p>
-  <p><strong>Enhanced Slum Sewers</strong><br/>
-  This component enhances the sewers underneath the Copper Coronet, replacing a few illogical encounters with more sensible ones, and adding a few new monsters.</p>
-  <p><strong>Enhanced Trademeet Tomb</strong><br/>
-  This component expands the family crypt you visit during the feuding families quest in Trademeet.  Its has been expanded with a new area and you should expect much more oposition than just a few fairly weak skeletons.</p>
-  <h3>Baldur's Gate 2 - Throne of Bhaal</h3>
-  <p><strong>Enhanced Forest of Mir</strong><br/>
-  This component introduces new, powerful undead monsters to the old Bhaal temple in the Forest of Mir.  You'll no longer be fighting just the occasional mummy here after dealing with the fixed encounters...</p>
-  <p><strong>Enhanced Saradush Prison</strong><br/>
-  At this point in the game, most vampires aren't much of a threat anymore to the party.  So this modification beefs most of the vampires encountered in the old prison to at least ancient level, and adds a few other epic-level undead.</p>
-  <p><strong>Enhanced Watcher's Keep</strong><br/>
-  This component makes a few changes to Watcher's Keep.  The Thieves' Hood can now be obtained even if your PC is a paladin, and it's no longer needed to bargain with fiends for it.  Secondly, a few of the items in Saladrex' hoard can now be stolen by a skilled enough thief, you no longer have to kill him if you don't want to.  The spawn points on the Machine of Lum the Mad level will now spawn an assortment of stronger and more appropriate monsters.</p>
-  <h3>Monster Corrections &amp; Improvements</h3>
-  <p><strong>Enhanced Ankhegs</strong><br/>
-  Ankhegs now have 18/50 strength and favor melee attacks.  Their hit die are raised to 8 making them immune to sleep.  They now get a P&amp;P correct acid spit when they lose 50% of their hit points (8d4 acid, save vs. breath for half).  This makes them fairly dangerous, especially in numbers.  This component also enhances the ankheg pit dungeon (farmer Brun's quest) by making ankhegs of varying hit dice (3-8) spawn constantly while you are there.  This place is now pretty dangerous, you might want to invest in protecion against acid.</p>
-  <p><strong>Enhanced Basilisks</strong><br/>
-  When you are protected against petrification (which can be done with a simple potion or 1st level wizard spell), basilisks are way too easy.  This component gives greater basilisks at least their P&amp;P ability to breathe a deadly gas cloud that will affect anyone who engages them in melee, making them quite a bit more dangerous.  You may want to invest in protection from poison, or use ranged weapons.</p>
-  <p><strong>Enhanced Dread Wolves</strong><br/>
-  These are way too easy for the 650 xp they are worth.  According to P&amp;P rules, dread wolves regenerate like trolls and can only be killed by acid, fire or complete dismemberment.  This component gives them that regeneration, when they reach 0 hp they will fall over as if dead, but will get up again unless you finish them with fire or acid.  However, unlike trolls they only get up once, if you knock them down again I assume they are completely dismembered.  They also gain their diseased bite, the disease will do one damage per hour until cured.  Dread wolves are now also marked as undead and can be turned.</p>
-  <p><strong>Enhanced Mustard Jellies</strong><br/>
-  This component corrects the abilities and immunities of mustard jellies to more closely match P&amp;P.  Mustard jellies aren't supposed to be immune to spells (that's ochre jellies), they have 10% magic resistance and are immune to magic missile and lightning.  Their attack is now a touch attack that deals 5d4 acid damage, but it no longer slows and poisons.  This has been moved to the vapor cloud they generate, which induces slowness and lethargy.  They are also given their 90% stealth and will attempt to hide while not in melee.  I'm still working on their ability to split.</p>
-  <p><strong>Enhanced Winter Wolves</strong><br/>
-  This component gives winter wolves their proper frost breath.  Instead of a ranged attack it's now a spell effect, save vs. breath for half damage.  Because you encounter these fairly early, I've kept it single target out of mercy.  Winter wolves now are fairly deadly for a low-level party so you may want to be really careful around them.</p>
-  <p><strong>Enhanced Wraith Spiders</strong><br/>
-  This component corrects wraith spiders' attack, they will now actually drain a level and constitution instead of strength, as per P&amp;P.  Getting bitten by a wraith spider is now fairly dangerous for a low-level character, especially if there's more than one.  Wraith spiders are now also undead and thus can be turned.</p>
+  <h3>Tactical Challenges: Siege of Dragonspear</h3>
+  <p>These components enhance certain battles in the Siege of Dragonspear extention to Baldur's Gate Enhanced Edition.  Siege of Dragonspear has some very large battles since the newer engine handles multiple enemies much better, and these components take advantage of that as well.</p>
+  <p><strong>Increase Enemy Group Size</strong><br/>
+  The enemy groups in Siege of Dragonspear scale depending on the current difficulty level, by having some enemies silently self-destruct at certain difficulty levels.  This component changes some scripts to enlarge the enemy groups.  Current default is to have no enemies remove themselves and thus always have the maximum number of enemies.  This can be changed in the ini file.</p>
+  <p><strong>Enhanced Battles: Korlasz' Tomb</strong><br/>
+  Korlasz's Tomb is pretty pathetic even for a starter dungeon, no challenge at all for a party that went through Durlag's Tower and Balduran's Isle.  This modification seeks to make it a proper challenge.  The mercenaries on the upper level gain several levels (default 5, configurable in the ini file) to put them more on par with the party, while the undead on the lower level is increased and some stronger undead appear along with a few other surprises...</p>
+  <p><i>New enemies: Barrow Wight, Mohrg.</i></p>
+  <p><i>Source books consulted: Monster Manual (3.5e)</i></p>
+  <p><strong>Enhanced Battles: Dwarven Dig Site</strong><br/>
+  This is the optional dungeon near the first Flaming Fist camp, with the dwarves of Dumathoin and the Coldhearth Lich.  It is already a fairly interesting dungeon with a few decent battles, but I think it could still use some spicing up.  Expect to see a few new undead and other creatures with unusual abilities.</p>
+  <p><i>New enemies: Blazing Bones, Huecuva, Stone Snake.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140), Monstrous Compendium Annual Volume One (2145)</i></p>
+  <p><strong>Enhanced Battles: Vampire Encounters</strong><br/>
+  There are two unique vampire encounters in Siege of Dragonspear, Tsolak and the unnamed vampire in the Trollbark forest.  Unfortunately, a single fledgling vampire just isn't a match for a decently equipped level 7-9 party, so this modificcation spices things up a bit to hopefully make them a decent challenge.</p>
+  <p>Tsolak is given the stats of a very old vampire: HD 11+1, str 18/00, con 18, dex 18, int 18, cha 17, SA: level drain (3 levels), SD: +2 required to hit, MR 20%.  The dire wolves he summons are a bit stronger and tougher than normal ones.  He may also have one last trick up his sleeve...</p>
+  <p>The Trollbark vampire is an old vampire: HD 10+2, str 18/00, con 18, dex 17, int 17, cha 16, SA: level drain (2 levels), SD: +2 required to hit, MR 10%.  He has a few fledgling vampire thralls.</p>
+  <p>Note that Tsolak and the Trollbark vampire also benefit from the Ravenloft-style Vampires component, further enhancing their resistances.</p>
+  <p><i>Source books consulted: Van Richten's Guide to Vampires (9345)</i></p>
+  <p><strong>Enhanced Battles: Cyric's Temple</strong><br/>
+  This is the old temple to Bhaal near Bridgefort, now taken over by worshippers of Cyric.  It's already a nice challenge, having a dragon, a half-dragon and a mind flayer encounter, but I still thought there was some room for a little more...</p>
+  <p>The green dragon Morentherene gets extra hit points and a slightly more powerful breath weapon.  She will now also always be assisted with some young green dragons, which have also been beefed slightly.</p>
+  <p>The half-dragon Ziatar gets some beefy lizard men as backup, and the rest of the temple also has a few additional guardians.</p>
+  <p><i>New enemies: Caryatid Column.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140).</i></p>
+  <p><strong>Enhanced Battles: Bridgefort</strong><br/>
+  This component enhances a few battles taking place in and around Bridgefort.  The dark wraith summoned by the voidstone gains extra HD and a few resistances to make it a bit more dangerous, and the false priest of Lathander now deploys slightly stronger undead monsters.</p>
+  <h3>Encounters &amp; Quests: Siege of Dragonspear</h3>
+  <p>These components aren't so much about tactics (although there usually is some combat) but extend or tweak an existing encounter or quest, or add a new one.</p>
+  <p><strong>Complete more/all Zaviak's Vision Quests</strong><br/>
+  This component gives the Spectacles of Spectacle more charges (default 9, configurable in the ini file), allowing you to complete more of Zaviak's vision quests.  The default lets you complete all available quests, although you still have to choose between the two possible ones in Dead Men's Pass.</p>
+  <h3>Tactical Challenges: Shadows of Amn</h3>
+  <p>These components add tactical challenges to the Shadows of Amn portion of Baldur's Gate 2, mostly by adding more and stronger enemies.</p>
+  <p><strong>Enhanced Battles: Graveyard Catacombs</strong><br/>
+  This component enhances the various battles in the catacombs below the graveyard district, including the battles with Bodhi at the ends of chapters 3 and 6.</p>
+  <p>You'll see some new undead enemies if you go for the Book of Kazaa and/or the Nether Scroll.  Bodhi's grim warders have gained a few levels, and there will be more and stronger vampires and other undead in her lair.</p>
+  <p><i>New enemies: Barrow Wight, Mohrg.</i></p>
+  <p><i>Source books consulted: Monster Manual (3.5e)</i></p>
+  <p><strong>Enhanced Battles: Lower Reaches</strong><br/>
+  The lower reaches are the dungeon beneath the temple district, where the cult of the Unseeing Eye is and where the Rift Device is stored.  You'll see more and stronger undead in the ghoul town, and the random encounters in the rift cavern have been made more logical with the plot and are beefed up a bit.</p>
+  <p><i>New enemies: Barrow Wight, Mohrg.</i></p>
+  <p><i>Source books consulted: Monster Manual (3.5e)</i></p>
+  <p><strong>Enhanced Battles: Slum Sewers</strong><br/>
+  This is the sewer section between the Copper Coronet and the Slaver Stockade, where Lilarcor is hidden.  You'll see creatures that are more appropriate to being in a slimy sewer, and lots more of them.</p>
+  <p><i>New enemies: Crystal Ooze.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <p><strong>Enhanced Battles: Trademeet</strong><br/>
+  This component enhances a few encounters in Trademeet.  The skindancers get a power boost to make them actually dangerous, and the trademeet tomb has had an area added to it to make room for some extra encounters.</p>
+  <p><i>New enemies: Barrow Wight, Huecuva, Mohrg.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140), Monster Manual (3.5e)</i></p>
+  <p><strong>Enhanced Battles: Temple Ruins</strong><br/>
+  These are the ruins in the Umar Hills, where the Shade Lord and the Shadow Dragon have set up shop.</p>
+  <p>You'll encounter many shadows and shadow wolves while making your way to the temple, they spawn in greater numbers than before.  Inside the temple you should see vastly more undead, including some new types.</p>
+  <p>The Shade Lord is unchanged (SCS already does a great job enhancing it), but the battle with the shadow dragon has been enhanced by adding backup minions for the monster; various shadow creatures will now spawn during the battle.</p>
+  <p><i>New enemies: Barrow Wight, Mohrg.</i></p>
+  <p><i>Source books consulted: Monster Manual (3.5e)</i></p>
+  <p><strong>Enhanced Battles: Firkraag's Lair</strong><br/>
+  This enhances the various encounters in the Windspear Hills, especially in the dungeon where Firkraag lairs.  Firkraag himself has also been beefed up considerably.</p>
+  <p>Prepare to see some old "friends" in the hills, basilisks are now among the randomly spawning monsters and are guarding Firkraag's lair.  In the mist cavern you will now see less hobgoblins, but many more mist creatures, some rather dangerous ones. And King Strohm's tomb has more guardians now, mostly various undead.</p>
+  <p>Should you return to the lair later on, to deal with Firkraag for example, you may find he has had the time to deploy some new recruits.  And if you take on Firkraag himself, you will find that he is no longer too proud to throw a bunch of minions and some of his prized golems at you as well.</p>
+  <p><strong>Enhanced Battles: Spellhold</strong><br/>
+  This enhances few battles in and around the asylum.  Both the Pirate Lord and lady Galvena have been made higher level, and you will see many more creatures inside the asylum, including some new ones.  However, the battle with Irenicus is not touched, that I gladly leave to SCS.</p>
+  <p><i>New enemies: Brass Minotaur.</i></p>
+  <p><i>Source books consulted: Monstrous Compendium Annual Volume Four (2173)</i></p>
+  <p><strong>Enhanced Battles: Underdark</strong><br/>
+  This component enhances various Underdark encounters, including those in Ust Natha and in the beholder- and illithid lairs.  Expect some heavy resistance here.</p>
+  <p>Kuo-toa gain several levels (default 6, configurable in the ini file) to bring their threat level somewhat on par with the drow, beholders and illithid.  In the illithid lair,the ogre servant and insane dwarf encounters have been beefed up considerably and you will see many more mind flayers as well as some very strong umber hulks.</p>
+  <p>In Ust Natha, the battle with the lich Deirex has been enhanced and he has gained the Animate Dead salient ability.  He spawn will constantly spawn undead minions in addition to casting his spells.</p>
+  <p><i>New enemies: Mohrg.</i></p>
+  <p><i>Source books consulted: Van Richten's Guide to the Lich (9412), Monster Manual (3.5e)</i></p>
+  <p><strong>Enhanced Battles: Athkatla Liches</strong><br/>
+  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.</p>
+  <p>The Elemental Lich is now immune to most elemental attacks (fire, cold, lightning and acid and resists slashing- and piercing attacks.  He has gained the salient ability to regenerate 2 hp per round.  During the battle various elemental creatures will spawn.</p>
+  <p>The Shade Lich now takes half damage from most sources except crushing attacks, and also has the salient ability to regenerate 2 hp per round.  During the battle, various creatures from the shadow plane will spawn.</p>
+  <p><i>Source books consulted: Van Richten's Guide to the Lich (9412).</i></p>
+  <p><strong>Enhanced Battles: Suldanessenar</strong><br/>
+  <p>Currently this only enhances the batle with Irenicus' black dragon, but I may add other enhancements in the future once I think of some.</p>
+  <p>The black dragon will now be assisted by a variety of swamp creatures, including shambling mounds, earth elementals, and brown puddings.</p>
+  <p><i>New enemies: Brown Pudding.</i></p>
+  <p><i>Source books consulted: Monstrous Manual (2140)</i></p>
+  <h3>Tactical Challenges: Throne of Bhaal</h3>
+  <p>These components seek to make the high-level battles in Throne of Bhaal challenging and interesting.</p>
+  <p><strong>Enhanced Battles: Watcher's Keep</strong><br/>
+  This component aims to make some of the Watcher's Keep battles more interesting by adding more and/or stronger monsters.</p>
+  <p>The random spawns on the floor of the Machine of Lum the Mad have been made both more dangerous and more appropriate to the theme of the level.</p>
+  <p><i>Source books consulted: DM's Option: High Level Campaigns (2156)</i></p>
+  <p><strong>Enhanced Battles: Pocket Plane</strong><br/>
+  This component seeks to make some of the challenge battles in the pocket plane a little more interesting and challenging.<p>
+  <p><i>Test of Retribution:</i> The creatures spawned in the good path are much more dangerous.  Expect to see beholders, illithid and umber hulks instead of kobolds, dopplegangers and gnolls.  (Evil path yet to do.)</p>
+  <p><i>Source books consulted: DM's Option: High Level Campaigns (2156)</i></p>
+  <p><strong>Enhanced Battles: Saradush</strong><br/>
+  This seeks to make the battles during the siege in Saradush more interesting.<p>
+  <p><i>Gromnir's Barracks:</i>Gromnir's mercenaries gain a bunch of levels (default 8, configurable in the ini file) to make them at least something of a threat to epic level characters.  Area of effect spells are highly recommended here.</p>
+  <p><i>Sewer Shadows:</i> More shadows will now spawn during the battle with Yaga-Shura's sappers, including a few fairly dangerous versions.</p>
+  <p><i>Cursed Prison:</i> The other path into Saradush castle is now home to high-level vampires and the entire prison is now a desecrated zone, strengthening undead and gradually draining the living.  You should not stay around longer than needed.</p>
+  <p><i>Source books consulted: DM's Option: High Level Campaigns (2156), Van Richten's Guide to Vampires (9345)</i></p>
+  <h3>Encounters &amp; Quests: Throne of Bhaal</h3>
+  <p>These modifications extend existing quests or add new encounters and quests in the Throne of Bhaal portion,  including Watcher's Keep.</p>
+  <p><strong>Minor Quest Tweaks (ToB)</strong><br/>
+  This is just a small collection of quality of life hacks for Throne of Bhaal.</p>
+  <ul>
+  <li>The Thieves' Hood: You can now always get the Thieves' Hood from the fiends in the maze of Watcher's Keep, even if you are a paladin and have to fight them both.</li>
+  <li>Saladrex' Loot: Some of Saladrex' loot is now stealable by a good thief.  Mostly done because I just don't like killing him for his stuff.</li>
+  </ul>
 </div>
-<!--
-<h2>The .ini File</h2>
-<div class="section">
-  <p>Within the mod folder, there is a file called setup-mih.ini.  This file can be used to fine-tune certain aspects of this mod.  It is meant as an expert option, for normal installation you can leave this file as it is.  If you do edit this file, you must reinstall the mod, or at least the components whose settings you changed.</p>
-  <table>
-    <tr><th colspan=2>MiH Encounters &amp; Quests</th></tr>
-  </table>
-</div>
--->
 <h2>Contact Information</h2>
 <div class="section">
   <p><a href="https://www.gibberlings3.net/profile/6180-angel/">Angel</a> created this mod. You can find out more about Made in Heaven: Encounters &amp; Quests by asking nicely. Visit the <a href="http://gibberlings3.net/forums/">Gibberlings Three Forums</a> for information on this and any other Gibberlings Three mods on which I may be working. </p>
@@ -143,7 +257,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
     <a href="https://www.gibberlings3.net/mods/tools/dltcep/"><acronym title="DragonLance Total Converter Editor Pro">DLTCEP</acronym></a> by Avenger</p>
     <a href="http://www.shsforums.net/files/file/837-bam-batcher/">BAM Batcher</a> by Miloch</p>
   <p><strong>People who Contributed in some way</strong><br/>
-    DavidW for providing both the SFO function library and the SSL AI scripting language.
+    DavidW for providing Detectable Spells, the SFO function library and the SSL AI scripting language, and valuable advice on mod structure.</br/>
     Everyone who reported bugs and other issues.<br/>
     All people brave enough to try and install my early beta versions...<br/>
     The people at Bioware and Beamdog, for creating respectively the original games and the Enhanced Editions in the first place.<br/>

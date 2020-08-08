@@ -24,7 +24,6 @@ BEGIN
     enforce_saves=>at_worst
     attacks=>2
     resist_magic=>20
-    add_effect_inline=>"opcode=>31 target=>1 timing=>9 parameter1=>50 parameter2=>1"
     replace_items=>"vampreg1(lring) immune2(rring)"
   END   
 

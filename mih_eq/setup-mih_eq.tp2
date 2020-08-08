@@ -13,7 +13,7 @@ AUTO_EVAL_STRINGS
 
 ALWAYS
   OUTER_TEXT_SPRINT MOD_NAME "mih_eq"
-  OUTER_SPRINT MOD_VERSION @0 /* v4 */
+  OUTER_SPRINT MOD_VERSION @0 
 
   INCLUDE "mih_eq/lib/always.tph"
 END	// ALWAYS block
@@ -25,14 +25,14 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
-// ====================
-// Monster Improvements
-// ====================
+// =====================
+// Monster Enhancedments
+// =====================
 
 // P&P Ankhegs
 
-BEGIN @1 /* P&P Ankhegs */
-GROUP @2 /* Monster Improvements */
+BEGIN @1 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -43,8 +43,8 @@ END
 
 // P&P Basilisks
 
-BEGIN @3 /* P&P Basilisks */
-GROUP @2 /* Monster Improvements */
+BEGIN @3 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -55,8 +55,8 @@ END
 
 // P&P Oozes, Slimes & Jellies
 
-BEGIN @4 /* P&P Oozes, Slimes & Jellies */
-GROUP @2 /* Monster Improvements */
+BEGIN @4 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -67,8 +67,8 @@ END
 
 // P&P Dread Wolves
 
-BEGIN @5 /* P&P Dread Wolves */
-GROUP @2 /* Monster Improvements */
+BEGIN @5 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -79,8 +79,8 @@ END
 
 // P&P Winter Wolves
 
-BEGIN @6 /* P&P Winter Wolves */
-GROUP @2 /* Monster Improvements */
+BEGIN @6 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -91,8 +91,8 @@ END
 
 // P&P Wraith Spiders
 
-BEGIN @7 /* P&P Wraith Spiders */
-GROUP @2 /* Monster Improvements */
+BEGIN @7 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -101,10 +101,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Ravenloft Vampires
+// Ravenloft-style Vampires
 
-BEGIN @8 /* Ravenloft Vampires */
-GROUP @2 /* Monster Improvements */
+BEGIN @8 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -113,10 +113,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Ravenloft Golems
+// Ravenloft-style Golems
 
-BEGIN @43 /* Ravenloft Golems */
-GROUP @2 /* Monster Improvements */
+BEGIN @43 
+GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -125,14 +125,14 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// ======================
-// BG1: The Original Saga
-// ======================
+// ==================================
+// Tactical Challenges: Original Saga
+// ==================================
 
-// Horrors Beneath Candlekeep
+// Enhanced Battles: Candlekeep Catacombs
 
-BEGIN @9 /* Horrors Beneath Candlekeep */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+BEGIN @9 
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -141,22 +141,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// The Cloakwood Assassins
+// Enhanced Battles: Mutamin's Garden
 
-BEGIN @11 /* The Cloakwood Assassins */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_cloakwood_assassins"
-  location	= "bg1/cloakwood_assassins"
-END
-
-
-// Enhanced Mutamin's Garden
-
-BEGIN @12 /* Enhanced Mutamin's Garden */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+BEGIN @12 
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -165,10 +153,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Revised Ramazith's Tower
+// Enhanced Battles: Ramazith's Tower
 
-BEGIN @13 /* Revised Ramazith's Tower */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+BEGIN @13 
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -177,22 +165,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// The Surgeon's Plight
+// Enhanced Battles: Ulcaster Ruins
 
-BEGIN @14 /* The Surgeon's Plight */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_surgeons_plight"
-  location	= "bg1/surgeons_plight"
-END
-
-
-// Blazing Bones in Ulcaster
-
-BEGIN @15 /* Blazing Bones in Ulcaster */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+BEGIN @15 
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -201,10 +177,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Slightly Tougher Xvart Village
+// Enhanced Battles: Xvart Village
 
-BEGIN @16 /* Slightly Tougher Xvart Village */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+BEGIN @16 
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -213,10 +189,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// More Challenging Zombie Farm
+// Enhanced Battles: Zombie Farm
 
-BEGIN @17 /* More Challenging Zombie Farm */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+BEGIN @17 
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -225,26 +201,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Minor Quest Enhancements - BG1
+// Enhanced Battles: Durlag's Tower
 
-BEGIN @18 /* Minor Quest Enhancements - BG1 */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_minor_quests"
-  location	= "bg1/minor_quests"
-END
-
-
-// =============================
-// BG1: Tales of the Sword Coast
-// =============================
-
-// Dangers of Durlag's Tower
-
-BEGIN @19 /* Dangers of Durlag's Tower */
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "totsc"
+BEGIN @19 
+GROUP @10  GAME_INCLUDES "totsc"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -253,38 +213,66 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// =========================
-// BG1: Siege of Dragonspear
-// =========================
+// ==================================
+// Encounters & Quests: Original Saga
+// ==================================
 
-// Adjust SoD Enemy Group Size
+// The Surgeon's Plight
 
-BEGIN @20 /* Adjust SoD Enemy Group Size */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
+BEGIN @14 
+GROUP @44  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_surgeons_plight"
+  location	= "bg1/surgeons_plight"
+END
+
+
+// The Cloakwood Assassins
+
+BEGIN @11 
+GROUP @44  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_cloakwood_assassins"
+  location	= "bg1/cloakwood_assassins"
+END
+
+
+// Minor Quest Enhancements (BG1)
+
+BEGIN @18 
+GROUP @44  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_minor_quests_bg1"
+  location	= "bg1/minor_quests"
+END
+
+
+// =========================================
+// Tactical Challenges: Siege of Dragonspear
+// =========================================
+
+// Increase Enemy Group Size
+
+BEGIN @20 
+GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "sod_group_size"
-  location	= "tweaks"
+  location	= "sod/tweaks"
 END
 
 
-// Complete all/more Vision Quest encounters
+// Enhanced Battles: Korlasz' Tomb
 
-BEGIN @22 /* Complete more/all Vision Quest encounters */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "spectacle_charges"
-  location	= "tweaks"
-END
-
-
-// Evils of Korlasz' Tomb
-
-BEGIN @23 /* Evils of Korlasz' Tomb */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
+BEGIN @23 
+GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -293,10 +281,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Enhanced Dwarven Dig Site
+// Enhanced Battles: Dwarven Dig Site
 
-BEGIN @24 /* Enhanced Dwarven Dig Site */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
+BEGIN @24 
+GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -305,10 +293,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Vampires of the Sword Coast
+// Enhanced Battles: Vampire Encounters
 
-BEGIN @25 /* Vampires of the Sword Coast */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
+BEGIN @25 
+GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -316,10 +304,10 @@ LAUNCH_ACTION_FUNCTION run
   location	= "sod/vampires"
 END
 
-// New Madness in the Old Temple
+// Enhanced Battles: Cyric's Temple
 
-BEGIN @26 /* New Madness in the Old Temple */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
+BEGIN @26 
+GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -328,10 +316,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Dark Trouble in Bridgefort
+// Enhanced Battles: Bridgefort
 
-BEGIN @27 /* Dark Trouble in Bridgefort */
-GROUP @21 /* SoD Encounters & Quests */ GAME_INCLUDES "sod"
+BEGIN @27 
+GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -340,14 +328,30 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// ===================
-// BG2: Shadows of Amn
-// ===================
+// =========================================
+// Encounters & Quests: Siege of Dragonspear
+// =========================================
 
-// The Haunted Graveyard
+// Complete more/all Vision Quest encounters
 
-BEGIN @28 /* The Haunted Graveyard */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @22 
+GROUP @45  GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "spectacle_charges"
+  location	= "sod/tweaks"
+END
+
+
+// ===================================
+// Tactical Challenges: Shadows of Amn
+// ===================================
+
+// Enhanced Battles: Graveyard Catacombs
+
+BEGIN @28 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -356,10 +360,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// What Lurks in the Lower Reaches
+// Enhanced Battles: Lower Reaches
 
-BEGIN @30 /* What Lurks in the Lower Reaches */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @30 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -368,10 +372,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Slimy Slum Sewers
+// Enhanced Battles: Slum Sewers
 
-BEGIN @31 /* Slimy Slum Sewers */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @31 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -380,10 +384,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Challenges in Trademeet
+// Enhanced Battles: Trademeet
 
-BEGIN @32 /* Challenges in Trademeet */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @32 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -392,10 +396,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Deeper Shadows in the Temple
+// Enhanced Battles: Temple Ruins
 
-BEGIN @33 /* Deeper Shadows in the Temple */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @33 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -404,10 +408,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Scalies in the Windspear Hills
+// Enhanced Battles: Firkraag's Lair
 
-BEGIN @34 /* Scalies in the Windspear Hills */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @34 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -416,10 +420,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Madness of Spellhold
+// Enhanced Battles: Spellhold
 
-BEGIN @35 /* The Madness of Spellhold */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @35 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -428,10 +432,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Depths of the Underdark
+// Enhanced Battles: Underdark
 
-BEGIN @36 /* Depths of the Underdark */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @36 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -440,10 +444,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// The Athkatla Liches
+// Enhanced Battles: Athkatla Liches
 
-BEGIN @37 /* The Athkatla Liches */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @37 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -452,10 +456,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Battle in Suldanessenar
+// Enhanced Battles: Suldanessenar
 
-BEGIN @38 /* Battle in Suldanessenar */
-GROUP @29 /* BG2 Encounters & Quests */ GAME_INCLUDES "bg2"
+BEGIN @38 
+GROUP @29  GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -464,14 +468,14 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// ====================
-// BG2: Throne of Bhaal
-// ====================
+// ====================================
+// Tactical Challenges: Throne of Bhaal
+// ====================================
 
-// Watcher's Keep Tweaks
+// Enhanced Battles: Watcher's Keep
 
-BEGIN @39 /* Watcher's Keep Tweaks */
-GROUP @40 /* ToB Encounters & Quests */ GAME_INCLUDES "tob"
+BEGIN @39 
+GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -480,8 +484,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-BEGIN @41 /* Brutal Pocket Plane */
-GROUP @40 /* ToB Encounters & Quests */ GAME_INCLUDES "tob"
+// Enhanced Battles: Pocket Plane
+
+BEGIN @41 
+GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -490,8 +496,10 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-BEGIN @42 /* City under Siege */
-GROUP @40 /* ToB Encounters & Quests */ GAME_INCLUDES "tob"
+// Enhanced Battles: Saradush
+
+BEGIN @42 
+GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -500,11 +508,23 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Minor Quest Enhancements (ToB)
+
+BEGIN @47 
+GROUP @46  GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_minor_quests_tob"
+  location	= "tob/minor_quests"
+END
+
+
 /*
 // Enhanced Thieves' Maze & Undercity
 
 BEGIN ~Enhanced Thieves' Maze & Undercity~
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -515,7 +535,7 @@ END
 // A Real Spider Plague
 
 BEGIN ~A Real Spider Plague~
-GROUP @10 /* BG1 Encounters & Quests */ GAME_INCLUDES "bg1"
+GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
@@ -531,7 +551,7 @@ END
 // Enhanced Forest of Mir
 
 BEGIN ~Enhanced Forest of Mir~
-GROUP @40 /* ToB Encounters & Quests */ GAME_INCLUDES "tob"
+GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
