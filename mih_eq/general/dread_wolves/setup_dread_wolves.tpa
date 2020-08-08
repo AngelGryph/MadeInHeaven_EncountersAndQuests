@@ -2,8 +2,8 @@ DEFINE_ACTION_FUNCTION setup_dread_wolves
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "setup_regenerate_once"
-    locbase	= "shared/regenerate_once"
+    file	= "setup_regeneration"
+    locbase	= "shared/regeneration"
   END
 
   LAUNCH_ACTION_FUNCTION run

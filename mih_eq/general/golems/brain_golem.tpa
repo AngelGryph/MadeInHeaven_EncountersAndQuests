@@ -1,0 +1,37 @@
+DEFINE_ACTION_FUNCTION brain_golem
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+     STR_VAR
+     file	= "mh#brgol.baf"
+     location	= "scripts"
+  END
+
+  MAKE_PATCH
+    xp_valueGT=>10000
+    dexterity=>14
+    constitution=>20
+    intelligence=>14
+    wisdom=>2
+    charisma=>3
+    resist_slashing=>50
+    resist_crushing=>50
+    resist_piercing=>100
+    resist_missile=>100
+    resist_fire=>50
+    resist_magic_fire=>50
+    resist_cold=>50
+    resist_magic_cold=>50
+    resist_electricity=>50
+    resist_acid=>50
+    insert_script=>"mh#brgol"
+    replace_items=>"immune2(lring)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "golbra01 udgolem"
+    edits	= "patch_data"
+  END
+END	// brain_golem
+
+

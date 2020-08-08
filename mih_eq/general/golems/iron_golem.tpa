@@ -1,0 +1,29 @@
+DEFINE_ACTION_FUNCTION iron_golem
+BEGIN
+  MAKE_PATCH
+    xp_valueGT=>15000
+    resist_slashing=>80
+    resist_crushing=>80
+    resist_piercing=>80
+    resist_missile=>80
+    resist_acid=>0
+    resist_electricity=>0
+    strength=>24
+    dexterity=>17
+    constitution=>20
+    intelligence=>9
+    wisdom=>2
+    charisma=>7
+    replace_items=>"immune3(lring)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "goliro01 kpgol04 shiron"
+    edits		= "patch_data"
+  END
+END	// iron_golem
+
+

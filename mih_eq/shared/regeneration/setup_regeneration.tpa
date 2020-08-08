@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION setup_regenerate_once
+DEFINE_ACTION_FUNCTION setup_regeneration
 BEGIN
   ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
   BEGIN
@@ -22,8 +22,14 @@ BEGIN
       locbase
     END
 
-    COMPILE "%mod_root%/shared/regenerate_once/mh#regen.baf"
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "all"
+      postfix	= "baf"
+      location	= "scripts"
+      locbase
+    END
   END	// NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
-END	// setup_regenerate_once
+END	// setup_regeneration
 
 

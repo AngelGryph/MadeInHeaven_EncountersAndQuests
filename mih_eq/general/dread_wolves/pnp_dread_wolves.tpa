@@ -24,7 +24,7 @@ BEGIN
     level1=>5
     general=>undead
     strip_script=>"dreadwlf"
-    insert_script=>"mh#regen"
+    insert_script=>"mh#reg1t"
     replace_items=>"mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
   END
 

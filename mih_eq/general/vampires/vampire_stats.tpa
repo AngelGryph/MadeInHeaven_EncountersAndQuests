@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION ravenloft_stats
+DEFINE_ACTION_FUNCTION vampire_stats
 BEGIN
   // Immunities data
 
@@ -173,6 +173,6 @@ BEGIN
     item		= "vamp vamp1 vamp2 vamp3 bodhi"
     edits		= "vampire_paws"
   END
-END	// ravenloft_stats
+END	// vampire_stats
 
 

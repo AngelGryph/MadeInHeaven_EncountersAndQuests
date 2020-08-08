@@ -113,6 +113,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Ravenloft Golems
+
+BEGIN @43 /* Ravenloft Golems */
+GROUP @2 /* Monster Improvements */
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_golems"
+  location	= "general/golems"
+END
+
+
 // ======================
 // BG1: The Original Saga
 // ======================

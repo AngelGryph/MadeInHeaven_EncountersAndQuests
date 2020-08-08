@@ -7,7 +7,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "ravenloft_stats"
+    file	= "vampire_stats"
   END
 END	// setup_vampires
 

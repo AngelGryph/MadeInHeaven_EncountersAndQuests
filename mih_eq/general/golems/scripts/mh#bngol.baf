@@ -1,0 +1,13 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 15)
+  !GlobalTimerNotExpired("mh#bone_golem_laugh", "LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#bone_golem_laugh", "LOCALS", THREE_ROUNDS)
+    PlaySound("skelw02")
+    ForceSpell(Myself, BONE_GOLEM_LAUGH)
+    Wait(2)
+END
+
+

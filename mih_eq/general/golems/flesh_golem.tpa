@@ -1,0 +1,28 @@
+DEFINE_ACTION_FUNCTION flesh_golem
+BEGIN
+  MAKE_PATCH
+    xp_valueGT=>2000
+    resist_cold=>50
+    resist_magic_cold=>50
+    resist_electricity=>50
+    thac0=>11
+    strength=>19
+    dexterity=>18
+    constitution=>20
+    intelligence=>14
+    wisdom=>2
+    charisma=>6
+    replace_items=>"immune1(lring) minhp1(amulet)"
+    insert_script=>"mh#regen"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "bpgofl01 fgolem golemf golemf2 golfle01 kpgol01 kpgol06 tomegol1 xgolem"
+    edits		= "patch_data"
+  END
+END	// flesh_golem
+
+

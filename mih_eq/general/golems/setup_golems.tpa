@@ -1,0 +1,48 @@
+DEFINE_ACTION_FUNCTION setup_golems
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_regeneration"
+    locbase	= "shared/regeneration"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "flesh_golem"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "clay_golem"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "stone_golem"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "iron_golem"
+  END
+
+
+  // These only exist in BG2
+
+  ACTION_IF GAME_INCLUDES "bg2"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "bone_golem"
+      tra	= "golems"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "brain_golem"
+      tra	= "golems"
+    END
+  END
+END	// setup_golems
+
+

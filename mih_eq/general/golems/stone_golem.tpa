@@ -1,0 +1,32 @@
+DEFINE_ACTION_FUNCTION stone_golem
+BEGIN
+  MAKE_PATCH
+    xp_valueGT=>9000
+    resist_slashing=>90
+    resist_piercing=>90
+    resist_missile=>90
+    resist_fire=>50
+    resist_magic_fire=>50
+    resist_cold=>50
+    resist_magic_cold=>50
+    resist_acid=>50
+    resist_electricity=>50
+    strength=>22
+    dexterity=>17
+    constitution=>20
+    intelligence=>9
+    wisdom=>2
+    charisma=>8
+    replace_items=>"immune2(lring)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "bdgolsto bdmengo dstone1 goljug01 golsto01 jugjug01 kpgol03 kpgol05 stgol01 tomegol03 tomegol04"
+    edits		= "patch_data"
+  END
+END	// stone_golem
+
+
