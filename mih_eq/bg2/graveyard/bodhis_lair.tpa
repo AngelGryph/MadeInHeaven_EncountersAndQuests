@@ -3,9 +3,7 @@ BEGIN
   // Stronger Grimwarders
 
   MAKE_PATCH
-    level1GT=>12
-    level2=>0
-    level3=>0
+    level_all=>12
     enforce_hp=>at_worst
     enforce_thac0=>at_worst
     enforce_saves=>at_worst

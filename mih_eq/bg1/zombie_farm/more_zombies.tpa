@@ -38,7 +38,7 @@ BEGIN
   END
 
 
-  // NTotSC compatibility hack
+  // BGT and NTotSC compatibility hacks
 
   LAUNCH_ACTION_FUNCTION get_area_script
     STR_VAR
@@ -50,6 +50,15 @@ BEGIN
   COPY_EXISTING "%script%.bcs" "override"
     DECOMPILE_AND_PATCH
     BEGIN
+      // BGT
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+        ~NumDeadGT("ZombieW",19)~
+	~NumDeadGT("ZombieW",39)~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+        ~SetGlobal("ZombiesDead","GLOBAL",20)~
+        ~SetGlobal("ZombiesDead","GLOBAL",40)~
+
+      // NTotSC
       REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
         ~Global("ZombiesDead","GLOBAL",21)~
         ~Global("HelpWenric","GLOBAL",2)~

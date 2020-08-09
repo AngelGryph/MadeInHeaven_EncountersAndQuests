@@ -14,7 +14,7 @@ BEGIN
   END
 
   MAKE_PATCH
-    level1=>23
+    level_all=>23
     xp_value=>19500
     strength=>23
     dexterity=>21
@@ -42,7 +42,7 @@ BEGIN
   END
 
   MAKE_PATCH
-    level1=>"level1 + %prison_vampires_level_bonus%"
+    level_all=>"level1 + %prison_vampires_level_bonus%"
     strength=>21
     dexterity=>19
     constitution=>18
