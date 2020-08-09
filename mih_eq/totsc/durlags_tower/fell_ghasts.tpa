@@ -5,12 +5,15 @@ BEGIN
     enforce_saves=>at_worst
     enforce_hp=>at_worst
     xp_value=>975
-    strength=>18
-    strength_ex=>51
+    strength=>21
     thac0=>11
     ac=>1
-    attacks=>9
-    resist_magic=>20
+    attacks=>3
+    resist_slashing=>10
+    resist_crushing=>10
+    resist_piercing=>10
+    resist_missile=>10
+    resist_magic=>10
     add_effect_inline=>"opcode=>51 target=>1 timing=>9 parameter1=>0x10101000 parameter2=>2"
     add_items=>"immune1(rring)"
     say_both_names=>0

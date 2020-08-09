@@ -7,12 +7,12 @@ THEN
   RESPONSE #100
     IncrementGlobal("SpawnShadows", "AR5013", 1)
     SetGlobalTimer("mh#SpawnMoreShadows", "AR5013", ONE_ROUND)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
 END
 
 IF
@@ -24,14 +24,14 @@ THEN
   RESPONSE #100
     IncrementGlobal("SpawnShadows", "AR5013", 1)
     SetGlobalTimer("mh#SpawnMoreShadows", "AR5013", ONE_ROUND)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
 END
 
 IF
@@ -43,16 +43,16 @@ THEN
   RESPONSE #100
     IncrementGlobal("SpawnShadows", "AR5013", 1)
     SetGlobalTimer("mh#SpawnMoreShadows", "AR5013", ONE_ROUND)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("sewsha03", S)
-    CreateCreatureOffScreen("slaysh01", S)
-    CreateCreatureOffScreen("slaysh01", S)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("sewsha03", 0)
+    CreateCreatureOffScreen("slaysh01", 0)
+    CreateCreatureOffScreen("slaysh01", 0)
 END
 
 

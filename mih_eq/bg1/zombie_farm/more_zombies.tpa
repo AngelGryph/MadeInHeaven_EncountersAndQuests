@@ -30,7 +30,12 @@ BEGIN
   END
 
   ADD_JOURNAL @1 @2
-  COMPILE "%mod_root%/%component_loc%/dialog/wenric_edits.d"
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "wenric_edits.d"
+    location	= "dialog"
+  END
 
 
   // NTotSC compatibility hack

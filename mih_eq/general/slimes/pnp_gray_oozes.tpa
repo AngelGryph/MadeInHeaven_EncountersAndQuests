@@ -5,15 +5,10 @@ BEGIN
     add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>65536 dicenum=>2 dicesize=>8~
   END
 
-  LAUNCH_ACTION_FUNCTION edit_item
+  LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item		= "oozegr1"
+    item		= "oozegr1=>mh#grooz"
     edits		= "patch_data"
-  END
-
-  MAKE_PATCH
-    add_basic_ability=>null
-    add_effect_inline'1=>~opcode=>143 target=>2 timing=>1 parameter1=>1 resource=>"misc58"~
   END
 
   MAKE_PATCH
@@ -25,7 +20,7 @@ BEGIN
     resist_piercing=>30
     resist_missile=>100
     swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
-    replace_items=>"oozegr1(weapon1) oozegr1(weapon2)"
+    replace_items=>"mh#grooz(weapon1) mh#grooz(weapon2)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

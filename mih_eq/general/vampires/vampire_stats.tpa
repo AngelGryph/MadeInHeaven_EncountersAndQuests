@@ -4,6 +4,7 @@ BEGIN
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_all
   BEGIN
+    constitutionGT		=> 18
     resist_fireGT		=> 50
     resist_magic_fireGT		=> 50
     resist_coldGT		=> 50
