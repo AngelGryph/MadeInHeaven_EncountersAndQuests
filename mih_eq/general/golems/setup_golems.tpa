@@ -42,6 +42,12 @@ BEGIN
       file	= "brain_golem"
       tra	= "golems"
     END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "magic_golem"
+      tra	= "golems"
+    END
   END
 END	// setup_golems
 

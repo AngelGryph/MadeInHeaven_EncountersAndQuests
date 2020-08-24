@@ -1,0 +1,44 @@
+DEFINE_ACTION_FUNCTION magic_golem
+BEGIN
+  MAKE_PATCH
+    patch_ability_inline=>~to_hit=>10 strength_bonus=>0 ability_numdice=>0 ability_dicesize=>0 damage_type=>0~
+    delete_effect=>"opcode is_in [12 215]"
+    patch_effect_inline=>~match=>"opcode is_in [243 244]" save_vs_spell=>0 save_bonus=>0~
+    add_effect_inline'1=>~opcode=>12 target=>2 timing=>1 parameter2=>4194304 dicenum=>3 dicesize=>10 resist_dispel=>2~
+    add_effect_inline'2=>~opcode=>58 target=>2 timing=>1 resist_dispel=>2~
+    add_effect_inline'3=>~opcode=>215 target=>2 duration=>2 resource=>"icmagich" resist_dispel=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "golmag01=>mh#mggol"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#mggol.baf"
+    location	= "scripts"
+  END
+
+  MAKE_PATCH
+    strength=>19
+    intelligence=>6
+    wisdom=>4
+    dexterity=>16
+    constitution=>20
+    charisma=>5
+    class=>"mage"
+    thac0=>13
+    insert_script_high=>"mh#mggol"
+    replace_items=>"mh#mggol(weapon1)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "golmag01"
+    edits	= "patch_data"
+  END
+END	// magic_golem
+
+
