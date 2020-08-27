@@ -1,5 +1,7 @@
 DEFINE_ACTION_FUNCTION install_misc
 BEGIN
+  // Stone Snake
+
   ACTION_IF NOT FILE_EXISTS_IN_GAME "b2-20.itm"
   BEGIN
     LAUNCH_ACTION_FUNCTION clone_item
@@ -28,6 +30,30 @@ BEGIN
     location	= "actors"
     locbase
     editstring	= "say_both_names=>11"
+  END
+
+
+  // Hairy Spider
+
+  MAKE_PATCH
+    add_effect_inline'1=>~opcode=>0 target=>2 parameter1=>"-1" duration=>30 save_vs_poison=>1 save_bonus=>2~
+    add_effect_inline'2=>~opcode=>278 target=>2 parameter1=>"-1" duration=>30 save_vs_poison=>1 save_bonus=>2~
+    add_effect_inline'3=>~opcode=>78 target=>2 parameter1=>3 parameter2=>5 duration=>30 save_vs_poison=>1 save_bonus=>2~
+    add_effect_inline'4=>~opcode=>142 target=>2 parameter2=>7 duration=>30 save_vs_poison=>1 save_bonus=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "p1-4=>mh#spdhr"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#spdhr"
+    location	= "actors"
+    locbase
+    editstring	= "say_both_names=>25"
   END
 END	// install_misc
 

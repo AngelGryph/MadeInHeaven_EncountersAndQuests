@@ -1,0 +1,131 @@
+IF
+  !GlobalTimerNotExpired("mh#SpawnSpiders", "MYAREA")
+  GlobalLT("mh#SpawnedSpider", "MYAREA", %spider_wave_count%)
+  Difficulty(EASY)
+THEN
+  RESPONSE #33
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+  RESPONSE #33
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+  RESPONSE #33
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("mh#swmhs", 0)
+END
+
+IF
+  !GlobalTimerNotExpired("mh#SpawnSpiders", "MYAREA")
+  GlobalLT("mh#SpawnedSpider", "MYAREA", %spider_wave_count%)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidph", 0)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("mh#swmhs", 0)
+END
+
+IF
+  !GlobalTimerNotExpired("mh#SpawnSpiders", "MYAREA")
+  GlobalLT("mh#SpawnedSpider", "MYAREA", %spider_wave_count%)
+  Difficulty(HARD)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidph", 0)
+    CreateCreatureOffscreen("spidph", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidsw", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("mh#swmhs", 0)
+END
+
+IF
+  !GlobalTimerNotExpired("mh#SpawnSpiders", "MYAREA")
+  GlobalLT("mh#SpawnedSpider", "MYAREA", %spider_wave_count%)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+    CreateCreatureOffscreen("spidhu", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+    CreateCreatureOffscreen("spidgi", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidph", 0)
+    CreateCreatureOffscreen("spidph", 0)
+    CreateCreatureOffscreen("spidph", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("spidsw", 0)
+    CreateCreatureOffscreen("spidsw", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#SpawnSpiders", "MYAREA", %spider_wave_interval%)
+    IncrementGlobal("mh#SpawnedSpider", "MYAREA", 1)
+    CreateCreatureOffscreen("mh#swmhs", 0)
+END
+
+

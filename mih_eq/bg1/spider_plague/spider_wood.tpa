@@ -1,0 +1,39 @@
+DEFINE_ACTION_FUNCTION spider_wood
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "spider_waves_count"
+    RET
+    spider_waves_count		= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "spider_waves_interval"
+    RET
+    spider_waves_interval	= value
+  END
+
+  MAKE_PATCH
+    patch_spawn_inline=>~spawn_maximum=>8 spawn_base_number=>300 spawn_count=>3 spawn_creature1=>"spidhu" spawn_creature2=>"spidgi" spawn_creature3=>"etterc"~
+    add_actor_inline'1=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>3650 actor_y_coord=>1760 actor_orientation=>2~
+    add_actor_inline'2=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>3420 actor_y_coord=>1625 actor_orientation=>4~
+    add_actor_inline'3=>~actor_name=>"{literal:Phase Spider}" actor_resource=>"spidph" actor_x_coord=>3475 actor_y_coord=>1740 actor_orientation=>1~
+    add_actor_inline'4=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>3845 actor_y_coord=>795 actor_orientation=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%SpiderWood%"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%SpiderWood%"
+    bottom	= "spawn_random_spiders"
+    location	= "scripts"
+  END
+END	// spider_wood
+
+

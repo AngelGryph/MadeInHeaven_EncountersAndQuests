@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION setup_spider_plague
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_new_monsters"
+    locbase	= "shared/new_monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "hairy_spider_swarm"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "cloakwood_nest"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "spider_wood"
+  END
+END	// setup_spider_plague
+
+

@@ -165,6 +165,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Battles: Spider Plague
+
+BEGIN @49 
+GROUP @10  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_spider_plague"
+  location	= "bg1/spider_plague"
+END
+
+
 // Enhanced Battles: Ulcaster Ruins
 
 BEGIN @15 
