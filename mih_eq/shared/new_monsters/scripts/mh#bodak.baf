@@ -1,0 +1,25 @@
+IF
+  See(LastAttackerOf(Myself))
+  Range(LastSeenBy(Myself), 30)
+  !GlobalTimerNotExpired("mh#bodak_death_gaze", "locals")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#bodak_death_gaze", "locals", ONE_ROUND)
+    FaceObject(LastSeenBy(Myself))
+    ForceSpell(LastSeenBy(Myself), BEHOLDER_DEATH_RAY)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 30)
+  !GlobalTimerNotExpired("mh#bodak_death_gaze", "locals")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#bodak_death_gaze", "locals", ONE_ROUND)
+    FaceObject(LastSeenBy(Myself))
+    ForceSpell(LastSeenBy(Myself), BEHOLDER_DEATH_RAY)
+    Continue()
+END
+
+

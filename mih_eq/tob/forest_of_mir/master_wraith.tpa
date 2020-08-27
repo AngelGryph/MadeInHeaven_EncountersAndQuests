@@ -1,0 +1,42 @@
+DEFINE_ACTION_FUNCTION master_wraith
+BEGIN
+  MAKE_PATCH
+    magical=>1
+    enchantment=>4
+    patch_ability_inline=>~to_hit=>4 damage_bonus=>4 ability_numdice=>2 ability_dicesize=>8~
+    patch_effect_inline'1=>~match=>"opcode = 216" parameter1=>3~ 
+    patch_effect_inline'2=>~match=>"opcode = 139 and parameter1 = 41495" parameter1=>40969~ 
+    patch_effect_inline'3=>~match=>"opcode is_in [44 10 15]" parameter1=>"-3"~
+    add_effect_global_inline'1=>~opcode=>31 parameter1=>50 parameter2=>1~
+    add_effect_global_inline'2=>~opcode=>297 parameter2=>1~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "hgwra01"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    resist_slashingGT=>50
+    resist_crushingGT=>50
+    resist_piercingGT=>50
+    resist_missileGT=>50
+    swap_items=>~"immune2"=>"immune3" "wraith1"=>"vamp"~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "hgwra01 hgwra02 hgwra03"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar5202"
+    bottom	= "spawn_master_wraith_minions"
+    location	= "scripts"
+  END
+END	// master_wraith
+
+

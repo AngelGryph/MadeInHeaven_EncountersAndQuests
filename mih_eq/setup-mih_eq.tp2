@@ -508,6 +508,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Battles: Forest of Mir
+
+BEGIN @48 
+GROUP @40  GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_forest_of_mir"
+  location	= "tob/forest_of_mir"
+END
+
+
 // Minor Quest Enhancements (ToB)
 
 BEGIN @47 
@@ -540,22 +552,6 @@ GROUP @10  GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_spider_plague"
-END
-
-
-// ====================
-// BG2: Throne of Bhaal
-// ====================
-
-
-// Enhanced Forest of Mir
-
-BEGIN ~Enhanced Forest of Mir~
-GROUP @40  GAME_INCLUDES "tob"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_forest_temple"
 END
 */
 

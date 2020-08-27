@@ -205,6 +205,42 @@ BEGIN
     locbase
     editstring	= "say_both_names=>10"
   END
+
+
+  // Bodak
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#bodak.baf"
+    location	= "scripts"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#bodak"
+    location	= "actors"
+    locbase
+    editstring	= "say_both_names=>18"
+  END
+
+
+  // Eye of Fear and Flame
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#eyeff.baf"
+    location	= "scripts"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#eyeff"
+    location	= "actors"
+    locbase
+    editstring	= "say_both_names=>24"
+  END
 END	// install_undead
 
 

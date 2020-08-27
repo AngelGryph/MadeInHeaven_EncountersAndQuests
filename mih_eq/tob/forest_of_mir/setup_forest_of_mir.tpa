@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION setup_forest_of_mir
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_new_monsters"
+    locbase	= "shared/new_monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "forest_temple"
+    tra		= "forest_of_mir"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "master_wraith"
+    tra		= "forest_of_mir"
+  END
+END	// setup_forest_of_mir
+
+
