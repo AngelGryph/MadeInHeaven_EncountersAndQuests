@@ -1,0 +1,32 @@
+DEFINE_ACTION_FUNCTION spider_attack_waves
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "spider_waves_count"
+    RET
+    spider_waves_count		= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "spider_waves_interval"
+    RET
+    spider_waves_interval	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%CloakwoodNest%"
+    bottom	= "spawn_random_spiders"
+    location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%SpiderWood%"
+    bottom	= "spawn_random_spiders"
+    location	= "scripts"
+  END
+END	// spider_attack_waves
+
+

@@ -1,5 +1,11 @@
-DEFINE_ACTION_FUNCTION arkanis_deder_help_more
+DEFINE_ACTION_FUNCTION arkanis_deder
 BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "arkanis_deder.d"
+    location	= "dialog"
+  END
+
   MAKE_PATCH
     xp_value=>650
     class=>"fighter"
@@ -18,7 +24,6 @@ BEGIN
     creature	= "arkani3"
     edits	= "patch_data"
   END
-
 
   MAKE_PATCH
     xp_value=>650
@@ -42,6 +47,6 @@ BEGIN
     creature	= "deder3"
     edits	= "patch_data"
   END
-END	// arkanis_deder_help_more
+END	// arkanis_deder
 
 

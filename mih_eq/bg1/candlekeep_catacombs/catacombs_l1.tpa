@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION catacombs_area_edits
+DEFINE_ACTION_FUNCTION catacombs_l1
 BEGIN
   MAKE_PATCH
     add_actor_inline'01=>~actor_name=>"{literal:Greater Wight}" actor_resource=>"mh#wght7" actor_x_coord=>1890 actor_y_coord=>925 actor_orientation=>10~
@@ -46,64 +46,6 @@ BEGIN
     area	= "%Candlekeep_Catacombs_L1%"
     edits	= "patch_data"
   END
-
-
-  MAKE_PATCH
-    add_actor_inline'01=>~actor_name=>"{literal:Doppleganger Erik}" actor_resource=>"erik3" actor_x_coord=>1430 actor_y_coord=>260 actor_orientation=>14~
-    add_actor_inline'02=>~actor_name=>"{literal:Doppleganger Priest}" actor_resource=>"mh#doppr" actor_x_coord=>1030 actor_y_coord=>540 actor_orientation=>14~
-    add_actor_inline'03=>~actor_name=>"{literal:Doppleganger Keeper}" actor_resource=>"mh#dopkp" actor_x_coord=>1275 actor_y_coord=>960 actor_orientation=>6~
-
-    add_actor_inline'04=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>620 actor_y_coord=>745 actor_orientation=>15~
-    add_actor_inline'05=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>555 actor_y_coord=>840 actor_orientation=>13~
-    add_actor_inline'06=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>710 actor_y_coord=>810 actor_orientation=>0~
-
-    add_actor_inline'08=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>880 actor_y_coord=>1165 actor_orientation=>4~
-    add_actor_inline'09=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>965 actor_y_coord=>1260 actor_orientation=>5~
-    add_actor_inline'10=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>825 actor_y_coord=>1290 actor_orientation=>7~
-
-    add_actor_inline'11=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>570 actor_y_coord=>1110 actor_orientation=>10~
-    add_actor_inline'12=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>655 actor_y_coord=>1135 actor_orientation=>9~
-
-    add_actor_inline'13=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>455 actor_y_coord=>1145 actor_orientation=>12~
-    add_actor_inline'14=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>365 actor_y_coord=>1170 actor_orientation=>9~
-    add_actor_inline'15=>~actor_name=>"{literal:Doppleganger}" actor_resource=>"dopple" actor_x_coord=>330 actor_y_coord=>1075 actor_orientation=>13~
-  END
-
-  LAUNCH_ACTION_FUNCTION edit_area
-    STR_VAR
-    area	= "%Candlekeep_Catacombs_L2%"
-    edits	= "patch_data"
-  END
-
-
-  MAKE_PATCH
-    add_actor_inline'1=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1575 actor_y_coord=>605 actor_orientation=>9~
-    add_actor_inline'2=>~actor_name=>"{literal:Phase Spider}" actor_resource=>"spidph" actor_x_coord=>1375 actor_y_coord=>805 actor_orientation=>1~
-
-    add_actor_inline'3=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>1755 actor_y_coord=>1255 actor_orientation=>5~
-
-    add_actor_inline'4=>~actor_name=>"{literal:Dracolisk}" actor_resource=>"mh#draco" actor_x_coord=>895 actor_y_coord=>1790 actor_orientation=>10~
-    add_actor_inline'5=>~actor_name=>"{literal:Dracolisk}" actor_resource=>"mh#draco" actor_x_coord=>765 actor_y_coord=>1340 actor_orientation=>15~
-
-    add_actor_inline'6=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>95 actor_y_coord=>1435 actor_orientation=>9~
-    add_actor_inline'7=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>200 actor_y_coord=>1565 actor_orientation=>6~
-
-    add_actor_inline'8=>~actor_name=>"{literal:Wraith Spider}" actor_resource=>"spidwr" actor_x_coord=>340 actor_y_coord=>685 actor_orientation=>1~
-    add_actor_inline'9=>~actor_name=>"{literal:Sword Spider}" actor_resource=>"spidsw" actor_x_coord=>300 actor_y_coord=>780 actor_orientation=>2~
-  END
-
-  LAUNCH_ACTION_FUNCTION edit_area
-    STR_VAR
-    area	= "%CandlekeepCaves%"
-    edits	= "patch_data"
-  END
-
-
-  LAUNCH_ACTION_FUNCTION extend_area_script
-    STR_VAR
-    area	= "%Candlekeep_Ch6%"
-    bottom	= "spawn_oogah_blahr"
-  END
-END	// catacombs_area_edits
+END	// catacombs_l1
 
 

@@ -1,5 +1,11 @@
-DEFINE_ACTION_FUNCTION catacombs_new_actors
+DEFINE_ACTION_FUNCTION dopplegangers
 BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "dopplegangers.d"
+    location	= "dialog"
+  END
+
   MAKE_PATCH
     xp_value=>420
     hitpoints=>30
@@ -20,19 +26,6 @@ BEGIN
     creature	= "erik=>erik3 keeper=>mh#dopkp poghma5=>mh#doppr"
     edits	= "patch_data"
   END
-
-  LAUNCH_ACTION_FUNCTION install_creature
-    STR_VAR
-    creature	= "mh#oobah mh#blahr"
-    editstring	= ~say_both_names=>"object_index from [10 11]"~
-  END
-
-  LAUNCH_ACTION_FUNCTION install
-    STR_VAR
-    file	= "all"
-    location	= "portraits"
-    postfix	= "bmp"
-  END
-END	// catacombs_new_actors
+END	// dopplegangers
 
 

@@ -8,24 +8,28 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "arkanis_deder_help_more"
+    file	= "arkanis_deder"
   END
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "catacombs_new_actors"
+    file	= "dopplegangers"
     tra		= "candlekeep_catacombs"
   END
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "catacombs_dialog"
-    tra		= "candlekeep_catacombs"
+    file	= "catacombs_l1"
   END
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "catacombs_area_edits"
+    file	= "catacombs_l2"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "spider_cave"
   END
 END	// setup_candlekeep_catacombs
 

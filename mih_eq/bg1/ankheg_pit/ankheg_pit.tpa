@@ -1,14 +1,5 @@
-DEFINE_ACTION_FUNCTION alter_bg1_ankheg_pit
+DEFINE_ACTION_FUNCTION ankheg_pit
 BEGIN
-  OUTER_FOR (i=3; i<=7; ++i)
-  BEGIN
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature		= "ankheg=>mh#ankh%i%"
-      editstring	= ~level1=>%i% hitpoints=>"%i% * 13 / 2" enforce_thac0=>at_best enforce_saves=>at_best xp_value=>"%i% from [0 0 0 120 175 270 420 650]" dv=>"mh#SpawnedAnkheg"~
-    END
-  END
-
   MAKE_PATCH
     add_actor_inline'1=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord=>95 actor_y_coord=>665 actor_orientation=>14~
     add_actor_inline'2=>~actor_name=>"{literal:Ankheg}" actor_resource=>"ankheg" actor_x_coord=>115 actor_y_coord=>1355 actor_orientation=>11~
@@ -28,13 +19,6 @@ BEGIN
     area		= "%FishingVillage_AnkhegPit%"
     edits		= "patch_data"
   END
-
-  LAUNCH_ACTION_FUNCTION extend_area_script
-    STR_VAR
-    area		= "%FishingVillage_AnkhegPit%"
-    bottom		= "spawn_random_ankhegs"
-    location		= "scripts"
-  END
-END	// alter_bg1_ankheg_pit
+END	// ankheg_pit
 
 

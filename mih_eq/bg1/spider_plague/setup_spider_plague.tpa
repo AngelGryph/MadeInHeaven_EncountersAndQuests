@@ -20,6 +20,11 @@ BEGIN
     STR_VAR
     file	= "spider_wood"
   END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "spider_attack_waves"
+  END
 END	// setup_spider_plague
 
 

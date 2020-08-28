@@ -7,25 +7,25 @@ BEGIN "mh#blahr"
 CHAIN
 IF ~NumTimesTalkedTo(0)~
 THEN "mh#oobah" hungry_ogres
-  @0
+  @20
 
 == "mh#blahr"
-  @1
+  @21
 
 == "mh#oobah"
-  @2
+  @22
   =
-  @3
+  @23
 
 == "mh#blahr"
-  @4
+  @24
 
 == "mh#oobah"
-  @5
+  @25
   DO ~Enemy()~
 
 == "mh#blahr"
-  @6
+  @26
   DO ~Enemy()~
 END
   IF ""

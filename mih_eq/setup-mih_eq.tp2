@@ -129,6 +129,18 @@ END
 // Tactical Challenges: Original Saga
 // ==================================
 
+// Enhanced Battles: Ankheg Pit
+
+BEGIN @50 
+GROUP @10  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_ankheg_pit"
+  location	= "bg1/ankheg_pit"
+END
+
+
 // Enhanced Battles: Candlekeep Catacombs
 
 BEGIN @9 
@@ -241,15 +253,15 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// The Cloakwood Assassins
+// Sarevok's Assassins
 
 BEGIN @11 
 GROUP @44  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_cloakwood_assassins"
-  location	= "bg1/cloakwood_assassins"
+  file		= "setup_sarevoks_assassins"
+  location	= "bg1/sarevoks_assassins"
 END
 
 

@@ -4,8 +4,8 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnOohahBlahr", "MYAREA", 1)
-    CreateCreature("mh#oobah", [4550.3030], 3)
-    CreateCreature("mh#blahr", [4540.3170], 4)
+    CreateCreature("mh#oobah", [915.3275], 6)
+    CreateCreature("mh#blahr", [850.3335], 7)
 END
 
 

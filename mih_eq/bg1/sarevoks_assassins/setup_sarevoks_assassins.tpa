@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION setup_sarevoks_assassins
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "drikx_gnung_strok"
+    tra		= "sarevoks_assassins"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "oobah_blahr"
+  END
+END	// setup_sarevoks_assassins
+
+
