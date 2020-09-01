@@ -46,7 +46,7 @@ CreateCreature("mh#mohrg", [710.1810], 11)~
     patch_actor_inline'1=>~match=>"actor_resource = vamflf01" actor_resource=>"vamold01" actor_name=>"{literal:Vampire}"~
     patch_actor_inline'2=>~match=>"actor_resource = vamflm01" actor_resource=>"vamver01" actor_name=>"{literal:Vampire}"~
 
-    patch_trigger_inline=>~match=>"launch_xloc=1961 and launch_yloc=650" launch_xloc=>1445 launch_yloc=>2110~
+    patch_trigger_inline=>~match=>"trigger_trap_xloc=1961 and trigger_trap_yloc=650" trigger_trap_xloc=>1445 trigger_trap_yloc=>2110~
     literal=>~LPF ADD_AREA_REGION_TRIGGER INT_VAR ab_RT_BbLX = 1401 ab_RT_BbLY = 691 ab_RT_BbHX = 1570 ab_RT_BbHY = 865 ab_RT_VxPr = 4 ab_RT_Vx_X_0 = 1495 ab_RT_Vx_Y_0 = 865 ab_RT_Vx_X_1 = 1570 ab_RT_Vx_Y_1 = 843 ab_RT_Vx_X_2 = 1477 ab_RT_Vx_Y_2 = 691 ab_RT_Vx_X_3 = 1401 ab_RT_Vx_Y_3 = 714 ab_RT_TDtD = 100 ab_RT_TRmD = 100 ab_RT_TSet = 1 ab_RT_LPoX = 1960 ab_RT_LPoY = 650 STR_VAR ab_RT_Name = "High Level 3" ab_RT_Rbcs = "spwnvamp" END~
   END
 

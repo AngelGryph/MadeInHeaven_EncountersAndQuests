@@ -3,7 +3,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
     item	= "b1-4=>mh#zomjj"
-    editstring	= ~magical=>1 enchantment=>1 patch_ability_inline=>"ability_numdice=>3"~
+    editstring	= ~magical=>1 enchantment=>1 patch_ability_inline=>"ability_dicenum=>3"~
   END
 
   MAKE_PATCH

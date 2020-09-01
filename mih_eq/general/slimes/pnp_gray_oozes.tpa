@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION pnp_gray_oozes
 BEGIN
   MAKE_PATCH
-    patch_ability_inline=>~ability_numdice=>0 ability_dicesize=>0 damage_type=>0 strength_bonus=>0~
+    patch_ability_inline=>~ability_dicenum=>0 ability_dicesize=>0 damage_type=>0 strength_bonus=>0~
     add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>65536 dicenum=>2 dicesize=>8~
   END
 

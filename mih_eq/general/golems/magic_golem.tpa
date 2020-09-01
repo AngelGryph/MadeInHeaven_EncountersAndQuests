@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION magic_golem
 BEGIN
   MAKE_PATCH
-    patch_ability_inline=>~to_hit=>10 strength_bonus=>0 ability_numdice=>0 ability_dicesize=>0 damage_type=>0~
+    patch_ability_inline=>~to_hit=>10 strength_bonus=>0 ability_dicenum=>0 ability_dicesize=>0 damage_type=>0~
     delete_effect=>"opcode is_in [12 215]"
     patch_effect_inline=>~match=>"opcode is_in [243 244]" save_vs_spell=>0 save_bonus=>0~
     add_effect_inline'1=>~opcode=>12 target=>2 timing=>1 parameter2=>4194304 dicenum=>3 dicesize=>10 resist_dispel=>2~

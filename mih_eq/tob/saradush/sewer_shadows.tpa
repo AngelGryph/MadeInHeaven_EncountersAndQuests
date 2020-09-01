@@ -3,7 +3,7 @@ BEGIN
   MAKE_PATCH
     magical=>1
     enchantment=>3
-    patch_ability_inline=>~ability_numdice=>2 to_hit=>4~
+    patch_ability_inline=>~ability_dicenum=>2 to_hit=>4~
     patch_effect_inline=>~match=>"opcode = 44" parameter2=>"-4"~
   END
 

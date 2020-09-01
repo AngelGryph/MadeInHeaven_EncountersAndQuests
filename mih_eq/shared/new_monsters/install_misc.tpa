@@ -7,7 +7,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION clone_item
       STR_VAR
       item		= "b1-10=>b2-20"
-      editstring	= ~patch_ability_inline=>"ability_numdice=>2"~
+      editstring	= ~patch_ability_inline=>"ability_dicenum=>2"~
     END
   END
 
