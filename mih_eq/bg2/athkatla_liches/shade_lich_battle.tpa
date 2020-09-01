@@ -1,14 +1,12 @@
 DEFINE_ACTION_FUNCTION shade_lich_battle
 BEGIN
   MAKE_PATCH
-    add_effect_global_inline'1=>~opcode=>27 timing=>2 parameter1=>50 parameter2=>1~
-    add_effect_global_inline'2=>~opcode=>30 timing=>2 parameter1=>50 parameter2=>1~
-    add_effect_global_inline'3=>~opcode=>31 timing=>2 parameter1=>50 parameter2=>1~
-    add_effect_global_inline'4=>~opcode=>86 timing=>2 parameter1=>50 parameter2=>1~
-    add_effect_global_inline'5=>~opcode=>88 timing=>2 parameter1=>50 parameter2=>1~
-    add_effect_global_inline'6=>~opcode=>89 timing=>2 parameter1=>75 parameter2=>1~
-    add_effect_global_inline'7=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>3~
-    add_effect_global_inline'8=>~opcode=>120 timing=>2 parameter1=>1 parameter2=>0~
+    // Salient Ability: Half damage from offensive spells
+    add_effect_global_inline'1=>~number_to_add=>3 opcode=>"entry_index from [27 30 31]" timing=>2 parameter1=>50 parameter2=>1~
+    // Salient Ability: Regeneration (6/round)
+    add_effect_global_inline'2=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>2~
+    // Salient Ability: Improved Weapon Immunity (+3 or better to hit)
+    add_effect_global_inline'3=>~number_to_add=>2 opcode=>120 timing=>2 parameter1=>"entry_index + 1"~
   END
 
   LAUNCH_ACTION_FUNCTION clone_item

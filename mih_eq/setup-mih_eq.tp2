@@ -101,7 +101,7 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Ravenloft-style Vampires
+// Improved Vampire Abilities & Resistances
 
 BEGIN @8 
 GROUP @2 
@@ -113,7 +113,7 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Ravenloft-style Golems
+// Improved Golem Abilities & Resistances
 
 BEGIN @43 
 GROUP @2 
@@ -122,6 +122,18 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_golems"
   location	= "general/golems"
+END
+
+
+// Improved Lich Abilities & Resistances
+
+BEGIN @51 
+GROUP @2 
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_liches"
+  location	= "general/liches"
 END
 
 

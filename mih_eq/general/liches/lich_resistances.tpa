@@ -1,0 +1,29 @@
+DEFINE_ACTION_FUNCTION lich_resistances
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "lich_spell_level_immunity"
+    RET
+    lich_spell_level_immunity	= value
+  END
+
+  MAKE_PATCH
+    delete_effect_global=>~opcode is_in [102 206] and not resource is_in [spwm113 spwi415 spwi711]~
+    // 3.5e rule: Skeletal undead resistances
+    add_effect_global_inline'1=>~number_to_add=>3 opcode=>"entry_index from [86 88 89]" target=>1 timing=>2 parameter1=>50 parameter2=>1~
+    // Low-level spell immunity
+    add_effect_global_inline'2=>~number_to_add=>"%lich_spell_level_immunity%" opcode=>102 target=>1 timing=>2 parameter1=>"entry_index + 1"~
+    add_effect_global_inline'3=>~opcode=>155 target=>1 timing=>2~
+    cd_immunity=>~spell_level_1 spell_level_2 spell_level_3 spell_level_4 spell_level_5~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    item		= "lich mh#elich mh#slich"
+    edits		= "patch_data"
+  END
+END	// lich_resistances
+
+

@@ -1,0 +1,9 @@
+DEFINE_ACTION_FUNCTION setup_liches
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "lich_resistances"
+  END
+END	// setup_liches
+
+
