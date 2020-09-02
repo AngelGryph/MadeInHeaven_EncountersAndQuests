@@ -16,6 +16,12 @@ BEGIN
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
+      file	= "compat_resources"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
       file	= "install_dragonkin"
       tra	= "new_monsters"
       locbase

@@ -2,28 +2,6 @@ DEFINE_ACTION_FUNCTION install_undead
 BEGIN
   // Wights (Wight, Greater Wight, Barrow Wight)
 
-  ACTION_IF FILE_EXISTS_IN_GAME "e25e.ini" AND NOT GAME_INCLUDES "sod"
-  BEGIN
-    // Non-SoD EE games ship without the barrow wight animation and sounds
-    // even though the animate.ids entries and e25e.ini file are there.
-
-    LAUNCH_ACTION_FUNCTION install
-      STR_VAR
-      file	= "all"
-      postfix	= "bam"
-      location	= "graphics"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION install
-      STR_VAR
-      file	= "all"
-      postfix	= "wav"
-      location	= "sounds"
-      locbase
-    END
-  END
-
   MAKE_PATCH
     magical=>1
     enchantment=>"object_index from [1 2]"
@@ -36,36 +14,42 @@ BEGIN
     edits	= "patch_data"
   END
 
+  MAKE_PATCH
+    say_both_names=>"object_index from [19 19 19 20]"
+  END
+
   ACTION_IF IDS_OF_SYMBOL("animate" "wight_gray") != "-1"
   BEGIN
-    OUTER_TEXT_SPRINT editstring ~say_both_names=>"object_index from [19 19 19 20]" animation=>"wight_gray"~
-  END
-  ELSE
-  BEGIN
-    OUTER_TEXT_SPRINT editstring ~say_both_names=>"object_index from [19 19 19 20]"~
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
+    BEGIN
+      animation=>"wight_gray"
+    END
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
     creature	= "mh#wight mh#wght5 mh#wght6 mh#wght7"
-    editstring
+    edits	= "patch_data"
     location	= "actors"
     locbase
   END
 
+  MAKE_PATCH
+    say_both_names=>0
+  END
+
   ACTION_IF IDS_OF_SYMBOL("animate" "wight_barrow") != "-1"
   BEGIN
-    OUTER_TEXT_SPRINT editstring ~say_both_names=>0 animation=>"wight_barrow"~
-  END
-  ELSE
-  BEGIN
-    OUTER_TEXT_SPRINT editstring ~say_both_names=>0~
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
+    BEGIN
+      animation=>"wight_barrow"
+    END
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
     creature	= "mh#bwght"
-    editstring
+    edits	= "patch_data"
     location	= "actors"
     locbase
   END
