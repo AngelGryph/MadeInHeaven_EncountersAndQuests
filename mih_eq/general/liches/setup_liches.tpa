@@ -4,6 +4,11 @@ BEGIN
     STR_VAR
     file	= "lich_resistances"
   END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "lich_hd_by_spell"
+  END
 END	// setup_liches
 
 
