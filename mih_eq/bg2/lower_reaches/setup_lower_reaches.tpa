@@ -8,12 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "rift_cavern"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "ghoul_town"
+    file	= "rift_cavern ghoul_town"
   END
 END	// setup_lower_reaches
 

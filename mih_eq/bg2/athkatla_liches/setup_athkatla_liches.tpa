@@ -10,13 +10,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "shade_lich_battle"
-    tra		= "athkatla_liches"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "elemental_lich_battle"
+    file	= "shade_lich_battle elemental_lich_battle"
     tra		= "athkatla_liches"
   END
 

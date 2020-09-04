@@ -2,12 +2,7 @@ DEFINE_ACTION_FUNCTION setup_vampires
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "bgee_compat"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "vampire_stats"
+    file	= "bgee_compat vampire_stats"
   END
 END	// setup_vampires
 

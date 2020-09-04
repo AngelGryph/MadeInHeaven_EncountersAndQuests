@@ -4,7 +4,6 @@ BEGIN
     STR_VAR
     file	= "retribution_challenge"
   END
-
 END	// setup_pocket_plane
 
 

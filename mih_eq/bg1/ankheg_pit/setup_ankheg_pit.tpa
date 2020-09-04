@@ -2,12 +2,7 @@ DEFINE_ACTION_FUNCTION setup_ankheg_pit
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "ankheg_pit"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "ankheg_attack_waves"
+    file	= "ankheg_pit ankheg_attack_waves"
   END
 END	// setup_ankheg_pit
 

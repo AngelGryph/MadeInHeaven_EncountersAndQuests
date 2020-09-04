@@ -8,13 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "island_battles"
-    tra		= "spellhold"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "asylum_dungeon"
+    file	= "island_battles asylum_dungeon"
     tra		= "spellhold"
   END
 END	// setup_spellhold

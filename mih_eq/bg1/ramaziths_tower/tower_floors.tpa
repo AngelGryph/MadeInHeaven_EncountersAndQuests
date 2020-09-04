@@ -4,9 +4,9 @@ BEGIN
     add_actor_inline'1=>~actor_name=>"{literal:Mustard Jelly}" actor_resource=>"jellymu" actor_x_coord=>435 actor_y_coord=>265 actor_orientation=>0~
 
     add_actor_inline'2=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>265 actor_y_coord=>130 actor_orientation=>0~
-    add_actor_inline'3=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>395 actor_y_coord=>355 actor_orientation=>0~
+    add_actor_inline'3=>~actor_name=>"{literal:Crystal Ooze}" actor_resource=>"mh#oozcr" actor_x_coord=>395 actor_y_coord=>355 actor_orientation=>0~
     add_actor_inline'4=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>385 actor_y_coord=>165 actor_orientation=>0~
-    add_actor_inline'5=>~actor_name=>"{literal:Ochre Jelly}" actor_resource=>"jelloc" actor_x_coord=>265 actor_y_coord=>360 actor_orientation=>0~
+    add_actor_inline'5=>~actor_name=>"{literal:Crystal Ooze}" actor_resource=>"mh#oozcr" actor_x_coord=>265 actor_y_coord=>360 actor_orientation=>0~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area
@@ -16,11 +16,11 @@ BEGIN
   END
 
   MAKE_PATCH
-    add_actor_inline'1=>~actor_name=>"{literal:Greater Ghoul}" actor_resource=>"ghoullor" actor_x_coord=>425 actor_y_coord=>245 actor_orientation=>4~
+    add_actor_inline'1=>~actor_name=>"{literal:Greater Wight}" actor_resource=>"mh#wght7" actor_x_coord=>425 actor_y_coord=>245 actor_orientation=>4~
 
-    add_actor_inline'2=>~actor_name=>"{literal:Ghast}" actor_resource=>"ghast" actor_x_coord=>360 actor_y_coord=>155 actor_orientation=>2~
-    add_actor_inline'3=>~actor_name=>"{literal:Ghast}" actor_resource=>"ghast" actor_x_coord=>345 actor_y_coord=>370 actor_orientation=>5~
-    add_actor_inline'4=>~actor_name=>"{literal:Ghast}" actor_resource=>"ghast" actor_x_coord=>235 actor_y_coord=>385 actor_orientation=>7~
+    add_actor_inline'2=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wight" actor_x_coord=>360 actor_y_coord=>155 actor_orientation=>2~
+    add_actor_inline'3=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>345 actor_y_coord=>370 actor_orientation=>5~
+    add_actor_inline'4=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght6" actor_x_coord=>235 actor_y_coord=>385 actor_orientation=>7~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area

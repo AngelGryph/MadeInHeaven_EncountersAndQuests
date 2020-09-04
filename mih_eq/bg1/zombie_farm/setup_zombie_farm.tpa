@@ -2,12 +2,7 @@ DEFINE_ACTION_FUNCTION setup_zombie_farm
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "stronger_zombies"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "more_zombies"
+    file	= "stronger_zombies more_zombies"
     tra		= "zombie_farm"
   END
 END	// setup_zombie_farm

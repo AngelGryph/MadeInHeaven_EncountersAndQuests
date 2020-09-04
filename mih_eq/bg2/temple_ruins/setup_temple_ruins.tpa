@@ -8,17 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "temple_grounds"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "temple_interior"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "shadow_dragon_battle"
+    file	= "temple_grounds temple_interior shadow_dragon_battle"
     tra		= "temple_ruins"
   END
 END	// setup_temple_ruins

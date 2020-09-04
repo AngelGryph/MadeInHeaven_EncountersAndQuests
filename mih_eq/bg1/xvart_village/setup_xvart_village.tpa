@@ -2,12 +2,7 @@ DEFINE_ACTION_FUNCTION setup_xvart_village
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "tougher_xvarts"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "more_xvarts"
+    file	= "tougher_xvarts more_xvarts"
   END
 END	// setup_xvart_village
 

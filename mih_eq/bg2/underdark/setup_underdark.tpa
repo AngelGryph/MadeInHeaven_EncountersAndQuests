@@ -8,18 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "kuotoa_levels"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "illithid_activities"
-    tra		= "underdark"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "deirex_battle"
+    file	= "kuotoa_levels illithid_activities deirex_battle"
     tra		= "underdark"
   END
 END	// setup_underdark

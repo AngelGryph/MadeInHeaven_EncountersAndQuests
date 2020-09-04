@@ -8,28 +8,8 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "arkanis_deder"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "dopplegangers"
+    file	= "arkanis_deder dopplegangers catacombs_l1 catacombs_l2 spider_cave"
     tra		= "candlekeep_catacombs"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "catacombs_l1"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "catacombs_l2"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "spider_cave"
   END
 END	// setup_candlekeep_catacombs
 

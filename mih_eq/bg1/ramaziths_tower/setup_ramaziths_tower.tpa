@@ -2,12 +2,13 @@ DEFINE_ACTION_FUNCTION setup_ramaziths_tower
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file="tower_floors"
+    file	= "setup_new_monsters"
+    locbase	= "shared/new_monsters"
   END
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file="ramazith_battle"
+    file="tower_floors ramazith_battle"
   END
 END	// setup_ramaziths_tower
 

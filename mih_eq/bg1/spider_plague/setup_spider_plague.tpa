@@ -8,22 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "hairy_spider_swarm"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "cloakwood_nest"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "spider_wood"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "spider_attack_waves"
+    file	= "hairy_spider_swarm cloakwood_nest spider_wood spider_attack_waves"
   END
 END	// setup_spider_plague
 

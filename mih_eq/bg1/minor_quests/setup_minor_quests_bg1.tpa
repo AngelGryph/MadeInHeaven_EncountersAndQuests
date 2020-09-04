@@ -2,18 +2,8 @@ DEFINE_ACTION_FUNCTION setup_minor_quests_bg1
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "unique_nesters_dagger"
+    file	= "unique_nesters_dagger minor_dialog minor_area_edits"
     tra		= "minor_quests_bg1"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "minor_dialog"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "minor_area_edits"
   END
 END	// setup_minor_quests_bg1
 

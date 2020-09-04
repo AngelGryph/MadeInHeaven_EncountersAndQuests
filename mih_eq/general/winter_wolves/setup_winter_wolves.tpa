@@ -1,24 +1,9 @@
 DEFINE_ACTION_FUNCTION setup_winter_wolves
 BEGIN
-  LAUNCH_ACTION_FUNCTION check_ini
-    STR_VAR
-    ini		= "relocate_winter_wolves"
-    RET
-    relocate_winter_wolves	= value
-  END
-
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "pnp_winter_wolves"
+    file	= "pnp_winter_wolves relocate_winter_wolves"
     tra		= "pnp_monsters"
-  END
-
-  ACTION_IF GAME_INCLUDES "bg1" AND relocate_winter_wolves
-  BEGIN
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "relocate_winter_wolves"
-    END
   END
 END	// setup_winter_wolves
 

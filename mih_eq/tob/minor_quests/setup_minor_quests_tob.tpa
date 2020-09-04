@@ -2,12 +2,7 @@ DEFINE_ACTION_FUNCTION setup_minor_quests_tob
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "thieves_hood"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "saladrex_loot"
+    file	= "thieves_hood saladrex_loot"
   END
 END	// setup_minor_quests_tob
 

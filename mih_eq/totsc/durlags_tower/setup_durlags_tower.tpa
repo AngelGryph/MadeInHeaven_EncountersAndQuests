@@ -8,38 +8,8 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "fell_ghasts"
+    file	= "fell_ghasts crypt_crawlers tower_exterior upper_levels air_chamber earth_chamber lower_levels"
     tra		= "durlags_tower"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "crypt_crawlers"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "tower_exterior"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "upper_levels"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "air_chamber"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "earth_chamber"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "lower_levels"
   END
 END	// setup_durlags_tower
 

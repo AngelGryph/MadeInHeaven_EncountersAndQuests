@@ -8,12 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "trademeet_tomb"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "skin_dancers"
+    file	= "trademeet_tomb skin_dancers"
   END
 END	// setup_trademeet
 
