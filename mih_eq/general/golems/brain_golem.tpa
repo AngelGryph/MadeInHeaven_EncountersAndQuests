@@ -1,11 +1,5 @@
 DEFINE_ACTION_FUNCTION brain_golem
 BEGIN
-  LAUNCH_ACTION_FUNCTION install
-     STR_VAR
-     file	= "mh#golbr.baf"
-     location	= "scripts"
-  END
-
   MAKE_PATCH
     xp_valueGT=>10000
     dexterity=>14
@@ -23,7 +17,6 @@ BEGIN
     resist_magic_cold=>50
     resist_electricity=>50
     resist_acid=>50
-    insert_script=>"mh#golbr"
     replace_items=>"immune2(lring)"
   END
 

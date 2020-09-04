@@ -8,22 +8,8 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "flesh_golem"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "clay_golem"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "stone_golem"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "iron_golem"
+    file	= "clay_golem flesh_golem iron_golem stone_golem"
+    tra		= "golems"
   END
 
 
@@ -33,19 +19,7 @@ BEGIN
   BEGIN
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
-      file	= "bone_golem"
-      tra	= "golems"
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "brain_golem"
-      tra	= "golems"
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "magic_golem"
+      file	= "adamantite_golem bone_golem brain_golem burning_man magic_golem"
       tra	= "golems"
     END
   END
