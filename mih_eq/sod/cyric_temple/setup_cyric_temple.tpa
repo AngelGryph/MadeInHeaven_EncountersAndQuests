@@ -8,12 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "morentherene"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "inner_temple"
+    file	= "morentherene inner_temple"
     tra		= "cyric_temple"
   END
 END	// setup_cyric_temple

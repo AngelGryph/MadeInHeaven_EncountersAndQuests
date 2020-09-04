@@ -8,12 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "dwarven_tunnels"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "lich_laboratory"
+    file	= "dwarven_tunnels lich_laboratory"
   END
 END	// setup_dwarven_dig_site
 

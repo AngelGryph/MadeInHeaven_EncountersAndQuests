@@ -8,12 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "enhance_upper_level"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "enhance_lower_level"
+    file	= "enhance_upper_level enhance_lower_level"
   END
 END	// setup_korlasz_tomb
 

@@ -16,55 +16,7 @@ BEGIN
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
-      file	= "compat_resources"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_dragonkin"
-      tra	= "new_monsters"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_elementals"
-      tra	= "new_monsters"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_golems"
-      tra	= "new_monsters"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_misc"
-      tra	= "new_monsters"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_oozes"
-      tra	= "new_monsters"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_undead"
-      tra	= "new_monsters"
-      locbase
-    END
-
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "install_variants"
+      file	= "compat_resources install_dragonkin install_elementals install_golems install_misc install_oozes install_undead install_variants"
       tra	= "new_monsters"
       locbase
     END

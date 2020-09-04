@@ -2,13 +2,7 @@ DEFINE_ACTION_FUNCTION setup_sod_vampires
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "tsolak_battle"
-    tra		= "sod_vampires"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "trollbark_vampires"
+    file	= "tsolak_battle trollbark_vampires"
     tra		= "sod_vampires"
   END
 END	// setup_sod_vampires

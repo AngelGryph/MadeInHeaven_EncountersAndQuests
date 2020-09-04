@@ -15,6 +15,7 @@ BEGIN
     STR_VAR
     creature	= "mh#flpdw mh#flpel"
     editstring	= ~say_both_names=>"object_index from [28 29]~
+    location	= "actors"
   END
 
   MAKE_PATCH
