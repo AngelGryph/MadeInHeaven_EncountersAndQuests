@@ -1,0 +1,19 @@
+BEGIN_ACTION_DEFINITION
+Name(DeathGaze)
+TRIGGER
+  !GlobalTimerNotExpired("death_gaze", "locals")
+ACTION	
+  RESPONSE #scsprob1
+    SetGlobalTimer("death_gaze", "locals", ONE_ROUND)
+    ForceSpell(scstarget, BODAK_DEATH_GAZE)
+END
+
+IF TRIGGER
+  TriggerBlock(Slay|Enemy|MR)
+  TargetBlock(PlayersInRandomOrder)
+  TargetBlock(EnemiesInOrder)
+THEN DO
+  Action(DeathGaze)
+END
+
+

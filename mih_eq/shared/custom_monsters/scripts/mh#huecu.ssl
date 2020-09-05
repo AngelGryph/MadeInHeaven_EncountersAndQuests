@@ -3,6 +3,8 @@ Name(CastSpell)
 TRIGGER
   HaveSpell(scsargument1)
   !GlobalTimerNotExpired("cast_spell", "locals")
+  See(scstarget)
+  !StateCheck(scstarget,STATE_IMPROVEDINVISIBILITY)
 ACTION	
   RESPONSE #scsprob1
     SetGlobalTimer("cast_spell", "locals", ONE_ROUND)
@@ -33,49 +35,55 @@ IF TRIGGER
   Target(Myself)
   ActuallyInCombat()
   !AttackedBy([ANYONE], MELEE)
+  GlobalLT("buff_count", "locals", 3)
 THEN DO
+  IncrementGlobal("buff_count", "locals", 1)
+  Action(CastSpell, CLERIC_ANIMATE_DEAD)
   Action(CastSpell, CLERIC_RIGHTEOUS_MAGIC)
   Action(CastSpell, CLERIC_DRAW_UPON_HOLY_MIGHT)
+  Action(CastSpell, CLERIC_SLAY_LIVING)
   Action(CastSpell, CLERIC_ARMOR_OF_FAITH)
   Action(CastSpell, CLERIC_CLOAK_OF_FEAR)
 END
 
 IF TRIGGER
   TargetBlock(EnemiesInOrder)
-  TriggerBlock(DispelTarget)
+  Range(scstarget, 15)
+  TriggerBlock(Enemy|DispelTarget)
 THEN DO
   Action(CastSpell, CLERIC_DISPEL_MAGIC)
 END
 
 IF TRIGGER
   TargetBlock(EnemiesInOrder)
-  Range(scstarget, 5)
-  Target(Myself)
+  TriggerBlock(Enemy|Helpless|MR|Hold)
 THEN DO
-  Action(CastSpell, CLERIC_SLAY_LIVING)
-END
-
-IF TRIGGER
-  TargetBlock(EnemiesInOrder)
-  TriggerBlock(Helpless|MR)
-THEN DO
+  IncrementGlobal("buff_count", "locals", "-1")
   Action(CastSpell, CLERIC_HOLD_PERSON)
 END
 
 IF TRIGGER
   TargetBlock(EnemiesInOrder)
-  TriggerBlock(Helpless|MR|Charm)
+  TriggerBlock(Enemy|Helpless|MR|Charm)
 THEN DO
+  IncrementGlobal("buff_count", "locals", "-1")
   Action(CastSpell, CLERIC_MENTAL_DOMINATION)
   Action(CastSpell, CLERIC_CHARM_PERSON)
 END
 
 IF TRIGGER
   TargetBlock(EnemiesInOrder)
-  TriggerBlock(MR)
+  TriggerBlock(Enemy|MR|ResistFire)
 THEN DO
+  IncrementGlobal("buff_count", "locals", "-1")
   Action(CastSpell, CLERIC_FLAME_STRIKE)
-  Action(CastSpell, CLERIC_ANIMATE_DEAD)
+END
+
+IF TRIGGER
+  TargetBlock(EnemiesInOrder)
+  TriggerBlock(Enemy|MR)
+THEN DO
+  IncrementGlobal("buff_count", "locals", "-1")
   Action(CastSpell, CLERIC_UNHOLY_BLIGHT)
   Action(CastSpell, CLERIC_DOOM)
 END
@@ -84,6 +92,7 @@ IF TRIGGER
   Target(NearestEnemyOf(Myself))
   Range(scstarget, 10)
   !StateCheck(Myself, STATE_DRAWUPONHOLYMIGHT)
+  !HasItem("slaylive", Myself)
 THEN DO
   Action(Literal)
   RunAwayFromNoLeaveArea(scstarget, 15)
