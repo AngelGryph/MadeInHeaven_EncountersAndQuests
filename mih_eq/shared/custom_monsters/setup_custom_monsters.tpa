@@ -1,8 +1,8 @@
-DEFINE_ACTION_FUNCTION setup_new_monsters
+DEFINE_ACTION_FUNCTION setup_custom_monsters
 BEGIN
   LAUNCH_ACTION_FUNCTION check_label
     STR_VAR
-    label	= "mh#new_monsters"
+    label	= "mh#custom_monsters"
     RET
     installed	= value
   END
@@ -11,16 +11,16 @@ BEGIN
   BEGIN
     LAUNCH_ACTION_FUNCTION make_label
       STR_VAR
-      label	= "mh#new_monsters"
+      label	= "mh#custom_monsters"
     END
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
       file	= "compat_resources install_dragonkin install_elementals install_golems install_misc install_oozes install_undead install_variants"
-      tra	= "new_monsters"
+      tra	= "custom_monsters"
       locbase
     END
   END
-END	// setup_new_monsters
+END	// setup_custom_monsters
 
 

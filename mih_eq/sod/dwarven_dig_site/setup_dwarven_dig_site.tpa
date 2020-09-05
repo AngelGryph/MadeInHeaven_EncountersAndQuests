@@ -2,8 +2,8 @@ DEFINE_ACTION_FUNCTION setup_dwarven_dig_site
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "setup_new_monsters"
-    locbase	= "shared/new_monsters"
+    file	= "setup_custom_monsters"
+    locbase	= "shared/custom_monsters"
   END
 
   LAUNCH_ACTION_FUNCTION run
