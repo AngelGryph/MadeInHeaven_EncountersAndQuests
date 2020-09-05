@@ -4,6 +4,7 @@ IF
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
   Difficulty(EASY)
+  InActiveArea(Myself)
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
@@ -20,6 +21,7 @@ IF
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
   Difficulty(NORMAL)
+  InActiveArea(Myself)
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
@@ -36,6 +38,7 @@ IF
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
   Difficulty(HARD)
+  InActiveArea(Myself)
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
@@ -52,6 +55,7 @@ IF
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
   Difficulty(HARDEST)
+  InActiveArea(Myself)
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
@@ -69,6 +73,7 @@ IF
   !Dead("hllich")
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(NORMAL)
+  InActiveArea(Myself)
 THEN
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
@@ -91,6 +96,7 @@ IF
   !Dead("hllich")
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARD)
+  InActiveArea(Myself)
 THEN
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
@@ -113,6 +119,7 @@ IF
   !Dead("hllich")
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARDEST)
+  InActiveArea(Myself)
 THEN
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)

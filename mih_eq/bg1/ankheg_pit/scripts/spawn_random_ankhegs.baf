@@ -2,6 +2,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnAnkhegs", "MYAREA")
   GlobalLT("mh#SpawnedAnkheg", "MYAREA", %ankheg_wave_count%)
   Difficulty(EASY)
+  InActiveArea(Myself)
 THEN
   RESPONSE #40
     SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", %ankheg_wave_interval%)
@@ -29,6 +30,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnAnkhegs", "MYAREA")
   GlobalLT("mh#SpawnedAnkheg", "MYAREA", %ankheg_wave_count%)
   Difficulty(NORMAL)
+  InActiveArea(Myself)
 THEN
   RESPONSE #40
     SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", %ankheg_wave_interval%)
@@ -60,6 +62,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnAnkhegs", "MYAREA")
   GlobalLT("mh#SpawnedAnkheg", "MYAREA", %ankheg_wave_count%)
   Difficulty(HARD)
+  InActiveArea(Myself)
 THEN
   RESPONSE #40
     SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", %ankheg_wave_interval%)
@@ -95,6 +98,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnAnkhegs", "MYAREA")
   GlobalLT("mh#SpawnedAnkheg", "MYAREA", %ankheg_wave_count%)
   Difficulty(HARDEST)
+  InActiveArea(Myself)
 THEN
   RESPONSE #40
     SetGlobalTimer("mh#SpawnAnkhegs", "MYAREA", %ankheg_wave_interval%)
