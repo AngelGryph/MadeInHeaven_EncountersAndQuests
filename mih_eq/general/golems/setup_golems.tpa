@@ -8,7 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "clay_golem flesh_golem iron_golem stone_golem"
+    file	= "clay_golem flesh_golem iron_golem helmed_horror stone_golem"
     tra		= "golems"
   END
 

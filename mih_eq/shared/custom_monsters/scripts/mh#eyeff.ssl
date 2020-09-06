@@ -1,0 +1,47 @@
+BEGIN_ACTION_DEFINITION
+Name(EyeOfFear)
+TRIGGER
+  !GlobalTimerNotExpired("eye_of_fear", "locals")
+ACTION	
+  RESPONSE #scsprob1
+    SetGlobalTimer("eye_of_fear", "locals", TWO_ROUNDS)
+    ReallyForceSpell(scstarget, BEHOLDER_FEAR)
+END
+
+BEGIN_ACTION_DEFINITION
+Name(EyeOfFlame)
+TRIGGER
+  !GlobalTimerNotExpired("eye_of_flame", "locals")
+ACTION	
+  RESPONSE #scsprob1
+    SetGlobalTimer("eye_of_flame", "locals", THREE_ROUNDS)
+    ReallyForceSpell(scstarget, DEATHKNIGHT_FIREBALL)
+END
+
+IF TRIGGER
+  TriggerBlock(Enemy|MR|ResistFire)
+  TargetBlock(PCsInOrder)
+  TargetBlock(EnemiesInOrder)
+  !Range(scstarget, 15)
+THEN DO
+  Action(EyeOfFlame|50|50)
+END
+
+IF TRIGGER
+  TriggerBlock(Enemy|MR|Panic)
+  TargetBlock(PCsInOrder)
+  TargetBlock(EnemiesInOrder)
+THEN DO
+  Action(EyeOfFear|50|50)
+END
+
+IF TRIGGER
+  Target(NearestEnemyOf(Myself))
+  Range(scstarget, 15)
+  !GlobalTimerNotExpired("eye_of_flame", "locals")
+THEN DO
+  Action(Literal)
+  RunAwayFromNoLeaveArea(scstarget, 15)
+END
+
+

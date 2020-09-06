@@ -1,15 +1,4 @@
-BEGIN_ACTION_DEFINITION
-Name(CastSpell)
-TRIGGER
-  HaveSpell(scsargument1)
-  !GlobalTimerNotExpired("cast_spell", "locals")
-  See(scstarget)
-  !StateCheck(scstarget,STATE_IMPROVEDINVISIBILITY)
-ACTION	
-  RESPONSE #scsprob1
-    SetGlobalTimer("cast_spell", "locals", ONE_ROUND)
-    Spell(scstarget, scsargument1)
-END
+INCLUDE FILE(%scsroot%/ssl/spellcaster.ssl)
 
 IF TRIGGER
   Target(Myself)
@@ -17,9 +6,9 @@ IF TRIGGER
   ActuallyInCombat()
   TriggerBlock(AoEFriendly)
 THEN DO
-  Action(CastSpell, CLERIC_DEFENSIVE_HARMONY)
-  Action(CastSpell, CLERIC_STRENGTH_OF_ONE)
-  Action(CastSpell, CLERIC_BLESS)
+  Action(CastSpellOnMyself, CLERIC_DEFENSIVE_HARMONY)
+  Action(CastSpellOnMyself, CLERIC_STRENGTH_OF_ONE)
+  Action(CastSpellOnMyself, CLERIC_BLESS)
 END
 
 IF TRIGGER
@@ -28,7 +17,7 @@ IF TRIGGER
   ActuallyInCombat()
   !AttackedBy([ANYONE], MELEE)
 THEN DO
-  Action(CastSpell, CLERIC_SANCTUARY)
+  Action(CastSpellOnMyself, CLERIC_SANCTUARY)
 END
 
 IF TRIGGER
@@ -38,54 +27,59 @@ IF TRIGGER
   GlobalLT("buff_count", "locals", 3)
 THEN DO
   IncrementGlobal("buff_count", "locals", 1)
-  Action(CastSpell, CLERIC_ANIMATE_DEAD)
-  Action(CastSpell, CLERIC_RIGHTEOUS_MAGIC)
-  Action(CastSpell, CLERIC_DRAW_UPON_HOLY_MIGHT)
-  Action(CastSpell, CLERIC_SLAY_LIVING)
-  Action(CastSpell, CLERIC_ARMOR_OF_FAITH)
-  Action(CastSpell, CLERIC_CLOAK_OF_FEAR)
+  Action(CastSpellOnMyself, CLERIC_ANIMATE_DEAD|70|30)
+  Action(CastSpellOnMyself, CLERIC_RIGHTEOUS_MAGIC|50|50)
+  Action(CastSpellOnMyself, CLERIC_DRAW_UPON_HOLY_MIGHT|70|30)
+  Action(CastSpellOnMyself, CLERIC_SLAY_LIVING|50|50)
+  Action(CastSpellOnMyself, CLERIC_ARMOR_OF_FAITH|70|30)
+  Action(CastSpellOnMyself, CLERIC_CLOAK_OF_FEAR|50|50)
 END
 
 IF TRIGGER
+  TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
   Range(scstarget, 15)
   TriggerBlock(Enemy|DispelTarget)
 THEN DO
-  Action(CastSpell, CLERIC_DISPEL_MAGIC)
+  Action(CastSpellOnEnemy, CLERIC_DISPEL_MAGIC|70|30)
 END
 
 IF TRIGGER
+  TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
   TriggerBlock(Enemy|Helpless|MR|Hold)
 THEN DO
   IncrementGlobal("buff_count", "locals", "-1")
-  Action(CastSpell, CLERIC_HOLD_PERSON)
+  Action(CastSpellOnEnemy, CLERIC_HOLD_PERSON|50|50)
 END
 
 IF TRIGGER
+  TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
   TriggerBlock(Enemy|Helpless|MR|Charm)
 THEN DO
   IncrementGlobal("buff_count", "locals", "-1")
-  Action(CastSpell, CLERIC_MENTAL_DOMINATION)
-  Action(CastSpell, CLERIC_CHARM_PERSON)
+  Action(CastSpellOnEnemy, CLERIC_MENTAL_DOMINATION|50|50)
+  Action(CastSpellOnEnemy, CLERIC_CHARM_PERSON|50|50)
 END
 
 IF TRIGGER
+  TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
   TriggerBlock(Enemy|MR|ResistFire)
 THEN DO
   IncrementGlobal("buff_count", "locals", "-1")
-  Action(CastSpell, CLERIC_FLAME_STRIKE)
+  Action(CastSpellOnEnemy, CLERIC_FLAME_STRIKE|50|50)
 END
 
 IF TRIGGER
+  TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
   TriggerBlock(Enemy|MR)
 THEN DO
   IncrementGlobal("buff_count", "locals", "-1")
-  Action(CastSpell, CLERIC_UNHOLY_BLIGHT)
-  Action(CastSpell, CLERIC_DOOM)
+  Action(CastSpellOnEnemy, CLERIC_UNHOLY_BLIGHT|50|50)
+  Action(CastSpellOnEnemy, CLERIC_DOOM|50|50)
 END
 
 IF TRIGGER

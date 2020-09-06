@@ -20,6 +20,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "golada01 golkill2"
+    edits	= "patch_data"
   END
 END	// adamantite_golem
 

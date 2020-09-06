@@ -1,0 +1,80 @@
+DEFINE_ACTION_FUNCTION helmed_horror
+BEGIN
+  LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    STR_VAR
+    typename	= "innate"
+    idsname	= "BATTLE_HORROR_MAGIC_MISSILE"
+    level	= 1
+    RET
+    hh_mag_mis	= newname
+  END
+  
+  LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    STR_VAR
+    typename	= "innate"
+    idsname	= "BATTLE_HORROR_MIRROR_IMAGE"
+    level	= 2
+    RET
+    hh_mir_img	= newname
+  END
+  
+  LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    STR_VAR
+    typename	= "innate"
+    idsname	= "BATTLE_HORROR_DIMENSION_DOOR"
+    level	= 1
+    RET
+    hh_dim_door	= newname
+  END
+  
+  MAKE_PATCH
+    spell_type=>"innate"
+    patch_ability_inline=>"ability_icon_loc=>4 casting_time=>1"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_spell
+    STR_VAR
+    spell	= "spwi112=>%hh_mag_mis% spwi212=>%hh_mir_img% spwi402=>%hh_dim_door%"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    delete_opcodes=>206
+    immunity_to_spell=>"spwi304 spwi308 sppr503"
+    add_effect_inline'1=>"opcode=>63 target=>1 timing=>9"
+    add_effect_inline'2=>"opcode=>193 target=>1 timing=>9 parameter2=>1"
+    add_effect_inline'3=>"opcode=>197 target=>1 timing=>9 parameter2=>0x0024"
+    add_items=>"antiweb(rring)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "helmho battho d0batho mh#irnmd"
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+    STR_VAR
+    script	= "mh#batho"
+    location	= "scripts"
+    locbase
+    ssllibrary	= "%mod_root%/ssl/library"
+  END
+
+  MAKE_PATCH
+    add_spells=>"BATTLE_HORROR_MAGIC_MISSILE(3) BATTLE_HORROR_MIRROR_IMAGE BATTLE_HORROR_DIMENSION_DOOR"
+    insert_script=>"mh#batho"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "battho d0batho mh#irnmd"
+    edits		= "patch_data"
+  END
+END	// helmed_horror
+
+

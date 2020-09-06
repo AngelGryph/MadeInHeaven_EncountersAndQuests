@@ -2,7 +2,8 @@ DEFINE_ACTION_FUNCTION setup_liches
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "lich_resistances lich_hd_by_spell"
+    file	= "lich_resistances lich_hd_by_spell demilich_curse"
+    tra		= "liches"
   END
 END	// setup_liches
 

@@ -197,6 +197,7 @@ BEGIN
     STR_VAR
     typename	= "innate"
     idsname	= "BODAK_DEATH_GAZE"
+    level	= 7
     RET
     newname
   END
@@ -231,11 +232,12 @@ BEGIN
 
   // Eye of Fear and Flame
 
-  LAUNCH_ACTION_FUNCTION install
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
     STR_VAR
-    file	= "mh#eyeff.baf"
+    script	= "mh#eyeff"
     location	= "scripts"
     locbase
+    ssllibrary	= "%mod_root%/ssl/library"
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
@@ -243,7 +245,7 @@ BEGIN
     creature	= "mh#eyeff"
     location	= "actors"
     locbase
-    editstring	= "say_both_names=>24"
+    editstring	= ~say_both_names=>24~
   END
 END	// install_undead
 

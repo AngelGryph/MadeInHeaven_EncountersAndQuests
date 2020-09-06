@@ -1,0 +1,38 @@
+DEFINE_ACTION_FUNCTION demilich_curse
+BEGIN
+  LAUNCH_ACTION_FUNCTION make_effect
+    STR_VAR
+    effect		= "mh#dlcac mh#dlcsd mh#dlcsw mh#dlcsp mh#dlcsb mh#dlcss mh#dlcth"
+    editstring		= ~opcode=>"object_index from [0 33 34 35 36 37 278]" timing=>1 parameter1=>"-10" power=>9 resist_dispel=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION make_effect
+    STR_VAR
+    effect		= "mh#dlcst"
+    editstring		= ~opcode=>142 timing=>1 parameter2=>35 power=>9 resist_dispel=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "demilich_curse"
+    idsname		= "DEMILICH_CURSE"
+    location		= "spells"
+    editstring		= "say_name=>0"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file		= "mh#dlich.baf"
+    location		= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature		= "hldemi demilich esxlich"
+    editstring		= ~insert_script_high=>"mh#dlich"~
+  END
+END	// demilich_curse
+
+

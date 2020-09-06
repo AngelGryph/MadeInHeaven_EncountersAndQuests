@@ -5,15 +5,16 @@ TRIGGER
 ACTION	
   RESPONSE #scsprob1
     SetGlobalTimer("death_gaze", "locals", ONE_ROUND)
-    ForceSpell(scstarget, BODAK_DEATH_GAZE)
+    FaceObject(scstarget)
+    ReallyForceSpell(scstarget, BODAK_DEATH_GAZE)
 END
 
 IF TRIGGER
-  TriggerBlock(Slay|Enemy|MR)
-  TargetBlock(PlayersInRandomOrder)
+  TriggerBlock(Enemy|MR|Slay)
+  TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
 THEN DO
-  Action(DeathGaze)
+  Action(DeathGaze|50|50)
 END
 
 

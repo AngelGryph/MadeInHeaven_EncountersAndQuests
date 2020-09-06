@@ -1,0 +1,14 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 30)
+  Global("mh#demilich_curse", "locals", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#demilich_curse", "locals", 1)
+    DisplayStringHead(@1)
+    ReallyForceSpell(LastSeenBy(Myself), DEMILICH_CURSE)
+    Wait(1)
+    Continue()
+END
+
+
