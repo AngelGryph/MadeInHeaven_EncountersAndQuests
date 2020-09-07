@@ -1,0 +1,170 @@
+IF
+  Global("SpawnStart","AR5203",1)
+  !Dead("Yaga01")  // ~Yaga-Shura~
+  InActiveArea(Myself)
+  !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
+  Difficulty(EASY)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("ysfire02", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgtrl01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgsal01", 0)
+END
+
+IF
+  Global("SpawnStart","AR5203",1)
+  !Dead("Yaga01")  // ~Yaga-Shura~
+  InActiveArea(Myself)
+  !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("ysfire02", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgtrl01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgsal01", 0)
+END
+
+IF
+  Global("SpawnStart","AR5203",1)
+  !Dead("Yaga01")  // ~Yaga-Shura~
+  InActiveArea(Myself)
+  !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
+  Difficulty(HARD)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("ysfire02", 0)
+    CreateCreatureOffscreen("ysfire02", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgtrl01", 0)
+    CreateCreatureOffscreen("hgtrl01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgsal01", 0)
+    CreateCreatureOffscreen("hgsal01", 0)
+END
+
+IF
+  Global("SpawnStart","AR5203",1)
+  !Dead("Yaga01")  // ~Yaga-Shura~
+  InActiveArea(Myself)
+  !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("ysfire02", 0)
+    CreateCreatureOffscreen("ysfire02", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+    CreateCreatureOffscreen("hellho01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold02", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+    CreateCreatureOffscreen("yssold01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgtrl01", 0)
+    CreateCreatureOffscreen("hgtrl01", 0)
+    CreateCreatureOffscreen("hgtrl01", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+    CreateCreatureOffscreen("yssold03", 0)
+  RESPONSE #20
+    SetGlobalTimer("mh#spawn_army", "ar5203", FIVE_ROUNDS)
+    CreateCreatureOffscreen("hgsal01", 0)
+    CreateCreatureOffscreen("hgsal01", 0)
+    CreateCreatureOffscreen("hgsal01", 0)
+END
+
+

@@ -556,6 +556,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Battles: Yaga-Shura's Army
+
+BEGIN @52 
+GROUP @40  GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_yaga-shuras_army"
+  location	= "tob/yaga-shuras_army"
+END
+
+
 // Minor Quest Enhancements (ToB)
 
 BEGIN @47 
