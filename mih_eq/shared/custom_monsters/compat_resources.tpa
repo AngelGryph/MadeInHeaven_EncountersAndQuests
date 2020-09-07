@@ -24,7 +24,15 @@ BEGIN
       locbase
     END
   END
-  // TODO: Older engine animation files?
+  ELSE
+  BEGIN
+    // Require Infinity Animations on non-EE versions
+
+    ACTION_IF NOT MOD_IS_INSTALLED "infinityanimations.tp2" 0
+    BEGIN
+      FAIL @26
+    END
+  END
 END	// compat_resources
 
 

@@ -33,11 +33,11 @@
 <h2>Installation</h2>
 <div class="section">
   <p><strong>Before you install</strong><br/>
-  If you have an older version of MiH Encounters &amp; Quests, be sure to completely remove it first before trying to install the new version!</p>
+  If you have an older version of MiH Encounters &amp; Quests, be sure to completely remove it first before trying to unpack and install the new version!</p>
   <p><strong>Vanilla BG2 and Baldur's Gate Trilogy</strong><br/>
-  Before installing this mod, you must install the latest official patch, and you must also install the Throne of Bhaal Extender (ToBEx) and the G3 Fixpack version 11 or higher.  This mod will not work correctly without those two installed!</p>
+  Before installing this mod, you must install the latest official patch, and you must also install the Throne of Bhaal Extender (ToBEx) and the G3 Fixpack version 11 or higher.  This mod will not work correctly without those two installed!  Several of the components (specifically those that install new creatures, this includes most tactical challenges), will also require the Icewind Dale animations from the Infinity Animations mod.  Without this, these components cannot be installed.</p>
   <p><strong>BG1EE and Siege of Dragonspear</strong><br/>
-  If you obtained your version of the game through Steam or GoG, you must run a program called 'modmerge' before installing any WeiDU mods like this one.  If you obtained your game from Beamdog, this is not required.</p>
+  If you obtained your version of the game through Steam or GoG, you must run modmerge or install the A7-dlcmerger mod before installing any WeiDU mods like this one.  If you obtained your game from Beamdog, this is not required.</p>
   <p><strong>BG2EE and Extended Edition Trilogy</strong><br/>
   There are no requirements at this time.  For EET, install this mod after EET has been installed but before the EET installation is finalized.</p>
   <p><strong>Windows</strong><br/>
@@ -48,7 +48,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
     Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and is distributed as a compressed archive.  Extract the contents of the archive and move them to your game folder. Your game folder should then contain a mih_eq folder, setup-mih_eq, and setup-mih_eq.command. To install, simply double-click <strong>setup-mih_eq.command</strong> and follow the instructions on screen.</p>
   <p><strong>Linux</strong><br/>
     Extract the contents of the mod archive to your game installation directory.</p>
-  <p>If you haven't already, download the latest version of WeiDU for Linux from <a href="http://www.weidu.org/%7Ethebigg/" title="External link" rel="nofollow external">weidu.org</a> and extract (at least) the weidu executable to a $PATH directory (e.g. /usr/bin).</p>
+  <p>If you haven't already, download the latest version of WeiDU for Linux from <a href="http://www.weidu.org/%7Ethebigg/" title="External link" rel="nofollow external">weidu.org</a> and extract (at least) the weidu executable to a $PATH directory (/usr/local/bin is commonly used).</p>
   <p>To install, open a terminal, cd to your game installation directory and
  run <strong>weidu --log setup-mih_eq.debug mih_eq/setup-mih_eq.tp2</strong> from your game installation directory to install or uninstall the mod.</p>
   <p>Note: The readme files of some older mods recommend running tolower on Linux prior to installation.  <b>Don't do this on an Enhanced Edition game, you will break it!</b>  Modern versions of tolower will actually refuse to run in a EE game directory.  At any rate, the contents of MiH: Encounters &amp; Quests are already all lower case, there is no need for tolower.</p>
@@ -62,7 +62,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>These modifications try to make certain monsters a bit more accurate to their pen &amp; paper counterparts and as a result a little more challenging.  In these I try to stay as close to pen &amp; paper as I can.</p>
   <p><strong>P&amp;P Ankhegs</strong><br/>
   In the game, ankhegs fire their spittle at you like machine guns, but according to the Monstrous Manual they cannot actually do that.  This modification changes their spittle to a single-target breath weapon they can deploy only once every six hours, and they will do so when low on HP.  To make up for this, they are given an 18/50 strength, making them more dangerous in melee.</p>
-  <p>Additionally, ankhegs can have from 3 to 8 HD.  The ones in the games have the abilities of 8 HD monsters but are treated as having only 3 HD (thus making them vulnerable to Sleep).  This component makes them proper 8 HD monsters.  For the original saga, lesser versions (3-7 HD) are added to the ankheg pit dungeon in Farmer Brun's quest.<p/>
+  <p>Additionally, ankhegs can have from 3 to 8 HD.  The ones in the games have the abilities of 8 HD monsters but are treated as having only 3 HD (thus making them vulnerable to Sleep).  This component makes them proper 8 HD monsters.</p>
   <p>Tactical advice: Since you can no longer fully avoid the acid spittle, damage tends to accumulate rapidly in repeated encounters, making especially the ankheg pit quite dangerous.  Scrolls of Acid Resistance, or the Oil of Acid Resistance from my item pack are strongly recommended.</p>
   <p><strong>P&amp;P Basilisks</strong><br/>
   According to P&amp;P, greater basilisks have a deadly poisonous breath in addition to their stone gaze and poisoned claws.  This modification implements this in the form of a deadly gas cloud similar to iron golems.  In addition, they get dragon-like immunities (specifically, they get the "dragring" pseudo-item).  Note that on EE games this makes them immune to normal arrows.</p>
@@ -91,7 +91,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>Bone Golem:</i> These skeletal abominations emit a horrid laugh once every three rounds with paralyzes everyone who fails their saving throw.  Those who fail by 4 or more are instantly slain instead.  However, they lose their immunity to lightning and acid and actually become quite vulnerable to fire.  Their stats are str 19, dex 18, con 20, int 12, wis 2, cha 3.</p>
   <p><i>Brain Golem:</i> These horrid creations of the illithid get a few psionic defenses.  They project an inertial barrier which makes them immune to missiles and halves all other damage to them.  Their stats are str 20, dex 14, con 20, int 14, wis 2, cha 3.</p>
   <p><i>Burning Man:</i> This burning monstrosity already is more powerful than its P&amp;P counterpart, but there was some room for improvement.  Damage from its fists has been raised from a pitiful 1d4 to 2d8, and its regeneration rate has been tripled.  It will now see through invisibility, and it has been given actual golem immunities.  Its stats are str 22, dex 18, con 20, int 3, wis 2, cha 4.</p>
-  <p><i>Clay Golem:</i> These monsters get 50% resistance to crushing weapons (note that other wweapons can't damage them at all) and immunity to acid.  However, they are no longer immune to fire and cold.  They have these stats: str 20, dex 16, con 20, int 10, wis 2, cha 5.</p>
+  <p><i>Clay Golem:</i> These monsters get 50% resistance to crushing weapons (note that other weapons can't damage them at all) and immunity to acid.  However, they are no longer immune to fire and cold.  They have these stats: str 20, dex 16, con 20, int 10, wis 2, cha 5.</p>
   <p><i>Flesh Golem:</i> These creatures gain 50% resistance to cold and electricity and the following stats: str 19, dex 18, con 18, int 14, wis 2, cha 6.  In addition they get the salient ability <i>hyper regeneration</i>, which revives them after a while unless destroyed with fire or acid.</p>
   <p><i>Helmed Horror</i> These contructs reflect Magic Missile spells back at the caster and are immune to webs due to their levitation.  They are also immune to the spells Fireball, Lightning Bolt and Flame Strike.  The stronger Battle Horrors gain a few innate spell-like abilities.</p>
   <p><i>Iron Golem:</i> These titans gain 80% resistance to all weapons, but they lose their immunity to acid and lightning.  Their stats are str 24, dex 17, con 20, int 9, wis 2, cha 7.</p>
@@ -112,6 +112,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>New enemies: Dracolisk, <strike>Pyrolisk</strike> (not implemented yet).</i></p>
   <p><strong>Enhanced Battles: Ramazith's Tower</strong><br/>
   This is the tower of Ramazith just north of the Three Kegs, visited during the nymph's quest.  The enemies on the various floors are mostly pathetic, this component spices that up a great deal.  Expect some serious resistance here.</p>
+  <p><i>New enemies: Wight, Greater Wight.</i></p>
   <p><strong>Enhanced Battles: The Spider Plague</strong><br/>
   This modification affects two areas, the Spider Wood to the far east of the Friendly Arm Inn (with the Red Wizards) and the second part of the Cloakwood.  The game manual mentions a spider plague going on, so this modification makes it so that you will be facing a lot of spiders in these areas.  Spider will spawn continuously offscreen to a certain maximum.  At higher difficulties, more dangerous spiders will spawn occasionally as well.</p>
   <p><i>New enemies: Hairy Spider</i></p>
@@ -153,7 +154,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   There are two unique vampire encounters in Siege of Dragonspear, Tsolak and the unnamed vampire in the Trollbark forest.  Unfortunately, a single fledgling vampire just isn't a match for a decently equipped level 7-9 party, so this modificcation spices things up a bit to hopefully make them a decent challenge.</p>
   <p>Tsolak is given the stats of a very old vampire: HD 11+1, str 18/00, con 18, dex 18, int 18, cha 17, SA: level drain (3 levels), SD: +2 required to hit, MR 20%.  The dire wolves he summons are a bit stronger and tougher than normal ones.  He may also have one last trick up his sleeve...</p>
   <p>The Trollbark vampire is an old vampire: HD 10+2, str 18/00, con 18, dex 17, int 17, cha 16, SA: level drain (2 levels), SD: +2 required to hit, MR 10%.  He has a few fledgling vampire thralls.</p>
-  <p>Note that Tsolak and the Trollbark vampire also benefit from the Improved Vampire Resistances component, further toughening them.</p>
+  <p>Note that Tsolak and the Trollbark vampire also benefit from the Improved Vampire Abilities &amp; Resistances component, further toughening them.</p>
   <p><strong>Enhanced Battles: Cyric's Temple</strong><br/>
   This is the old temple to Bhaal near Bridgefort, now taken over by worshippers of Cyric.  It's already a nice challenge, having a dragon, a half-dragon and a mind flayer encounter, but I still thought there was some room for a little more...</p>
   <p>The green dragon Morentherene gets extra hit points and a slightly more powerful breath weapon.  She will now also always be assisted with some young green dragons, which have also been beefed slightly.</p>
@@ -195,12 +196,12 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><strong>Enhanced Battles: Underdark</strong><br/>
   This component enhances various Underdark encounters, including those in Ust Natha and in the beholder- and illithid lairs.  Expect some heavy resistance here.</p>
   <p>Kuo-toa gain several levels (default 6, configurable in the ini file) to bring their threat level somewhat on par with the drow, beholders and illithid.  In the illithid lair,the ogre servant and insane dwarf encounters have been beefed up considerably and you will see many more mind flayers as well as some very strong umber hulks.</p>
-  <p>In Ust Natha, the battle with the lich Deirex has been enhanced and he has gained the Animate Dead salient ability.  He will constantly spawn undead minions in addition to casting his spells.</p>
+  <p>In Ust Natha, the battle with the lich Deirex has been enhanced and he has gained the Animate Dead salient ability.  He will constantly spawn undead minions in addition to casting his spells.  Note that as a lich he will also benefit from the Improved Lich Resistances component.</p>
   <p><i>New enemies: Mohrg.</i></p>
   <p><strong>Enhanced Battles: Athkatla Liches</strong><br/>
-  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.</p>
-  <p>The Elemental Lich is now immune to most elemental attacks (fire, cold, lightning and acid and resists slashing- and piercing attacks.  He has gained the salient ability to regenerate 2 hp per round.  During the battle various elemental creatures will spawn.</p>
-  <p>The Shade Lich now takes half damage from most sources except crushing attacks, and also has the salient ability to regenerate 2 hp per round.  During the battle, various creatures from the shadow plane will spawn.</p>
+  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.  Note that these liches also benefit from the Improved Lich Resistances component.</p>
+  <p>The Elemental Lich is now immune to most elemental attacks (fire, cold, lightning and acid).  He has gained the salient ability to regenerate 2 hp per round.  During the battle various elemental creatures will spawn.</p>
+  <p>The Shade Lich now takes half damage from most sources, and also has the salient ability to regenerate 2 hp per round.  During the battle, various creatures from the shadow plane will spawn.</p>
   <p><strong>Enhanced Battles: Suldanessenar</strong><br/>
   <p>Currently this only enhances the batle with Irenicus' black dragon, but I may add other enhancements in the future once I think of some.</p>
   <p>The black dragon will now be assisted by a variety of swamp creatures, including shambling mounds, earth elementals, and brown puddings.</p>
@@ -238,7 +239,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
     <a href="https://www.gibberlings3.net/mods/tools/dltcep/"><acronym title="DragonLance Total Converter Editor Pro">DLTCEP</acronym></a> by Avenger</p>
     <a href="http://www.shsforums.net/files/file/837-bam-batcher/">BAM Batcher</a> by Miloch</p>
   <p><strong>People who Contributed in some way</strong><br/>
-    DavidW for providing Detectable Spells, the SFO function library and the SSL AI scripting language, and valuable advice on mod structure.</br/>
+    DavidW for providing Detectable Spells, the SFO function library and the SSL AI scripting language, valuable advice on mod structure, and actually helping me write my own SSL scripts.<br/>
     Everyone who reported bugs and other issues.<br/>
     All people brave enough to try and install my early beta versions...<br/>
     The people at Bioware and Beamdog, for creating respectively the original games and the Enhanced Editions in the first place.<br/>
@@ -271,6 +272,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
     <li>Conversion to SFO/SSL, implemented immutability.</li>
     <li>Broken creatures in Firkraag's lair have been replaced.</li>
     <li>Many new components added.</li>
+    <li>Many bugs squashed.</li>
   </ul>
   <p><strong>Version 3 - December 2019</strong></p>
   <ul>

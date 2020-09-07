@@ -35,7 +35,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION clone_creature
       STR_VAR
       creature		= "elwatg01=>elwatl01 elwatg01=>elwat01"
-      editstring	= ~level_all=>"object_index from [8 12]" enforce_hp=>at_best enforce_thac0=>at_best enforce_saves=>at_best enforce_xp=>4 say_both_names=>"object_index from [13 14]"~
+      editstring	= ~level1=>"object_index from [8 12]" enforce_hp=>at_best enforce_thac0=>at_best enforce_saves=>at_best enforce_xp=>4 say_both_names=>"object_index from [13 14]" dv=>DEST_RES~
     END
   END
 

@@ -1,19 +1,56 @@
 DEFINE_ACTION_FUNCTION install_elementals
 BEGIN
-  // Blood Elemental
+  // Ooze Paraelementals
 
-  LAUNCH_ACTION_FUNCTION clone_item
+  LAUNCH_ACTION_FUNCTION install_item
     STR_VAR
-    item	= "b3-18m3=>mh#blood"
-    editstring	= ~add_effect_inline=>"opcode=>146 target=>2 timing=>1 parameter2=>1 resource=>spin997"~
+    item	= "mh#oozel"
+    location	= "items"
+    locbase
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
-    creature	= "mh#bldle mh#bldel mh#bldge"
+    creature	= "mh#oozle mh#oozel mh#oozgr"
+    editstring	= ~say_both_names=>"object_index from [21 22 23]"~
     location	= "actors"
     locbase
-    editstring	= ~say_both_names=>"object_index from [21 22 23]"~
+  END
+
+
+  // Magma Paraelementals
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#magel"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#magle mh#magel mh#maggr"
+    editstring	= ~say_both_names=>"object_index from [27 28 29]" animation=>"elemental_fire_iwd"~
+    location	= "actors"
+    locbase
+  END
+
+
+  // Ice Paraelementals
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#iceel"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#icele mh#iceel mh#icegr"
+    editstring	= ~say_both_names=>"object_index from [30 31 32]"~
+    location	= "actors"
+    locbase
   END
 END	// install_elementals
 

@@ -19,10 +19,16 @@
 @18  = ~Bodak~
 @19  = ~Wight~
 @20  = ~Greater Wight~
-@21  = ~Lesser Blood Elemental~
-@22  = ~Blood Elemental~
-@23  = ~Greater Blood Elemental~
+@21  = ~Lesser Ooze Paraelemental~
+@22  = ~Ooze Paraelemental~
+@23  = ~Greater Ooze Paraelemental~
 @24  = ~Eye of Fear and Flame~
 @25  = ~Hairy Spider~
-
+@26  = ~This component requires InfinityAnimations on non-EE games!~
+@27  = ~Lesser Magma Paraelemental~
+@28  = ~Magma Paraelemental~
+@29  = ~Greater Magma Paraelemental~
+@30  = ~Lesser Ice Paraelemental~
+@31  = ~Ice Paraelemental~
+@32  = ~Greater Ice Paraelemental~
 

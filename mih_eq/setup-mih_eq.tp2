@@ -158,6 +158,8 @@ END
 BEGIN @9 
 GROUP @10  GAME_INCLUDES "bg1"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_candlekeep_catacombs"
@@ -169,6 +171,8 @@ END
 
 BEGIN @12 
 GROUP @10  GAME_INCLUDES "bg1"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -182,6 +186,8 @@ END
 BEGIN @13 
 GROUP @10  GAME_INCLUDES "bg1"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_ramaziths_tower"
@@ -194,6 +200,8 @@ END
 BEGIN @49 
 GROUP @10  GAME_INCLUDES "bg1"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_spider_plague"
@@ -205,6 +213,8 @@ END
 
 BEGIN @15 
 GROUP @10  GAME_INCLUDES "bg1"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -241,6 +251,8 @@ END
 
 BEGIN @19 
 GROUP @10  GAME_INCLUDES "totsc"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -389,6 +401,8 @@ END
 BEGIN @28 
 GROUP @29  GAME_INCLUDES "bg2"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_graveyard"
@@ -400,6 +414,8 @@ END
 
 BEGIN @30 
 GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -413,6 +429,8 @@ END
 BEGIN @31 
 GROUP @29  GAME_INCLUDES "bg2"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_slum_sewers"
@@ -424,6 +442,8 @@ END
 
 BEGIN @32 
 GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -437,6 +457,8 @@ END
 BEGIN @33 
 GROUP @29  GAME_INCLUDES "bg2"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_temple_ruins"
@@ -448,6 +470,8 @@ END
 
 BEGIN @34 
 GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -461,6 +485,8 @@ END
 BEGIN @35 
 GROUP @29  GAME_INCLUDES "bg2"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_spellhold"
@@ -472,6 +498,8 @@ END
 
 BEGIN @36 
 GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -485,6 +513,8 @@ END
 BEGIN @37 
 GROUP @29  GAME_INCLUDES "bg2"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_athkatla_liches"
@@ -496,6 +526,8 @@ END
 
 BEGIN @38 
 GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -512,6 +544,8 @@ END
 
 BEGIN @39 
 GROUP @40  GAME_INCLUDES "tob"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -537,6 +571,8 @@ END
 BEGIN @42 
 GROUP @40  GAME_INCLUDES "tob"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_saradush"
@@ -548,6 +584,8 @@ END
 
 BEGIN @48 
 GROUP @40  GAME_INCLUDES "tob"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -589,17 +627,6 @@ GROUP @10  GAME_INCLUDES "bg1"
 LAUNCH_ACTION_FUNCTION mh_run_task
   STR_VAR
   task			= "enhance_undercity"
-END
-
-
-// A Real Spider Plague
-
-BEGIN ~A Real Spider Plague~
-GROUP @10  GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_spider_plague"
 END
 */
 

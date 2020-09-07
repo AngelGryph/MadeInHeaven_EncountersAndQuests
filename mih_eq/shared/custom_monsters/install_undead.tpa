@@ -16,14 +16,7 @@ BEGIN
 
   MAKE_PATCH
     say_both_names=>"object_index from [19 19 19 20]"
-  END
-
-  ACTION_IF IDS_OF_SYMBOL("animate" "wight_gray") != "-1"
-  BEGIN
-    ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
-    BEGIN
-      animation=>"wight_gray"
-    END
+    animation=>"wight_gray"
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
@@ -36,14 +29,7 @@ BEGIN
 
   MAKE_PATCH
     say_both_names=>0
-  END
-
-  ACTION_IF IDS_OF_SYMBOL("animate" "wight_barrow") != "-1"
-  BEGIN
-    ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
-    BEGIN
-      animation=>"wight_barrow"
-    END
+    animation=>"wight_barrow"
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
