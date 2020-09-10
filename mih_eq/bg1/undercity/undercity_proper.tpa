@@ -1,0 +1,28 @@
+DEFINE_ACTION_FUNCTION undercity_proper
+BEGIN
+  MAKE_PATCH
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>12 spawn_base_number=>200 spawn_count=>10 spawn_creature1=>"ghast" spawn_creature2=>"mh#wight" spawn_creature3=>"jellgr" spawn_creature4=>"jelloc" spawn_creature5=>"jellmu" spawn_creature6=>"spidph" spawn_creature7=>"spidsw" spawn_creature8=>"spidwr" spawn_creature9=>"dopple" spawn_creature10=>"doppgr"~
+
+    add_actor_inline'01=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>2240 actor_y_coord=>3210 actor_orientation=>15~
+    add_actor_inline'02=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>2370 actor_y_coord=>3220 actor_orientation=>15~
+    add_actor_inline'03=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght6" actor_x_coord=>3810 actor_y_coord=>2670 actor_orientation=>13~
+    add_actor_inline'04=>~actor_name=>"{literal:Black Pudding}" actor_resource=>"mh#blkpd" actor_x_coord=>630 actor_y_coord=>1650 actor_orientation=>14~
+    add_actor_inline'05=>~actor_name=>"{literal:Black Pudding}" actor_resource=>"mh#blkpd" actor_x_coord=>920 actor_y_coord=>1605 actor_orientation=>3~
+    add_actor_inline'06=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>3910 actor_y_coord=>2225 actor_orientation=>2~
+    add_actor_inline'07=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>3985 actor_y_coord=>2185 actor_orientation=>8~
+    add_actor_inline'08=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>4110 actor_y_coord=>2230 actor_orientation=>11~
+    add_actor_inline'09=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght6" actor_x_coord=>3360 actor_y_coord=>540 actor_orientation=>15~
+    add_actor_inline'10=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght6" actor_x_coord=>1390 actor_y_coord=>2615 actor_orientation=>15~
+    add_actor_inline'11=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>2470 actor_y_coord=>2000 actor_orientation=>7~
+    add_actor_inline'12=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>2560 actor_y_coord=>1950 actor_orientation=>9~
+    add_actor_inline'13=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>2615 actor_y_coord=>2110 actor_orientation=>2~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%Undercity%"
+    edits	= "patch_data"
+  END
+END	// undercity_proper
+
+

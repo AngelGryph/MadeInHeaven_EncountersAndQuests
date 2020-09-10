@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION setup_undercity
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_custom_monsters"
+    locbase	= "shared/custom_monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "thieves_maze undercity_proper"
+    tra		= "undercity"
+  END
+END	// setup_undercity
+
+

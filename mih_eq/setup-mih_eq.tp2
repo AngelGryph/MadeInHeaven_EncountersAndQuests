@@ -209,6 +209,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Battles: Thieves' Maze & Undercity
+
+BEGIN @54
+GROUP @10  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_undercity"
+  location	= "bg1/undercity"
+END
+
+
 // Enhanced Battles: Ulcaster Ruins
 
 BEGIN @15 
@@ -616,18 +628,5 @@ LAUNCH_ACTION_FUNCTION run
   file		= "setup_minor_quests_tob"
   location	= "tob/minor_quests"
 END
-
-
-/*
-// Enhanced Thieves' Maze & Undercity
-
-BEGIN ~Enhanced Thieves' Maze & Undercity~
-GROUP @10  GAME_INCLUDES "bg1"
-
-LAUNCH_ACTION_FUNCTION mh_run_task
-  STR_VAR
-  task			= "enhance_undercity"
-END
-*/
 
 

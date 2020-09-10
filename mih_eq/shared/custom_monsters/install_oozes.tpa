@@ -45,6 +45,38 @@ BEGIN
     editstring	= "say_both_names=>17"
     locbase
   END
+
+
+  // Black Pudding
+
+  OUTER_SET armor_damaged = RESOLVE_STR_REF (@34)
+
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"opcode = 139" parameter1=>%armor_damaged%~
+  END
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#pudbl"
+    edits	= "patch_data"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell	= "mh#pudbl"
+    location	= "spells"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#pudbl"
+    location	= "actors"
+    editstring	= "say_both_names=>33"
+    locbase
+  END
 END	// install_oozes
 
 
