@@ -39,6 +39,9 @@ BEGIN
   END
 
   MAKE_PATCH
+    ac_vs_slashing=>"-4"
+    ac_vs_piercing=>"-3"
+    ac_vs_missiles=>"-3"
     delete_opcodes=>206
     immunity_to_spell=>"spwi304 spwi308 sppr503"
     add_effect_inline'1=>"opcode=>63 target=>1 timing=>9"
