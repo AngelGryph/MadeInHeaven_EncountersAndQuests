@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION pnp_ankhegs
 BEGIN
   MAKE_PATCH
-    patch_ability_inline=>~ability_dicenum=>3 strength_bonus=>1 add_effect_inline=>"opcode=>12 parameter2=>65536 dicenum=>1 dicesize=>4"~
+    patch_ability_inline=>~ability_dicenum=>3 strength_bonus=>1 add_effect_inline=>"opcode=>12 parameter2=>0x00010000 dicenum=>1 dicesize=>4"~
   END
     
   LAUNCH_ACTION_FUNCTION clone_item

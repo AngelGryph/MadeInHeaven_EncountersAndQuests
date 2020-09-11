@@ -11,7 +11,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
     item		= "p2-8=>mh#wiwlf"
-    editstring		= ~add_effect_inline=>"opcode=>12 target=>2 timing=>1 parameter2=>131072 dicenum=>1 dicesize=>6"~
+    editstring		= ~add_effect_inline=>"opcode=>12 target=>2 timing=>1 parameter2=>0x00020000 dicenum=>1 dicesize=>6"~
   END
 
   LAUNCH_ACTION_FUNCTION install

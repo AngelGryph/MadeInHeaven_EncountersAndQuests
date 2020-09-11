@@ -4,7 +4,7 @@ BEGIN
     patch_ability_inline=>~to_hit=>10 strength_bonus=>0 ability_dicenum=>0 ability_dicesize=>0 damage_type=>0~
     delete_effect=>"opcode is_in [12 215]"
     patch_effect_inline=>~match=>"opcode is_in [243 244]" save_vs_spell=>0 save_bonus=>0~
-    add_effect_inline'1=>~opcode=>12 target=>2 timing=>1 parameter2=>4194304 dicenum=>3 dicesize=>10 resist_dispel=>2~
+    add_effect_inline'1=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00400000 dicenum=>3 dicesize=>10 resist_dispel=>2~
     add_effect_inline'2=>~opcode=>58 target=>2 timing=>1 resist_dispel=>2~
     add_effect_inline'3=>~opcode=>215 target=>2 duration=>2 resource=>"icmagich" resist_dispel=>2~
   END
