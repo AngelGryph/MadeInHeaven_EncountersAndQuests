@@ -1,0 +1,20 @@
+BEGIN_ACTION_DEFINITION
+Name(DoomGaze)
+TRIGGER
+  !GlobalTimerNotExpired("mh#doom_gaze", "locals")
+ACTION	
+  RESPONSE #scsprob1
+    SetGlobalTimer("mh#doom_gaze", "locals", ONE_ROUND)
+    FaceObject(scstarget)
+    ReallyForceSpell(scstarget, VONGOETHE_DOOM_GAZE)
+END
+
+IF TRIGGER
+  TriggerBlock(Enemy|MR|ResistMagicDamage|Slay)
+  TargetBlock(PCsInOrder)
+  TargetBlock(EnemiesInOrder)
+THEN DO
+  Action(DoomGaze|50|50)
+END
+
+

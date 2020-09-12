@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION lich_resistances
+DEFINE_ACTION_FUNCTION lich_stats
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
@@ -21,9 +21,20 @@ BEGIN
     INT_VAR
     allow_missing	= 1
     STR_VAR
-    item		= "lich mh#elich mh#slich"
+    item		= "lich mh#elich mh#slich mh#vgoet"
     edits		= "patch_data"
   END
-END	// lich_resistances
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>0 ability_dicesize=>0 damage_type=>0 to_hit=>4~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00020000 dicenum=>1 dicesize=>10~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item		= "lich02 lichel01"
+    edits		= "patch_data"
+  END
+END	// lich_stats
 
 

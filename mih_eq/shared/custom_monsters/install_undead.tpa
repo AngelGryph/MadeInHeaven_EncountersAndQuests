@@ -189,6 +189,7 @@ BEGIN
   END
 
   MAKE_PATCH
+    delete_effect=>"opcode is_in [171 172]"
     patch_effect_inline=>~match=>"save_vs_death = 1" save_bonus=>"-4"~
     name1_string=>23086
   END

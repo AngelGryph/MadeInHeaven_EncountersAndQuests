@@ -1,0 +1,61 @@
+DEFINE_ACTION_FUNCTION vongoethe_battle
+BEGIN
+  LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    STR_VAR
+    typename	= "innate"
+    idsname	= "VONGOETHE_DOOM_GAZE"
+    level	= 7
+    RET
+    newname
+  END
+
+  MAKE_PATCH
+    delete_effect=>"opcode is_in [171 172]"
+    patch_effect_inline=>~match=>"save_vs_death = 1" save_bonus=>"-6"~
+    add_effect_inline=>~opcode=>12 parameter2=>0x00400000 dicenum=>2 dicesize=>10 resist_dispel=>1~
+    say_name=>0
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_spell
+    STR_VAR
+    spell	= "spin991=>%newname%"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    // Salient Ability: Regeneration (18/round)
+    add_effect_global_inline'1=>~opcode=>98 timing=>2 parameter1=>3 parameter2=>2~
+    // Salient Ability: Ignore Metal
+    delete_effect_global=>"opcode is_in [86 87 88 89]"
+    add_effect_global_inline'2=>~number_to_add=>4 opcode=>"entry_index from [86 87 88 89]" timing=>2 parameter1=>75 parameter2=>1~
+    // Power Ritual: Personal Protection (+4 or better)
+    add_effect_global_inline'2=>~number_to_add=>3 opcode=>120 timing=>2 parameter1=>"entry_index + 1"~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "lich=>mh#vgoet"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+    STR_VAR
+    script	= "mh#vgoet"
+    location	= "scripts"
+    locbase
+    ssllibrary	= "%mod_root%/ssl/library"
+  END
+
+  MAKE_PATCH
+    replace_items=>"mh#vgoet(rring)"
+    insert_script_high=>"mh#vgoet"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "amlich01"
+    edits	= "patch_data"
+  END
+END	// vongoethe_battle
+
+

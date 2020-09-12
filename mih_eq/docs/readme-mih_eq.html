@@ -99,7 +99,8 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>Stone Golem:</i> Due to their stone construction, these get 90% resistance to slashing, piercing and missile damage, and 50% resistance to fire, cold, lightning and acid.  Their stats are: str 22, dex 17, con 20, int 9, wis 2, cha 8.</p>
   <p>Tactical advice: While still mostly their stupid old selves, these resistances and abilities make golems a genuine threat.  You may have to exploit their weak points, but keep in mind that they still are immune to spells cast directly at them.  You may have to get a little creative here.  Weapons that deal additional elemental damage may help.</p>
   <p><strong>Improved Lich Abilities &amp; Resistances</strong><br/>
-  This component adds a small amount of additional resistances to liches.  They gain 50% resistance to slashing-, piercing- and missile damage, and are made resistant to low-level spells (default up to 3rd, can be changed in the ini file).  It also ensures they are at least high enough level to cast their most powerful memorized spells, this will also adjust their thac0, saves, hit points and xp value accordingly.</p>
+  This component adds a small amount of additional resistances to liches.  They gain 50% resistance to slashing-, piercing- and missile damage, and are made resistant to low-level spells (default up to 3rd, can be changed in the ini file).  It also modifies their touch attack to have +4 bonus to hit, and makes it deal cold damage rather than piercing damage.</p>
+  <p>It also ensures they are at least high enough level to cast their most powerful memorized spells, this will also adjust their thac0, saves, hit points and xp value accordingly.</p>
   <p>Demiliches gain the ability to utter a powerful curse on anyone unfortunate enough to disturb them, severely weakening them until they can get a Remove Curse spell or similar cast on them; even death does not remove this curse.</p>
   <p>Note: In vanilla BG2, liches are already immune to spells up to 5th level, this component may lower that.  The SCS mod takes this immunity away, install this component after SCS to (partially) restore it.</p>
   <h3>Tactical Challenges: Original Saga</h3>
@@ -202,9 +203,9 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>In Ust Natha, the battle with the lich Deirex has been enhanced and he has gained the Animate Dead salient ability.  He will constantly spawn undead minions in addition to casting his spells.  Note that as a lich he will also benefit from the Improved Lich Resistances component.</p>
   <p><i>New enemies: Mohrg.</i></p>
   <p><strong>Enhanced Battles: Athkatla Liches</strong><br/>
-  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.  Note that these liches also benefit from the Improved Lich Resistances component.</p>
-  <p>The Elemental Lich is now immune to most elemental attacks (fire, cold, lightning and acid).  He has gained the salient ability to regenerate 2 hp per round.  During the battle various elemental creatures will spawn.</p>
-  <p>The Shade Lich now takes half damage from most sources, and also has the salient ability to regenerate 2 hp per round.  During the battle, various creatures from the shadow plane will spawn.</p>
+  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.  Note that these liches also benefit from the Improved Lich Abilities &amp; Resistances component.</p>
+  <p>The Elemental Lich is now immune to most elemental attacks (fire, cold, lightning and acid).  I also give him his proper touch attack (this was already in the game, but unused).  He has gained the salient ability to regenerate 12 hp per round.  During the battle various elemental creatures will spawn.</p>
+  <p>The Shade Lich now takes half damage from most sources, and also has the salient ability to regenerate 12 hp per round.  During the battle, various creatures from the shadow plane will spawn.</p>
   <p><strong>Enhanced Battles: Suldanessenar</strong><br/>
   <p>Currently this only enhances the batle with Irenicus' black dragon, but I may add other enhancements in the future once I think of some.</p>
   <p>The black dragon will now be assisted by a variety of swamp creatures, including shambling mounds, earth elementals, and brown puddings.</p>
@@ -222,6 +223,17 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>Gromnir's Barracks:</i>Gromnir's mercenaries gain a bunch of levels (default 8, configurable in the ini file) to make them at least something of a threat to epic level characters.  Area of effect spells are highly recommended here.</p>
   <p><i>Sewer Shadows:</i> More shadows will now spawn during the battle with Yaga-Shura's sappers, including a few fairly dangerous versions.</p>
   <p><i>Cursed Prison:</i> The other path into Saradush castle is now home to high-level vampires and the entire prison is now a desecrated zone, strengthening undead and gradually draining the living.  You should not stay around longer than needed.</p>
+  <p><i>New enemies: Bodak</i></p>
+  <p><strong>Enhanced Battles: Forest of Mir</strong><br/>
+  This component enhances the encounters in the old Bhaal temple in the Forest of Mir.  The Master Wraith was wielding a non-magical staff that likely can't even hurt the hero, this is made into a proper +4 weapon, and its life-draining property has been enhanced.  He also spawns more minions during the fight.</p>
+  <p>The temple itself sees more undead, including several new types, as well as the return of bone golems.  The battle with Nyalee is unchanged for now, as SCS already does a great job enhancing it.</p>
+  <p><i>New enemies: Bodak, Eye of Fear and Flame</i></p>
+  <p><strong>Enhanced Battles: Yaga-Shura's Army</strong><br/>
+  For an "army", old Yaga's troops are pretty pathetic, especially if you have seen the endgame of Siege of Dragonspear.  Now when you confront Yaga-Shura he will already have several troops with him, and more will be spawning during the battle.  I've also slightly raised their levels, by how much can be configured in the .ini file (default 3).</p>
+  <p>NB: I have been told this might conflict with a component of Ascension, but so far this remains untested.</p>
+  <p><strong>Enhanced Battles: Amkethran</strong><br/>
+  This component enhanced several encounters during your visit of the desert town Amlethran in the final stretch of the Bhaalspawn's journey.</p>
+  <p><i>Vongoethe:</i> This powerful lich gains several salient abilities.  He now has a Doom Gaze that causes pain and death that he can use in addition to his spells, and he regenerates 18 hp/round.  He also enjoys mighty physical protections: +4 or better weapons are required to hit him, and damage by weapons is reduced by 75%.</p>
   <h3>Encounters &amp; Quests: Throne of Bhaal</h3>
   <p>These modifications extend existing quests or add new encounters and quests in the Throne of Bhaal portion,  including Watcher's Keep.</p>
   <p><strong>Minor Quest Tweaks (ToB)</strong><br/>

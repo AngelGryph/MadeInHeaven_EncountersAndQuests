@@ -1,0 +1,18 @@
+DEFINE_ACTION_FUNCTION setup_amkethran
+BEGIN
+  /*
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_custom_monsters"
+    locbase	= "shared/custom_monsters"
+  END
+  */
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "vongoethe_battle"
+    tra		= "amkethran"
+  END
+END	// setup_amkethran
+
+

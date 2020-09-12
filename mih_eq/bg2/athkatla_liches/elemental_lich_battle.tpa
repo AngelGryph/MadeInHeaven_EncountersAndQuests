@@ -3,8 +3,8 @@ BEGIN
   MAKE_PATCH
     // Salient Ability: Elemental Immunity (acid,fire)
     add_effect_global_inline'1=>~number_to_add=>2 opcode=>"entry_index from [27 30]" timing=>2 parameter1=>100 parameter2=>1~
-    // Salient Ability: Regeneration (6/round)
-    add_effect_global_inline'2=>~opcode=>98 timing=>2 parameter1=>1 parameter2=>2~
+    // Salient Ability: Regeneration (12/round)
+    add_effect_global_inline'2=>~opcode=>98 timing=>2 parameter1=>2 parameter2=>2~
     // Salient Ability: Improved Weapon Immunity (+3 or better)
     add_effect_global_inline'3=>~number_to_add=>2 opcode=>120 timing=>2 parameter1=>"entry_index + 1"~
   END
@@ -18,7 +18,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "hllich"
-    editstring	= ~replace_items=>"mh#elich(rring)"~
+    editstring	= ~replace_items=>"lichel01(weapon1) mh#elich(rring)"~
   END
 
   LAUNCH_ACTION_FUNCTION extend_area_script

@@ -214,6 +214,8 @@ END
 BEGIN @54
 GROUP @10  GAME_INCLUDES "bg1"
 
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_undercity"
@@ -552,17 +554,30 @@ END
 // Tactical Challenges: Throne of Bhaal
 // ====================================
 
-// Enhanced Battles: Watcher's Keep
 
-BEGIN @39 
+// Enhanced Battles: Amkethran
+
+BEGIN @55 
+GROUP @40  GAME_INCLUDES "tob"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_amkethran"
+  location	= "tob/amkethran"
+END
+
+
+// Enhanced Battles: Forest of Mir
+
+BEGIN @48 
 GROUP @40  GAME_INCLUDES "tob"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_watchers_keep"
-  location	= "tob/watchers_keep"
+  file		= "setup_forest_of_mir"
+  location	= "tob/forest_of_mir"
 END
 
 
@@ -592,19 +607,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Enhanced Battles: Forest of Mir
+// Enhanced Battles: Watcher's Keep
 
-BEGIN @48 
+BEGIN @39 
 GROUP @40  GAME_INCLUDES "tob"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_forest_of_mir"
-  location	= "tob/forest_of_mir"
+  file		= "setup_watchers_keep"
+  location	= "tob/watchers_keep"
 END
-
 
 // Enhanced Battles: Yaga-Shura's Army
 
