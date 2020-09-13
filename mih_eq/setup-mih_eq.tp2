@@ -620,6 +620,7 @@ LAUNCH_ACTION_FUNCTION run
   location	= "tob/watchers_keep"
 END
 
+
 // Enhanced Battles: Yaga-Shura's Army
 
 BEGIN @52 

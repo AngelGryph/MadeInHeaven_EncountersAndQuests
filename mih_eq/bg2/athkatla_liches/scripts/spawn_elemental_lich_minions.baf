@@ -3,24 +3,7 @@ IF
   Allegiance("hllich", ENEMY)
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
-  Difficulty(EASY)
-  InActiveArea(Myself)
-THEN
-  RESPONSE #100
-    SetGlobal("mh#SpawnMinions", "MYAREA", 1)
-    DisplayStringHead("hllich", @1)
-    CreateCreatureObjectEffect("elfirl01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elearl01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elairl01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elwatl01", "spdimndr", "hllich")
-END
-
-IF
-  Exists("hllich")
-  Allegiance("hllich", ENEMY)
-  !Dead("hllich")
-  Global("mh#SpawnMinions", "MYAREA", 0)
-  Difficulty(NORMAL)
+  Difficulty(EASIEST)
   InActiveArea(Myself)
 THEN
   RESPONSE #100
@@ -29,7 +12,7 @@ THEN
     CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elwat01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#wat12", "spdimndr", "hllich")
 END
 
 IF
@@ -37,7 +20,8 @@ IF
   Allegiance("hllich", ENEMY)
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
-  Difficulty(HARD)
+  DifficultyGT(EASIEST)
+  DifficultyLT(HARD)
   InActiveArea(Myself)
 THEN
   RESPONSE #100
@@ -54,18 +38,17 @@ IF
   Allegiance("hllich", ENEMY)
   !Dead("hllich")
   Global("mh#SpawnMinions", "MYAREA", 0)
-  Difficulty(HARDEST)
+  DifficultyGT(NORMAL)
   InActiveArea(Myself)
 THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
     DisplayStringHead("hllich", @1)
-    CreateCreatureObjectEffect("elfirg01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elearg01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elairg01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elwatg01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#ear20", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#fir20", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#air20", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#wat20", "spdimndr", "hllich")
 END
-
 
 IF
   Exists("hllich")
@@ -77,16 +60,16 @@ IF
 THEN
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mepair01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mepear01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mepfir01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mepice01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#wat12", "spdimndr", "hllich")
 END
 
 
@@ -100,16 +83,16 @@ IF
 THEN
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mepair01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mepear01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mepfir01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mepice01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#wat12", "spdimndr", "hllich")
 END
 
 
@@ -123,16 +106,16 @@ IF
 THEN
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mepair01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mepear01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mepfir01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
   RESPONSE #25
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mepice01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("mh#wat12", "spdimndr", "hllich")
 END
 
 

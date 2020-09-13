@@ -2,7 +2,13 @@ DEFINE_ACTION_FUNCTION setup_watchers_keep
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "machine_ltm"
+    file	= "setup_custom_monsters"
+    locbase	= "shared/custom_monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "elemental_labs machine_ltm"
   END
 END	// setup_watchers_keep
 

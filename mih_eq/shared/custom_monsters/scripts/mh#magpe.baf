@@ -1,0 +1,11 @@
+IF
+  Range(NearestEnemyOf(Myself), 5)
+  !GlobalTimerNotExpired("heat_aura", "locals")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("heat_aura", "locals", ONE_ROUND)
+    ReallyForceSpell(Myself, MAGMA_PARA_HEAT)
+    Continue()
+END
+
+

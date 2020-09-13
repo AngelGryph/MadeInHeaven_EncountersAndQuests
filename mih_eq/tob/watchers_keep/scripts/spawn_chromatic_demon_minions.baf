@@ -1,0 +1,95 @@
+IF
+  Exists("gorchr")
+  Allegiance("gorchr", ENEMY)
+  !Dead("gorchr")
+  Global("mh#chromatic_minions", "myarea", 0)
+  Difficulty(EASIEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#chromatic_minions", "myarea", 1)
+    CreateCreatureObjectEffect("elfir01", "gorchr", 14, 0, 0)
+    CreateCreatureObjectEffect("elair01", "gorchr", 2, 0, 0)
+    CreateCreatureObjectEffect("mh#oozpe", "gorchr", 6, 0, 0)
+    CreateCreatureObjectEffect("mh#icepe", "gorchr", 10, 0, 0)
+END
+
+IF
+  Exists("gorchr")
+  Allegiance("gorchr", ENEMY)
+  !Dead("gorchr")
+  Global("mh#chromatic_minions", "myarea", 0)
+  DifficultyGT(EASIEST)
+  DifficultyLT(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#chromatic_minions", "myarea", 1)
+    CreateCreatureObjectEffect("elfirg01", "gorchr", 14, 0, 0)
+    CreateCreatureObjectEffect("elairg01", "gorchr", 2, 0, 0)
+    CreateCreatureObjectEffect("mh#oozgp", "gorchr", 6, 0, 0)
+    CreateCreatureObjectEffect("mh#icegp", "gorchr", 10, 0, 0)
+END
+
+IF
+  Exists("gorchr")
+  Allegiance("gorchr", ENEMY)
+  !Dead("gorchr")
+  Global("mh#chromatic_minions", "myarea", 0)
+  DifficultyGT(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#chromatic_minions", "myarea", 1)
+    CreateCreatureObjectEffect("elfirg01", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("elairg01", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("mh#oozep", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("mh#iceep", "spdimndr", "gorchr")
+END
+
+IF
+  Exists("gorchr")
+  Allegiance("gorchr", ENEMY)
+  !Dead("gorchr")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "myarea")
+  DifficultyGT(EASIEST)
+  DifficultyLT(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("elfirl01", [1658.1323], 14)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("elairl01", [2386.1408], 2)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("mh#oozlp", [2480.1912], 6)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("mh#icelp", [1702.1842], 10)
+END
+
+IF
+  Exists("gorchr")
+  Allegiance("gorchr", ENEMY)
+  !Dead("gorchr")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "myarea")
+  DifficultyGT(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("elfir01", [1658.1323], 14)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("elair01", [2386.1408], 2)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("mh#oozpe", [2480.1912], 6)
+  RESPONSE #25
+    SetGlobalTimer("mh#SpawnTimer", "myarea", ONE_ROUND)
+    CreateCreature("mh#icepe", [1702.1842], 10)
+END
+
+
