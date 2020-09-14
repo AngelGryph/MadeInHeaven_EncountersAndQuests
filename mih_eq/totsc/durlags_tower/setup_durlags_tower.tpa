@@ -8,7 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "fell_ghasts crypt_crawlers tower_exterior upper_levels air_chamber earth_chamber lower_levels"
+    file	= "fell_ghasts crypt_crawlers astral_phase_spiders tower_exterior upper_levels air_chamber earth_chamber lower_levels"
     tra		= "durlags_tower"
   END
 END	// setup_durlags_tower

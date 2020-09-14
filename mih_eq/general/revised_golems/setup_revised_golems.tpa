@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION setup_golems
+DEFINE_ACTION_FUNCTION setup_revised_golems
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
@@ -23,6 +23,6 @@ BEGIN
       tra	= "golems"
     END
   END
-END	// setup_golems
+END	// setup_revised_golems
 
 

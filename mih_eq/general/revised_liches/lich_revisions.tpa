@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION lich_stats
+DEFINE_ACTION_FUNCTION lich_revisions
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
@@ -35,6 +35,6 @@ BEGIN
     item		= "lich02 lichel01"
     edits		= "patch_data"
   END
-END	// lich_stats
+END	// lich_revisions
 
 

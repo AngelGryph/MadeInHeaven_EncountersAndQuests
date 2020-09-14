@@ -1,0 +1,9 @@
+DEFINE_ACTION_FUNCTION setup_revised_vampires
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "bgee_compat vampire_revisions"
+  END
+END	// setup_revised_vampires
+
+

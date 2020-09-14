@@ -89,51 +89,51 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// P&P Wraith Spiders
+// Revised Monstrous Spiders
 
 BEGIN @7 
 GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_wraith_spiders"
-  location	= "general/wraith_spiders"
+  file		= "setup_revised_spiders"
+  location	= "general/revised_spiders"
 END
 
 
-// Improved Vampire Abilities & Resistances
+// Revised Vampires
 
 BEGIN @8 
 GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_vampires"
-  location	= "general/vampires"
+  file		= "setup_revised_vampires"
+  location	= "general/revised_vampires"
 END
 
 
-// Improved Golem Abilities & Resistances
+// Revised Golems
 
 BEGIN @43 
 GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_golems"
-  location	= "general/golems"
+  file		= "setup_revised_golems"
+  location	= "general/revised_golems"
 END
 
 
-// Improved Lich Abilities & Resistances
+// Revised Liches
 
 BEGIN @51 
 GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_liches"
-  location	= "general/liches"
+  file		= "setup_revised_liches"
+  location	= "general/revised_liches"
 END
 
 
