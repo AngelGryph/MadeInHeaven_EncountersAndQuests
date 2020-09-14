@@ -1,10 +1,10 @@
-DEFINE_ACTION_FUNCTION setup_revised_liches
+DEFINE_ACTION_FUNCTION setup_liches
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "lich_revisions lich_hd_by_spell demilich_curse"
     tra		= "liches"
   END
-END	// setup_revised_liches
+END	// setup_liches
 
 

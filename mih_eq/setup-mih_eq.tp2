@@ -25,35 +25,43 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
-// =====================
-// Monster Enhancedments
-// =====================
+// Revised Ghoul Lords
 
-// P&P Ankhegs
-
-BEGIN @1 
+BEGIN @5 
 GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_ankhegs"
-  location	= "general/ankhegs"
+  file		= "setup_ghoul_lords"
+  location	= "general/ghoul_lords"
 END
 
 
-// P&P Basilisks
+// Revised Magical Beasts
 
-BEGIN @3 
+BEGIN @6 
 GROUP @2 
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_basilisks"
-  location	= "general/basilisks"
+  file		= "setup_magical_beasts"
+  location	= "general/magical_beasts"
 END
 
 
-// P&P Oozes, Slimes & Jellies
+// Revised Monstrous Spiders
+
+BEGIN @7 
+GROUP @2 
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_spiders"
+  location	= "general/spiders"
+END
+
+
+// Revised Oozes, Slimes & Jellies
 
 BEGIN @4 
 GROUP @2 
@@ -65,42 +73,6 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// P&P Dread Wolves
-
-BEGIN @5 
-GROUP @2 
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_dread_wolves"
-  location	= "general/dread_wolves"
-END
-
-
-// P&P Winter Wolves
-
-BEGIN @6 
-GROUP @2 
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_winter_wolves"
-  location	= "general/winter_wolves"
-END
-
-
-// Revised Monstrous Spiders
-
-BEGIN @7 
-GROUP @2 
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_revised_spiders"
-  location	= "general/revised_spiders"
-END
-
-
 // Revised Vampires
 
 BEGIN @8 
@@ -108,8 +80,8 @@ GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_revised_vampires"
-  location	= "general/revised_vampires"
+  file		= "setup_vampires"
+  location	= "general/vampires"
 END
 
 
@@ -120,8 +92,8 @@ GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_revised_golems"
-  location	= "general/revised_golems"
+  file		= "setup_golems"
+  location	= "general/golems"
 END
 
 
@@ -132,8 +104,8 @@ GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_revised_liches"
-  location	= "general/revised_liches"
+  file		= "setup_liches"
+  location	= "general/liches"
 END
 
 

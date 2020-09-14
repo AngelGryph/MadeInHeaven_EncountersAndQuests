@@ -1,9 +1,9 @@
-DEFINE_ACTION_FUNCTION setup_revised_spiders
+DEFINE_ACTION_FUNCTION setup_spiders
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "wraith_spider_bite spider_revisions"
   END
-END	// setup_revised_spiders
+END	// setup_spiders
 
 

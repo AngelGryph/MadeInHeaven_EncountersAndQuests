@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION pnp_dread_wolves
+DEFINE_ACTION_FUNCTION dread_wolf_resources
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
@@ -18,23 +18,6 @@ BEGIN
     item		= "p1-10=>mh#drwlf"
     edits		= "patch_data"
   END
-
-  MAKE_PATCH
-    strengthGT=>16
-    level1=>5
-    general=>undead
-    strip_script=>"dreadwlf"
-    insert_script=>"mh#reg1t"
-    replace_items=>"mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
-  END
-
-  LAUNCH_ACTION_FUNCTION edit_creature
-    INT_VAR
-    allow_missing	= 1
-    STR_VAR
-    creature		= "wolfd1 wolfdr bdwolfdr wolfdr01"
-    edits		= "patch_data"
-  END
-END	// pnp_dread_wolves
+END	// dread_wolf_resources
 
 

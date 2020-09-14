@@ -1,0 +1,36 @@
+DEFINE_ACTION_FUNCTION ghoul_lord_revisions
+BEGIN
+  MAKE_PATCH
+    enchantment=>2
+    delete_effect=>"opcode = 54"
+    patch_ability_inline=>~ability_dicesize=>10~
+    patch_effect_inline'1=>~match=>"duration = 42" duration=>60~
+    patch_effect_inline'2=>~match=>"opcode = 142 and parameter2 = 126" parameter2=>7~
+    add_effect_inline=>~number_to_add=>3 opcode=>78 target=>2 timing=>1 parameter1=>"entry_index from [60 1 1]" parameter2=>"entry_index from [3 6 9]"~
+    add_effect_global_inline=>~number_to_add=>2 opcode=>219 parameter1=>8 parameter2=>1~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "ghast1=>mh#ghlor"
+    edits	= "patch_data"
+  END
+    
+  MAKE_PATCH
+    level1GT=>6
+    thac0LT=>15
+    xp_valueGT=>3000
+    attacks=>3
+    replace_items=>"mh#ghlor(weapon1) ring95(lring) mage06(rring) immune1(amulet)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature	= "ghoullor bpghgr01 ghogr01 gholor01 riftcr01"
+    edits	= "patch_data"
+  END
+END	// ghoul_lord_revisions
+
+

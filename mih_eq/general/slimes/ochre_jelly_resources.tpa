@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION ochre_jelly_resources
+BEGIN
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>0 ability_dicesize=>0 damage_type=>0 strength_bonus=>0~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter1=>2 parameter2=>0x00010000 dicenum=>1 dicesize=>10~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "jelloc1=>mh#ochjl"
+    edits	= "patch_data"
+  END
+END	// ochre_jelly_resources
+
+

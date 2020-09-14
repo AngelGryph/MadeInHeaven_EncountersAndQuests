@@ -1,0 +1,28 @@
+DEFINE_ACTION_FUNCTION ankheg_resources
+BEGIN
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>3 strength_bonus=>1 add_effect_inline=>"opcode=>12 parameter2=>0x00010000 dicenum=>1 dicesize=>4"~
+  END
+    
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item		= "b1-8=>mh#ankhg"
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "ankheg_acid"
+    location		= "spells"
+    idsname		= "ANKHEG_ACID_SPIT"
+    editstring		= "say_name=>0"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file		= "mh#ankhg.baf"
+    location		= "scripts"
+  END
+END	// ankheg_resources
+
+

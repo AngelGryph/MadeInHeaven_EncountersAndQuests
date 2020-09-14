@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION setup_magical_beasts
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_regeneration"
+    locbase	= "shared/regeneration"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "ankheg_resources basilisk_resources dread_wolf_resources winter_wolf_resources magical_beast_revisions relocate_bg1_winter_wolves"
+    tra		= "magical_beasts"
+  END
+END	// setup_magical_beasts
+
+

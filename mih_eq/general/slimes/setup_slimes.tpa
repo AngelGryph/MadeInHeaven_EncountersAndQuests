@@ -2,7 +2,7 @@ DEFINE_ACTION_FUNCTION setup_slimes
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "pnp_gray_oozes pnp_mustard_jellies pnp_ochre_jellies"
+    file	= "gray_ooze_resources mustard_jelly_resources ochre_jelly_resources slime_revisions"
   END
 END	// setup_slimes
 

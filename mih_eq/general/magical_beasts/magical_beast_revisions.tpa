@@ -1,0 +1,111 @@
+DEFINE_ACTION_FUNCTION magical_beast_revisions
+BEGIN
+  // Statistic blocks
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY ankheg
+  BEGIN
+    strengthGT=>18
+    strength_exGT=>75
+    constitutionGT=>16
+    dexterityGT=>14
+    intelligenceLT=>3
+    level1GT=>"21 - thac0"
+    enforce_saves=>at_worst
+    replace_items=>"mh#ankhg(weapon1) mh#ankhg(weapon2)"
+    swap_script=>"ankheg=>mh#ankhg"
+    script_default=>"wtasight"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY greater_basilisk
+  BEGIN
+    xp_value=>7000
+    thac0LT=>11
+    attacks=>3
+    add_items=>"dragring(lring)"
+    insert_script_high=>"mh#grbas"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY dread_wolf
+  BEGIN
+    strengthGT=>16
+    level1=>5
+    general=>undead
+    strip_script=>"dreadwlf"
+    insert_script_high=>"mh#reg1t"
+    replace_items=>"mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY winter_wolf
+  BEGIN
+    strengthGT		=> 15
+    dexterityGT		=> 17
+    constitutionGT	=> 15
+    resist_fire		=> "-25"
+    swap_script		=> "wtarsgt=>wtasight dw1ranmo=>dw1melmo"
+    insert_script_high	=> "mh#wiwlf"
+    replace_items	=> "mh#wiwlf(weapon1) mh#wiwlf(weapon2)"
+  END
+
+
+  // Patching starts here
+
+  COPY_EXISTING_REGEXP "^.*\.cre$" "override"
+    LAUNCH_PATCH_FUNCTION CRE_read_race
+      RET
+      race	= value
+    END
+
+    LAUNCH_PATCH_FUNCTION CRE_read_class
+      RET
+      class	= value
+    END
+
+    PATCH_MATCH "%class%"
+    WITH
+      "ankheg" WHEN ("%race%" STRING_EQUAL_CASE "ankheg")
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be an ankheg, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	="CRE"
+	  edits 	= "greater_basilisk"
+        END
+      END
+
+      "basilisk_greater" WHEN ("%race%" STRING_EQUAL_CASE "basilisk")
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be a greater basilisk, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	="CRE"
+	  edits 	= "greater_basilisk"
+        END
+      END
+
+      "wolf_dread" WHEN ("%race%" STRING_EQUAL_CASE "wolf")
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be a dread wolf, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	="CRE"
+	  edits 	= "dread_wolf"
+        END
+      END
+
+      "wolf_winter" WHEN ("%race%" STRING_EQUAL_CASE "wolf")
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be a winter wolf, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	="CRE"
+	  edits 	= "winter_wolf"
+        END
+      END
+
+      DEFAULT
+    END
+
+    BUT_ONLY_IF_IT_CHANGES
+END	// magical_beast_revisions
+
+

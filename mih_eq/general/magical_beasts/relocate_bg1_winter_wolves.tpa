@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION relocate_winter_wolves
+DEFINE_ACTION_FUNCTION relocate_bg1_winter_wolves
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
@@ -31,6 +31,6 @@ BEGIN
       edits		= "patch_data"
     END
   END
-END	// relocate_winter_wolves
+END	// relocate_bg1_winter_wolves
 
 

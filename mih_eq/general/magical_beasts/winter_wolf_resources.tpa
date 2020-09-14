@@ -1,0 +1,24 @@
+DEFINE_ACTION_FUNCTION winter_wolf_resources
+BEGIN
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "frost_breath"
+    idsname		= "WINTER_WOLF_BREATH"
+    location		= "spells"
+    editstring		= "say_name=>0"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item		= "p2-8=>mh#wiwlf"
+    editstring		= ~add_effect_inline=>"opcode=>12 target=>2 timing=>1 parameter2=>0x00020000 dicenum=>1 dicesize=>6"~
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file		= "mh#wiwlf.baf"
+    location		= "scripts"
+  END
+END	// winter_wolf_resources
+
+

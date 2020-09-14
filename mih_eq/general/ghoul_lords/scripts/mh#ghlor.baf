@@ -1,0 +1,61 @@
+IF
+  Global("mh#spawn_minions", "locals", 0)
+  Difficulty(EASY)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawn_minions", "locals", 1)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+END
+
+IF
+  Global("mh#spawn_minions", "locals", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawn_minions", "locals", 1)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+END
+
+IF
+  Global("mh#spawn_minions", "locals", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawn_minions", "locals", 1)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+END
+
+IF
+  Global("mh#spawn_minions", "locals", 0)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawn_minions", "locals", 1)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgha", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#glgho", "spraised", Myself)
+END
+
+
