@@ -79,13 +79,15 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><strong>P&amp;P Winter Wolves</strong><br/>
   This component makes the breath of winter wolves a proper breath weapon that can affect multiple targets and requires no attack roll.  This makes them very dangerous to low-level parties, so out of mercy I remove them from the Nashkel Mine and surrounding areas, Fireleaf Forest and Dryad Falls.  To compensate, you will have guaranteed encounters with them in the Gibberling Mountains.  This behavior can be turned off in the ini file if desired.</p>
   <p>Tactical advice: Avoid them until you are at least level 3 or so.  Go get the Boots of the North (or the Ring of Warmth from my item pack) as soon as you can, and find some Scrolls- or Potions of Cold Resistance.</p>
-  <p><strong>P&amp;P Wraith Spiders</strong><br/>
-  The game treats them as normal giant spiders, but wraith spiders are actually undead.  This will alter the wraith spider's bite to have its proper effects: 1d4 cold damage, one level drained and two points of Constitution damage unless the victim saves versus poison or is immune to disease.  They are also now properly flagged as undead.</p>
-  <p>Tactical advice: These are rather rare encounters and while that bite can be crippling they are not harder than usual to deal with.  You should not have much trouble.</p>
-  <p><strong>Improved Vampire Abilities &amp; Resistances</strong><br/>
+  <p><strong>Revised Monstrous Spiders</strong><br/>
+  While examining monstrous spiders in the games, I found that the devs applied some bonuses to some of them, but not to all, for example giant spiders have a thac0 3 points better than the should, while wraith spiders have an armor class a full 4 points better than they should.  I decided to systematically apply all these bonuses to all monstrous spiders, making them a little tougher.  The exact bonus can be configured in the .ini file (default +3 to hd/thac0/saves, +4 to AC).</p>
+  <p>This component will also give wraith spiders a correct chilling, poisoning and level-draining bite, and flags them as undead like they should be.</p>
+  <p>Astral phase spiders seem to be monster unique to Durlag's Tower, I could not find a P&amp;P source so this component treats them as normal astral spiders for what it should change.  The Durlag's Tower tactical challenge component revises them further.</p>
+  <p>Tactical advice: With this spiders overall become a little more dangerous, stay on your toes and don't go into the woods unprepared.  Note that the bonus also applies to spiders summoned by the Spider Spawn spell, making it a bit more effective.</p>
+  <p><strong>Revised Vampires</strong><br/>
   This component gives vampires additional resistances based on their statistics in the Ravenloft setting.  It does not currently give them new offensive abilities, but it can be combined with mods like Quest Pack or Sword Coast Stratagems that do.  Ravenloft vampires take half damage from all offensive magic (implemented as 50% reistance to fire, cold, acid, lightning and magical damage) and a +4 on their saving throws against damaging spells (implemented as +4 versus Invocation on EE, +4 versus Spells on the old engine).  They are also immune to being turned, and get a stat boost depending on their age category.</p>
   <p>Tactical advice: These make vampires very dangerous, especially combined with one of the AI-enhancing mods like SCS.  Invest heavily in anti-undead weaponry and protection items, and never take them on unprepared.</p>
-  <p><strong>Improved Golem Abilities &amp; Resistances</strong><br/>
+  <p><strong>Revised Golems</strong><br/>
   Similar to the vampires component, this gives the most common golems additional resistances and some stat boosts.  A few golems also gain additional abilities as well.</p>
   <p><i>Adamantite Golem:</i> These metallic brutes are virtually immune to weapon damage, requiring a +4 or better weapon to even hit them at all.  However, they lose their immunity to acid and lightning.  Their stats are str 25, dex 17, con 20, int 9, wis 2, cha 7.</p>
   <p><i>Bone Golem:</i> These skeletal abominations emit a horrid laugh once every three rounds with paralyzes everyone who fails their saving throw.  Those who fail by 4 or more are instantly slain instead.  However, they lose their immunity to lightning and acid and actually become quite vulnerable to fire.  Their stats are str 19, dex 18, con 20, int 12, wis 2, cha 3.</p>
@@ -98,7 +100,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>Magic Golem:</i> The attack of these monsters ignores all magical enhancements to armor class (implemented as a flat +10 to hit) and their attack will now dispel magic on the target in additon to draining wizard spells and item charges.  The item- and spell drain no longer allow a saving throw.  Once per day they can unleash a random magical effect.  Their stats are str 19, dex 16, con 20, int 6, wis 4, cha 5.</p>
   <p><i>Stone Golem:</i> Due to their stone construction, these get 90% resistance to slashing, piercing and missile damage, and 50% resistance to fire, cold, lightning and acid.  Their stats are: str 22, dex 17, con 20, int 9, wis 2, cha 8.</p>
   <p>Tactical advice: While still mostly their stupid old selves, these resistances and abilities make golems a genuine threat.  You may have to exploit their weak points, but keep in mind that they still are immune to spells cast directly at them.  You may have to get a little creative here.  Weapons that deal additional elemental damage may help.</p>
-  <p><strong>Improved Lich Abilities &amp; Resistances</strong><br/>
+  <p><strong>Revised Liches</strong><br/>
   This component adds a small amount of additional resistances to liches.  They gain 50% resistance to slashing-, piercing- and missile damage, and are made resistant to low-level spells (default up to 3rd, can be changed in the ini file).  It also modifies their touch attack to have +4 bonus to hit, and makes it deal cold damage rather than piercing damage.</p>
   <p>It also ensures they are at least high enough level to cast their most powerful memorized spells, this will also adjust their thac0, saves, hit points and xp value accordingly.</p>
   <p>Demiliches gain the ability to utter a powerful curse on anyone unfortunate enough to disturb them, severely weakening them until they can get a Remove Curse spell or similar cast on them; even death does not remove this curse.</p>
@@ -116,6 +118,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>New enemies: Wight, Greater Wight.</i></p>
   <p><strong>Enhanced Battles: The Spider Plague</strong><br/>
   This modification affects two areas, the Spider Wood to the far east of the Friendly Arm Inn (with the Red Wizards) and the second part of the Cloakwood.  The game manual mentions a spider plague going on, so this modification makes it so that you will be facing a lot of spiders in these areas.  Spider will spawn continuously offscreen to a certain maximum.  At higher difficulties, more dangerous spiders will spawn occasionally as well.</p>
+  <p>This component can be combined with the Revised Monstrous Spiders component, this combination will make the Cloakwood and Spider Wood areas quite dangerous.</p>
   <p><i>New enemies: Hairy Spider</i></p>
   <p><strong>Enhanced Battles: Thieves' Maze &amp; Undercity</strong><br/>
   This modification seeks to make the final two areas of the first game a bit more of a challenge.  Expect some strong new enemies as you navigate the Thieves' Maze and the Undercity.</p>
@@ -128,7 +131,10 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><strong>Enhanced Battles: Zombie Farm</strong><br/>
   This is the farm all the way at the north end of the map, where the farmer Wenric asks you to kill 20 zombies for 150gp.  By the time you get here, zombies are no threat whatsoever.  This component changes them to more dangerous ju-ju zombies and more than doubles their number, hopefully making it a bit more of an actual challenge.</p>
   <p><strong>Enhanced Battles: Durlag's Tower</strong><br/>
-  The main dungeon of Tales of the Sword Coast is a fair challenge, but not that hard for veteran players.  This modificiation hopefully spices things up a notch or two.  Ghasts in the upper levels of the tower become the tougher fell ghasts, crypt crawlers get a little stronger and there will be more enemies everywhere, including some new ones.<p>
+  The main dungeon of Tales of the Sword Coast is a fair challenge, but not that hard for veteran players.  This modificiation hopefully spices things up a notch or two for them.  In addition to more enemies everywhere, a few enemies unique to the tower get a little boost.</p>
+  <p>Ghasts roaming in the upper levels of the tower become the tougher fell ghasts, which require magical weapons to hit.</p>
+  <p>Astral phase spiders are treated as legendary creatures (lesser scions) and get the associated bonus (+5 hd, +4 AC) on top of the bonus from Revised Monstrous Spiders, gain some magic resistance, and their bite has been upgraded as well.</p>
+  <p>Crypt crawlers get a slight strength boost and an additonal attack per round.</p>
   <p><i>New enemies: Barrow Wight, Crystal Ooze, Dracolisk.</i></p>
   <h3>Encounters &amp; Quests: Original Saga</h3>
   <p>These components aren't so much about tactics (although there usually is some combat) but extend or tweak an existing encounter or quest, or add a new one.</p>
@@ -158,7 +164,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   There are two unique vampire encounters in Siege of Dragonspear, Tsolak and the unnamed vampire in the Trollbark forest.  Unfortunately, a single fledgling vampire just isn't a match for a decently equipped level 7-9 party, so this modificcation spices things up a bit to hopefully make them a decent challenge.</p>
   <p>Tsolak is given the stats of a very old vampire: HD 11+1, str 18/00, con 18, dex 18, int 18, cha 17, SA: level drain (3 levels), SD: +2 required to hit, MR 20%.  The dire wolves he summons are a bit stronger and tougher than normal ones.  He may also have one last trick up his sleeve...</p>
   <p>The Trollbark vampire is an old vampire: HD 10+2, str 18/00, con 18, dex 17, int 17, cha 16, SA: level drain (2 levels), SD: +2 required to hit, MR 10%.  He has a few fledgling vampire thralls.</p>
-  <p>Note that Tsolak and the Trollbark vampire also benefit from the Improved Vampire Abilities &amp; Resistances component, further toughening them.</p>
+  <p>Note that Tsolak and the Trollbark vampire also benefit from the Revised Vampires component, further toughening them.</p>
   <p><strong>Enhanced Battles: Cyric's Temple</strong><br/>
   This is the old temple to Bhaal near Bridgefort, now taken over by worshippers of Cyric.  It's already a nice challenge, having a dragon, a half-dragon and a mind flayer encounter, but I still thought there was some room for a little more...</p>
   <p>The green dragon Morentherene gets extra hit points and a slightly more powerful breath weapon.  She will now also always be assisted with some young green dragons, which have also been beefed slightly.</p>
@@ -200,10 +206,10 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><strong>Enhanced Battles: Underdark</strong><br/>
   This component enhances various Underdark encounters, including those in Ust Natha and in the beholder- and illithid lairs.  Expect some heavy resistance here.</p>
   <p>Kuo-toa gain several levels (default 6, configurable in the ini file) to bring their threat level somewhat on par with the drow, beholders and illithid.  In the illithid lair,the ogre servant and insane dwarf encounters have been beefed up considerably and you will see many more mind flayers as well as some very strong umber hulks.</p>
-  <p>In Ust Natha, the battle with the lich Deirex has been enhanced and he has gained the Animate Dead salient ability.  He will constantly spawn undead minions in addition to casting his spells.  Note that as a lich he will also benefit from the Improved Lich Abilities &amp; Resistances component.</p>
+  <p>In Ust Natha, the battle with the lich Deirex has been enhanced and he has gained the Animate Dead salient ability.  He will constantly spawn undead minions in addition to casting his spells.  Note that as a lich he will also benefit from the Revised Liches component.</p>
   <p><i>New enemies: Mohrg.</i></p>
   <p><strong>Enhanced Battles: Athkatla Liches</strong><br/>
-  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.  Note that these liches also benefit from the Improved Lich Abilities &amp; Resistances component.</p>
+  This component enhances the battles with some of the liches lurking in Athkatla.  Currently this affects the Shade Lich and Elemental Lich, but I will likely add others in later versions.  Note that these liches also benefit from the Revised Liches component.</p>
   <p>The Elemental Lich is now immune to most elemental attacks (fire, cold, lightning and acid).  I also give him his proper touch attack (this was already in the game, but unused).  He has gained the salient ability to regenerate 12 hp per round.  During the battle various elemental creatures will spawn.</p>
   <p>The Shade Lich now takes half damage from most sources, and also has the salient ability to regenerate 12 hp per round.  During the battle, various creatures from the shadow plane will spawn.</p>
   <p><strong>Enhanced Battles: Suldanessenar</strong><br/>

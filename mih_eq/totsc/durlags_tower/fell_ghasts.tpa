@@ -15,7 +15,7 @@ BEGIN
     resist_missile=>10
     resist_magic=>10
     add_effect_inline=>"opcode=>51 target=>1 timing=>9 parameter1=>0x10101000 parameter2=>2"
-    add_items=>"immune1(rring)"
+    add_items=>"immune1(amulet)"
     say_both_names=>0
   END
 

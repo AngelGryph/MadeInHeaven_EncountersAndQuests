@@ -41,7 +41,7 @@ BEGIN
     replace_items=>"mh#spdas(weapon1)"
   END
 
-  LAUNCH_PATCH_FUNCTION edit_creature
+  LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "spidphas"
     edits	= "patch_data"

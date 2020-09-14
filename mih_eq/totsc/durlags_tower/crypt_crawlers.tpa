@@ -1,12 +1,10 @@
 DEFINE_ACTION_FUNCTION crypt_crawlers
 BEGIN
   MAKE_PATCH
+    level1=>7
+    xp_value=>650
     strength=>18
     strength_ex=>25
-    xp_value=>650
-    level_all=>7
-    enforce_saves=>at_worst
-    enforce_hp=>at_worst
     attacks=>5
   END
 
