@@ -1,5 +1,29 @@
-DEFINE_ACTION_FUNCTION demilich_curse
+DEFINE_ACTION_FUNCTION demilich_powers
 BEGIN
+  // Demilich Damage Resistance
+
+  MAKE_PATCH
+    delete_effect_global=>"opcode is_in [27 28 29 30 31 84 85 86 87 88 89 173]"
+    add_effect_global_inline=>~number_to_add=>8 opcode=>"entry_index from [27 30 31 84 86 87 88 89]" target=>1 timing=>2 parameter1=>90 parameter2=>1~
+    add_effect_global_inline=>~number_to_add=>4 opcode=>"entry_index from [28 29 85 173]" target=>1 timing=>2 parameter1=>100 parameter2=>1~
+  END
+
+
+  // Demilich Howl
+
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"save_vs_death = 1" save_bonus=>"-4"~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_spell
+    STR_VAR
+    spell	= "DEMILICH_DEATH"
+    edits	= "patch_data"
+  END
+
+
+  // Demilich Curse
+
   LAUNCH_ACTION_FUNCTION make_effect
     STR_VAR
     effect		= "mh#dlcac mh#dlcsd mh#dlcsw mh#dlcsp mh#dlcsb mh#dlcss mh#dlcth"
@@ -33,6 +57,6 @@ BEGIN
     creature		= "hldemi demilich esxlich"
     editstring		= ~insert_script_high=>"mh#dlich"~
   END
-END	// demilich_curse
+END	// demilich_powers
 
 

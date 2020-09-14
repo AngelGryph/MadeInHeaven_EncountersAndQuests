@@ -5,7 +5,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#demilich_curse", "locals", 1)
-    DisplayStringHead(@1)
+    DisplayStringHead(Myself, @1)
     ReallyForceSpell(LastSeenBy(Myself), DEMILICH_CURSE)
     Wait(1)
     Continue()
