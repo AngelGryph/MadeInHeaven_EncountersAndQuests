@@ -25,6 +25,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "ysfire01 ysfire02 yssold01 yssold02 yssold03 yssold04"
+    edits	= "patch_data"
   END
 END	// enhance_yagas_army
 

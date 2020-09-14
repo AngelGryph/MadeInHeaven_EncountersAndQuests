@@ -1,20 +1,53 @@
 DEFINE_ACTION_FUNCTION illithid_activities
 BEGIN
-  // Tougher Umber Hulks in arena fight
+  // Umber Hulk Scions in arena fight
+
+  MAKE_PATCH
+    level1=>16
+    xp_value=>14000
+    hitpoints=>120
+    strength=>21
+    constitution=>18
+    ac=>"-4"
+    thac0=>5
+    enforce_saves=>at_worst
+    resist_slashing=>50
+    resist_piercing=>50
+    resist_missile=>100
+    say_both_names=>0
+  END
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "udumb02"
-    editstring	= ~level1=>12 xp_value=>7000 hitpoints=>96 enforce_thac0=>at_worst enforce_saves=>at_worst say_both_names=>0~
+    edits	= "patch_data"
   END
 
 
   // More challenging insane dwarf warrior
 
+  MAKE_PATCH
+    strength=>18
+    strength_ex=>100
+    dexterity=>14
+    constitution=>19
+    intelligence=>6
+    wisdom=>8
+    charisma=>9
+    level1=>20
+    xp_value=>10000
+    enforce_hp=>at_worst
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    add_items=>"helm11(helmet) plat14(armor) shld29(shield) ax1h11(weapon1) ax1h04(weapon2,x20)"
+    remove_items=>"leat01 shld03 ax1h01 slng01 bull01"
+    set_proficiencies=>"axe=>5 swordandshield=>2"
+  END
+
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "uddwarf"
-    editstring	= ~strength=>18 strength_ex=>100 dexterity=>14 constitution=>19 intelligence=>6 wisdom=>8 charisma=>9 level1=>20 xp_value=>10000 enforce_hp=>at_worst enforce_thac0=>at_worst enforce_saves=>at_worst add_items=>"helm11(helmet) plat14(armor) shld29(shield) ax1h11(weapon1) ax1h04(weapon2,x20)" remove_items=>"leat01 shld03 ax1h01 slng01 bull01" set_proficiencies=>"axe=>5 swordandshield=>2"~
+    edits	= "patch_data"
   END
 
 
@@ -27,19 +60,35 @@ BEGIN
   END
 
 
-  // Umber Hulk Titan
+  // Umber Hulk Elder
+
+  MAKE_PATCH
+    strength=>22
+    dexterity=>18
+    constitution=>20
+    level1=>23
+    xp_value=>19000
+    hitpoints=>175
+    thac0=>"-2"
+    ac=>"-6"
+    enforce_saves=>at_worst
+    resist_slashing=>50
+    resist_piercing=>50
+    resist_missile=>100
+    say_both_names=>1
+  END
 
   LAUNCH_ACTION_FUNCTION clone_creature
     STR_VAR
-    creature	= "umbhul01=>mh#umtit"
-    editstring	= ~strength=>21 dexterity=>18 constitution=>20 intelligence=>3 wisdom=>8 charisma=>5 level1=>20 xp_value=>12000 enforce_hp=>at_worst enforce_thac0=>at_worst enforce_saves=>at_worst say_both_names=>1~
+    creature	= "umbhul01=>mh#umeld"
+    edits	= "patch_data"
   END
 
 
   // More illithid
 
   MAKE_PATCH
-    patch_actor_inline=>~match=>"actor_x_coord_start = 973 and actor_y_coord_start = 2083" actor_resource=>"mh#umtit" actor_name=>"{literal:Umber Hulk Titan}"~
+    patch_actor_inline=>~match=>"actor_x_coord_start = 973 and actor_y_coord_start = 2083" actor_resource=>"mh#umeld" actor_name=>"{literal:Umber Hulk Elder}"~
 
     add_actor_inline'01=>~actor_name=>"{literal:Mind Flayer}" actor_resource=>"mindfl01" actor_x_coord=>3235 actor_y_coord=>2445 actor_orientation=>7~
     add_actor_inline'02=>~actor_name=>"{literal:Mind Flayer}" actor_resource=>"mindfl01" actor_x_coord=>3325 actor_y_coord=>2375 actor_orientation=>5~
