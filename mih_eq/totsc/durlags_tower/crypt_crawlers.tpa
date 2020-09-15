@@ -1,11 +1,14 @@
 DEFINE_ACTION_FUNCTION crypt_crawlers
 BEGIN
   MAKE_PATCH
-    level1=>7
-    xp_value=>650
+    level1=>8
+    xp_value=>2000
+    hitpoints=>56
+    thac0=>12
+    attacks=>5
+    ac=>"-1"
     strength=>18
     strength_ex=>25
-    attacks=>5
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

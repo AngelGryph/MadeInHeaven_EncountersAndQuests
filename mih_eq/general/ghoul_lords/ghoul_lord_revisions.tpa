@@ -6,7 +6,8 @@ BEGIN
     patch_ability_inline=>~ability_dicesize=>10~
     patch_effect_inline'1=>~match=>"duration = 42" duration=>60~
     patch_effect_inline'2=>~match=>"opcode = 142 and parameter2 = 126" parameter2=>7~
-    add_effect_inline=>~number_to_add=>3 opcode=>78 target=>2 timing=>1 parameter1=>"entry_index from [60 1 1]" parameter2=>"entry_index from [3 6 9]"~
+    patch_effect_inline'3=>~match=>"save_vs_death = 1" save_bonus=>"-4"~
+    add_effect_inline=>~number_to_add=>3 opcode=>78 target=>2 timing=>1 parameter1=>"entry_index from [60 1 1]" parameter2=>"entry_index from [3 6 9]" save_vs_death=>1 save_bonus=>"-4"~
     add_effect_global_inline=>~number_to_add=>2 opcode=>219 parameter1=>8 parameter2=>1~
   END
 

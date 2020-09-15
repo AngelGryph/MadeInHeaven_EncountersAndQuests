@@ -37,6 +37,30 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Revised Golems
+
+BEGIN @43 
+GROUP @2 
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_golems"
+  location	= "general/golems"
+END
+
+
+// Revised Liches
+
+BEGIN @51 
+GROUP @2 
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_liches"
+  location	= "general/liches"
+END
+
+
 // Revised Magical Beasts
 
 BEGIN @6 
@@ -82,30 +106,6 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_vampires"
   location	= "general/vampires"
-END
-
-
-// Revised Golems
-
-BEGIN @43 
-GROUP @2 
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_golems"
-  location	= "general/golems"
-END
-
-
-// Revised Liches
-
-BEGIN @51 
-GROUP @2 
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_liches"
-  location	= "general/liches"
 END
 
 
@@ -291,27 +291,27 @@ END
 // Tactical Challenges: Siege of Dragonspear
 // =========================================
 
-// Increase Enemy Group Size
+// Enhanced Battles: Bridgefort
 
-BEGIN @20 
+BEGIN @27 
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "sod_group_size"
-  location	= "sod/tweaks"
+  file		= "setup_bridgefort"
+  location	= "sod/bridgefort"
 END
 
 
-// Enhanced Battles: Korlasz' Tomb
+// Enhanced Battles: Cyric's Temple
 
-BEGIN @23 
+BEGIN @26 
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_korlasz_tomb"
-  location	= "sod/korlasz_tomb"
+  file		= "setup_cyric_temple"
+  location	= "sod/cyric_temple"
 END
 
 
@@ -327,6 +327,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Battles: Korlasz' Tomb
+
+BEGIN @23 
+GROUP @21  GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_korlasz_tomb"
+  location	= "sod/korlasz_tomb"
+END
+
+
 // Enhanced Battles: Vampire Encounters
 
 BEGIN @25 
@@ -336,29 +348,6 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_sod_vampires"
   location	= "sod/vampires"
-END
-
-// Enhanced Battles: Cyric's Temple
-
-BEGIN @26 
-GROUP @21  GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_cyric_temple"
-  location	= "sod/cyric_temple"
-END
-
-
-// Enhanced Battles: Bridgefort
-
-BEGIN @27 
-GROUP @21  GAME_INCLUDES "sod"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_bridgefort"
-  location	= "sod/bridgefort"
 END
 
 
@@ -378,9 +367,49 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Increase Enemy Group Size
+
+BEGIN @20 
+GROUP @45  GAME_INCLUDES "sod"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "sod_group_size"
+  location	= "sod/tweaks"
+END
+
+
 // ===================================
 // Tactical Challenges: Shadows of Amn
 // ===================================
+
+// Enhanced Battles: Athkatla Liches
+
+BEGIN @37 
+GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_athkatla_liches"
+  location	= "bg2/athkatla_liches"
+END
+
+
+// Enhanced Battles: Firkraag's Lair
+
+BEGIN @34 
+GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_firkraags_lair"
+  location	= "bg2/firkraags_lair"
+END
+
 
 // Enhanced Battles: Graveyard Catacombs
 
@@ -424,17 +453,31 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Enhanced Battles: Trademeet
+// Enhanced Battles: Spellhold
 
-BEGIN @32 
+BEGIN @35 
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_trademeet"
-  location	= "bg2/trademeet"
+  file		= "setup_spellhold"
+  location	= "bg2/spellhold"
+END
+
+
+// Enhanced Battles: Suldanessenar
+
+BEGIN @38 
+GROUP @29  GAME_INCLUDES "bg2"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_suldanessenar"
+  location	= "bg2/suldanessenar"
 END
 
 
@@ -452,31 +495,17 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Enhanced Battles: Firkraag's Lair
+// Enhanced Battles: Trademeet
 
-BEGIN @34 
+BEGIN @32 
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_firkraags_lair"
-  location	= "bg2/firkraags_lair"
-END
-
-
-// Enhanced Battles: Spellhold
-
-BEGIN @35 
-GROUP @29  GAME_INCLUDES "bg2"
-
-REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_spellhold"
-  location	= "bg2/spellhold"
+  file		= "setup_trademeet"
+  location	= "bg2/trademeet"
 END
 
 
@@ -491,34 +520,6 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_underdark"
   location	= "bg2/underdark"
-END
-
-
-// Enhanced Battles: Athkatla Liches
-
-BEGIN @37 
-GROUP @29  GAME_INCLUDES "bg2"
-
-REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_athkatla_liches"
-  location	= "bg2/athkatla_liches"
-END
-
-
-// Enhanced Battles: Suldanessenar
-
-BEGIN @38 
-GROUP @29  GAME_INCLUDES "bg2"
-
-REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_suldanessenar"
-  location	= "bg2/suldanessenar"
 END
 
 
