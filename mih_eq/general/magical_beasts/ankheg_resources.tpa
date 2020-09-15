@@ -15,7 +15,7 @@ BEGIN
     spell		= "ankheg_acid"
     location		= "spells"
     idsname		= "ANKHEG_ACID_SPIT"
-    editstring		= "say_name=>0"
+    editstring		= "say_name=>1"
   END
 
   LAUNCH_ACTION_FUNCTION install

@@ -14,10 +14,12 @@ BEGIN
     editstring		= ~add_effect_inline=>"opcode=>12 target=>2 timing=>1 parameter2=>0x00020000 dicenum=>1 dicesize=>6"~
   END
 
-  LAUNCH_ACTION_FUNCTION install
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
     STR_VAR
-    file		= "mh#wiwlf.baf"
-    location		= "scripts"
+    script	= "mh#wiwlf"
+    location	= "scripts"
+    locbase
+    ssllibrary	= "%mod_root%/ssl/library"
   END
 END	// winter_wolf_resources
 
