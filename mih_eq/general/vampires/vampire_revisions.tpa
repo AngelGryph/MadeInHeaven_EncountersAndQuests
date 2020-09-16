@@ -110,49 +110,100 @@ BEGIN
   // Patching starts here
 
   COPY_EXISTING_REGEXP "^.*\.cre$" "override"
-    LPF CRE_read_race RET race = value END
+    LAUNCH_PATCH_FUNCTION CRE_read_race RET race = value END
 
     PATCH_IF "%race%" STRING_EQUAL_CASE "vampire"
     BEGIN
-      LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_all" END
+      PATCH_PRINT "%SOURCE_RES% is a vampire, applying general patches."
 
-      LPF CRE_read_level1 RET hd = value END
+      LAUNCH_PATCH_FUNCTION apply_patches
+        STR_VAR
+        file_ext="CRE"
+        edits = "vampire_all"
+      END
+
+      LAUNCH_PATCH_FUNCTION CRE_read_level1
+        RET
+	hd = value
+      END
 
       PATCH_MATCH hd
       WITH
         8
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_fledgling" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be a fledgling vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_fledgling"
+	  END
 	END
 
         9
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_mature" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be a mature vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_mature"
+	  END
 	END
 
         10
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_old" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be an old vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_old"
+	  END
 	END
 
         11
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_very_old" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be a very old vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_very_old"
+	  END
 	END
 
         12
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_ancient" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be an ancient vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_ancient"
+	  END
 	END
 
         13
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_eminent" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be an eminent vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_eminent"
+	  END
 	END
 
         14
 	BEGIN
-	  LPF apply_patches STR_VAR file_ext="CRE" edits = "vampire_patriarch" END
+	  PATCH_PRINT "%SOURCE_RES% appears to be a patriarch vampire, applying patches..."
+
+	  LAUNCH_PATCH_FUNCTION apply_patches
+	    STR_VAR
+	    file_ext="CRE"
+	    edits = "vampire_patriarch"
+	  END
 	END
 
 	DEFAULT

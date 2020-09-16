@@ -8,10 +8,10 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#chromatic_minions", "myarea", 1)
-    CreateCreatureObjectEffect("elfir01", "gorchr", 14, 0, 0)
-    CreateCreatureObjectEffect("elair01", "gorchr", 2, 0, 0)
-    CreateCreatureObjectEffect("mh#oozpe", "gorchr", 6, 0, 0)
-    CreateCreatureObjectEffect("mh#icepe", "gorchr", 10, 0, 0)
+    CreateCreatureObjectEffect("elfir01", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("elair01", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("mh#oozpe", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("mh#icepe", "spdimndr", "gorchr")
 END
 
 IF
@@ -25,10 +25,10 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("mh#chromatic_minions", "myarea", 1)
-    CreateCreatureObjectEffect("elfirg01", "gorchr", 14, 0, 0)
-    CreateCreatureObjectEffect("elairg01", "gorchr", 2, 0, 0)
-    CreateCreatureObjectEffect("mh#oozgp", "gorchr", 6, 0, 0)
-    CreateCreatureObjectEffect("mh#icegp", "gorchr", 10, 0, 0)
+    CreateCreatureObjectEffect("elfirg01", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("elairg01", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("mh#oozgp", "spdimndr", "gorchr")
+    CreateCreatureObjectEffect("mh#icegp", "spdimndr", "gorchr")
 END
 
 IF

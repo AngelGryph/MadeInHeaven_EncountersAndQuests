@@ -7,6 +7,29 @@ BEGIN
     lich_spell_level_immunity	= value
   END
 
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "lich_powers_save_penalty"
+    RET
+    lich_powers_save_penalty	= value
+  END
+
+
+  // Lich Fear
+
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"save_vs_death = 1" save_bonus=>"-%lich_powers_save_penalty%"~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_spell
+    STR_VAR
+    spell	= "LICH_FEAR"
+    edits	= "patch_data"
+  END
+
+
+  // Lich Resistances
+
   MAKE_PATCH
     delete_effect_global=>~opcode is_in [102 206] and not resource is_in [spwm113 spwi415 spwi711]~
     // 3.5e rule: Skeletal undead resistances
@@ -25,8 +48,12 @@ BEGIN
     edits		= "patch_data"
   END
 
+
+  // Lich Touch
+
   MAKE_PATCH
     patch_ability_inline=>~ability_dicenum=>0 ability_dicesize=>0 damage_type=>0 to_hit=>4~
+    patch_effect_inline=>~match=>"save_vs_death = 1" save_bonus=>"-%lich_powers_save_penalty%"~
     add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00020000 dicenum=>1 dicesize=>10~
   END
 
