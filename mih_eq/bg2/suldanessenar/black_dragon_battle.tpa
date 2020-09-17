@@ -1,5 +1,43 @@
 DEFINE_ACTION_FUNCTION black_dragon_battle
 BEGIN
+  MAKE_PATCH
+    ability_dicenum=>3
+    ability_dicesize=>6
+    damage_bonus=>12
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dragblaw"
+    editstring	= ~patch_ability=>"patch_data"~
+  END
+
+  MAKE_PATCH
+    ability_dicenum=>1
+    ability_dicesize=>6
+    damage_bonus=>12
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dr1-6s"
+    editstring	= ~patch_ability=>"patch_data"~
+  END
+
+  MAKE_PATCH
+    level1=>20
+    ac=>"-7"
+    attacks=>3
+    xp_value=>20000
+    replace_items=>"dragblaw(weapon1) dr1-6s(shield)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "dragblac"
+    edits	= "patch_data"
+  END
+
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
     area	= "ar2807"

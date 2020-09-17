@@ -1,31 +1,31 @@
-DEFINE_ACTION_FUNCTION shadow_dragon_battle
+DEFINE_ACTION_FUNCTION green_dragon_battle
 BEGIN
   MAKE_PATCH
-    ability_dicenum=>3
-    ability_dicesize=>6
+    ability_dicenum=>2
+    ability_dicesize=>10
     damage_bonus=>12
   END
 
   LAUNCH_ACTION_FUNCTION edit_item
     STR_VAR
-    item	= "dragblaw"
+    item	= "draggre1"
     editstring	= ~patch_ability=>"patch_data"~
   END
 
   MAKE_PATCH
     ability_dicenum=>1
-    ability_dicesize=>6
+    ability_dicesize=>8
     damage_bonus=>12
   END
 
-  LAUNCH_ACTION_FUNCTION edit_item
+  LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item	= "dr1-6s"
+    item	= "dr1-6s=>dr1-8s"
     editstring	= ~patch_ability=>"patch_data"~
   END
 
   MAKE_PATCH
-    level1=>20
+    level1=>21
     xp_value=>22000
     strength=>25
     intelligenceGT=>20
@@ -34,21 +34,23 @@ BEGIN
     constitutionGT=>21
     charismaGT=>21
     remove_items=>"ring97"
-    replace_items=>"dragblaw(weapon1) dr1-6s(shield) dragring(rring)"
+    replace_items=>"draggre1(weapon1) dr1-8s(shield) dragring(rring)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
-    creature	= "dragshad"
+    creature	= "fsdragon"
     edits	= "patch_data"
   END
 
+  /*
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
-    area	= "ar1402"
-    bottom	= "spawn_shadow_dragon_minions"
+    area	= "ar????"
+    bottom	= "spawn_green_dragon_minions"
     location	= "scripts"
   END
-END	// shadow_dragon_battle
+  */
+END	// green_dragon_battle
 
 
