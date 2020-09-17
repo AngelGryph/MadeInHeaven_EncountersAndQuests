@@ -2,6 +2,12 @@ DEFINE_ACTION_FUNCTION setup_underdark
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
+    file	= "setup_new_animations"
+    locbase	= "shared/new_animations"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
     file	= "setup_custom_monsters"
     locbase	= "shared/custom_monsters"
   END
