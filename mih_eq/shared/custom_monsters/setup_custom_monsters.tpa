@@ -16,7 +16,13 @@ BEGIN
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
-      file	= "compat_resources install_dragonkin install_elementals install_golems install_misc install_oozes install_undead install_variants"
+      file	= "setup_new_animations"
+      locbase	= "shared/new_animations"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_dragonkin install_elementals install_golems install_misc install_oozes install_undead install_variants"
       tra	= "custom_monsters"
       locbase
     END
