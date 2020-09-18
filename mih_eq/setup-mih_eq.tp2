@@ -13,7 +13,7 @@ AUTO_EVAL_STRINGS
 
 ALWAYS
   OUTER_TEXT_SPRINT MOD_NAME "mih_eq"
-  OUTER_SPRINT MOD_VERSION @0 
+  OUTER_SPRINT MOD_VERSION @0
 
   INCLUDE "mih_eq/lib/always.tph"
 END	// ALWAYS block
@@ -25,10 +25,22 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
+// Revised Dragons
+
+BEGIN @56
+GROUP @2
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_dragons"
+  location	= "general/dragons"
+END
+
+
 // Revised Ghoul Lords
 
-BEGIN @5 
-GROUP @2 
+BEGIN @5
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -39,8 +51,8 @@ END
 
 // Revised Golems
 
-BEGIN @43 
-GROUP @2 
+BEGIN @43
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -51,8 +63,8 @@ END
 
 // Revised Liches
 
-BEGIN @51 
-GROUP @2 
+BEGIN @51
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -63,8 +75,8 @@ END
 
 // Revised Magical Beasts
 
-BEGIN @6 
-GROUP @2 
+BEGIN @6
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -75,8 +87,8 @@ END
 
 // Revised Monstrous Spiders
 
-BEGIN @7 
-GROUP @2 
+BEGIN @7
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -87,8 +99,8 @@ END
 
 // Revised Oozes, Slimes & Jellies
 
-BEGIN @4 
-GROUP @2 
+BEGIN @4
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -99,8 +111,8 @@ END
 
 // Revised Vampires
 
-BEGIN @8 
-GROUP @2 
+BEGIN @8
+GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -115,7 +127,7 @@ END
 
 // Enhanced Battles: Ankheg Pit
 
-BEGIN @50 
+BEGIN @50
 GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -127,7 +139,7 @@ END
 
 // Enhanced Battles: Candlekeep Catacombs
 
-BEGIN @9 
+BEGIN @9
 GROUP @10  GAME_INCLUDES "bg1"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -141,7 +153,7 @@ END
 
 // Enhanced Battles: Mutamin's Garden
 
-BEGIN @12 
+BEGIN @12
 GROUP @10  GAME_INCLUDES "bg1"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -155,7 +167,7 @@ END
 
 // Enhanced Battles: Ramazith's Tower
 
-BEGIN @13 
+BEGIN @13
 GROUP @10  GAME_INCLUDES "bg1"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -169,7 +181,7 @@ END
 
 // Enhanced Battles: Spider Plague
 
-BEGIN @49 
+BEGIN @49
 GROUP @10  GAME_INCLUDES "bg1"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -197,7 +209,7 @@ END
 
 // Enhanced Battles: Ulcaster Ruins
 
-BEGIN @15 
+BEGIN @15
 GROUP @10  GAME_INCLUDES "bg1"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -211,7 +223,7 @@ END
 
 // Enhanced Battles: Xvart Village
 
-BEGIN @16 
+BEGIN @16
 GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -223,7 +235,7 @@ END
 
 // Enhanced Battles: Zombie Farm
 
-BEGIN @17 
+BEGIN @17
 GROUP @10  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -235,7 +247,7 @@ END
 
 // Enhanced Battles: Durlag's Tower
 
-BEGIN @19 
+BEGIN @19
 GROUP @10  GAME_INCLUDES "totsc"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -253,7 +265,7 @@ END
 
 // The Surgeon's Plight
 
-BEGIN @14 
+BEGIN @14
 GROUP @44  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -265,7 +277,7 @@ END
 
 // Sarevok's Assassins
 
-BEGIN @11 
+BEGIN @11
 GROUP @44  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -277,7 +289,7 @@ END
 
 // Minor Quest Enhancements (BG1)
 
-BEGIN @18 
+BEGIN @18
 GROUP @44  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -293,7 +305,7 @@ END
 
 // Enhanced Battles: Bridgefort
 
-BEGIN @27 
+BEGIN @27
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -305,7 +317,7 @@ END
 
 // Enhanced Battles: Cyric's Temple
 
-BEGIN @26 
+BEGIN @26
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -317,7 +329,7 @@ END
 
 // Enhanced Battles: Dwarven Dig Site
 
-BEGIN @24 
+BEGIN @24
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -329,7 +341,7 @@ END
 
 // Enhanced Battles: Korlasz' Tomb
 
-BEGIN @23 
+BEGIN @23
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -341,7 +353,7 @@ END
 
 // Enhanced Battles: Vampire Encounters
 
-BEGIN @25 
+BEGIN @25
 GROUP @21  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -357,7 +369,7 @@ END
 
 // Complete more/all Vision Quest encounters
 
-BEGIN @22 
+BEGIN @22
 GROUP @45  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -369,7 +381,7 @@ END
 
 // Increase Enemy Group Size
 
-BEGIN @20 
+BEGIN @20
 GROUP @45  GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -385,7 +397,7 @@ END
 
 // Enhanced Battles: Athkatla Liches
 
-BEGIN @37 
+BEGIN @37
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -399,7 +411,7 @@ END
 
 // Enhanced Battles: Firkraag's Lair
 
-BEGIN @34 
+BEGIN @34
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -413,7 +425,7 @@ END
 
 // Enhanced Battles: Graveyard Catacombs
 
-BEGIN @28 
+BEGIN @28
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -427,7 +439,7 @@ END
 
 // Enhanced Battles: Lower Reaches
 
-BEGIN @30 
+BEGIN @30
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -441,7 +453,7 @@ END
 
 // Enhanced Battles: Slum Sewers
 
-BEGIN @31 
+BEGIN @31
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -455,7 +467,7 @@ END
 
 // Enhanced Battles: Spellhold
 
-BEGIN @35 
+BEGIN @35
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -469,7 +481,7 @@ END
 
 // Enhanced Battles: Suldanessenar
 
-BEGIN @38 
+BEGIN @38
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -483,7 +495,7 @@ END
 
 // Enhanced Battles: Temple Ruins
 
-BEGIN @33 
+BEGIN @33
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -497,7 +509,7 @@ END
 
 // Enhanced Battles: Trademeet
 
-BEGIN @32 
+BEGIN @32
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -511,7 +523,7 @@ END
 
 // Enhanced Battles: Underdark
 
-BEGIN @36 
+BEGIN @36
 GROUP @29  GAME_INCLUDES "bg2"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -530,7 +542,7 @@ END
 
 // Enhanced Battles: Amkethran
 
-BEGIN @55 
+BEGIN @55
 GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -542,7 +554,7 @@ END
 
 // Enhanced Battles: Forest of Mir
 
-BEGIN @48 
+BEGIN @48
 GROUP @40  GAME_INCLUDES "tob"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -556,7 +568,7 @@ END
 
 // Enhanced Battles: Pocket Plane
 
-BEGIN @41 
+BEGIN @41
 GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -568,7 +580,7 @@ END
 
 // Enhanced Battles: Saradush
 
-BEGIN @42 
+BEGIN @42
 GROUP @40  GAME_INCLUDES "tob"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -582,7 +594,7 @@ END
 
 // Enhanced Battles: Watcher's Keep
 
-BEGIN @39 
+BEGIN @39
 GROUP @40  GAME_INCLUDES "tob"
 
 REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
@@ -596,7 +608,7 @@ END
 
 // Enhanced Battles: Yaga-Shura's Army
 
-BEGIN @52 
+BEGIN @52
 GROUP @40  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -608,7 +620,7 @@ END
 
 // Minor Quest Enhancements (ToB)
 
-BEGIN @47 
+BEGIN @47
 GROUP @46  GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run

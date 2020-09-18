@@ -1,47 +1,5 @@
 DEFINE_ACTION_FUNCTION firkraag_battle
 BEGIN
-  MAKE_PATCH
-    ability_dicenum=>3
-    ability_dicesize=>10
-    damage_bonus=>12
-  END
-
-  LAUNCH_ACTION_FUNCTION edit_item
-    STR_VAR
-    item	= "dragred1"
-    editstring	= ~patch_ability=>"patch_data"~
-  END
-
-  MAKE_PATCH
-    ability_dicenum=>1
-    ability_dicesize=>10
-    damage_bonus=>12
-  END
-
-  LAUNCH_ACTION_FUNCTION clone_item
-    STR_VAR
-    item	= "dr1-6s=>dr1-10s"
-    editstring	= ~patch_ability=>"patch_data"~
-  END
-
-  MAKE_PATCH
-    level1=>27
-    xp_value=>24000
-    strength=>25
-    intelligenceGT=>20
-    wisdomGT=>21
-    dexterityGT=>21
-    constitutionGT=>21
-    charismaGT=>21
-    replace_items=>"dragred(weapon1) dr1-10s(shield)"
-  END
-
-  LAUNCH_ACTION_FUNCTION edit_creature
-    STR_VAR
-    creature	= "firkra02"
-    edits	= "patch_data"
-  END
-
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
     area	= "ar1203"

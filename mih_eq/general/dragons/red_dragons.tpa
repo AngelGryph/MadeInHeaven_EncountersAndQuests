@@ -1,0 +1,48 @@
+DEFINE_ACTION_FUNCTION red_dragons
+BEGIN
+  // Red Dragons
+  //
+  // Firkraag, Saladrex, evil hell dragon
+  //
+  // Claw: 1d10
+  // Bite: 3d10 + 1d4 fire
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "dragon_hitpoints_per_hd"
+    RET
+    dragon_hitpoints_per_hd	= value
+  END
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>3 ability_dicesize=>10~
+    delete_effect=>~opcode = 12~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00080000 dicenum=>1 dicesize=>4~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dragred1"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    level_all=>23
+    hitpoints=>"level1 * %dragon_hitpoints_per_hd%"
+    xp_value=>24000
+    thac0=>"-5"
+    ac=>"-11"
+    // Note:
+    // Bite is in off hand, dragons get multiple
+    // claw attacks but only one bite
+    replace_items=>"dr1-10s(weapon1) dragred1(shield)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "dragred firkra02 gorsal hdragred"
+    edits	= "patch_data"
+  END
+END	// red_dragons
+
+

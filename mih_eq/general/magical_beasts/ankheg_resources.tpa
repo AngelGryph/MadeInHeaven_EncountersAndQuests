@@ -12,9 +12,9 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
-    spell		= "ankheg_acid"
+    spell		= "ankheg_acid_squirt"
     location		= "spells"
-    idsname		= "ANKHEG_ACID_SPIT"
+    idsname		= "ANKHEG_ACID_SQUIRT"
     editstring		= "say_name=>1"
   END
 

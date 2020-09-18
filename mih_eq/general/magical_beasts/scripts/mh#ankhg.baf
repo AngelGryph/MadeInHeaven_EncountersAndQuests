@@ -7,7 +7,7 @@ THEN
   RESPONSE #40
     SetGlobalTimer("mh#Ankheg_acid", "LOCALS", SIX_HOURS)
     FaceObject(LastSeenBy(Myself))
-    ForceSpell(LastSeenBy(Myself), ANKHEG_ACID_SPIT)
+    ForceSpell(LastSeenBy(Myself), ANKHEG_ACID_SQUIRT)
     Wait(2)
   RESPONSE #60
     Continue()

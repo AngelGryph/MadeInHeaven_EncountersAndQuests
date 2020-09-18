@@ -1,0 +1,49 @@
+DEFINE_ACTION_FUNCTION brown_dragons
+BEGIN
+  // Brown Dragons
+  //
+  // Draconis, unused brown dragon
+  //
+  // Claw: 1d4
+  // Bite: 3d10 + 1d4 acid
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "dragon_hitpoints_per_hd"
+    RET
+    dragon_hitpoints_per_hd	= value
+  END
+
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>3 ability_dicesize=>10~
+    delete_effect=>~opcode = 12~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00010000 dicenum=>1 dicesize=>4~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dragbrow"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    level_all=>22
+    hitpoints=>"level1 * %dragon_hitpoints_per_hd%"
+    xp_value=>21000
+    thac0=>"-5"
+    ac=>"-6"
+    // Note:
+    // Bite is in off hand, dragons get multiple
+    // claw attacks but only one bite
+    replace_items=>"dr1-4s(weapon1) dragbrow(shield)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "bazdra02 dragbrow"
+    edits	= "patch_data"
+  END
+END	// brown_dragons
+
+

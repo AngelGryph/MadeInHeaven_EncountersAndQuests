@@ -1,0 +1,12 @@
+DEFINE_ACTION_FUNCTION setup_dragons
+BEGIN
+  ACTION_IF GAME_INCLUDES "bg2"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "dragon_revisions black_dragons blue_dragons brown_dragons green_dragons red_dragons silver_dragons"
+    END
+  END
+END	// setup_dragons
+
+

@@ -1,0 +1,49 @@
+DEFINE_ACTION_FUNCTION black_dragons
+BEGIN
+  // Black Dragons
+  //
+  // Nizid
+  //
+  // Claw: 1d6
+  // Bite: 3d6 + 1d4 acid (black)
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "dragon_hitpoints_per_hd"
+    RET
+    dragon_hitpoints_per_hd	= value
+  END
+
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>3 ability_dicesize=>6~
+    delete_effect=>~opcode = 12~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00010000 dicenum=>1 dicesize=>4~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dragblaw"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    level_all=>20
+    hitpoints=>"level1 * %dragon_hitpoints_per_hd%"
+    xp_value=>20000
+    thac0=>"-5"
+    ac=>"-7"
+    // Note:
+    // Bite is in off hand, dragons get multiple
+    // claw attacks but only one bite
+    replace_items=>"dr1-6s(weapon1) dragblaw(shield)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "dragblac"
+    edits	= "patch_data"
+  END
+END	// black_dragons
+
+

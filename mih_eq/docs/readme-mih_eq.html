@@ -60,6 +60,28 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>This mod consists of several components, each of which can be installed or removed independently from the others.<p>
   <h3>Monster Enhancements</h3>
   <p>These modifications enhance certain types of monsters, mostly by adding abilities or immunities that they should have according to P&amp;P rules but were altered or omitted in the game.  This is not strictly a P&amp;P mod though, I adhere to the rules where I reasonably can and deviate where needed due to engine limitations or the rules just not working right in the game.</p>
+  <p><strong>Revised Dragons</strong><br/>
+  While implementing my own dragon battle, I found that most dragons are implemented rather haphazardly in the game.  Some got their combat modifier to damage, some didn't.  Some were immune to critical hits, some were not.  Some did their claw damage, others their bite damage.  And many of them gave way too much XP.  I decided to systemize them as follows.</p>
+  <ul>
+  <li>All dragons see through invisibility</li>
+  <li>All dragons are immune to backstab, blindness and instant death</li>
+  <li>Dragons are <b>not</b> immune to critical hits</i>
+  <li>Dragon breath is not magical, so magic resistance has no effect</li>
+  <li>Dragon breath bypasses Mirror Image (ToBEx or EE required)</li>
+  <li>The combat modifier is applied as a saving throw penalty to dragon breath</li>
+  <li>Natural weapons of dragons are considered +4 weapons</li>
+  <li>Dragons get two attacks with their claws and one with their bite, the bite is considered off-hand (-2)</li>
+  <li>Dragons have the following minimum stats: STR 25, DEX 21, CON 21, INT 20, WIS 21, CHA 21</li>
+  <li>All dragons in Shadows of Amn and Throne of Bhaal are considered to be great wyrms</ul>
+  <li>Black Dragon: attacks 1d6/1d6/3d6 plus 1d4 acid, thac0 -3, AC -7, 20000 xp</li>
+  <li>Brown Dragon: attacks 1d4/1d4/3d10 plus 1d4 acid, thac0 -5, AC -6, 21000 xp</li>
+  <li>Blue Dragon: attacks 1d8/1d8/3d8 plus 1d4 electric, thac0 -5, AC -8, 23000 xp</li>
+  <li>Green Dragon: attacks 1d8/1d8/2d10 plus 1d4 poison, thac0 -5, AC -8, 22000 xp</li>
+  <li>Red Dragon: attacks 1d10/1d10/3d10 plus 1d4 fire, thac0 -5, AC -11, 24000 xp</li>
+  <li>Shadow Dragon: attacks 1d6/1d6/3d6 plus level drain, thac0 -3, AC -12, 22000 xp</li>
+  </ul>
+  <p>This modification partially overlaps with Sword Coast Stratagems' "Smarter Dragons" component; they can safely be used together.  You should probably install SCS last as always.</p>
+  <p>Note: I know there are a yellow dragon and a purple dragon in the game files, but since they're not used anywhere I didn't bother with them.  Besides, I don't even have stats for the purple dragon, unless it's either an amethyst dragon or a deep dragon.  I also may have missed some EE dragons, as I am not very familiar with the EE content yet.</p>
   <p><strong>Revised Ghoul Lords</strong><br/>
   Ghoul Lords, also known as Greater Ghouls are unique beings found primarly in Durlag's Tower, although some also show up in a few places in BG2, like Bodhi's lair.  They seem to be based on the Ravenloft monster, so I give them a few of that creature's abilities.</p>
   <p>Their attack now deals 1d10 damage (was 1d8), paralyzes its victim for 10 rounds (was 7) and may inflict a disease that lowers constitution and charisma by one and deals one point of damage per turn.  The disease remains until cured by Cure Disease, Neutralize Poison or an Elixer of Health.  Paralysis and disease may be avoided by a successful save versus death at a -4 penalry.</p>

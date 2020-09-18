@@ -1,0 +1,48 @@
+DEFINE_ACTION_FUNCTION green_dragons
+BEGIN
+  // Green Dragons
+  //
+  // Fll'Yissetat, Test of Courage dragon in Watcher's Keep
+  //
+  // Claw: 1d8
+  // Bite: 2d10 + 1d4 poison
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "dragon_hitpoints_per_hd"
+    RET
+    dragon_hitpoints_per_hd	= value
+  END
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>2 ability_dicesize=>10~
+    delete_effect=>~opcode = 12~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00200000 dicenum=>1 dicesize=>4~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "draggre1"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    level_all=>21
+    hitpoints=>"level1 * %dragon_hitpoints_per_hd%"
+    xp_value=>22000
+    thac0=>"-5"
+    ac=>"-8"
+    // Note:
+    // Bite is in off hand, dragons get multiple
+    // claw attacks but only one bite
+    replace_items=>"dr1-8s(weapon1) draggre1(shield)"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "bazdra03 fsdragon"
+    edits	= "patch_data"
+  END
+END	// green_dragons
+
+
