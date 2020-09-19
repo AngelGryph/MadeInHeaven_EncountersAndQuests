@@ -2,9 +2,9 @@ DEFINE_ACTION_FUNCTION cursed_prison
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini		= "prison_vampires_level_bonus"
+    ini		= "prison_vampires_legendary_rank"
     RET
-    prison_vampires_level_bonus	= value
+    prison_vampires_legendary_rank	= value
   END
 
   LAUNCH_ACTION_FUNCTION install
@@ -42,16 +42,12 @@ BEGIN
   END
 
   MAKE_PATCH
-    level1=>"level1 + %prison_vampires_level_bonus%"
+    make_legendary=>"%prison_vampires_legendary_rank%"
+    set_xp_by_hd=>10
     strength=>21
     dexterity=>19
     constitution=>18
-    ac=>"-8"
     attacks=>"attacks + 1"
-    enforce_hp=>at_worst
-    enforce_thac0=>at_worst
-    enforce_saves=>at_worst
-    enforce_xp=>10
     replace_items=>"vamp3(weapon1) mage06(lring) mh#svreg(rring) immune3(amulet)"
     insert_script_high=>"mh#sarvm"
   END

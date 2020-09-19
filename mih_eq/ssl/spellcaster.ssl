@@ -7,8 +7,11 @@ TRIGGER
   !StateCheck(scstarget,STATE_IMPROVEDINVISIBILITY)
 ACTION	
   RESPONSE #scsprob1
+    SetInterrupt(FALSE)
     SetGlobalTimer("cast_spell", "locals", ONE_ROUND)
+    FaceObject(scstarget)
     Spell(scstarget, scsargument1)
+    SetInterrupt(TRUE)
 END
 
 BEGIN_ACTION_DEFINITION
@@ -18,7 +21,9 @@ TRIGGER
   !GlobalTimerNotExpired("cast_spell", "locals")
 ACTION	
   RESPONSE #scsprob1
+    SetInterrupt(FALSE)
     SetGlobalTimer("cast_spell", "locals", ONE_ROUND)
     Spell(Myself, scsargument1)
+    SetInterrupt(TRUE)
 END
 

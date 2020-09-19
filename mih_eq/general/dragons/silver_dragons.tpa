@@ -29,7 +29,7 @@ BEGIN
   MAKE_PATCH
     level_all=>23
     hitpoints=>"level1 * %dragon_hitpoints_per_hd%"
-    xp_value=>24000
+    set_xp_by_hd=>10
     thac0=>"-7"
     ac=>"-11"
     // Note:

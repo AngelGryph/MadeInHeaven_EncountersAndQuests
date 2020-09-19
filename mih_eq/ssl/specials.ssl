@@ -1,0 +1,28 @@
+BEGIN_ACTION_DEFINITION
+Name(ForceSpellOnEnemy)
+TRIGGER
+  !GlobalTimerNotExpired(scsargument2, "locals")
+  See(scstarget)
+  !StateCheck(scstarget,STATE_IMPROVEDINVISIBILITY)
+ACTION	
+  RESPONSE #scsprob1
+    SetInterrupt(FALSE)
+    SetGlobalTimer(scsargument2, "locals", scsargument3)
+    FaceObject(scstarget)
+    ForceSpell(scstarget, scsargument1)
+    SetInterrupt(TRUE)
+END
+
+BEGIN_ACTION_DEFINITION
+Name(ForceSpellOnMyself)
+TRIGGER
+  !GlobalTimerNotExpired(scsargument2, "locals")
+ACTION	
+  RESPONSE #scsprob1
+    SetInterrupt(FALSE)
+    SetGlobalTimer(scsargument2, "locals", scsargument3)
+    ForceSpell(Myself, scsargument1)
+    SetInterrupt(TRUE)
+END
+
+

@@ -3,14 +3,9 @@ BEGIN
   // Umber Hulk Scions in arena fight
 
   MAKE_PATCH
-    level1=>16
-    xp_value=>14000
-    hitpoints=>120
+    make_legendary=>scion
     strength=>21
     constitution=>18
-    ac=>"-4"
-    thac0=>5
-    enforce_saves=>at_worst
     resist_slashing=>50
     resist_piercing=>50
     resist_missile=>100
@@ -63,15 +58,10 @@ BEGIN
   // Umber Hulk Elder
 
   MAKE_PATCH
+    make_legendary=>elder
     strength=>22
     dexterity=>18
     constitution=>20
-    level1=>23
-    xp_value=>19000
-    hitpoints=>175
-    thac0=>"-2"
-    ac=>"-6"
-    enforce_saves=>at_worst
     resist_slashing=>50
     resist_piercing=>50
     resist_missile=>100

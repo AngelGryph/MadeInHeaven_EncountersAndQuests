@@ -9,6 +9,11 @@ BEGIN
 
   ACTION_IF NOT installed
   BEGIN
+    LAUNCH_ACTION_FUNCTION make_label
+      STR_VAR
+      label	= "mh#new_animations"
+    END
+
     ACTION_IF ENGINE_IS "bgee bg2ee"
     BEGIN
       // Install missing animations in BG1EE without SoD and BG2EE

@@ -34,9 +34,10 @@ BEGIN
     delete_effect_global=>~opcode is_in [102 206] and not resource is_in [spwm113 spwi415 spwi711]~
     // 3.5e rule: Skeletal undead resistances
     add_effect_global_inline'1=>~number_to_add=>3 opcode=>"entry_index from [86 88 89]" target=>1 timing=>2 parameter1=>50 parameter2=>1~
+    // Turn immunity
+    add_effect_global_inline'2=>~opcode=>297 target=>1 timing=>2 parameter2=>1~
     // Immunity to spell levels
-    add_effect_global_inline'2=>~number_to_add=>"%lich_spell_level_immunity%" opcode=>102 target=>1 timing=>2 parameter1=>"entry_index + 1"~
-    add_effect_global_inline'3=>~opcode=>155 target=>1 timing=>2~
+    add_effect_global_inline'3=>~number_to_add=>"%lich_spell_level_immunity%" opcode=>102 target=>1 timing=>2 parameter1=>"entry_index + 1"~
     cd_immunity=>~spell_level_1 spell_level_2 spell_level_3 spell_level_4 spell_level_5 spell_level_6 spell_level_7 spell_level_8 spell_level_9~
   END
 

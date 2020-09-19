@@ -1,5 +1,23 @@
 DEFINE_ACTION_FUNCTION black_dragon_battle
 BEGIN
+  // Add legendary template to Nizid
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "nizid_legendary_rank"
+    RET
+    nizid_legendary_rank	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "dragblac"
+    editstring	= ~make_legendary=>"%nizid_legendary_rank%" set_xp_by_hd=>10~
+  END
+
+
+  // Firkraag's minions join the battle
+
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
     area	= "ar2807"

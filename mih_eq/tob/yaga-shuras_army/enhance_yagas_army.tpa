@@ -18,7 +18,7 @@ BEGIN
     enforce_hp=>at_worst
     enforce_thac0=>at_worst
     enforce_saves=>at_worst
-    enforce_xp=>3
+    set_xp_by_hd=>3
     insert_script_high=>"mh#ysarm"
   END
 

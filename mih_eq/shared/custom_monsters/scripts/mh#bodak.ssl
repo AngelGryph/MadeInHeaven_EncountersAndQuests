@@ -1,20 +1,11 @@
-BEGIN_ACTION_DEFINITION
-Name(DeathGaze)
-TRIGGER
-  !GlobalTimerNotExpired("death_gaze", "locals")
-ACTION	
-  RESPONSE #scsprob1
-    SetGlobalTimer("death_gaze", "locals", ONE_ROUND)
-    FaceObject(scstarget)
-    ReallyForceSpell(scstarget, BODAK_DEATH_GAZE)
-END
+INCLUDE FILE(%scsroot%/ssl/specials.ssl)
 
 IF TRIGGER
   TriggerBlock(Enemy|MR|Slay)
   TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
 THEN DO
-  Action(DeathGaze|50|50)
+  Action(ForceSpellOnEnemy, BODAK_DEATH_GAZE, "death_gaze", ONE_ROUND|50|50)
 END
 
 

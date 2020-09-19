@@ -1,30 +1,12 @@
-BEGIN_ACTION_DEFINITION
-Name(EyeOfFear)
-TRIGGER
-  !GlobalTimerNotExpired("eye_of_fear", "locals")
-ACTION	
-  RESPONSE #scsprob1
-    SetGlobalTimer("eye_of_fear", "locals", TWO_ROUNDS)
-    ReallyForceSpell(scstarget, BEHOLDER_FEAR)
-END
-
-BEGIN_ACTION_DEFINITION
-Name(EyeOfFlame)
-TRIGGER
-  !GlobalTimerNotExpired("eye_of_flame", "locals")
-ACTION	
-  RESPONSE #scsprob1
-    SetGlobalTimer("eye_of_flame", "locals", THREE_ROUNDS)
-    ReallyForceSpell(scstarget, DEATHKNIGHT_FIREBALL)
-END
+INCLUDE FILE(%scsroot%/ssl/specials.ssl)
 
 IF TRIGGER
-  TriggerBlock(Enemy|MR|ResistFire)
+  TriggerBlock(Enemy|MR|ResistFire|AoEFireball)
   TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
   !Range(scstarget, 15)
 THEN DO
-  Action(EyeOfFlame|50|50)
+  Action(ForceSpellOnEnemy, EYE_OF_FLAME, "flame_eye", THREE_ROUNDS|70|30)
 END
 
 IF TRIGGER
@@ -32,7 +14,7 @@ IF TRIGGER
   TargetBlock(PCsInOrder)
   TargetBlock(EnemiesInOrder)
 THEN DO
-  Action(EyeOfFear|50|50)
+  Action(ForceSpellOnEnemy, EYE_OF_FEAR, "fear_eye", TWO_ROUNDS|70|30)
 END
 
 IF TRIGGER
