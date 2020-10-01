@@ -4,7 +4,7 @@ BEGIN
   BEGIN
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
-      file	= "dragon_revisions black_dragons blue_dragons brown_dragons green_dragons red_dragons silver_dragons"
+      file	= "black_dragons blue_dragons brown_dragons green_dragons red_dragons silver_dragons dragon_revisions"
     END
   END
 END	// setup_dragons

@@ -7,14 +7,6 @@ BEGIN
   // Claw: 1d4
   // Bite: 3d10 + 1d4 acid
 
-  LAUNCH_ACTION_FUNCTION check_ini
-    STR_VAR
-    ini		= "dragon_hitpoints_per_hd"
-    RET
-    dragon_hitpoints_per_hd	= value
-  END
-
-
   MAKE_PATCH
     patch_ability_inline=>~ability_dicenum=>3 ability_dicesize=>10~
     delete_effect=>~opcode = 12~
@@ -29,10 +21,9 @@ BEGIN
 
   MAKE_PATCH
     level_all=>22
-    hitpoints=>"level1 * %dragon_hitpoints_per_hd%"
-    set_xp_by_hd=>10
     thac0=>"-5"
     ac=>"-6"
+
     // Note:
     // Bite is in off hand, dragons get multiple
     // claw attacks but only one bite
