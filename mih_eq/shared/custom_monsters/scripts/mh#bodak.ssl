@@ -1,4 +1,4 @@
-INCLUDE FILE(%scsroot%/ssl/specials.ssl)
+INCLUDE FILE(%mod_root%/ssl/specials.ssl)
 
 IF TRIGGER
   TriggerBlock(Enemy|MR|Slay)

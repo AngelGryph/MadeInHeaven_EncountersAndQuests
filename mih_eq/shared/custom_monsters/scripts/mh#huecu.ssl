@@ -1,4 +1,4 @@
-INCLUDE FILE(%scsroot%/ssl/spellcaster.ssl)
+INCLUDE FILE(%mod_root%/ssl/spellcaster.ssl)
 
 IF TRIGGER
   Target(Myself)
