@@ -13,7 +13,12 @@ BEGIN
   END
 
   ADD_JOURNAL @8 @25
-  COMPILE "%mod_root%/%component_loc%/dialog/surgeon_quest.d"
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "surgeon_quest.d"
+    location	= "dialogs"
+  END
 
   ACTION_FOR_EACH dialog IN "mh#surg1" "mh#surg2"
   BEGIN

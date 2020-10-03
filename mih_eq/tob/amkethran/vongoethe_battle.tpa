@@ -43,7 +43,7 @@ BEGIN
     script	= "mh#vgoet"
     location	= "scripts"
     locbase
-    ssllibrary	= "%mod_root%/ssl/library"
+    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   MAKE_PATCH

@@ -63,7 +63,7 @@ BEGIN
     script	= "mh#batho"
     location	= "scripts"
     locbase
-    ssllibrary	= "%mod_root%/ssl/library"
+    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   MAKE_PATCH

@@ -1,4 +1,4 @@
-INCLUDE FILE(%mod_root%/ssl/specials.ssl)
+INCLUDE FILE(%MOD_FOLDER%/ssl/specials.ssl)
 
 IF TRIGGER
   TriggerBlock(Enemy|MR|ResistFire|AoEFireball)

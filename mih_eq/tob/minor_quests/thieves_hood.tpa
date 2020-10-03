@@ -12,7 +12,7 @@ BEGIN
     editstring	= ~add_items=>"book05(inv,x1)"~
   END
 
-<<<<<<<< .../%mod_root%-inline/dialog_edits.d
+<<<<<<<< .../%MOD_FOLDER%-inline/dialog_edits.d
 REPLACE_ACTION_TEXT "gortan1"
   ~GiveItemCreate("Helm29",LastTalkedToBy,0,0,0)~
   ~GiveItem("helm29", LastTalkedToBy(Myself))~
@@ -23,7 +23,7 @@ REPLACE_ACTION_TEXT "gorbat1"
   ~GiveItem("book05", LastTalkedToBy(Myself))~
 >>>>>>>>
 
-  COMPILE ".../%mod_root%-inline/dialog_edits.d"
+  COMPILE ".../%MOD_FOLDER%-inline/dialog_edits.d"
 END	// thieves_hood
 
 

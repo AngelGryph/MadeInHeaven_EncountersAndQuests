@@ -97,7 +97,7 @@ BEGIN
     script	= "mh#huecu"
     location	= "scripts"
     locbase
-    ssllibrary	= "%mod_root%/ssl/library"
+    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   MAKE_PATCH
@@ -225,7 +225,7 @@ BEGIN
     script	= "mh#bodak"
     location	= "scripts"
     locbase
-    ssllibrary	= "%mod_root%/ssl/library"
+    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
@@ -244,7 +244,7 @@ BEGIN
     script	= "mh#eyeff"
     location	= "scripts"
     locbase
-    ssllibrary	= "%mod_root%/ssl/library"
+    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
