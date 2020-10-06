@@ -9,13 +9,13 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item	= "carrio1=>mh#oozcr"
+    item	= "carrio1=>mh#crooz"
     edits	= "patch_data"
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
-    creature	= "mh#oozcr"
+    creature	= "mh#crooz"
     editstring	= "say_both_names=>3"
     location	= "actors"
     locbase
@@ -26,21 +26,21 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install_item
     STR_VAR
-    item	= "mh#pudbr"
+    item	= "mh#brnpd"
     location	= "items"
     locbase
   END
 
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
-    spell	= "mh#pudbr"
+    spell	= "mh#brnpd"
     location	= "spells"
     locbase
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
-    creature	= "mh#pudbr"
+    creature	= "mh#brnpd"
     location	= "actors"
     editstring	= "say_both_names=>17"
     locbase
@@ -57,7 +57,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install_item
     STR_VAR
-    item	= "mh#pudbl"
+    item	= "mh#blkpd"
     edits	= "patch_data"
     location	= "items"
     locbase
@@ -65,14 +65,14 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
-    spell	= "mh#pudbl"
+    spell	= "mh#blkpd"
     location	= "spells"
     locbase
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
-    creature	= "mh#pudbl"
+    creature	= "mh#blkpd"
     location	= "actors"
     editstring	= "say_both_names=>33"
     locbase

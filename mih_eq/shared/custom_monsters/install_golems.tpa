@@ -4,21 +4,21 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install_item
     STR_VAR
-    item	= "mh#golbm"
+    item	= "mh#brass"
     location	= "items"
     locbase
   END
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    file	= "mh#golbm.baf"
+    file	= "mh#brass.baf"
     location	= "scripts"
     locbase
   END
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
-    creature	= "mh#golbm"
+    creature	= "mh#brass"
     location	= "actors"
     locbase
     editstring	= "say_both_names=>6"

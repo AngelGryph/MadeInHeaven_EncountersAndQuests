@@ -24,10 +24,10 @@ BEGIN
   END
 
   MAKE_PATCH
-    add_actor_inline'01=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#golbm" actor_x_coord=>895 actor_y_coord=>1090 actor_orientation=>6~
-    add_actor_inline'02=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#golbm" actor_x_coord=>1545 actor_y_coord=>920 actor_orientation=>11~
-    add_actor_inline'03=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#golbm" actor_x_coord=>1595 actor_y_coord=>1635 actor_orientation=>1~
-    add_actor_inline'04=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#golbm" actor_x_coord=>1735 actor_y_coord=>1700 actor_orientation=>3~
+    add_actor_inline'01=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#brass" actor_x_coord=>895 actor_y_coord=>1090 actor_orientation=>6~
+    add_actor_inline'02=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#brass" actor_x_coord=>1545 actor_y_coord=>920 actor_orientation=>11~
+    add_actor_inline'03=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#brass" actor_x_coord=>1595 actor_y_coord=>1635 actor_orientation=>1~
+    add_actor_inline'04=>~actor_name=>"{literal:Brass Minotaur}" actor_resource=>"mh#brass" actor_x_coord=>1735 actor_y_coord=>1700 actor_orientation=>3~
     add_actor_inline'05=>~actor_name=>"{literal:Juggernaut Golem}" actor_resource=>"goljug01" actor_x_coord=>1895 actor_y_coord=>595 actor_orientation=>9~
     add_actor_inline'06=>~actor_name=>"{literal:Sand Golem}" actor_resource=>"golsan01" actor_x_coord=>2030 actor_y_coord=>675 actor_orientation=>7~
     add_actor_inline'07=>~actor_name=>"{literal:Minotaur}" actor_resource=>"icmin01" actor_x_coord=>2150 actor_y_coord=>1825 actor_orientation=>10~

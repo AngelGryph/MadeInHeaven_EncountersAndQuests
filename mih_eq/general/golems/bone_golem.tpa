@@ -10,7 +10,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install
      STR_VAR
-     file	= "mh#golbn.baf"
+     file	= "mh#bngol.baf"
      location	= "scripts"
   END
 
@@ -26,7 +26,7 @@ BEGIN
     resist_magic_fire=>"-25"
     resist_electricity=>0
     resist_acid=>0
-    insert_script=>"mh#golbn"
+    insert_script=>"mh#bngol"
     replace_items=>"immune2(lring)"
   END
 

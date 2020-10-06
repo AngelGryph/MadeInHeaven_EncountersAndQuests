@@ -1,9 +1,14 @@
 DEFINE_ACTION_FUNCTION setup_liches
 BEGIN
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "lich_revisions lich_hd_by_spell demilich_revisions"
-    tra		= "liches"
+  // TODO: SoD Lich
+
+  ACTION_IF is_bg2
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "lich_revisions lich_hd_by_spell demilich_revisions"
+      tra	= "liches"
+    END
   END
 END	// setup_liches
 

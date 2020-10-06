@@ -11,13 +11,13 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION clone_item
     STR_VAR
-    item	= "golmag01=>mh#golmg"
+    item	= "golmag01=>mh#mggol"
     edits	= "patch_data"
   END
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    file	= "mh#golmg.baf"
+    file	= "mh#mggol.baf"
     location	= "scripts"
   END
 
@@ -30,8 +30,8 @@ BEGIN
     charisma=>5
     class=>"mage"
     thac0=>13
-    insert_script_high=>"mh#golmg"
-    replace_items=>"mh#golmg(weapon1)"
+    insert_script_high=>"mh#mggol"
+    replace_items=>"mh#mggol(weapon1)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

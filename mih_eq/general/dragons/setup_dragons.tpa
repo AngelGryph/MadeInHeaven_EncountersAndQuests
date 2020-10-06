@@ -1,6 +1,8 @@
 DEFINE_ACTION_FUNCTION setup_dragons
 BEGIN
-  ACTION_IF GAME_INCLUDES "bg2"
+  // TODO: SoD Dragons
+
+  ACTION_IF is_bg2
   BEGIN
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
