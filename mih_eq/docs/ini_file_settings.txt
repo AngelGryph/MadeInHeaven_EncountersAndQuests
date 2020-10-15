@@ -1,0 +1,171 @@
+debug_variable=0
+================
+
+If set to non-zero, debugging information is shown during installation.
+
+
+disable_ssl=0
+=============
+
+DO NOT TOUCH.
+
+
+hitpoint_percentage=100
+=======================
+
+This setting controls how many hit points additional hit dice / levels should
+add, as a percentage of the possible maximum.
+
+
+dragon_hp_per_hd=12
+===================
+
+The minimum number of hit points dragons should have per hit die.
+
+
+dread_wolf_disease_duration=2400
+================================
+
+Duration of dread wolf disease, in rounds.
+
+
+relocate_winter_wolves=1
+========================
+
+Toggles whether or not to remove winter wolves from the early areas of BG1.
+
+
+spider_hd_bonus=3
+spider_ac_bonus=4
+=================
+
+Hit dice- and armor class bonus for all kinds of monstrous spiders.  Note,
+this is added to their P&P base, not their in-game base (which is already
+better than P&P).
+
+
+lich_spell_level_immunity=3
+===========================
+
+What spell level liches should be immune to.  (Note, in the vanilla games
+without SCS, liches already are immune to spells of level 5 or lower.)
+
+
+lich_powers_save_penalty=6
+==========================
+
+Saving throw penalty applied to lich's aura of fear, paralyzing touch and any
+other special powers (but not their spells).
+
+
+demilich_howl_save_penalty=4
+============================
+
+Saving throw penalty applied to the demi-lich's howl.  This is on top of the
+-4 penalty it already has.
+
+
+demilich_curse_debuff=12
+========================
+
+Penalty applied to armor class and saves of the victims of a demi-lich curse.
+
+
+ankheg_waves_count=30
+ankheg_waves_interval=60
+========================
+
+Number of ankheg waves and interval between waves (in seconds) in the ankheg
+pit near the fishing village in BG1 (farmer Brun's quest).
+
+
+spider_waves_count=30
+spider_waves_interval=60
+========================
+
+Number of ankheg waves and interval between waves (in seconds) in the spider
+waves in the Cloakwood- and Spiderwood areas in BG1.
+
+
+sod_group_size=4
+================
+
+How big enemy groups should be in Siege of Dragonspear, on a scale from 1-4.
+Setting this to 4 will get all possible enemies.
+
+
+korlasz_tomb_level_bonus=5
+==========================
+
+Level bonus to apply to Korlasz' mercenaries in the Siege of Dragonspear
+starting dungeon.
+
+
+spectacle_charges=9
+===================
+
+Number of charges in the Spectacles of Spectacle.  Setting this to 9 lets you
+finish all possible encounters.  Note that setting this higher than 9 makes
+the quest unfinishable.
+
+
+firkraag_legendary_rank=scion
+=============================
+
+Legendary rank to apply to Firkraag the red dragon.  Ranks are lesser_scion,
+scion, elder, great_elder and paragon.  This grants extra hit dice and
+improvements to thac0 and armor class.
+
+
+kuotoa_level_bonus=6
+====================
+
+Level bonus to apply to the groups of kuo-toa in the Underdark.
+
+
+thaxll_legendary_rank=scion
+===========================
+
+Legendary rank to apply to Thaxll the shadow dragon.  Ranks are lesser_scion,
+scion, elder, great_elder and paragon.  This grants extra hit dice and
+improvements to thac0 and armor class.
+
+
+nizid_legendary_rank=scion
+===========================
+
+Legendary rank to apply to Nizid the black dragon.  Ranks are lesser_scion,
+scion, elder, great_elder and paragon.  This grants extra hit dice and
+improvements to thac0 and armor class.
+
+
+barracks_battle_level_bonus=8
+=============================
+
+Level bonus to apply to Gromnir's grunts in the barracks in Saradush.
+
+
+prison_vampires_legendary_rank=lesser_scion
+===========================================
+
+Legendary rank to apply to the vampires in the cursed prison of Saradush.
+Ranks are lesser_scion, scion, elder, great_elder and paragon.  This grants
+extra hit dice and improvements to thac0 and armor class.
+
+
+saladrex_legendary_rank=elder
+trial_dragon_legendary_rank=elder
+=================================
+
+
+Legendary rank to apply to the dragons of Watcher's Keep.  Ranks are
+lesser_scion, scion, elder, great_elder and paragon.  This grants extra
+hit dice and improvements to thac0 and armor class.
+
+
+yaga_shura_army_level_bonus=3
+=============================
+
+Level bonus to apply to Yaga-Shura's grunts spawned during the battle.
+
+

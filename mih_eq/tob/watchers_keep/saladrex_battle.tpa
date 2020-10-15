@@ -1,0 +1,31 @@
+DEFINE_ACTION_FUNCTION saladrex_battle
+BEGIN
+  // Add legendary template to Trial Dragon
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "saladrex_legendary_rank"
+    RET
+    saladrex_legendary_rank	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "gorsal"
+    editstring	= ~make_legendary=>"%saladrex_legendary_rank%" set_xp_by_hd=>10~
+  END
+
+
+  // Saladrex' minions join the fray
+
+  /*
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "ar????"
+    bottom	= "spawn_saladrex_minions"
+    location	= "scripts"
+  END
+  */
+END	// saladrex_dragon_battle
+
+

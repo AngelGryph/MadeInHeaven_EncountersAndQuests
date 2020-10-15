@@ -19,7 +19,6 @@ BEGIN
     script	= "mh#wiwlf"
     location	= "scripts"
     locbase
-    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 END	// winter_wolf_resources
 

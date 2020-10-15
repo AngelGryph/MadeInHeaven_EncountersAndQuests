@@ -1,10 +1,11 @@
 DEFINE_ACTION_FUNCTION vongoethe_battle
 BEGIN
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    INT_VAR
+    level	= 7
     STR_VAR
     typename	= "innate"
     idsname	= "VONGOETHE_DOOM_GAZE"
-    level	= 7
     RET
     newname
   END
@@ -43,7 +44,6 @@ BEGIN
     script	= "mh#vgoet"
     location	= "scripts"
     locbase
-    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   MAKE_PATCH

@@ -1,13 +1,31 @@
-DEFINE_ACTION_FUNCTION green_dragon_battle
+DEFINE_ACTION_FUNCTION trial_dragon_battle
 BEGIN
+  // Add legendary template to Trial Dragon
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "trial_dragon_legendary_rank"
+    RET
+    trial_dragon_legendary_rank	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "fsdragon"
+    editstring	= ~make_legendary=>"%trial_dragon_legendary_rank%" set_xp_by_hd=>10~
+  END
+
+
+  // Spawn minions into the battle
+
   /*
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
     area	= "ar????"
-    bottom	= "spawn_green_dragon_minions"
+    bottom	= "spawn_trial_dragon_minions"
     location	= "scripts"
   END
   */
-END	// green_dragon_battle
+END	// trial_dragon_battle
 
 

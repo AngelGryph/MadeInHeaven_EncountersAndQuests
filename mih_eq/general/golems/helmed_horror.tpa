@@ -1,28 +1,31 @@
 DEFINE_ACTION_FUNCTION helmed_horror
 BEGIN
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    INT_VAR
+    level	= 1
     STR_VAR
     typename	= "innate"
     idsname	= "BATTLE_HORROR_MAGIC_MISSILE"
-    level	= 1
     RET
     hh_mag_mis	= newname
   END
   
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    INT_VAR
+    level	= 2
     STR_VAR
     typename	= "innate"
     idsname	= "BATTLE_HORROR_MIRROR_IMAGE"
-    level	= 2
     RET
     hh_mir_img	= newname
   END
   
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    INT_VAR
+    level	= 4
     STR_VAR
     typename	= "innate"
     idsname	= "BATTLE_HORROR_DIMENSION_DOOR"
-    level	= 1
     RET
     hh_dim_door	= newname
   END
@@ -63,7 +66,6 @@ BEGIN
     script	= "mh#batho"
     location	= "scripts"
     locbase
-    ssllibrary	= "%MOD_FOLDER%/ssl/library"
   END
 
   MAKE_PATCH

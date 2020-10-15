@@ -31,7 +31,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION edit_creature
     INT_VAR
-    allow_missin	= 1
+    allow_missing	= 1
     STR_VAR
     creature	= "dragsilv hdragsil ohddixth udsilver"
     edits	= "patch_data"

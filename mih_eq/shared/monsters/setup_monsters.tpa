@@ -1,0 +1,32 @@
+DEFINE_ACTION_FUNCTION setup_monsters
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_label
+    STR_VAR
+    label	= "mh#monsters"
+    RET
+    installed	= value
+  END
+
+  ACTION_IF NOT installed
+  BEGIN
+    LAUNCH_ACTION_FUNCTION make_label
+      STR_VAR
+      label	= "mh#monsters"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "setup_animations"
+      locbase	= "shared/animations"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "install_dragonkin install_elementals install_giants install_golems install_misc install_oozes install_undead install_variants"
+      tra	= "monsters"
+      locbase
+    END
+  END
+END	// setup_monsters
+
+

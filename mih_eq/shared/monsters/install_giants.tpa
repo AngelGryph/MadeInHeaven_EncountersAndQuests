@@ -1,0 +1,39 @@
+DEFINE_ACTION_FUNCTION install_giants
+BEGIN
+  // Frost Giant
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#frost"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#frost"
+    editstring	= "say_both_names=>42 animation=>giant_frost"
+    location	= "actors"
+    locbase
+  END
+
+
+  // Hill Giant
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#giant"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#giant"
+    editstring	= "say_both_names=>43 animation=>giant_hill"
+    location	= "actors"
+    locbase
+  END
+END	// install_giants
+
+

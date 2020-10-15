@@ -1,0 +1,53 @@
+DEFINE_ACTION_FUNCTION setup_animations
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_label
+    STR_VAR
+    label	= "mh#animations"
+    RET
+    installed	= value
+  END
+
+  ACTION_IF NOT installed
+  BEGIN
+    LAUNCH_ACTION_FUNCTION make_label
+      STR_VAR
+      label	= "mh#animations"
+    END
+
+    ACTION_IF enhanced_edition
+    BEGIN
+      // Install missing animations in Enhanced Editions
+
+      LAUNCH_ACTION_FUNCTION install
+        INT_VAR
+        overwrite	= 0
+        STR_VAR
+        file		= "all"
+        postfix		= "bam"
+        location	= "graphics/ee"
+        locbase
+      END
+
+      LAUNCH_ACTION_FUNCTION install
+        INT_VAR
+        overwrite	= 0
+        STR_VAR
+        file		= "all"
+        postfix		= "wav"
+        location	= "sounds/ee"
+        locbase
+      END
+    END
+    ELSE
+    BEGIN
+      // Require Infinity Animations on non-EE versions
+
+      ACTION_IF NOT MOD_IS_INSTALLED "infinityanimations.tp2" 0
+      BEGIN
+        FAIL @53
+      END
+    END
+  END
+END	// setup_animations
+
+
