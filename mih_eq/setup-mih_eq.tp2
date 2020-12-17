@@ -629,3 +629,14 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Adjust XP Rewards
+
+BEGIN @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "adjust_xp_rewards"
+  location	= "general/tweaks"
+END
+
+
