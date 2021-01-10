@@ -1,0 +1,86 @@
+INCLUDE FILE(%MOD_FOLDER%/ssl/specials.ssl)
+
+IF
+  HP(Myself, 1)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    DisplayStringHead(Myself, @1)
+    Wait(1)
+    DestroyItem("minhp1")
+    ReallyForceSpellDead(Myself, KAMIKAZE_EXPLOSION)
+    SetInterrupt(TRUE)
+END
+
+IF
+  !GlobalTimerNotExpired("boast", "locals")
+  ActuallyInCombat()
+  HPPercentGT(Myself, 25)
+THEN
+  RESPONSE #25
+    SetGlobalTimer("boast", "locals", 10)
+    DisplayStringHead(Myself, @2)
+    Continue()
+  RESPONSE #25
+    SetGlobalTimer("boast", "locals", 10)
+    DisplayStringHead(Myself, @3)
+    Continue()
+  RESPONSE #25
+    SetGlobalTimer("boast", "locals", 10)
+    DisplayStringHead(Myself, @4)
+    Continue()
+  RESPONSE #25
+    SetGlobalTimer("boast", "locals", 10)
+    DisplayStringHead(Myself, @5)
+    Continue()
+END
+
+IF TRIGGER
+  Target(Myself)
+  ActuallyInCombat()
+  TriggerBlock(ILackBladeBarrier)
+THEN DO
+  Action(ForceSpellOnMyself, NPC_BLADE_BARRIER, "blade_barrier", TEN_ROUNDS)
+END
+
+IF TRIGGER
+  Target(Myself)
+  ActuallyInCombat()
+  TriggerBlock(ILackGreaterWhirlwind)
+THEN DO
+  Action(ForceSpellOnMyself, WARRIOR_GREATER_WHIRLWIND, "greater_whirlwind", THREE_ROUNDS|50|50)
+END
+
+IF TRIGGER
+  TargetBlock(PCsPreferringWeak)
+  TargetBlock(EnemiesInOrder)
+  TriggerBlock(Enemy|MR|ResistFire)
+THEN DO
+  Action(ForceSpellOnEnemy, LEUKO_FLAME_STRIKE, "flame_strike", THREE_ROUNDS|20|80)
+END
+
+IF TRIGGER
+  TargetBlock(PCSpellcasters)
+  TargetBlock(EnemiesInOrder)
+  TriggerBlock(Enemy|MR|Disintegrate)
+THEN DO
+  Action(ForceSpellOnEnemy, HIVE_MOTHER_DISINTEGRATE, "disintegrate", EIGHT_ROUNDS|20|80)
+END
+
+IF TRIGGER
+  TargetBlock(PCSpellcasters)
+  TargetBlock(EnemiesInReverseOrder)
+  TriggerBlock(Enemy|MR|ResistElectric)
+THEN DO
+  Action(ForceSpellOnEnemy, LEUKO_CHAIN_LIGHTNING, "chain_lightning", FIVE_ROUNDS|20|80)
+END
+
+IF TRIGGER
+  TargetBlock(PCSpellcasters)
+  TargetBlock(EnemiesInReverseOrder)
+  TriggerBlock(Enemy|MR|ResistFire)
+THEN DO
+  Action(ForceSpellOnEnemy, DEATHKNIGHT_FIREBALL, "fireball", FIVE_ROUNDS|20|80)
+END
+
+

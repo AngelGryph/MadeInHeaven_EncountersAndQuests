@@ -82,6 +82,24 @@ BEGIN
     location	= "actors"
     locbase
   END
+
+
+  // Nature Elemental
+
+  LAUNCH_ACTION_FUNCTION install_item
+    STR_VAR
+    item	= "mh#natel"
+    location	= "items"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#natel"
+    editstring	= "say_both_names=>45"
+    location	= "actors"
+    locbase
+  END
 END	// install_elementals
 
 

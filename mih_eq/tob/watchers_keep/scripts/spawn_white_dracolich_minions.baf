@@ -1,0 +1,47 @@
+IF
+  Exists("mh#white_dracolich")
+  Allegiance("mh#white_dracolich", ENEMY)
+  !Dead("mh#white_dracolich")
+  Global("mh#dracolich_minions", "myarea", 0)
+  Difficulty(EASIEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#dracolich_minions", "myarea", 1)
+    CreateCreatureObjectEffect("mh#icepe", "spdimndr", "mh#white_dracolich")
+    CreateCreatureObjectEffect("mh#icepe", "spdimndr", "mh#white_dracolich")
+    CreateCreatureObjectEffect("mh#icepe", "spdimndr", "mh#white_dracolich")
+END
+
+IF
+  Exists("mh#white_dracolich")
+  Allegiance("mh#white_dracolich", ENEMY)
+  !Dead("mh#white_dracolich")
+  Global("mh#dracolich_minions", "myarea", 0)
+  DifficultyGT(EASIEST)
+  DifficultyLT(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#dracolich_minions", "myarea", 1)
+    CreateCreatureObjectEffect("mh#icegp", "spdimndr", "mh#white_dracolich")
+    CreateCreatureObjectEffect("mh#icegp", "spdimndr", "mh#white_dracolich")
+    CreateCreatureObjectEffect("mh#icegp", "spdimndr", "mh#white_dracolich")
+END
+
+IF
+  Exists("mh#white_dracolich")
+  Allegiance("mh#white_dracolich", ENEMY)
+  !Dead("mh#white_dracolich")
+  Global("mh#dracolich_minions", "myarea", 0)
+  DifficultyGT(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#dracolich_minions", "myarea", 1)
+    CreateCreatureObjectEffect("mh#iceep", "spdimndr", "mh#white_dracolich")
+    CreateCreatureObjectEffect("mh#iceep", "spdimndr", "mh#white_dracolich")
+    CreateCreatureObjectEffect("mh#iceep", "spdimndr", "mh#white_dracolich")
+END
+
+

@@ -5,6 +5,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(NORMAL)
   InActiveArea(Myself)
+  NumCreatureVsPartyLT([Enemy], 10)
 THEN
   RESPONSE #10
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
@@ -34,6 +35,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARD)
   InActiveArea(Myself)
+  NumCreatureVsPartyLT([Enemy], 10)
 THEN
   RESPONSE #10
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
@@ -63,6 +65,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARDEST)
   InActiveArea(Myself)
+  NumCreatureVsPartyLT([Enemy], 10)
 THEN
   RESPONSE #10
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)

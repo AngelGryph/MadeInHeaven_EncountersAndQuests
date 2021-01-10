@@ -1,0 +1,120 @@
+INCLUDE FILE(%MOD_FOLDER%/ssl/specials.ssl)
+INCLUDE FILE(%MOD_FOLDER%/ssl/spellcaster.ssl)
+
+BEGIN_ACTION_DEFINITION
+Name(UseWarriorHLA)
+TRIGGER
+  See(scstarget)
+ACTION	
+  RESPONSE #scsprob1
+    SetInterrupt(FALSE)
+    FaceObject(scstarget)
+    Spell(Myself, scsargument1)
+    AttackOneRound(scstarget)
+    SetInterrupt(TRUE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("prepared", "locals", 0)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("prepared", "locals", 1)
+    SetGlobalTimer("stone_skin", "locals", ONE_ROUND)
+    ApplySpell(Myself, DRAGON_STONE_SKIN)
+    SetGlobalTimer("dragon_fear", "locals", TEN_ROUNDS)
+    ReallyForceSpell(NearestEnemyOf(Myself), DRACOLICH_FEAR)
+    SetInterrupt(TRUE)
+    Continue()
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  Range(NearestEnemyOf(Myself), 320)
+  GlobalTimerExpired("dragon_fear", "locals")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("dragon_fear", "locals", TEN_ROUNDS)
+    ReallyForceSpell(NearestEnemyOf(Myself), DRACOLICH_FEAR)
+    Continue()
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  GlobalTimerExpired("stone_skin", "locals")
+  !CheckStatGT(Myself, 0, STONESKINS)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("stone_skin", "locals", ONE_ROUND)
+    ForceSpell(Myself, DRAGON_STONE_SKIN)
+    Continue()
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  Or(3)
+    SpellCast([GOODCUTOFF],WIZARD_DEATH_FOG)
+    SpellCast([GOODCUTOFF],WIZARD_INCENDIARY_CLOUD)
+    Range(ThirdNearestEnemyOf(Myself), 12)
+  !GlobalTimerNotExpired("wing_buffet", "locals")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("wing_buffet", "locals", ONE_ROUND)
+    ReallyForceSpell(NearestEnemyOf(Myself), DRAGON_WING_BUFFET)
+    Continue()
+END
+
+IF TRIGGER
+  TargetBlock(PCsPreferringStrong)
+  TargetBlock(EnemiesInOrder)
+  TriggerBlock(Enemy|MR|Helpless|Paralyse)
+THEN DO
+  Action(ForceSpellOnEnemy, DRACOLICH_GAZE, "dracolich_gaze", ONE_ROUND|50|50)
+END
+
+IF TRIGGER
+  Target(Myself)
+  Allegiance(Myself, ENEMY)
+  See(NearestEnemyOf(Myself))
+THEN DO
+  Action(ForceSpellOnMyself, WHITE_DRAGON_FOG, "freezing_fog", FIVE_ROUNDS|70|30)
+END
+
+IF TRIGGER
+  TargetBlock(PCsPreferringWeak)
+  TargetBlock(EnemiesInReverseOrder)
+  TriggerBlock(Enemy|ResistCold|AoECold)
+THEN DO
+  Action(ForceSpellOnEnemy, WHITE_DRAGON_BREATH, "breath_weapon", THREE_ROUNDS|90|10)
+END
+
+IF TRIGGER
+  TargetBlock(CloseEnemies)
+  TriggerBlock(PlayersInShortRange|SlashingSafe)
+THEN DO
+  Action(UseWarriorHLA, WARRIOR_GREATER_WHIRLWIND|30|70)
+  Action(UseWarriorHLA, WARRIOR_CRITICAL_STRIKE|30|70)
+  Action(UseWarriorHLA, WARRIOR_POWER_ATTACK|30|70)
+  Action(UseWarriorHLA, WARRIOR_SMITE|30|70)
+END
+
+IF TRIGGER
+  TargetBlock(CloseEnemies)
+  HPPercentLT(Myself, 50)
+  TriggerBlock(PlayersInShortRange|IAmNotRaging|SlashingSafe)
+THEN DO
+  Action(CastSpellOnMyself, BARBARIAN_RAGE)
+  AttackOneRound(scstarget)
+END
+
+
+IF TRIGGER
+  TargetBlock(PCSpellcasters)
+  TargetBlock(EnemiesInReverseOrder)
+  TriggerBlock(Enemy|MR|ResistMagicDamage|MagicMissile)
+THEN DO
+  Action(CastSpellOnEnemy, WIZARD_MAGIC_MISSILE|70|30)
+END
+
+

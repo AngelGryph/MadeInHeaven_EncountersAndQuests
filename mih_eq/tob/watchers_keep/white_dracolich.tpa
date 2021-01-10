@@ -1,0 +1,97 @@
+DEFINE_ACTION_FUNCTION white_dracolich
+BEGIN
+  // Install spell-like abilities
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell	= "white_dragon_breath"
+    idsname	= "WHITE_DRAGON_BREATH"
+    location	= "spells"
+    editstring	= "say_name=>7"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell	= "white_dragon_fog"
+    idsname	= "WHITE_DRAGON_FOG"
+    location	= "spells"
+    editstring	= "say_name=>8"
+  END
+
+  LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    INT_VAR
+    level	= 8
+    STR_VAR
+    typename	= "innate"
+    idsname	= "DRACOLICH_FEAR"
+    RET
+    newname
+  END
+  
+  MAKE_PATCH
+    patch_effect_inline'1=>~match=>"save_vs_spell" save_bonus=>"save_bonus - 4"~
+    patch_effect_inline'2=>~match=>"opcode = 54" parameter1=>"parameter1 - 4"~
+    say_name=>9
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_spell
+    STR_VAR
+    spell	= "spin895=>%newname%"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION add_spell_to_ids
+    INT_VAR
+    level	= 7
+    STR_VAR
+    typename	= "innate"
+    idsname	= "DRACOLICH_GAZE"
+    RET
+    newname
+  END
+
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"save_vs_death" save_bonus=>"-6"~
+    say_name=>10
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_spell
+    STR_VAR
+    spell	= "spin990=>%newname%"
+    edits	= "patch_data"
+  END
+
+
+  // Compile script
+
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+    STR_VAR
+    script	= "mh#white"
+    location	= "scripts"
+  END
+
+
+  // Install creature file
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#white"
+    location	= "actors"
+    editstring	= ~say_both_names=>6 animation=>"dragon_white"~
+  END
+
+
+  // Remove white dragon scales from maze
+
+  MAKE_PATCH
+    delete_item=>"item_resource = compon18"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "ar3014"
+    edits	= "patch_data"
+  END
+END	// white_dracolich
+
+
