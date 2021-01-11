@@ -14,7 +14,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "elemental_labs mighty_servant white_dracolich machine_ltm saladrex_battle trial_dragon_battle"
+    file	= "elemental_labs mighty_servant white_dracolich machine_ltm saladrex_battle orc_horde trial_dragon_battle"
     tra		= "watchers_keep"
   END
 END	// setup_watchers_keep

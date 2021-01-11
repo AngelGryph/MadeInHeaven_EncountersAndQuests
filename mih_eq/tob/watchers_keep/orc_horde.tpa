@@ -1,0 +1,86 @@
+DEFINE_ACTION_FUNCTION orc_horde
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "orc_horde_level_bonus"
+    RET
+    orc_horde_level_bonus	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "orc_horde_count"
+    RET
+    orc_horde_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "orc_horde_duration"
+    RET
+    orc_horde_duration	= value
+  END
+
+
+  // Level 25 orc chieftain
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#wkorc"
+    location	= "actors"
+    editstring	= "say_both_names=>11"
+  END
+
+  MAKE_PATCH
+    add_actor_inline'1=>~actor_name=>"{literal:Orc Chieftain}" actor_resource=>"mh#wkorc" actor_x_coord=>675 actor_y_coord=>455 actor_orientation=>1~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "ar3025"
+    edits	= "patch_data"
+  END
+
+
+  // Level up orc warriors and archers
+
+  MAKE_PATCH
+    level1=>"level1 + %orc_horde_level_bonus%"
+    dexterityGT=>16
+    constitutionGT=>15
+    enforce_hp=>at_worst
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    set_xp_by_hd=>1
+    replace_items=>"ax1h01(weapon2)"
+    add_proficiencies=>"axe=>3 singleweapon=>2"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "gororc01 gororc02"
+    edits	= "patch_data"
+  END
+
+  
+  // Enlarge orc horde size
+
+  COPY_EXISTING "ar3025.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
+       ~GlobalLT("NumOfCreatures","AR3025",[0-9]*)~
+       ~GlobalLT("NumOfCreatures", "AR3025", %orc_horde_count%)~
+
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
+       ~SetGlobalTimer("HordeTimer","AR3025",[A-Z_]*)~
+       ~SetGlobalTimer("HordeTimer", "AR3025", %orc_horde_duration%)~
+
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
+       ~CreateCreature("GORORC03",\(.*\),\(.*\))~
+       ~CreateCreature("GORORC03", \1, \2)
+        CreateCreature("HELLHO01", \1, \2)~
+    END
+END	// orc_horde
+
+
