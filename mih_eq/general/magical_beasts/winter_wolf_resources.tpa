@@ -1,11 +1,25 @@
 DEFINE_ACTION_FUNCTION winter_wolf_resources
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "use_ee_half_damage"
+    RET
+    use_ee_half_damage	= value
+  END
+
+
+  MAKE_PATCH
+    say_name=>0
+    patch_effect_inline=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and save_vs_spells" dicenum=>6 mode=>256~
+    delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not save_vs_spells~
+  END
+
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
     spell		= "winter_wolf_breath"
     idsname		= "WINTER_WOLF_BREATH"
     location		= "spells"
-    editstring		= "say_name=>0"
+    edits		= "patch_data"
   END
 
   LAUNCH_ACTION_FUNCTION clone_item

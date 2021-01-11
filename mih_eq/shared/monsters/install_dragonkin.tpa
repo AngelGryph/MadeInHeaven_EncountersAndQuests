@@ -1,12 +1,26 @@
 DEFINE_ACTION_FUNCTION install_dragonkin
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "use_ee_half_damage"
+    RET
+    use_ee_half_damage	= value
+  END
+
+
   // Dracolisk
+
+  MAKE_PATCH
+    say_name=>5
+    patch_effect_inline=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and save_vs_spells" dicenum=>4 mode=>256~
+    delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not save_vs_spells~
+  END
 
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
     spell	= "dracolisk_breath"
     idsname	= "DRACOLISK_BREATH"
-    editstring	= "say_name=>5"
+    edits	= "patch_data"
     location	= "spells"
     locbase
   END

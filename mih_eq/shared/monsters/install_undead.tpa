@@ -1,5 +1,13 @@
 DEFINE_ACTION_FUNCTION install_undead
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "use_ee_half_damage"
+    RET
+    use_ee_half_damage	= value
+  END
+
+
   // Wights (Wight, Greater Wight, Barrow Wight)
 
   MAKE_PATCH
@@ -43,13 +51,19 @@ BEGIN
 
   // Blazing Bones
 
+  MAKE_PATCH
+    say_name=>2
+    patch_effect_inline=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and save_vs_spells" dicenum=>6 mode=>256~
+    delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not save_vs_spells~
+  END
+
   LAUNCH_ACTION_FUNCTION install_spell
     STR_VAR
     spell	= "bone_blaze"
     idsname	= "BONE_BLAZE"
     location	= "spells"
     locbase
-    editstring	= "say_name=>2"
+    edits	= "patch_data"
   END
 
   LAUNCH_ACTION_FUNCTION install
@@ -237,6 +251,28 @@ BEGIN
 
 
   // Eye of Fear and Flame
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell	= "eye_of_fear"
+    idsname	= "EYE_OF_FEAR"
+    location	= spells
+    locbase
+  END
+
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and save_vs_spells" dicenum=>8 mode=>256~
+    delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not save_vs_spells~
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell	= "eye_of_flame"
+    idsname	= "EYE_OF_FLAME"
+    location	= spells
+    locbase
+    edits	= "patch_data"
+  END
 
   LAUNCH_ACTION_FUNCTION ssl_to_bcs
     STR_VAR
