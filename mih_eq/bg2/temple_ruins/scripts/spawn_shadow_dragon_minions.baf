@@ -72,15 +72,15 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(NORMAL)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %thaxll_minion_count%)
 THEN
   RESPONSE #50
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA",THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
     CreateCreature("firwra01", [1064.743], 15)  
     CreateCreature("firwra01", [1069.738], 15)  
     CreateCreature("firwra01", [697.917], 13)  
   RESPONSE #50
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA",THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
     CreateCreature("firwra01", [1064.743], 15)  
     CreateCreature("firwra01", [697.917], 13)  
     CreateCreature("firwra01", [692.922], 13)  
@@ -92,17 +92,17 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARD)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %thaxll_minion_count%)
 THEN
   RESPONSE #50
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA",TWO_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
     CreateCreature("firwra01", [1059.748], 15)  
     CreateCreature("firwra01", [1064.743], 15)  
     CreateCreature("firwra01", [1069.738], 15)  
     CreateCreature("firwra01", [697.917], 13)  
     CreateCreature("firwra01", [692.922], 13)  
   RESPONSE #50
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA",TWO_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
     CreateCreature("firwra01", [1064.743], 15)  
     CreateCreature("firwra01", [1069.738], 15)  
     CreateCreature("firwra01", [682.912], 13)  
@@ -116,17 +116,17 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARDEST)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %thaxll_minion_count%)
 THEN
   RESPONSE #50
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA",ONE_ROUND)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
     CreateCreature("firwra01", [1059.748], 15)  
     CreateCreature("firwra01", [1064.743], 15)  
     CreateCreature("firwra01", [1069.738], 15)  
     CreateCreature("firwra01", [697.917], 13)  
     CreateCreature("firwra01", [692.922], 13)  
   RESPONSE #50
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA",ONE_ROUND)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
     CreateCreature("firwra01", [1064.743], 15)  
     CreateCreature("firwra01", [1069.738], 15)  
     CreateCreature("firwra01", [682.912], 13)  

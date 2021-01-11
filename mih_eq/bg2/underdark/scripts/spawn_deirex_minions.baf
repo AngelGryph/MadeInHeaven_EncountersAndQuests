@@ -71,84 +71,27 @@ IF
   Allegiance("jarlich", ENEMY)
   !Dead("jarlich")
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(NORMAL)
+  DifficultyGT(EASY)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %deirex_minions_count%)
 THEN
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)
     CreateCreatureObjectEffect("mh#zom12", "spraised", Player1)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)
     CreateCreatureObjectEffect("mh#zom12", "spraised", Player2)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)
     CreateCreatureObjectEffect("mh#zom12", "spraised", Player3)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)
     CreateCreatureObjectEffect("mh#zom12", "spraised", Player4)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)
     CreateCreatureObjectEffect("mh#zom12", "spraised", Player5)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player6)
-END
-
-
-IF
-  Allegiance("jarlich", ENEMY)
-  !Dead("jarlich")
-  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(HARD)
-  InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
-THEN
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player1)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player2)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player3)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player4)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player5)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player6)
-END
-
-
-IF
-  Allegiance("jarlich", ENEMY)
-  !Dead("jarlich")
-  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(HARDEST)
-  InActiveArea(Myself)
-THEN
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player1)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player2)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player3)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player4)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("mh#zom12", "spraised", Player5)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)
     CreateCreatureObjectEffect("mh#zom12", "spraised", Player6)
 END
 

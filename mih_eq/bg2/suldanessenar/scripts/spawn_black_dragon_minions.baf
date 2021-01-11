@@ -67,85 +67,27 @@ IF
   Allegiance("dragblac", ENEMY)
   !Dead("dragblac")
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(NORMAL)
+  DifficultyGT(EASY)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %nizid_minion_count%)
 THEN
   RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)
     CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player1)
   RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)
     CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player2)
   RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)
     CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player3)
   RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)
     CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player4)
   RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)
     CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player5)
   RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", FOUR_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player6)
-END
-
-
-IF
-  Allegiance("dragblac", ENEMY)
-  !Dead("dragblac")
-  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(HARD)
-  InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
-THEN
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player1)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player2)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player3)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player4)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player5)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player6)
-END
-
-
-IF
-  Allegiance("dragblac", ENEMY)
-  !Dead("dragblac")
-  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(HARDEST)
-  InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
-THEN
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player1)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player2)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player3)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player4)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player5)
-  RESPONSE #15
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)
     CreateCreatureObjectEffect("mh#brnpd", "spmonsum", Player6)
 END
 

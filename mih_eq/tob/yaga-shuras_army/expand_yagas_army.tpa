@@ -1,5 +1,19 @@
 DEFINE_ACTION_FUNCTION expand_yagas_army
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "yaga_shura_army_count"
+    RET
+    yaga_shura_army_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "yaga_shura_army_interval"
+    RET
+    yaga_shura_army_interval	= value
+  END
+
   MAKE_PATCH
     add_actor_inline'01=>~actor_name=>"{literal:Fire Giant}" actor_resource=>"ysfire01" actor_x_coord=>1870 actor_y_coord=>1480 actor_orientation=>11~
     add_actor_inline'02=>~actor_name=>"{literal:Fire Giant}" actor_resource=>"ysfire01" actor_x_coord=>1980 actor_y_coord=>1570 actor_orientation=>9~

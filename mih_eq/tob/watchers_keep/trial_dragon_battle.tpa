@@ -1,13 +1,28 @@
 DEFINE_ACTION_FUNCTION trial_dragon_battle
 BEGIN
-  // Add legendary template to Trial Dragon
-
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
     ini		= "trial_dragon_legendary_rank"
     RET
     trial_dragon_legendary_rank	= value
   END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "trial_dragon_minion_count"
+    RET
+    trial_dragon_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "trial_dragon_minion_interval"
+    RET
+    trial_dragon_minion_interval	= value
+  END
+
+
+  // Add legendary template to Trial Dragon
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR

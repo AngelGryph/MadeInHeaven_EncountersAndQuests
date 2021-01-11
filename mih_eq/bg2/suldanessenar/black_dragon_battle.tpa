@@ -1,13 +1,28 @@
 DEFINE_ACTION_FUNCTION black_dragon_battle
 BEGIN
-  // Add legendary template to Nizid
-
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
     ini		= "nizid_legendary_rank"
     RET
     nizid_legendary_rank	= value
   END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "nizid_minion_count"
+    RET
+    nizid_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "nizid_minion_interval"
+    RET
+    nizid_minion_interval	= value
+  END
+
+
+  // Add legendary template to Nizid
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR

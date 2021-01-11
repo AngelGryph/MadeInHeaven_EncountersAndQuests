@@ -1,5 +1,20 @@
 DEFINE_ACTION_FUNCTION deirex_battle
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "deirex_minion_count"
+    RET
+    deirex_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "deirex_minion_interval"
+    RET
+    deirex_minion_interval	= value
+  END
+
+
   // TODO: Add salient abilities to Deirex
 
   LAUNCH_ACTION_FUNCTION extend_area_script

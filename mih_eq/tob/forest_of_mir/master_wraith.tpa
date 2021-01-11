@@ -1,5 +1,20 @@
 DEFINE_ACTION_FUNCTION master_wraith
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "master_wraith_minion_count"
+    RET
+    master_wraith_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "master_wraith_minion_interval"
+    RET
+    master_wraith_minion_interval	= value
+  END
+
+
   MAKE_PATCH
     magical=>1
     enchantment=>4

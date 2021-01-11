@@ -1,13 +1,28 @@
 DEFINE_ACTION_FUNCTION saladrex_battle
 BEGIN
-  // Add legendary template to Trial Dragon
-
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
     ini		= "saladrex_legendary_rank"
     RET
     saladrex_legendary_rank	= value
   END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "saladrex_minion_count"
+    RET
+    saladrex_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "saladrex_minion_interval"
+    RET
+    saladrex_minion_interval	= value
+  END
+
+
+  // Add legendary template to Saladrex
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR

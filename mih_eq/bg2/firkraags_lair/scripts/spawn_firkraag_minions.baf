@@ -73,10 +73,10 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(NORMAL)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %firkraag_minion_count%)
 THEN
   RESPONSE #100
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %firkraag_minion_interval%)
     CreateCreatureOffscreen("mh#orc12", 0)
     CreateCreatureOffscreen("mh#orc12", 0)
     CreateCreatureOffscreen("mh#ora12", 0)
@@ -89,10 +89,10 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARD)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %firkraag_minion_count%)
 THEN
   RESPONSE #100
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %firkraag_minion_interval%)
     CreateCreatureOffscreen("mh#orc12", 0)
     CreateCreatureOffscreen("mh#orc12", 0)
     CreateCreatureOffscreen("mh#orc12", 0)
@@ -107,10 +107,10 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARDEST)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %firkraag_minion_count%)
 THEN
   RESPONSE #100
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %firkraag_minion_interval%)
     CreateCreatureOffscreen("mh#orc12", 0)
     CreateCreatureOffscreen("mh#orc12", 0)
     CreateCreatureOffscreen("mh#orc12", 0)

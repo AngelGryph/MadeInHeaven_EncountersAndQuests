@@ -1,13 +1,28 @@
 DEFINE_ACTION_FUNCTION firkraag_battle
 BEGIN
-  // Add legendary template to Firkraag
-
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
     ini		= "firkraag_legendary_rank"
     RET
     firkraag_legendary_rank	= value
   END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "firkraag_minion_count"
+    RET
+    firkraag_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "firkraag_minion_interval"
+    RET
+    firkraag_minion_interval	= value
+  END
+
+
+  // Add legendary template to Firkraag
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR

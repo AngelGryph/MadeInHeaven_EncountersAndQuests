@@ -1,13 +1,28 @@
 DEFINE_ACTION_FUNCTION shadow_dragon_battle
 BEGIN
-  // Add legendary template to Thaxll
-
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
     ini		= "thaxll_legendary_rank"
     RET
     thaxll_legendary_rank	= value
   END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "thaxll_minion_count"
+    RET
+    thaxll_minion_count	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "thaxll_minion_interval"
+    RET
+    thaxll_minion_interval	= value
+  END
+
+
+  // Add legendary template to Thaxll
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR

@@ -3,87 +3,27 @@ IF
   Allegiance("hgwra01", ENEMY)
   !Dead("hgwra01")
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(NORMAL)
+  DifficultyGT(EASY)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
+  NumCreatureVsPartyLT([Enemy], %master_wraith_minion_count%)
 THEN
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
     CreateCreatureObjectEffect("hgmis01", "spfleshs", Player1)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
     CreateCreatureObjectEffect("hgmis01", "spfleshs", Player2)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
     CreateCreatureObjectEffect("hgmis01", "spfleshs", Player3)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
     CreateCreatureObjectEffect("hgmis01", "spfleshs", Player4)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
     CreateCreatureObjectEffect("hgmis01", "spfleshs", Player5)
   RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", THREE_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player6)
-END
-
-
-IF
-  Exists("hgwra01")
-  Allegiance("hgwra01", ENEMY)
-  !Dead("hgwra01")
-  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(HARD)
-  InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
-THEN
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player1)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player2)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player3)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player4)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player5)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", TWO_ROUNDS)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player6)
-END
-
-
-IF
-  Exists("hgwra01")
-  Allegiance("hgwra01", ENEMY)
-  !Dead("hgwra01")
-  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
-  Difficulty(HARDEST)
-  InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], 10)
-THEN
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player1)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player2)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player3)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player4)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
-    CreateCreatureObjectEffect("hgmis01", "spfleshs", Player5)
-  RESPONSE #10
-    SetGlobalTimer("mh#SpawnTimer", "MYAREA", ONE_ROUND)
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
     CreateCreatureObjectEffect("hgmis01", "spfleshs", Player6)
 END
 
