@@ -33,14 +33,12 @@ BEGIN
 
   // Spawn minions into the battle
 
-  /*
   LAUNCH_ACTION_FUNCTION extend_area_script
     STR_VAR
-    area	= "ar????"
+    area	= "ar3024"
     bottom	= "spawn_trial_dragon_minions"
     location	= "scripts"
   END
-  */
 END	// trial_dragon_battle
 
 

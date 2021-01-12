@@ -1,0 +1,107 @@
+IF
+  Exists("fsdragon")
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  Global("mh#trial_dragon_minions", "myarea", 0)
+  Difficulty(EASY)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#trial_dragon_minions", "myarea", 1)
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+END
+
+IF
+  Exists("fsdragon")
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  Global("mh#trial_dragon_minions", "myarea", 0)
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#trial_dragon_minions", "myarea", 1)
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+END
+
+IF
+  Exists("fsdragon")
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  Global("mh#trial_dragon_minions", "myarea", 0)
+  Difficulty(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#trial_dragon_minions", "myarea", 1)
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+END
+
+IF
+  Exists("fsdragon")
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  Global("mh#trial_dragon_minions", "myarea", 0)
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#trial_dragon_minions", "myarea", 1)
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+    CreateCreatureObjectEffect("hgmound", "spmonsum", "fsdragon")
+END
+
+IF
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT([Enemy], %trial_dragon_minion_count%)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %trial_dragon_minion_interval%)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+END
+
+IF
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARD)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT([Enemy], %trial_dragon_minion_count%)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %trial_dragon_minion_interval%)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+END
+
+IF
+  Allegiance("fsdragon", ENEMY)
+  !Dead("fsdragon")
+  !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT([Enemy], %trial_dragon_minion_count%)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#SpawnTimer", "MYAREA", %trial_dragon_minion_interval%)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+    CreateCreatureOffscreen("mh#giant", 0)
+END
+
+
