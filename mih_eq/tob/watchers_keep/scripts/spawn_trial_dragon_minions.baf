@@ -62,7 +62,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(NORMAL)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %trial_dragon_minion_count%)
+  NumCreatureVsPartyLT("mh#giant", %trial_dragon_minion_count%)
 THEN
   RESPONSE #100
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", %trial_dragon_minion_interval%)
@@ -76,7 +76,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARD)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %trial_dragon_minion_count%)
+  NumCreatureVsPartyLT("mh#giant", %trial_dragon_minion_count%)
 THEN
   RESPONSE #100
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", %trial_dragon_minion_interval%)
@@ -92,7 +92,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARDEST)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %trial_dragon_minion_count%)
+  NumCreatureVsPartyLT("mh#giant", %trial_dragon_minion_count%)
 THEN
   RESPONSE #100
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", %trial_dragon_minion_interval%)

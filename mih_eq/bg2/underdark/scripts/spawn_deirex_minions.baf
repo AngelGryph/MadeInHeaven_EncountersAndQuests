@@ -73,7 +73,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   DifficultyGT(EASY)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %deirex_minions_count%)
+  NumCreatureVsPartyLT("mh#zom12", %deirex_minions_count%)
 THEN
   RESPONSE #10
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", %deirex_minions_timer%)

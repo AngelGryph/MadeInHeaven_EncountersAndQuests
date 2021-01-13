@@ -72,7 +72,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(NORMAL)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %thaxll_minion_count%)
+  NumCreatureVsPartyLT("firwra01", %thaxll_minion_count%)
 THEN
   RESPONSE #50
     SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
@@ -92,7 +92,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARD)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %thaxll_minion_count%)
+  NumCreatureVsPartyLT("firwra01", %thaxll_minion_count%)
 THEN
   RESPONSE #50
     SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)
@@ -116,7 +116,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   Difficulty(HARDEST)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %thaxll_minion_count%)
+  NumCreatureVsPartyLT("firwra01", %thaxll_minion_count%)
 THEN
   RESPONSE #50
     SetGlobalTimer("mh#SpawnTimer", "MYAREA",%thaxll_minion_interval%)

@@ -3,7 +3,7 @@ IF
   !Dead("Yaga01")  // ~Yaga-Shura~
   InActiveArea(Myself)
   !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
-  NumCreatureVsPartyLT([Enemy], %yaga_shura_army_count%)
+  NumCreatureVsPartyLT("YSEXTRA2", %yaga_shura_army_count%)
   Difficulty(EASY)
 THEN
   RESPONSE #20
@@ -38,7 +38,7 @@ IF
   !Dead("Yaga01")  // ~Yaga-Shura~
   InActiveArea(Myself)
   !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
-  NumCreatureVsPartyLT([Enemy], %yaga_shura_army_count%)
+  NumCreatureVsPartyLT("YSEXTRA2", %yaga_shura_army_count%)
   Difficulty(NORMAL)
 THEN
   RESPONSE #20
@@ -78,7 +78,7 @@ IF
   !Dead("Yaga01")  // ~Yaga-Shura~
   InActiveArea(Myself)
   !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
-  NumCreatureVsPartyLT([Enemy], %yaga_shura_army_count%)
+  NumCreatureVsPartyLT("YSEXTRA2", %yaga_shura_army_count%)
   Difficulty(HARD)
 THEN
   RESPONSE #20
@@ -125,7 +125,7 @@ IF
   !Dead("Yaga01")  // ~Yaga-Shura~
   InActiveArea(Myself)
   !GlobalTimerNotExpired("mh#spawn_army", "ar5203")
-  NumCreatureVsPartyLT([Enemy], %yaga_shura_army_count%)
+  NumCreatureVsPartyLT("YSEXTRA2", %yaga_shura_army_count%)
   Difficulty(HARDEST)
 THEN
   RESPONSE #20

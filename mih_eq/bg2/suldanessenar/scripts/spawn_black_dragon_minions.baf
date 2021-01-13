@@ -69,7 +69,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   DifficultyGT(EASY)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %nizid_minion_count%)
+  NumCreatureVsPartyLT("mh#brnpd", %nizid_minion_count%)
 THEN
   RESPONSE #15
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", %nizid_minion_interval%)

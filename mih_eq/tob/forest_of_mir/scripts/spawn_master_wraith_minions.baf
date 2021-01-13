@@ -5,7 +5,7 @@ IF
   !GlobalTimerNotExpired("mh#SpawnTimer", "MYAREA")
   DifficultyGT(EASY)
   InActiveArea(Myself)
-  NumCreatureVsPartyLT([Enemy], %master_wraith_minion_count%)
+  NumCreatureVsPartyLT("hgmis01", %master_wraith_minion_count%)
 THEN
   RESPONSE #10
     SetGlobalTimer("mh#SpawnTimer", "MYAREA", %master_wraith_minion_interval%)
