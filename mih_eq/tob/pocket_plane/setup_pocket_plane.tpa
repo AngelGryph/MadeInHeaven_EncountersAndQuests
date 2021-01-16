@@ -2,7 +2,7 @@ DEFINE_ACTION_FUNCTION setup_pocket_plane
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "retribution_challenge"
+    file	= "retribution_challenge sarevok_challenge"
   END
 END	// setup_pocket_plane
 
