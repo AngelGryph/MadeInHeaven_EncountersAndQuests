@@ -1,0 +1,30 @@
+IF
+  Global("NorthTableClicked", "AR5509", 2)
+  Global("EastTableClicked", "AR5509", 2)
+  Global("SouthTableClicked", "AR5509", 2)
+  Global("WestTableClicked", "AR5509", 2)
+  Global("mh#SpawnNatureElementals", "AR5509", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnNatureElementals", "AR5509", 1)
+    ClearAllActions()
+    StartCutSceneMode()
+    CreateCreature("cutspy", [710.750], S)
+    MoveViewPoint([737.568], 5)
+    Wait(1)
+    PlaySound("EFF_P92")
+    ScreenShake([5.5], 5)
+    Wait(2)
+    CreateVisualEffect("callligh", [738.520])
+    CreateVisualEffect("callligh", [724.672])
+    Wait(1)
+    CreateVisualEffect("spfleshs",[738.520])
+    CreateVisualEffect("spfleshs",[724.672])
+    CreateCreature("mh#natel", [734.520], S)
+    CreateCreature("mh#natel", [724.672], S)
+    ActionOverride("cutspy", DestroySelf())
+    Wait(1)
+    EndCutSceneMode()
+END
+
+
