@@ -9,6 +9,14 @@ ACTION
     ReallyForceSpell(scstarget, VONGOETHE_DOOM_GAZE)
 END
 
+IF
+  HP(Myself, 1)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself, @1)
+    DestroyItem("minhp1")
+END
+
 IF TRIGGER
   TriggerBlock(Enemy|MR|ResistMagicDamage|Slay)
   TargetBlock(PCsInOrder)

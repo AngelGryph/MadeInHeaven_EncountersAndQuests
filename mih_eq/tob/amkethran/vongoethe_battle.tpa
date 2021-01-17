@@ -1,5 +1,7 @@
 DEFINE_ACTION_FUNCTION vongoethe_battle
 BEGIN
+  // Salient ability: Doom Gaze
+
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
     INT_VAR
     level	= 7
@@ -22,6 +24,9 @@ BEGIN
     spell	= "spin991=>%newname%"
     edits	= "patch_data"
   END
+
+
+  // Vongoethe patches
 
   MAKE_PATCH
     // Salient Ability: Regeneration (18/round)
@@ -47,7 +52,8 @@ BEGIN
   END
 
   MAKE_PATCH
-    replace_items=>"mh#vgoet(rring)"
+    xp_value=>0
+    replace_items=>"mh#vgoet(rring) minhp1(amulet)"
     insert_script_high=>"mh#vgoet"
   END
 
@@ -56,6 +62,26 @@ BEGIN
     creature	= "amlich01"
     edits	= "patch_data"
   END
+
+
+  // Script patches
+
+  COPY_EXISTING "ar5509.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~skelwa01~ ~mh#skw15~
+
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~banshe01~ ~mh#eyeff~
+    END
+
+  COPY_EXISTING "amlich01.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+       ~skelar02~ ~mh#bodak~
+    END
 END	// vongoethe_battle
 
 
