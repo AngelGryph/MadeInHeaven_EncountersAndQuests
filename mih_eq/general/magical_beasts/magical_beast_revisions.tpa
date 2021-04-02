@@ -68,7 +68,7 @@ BEGIN
         LAUNCH_PATCH_FUNCTION apply_patches
 	  STR_VAR
 	  file_ext	="CRE"
-	  edits 	= "greater_basilisk"
+	  edits 	= "ankheg"
         END
       END
 

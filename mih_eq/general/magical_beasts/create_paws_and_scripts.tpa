@@ -1,0 +1,73 @@
+DEFINE_ACTION_FUNCTION create_paws_and_scripts
+BEGIN
+  // Ankheg paw and script
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>3 strength_bonus=>1 add_effect_inline=>"opcode=>12 parameter2=>0x00010000 dicenum=>1 dicesize=>4"~
+  END
+    
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "b1-8=>mh#ankhg"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#ankhg.baf"
+    location	= "scripts"
+  END
+
+
+  // Greater basilisk script
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file		= "mh#grbas.baf"
+    location		= "scripts"
+  END
+
+
+  // Dread wolf paw (with disease)
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "dread_wolf_disease_duration"
+    RET
+    dread_wolf_disease_duration	= value
+  END
+
+  MAKE_PATCH
+    add_effect_global_inline=>"opcode=>98 target=>1 timing=>2 parameter1=>2 parameter2=>3"
+    add_effect_inline'1=>"opcode=>78 target=>2 duration=>%dread_wolf_disease_duration% parameter1=>360 parameter2=>3 save_vs_poison=>1"
+    add_effect_inline'2=>"opcode=>142 target=>2 duration=>%dread_wolf_disease_duration% parameter2=>7 save_vs_poison=>1"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item		= "p1-10=>mh#drwlf"
+    edits		= "patch_data"
+  END
+
+
+  // Winter wolf paw and script
+
+  MAKE_PATCH
+    add_effect_inline=>"opcode=>12 target=>2 timing=>1 parameter2=>0x00020000 dicenum=>1 dicesize=>6"
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item		= "p2-8=>mh#wiwlf"
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+    STR_VAR
+    script	= "mh#wiwlf"
+    location	= "scripts"
+    locbase
+  END
+END	// create_paws_and_scripts
+
+

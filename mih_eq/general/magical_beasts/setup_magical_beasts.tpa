@@ -6,9 +6,15 @@ BEGIN
     locbase	= "shared/regeneration"
   END
 
+  LAUNCH_ACTION_FUNCTION install_spell_pack
+    STR_VAR
+    spell_copy	= ""
+    tra		= "magical_beasts"
+  END
+
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "ankheg_resources basilisk_resources dread_wolf_resources winter_wolf_resources magical_beast_revisions relocate_bg1_winter_wolves"
+    file	= "create_paws_and_scripts magical_beast_revisions relocate_bg1_winter_wolves"
     tra		= "magical_beasts"
   END
 END	// setup_magical_beasts
