@@ -591,6 +591,20 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Enhanced Battles: Sendai's Enclave
+
+BEGIN @57
+GROUP @40  GAME_INCLUDES "tob"
+
+REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations.tp2" 0 @53
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_sendai"
+  location	= "tob/sendai"
+END
+
+
 // Enhanced Battles: Watcher's Keep
 
 BEGIN @39

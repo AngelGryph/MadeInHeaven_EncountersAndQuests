@@ -1,0 +1,69 @@
+DEFINE_ACTION_FUNCTION install_fiends
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "use_ee_half_damage"
+    RET
+    use_ee_half_damage	= value
+  END
+
+
+  // Retriever
+
+  MAKE_PATCH
+    patch_effect_inline=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and save_vs_spells" dicenum=>"dicenum * 2" mode=>256~
+    delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not save_vs_spells~
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "retriever_sheet_of_flame"
+    idsname		= "RETRIEVER_SHEET_OF_FLAME"
+    location		= "spells"
+    locbase
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "retriever_chain_lightning"
+    idsname		= "RETRIEVER_CHAIN_LIGHTNING"
+    location		= "spells"
+    locbase
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "retriever_cone_of_cold"
+    idsname		= "RETRIEVER_CONE_OF_COLD"
+    location		= "spells"
+    locbase
+    edits		= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_spell
+    STR_VAR
+    spell		= "retriever_flesh_to_stone"
+    idsname		= "RETRIEVER_FLESH_TO_STONE"
+    location		= "spells"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+    STR_VAR
+    script	= "mh#retrv"
+    location	= "scripts"
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "mh#retrv"
+    location	= "actors"
+    locbase
+    editstring	= "say_both_names=>46"
+  END
+END	// install_fiends
+
+
