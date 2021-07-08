@@ -2,16 +2,16 @@ DEFINE_ACTION_FUNCTION spider_attack_waves
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini		= "spider_waves_count"
+    ini		= "spider_wave_count"
     RET
-    spider_waves_count		= value
+    spider_wave_count		= value
   END
 
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini		= "spider_waves_interval"
+    ini		= "spider_wave_interval"
     RET
-    spider_waves_interval	= value
+    spider_wave_interval	= value
   END
 
   LAUNCH_ACTION_FUNCTION extend_area_script

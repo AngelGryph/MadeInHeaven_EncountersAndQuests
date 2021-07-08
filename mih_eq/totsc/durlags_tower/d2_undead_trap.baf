@@ -8,7 +8,7 @@ THEN
     CreateCreature("ghoullor",[232.1379],0)
     Wait(10)
   RESPONSE #10
-    CreateCreature("%tutu_scriptbg%skelwa",[232.1379],0)
+    CreateCreature("%bg1_skeleton_warrior%",[232.1379],0)
     Wait(10)
   RESPONSE #5
     CreateCreature("mh#bwght",[232.1379],0)
@@ -21,7 +21,7 @@ THEN
     CreateCreature("ghoullor",[328.1446],0)
     Wait(10)
   RESPONSE #10
-    CreateCreature("%tutu_scriptbg%skelwa",[328.1446],0)
+    CreateCreature("%bg1_skeleton_warrior%",[328.1446],0)
     Wait(10)
   RESPONSE #5
     CreateCreature("mh#bwght",[328.1446],0)
@@ -34,7 +34,7 @@ THEN
     CreateCreature("ghoullor",[419.1509],0)
     Wait(10)
   RESPONSE #10
-    CreateCreature("%tutu_scriptbg%skelwa",[419.1509],0)
+    CreateCreature("%bg1_skeleton_warrior%",[419.1509],0)
     Wait(10)
   RESPONSE #5
     CreateCreature("mh#bwght",[419.1509],0)
@@ -47,7 +47,7 @@ THEN
     CreateCreature("ghoullor",[508.1574],0)
     Wait(10)
   RESPONSE #10
-    CreateCreature("%tutu_scriptbg%skelwa",[508.1574],0)
+    CreateCreature("%bg1_skeleton_warrior%",[508.1574],0)
     Wait(10)
   RESPONSE #5
     CreateCreature("mh#bwght",[508.1574],0)
@@ -60,7 +60,7 @@ THEN
     CreateCreature("ghoullor",[604.1638],0)
     Wait(10)
   RESPONSE #10
-    CreateCreature("%tutu_scriptbg%skelwa",[604.1638],0)
+    CreateCreature("%bg1_skeleton_warrior%",[604.1638],0)
     Wait(10)
   RESPONSE #5
     CreateCreature("mh#bwght",[604.1638],0)
@@ -73,7 +73,7 @@ THEN
     CreateCreature("ghoullor",[695.1698],0)
     Wait(10)
   RESPONSE #10
-    CreateCreature("%tutu_scriptbg%skelwa",[695.1698],0)
+    CreateCreature("%bg1_skeleton_warrior%",[695.1698],0)
     Wait(10)
   RESPONSE #5
     CreateCreature("mh#bwght",[695.1698],0)

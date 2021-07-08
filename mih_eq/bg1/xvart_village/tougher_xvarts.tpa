@@ -14,7 +14,7 @@ BEGIN
     enforce_hp=>at_worst
     set_proficiencies=>"shortsword=>2"
     remove_items=>"sw1h07"
-    add_item=>"sw1h08(weapon1)"
+    add_items=>"sw1h08(weapon1)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

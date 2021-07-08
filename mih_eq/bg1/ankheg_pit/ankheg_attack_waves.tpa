@@ -2,16 +2,16 @@ DEFINE_ACTION_FUNCTION ankheg_attack_waves
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini		= "ankheg_waves_count"
+    ini		= "ankheg_wave_count"
     RET
-    ankheg_waves_count		= value
+    ankheg_wave_count		= value
   END
 
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini		= "ankheg_waves_interval"
+    ini		= "ankheg_wave_interval"
     RET
-    ankheg_waves_interval	= value
+    ankheg_wave_interval	= value
   END
 
   LAUNCH_ACTION_FUNCTION clone_creature
