@@ -1,5 +1,39 @@
-DEFINE_ACTION_FUNCTION ghoul_lord_revisions
+DEFINE_ACTION_FUNCTION ghoul_lords
 BEGIN
+  // Create minions
+
+  MAKE_PATCH
+    xp_value=>0
+  END
+
+  ACTION_IF GAME_IS "bgee"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION clone_creature
+      STR_VAR
+      creature	= "ghoul=>mh#glgho ghast=>mh#glgha"
+      edits	= "patch_data"
+    END
+  END
+  ELSE
+  BEGIN
+    LAUNCH_ACTION_FUNCTION clone_creature
+      STR_VAR
+      creature	= "ghoul01=>mh#glgho ghast01=>mh#glgha"
+      edits	= "patch_data"
+    END
+  END
+
+
+
+  // Patch ghoul lord
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#ghlor.baf"
+    location	= "scripts"
+  END
+
+
   MAKE_PATCH
     enchantment=>2
     delete_effect=>"opcode = 54"
@@ -18,20 +52,20 @@ BEGIN
   END
     
   MAKE_PATCH
+    say_both_names=>1
     level1GT=>6
     thac0LT=>15
     xp_valueGT=>3000
     attacks=>3
     replace_items=>"mh#ghlor(weapon1) ring95(lring) mage06(rring) immune1(amulet)"
+    insert_script_high=>"mh#ghlor"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature
-    INT_VAR
-    allow_missing	= 1
     STR_VAR
-    creature	= "ghoullor bpghgr01 ghogr01 gholor01 riftcr01"
+    creature	= "ghoullor"
     edits	= "patch_data"
   END
-END	// ghoul_lord_revisions
+END	// ghoul_lords
 
 

@@ -1,5 +1,20 @@
 DEFINE_ACTION_FUNCTION magical_beast_revisions
 BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "wyvern_hd_bonus"
+    RET
+    wyvern_hd_bonus	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "wyvern_ac_bonus"
+    RET
+    wyvern_ac_bonus	= value
+  END
+
+
   // Statistic blocks
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY ankheg
@@ -47,6 +62,35 @@ BEGIN
   END
 
 
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY baby_wyvern
+  BEGIN
+    levelGT		=> "3 + %wyvern_hd_bonus%"
+    enforce_hp		=> at_worst
+    enforce_xp		=> 3
+    ac			=> "5 - %wyvern_ac_bonus%"
+    strengthGT		=> 14
+    dexterityGT		=> 14
+    constitutionGT	=> 12
+    replace_items	=> "wyvern1(weapon1) wyvern1(weapon2) wyvern2(shield)"
+    strip_script	=> "wyvern"
+    add_proficiencies	=> "2weapon=>3"
+  END
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY wyvern
+  BEGIN
+    levelGT		=> "7 + %wyvern_hd_bonus%"
+    enforce_hp		=> at_worst
+    enforce_xp		=> 3
+    ac			=> "3 - %wyvern_ac_bonus%"
+    strengthGT		=> 19
+    dexterityGT		=> 16
+    constitutionGT	=> 14
+    replace_items	=> "wyvern1(weapon1) wyvern1(weapon2) wyvern2(shield)"
+    strip_script	=> "wyvern"
+    add_proficiencies	=> "2weapon=>3"
+  END
+
+
   // Patching starts here
 
   COPY_EXISTING_REGEXP "^.*\.cre$" "override"
@@ -60,6 +104,11 @@ BEGIN
       class	= value
     END
 
+    LAUNCH_PATCH_FUNCTION CRE_read_animation
+      RET
+      animation	= value
+    END
+
     PATCH_MATCH "%class%"
     WITH
       "ankheg" WHEN ("%race%" STRING_EQUAL_CASE "ankheg")
@@ -67,7 +116,7 @@ BEGIN
         PATCH_PRINT "%SOURCE_RES% appears to be an ankheg, applying patches."
         LAUNCH_PATCH_FUNCTION apply_patches
 	  STR_VAR
-	  file_ext	="CRE"
+	  file_ext	= "CRE"
 	  edits 	= "ankheg"
         END
       END
@@ -77,7 +126,7 @@ BEGIN
         PATCH_PRINT "%SOURCE_RES% appears to be a greater basilisk, applying patches."
         LAUNCH_PATCH_FUNCTION apply_patches
 	  STR_VAR
-	  file_ext	="CRE"
+	  file_ext	= "CRE"
 	  edits 	= "greater_basilisk"
         END
       END
@@ -87,7 +136,7 @@ BEGIN
         PATCH_PRINT "%SOURCE_RES% appears to be a dread wolf, applying patches."
         LAUNCH_PATCH_FUNCTION apply_patches
 	  STR_VAR
-	  file_ext	="CRE"
+	  file_ext	= "CRE"
 	  edits 	= "dread_wolf"
         END
       END
@@ -97,11 +146,30 @@ BEGIN
         PATCH_PRINT "%SOURCE_RES% appears to be a winter wolf, applying patches."
         LAUNCH_PATCH_FUNCTION apply_patches
 	  STR_VAR
-	  file_ext	="CRE"
+	  file_ext	= "CRE"
 	  edits 	= "winter_wolf"
         END
       END
 
+      "wyvern" WHEN ("%animation%" STRING_EQUAL_CASE "wyvern")
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be a baby wyvern, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	= "CRE"
+	  edits 	= "baby_wyvern"
+        END
+      END
+
+      "wyvern" WHEN ("%animation%" STRING_EQUAL_CASE "wyvern_big")
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be an adult wyvern, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	= "CRE"
+	  edits 	= "wyvern"
+        END
+      END
       DEFAULT
     END
 

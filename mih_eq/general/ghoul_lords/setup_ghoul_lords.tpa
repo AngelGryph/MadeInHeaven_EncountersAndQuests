@@ -1,9 +1,0 @@
-DEFINE_ACTION_FUNCTION setup_ghoul_lords
-BEGIN
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "ghoul_lord_minions ghoul_lord_revisions"
-  END
-END	// setup_ghoul_lords
-
-

@@ -36,15 +36,17 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// Revised Ghoul Lords
+// Revised Lesser Undead
 
 BEGIN @5
 GROUP @2
 
+DEPRECATED ~Not ready yet.~
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_ghoul_lords"
-  location	= "general/ghoul_lords"
+  file		= "setup_lesser_undead"
+  location	= "general/lesser_undead"
 END
 
 

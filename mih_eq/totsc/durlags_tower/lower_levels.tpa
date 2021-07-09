@@ -35,6 +35,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION compile_rename
     STR_VAR
     file	= "d2_undead_trap=>trpghast"
+    location	= "scripts"
   END
 
   MAKE_PATCH
