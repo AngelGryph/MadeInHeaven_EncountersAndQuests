@@ -8,7 +8,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "more_basilisks"
+    file	= "more_monsters tougher_adventurers tougher_mutamin"
   END
 END	// setup_mutamins_garden
 

@@ -1,0 +1,48 @@
+DEFINE_ACTION_FUNCTION tougher_adventurers
+BEGIN
+  // Kirian
+
+
+  // Peter
+
+  MAKE_PATCH
+    add_items=>"chan02(armor) shld04(shield) potn52(qitem,x2)"
+    remove_items=>"chan01 shld03"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "%tutu_var%peter"
+    edits	= "patch_data"
+  END
+
+
+  // Baerin
+
+  MAKE_PATCH
+    add_items=>"bow04(weapon1) sper02(weapon2) chan05(armor) potn52(qitem,x3)"
+    remove_items=>"bow03 sper02 chan04"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "%tutu_var%baerin"
+    edits	= "patch_data"
+  END
+
+
+  // Lindin
+
+  MAKE_PATCH
+    add_items=>"plat04(armor) shld06(shield)"
+    remove_items=>"plat01 shld03"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "%tutu_var%lindin"
+    edits	= "patch_data"
+  END
+END	// tougher_adventurers
+
+

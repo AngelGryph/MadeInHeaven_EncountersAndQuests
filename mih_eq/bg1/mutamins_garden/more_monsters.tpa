@@ -1,6 +1,8 @@
-DEFINE_ACTION_FUNCTION more_basilisks
+DEFINE_ACTION_FUNCTION more_monsters
 BEGIN
   MAKE_PATCH
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>12 spawn_base_number=>200 spawn_count=>10 spawn_creature1=>"%tutu_var%bearca" spawn_creature2=>"%tutu_var%gnoll_a" spawn_creature3=>"%tutu_var%gnoll_d" spawn_creature4=>"%tutu_var%gnoll_e" spawn_creature5=>"%tutu_var%flind" spawn_creature6=>"%tutu_scriptbg%basill" spawn_creature7=>"%tutu_var%ogre" spawn_creature8=>"%tutu_var%ogregr" spawn_creature9=>"%tutu_var%ogreha" spawn_creature10=>"%tutu_scripto%greberz"~
+
     add_actor_inline'01=>~actor_name=>"{literal:Greater Basilisk}" actor_resource=>"basilg" actor_x_coord=>960 actor_y_coord=>500 actor_orientation=>1~
     add_actor_inline'02=>~actor_name=>"{literal:Greater Basilisk}" actor_resource=>"basilg" actor_x_coord=>320 actor_y_coord=>3485 actor_orientation=>6~
 
@@ -13,6 +15,9 @@ BEGIN
     add_actor_inline'08=>~actor_name=>"{literal:Lesser Basilisk}" actor_resource=>"%tutu_scriptbg%basill" actor_x_coord=>3860 actor_y_coord=>755 actor_orientation=>4~
     add_actor_inline'09=>~actor_name=>"{literal:Lesser Basilisk}" actor_resource=>"%tutu_scriptbg%basill" actor_x_coord=>1560 actor_y_coord=>905 actor_orientation=>6~
     add_actor_inline'10=>~actor_name=>"{literal:Lesser Basilisk}" actor_resource=>"%tutu_scriptbg%basill" actor_x_coord=>1725 actor_y_coord=>1415 actor_orientation=>10~
+    add_actor_inline'11=>~actor_name=>"{literal:Hill Giant}" actor_resource=>"mh#giant" actor_x_coord=>4185 actor_y_coord=>425 actor_orientation=>1~
+    add_actor_inline'12=>~actor_name=>"{literal:Hill Giant}" actor_resource=>"mh#giant" actor_x_coord=>4545 actor_y_coord=>1520 actor_orientation=>6~
+    add_actor_inline'13=>~actor_name=>"{literal:Hill Giant}" actor_resource=>"mh#giant" actor_x_coord=>4465 actor_y_coord=>3350 actor_orientation=>5~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area
@@ -20,6 +25,6 @@ BEGIN
     area	= "%MutaminsGarden%"
     edits	= "patch_data"
   END
-END	// more_basilisks
+END	// more_monsters
 
 
