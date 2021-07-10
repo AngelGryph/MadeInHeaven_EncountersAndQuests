@@ -2,6 +2,7 @@ BEGIN_ACTION_DEFINITION
 Name(FrostBreath)
 TRIGGER
   See(scstarget)
+  Range(LastSeenBy(Myself), 10)
   !GlobalTimerNotExpired("frost_breath", "locals")
 ACTION	
   RESPONSE #scsprob1

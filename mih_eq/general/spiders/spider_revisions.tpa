@@ -19,7 +19,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY gargantuan_spider
   BEGIN
     level1GT=>"8 + %spider_hd_bonus%"
-    xp_valueGT=>3000
+    enforce_xp=>4
     hp_maxGT=>"level1 * 7 + 8"
     hp_currentGT=>"level1 * 7 + 8"
     thac0LT=>"19 - level1"	// Two better due to 8+8 hd
@@ -32,7 +32,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY giant_spider
   BEGIN
     level1GT=>"4 + %spider_hd_bonus%"
-    xp_valueGT=>650
+    enforce_xp=>4
     hp_maxGT=>"level1 * 7 + 4"
     hp_currentGT=>"level1 * 7 + 4"
     thac0LT=>"20 - level1"	// One better due to 4+4 hd
@@ -45,7 +45,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY huge_spider
   BEGIN
     level1GT=>"2 + %spider_hd_bonus%"
-    xp_valueGT=>270
+    enforce_xp=>4
     hp_maxGT=>"level1 * 7 + 2"
     hp_currentGT=>"level1 * 7 + 2"
     thac0LT=>"21 - level1"
@@ -58,7 +58,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY phase_spider
   BEGIN
     level1GT=>"5 + %spider_hd_bonus%"
-    xp_valueGT=>2000
+    enforce_xp=>4
     hp_maxGT=>"level1 * 7 + 5"
     hp_currentGT=>"level1 * 7 + 5"
     thac0LT=>"20 - level1"	// One better due to 5+5 hd
@@ -71,7 +71,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY sword_spider
   BEGIN
     level1GT=>"5 + %spider_hd_bonus%"
-    xp_valueGT=>2000
+    enforce_xp=>4
     hp_maxGT=>"level1 * 7 + 4"
     hp_currentGT=>"level1 * 7 + 4"
     thac0LT=>"20 - level1"
@@ -84,7 +84,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY vortex_spider
   BEGIN
     level1GT=>"7 + %spider_hd_bonus%"
-    xp_valueGT=>2700
+    enforce_xp=>4
     hp_maxGT=>"level1 * 7 + 4"
     hp_currentGT=>"level1 * 7 + 4"
     thac0LT=>"20 - level1"	// One better due to 7+4 hd
@@ -97,7 +97,7 @@ BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY wraith_spider
   BEGIN
     level1GT=>"3 + %spider_hd_bonus%"
-    xp_valueGT=>1400
+    enforce_xp=>6
     hp_maxGT=>"level1 * 7 + 2"
     hp_currentGT=>"level1 * 7 + 2"
     thac0LT=>"21 - level1"

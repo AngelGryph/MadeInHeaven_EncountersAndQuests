@@ -16,12 +16,12 @@ BEGIN
     charisma=>10
     level1=>7
     class=>fighter
-    enforce_thac0=>at_worst
     enforce_saves=>at_worst
     enforce_hp=>at_worst
+    enforce_xp=>2
+    thac0=>15
     attacks=>2
-    ac=>0
-    xp_value=>975
+    ac=>6
     alignment=>neutral_evil
     resist_fire=>50
     resist_magic_fire=>50
@@ -29,7 +29,7 @@ BEGIN
     resist_crushing=>50
     resist_piercing=>50
     resist_missile=>80
-    replace_items=>"mage6(rring) immune1(amulet) mh#zomjj(weapon1)"
+    replace_items=>"immune1(amulet) mh#zomjj(weapon1)"
     add_effect_inline=>"opcode=>83 target=>1 timing=>9 parameter2=>36"
     say_both_names=>3
   END

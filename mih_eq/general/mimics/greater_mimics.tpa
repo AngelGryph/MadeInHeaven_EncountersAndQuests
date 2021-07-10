@@ -1,0 +1,24 @@
+DEFINE_ACTION_FUNCTION greater_mimics
+BEGIN
+  // Turn the Killer Mimics in Watcher's Keep into Greater Mimics
+
+  MAKE_PATCH
+    level1=>16
+    thac0=>5
+    strength=>23
+    ac=>2
+    resist_magic=>10
+    enforce_hp=>at_worst
+    enforce_saves=>at_worst
+    xp_value=>8000
+    say_both_names=>12
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "gormim01 gormim02 gormim03 gormim04"
+    edits	= "patch_data"
+  END
+END
+
+

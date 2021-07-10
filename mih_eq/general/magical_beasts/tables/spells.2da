@@ -1,8 +1,8 @@
 2DA v1.0
 *
 IDSNAME					NAME	DESC	TYPE	IDSNUM	SCROLL		HALF	PROJECTL	SEQ	CD_IMMUNITY
-ANKHEG_ACID_SQUIRT			0	*	0	*	*		y	*		y	*
-GREATER_BASILISK_BREATH			*	*	0	*	*		y	*		y	*
-WINTER_WOLF_BREATH			1	*	0	*	*		y	*		y	*
+ANKHEG_ACID_SQUIRT			0	*	0	*	*		dd	*		y	*
+GREATER_BASILISK_BREATH			*	*	0	*	*		dd	*		y	*
+WINTER_WOLF_BREATH			1	*	0	*	*		dd	*		y	*
 
 

@@ -27,7 +27,7 @@ BEGIN
 
   MAKE_PATCH
     level1GT=>"10 + %spider_hd_bonus%"
-    xp_valueGT=>4000
+    enforce_xp=>6
     hp_maxGT=>"level1 * 7 + 8"
     hp_currentGT=>"level1 * 7 + 8"
     thac0LT=>"19 - level1"	// Two better due to 10+8 hd

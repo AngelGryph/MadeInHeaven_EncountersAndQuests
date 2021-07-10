@@ -48,8 +48,8 @@ BEGIN
   BEGIN
     ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
     BEGIN
-      patch_effect_inline'2=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and save_vs_spells" parameter1=>"parameter1 * 2" dicenum=>"dicenum * 2" mode=>256~
-      delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not save_vs_spells~
+      patch_effect_inline'2=>~match=>"%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and (save_vs_death or save_vs_breath or save_vs_polymorph or save_vs_wands or save_vs_spells)" parameter1=>"parameter1 * 2" dicenum=>"dicenum * 2" mode=>256~
+      delete_effect=>~%enhanced_edition% and %use_ee_half_damage% and opcode = 12 and not (save_vs_death or save_vs_breath or save_vs_polymorph or save_vs_wands or save_vs_spells)~
     END
   END
 
