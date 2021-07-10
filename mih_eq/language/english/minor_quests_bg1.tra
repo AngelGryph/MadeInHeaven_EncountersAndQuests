@@ -1,4 +1,20 @@
-@0    = ~This is Nester's dagger which you recovered from the ankheg that slew him.  A masterwork weapon, this dagger seems to have been treasured and taken really good care of.  Perhaps if you give this to Quinn, he can have some closure.
+@0    = ~This is the dagger the panicked man gave you before he left in a hurry.  The weapon is well-made but has an unsual archaic design, and runes have been etched into the wavy blade.
+
+STATISTICS:
+
+Combat abilities:
+- 20% change of 1d4 fire damage per hit
+
+THAC0: +1
+Damage: 1d4 (piercing)
+Speed Factor: 2
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@1    = ~This is Nester's dagger which you recovered from the ankheg that slew him.  A masterwork weapon, this dagger seems to have been treasured and taken really good care of.  Perhaps if you give this to Quinn, he can have some closure.
 
 STATISTICS:
 
@@ -11,3 +27,10 @@ Requires:
  3 Strength
 
 Weight: 1~
+@2    = ~Murderer of my kind!  Die as you must!~
+@3    = ~What do you seek here, <RACE>?  These ancient woods are not the place for your mind.~
+@4    = ~I mean no harm, gentle wood spirit.  Please let me pass.~
+@5    = ~Out of my way if you know what is good for you!~
+@6    = ~Mm, you aren't like the defilers, at least you show some respect.  Very well, I shall tolerate your presence for now.  But you had better watch yourselves!~
+@7    = ~You're very different from the defilers.  Please be careful in these woods.  Here, this potion might help you.~
+@8    = ~To me, animals of the forest!  Together we shall purge these defilers from the woods!~

@@ -1,0 +1,32 @@
+DEFINE_ACTION_FUNCTION hamadryad
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#dryha.baf"
+    location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "hamadryad.d"
+    location	= "dialog"
+  END
+
+  MAKE_PATCH
+    allegiance=>neutral
+    insert_script_high=>mh#dryha
+    class=>druid
+    dialog=>mh#dryha
+    dv=>dryadha
+    add_items=>"dagg02(weapon1) potn52(qitem,x1)"
+    remove_items=>"dagg01"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "%tutu_var%dryadha"
+    edits	= "patch_data"
+  END
+END	// hamadryad
+
+

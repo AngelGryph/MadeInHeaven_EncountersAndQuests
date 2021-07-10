@@ -1,0 +1,36 @@
+DEFINE_ACTION_FUNCTION nesters_dagger
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#nesdg"
+    postfix	= "bam"
+    location	= "graphics"
+  END
+
+  MAKE_PATCH
+    patch_ability_inline=>~to_hit=>1 ability_icon=>"mh#nesdg"~
+    icon=>"mh#nesdg"
+    say_description=>1
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "dagg06"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_area
+    STR_VAR
+    area	= "%WyrmsCrossing%"
+    editstring	= ~delete_actor=>"actor_resource is_in [ankhegq]"~
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%WyrmsCrossing%"
+    bottom	= "spawn_quinns_ankhegs"
+    location	= "scripts"
+  END
+END	// nesters_dagger
+
+

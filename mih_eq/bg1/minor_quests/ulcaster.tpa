@@ -1,0 +1,10 @@
+DEFINE_ACTION_FUNCTION ulcaster
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "ulcaster.d"
+    location	= "dialog"
+  END
+END	// ulcaster
+
+
