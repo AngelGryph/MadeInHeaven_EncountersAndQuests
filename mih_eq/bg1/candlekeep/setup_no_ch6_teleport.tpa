@@ -1,0 +1,11 @@
+DEFINE_ACTION_FUNCTION setup_no_ch6_teleport
+BEGIN
+  LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+    STR_VAR
+    script	= "cutckeep"
+    swap_out1	= "^.*LeaveAreaLUA.*$"
+    swap_out2	= "^.*AdvanceTime.*$"
+  END
+END	// setup_no_ch6_teleport
+
+

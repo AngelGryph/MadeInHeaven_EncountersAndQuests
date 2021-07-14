@@ -148,7 +148,7 @@ REQUIRE_PREDICATE ENGINE_IS "bgee bg2ee" OR MOD_IS_INSTALLED "infinityanimations
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_candlekeep_catacombs"
-  location	= "bg1/candlekeep_catacombs"
+  location	= "bg1/candlekeep"
 END
 
 
@@ -283,8 +283,20 @@ GROUP @44  GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file		= "setup_sarevoks_assassins"
-  location	= "bg1/sarevoks_assassins"
+  file		= "setup_assassins"
+  location	= "bg1/assassins"
+END
+
+
+// Prevent automatic travel to Candlekeep in ch6
+
+BEGIN @1
+GROUP @44  GAME_INCLUDES "bg1"
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_no_ch6_teleport"
+  location	= "bg1/candlekeep"
 END
 
 
