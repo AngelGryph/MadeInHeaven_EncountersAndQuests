@@ -1,0 +1,75 @@
+DEFINE_ACTION_FUNCTION huecuva_levels
+BEGIN
+  // Huecuva, 5th level cleric
+
+  MAKE_PATCH
+    level1=>5
+    ac=>3
+    xp_value=>650
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_hp=>at_worst
+    say_both_names=>9
+    dv=>DEST_RES
+    add_all_priest_spells=>null
+    add_spells=>"CLERIC_BLESS CLERIC_SANCTUARY CLERIC_DOOM CLERIC_HOLD_PERSON CLERIC_CHARM_PERSON CLERIC_DRAW_UPON_HOLY_MIGHT CLERIC_ANIMATE_DEAD CLERIC_STRENGTH_OF_ONE"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "huecuva=>mh#huec5"
+    edits	= "patch_data"
+    location	= "actors"
+    locbase
+  END
+
+
+  // Huecuva, 9th level cleric
+
+  MAKE_PATCH
+    level1=>9
+    ac=>1
+    xp_value=>2000
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_hp=>at_worst
+    say_both_names=>9
+    dv=>DEST_RES
+    add_all_priest_spells=>null
+    add_spells=>"CLERIC_BLESS CLERIC_SANCTUARY CLERIC_DOOM CLERIC_ARMOR_OF_FAITH CLERIC_HOLD_PERSON CLERIC_CHARM_PERSON(2) CLERIC_DRAW_UPON_HOLY_MIGHT CLERIC_ANIMATE_DEAD CLERIC_UNHOLY_BLIGHT CLERIC_STRENGTH_OF_ONE CLERIC_DEFENSIVE_HARMONY CLERIC_CLOAK_OF_FEAR CLERIC_MENTAL_DOMINATION CLERIC_FLAME_STRIKE CLERIC_RIGHTEOUS_MAGIC"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "huecuva=>mh#huec9"
+    edits	= "patch_data"
+    location	= "actors"
+    locbase
+  END
+
+
+  // Huecuva, 13th level cleric
+
+  MAKE_PATCH
+    level1=>13
+    ac=>"-1"
+    xp_value=>4000
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_hp=>at_worst
+    say_both_names=>9
+    dv=>DEST_RES
+    add_all_priest_spells=>null
+    add_spells=>"CLERIC_BLESS CLERIC_SANCTUARY(2) CLERIC_DOOM(3) CLERIC_ARMOR_OF_FAITH CLERIC_HOLD_PERSON(2) CLERIC_CHARM_PERSON(2) CLERIC_RESIST_FIRE CLERIC_DRAW_UPON_HOLY_MIGHT CLERIC_ANIMATE_DEAD(2) CLERIC_DISPEL_MAGIC CLERIC_UNHOLY_BLIGHT(2) CLERIC_STRENGTH_OF_ONE CLERIC_DEFENSIVE_HARMONY CLERIC_CLOAK_OF_FEAR CLERIC_MENTAL_DOMINATION(2) CLERIC_FLAME_STRIKE CLERIC_RIGHTEOUS_MAGIC ENEMY_CLERIC_SLAY_LIVING CLERIC_AERIAL_SERVANT NPC_BLADE_BARRIER CLERIC_UNHOLY_WORD"
+  END
+
+  LAUNCH_ACTION_FUNCTION install_creature
+    STR_VAR
+    creature	= "huecuva=>mh#hue13"
+    edits	= "patch_data"
+    location	= "actors"
+    locbase
+  END
+END	// install_undead_levels
+
+

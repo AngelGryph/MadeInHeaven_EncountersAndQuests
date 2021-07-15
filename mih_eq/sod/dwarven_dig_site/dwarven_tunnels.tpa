@@ -17,7 +17,7 @@ BEGIN
 
     add_actor_inline'12=>~actor_name=>"{literal:Mummy}" actor_resource=>"bdmumm01" actor_x_coord=>1450 actor_y_coord=>870 actor_orientation=>5 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
 
-    add_actor_inline'13=>~actor_name=>"{literal:Stone Snake}" actor_resource=>"mh#stone" actor_x_coord=>2275 actor_y_coord=>855 actor_orientation=>4 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
+    add_actor_inline'13=>~actor_name=>"{literal:Flesh Golem}" actor_resource=>"golemf" actor_x_coord=>2275 actor_y_coord=>855 actor_orientation=>4 script_race=>bdenshtv script_default=>bdnonin script_general=>"bdlhard"~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area

@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION install_variants
+DEFINE_ACTION_FUNCTION monster_variants
 BEGIN
   ACTION_IF GAME_IS "bgee"
   BEGIN
@@ -115,6 +115,6 @@ BEGIN
       edits	= "patch_data"
     END
   END	// Not BGEE
-END	// install_variants
+END	// monster_variants
 
 

@@ -14,15 +14,32 @@ BEGIN
       label	= "mh#monsters"
     END
 
-    LAUNCH_ACTION_FUNCTION run
+    LAUNCH_ACTION_FUNCTION install_spell_pack
       STR_VAR
-      file	= "setup_animations"
-      locbase	= "shared/animations"
+      spell_copy	= ""
+      tra		= "monsters"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "all"
+      postfix	= "baf"
+      location	= "scripts"
+      locbase
+    END
+
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "all"
+      postfix	= "ssl"
+      location	= "scripts"
+      locbase
     END
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
-      file	= "install_dragonkin install_elementals install_fiends install_giants install_golems install_misc install_oozes install_undead install_variants"
+      file	= "huecuva_levels monster_variants monsters_postproc"
       tra	= "monsters"
       locbase
     END

@@ -3,13 +3,13 @@ Name(ForceSpellOnEnemy)
 TRIGGER
   !GlobalTimerNotExpired(scsargument2, "locals")
   See(scstarget)
-  !StateCheck(scstarget,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself), STATE_IMPROVEDINVISIBILITY)
 ACTION	
   RESPONSE #scsprob1
     SetInterrupt(FALSE)
     SetGlobalTimer(scsargument2, "locals", scsargument3)
-    FaceObject(scstarget)
-    ForceSpell(scstarget, scsargument1)
+    FaceObject(LastSeenBy(Myself))
+    ForceSpell(LastSeenBy(Myself), scsargument1)
     SetInterrupt(TRUE)
 END
 
