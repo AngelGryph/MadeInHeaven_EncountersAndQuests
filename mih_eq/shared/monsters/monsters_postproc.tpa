@@ -15,6 +15,68 @@ BEGIN
     location	= "items"
     locbase
   END
+
+
+  // Set appropriate animations for some creatures
+
+  COPY - "%MOD_FOLDER%/shared/monsters/tables/animations.2da" "%workspace%"
+    COUNT_2DA_COLS cols
+    COUNT_2DA_ROWS cols rows
+
+    FOR (SET i = 0; i < rows; ++i)
+    BEGIN
+      LAUNCH_PATCH_FUNCTION read_table_entry
+        INT_VAR
+        rownum		= i
+        colnum		= 0
+        RET
+        creature	= value
+      END
+      
+      LAUNCH_PATCH_FUNCTION read_table_entry
+        INT_VAR
+        rownum		= i
+	STR_VAR
+	column		= "animation"
+        RET
+        animation	= value
+      END
+
+      PATCH_IF IDS_OF_SYMBOL("animate" "%animation%") == "-1"
+      BEGIN
+        TEXT_SPRINT not_found "%animation%"
+
+        LAUNCH_PATCH_FUNCTION read_table_entry
+          INT_VAR
+          rownum	= i
+	  STR_VAR
+	  column	= "fallback"
+          RET
+          animation	= value
+        END
+
+	LAUNCH_PATCH_FUNCTION warning
+	  STR_VAR
+	  warning	= ~Animation not found: ~
+	  arguments	= ~For creature %creature%, animation %not_found% was not found, falling back to %animation%.  Install Infinity Animations?~
+	  repear	= "yes"
+	END
+      END
+
+      PATCH_IF IDS_OF_SYMBOL("animate" "%animation%") == "-1"
+      BEGIN
+        PATCH_FAIL ~No animation found for "%creature%; tried %not_found% and %animation%!~
+      END
+
+      INNER_ACTION
+      BEGIN
+        LAUNCH_ACTION_FUNCTION edit_creature
+          STR_VAR
+	  creature
+	  editstring	= ~animation=>"%animation%"~
+        END
+      END
+    END
 END	// monsters_postproc
 
 
