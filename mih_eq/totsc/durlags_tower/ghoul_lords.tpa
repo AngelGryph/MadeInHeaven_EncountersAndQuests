@@ -1,32 +1,5 @@
 DEFINE_ACTION_FUNCTION ghoul_lords
 BEGIN
-  // Create minions
-
-  MAKE_PATCH
-    xp_value=>0
-  END
-
-  ACTION_IF GAME_IS "bgee"
-  BEGIN
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature	= "ghoul=>mh#glgho ghast=>mh#glgha"
-      edits	= "patch_data"
-    END
-  END
-  ELSE
-  BEGIN
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature	= "ghoul01=>mh#glgho ghast01=>mh#glgha"
-      edits	= "patch_data"
-    END
-  END
-
-
-
-  // Patch ghoul lord
-
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
     file	= "mh#ghlor.baf"
