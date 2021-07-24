@@ -1,0 +1,47 @@
+IF
+  !Dead("deathk")
+  HPPercentLT("deathk", 100)
+  Global("mh#spawnDemonKnightMinions", "MYAREA", 0)
+  !Global("mirrordone","GLOBAL",1)
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawnDemonKnightMinions", "MYAREA", 1)
+    DisplayStringHead("deathk", @3)
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+END
+
+IF
+  !Dead("deathk")
+  HPPercentLT("deathk", 100)
+  Global("mh#spawnDemonKnightMinions", "MYAREA", 0)
+  !Global("mirrordone","GLOBAL",1)
+  Difficulty(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead("deathk", @3)
+    SetGlobal("mh#spawnDemonKnightMinions", "MYAREA", 1)
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+END
+
+IF
+  !Dead("deathk")
+  HPPercentLT("deathk", 100)
+  Global("mh#spawnDemonKnightMinions", "MYAREA", 0)
+  !Global("mirrordone","GLOBAL",1)
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#spawnDemonKnightMinions", "MYAREA", 1)
+    DisplayStringHead("deathk", @3)
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+    CreateCreatureObjectEffect("%bg1_skeleton_warrior%", "spraised", "deathk")
+END
+
+

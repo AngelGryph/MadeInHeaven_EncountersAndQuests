@@ -30,7 +30,7 @@ BEGIN
     enforce_xp=>6
     hp_maxGT=>"level1 * 7 + 8"
     hp_currentGT=>"level1 * 7 + 8"
-    thac0LT=>"20 - level1"	// One better due to 7+7 hd
+    thac0LT=>"18 - level1"	// Three better due to 7+7 hd
     ac_naturalLT=>"0 - 3 - %wyvern_ac_bonus%"
     ac_effectiveLT=>"0 - 3 - %wyvern_ac_bonus%"
     ac_vs_missiles=>"-4"
