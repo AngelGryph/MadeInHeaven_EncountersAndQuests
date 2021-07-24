@@ -29,7 +29,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
-    creature	= "hentold"
+    creature	= "hentol"
     edits	= "patch_data"
   END
 

@@ -66,7 +66,7 @@ BEGIN
     STR_VAR
     creature	= "mh#leuko"
     location	= "actors"
-    editstring	= ~say_both_names=>0 animation=>"golem_iron_iwd"~
+    editstring	= ~say_both_names=>0 animation=>"if enhanced_edition then golem_iron_iwd else no_change"~
   END
 
 

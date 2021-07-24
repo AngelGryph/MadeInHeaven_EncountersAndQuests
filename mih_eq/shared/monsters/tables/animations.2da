@@ -3,8 +3,8 @@
 		ANIMATION		FALLBACK
 mh#bwght	wight_barrow		vampire
 mh#blkpd	black_pudding		gray_ooze
-mh#frost	giant_frost		giant_fire
-mh#giant	giant_hill		giant_fire
+mh#frost	giant_frost		fire_giant
+mh#giant	giant_hill		fire_giant
 mh#maglp	elemental_fire_iwd	burning_man
 mh#magep	elemental_fire_iwd	burning_man
 mh#maggp	elemental_fire_iwd	burning_man

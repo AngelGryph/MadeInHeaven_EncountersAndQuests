@@ -77,7 +77,7 @@ BEGIN
     STR_VAR
     creature	= "mh#white"
     location	= "actors"
-    editstring	= ~say_both_names=>6 animation=>"dragon_white"~
+    editstring	= ~say_both_names=>6 animation=>"if enhanced_edition then dragon_white else no_change"~
   END
 
 
