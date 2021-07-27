@@ -43,7 +43,7 @@ BEGIN
 
   MAKE_PATCH
     make_legendary=>"%prison_vampires_legendary_rank%"
-    set_xp_by_hd=>10
+    enforce_xp=>10
     strength=>21
     dexterity=>19
     constitution=>18

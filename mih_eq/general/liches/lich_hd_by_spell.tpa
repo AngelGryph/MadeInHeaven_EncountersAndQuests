@@ -41,7 +41,7 @@ BEGIN
       BEGIN
         DEFINE_ASSOCIATIVE_ARRAY patch_data
 	BEGIN
-	  set_xp_by_hd=>7
+	  enforce_xp=>7
 	END
       END
 

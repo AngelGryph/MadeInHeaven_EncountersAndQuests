@@ -27,7 +27,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "dragblac"
-    editstring	= ~make_legendary=>"%nizid_legendary_rank%" set_xp_by_hd=>10~
+    editstring	= ~make_legendary=>"%nizid_legendary_rank%" enforce_xp=>10~
   END
 
 
