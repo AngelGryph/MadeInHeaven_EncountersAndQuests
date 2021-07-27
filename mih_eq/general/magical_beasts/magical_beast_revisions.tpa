@@ -42,11 +42,14 @@ BEGIN
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY dread_wolf
   BEGIN
-    strengthGT=>16
-    level1=>5
-    general=>undead
-    strip_script=>"dreadwlf"
-    insert_script_high=>"mh#reg1t"
+    strengthGT		=> 16
+    levelGT		=> 5
+    enforce_hp		=> at_worst
+    enforce_thac0	=> at_worst
+    enforce_saves	=> at_worst
+    general		=> undead
+    strip_script	=> "dreadwlf"
+    insert_script_high	=> "mh#reg1t"
     replace_items=>"mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
   END
 
@@ -60,7 +63,6 @@ BEGIN
     insert_script_high	=> "mh#wiwlf"
     replace_items	=> "mh#wiwlf(weapon1) mh#wiwlf(weapon2)"
   END
-
 
   ACTION_DEFINE_ASSOCIATIVE_ARRAY baby_wyvern
   BEGIN
@@ -80,12 +82,34 @@ BEGIN
   BEGIN
     levelGT		=> "7 + %wyvern_hd_bonus%"
     enforce_hp		=> at_worst
+    enforce_thac0	=> at_worst
+    enforce_saves	=> at_worst
     enforce_xp		=> 3
     ac			=> "3 - %wyvern_ac_bonus%"
     strengthGT		=> 19
     dexterityGT		=> 16
     constitutionGT	=> 14
     replace_items	=> "wyvern1(weapon1) wyvern1(weapon2) wyvern2(shield)"
+    strip_script	=> "wyvern"
+    add_proficiencies	=> "2weapon=>3"
+  END
+
+
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY greater_wyvern
+  BEGIN
+    levelGT		=> "10 + %wyvern_hd_bonus%"
+    enforce_hp		=> at_worst
+    enforce_thac0	=> at_worst
+    enforce_saves	=> at_worst
+    enforce_xp		=> 6
+    ac			=> "0 - 3 - %wyvern_ac_bonus%"
+    ac_vs_missiles	=> "-4"
+    resist_slashing	=> 30
+    resist_crushing	=> 30
+    resist_piercing	=> 30
+    resist_missile	=> 30
+    resist_magic	=> 35
+    replace_items	=> "mh#wgrbt(weapon1) mh#wgrbt(weapon2) mh#wgrst(shield) dragring(rring)"
     strip_script	=> "wyvern"
     add_proficiencies	=> "2weapon=>3"
   END
@@ -107,6 +131,11 @@ BEGIN
     LAUNCH_PATCH_FUNCTION CRE_read_animation
       RET
       animation	= value
+    END
+
+    LAUNCH_PATCH_FUNCTION CRE_read_resist_magic
+      RET
+      magic_resistance	= value
     END
 
     PATCH_MATCH "%class%"
@@ -158,6 +187,16 @@ BEGIN
 	  STR_VAR
 	  file_ext	= "CRE"
 	  edits 	= "baby_wyvern"
+        END
+      END
+
+      "wyvern" WHEN ("%animation%" STRING_EQUAL_CASE "wyvern_big" AND magic_resistance > 10)
+      BEGIN
+        PATCH_PRINT "%SOURCE_RES% appears to be a greater wyvern, applying patches."
+        LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext	= "CRE"
+	  edits 	= "greater_wyvern"
         END
       END
 

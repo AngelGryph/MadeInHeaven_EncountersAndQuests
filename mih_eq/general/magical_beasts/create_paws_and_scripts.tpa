@@ -68,6 +68,20 @@ BEGIN
     location	= "scripts"
     locbase
   END
+
+
+  // Greater Wyvern paws
+
+  MAKE_PATCH
+    patch_ability_inline=>~ability_dicenum=>"ability_dicenum * 2"~
+    patch_effect_inline=>~match=>"opcode = 25" parameter1=>"parameter1 + 3"~
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_item
+    STR_VAR
+    item	= "wyvern1=>mh#wgrbt wyvern2=>mh#wgrst"
+    edits	= "patch_data"
+  END
 END	// create_paws_and_scripts
 
 
