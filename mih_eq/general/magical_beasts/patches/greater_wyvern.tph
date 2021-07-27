@@ -1,0 +1,23 @@
+ACTION_CLEAR_ARRAY greater_wyvern
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY greater_wyvern
+BEGIN
+  levelGT		=> "10 + %wyvern_hd_bonus%"
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  hp_plus		=> 7
+  enforce_xp		=> 6
+  ac			=> "0 - 3 - %wyvern_ac_bonus%"
+  ac_vs_missiles	=> "-4"
+  resist_slashing	=> 30
+  resist_crushing	=> 30
+  resist_piercing	=> 30
+  resist_missile	=> 30
+  resist_magic		=> 35
+  replace_items		=> "mh#wgrbt(weapon1) mh#wgrbt(weapon2) mh#wgrst(shield) dragring(rring)"
+  strip_script		=> "wyvern"
+  add_proficiencies	=> "2weapon=>3"
+END
+
+

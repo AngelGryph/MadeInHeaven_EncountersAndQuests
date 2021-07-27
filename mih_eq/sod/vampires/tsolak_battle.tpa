@@ -1,14 +1,5 @@
 DEFINE_ACTION_FUNCTION tsolak_battle
 BEGIN
-  ACTION_IF NOT FILE_EXISTS_IN_GAME "vampreg1.itm"
-  BEGIN
-    LAUNCH_ACTION_FUNCTION clone_item
-      STR_VAR
-      item		= "vampreg=>vampreg1"
-      editstring	= ~match=>"opcode=98" parameter1=>1~
-    END
-  END
-
   MAKE_PATCH
     strength=>18
     strength_ex=>100

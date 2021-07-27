@@ -1,0 +1,16 @@
+ACTION_CLEAR_ARRAY huge_spider
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY huge_spider
+BEGIN
+  levelGT		=> "2 + %spider_hd_bonus%"
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  hp_plus		=> 2
+  enforce_xp		=> 4
+  ac_naturalLT		=> "6 - %spider_ac_bonus%"
+  ac_effectiveLT	=> "6 - %spider_ac_bonus%"
+  ac_vs_missiles	=> "-2"
+END
+
+

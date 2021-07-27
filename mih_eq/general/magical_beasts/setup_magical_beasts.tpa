@@ -12,9 +12,23 @@ BEGIN
     tra		= "magical_beasts"
   END
 
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    postfix	= "ssl"
+    location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    postfix	= "baf"
+    location	= "scripts"
+  END
+
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "create_paws_and_scripts magical_beast_revisions relocate_bg1_winter_wolves"
+    file	= "magical_beast_revisions relocate_bg1_winter_wolves"
     tra		= "magical_beasts"
   END
 END	// setup_magical_beasts

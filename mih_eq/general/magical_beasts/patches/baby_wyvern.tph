@@ -1,0 +1,20 @@
+ACTION_CLEAR_ARRAY baby_wyvern
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY baby_wyvern
+BEGIN
+  levelGT		=> "3 + %wyvern_hd_bonus%"
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  hp_plus		=> 4
+  enforce_xp		=> 3
+  ac			=> "5 - %wyvern_ac_bonus%"
+  strengthGT		=> 14
+  dexterityGT		=> 14
+  constitutionGT	=> 12
+  replace_items		=> "wyvern1(weapon1) wyvern1(weapon2) wyvern2(shield)"
+  strip_script		=> "wyvern"
+  add_proficiencies	=> "2weapon=>3"
+END
+
+

@@ -1,51 +1,14 @@
 DEFINE_ACTION_FUNCTION slime_revisions
 BEGIN
-  // Statistic blocks
+  // Read in patching blocks
 
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY gray_ooze
+  ACTION_BASH_FOR "%MOD_FOLDER%/%component_loc%/patches" "^.*\.tph$"
   BEGIN
-    resist_fire=>100
-    resist_cold=>100
-    resist_magic=>100
-    resist_slashingGT=>30
-    resist_crushingGT=>30
-    resist_piercingGT=>30
-    resist_missileGT=>100
-    swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
-    replace_items=>"mh#grooz(weapon1) mh#grooz(weapon2)"
+    INCLUDE "%BASH_FOR_FILESPEC%"
   END
 
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY mustard_jelly
-  BEGIN
-    xp_valueGT=>4000
-    resist_magicLT=>10
-    resist_slashingGT=>30
-    resist_crushingGT=>30
-    resist_piercingGT=>30
-    resist_missile=>100
-    hide_in_shadowsGT=>90
-    move_silentlyGT=>90
-    insert_script_high=>"mh#musjl"
-    swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
-    replace_items=>"mh#musjl(weapon1) mh#musjl(weapon2)"
-    add_effect_inline=>"opcode=>83 target=>1 timing=>9 parameter2=>36"
-  END
 
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY ochre_jelly
-  BEGIN
-    resist_cold=>0
-    resist_magic_cold=>0
-    resist_electricity=>100
-    resist_magic=>0
-    resist_slashingGT=>30
-    resist_crushingGT=>30
-    resist_piercingGT=>30
-    resist_missileGT=>100
-    swap_script=>"wtarsght=>wtasight dw1ranmo=>dw1melmo"
-    replace_items=>"mh#ochjl(weapon1) mh#ochjl(weapon2)"
-  END
-
-  // Patching starts here
+  // Search and patch
 
   COPY_EXISTING_REGEXP "^.*\.cre$" "override"
     LAUNCH_PATCH_FUNCTION CRE_read_race

@@ -1,0 +1,12 @@
+ACTION_CLEAR_ARRAY vampire_ancient
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_ancient
+BEGIN
+  strengthGT		=> 19
+  intelligenceGT	=> 18
+  dexterityGT		=> 18
+  charismaGT		=> 18
+  replace_items		=> "vamp1(weapon1) vampreg1(lring) immune3(rring)"
+END
+
+

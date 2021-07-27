@@ -1,0 +1,12 @@
+ACTION_CLEAR_ARRAY vampire_patriarch
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY vampire_patriarch
+BEGIN
+  strengthGT			=> 21
+  intelligenceGT		=> 20
+  dexterityGT			=> 20
+  charismaGT			=> 19
+  replace_items		=> "vamp2(weapon1) vampreg2(lring) immune4(rring)"
+END
+
+

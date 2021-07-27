@@ -1,0 +1,21 @@
+ACTION_CLEAR_ARRAY gray_ooze
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY gray_ooze
+BEGIN
+  levelGT		=> 3
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  hp_plus		=> 3
+  resist_fire		=> 100
+  resist_cold		=> 100
+  resist_magic		=> 100
+  resist_slashingGT	=> 30
+  resist_crushingGT	=> 30
+  resist_piercingGT	=> 30
+  resist_missileGT	=> 100
+  swap_script		=> "wtarsght=>wtasight dw1ranmo=>dw1melmo"
+  replace_items		=> "mh#grooz(weapon1) mh#grooz(weapon2)"
+END
+
+

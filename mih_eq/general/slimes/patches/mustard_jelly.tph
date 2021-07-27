@@ -1,0 +1,24 @@
+ACTION_CLEAR_ARRAY mustard_jelly
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY mustard_jelly
+BEGIN
+  levelGT		=> 7
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  hp_plus		=> 14
+  xp_valueGT		=> 4000
+  resist_magicLT	=> 10
+  resist_slashingGT	=> 30
+  resist_crushingGT	=> 30
+  resist_piercingGT	=> 30
+  resist_missile	=> 100
+  hide_in_shadowsGT	=> 90
+  move_silentlyGT	=> 90
+  insert_script_high	=> "mh#musjl"
+  swap_script		=> "wtarsght=>wtasight dw1ranmo=>dw1melmo"
+  replace_items		=> "mh#musjl(weapon1) mh#musjl(weapon2)"
+  add_effect_inline	=> "opcode=>83 target=>1 timing=>9 parameter2=>36"
+END
+
+

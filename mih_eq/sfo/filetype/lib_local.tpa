@@ -11,18 +11,25 @@ BEGIN
   END
 
   SET hp_bonus = "%arguments%"
-  SET thac0_bonus = hp_bonus / 3
+  SET combat_bonus = hp_bonus / 3
 
   CLEAR_ARRAY hp_plus
   DEFINE_ASSOCIATIVE_ARRAY hp_plus
-    hp		=> "hp_maximum + %hp_bonus%"
-    thac0	=> "thac0 - %thac0_bonus%"
+  BEGIN
+    hp_current		=> "hp_current + %hp_bonus%"
+    hp_max		=> "hp_max + %hp_bonus%"
+    thac0		=> "thac0 - %combat_bonus%"
+    save_vs_death	=> "save_vs_death - %combat_bonus%"
+    save_vs_wands	=> "save_vs_wands - %combat_bonus%"
+    save_vs_polymorph	=> "save_vs_polymorph - %combat_bonus%"
+    save_vs_breath	=> "save_vs_breath - %combat_bonus%"
+    save_vs_spell	=> "save_vs_spell - %combat_bonus%"
   END
   
   LAUNCH_PATCH_FUNCTION apply_patches
     STR_VAR
     file_ext	= "CRE"
-    edits	= "make_legendary"
+    edits	= "hp_plus"
   END
 END
 

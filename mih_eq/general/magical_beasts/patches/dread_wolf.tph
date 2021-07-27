@@ -1,0 +1,17 @@
+ACTION_CLEAR_ARRAY dread_wolf
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY dread_wolf
+BEGIN
+  strengthGT		=> 16
+  levelGT		=> 5
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  hp_plus		=> 4
+  general		=> undead
+  strip_script		=> "dreadwlf"
+  insert_script_high	=> "mh#reg1t"
+  replace_items		=> "mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
+END
+
+

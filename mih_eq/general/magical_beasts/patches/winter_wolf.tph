@@ -1,0 +1,18 @@
+ACTION_CLEAR_ARRAY winter_wolf
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY winter_wolf
+BEGIN
+  levelGT		=> 6
+  enforce_hp		=> at_worst
+  enforce_thac0		=> at_worst
+  enforce_saves		=> at_worst
+  strengthGT		=> 15
+  dexterityGT		=> 17
+  constitutionGT	=> 15
+  resist_fire		=> "-25"
+  swap_script		=> "wtarsgt=>wtasight dw1ranmo=>dw1melmo"
+  insert_script_high	=> "mh#wiwlf"
+  replace_items		=> "mh#wiwlf(weapon1) mh#wiwlf(weapon2)"
+END
+
+

@@ -7,7 +7,7 @@ BEGIN
     typename	= "innate"
     idsname	= "BATTLE_HORROR_MAGIC_MISSILE"
     RET
-    hh_mag_mis	= newname
+    bh_magic_missile	= newname
   END
   
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
@@ -17,7 +17,7 @@ BEGIN
     typename	= "innate"
     idsname	= "BATTLE_HORROR_MIRROR_IMAGE"
     RET
-    hh_mir_img	= newname
+    bh_mirror_image	= newname
   END
   
   LAUNCH_ACTION_FUNCTION add_spell_to_ids
@@ -27,7 +27,7 @@ BEGIN
     typename	= "innate"
     idsname	= "BATTLE_HORROR_DIMENSION_DOOR"
     RET
-    hh_dim_door	= newname
+    bh_dimension_door	= newname
   END
   
   MAKE_PATCH
@@ -37,7 +37,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION clone_spell
     STR_VAR
-    spell	= "spwi112=>%hh_mag_mis% spwi212=>%hh_mir_img% spwi402=>%hh_dim_door%"
+    spell	= "%WIZARD_MAGIC_MISSILE%=>%bh_magic_missile% %WIZARD_MIRROR_IMAGE%=>%bh_mirror_image% %WIZARD_DIMENSION_DOOR%=>%bh_dimension_door%"
     edits	= "patch_data"
   END
 
@@ -61,9 +61,9 @@ BEGIN
     edits		= "patch_data"
   END
 
-  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+  LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    script	= "mh#batho"
+    script	= "mh#batho.ssl"
     location	= "scripts"
     locbase
   END

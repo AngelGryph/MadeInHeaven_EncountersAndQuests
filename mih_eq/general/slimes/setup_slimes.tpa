@@ -1,8 +1,21 @@
 DEFINE_ACTION_FUNCTION setup_slimes
 BEGIN
+  LAUNCH_ACTION_FUNCTION install_spell_pack
+    STR_VAR
+    spell_copy	= ""
+    locbase
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    postfix	= "baf"
+    location	= "scripts"
+  END
+
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "gray_ooze_resources mustard_jelly_resources ochre_jelly_resources slime_revisions"
+    file	= "slime_revisions"
   END
 END	// setup_slimes
 

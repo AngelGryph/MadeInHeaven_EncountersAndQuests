@@ -14,105 +14,16 @@ BEGIN
     spider_ac_bonus	= value
   END
 
-  // Statistics blocks
 
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY gargantuan_spider
-  BEGIN
-    level1GT=>"8 + %spider_hd_bonus%"
-    enforce_xp=>4
-    hp_maxGT=>"level1 * 7 + 8"
-    hp_currentGT=>"level1 * 7 + 8"
-    thac0LT=>"19 - level1"	// Two better due to 8+8 hd
-    ac_naturalLT=>"4 - %spider_ac_bonus%"
-    ac_effectiveLT=>"4 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-  END
+  // Read in patching blocks
 
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY giant_spider
+  ACTION_BASH_FOR "%MOD_FOLDER%/%component_loc%/patches" "^.*\.tph$"
   BEGIN
-    level1GT=>"4 + %spider_hd_bonus%"
-    enforce_xp=>4
-    hp_maxGT=>"level1 * 7 + 4"
-    hp_currentGT=>"level1 * 7 + 4"
-    thac0LT=>"20 - level1"	// One better due to 4+4 hd
-    ac_naturalLT=>"4 - %spider_ac_bonus%"
-    ac_effectiveLT=>"4 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-  END
-
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY huge_spider
-  BEGIN
-    level1GT=>"2 + %spider_hd_bonus%"
-    enforce_xp=>4
-    hp_maxGT=>"level1 * 7 + 2"
-    hp_currentGT=>"level1 * 7 + 2"
-    thac0LT=>"21 - level1"
-    ac_naturalLT=>"6 - %spider_ac_bonus%"
-    ac_effectiveLT=>"6 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-  END
-
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY phase_spider
-  BEGIN
-    level1GT=>"5 + %spider_hd_bonus%"
-    enforce_xp=>4
-    hp_maxGT=>"level1 * 7 + 5"
-    hp_currentGT=>"level1 * 7 + 5"
-    thac0LT=>"20 - level1"	// One better due to 5+5 hd
-    ac_naturalLT=>"7 - %spider_ac_bonus%"
-    ac_effectiveLT=>"7 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-  END
-
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY sword_spider
-  BEGIN
-    level1GT=>"5 + %spider_hd_bonus%"
-    enforce_xp=>4
-    hp_maxGT=>"level1 * 7 + 4"
-    hp_currentGT=>"level1 * 7 + 4"
-    thac0LT=>"20 - level1"
-    ac_naturalLT=>"3 - %spider_ac_bonus%"
-    ac_effectiveLT=>"3 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-  END
-
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY vortex_spider
-  BEGIN
-    level1GT=>"7 + %spider_hd_bonus%"
-    enforce_xp=>4
-    hp_maxGT=>"level1 * 7 + 4"
-    hp_currentGT=>"level1 * 7 + 4"
-    thac0LT=>"20 - level1"	// One better due to 7+4 hd
-    ac_naturalLT=>"4 - %spider_ac_bonus%"
-    ac_effectiveLT=>"4 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-  END
-
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY wraith_spider
-  BEGIN
-    level1GT=>"3 + %spider_hd_bonus%"
-    enforce_xp=>6
-    hp_maxGT=>"level1 * 7 + 2"
-    hp_currentGT=>"level1 * 7 + 2"
-    thac0LT=>"21 - level1"
-    ac_naturalLT=>"5 - %spider_ac_bonus%"
-    ac_effectiveLT=>"5 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-2"
-    enforce_saves=>at_worst
-    general=>undead
-    resist_cold=>100
-    resist_magic_cold=>100
-    replace_items=>"mh#spdwr(weapon1)"
+    INCLUDE "%BASH_FOR_FILESPEC%"
   END
 
 
-  // Patching starts here
+  // Search and patch
 
   COPY_EXISTING_REGEXP "^.*\.cre$" "override"
     LAUNCH_PATCH_FUNCTION CRE_read_race

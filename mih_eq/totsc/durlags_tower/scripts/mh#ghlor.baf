@@ -1,4 +1,12 @@
 IF
+  Delay(15)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself, GHOULLORD_FEAR)
+    Continue()
+END
+
+IF
   See(NearestEnemyOf(Myself))
   Global("mh#spawn_minions", "locals", 0)
   Difficulty(EASY)
