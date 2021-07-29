@@ -1,16 +1,16 @@
 2DA v1.0
 *
-IDSNAME					NAME	DESC	TYPE	IDSNUM	SCROLL		HALF	PROJECTL	SEQ	CD_IMMUNITY
-BODAK_DEATH_GAZE			*	*	0	*	*		n	*		y	*
-BONE_BLAZE				2	*	0	*	*		dd	*		y	*
-DRACOLISK_BREATH			5	*	0	*	*		dd	*		y	*
-EYE_OF_FEAR				*	*	0	*	*		n	*		y	*
-EYE_OF_FLAME				*	*	0	*	*		dd	*		y	*
-ICE_PARA_COLD				*	*	0	*	*		n	*		y	*
-MAGMA_PARA_HEAT				*	*	0	*	*		n	*		y	*
-RETRIEVER_CHAIN_LIGHTNING		*	*	0	*	*		dd	*		y	*
-RETRIEVER_CONE_OF_COLD			*	*	0	*	*		dd	*		y	*
-RETRIEVER_FLESH_TO_STONE		*	*	0	*	*		dd	*		y	*
-RETRIEVER_SHEET_OF_FLAME		*	*	0	*	*		dd	*		y	*
+IDSNAME					LEVEL	NAME	DESC	TYPE	IDSNUM	SCROLL		HALF	PROJECTL	SEQ	CD_IMMUNITY
+BODAK_DEATH_GAZE			7	*	*	0	*	*		n	*		y	*
+BONE_BLAZE				3	2	*	0	*	*		dd	*		y	*
+DRACOLISK_BREATH			5	5	*	0	*	*		dd	*		y	*
+EYE_OF_FEAR				2	*	*	0	*	*		n	*		y	*
+EYE_OF_FLAME				3	*	*	0	*	*		dd	*		y	*
+ICE_PARA_COLD				4	*	*	0	*	*		n	*		y	*
+MAGMA_PARA_HEAT				4	*	*	0	*	*		n	*		y	*
+RETRIEVER_CHAIN_LIGHTNING		6	*	*	0	*	*		dd	*		y	*
+RETRIEVER_CONE_OF_COLD			5	*	*	0	*	*		dd	*		y	*
+RETRIEVER_FLESH_TO_STONE		6	*	*	0	*	*		dd	*		y	*
+RETRIEVER_SHEET_OF_FLAME		6	*	*	0	*	*		dd	*		y	*
 
 

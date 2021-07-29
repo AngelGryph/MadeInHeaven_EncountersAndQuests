@@ -14,9 +14,9 @@ BEGIN
       label	= "mh#monsters"
     END
 
-    LAUNCH_ACTION_FUNCTION install_spell_pack
+    LAUNCH_ACTION_FUNCTION grand_unified_installer
       STR_VAR
-      spell_copy	= ""
+      copy_files	= ""
       tra		= "monsters"
       locbase
     END
