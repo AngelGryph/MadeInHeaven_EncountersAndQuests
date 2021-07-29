@@ -7,7 +7,7 @@ THEN
 END
 
 IF
-  See(NearestEnemyOf(Myself))
+  ActuallyInCombat()
   Global("mh#spawn_minions", "locals", 0)
   Difficulty(EASY)
 THEN
@@ -18,7 +18,7 @@ THEN
 END
 
 IF
-  See(NearestEnemyOf(Myself))
+  ActuallyInCombat()
   Global("mh#spawn_minions", "locals", 0)
   Difficulty(NORMAL)
 THEN
@@ -30,7 +30,7 @@ THEN
 END
 
 IF
-  See(NearestEnemyOf(Myself))
+  ActuallyInCombat()
   Global("mh#spawn_minions", "locals", 0)
   Difficulty(HARD)
 THEN
@@ -44,7 +44,7 @@ THEN
 END
 
 IF
-  See(NearestEnemyOf(Myself))
+  ActuallyInCombat()
   Global("mh#spawn_minions", "locals", 0)
   Difficulty(HARDEST)
 THEN

@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION setup_lesser_undead
+BEGIN
+  LAUNCH_ACTION_FUNCTION install_spell_pack
+    STR_VAR
+    spell_copy	= ""
+    tra		= "lesser_undead"
+  END
+
+  OUTER_SET macro_spellcodes_read=0
+  LAUNCH_ACTION_MACRO read_in_spellcodes
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    postfix	= "baf"
+    location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "lesser_undead_revisions"
+    tra		= "lesser_undead"
+  END
+  ACTION_IF NOT enhanced_edition
+
+  BEGIN
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "backwards_compatibility"
+    END
+  END
+END	// setup_lesser_undead
+
+
