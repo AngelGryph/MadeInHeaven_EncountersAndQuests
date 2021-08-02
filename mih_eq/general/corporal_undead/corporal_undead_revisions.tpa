@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION lesser_undead_revisions
+DEFINE_ACTION_FUNCTION corporal_undead_revisions
 BEGIN
   // Read in patching blocks
 
@@ -82,6 +82,6 @@ BEGIN
     END
 
     BUT_ONLY_IF_IT_CHANGES
-END	// lesser_undead_revisions
+END	// corporal_undead_revisions
 
 

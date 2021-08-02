@@ -1,9 +1,9 @@
-DEFINE_ACTION_FUNCTION setup_lesser_undead
+DEFINE_ACTION_FUNCTION setup_corporal_undead
 BEGIN
   LAUNCH_ACTION_FUNCTION grand_unified_installer
     STR_VAR
     copy_files	= ""
-    tra		= "lesser_undead"
+    tra		= "corporal_undead"
   END
 
   OUTER_SET macro_spellcodes_read=0
@@ -18,8 +18,8 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "lesser_undead_revisions"
-    tra		= "lesser_undead"
+    file	= "corporal_undead_revisions"
+    tra		= "corporal_undead"
   END
   ACTION_IF NOT enhanced_edition
 
@@ -29,6 +29,6 @@ BEGIN
       file	= "backwards_compatibility"
     END
   END
-END	// setup_lesser_undead
+END	// setup_corporal_undead
 
 
