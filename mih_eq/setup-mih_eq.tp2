@@ -24,6 +24,18 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
+// Revised Corporal Undead
+
+BEGIN @5
+GROUP @2
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_corporal_undead"
+  location	= "general/corporal_undead"
+END
+
+
 // Revised Dragons
 
 BEGIN @56
@@ -33,20 +45,6 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_dragons"
   location	= "general/dragons"
-END
-
-
-// Revised Lesser Undead
-
-BEGIN @5
-GROUP @2
-
-DEPRECATED ~Not ready yet.~
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_lesser_undead"
-  location	= "general/lesser_undead"
 END
 
 
@@ -71,6 +69,18 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_liches"
   location	= "general/liches"
+END
+
+
+// Revised Lycanthropes
+
+BEGIN @3
+GROUP @2
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_lycanthropes"
+  location	= "general/lycanthropes"
 END
 
 

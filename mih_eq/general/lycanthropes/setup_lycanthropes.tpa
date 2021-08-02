@@ -1,0 +1,43 @@
+DEFINE_ACTION_FUNCTION setup_lycanthropes
+BEGIN
+  /*
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_regeneration"
+    locbase	= "shared/regeneration"
+  END
+  */
+
+  LAUNCH_ACTION_FUNCTION grand_unified_installer
+    STR_VAR
+    copy_files	= ""
+    tra		= "lycanthropes"
+  END
+
+  /*
+  OUTER_SET macro_spellcodes_read=0
+  LAUNCH_ACTION_MACRO read_in_spellcodes
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    postfix	= "ssl"
+    location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    postfix	= "baf"
+    location	= "scripts"
+  END
+  */
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "lycanthrope_revisions"
+    tra		= "lycanthropes"
+  END
+END	// setup_lycanthropes
+
+
