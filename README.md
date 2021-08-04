@@ -1,5 +1,5 @@
 # Made in Heaven - Encounters & Quests
-A quest pack for Baldur's Gate 1 and Baldur's Gate 2.
+Improved monsters, enhanced battles, extended and new quests and more!
 
 
 ## Introduction
@@ -8,8 +8,14 @@ A quest pack for Baldur's Gate 1 and Baldur's Gate 2.
 
 ## Version History
 
-Version 4 - October ?? 2020
+Version 5 - ???
+
+Version 4 - August 4 2021
 - Fixed mod to work with WeiDU 247
+- Tested BG1(EE) modifications
+- Enhanced Corporal Undead
+- Enhanced Magical Beasts
+- Enhanced Monstrous Spiders
 
 Version 3 - December 2 2019
 - Added some SoD and BG2 stuff

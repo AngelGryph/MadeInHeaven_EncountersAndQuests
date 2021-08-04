@@ -13,7 +13,7 @@
   <p><strong><a href="http://www.gibberlings3.net/">A Gibberlings Three Mod</a></strong> <br/>
     <strong>Author</strong>: <a href="https://www.gibberlings3.net/profile/6180-angel/">Angel</a> </p>
 <!--  <p><strong>On the web: </strong><a href="http://www.gibberlings3.net/npcstrongholds/"><strong>Home page</strong></a> and <a href="http://gibberlings3.net/forums/index.php?showforum=77"><strong>discussion forum</strong></a></p> -->
-  <p><strong> Version 4 - <a href="http://www.gibberlings3.net/downloads/#mih_eq">Check for the most recent version</a></strong> <br/>
+  <p><strong>Version 5 - <a href="http://www.gibberlings3.net/downloads/#mih_eq">Check for the most recent version</a></strong> <br/>
     <strong>Languages: </strong>English <br/>
     <strong>Platforms: </strong>Windows, Mac OS X, and Linux </p>
 </div>
@@ -61,6 +61,8 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>This mod consists of several components, each of which can be installed or removed independently from the others.<p>
   <h3>Monster Enhancements</h3>
   <p>These modifications enhance certain types of monsters, mostly by adding abilities or immunities that they should have according to P&amp;P rules but were altered or omitted in the game.  This is not strictly a P&amp;P mod though, I adhere to the rules where I reasonably can and deviate where needed due to engine limitations or the rules just not working right in the game.</p>
+  <p><strong>Revised Corporal Undead</strong><br/>
+  <p>This component revises skeletons, zombies, ghouls and ghasts.  They get proper resistances and immunities.  Skeletons take half damage from slashing, piercing and missiles.  Zombies take half damage from bludgeoning.  All corporal undead are immune to cold, except those immune to fire.  Ghasts and ghoul lords get their proper stench of evil, ghoul lords are now always followed by some ghouls and ghasts.</p>
   <p><strong>Revised Dragons</strong><br/>
   While implementing my own dragon battle, I found that most dragons are implemented rather haphazardly in the game.  Some got their combat modifier to damage, some didn't.  Some were immune to critical hits, some were not.  Some did their claw damage, others their bite damage.  And many of them gave way too much XP.  I decided to systemize them as follows.</p>
   <ul>
@@ -83,10 +85,6 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   </ul>
   <p>This modification partially overlaps with Sword Coast Stratagems' "Smarter Dragons" component; they can safely be used together.  You should probably install SCS last as always.</p>
   <p>Note: I know there are a yellow dragon and a purple dragon in the game files, but since they're not used anywhere I didn't bother with them.  Besides, I don't even have stats for the purple dragon, unless it's either an amethyst dragon or a deep dragon.  I also may have missed some EE dragons, as I am not very familiar with the EE content yet.</p>
-  <p><strong>Revised Ghoul Lords</strong><br/>
-  Ghoul Lords, also known as Greater Ghouls are unique beings found primarly in Durlag's Tower, although some also show up in a few places in BG2, like Bodhi's lair.  They seem to be based on the Ravenloft monster, so I give them a few of that creature's abilities.</p>
-  <p>Their attack now deals 1d10 damage (was 1d8), paralyzes its victim for 10 rounds (was 7) and may inflict a disease that lowers constitution and charisma by one and deals one point of damage per turn.  The disease remains until cured by Cure Disease, Neutralize Poison or an Elixer of Health.  Paralysis and disease may be avoided by a successful save versus death at a -4 penalry.</p>
-  <p>In additon, these monsters are permanently protected by a double-strength Protection from Good spell (good creatures get a -4 to hit these monsters), and they are always followed by a gang of normal ghouls and ghasts (size determined by difficulty).</p>
   <p><strong>Revised Golems</strong><br/>
   <p>Okay, golems are stupid, but they should also be strong.  This component, which was inspired by the Ravenloft source book "Van Richten's Guide to the Created", alters their abilities and mainly resistances to make them more dangerous.  Each one now requires finding a weak spot to fight them successfully.</p>
   <p><i>Adamantite Golem:</i> These metallic brutes are virtually immune to weapon damage, requiring a +4 or better weapon to even hit them at all.  However, they lose their immunity to acid and lightning.  Their stats are str 25, dex 17, con 20, int 9, wis 2, cha 7.</p>
@@ -105,11 +103,12 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>It also ensures they are at least high enough level to cast their most powerful memorized spells, this will also adjust their thac0, saves, hit points and xp value accordingly.  (If another mod like Sword Coast Stratagems already corrected their levels, this will do nothing.)</p>
   <p>Demiliches gain the ability to utter a powerful curse on anyone unfortunate enough to disturb them, severely weakening them until they can get a Remove Curse spell or similar cast on them; even death does not remove this curse.  In addition, their howl now has a -4 penalty on the saving throw.</p>
   <p><strong>Revised Magical Beasts</strong><br/>
-  This component resises the stats, abilities and resistances of various magical beasts found in both games.  Currently included are Ankhegs, (Greater) Basilisks, Dread Wolves and Winter Wolves.</p>
+  This component resises the stats, abilities and resistances of various magical beasts found in both games.  Currently included are Ankhegs, (Greater) Basilisks, Dread Wolves, Winter Wolves and Wyverns.</p>
   <p><i>Ankhegs:</i> Ankhegs will no longer bombard you with acid spittle from a distance (something which they definitely can't according to P&amp;P).  Instead, this is transformed into a single-target breath weapon usable once every six hours, the ankheg will typically use it when badly wounded.  To compensate, they gain a strength of 18/50 to make them more effective in melee.</p>
   <p><i>Basilisks:</i> Lesser Basilisks are unchanged, but Greater Basilisks gain a deadly cloud similar to that of an Iron Golem.  In addition they are also given dragon immunities, note that in Enhanced Edition this includes immunity to normal arrows.</p>
   <p><i>Dread Wolves:</i> These monsters are now properly flagged as undead.  Their bite may inflict a disease that drains one hit point per hour.  Worse, they regenerate like trolls unless finished off by fire or acid.  (Out of mercy to low-level parties, the disease ends after eight hours and they get up from regeneration only once.)</p>
   <p><i>Winter Wolves</i> Like Ankhegs, Winter Wolves no longer rapid-fire their cold breath.  Instead, their breath is a cone of freezing cold they can use once a turn.  Note that they are intelligent and will attempt to catch as many party members in the cone as possible.  (Since this makes them seriously dangerous at low levels, I remove them from the Nashkel Mine and Fireleaf Forest areas.)</p>
+  <p><i>Wyverns</i> Wyverns now "dual-wield" their bite and sting instead of randomly switching between then from round to round.  They also get a few bonus hit die.  Greater wyverns do more damage with their bite and sting and get dragon-like immunities.</p>
   <p><strong>Revised Oozes, Slimes and Jellies</strong><br/>
   This currently affects gray oozes, ochre jellies and mustard jellies.  Jelly splitting is currently not implemented as I haven't been able to get it right yet, but will be added in the future.<p>
   <p><i>Gray Ooze:</i> A gray ooze's touch deals 2d8 acid damage.  They are completely immune to fire, cold, missile damage and all spells.</p>
@@ -129,7 +128,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p><i>New enemies: Wight, Greater Wight.</i></p>
   <p><strong>Enhanced Battles: Mutamin's Garden</strong><br/>
   This is the area with the basilisks east of the Song of the Morning Temple.  Expect many more basilisks and a few other surprises...
-  <p><i>New enemies: Dracolisk, <strike>Pyrolisk</strike> (not implemented yet).</i></p>
+  <p><i>New enemies: Dracolisk, Hill Giant</i></p>
   <p><strong>Enhanced Battles: Ramazith's Tower</strong><br/>
   This is the tower of Ramazith just north of the Three Kegs, visited during the nymph's quest.  The enemies on the various floors are mostly pathetic, this component spices that up a great deal.  Expect some serious resistance here.</p>
   <p><i>New enemies: Wight, Greater Wight.</i></p>
@@ -151,7 +150,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   The main dungeon of Tales of the Sword Coast is a fair challenge, but not that hard for veteran players.  This modificiation hopefully spices things up a notch or two for them.  In addition to more enemies everywhere, a few enemies unique to the tower get a little boost.</p>
   <p>Astral phase spiders are treated as legendary creatures (lesser scions) and get the associated bonus (+5 hd, +4 AC) on top of the bonus from Revised Monstrous Spiders, gain some magic resistance, and their bite has been upgraded as well.  You'll want to be ready with the poison antidotes...</p>
   <p>Crypt crawlers also get the lesser scion treatment (+4 ac, +5 hd) as well as enhanced strength and additional attacks per round.</p>
-  <p>Ghasts roaming in the upper levels of the tower become the tougher fell ghasts, which require magical weapons to hit.  Note that the Greater Ghouls on the lower levels have a separate enhancing component since they also show up in BG2.</p>
+  <p>Ghasts roaming in the upper levels of the tower become the tougher fell ghasts, which require magical weapons to hit.</p>
   <p>This modification can safely be used with the "Improved Durlag's Tower" component from Sword Coast Stratagems; I leave the battles that SCS enhances (the warders and chessboard) completely alone.</p>
   <p><i>New enemies: Barrow Wight, Crystal Ooze, Dracolisk.</i></p>
   <h3>Encounters &amp; Quests: Original Saga</h3>
@@ -309,7 +308,10 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
 </div>
 <h2>Version History</h2>
 <div class="section">
-  <p><strong>Version 4 - October 2020</strong></p>
+  <p><strong>Version 5 - ???</strong></p>
+  <ul>
+  </ul>
+  <p><strong>Version 4 - August 2021</strong></p>
   <ul>
     <li>Fixed mod to work with WeiDU 247</li>
     <li>Conversion to SFO/SSL, implemented immutability.</li>
