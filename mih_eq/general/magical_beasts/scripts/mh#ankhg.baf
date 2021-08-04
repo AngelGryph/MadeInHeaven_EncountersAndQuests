@@ -5,11 +5,71 @@ IF
   HPPercentLT(Myself, 50)
 THEN
   RESPONSE #40
-    SetGlobalTimer("mh#Ankheg_acid", "LOCALS", SIX_HOURS)
+    SetGlobalTimer("ankheg_acid", "LOCALS", SIX_HOURS)
     FaceObject(LastSeenBy(Myself))
     ForceSpell(LastSeenBy(Myself), ANKHEG_ACID_SQUIRT)
     Wait(2)
   RESPONSE #60
+    Continue()
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("ankheg_move", "LOCALS")
+THEN
+  RESPONSE #20
+    SetGlobalTimer("ankheg_move", "LOCALS", THREE_ROUNDS)
+    MoveToObjectNoInterrupt(LastSeenBy(Myself))
+  RESPONSE #80
+    Continue()
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("ankheg_move", "LOCALS")
+THEN
+  RESPONSE #20
+    SetGlobalTimer("ankheg_move", "LOCALS", THREE_ROUNDS)
+    MoveToObjectNoInterrupt(LastSeenBy(Myself))
+  RESPONSE #80
+    Continue()
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("ankheg_move", "LOCALS")
+THEN
+  RESPONSE #20
+    SetGlobalTimer("ankheg_move", "LOCALS", THREE_ROUNDS)
+    MoveToObjectNoInterrupt(LastSeenBy(Myself))
+  RESPONSE #80
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("ankheg_move", "LOCALS")
+THEN
+  RESPONSE #20
+    SetGlobalTimer("ankheg_move", "LOCALS", THREE_ROUNDS)
+    MoveToObjectNoInterrupt(LastSeenBy(Myself))
+  RESPONSE #80
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("ankheg_move", "LOCALS")
+THEN
+  RESPONSE #20
+    SetGlobalTimer("ankheg_move", "LOCALS", THREE_ROUNDS)
+    MoveToObjectNoInterrupt(LastSeenBy(Myself))
+  RESPONSE #80
     Continue()
 END
 

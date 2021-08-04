@@ -1,8 +1,17 @@
 DEFINE_ACTION_FUNCTION setup_spiders
 BEGIN
+  LAUNCH_ACTION_FUNCTION grand_unified_installer
+    STR_VAR
+    copy_files	= ""
+    tra		= "magical_beasts"
+  END
+
+  OUTER_SET macro_spellcodes_read=0
+  LAUNCH_ACTION_MACRO read_in_spellcodes
+
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "wraith_spider_bite spider_revisions"
+    file	= "spider_revisions spiders_postproc"
   END
 END	// setup_spiders
 

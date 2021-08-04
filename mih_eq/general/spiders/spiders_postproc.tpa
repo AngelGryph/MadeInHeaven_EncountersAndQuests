@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION spiders_postproc
+BEGIN
+  // Set correct level drain string for wraith spider bite
+
+  ACTION_IF enhanced_edition AND is_bg1 AND NOT is_bg2
+  BEGIN
+    MAKE_PATCH
+      clone_effect_inline=>~match=>"opcode = 216" opcode=>139 parameter1=>"(parameter1 - 1) from [25802 25803 25804 25805 25806]"~
+    END
+  END
+  ELSE
+  BEGIN
+    MAKE_PATCH
+      clone_effect_inline=>~match=>"opcode = 216" opcode=>139 parameter1=>"(parameter1 - 1) from [41495 40968 40969 40979 41616]"~
+    END
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "mh#spdwr"
+    edits	= "patch_data"
+  END
+END	// spiders_postproc
+
+

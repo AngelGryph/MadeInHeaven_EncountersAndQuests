@@ -5,6 +5,7 @@ IF
   !Global("mirrordone","GLOBAL",1)
   Difficulty(NORMAL)
   InActiveArea(Myself)
+  ActuallyInCombat()
 THEN
   RESPONSE #100
     SetGlobal("mh#spawnDemonKnightMinions", "MYAREA", 1)
@@ -19,6 +20,7 @@ IF
   !Global("mirrordone","GLOBAL",1)
   Difficulty(HARD)
   InActiveArea(Myself)
+  ActuallyInCombat()
 THEN
   RESPONSE #100
     DisplayStringHead("deathk", @3)
@@ -34,6 +36,7 @@ IF
   !Global("mirrordone","GLOBAL",1)
   Difficulty(HARDEST)
   InActiveArea(Myself)
+  ActuallyInCombat()
 THEN
   RESPONSE #100
     SetGlobal("mh#spawnDemonKnightMinions", "MYAREA", 1)
