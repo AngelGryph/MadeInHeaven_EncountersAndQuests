@@ -102,8 +102,10 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>Note: In vanilla BG2, liches are already immune to spells up to 5th level, this component may lower that.  The SCS mod takes this immunity away, install this component after SCS to (partially) restore it.</p>
   <p>It also ensures they are at least high enough level to cast their most powerful memorized spells, this will also adjust their thac0, saves, hit points and xp value accordingly.  (If another mod like Sword Coast Stratagems already corrected their levels, this will do nothing.)</p>
   <p>Demiliches gain the ability to utter a powerful curse on anyone unfortunate enough to disturb them, severely weakening them until they can get a Remove Curse spell or similar cast on them; even death does not remove this curse.  In addition, their howl now has a -4 penalty on the saving throw.</p>
+  <p><strong>Revised Lycanthropes</strong><br/>
+  This component aims to revise the stats and resistances of various were-creatures in the games.  It is still a work in progress and currently only affects wolf-weres, especially those on Balduran's Isle.  More details when it's complete.</p>
   <p><strong>Revised Magical Beasts</strong><br/>
-  This component resises the stats, abilities and resistances of various magical beasts found in both games.  Currently included are Ankhegs, (Greater) Basilisks, Dread Wolves, Winter Wolves and Wyverns.</p>
+  This component revises the stats, abilities and resistances of various magical beasts found in both games.  Currently included are Ankhegs, (Greater) Basilisks, Dread Wolves, Winter Wolves and Wyverns.</p>
   <p><i>Ankhegs:</i> Ankhegs will no longer bombard you with acid spittle from a distance (something which they definitely can't according to P&amp;P).  Instead, this is transformed into a single-target breath weapon usable once every six hours, the ankheg will typically use it when badly wounded.  To compensate, they gain a strength of 18/50 to make them more effective in melee.</p>
   <p><i>Basilisks:</i> Lesser Basilisks are unchanged, but Greater Basilisks gain a deadly cloud similar to that of an Iron Golem.  In addition they are also given dragon immunities, note that in Enhanced Edition this includes immunity to normal arrows.</p>
   <p><i>Dread Wolves:</i> These monsters are now properly flagged as undead.  Their bite may inflict a disease that drains one hit point per hour.  Worse, they regenerate like trolls unless finished off by fire or acid.  (Out of mercy to low-level parties, the disease ends after eight hours and they get up from regeneration only once.)</p>
@@ -123,6 +125,8 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>This component can be safely used with any AI-enhancing mod that gives them more abilities, like Quest Pack and Sword Coast Stratagems.  Well, safely in a modding sense; the safety of your party is a whole other matter...</p>
   <h3>Tactical Challenges: Original Saga</h3>
   <p>These components enhance certain battles in the Original Saga (BG1 and Tales of the Sword Coast).  Expect to see new enemies, more enemies, stronger enemies or any compination thereof.  However, I do not make major modifications in AI scripts, mostly because I don't know how to.  Use SCS or another mod for that.</p>
+  <p><strong>Enhanced Battles: Ankheg Pit</strong><br/>
+  The ankheg pit is the short dungeon visited during the Farmer Brun quest, just east of the fishing village.  This component adds more ankhegs of varying strengths (3-7 HD in addition to the usual 8 HD) and they will spawn in greater numbers than before.  You'll never be entirely safe down here as new ankhegs will keep burying in.</p>
   <p><strong>Enhanced Battles: Candlekeep Catacombs</strong><br/>
   This component enhances the various encounters in the catacombs under Candlekeep, visited in chapter 6.  There will be more and stronger undead on the first level, more dopplegangers and a few other surprises on the second level, and more spiders in the exit cave.  However, a little help is available: Arkanis and Deder are much better prepared for their task and if you convince them to help you can control them like party members.</p>
   <p><i>New enemies: Wight, Greater Wight.</i></p>
@@ -133,7 +137,7 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   This is the tower of Ramazith just north of the Three Kegs, visited during the nymph's quest.  The enemies on the various floors are mostly pathetic, this component spices that up a great deal.  Expect some serious resistance here.</p>
   <p><i>New enemies: Wight, Greater Wight.</i></p>
   <p><strong>Enhanced Battles: The Spider Plague</strong><br/>
-  This modification affects two areas, the Spider Wood to the far east of the Friendly Arm Inn (with the Red Wizards) and the second part of the Cloakwood.  The game manual mentions a spider plague going on, so this modification makes it so that you will be facing a lot of spiders in these areas.  Spider will spawn continuously offscreen to a certain maximum.  At higher difficulties, more dangerous spiders will spawn occasionally as well.</p>
+  This modification affects two areas, the Spider Wood to the far east of the Friendly Arm Inn (with the Red Wizards) and the second part of the Cloakwood.  The game manual mentions a spider plague going on, so this modification makes it so that you will be facing a lot of spiders in these areas.  Spiders will spawn continuously offscreen to a certain maximum.  At higher difficulties, more dangerous spiders will spawn occasionally as well.</p>
   <p>This component can be combined with the Revised Monstrous Spiders component, this combination will make the Cloakwood and Spider Wood areas quite dangerous.</p>
   <p><i>New enemies: Hairy Spider</i></p>
   <p><strong>Enhanced Battles: Thieves' Maze &amp; Undercity</strong><br/>
@@ -160,6 +164,8 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
   <p>This component is compatible with the BG1 Romantic Encounters mod, they can be installed in any order.</p>
   <p><strong>The Cloakwood Assassins</strong><br/>
   This component adds an encounter with a new group of assassins in Cloakwood, beyond the first bridge in the wyvern area.  Surely you you can defeat a few more of these rabble, no?</p>
+  <p><strong>Prevent automatic travel to Candlekeep in ch6</strong>
+  This small tweak prevents the party from being teleported right to Candlekeep at the start of chapter 6.  This is because I actually like to use this moment to visit the Friendly Arm Inn and Beregost to finish up a few quests and thus like to go there at my own pace.</p>
   <p><strong>Minor Quest Tweaks (BG1)</strong><br/>
   This is a small collection of minor tweaks to existing quests, mostly to reduce frustration or close a pothole or two.</p>
   <ul>
@@ -310,6 +316,9 @@ Made in Heaven: Encounters &amp; Quests is packaged and installed with WeiDU and
 <div class="section">
   <p><strong>Version 5 - ???</strong></p>
   <ul>
+    <li>Fixed an issue where BG1 creatures were given way too much HP.</li>
+    <li>Added missing entries to various IDS files on oBG2/BGT.</li>
+    <li>Fixed an issue with Detectable Spells on non-SCS installs.</li>
   </ul>
   <p><strong>Version 4 - August 2021</strong></p>
   <ul>
