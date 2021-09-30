@@ -8,6 +8,8 @@ Improved monsters, enhanced battles, extended and new quests and more!
 
 ## Version History
 
+Version 6 - ???
+
 Version 5 - September 30 2021
 - Fixed an issue where BG1 creatures were given way too much HP
 - Added missing entries to various IDS files on oBG2/BGT
