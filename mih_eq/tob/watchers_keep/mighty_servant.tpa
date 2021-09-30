@@ -52,9 +52,9 @@ BEGIN
 
   // Compile script
 
-  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+  LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    script	= "mh#leuko"
+    file	= "mh#leuko.ssl"
     location	= "scripts"
     locbase
   END

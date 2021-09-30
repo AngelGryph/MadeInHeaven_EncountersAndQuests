@@ -63,7 +63,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    script	= "mh#batho.ssl"
+    file	= "mh#batho.ssl"
     location	= "scripts"
     locbase
   END

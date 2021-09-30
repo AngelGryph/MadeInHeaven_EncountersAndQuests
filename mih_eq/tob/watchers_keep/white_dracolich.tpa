@@ -64,9 +64,9 @@ BEGIN
 
   // Compile script
 
-  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+  LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    script	= "mh#white"
+    file	= "mh#white.ssl"
     location	= "scripts"
   END
 

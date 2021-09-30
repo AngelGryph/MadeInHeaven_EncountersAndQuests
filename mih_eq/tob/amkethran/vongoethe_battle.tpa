@@ -44,9 +44,9 @@ BEGIN
     edits	= "patch_data"
   END
 
-  LAUNCH_ACTION_FUNCTION ssl_to_bcs
+  LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    script	= "mh#vgoet"
+    file	= "mh#vgoet.ssl"
     location	= "scripts"
     locbase
   END
