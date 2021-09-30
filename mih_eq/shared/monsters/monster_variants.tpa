@@ -1,120 +1,137 @@
 DEFINE_ACTION_FUNCTION monster_variants
 BEGIN
-  ACTION_IF GAME_IS "bgee"
-  BEGIN
-    // None yet, since I don't use variants in BG1 yet.  Add as needed.
-  END	// BGEE only
-  ELSE
-  BEGIN
-    // Golden Bones (15 hd Skeleton Warrior)
+  // Golden Bones (15 hd Skeleton Warrior)
 
-    MAKE_PATCH
-      level1=>15
-      strength=>20
-      hitpoints=>140
-      ac=>"-8"
-      attacks=>5
-      enforce_thac0=>at_worst
-      enforce_saves=>at_worst
-      enforce_xp=>5
-      replace_items=>"sw2h11(weapon1)"
-      animation=>"skeleton"
-      color_skin=>67
-      say_both_names=>7
-      dv=>DEST_RES
-    END
+  MAKE_PATCH
+    level1=>15
+    strength=>20
+    hitpoints=>140
+    ac=>"-8"
+    attacks=>5
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_xp=>5
+    replace_items=>"sw2h11(weapon1)"
+    animation=>"skeleton"
+    color_skin=>67
+    say_both_names=>7
+    dv=>DEST_RES
+  END
 
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature	= "skelwa=>mh#skw15"
-      edits	= "patch_data"
-    END
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "skelwa=>mh#skw15"
+    edits	= "patch_data"
+  END
 
 
-    // Greater Zombie (12 hd Zombie)
+  // Greater Zombie (12 hd Zombie)
 
-    MAKE_PATCH
-      level1=>12
-      hitpoints=>80
-      ac=>0
-      attacks=>2
-      enforce_thac0=>at_worst
-      enforce_saves=>at_worst
-      enforce_xp=>1
-      resist_crushing=>50
-      resist_missile=>85
-      replace_items=>"b1-8m2(weapon1)
-      immune2(rring)"
-      say_both_names=>8
-      dv=>DEST_RES
-    END
+  MAKE_PATCH
+    level1=>12
+    hitpoints=>80
+    ac=>0
+    attacks=>2
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_xp=>1
+    resist_crushing=>50
+    resist_missile=>85
+    replace_items=>"b1-8m2(weapon1)
+    immune2(rring)"
+    say_both_names=>8
+    dv=>DEST_RES
+  END
 
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature	= "zombie01=>mh#zom12"
-      edits	= "patch_data"
-    END
-
-
-    // Elite Orcs (12 hd orcs)
-
-    MAKE_PATCH
-      strength=>18
-      strength_ex=>51
-      dexterity=>18
-      level1=>12
-      class=>fighter
-      enforce_hp=>at_worst
-      enforce_thac0=>at_worst
-      enforce_saves=>at_worst
-      enforce_xp=>4
-      say_both_names=>"object_index from [15 16]"
-      dv=>DEST_RES
-    END
-
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature		= "orc01=>mh#orc12 orc02=>mh#ora12"
-    END
+  LAUNCH_ACTION_FUNCTION clone_creature
+    INT_VAR
+    allow_missing	= 1
+    STR_VAR
+    creature	= "zombie=>mh#zom12 zombie01=>mh#zom12"
+    edits	= "patch_data"
+  END
 
 
-    // Elder Air/Earth/Fire Elementals (20 hd elementals)
+  // Elite Orcs (12 hd orcs)
 
-    MAKE_PATCH
-      level1=>20
-      xp_value=>15000
-      hitpoints=>160
-      thac0=>1
-      enforce_saves=>at_worst
-      say_both_names=>"object_index from [38 39 40]"
-      dv=>DEST_RES
-    END
+  MAKE_PATCH
+    strength=>18
+    strength_ex=>51
+    dexterity=>18
+    level1=>12
+    class=>fighter
+    enforce_hp=>at_worst
+    enforce_thac0=>at_worst
+    enforce_saves=>at_worst
+    enforce_xp=>4
+    say_both_names=>"object_index from [15 16]"
+    dv=>DEST_RES
+  END
 
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature	= "elairg01=>mh#air20 elearg01=>mh#ear20 elfirg01=>mh#fir20"
-      edits	= "patch_data"
-    END
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature		= "orc01=>mh#orc12 orc02=>mh#ora12"
+  END
+
+
+  // Elder Air/Earth/Fire Elementals (20 hd elementals)
+
+  MAKE_PATCH
+    level1=>20
+    xp_value=>15000
+    hitpoints=>160
+    thac0=>1
+    enforce_saves=>at_worst
+    say_both_names=>"object_index from [38 39 40]"
+    dv=>DEST_RES
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "elairg01=>mh#air20 elearg01=>mh#ear20 elfirg01=>mh#fir20"
+    edits	= "patch_data"
+  END
  
 
-    // Water Elementals (8/12/20 hd elementals)
+  // Water Elementals (8/12/20 hd elementals)
 
-    MAKE_PATCH
-      level1=>"object_index from [8 12 20]"
-      thac0=>"21 - level1"
-      hitpoints=>"level1 * 8"
-      xp_value=>"(level1 - 5) * 1000"
-      enforce_saves=>always
-      say_both_names=>"object_index from [13 14 41]"
-      dv=>DEST_RES
-    END
+  MAKE_PATCH
+    level1=>"object_index from [8 12 20]"
+    thac0=>"21 - level1"
+    hitpoints=>"level1 * 8"
+    xp_value=>"(level1 - 5) * 1000"
+    enforce_saves=>always
+    say_both_names=>"object_index from [13 14 41]"
+    dv=>DEST_RES
+  END
 
-    LAUNCH_ACTION_FUNCTION clone_creature
-      STR_VAR
-      creature	= "elwatg01=>mh#wat08 elwatg01=>mh#wat12 elwatg01=>mh#wat20"
-      edits	= "patch_data"
-    END
-  END	// Not BGEE
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "elwatg01=>mh#wat08 elwatg01=>mh#wat12 elwatg01=>mh#wat20"
+    edits	= "patch_data"
+  END
+
+
+  // Umber Hulk Elder
+
+  MAKE_PATCH
+    make_legendary=>elder
+    strength=>22
+    dexterity=>18
+    constitution=>20
+    resist_slashing=>50
+    resist_piercing=>50
+    resist_missile=>100
+    say_both_names=>1
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "umbhul01=>mh#umeld"
+    edits	= "patch_data"
+  END
+
+
 END	// monster_variants
 
 

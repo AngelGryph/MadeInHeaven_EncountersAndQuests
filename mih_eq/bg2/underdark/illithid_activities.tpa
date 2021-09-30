@@ -55,27 +55,6 @@ BEGIN
   END
 
 
-  // Umber Hulk Elder
-
-  MAKE_PATCH
-    make_legendary=>elder
-    strength=>22
-    dexterity=>18
-    constitution=>20
-    resist_slashing=>50
-    resist_piercing=>50
-    resist_missile=>100
-    say_both_names=>1
-    animation=>"if enhanced_edition then umber_hulk_elder else no_change"
-  END
-
-  LAUNCH_ACTION_FUNCTION clone_creature
-    STR_VAR
-    creature	= "umbhul01=>mh#umeld"
-    edits	= "patch_data"
-  END
-
-
   // More illithid
 
   MAKE_PATCH

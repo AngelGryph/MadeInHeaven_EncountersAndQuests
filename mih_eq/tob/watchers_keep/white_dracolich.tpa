@@ -73,11 +73,33 @@ BEGIN
 
   // Install creature file
 
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "infinity_animations"
+    RET
+    infinity_animations	= value
+  END
+
+  ACTION_IF infinity_animations
+  BEGIN
+    OUTER_TEXT_SPRINT white_dragon "dragon_white_young"
+  END
+
+  ACTION_IF enhanced_edition
+  BEGIN
+    OUTER_TEXT_SPRINT white_dragon "dragon_white"
+  END
+
+  ACTION_IF NOT VARIABLE_IS_SET dragon_white
+  BEGIN
+    OUTER_TEXT_SPRINT white_dragon "no_change"
+  END
+
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
     creature	= "mh#white"
     location	= "actors"
-    editstring	= ~say_both_names=>6 animation=>"if enhanced_edition then dragon_white else no_change"~
+    editstring	= ~say_both_names=>6 animation=>"%white_dragon%"~
   END
 
 

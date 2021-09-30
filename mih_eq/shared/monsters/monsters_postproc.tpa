@@ -41,6 +41,28 @@ BEGIN
 
   // Set appropriate animations for some creatures
 
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "infinity_animations"
+    RET
+    infinity_animations	= value
+  END
+
+  ACTION_IF infinity_animations
+  BEGIN
+    OUTER_TEXT_SPRINT animation_style "ia"
+  END
+
+  ACTION_IF enhanced_edition
+  BEGIN
+    OUTER_TEXT_SPRINT animation_style "ee"
+  END
+
+  ACTION_IF NOT VARIABLE_IS_SET animation_style
+  BEGIN
+    OUTER_TEXT_SPRINT animation_style "fallback"
+  END
+
   COPY - "%MOD_FOLDER%/shared/monsters/tables/animations.2da" "%workspace%"
     COUNT_2DA_COLS cols
     COUNT_2DA_ROWS cols rows
@@ -59,35 +81,14 @@ BEGIN
         INT_VAR
         rownum		= i
 	STR_VAR
-	column		= "animation"
+	column		= "%animation_style%"
         RET
         animation	= value
       END
 
       PATCH_IF IDS_OF_SYMBOL("animate" "%animation%") == "-1"
       BEGIN
-        TEXT_SPRINT not_found "%animation%"
-
-        LAUNCH_PATCH_FUNCTION read_table_entry
-          INT_VAR
-          rownum	= i
-	  STR_VAR
-	  column	= "fallback"
-          RET
-          animation	= value
-        END
-
-	LAUNCH_PATCH_FUNCTION log_this
-	  STR_VAR
-	  file		= "missing_animations.txt"
-	  input		= ~Animation %not_found% was not found, falling back to %animation%.~
-	  repeat	= "no"
-	END
-      END
-
-      PATCH_IF IDS_OF_SYMBOL("animate" "%animation%") == "-1"
-      BEGIN
-        PATCH_FAIL ~No animation found for "%creature%; tried %not_found% and %animation%!~
+        PATCH_FAIL ~Animation %animation% not found for creature %creature%!~
       END
 
       INNER_ACTION

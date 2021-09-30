@@ -62,15 +62,37 @@ BEGIN
 
   // Install creature file
 
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "infinity_animations"
+    RET
+    infinity_animations	= value
+  END
+
+  ACTION_IF infinity_animations
+  BEGIN
+    OUTER_TEXT_SPRINT mighty_servant "iron_golem_iwd"
+  END
+
+  ACTION_IF enhanced_edition
+  BEGIN
+    OUTER_TEXT_SPRINT mighty_servant "golem_iron_iwd"
+  END
+
+  ACTION_IF NOT VARIABLE_IS_SET dragon_white
+  BEGIN
+    OUTER_TEXT_SPRINT mighty_servant "no_change"
+  END
+
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR
     creature	= "mh#leuko"
     location	= "actors"
-    editstring	= ~say_both_names=>0 animation=>"if enhanced_edition then golem_iron_iwd else no_change"~
+    editstring	= ~say_both_names=>0 animation=>"%mighty_servant%"~
   END
 
 
-  // Actual placement in game done in machine_ltm.tpa
+  // Note: Actual placement in game done in machine_ltm.tpa
 END	// mighty_servant
 
 
