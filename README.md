@@ -9,6 +9,11 @@ Improved monsters, enhanced battles, extended and new quests and more!
 ## Version History
 
 Version 6 - ???
+- Update to WeiDU 248
+- Removed an unkillable flesh golem from the Dwarven Dig Site
+- Corrected spell type of Demilich Curse so it no longer shows as a mage spell
+- Fixed an incompatibility issue with Ascension on oBG2
+- Wights in Tsolak's tomb no longer drop dwarven amulets
 
 Version 5 - September 30 2021
 - Fixed an issue where BG1 creatures were given way too much HP
