@@ -18,6 +18,15 @@ BEGIN
     file	= "elemental_labs greater_mimics mighty_servant white_dracolich machine_ltm saladrex_battle orc_horde trial_dragon_battle"
     tra		= "watchers_keep"
   END
+
+
+  // Animation corrections
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "fix_animations"
+    locbase	= "shared/compat"
+  END
 END	// setup_watchers_keep
 
 

@@ -46,7 +46,7 @@ THEN
     DisplayStringHead("hllich", @1)
     CreateCreatureObjectEffect("elfire01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("eleare01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("elaire01, "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elaire01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elwate01", "spdimndr", "hllich")
 END
 

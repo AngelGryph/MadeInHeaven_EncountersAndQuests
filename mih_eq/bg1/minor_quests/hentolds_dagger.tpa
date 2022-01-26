@@ -10,7 +10,7 @@ BEGIN
   MAKE_PATCH
     magical=>1
     enchantment=>1
-    patch_ability_inline=>~to_hit=>1 damage_bonus=>1 ability_icon=>"mh#nesdg"~
+    patch_ability_inline=>~to_hit=>1 damage_bonus=>1 ability_icon=>"mh#hendg"~
     add_effect_inline=>~opcode=>12 parameter2=>0x00080000 dicenum=>1 dicesize=>4 probability2=>19~
     icon=>"mh#hendg"
     say_description=>0
