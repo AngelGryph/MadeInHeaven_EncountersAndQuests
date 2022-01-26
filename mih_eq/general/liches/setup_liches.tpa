@@ -1,5 +1,12 @@
 DEFINE_ACTION_FUNCTION setup_liches
 BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_high_level"
+    locbase	= "shared/high_level"
+  END
+
+
   // TODO: SoD Lich
 
   ACTION_IF is_bg2

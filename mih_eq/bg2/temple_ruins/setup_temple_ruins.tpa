@@ -8,6 +8,13 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
+    file	= "setup_high_level"
+    locbase	= "shared/high_level"
+  END
+
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
     file	= "temple_grounds temple_interior shadow_dragon_battle"
     tra		= "temple_ruins"
   END

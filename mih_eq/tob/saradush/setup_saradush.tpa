@@ -8,6 +8,13 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
+    file	= "setup_high_level"
+    locbase	= "shared/high_level"
+  END
+
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
     file	= "cursed_prison barracks_battle sewer_shadows"
     tra		= "saradush"
   END

@@ -1,5 +1,11 @@
 DEFINE_ACTION_FUNCTION setup_lycanthropes
 BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_high_level"
+    locbase	= "shared/high_level"
+  END
+
   /*
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
@@ -7,6 +13,7 @@ BEGIN
     locbase	= "shared/regeneration"
   END
   */
+
 
   LAUNCH_ACTION_FUNCTION grand_unified_installer
     STR_VAR

@@ -1,7 +1,7 @@
 2DA V1.0
 *
-		EE			IA			FALLBACK
-mh#bwght	wight_barrow		barrow_wight		vampire
+RESREF		EE			IA			FALLBACK
+mh#bwght	wight_barrow		wight_barrow		vampire
 mh#blkpd	black_pudding		gray_ooze		gray_ooze
 mh#frost	giant_frost		frost_giant		fire_giant
 mh#giant	giant_hill		verbeeg			fire_giant
@@ -12,7 +12,7 @@ mh#magpe	elemental_fire_iwd	elemental_fire_iwd	burning_man
 mh#umeld	umber_hulk_elder	umberhulk_iwd		umber_hulk
 mh#wght5	wight_gray		wight_gray		revenant
 mh#wght6	wight_gray		wight_gray		revenant
-mh#wght7	wight_green		wight_gray		revenant
+mh#wght7	wight_green		wight_lesser		revenant
 mh#wight	wight_gray		wight_gray		revenant
 
 

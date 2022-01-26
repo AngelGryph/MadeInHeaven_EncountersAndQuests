@@ -1,5 +1,12 @@
 DEFINE_ACTION_FUNCTION setup_corporal_undead
 BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_high_level"
+    locbase	= "shared/high_level"
+  END
+
+
   LAUNCH_ACTION_FUNCTION grand_unified_installer
     STR_VAR
     copy_files	= ""
@@ -18,16 +25,8 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "corporal_undead_revisions"
+    file	= "corporal_undead_revisions corporal_undead_postproc"
     tra		= "corporal_undead"
-  END
-  ACTION_IF NOT enhanced_edition
-
-  BEGIN
-    LAUNCH_ACTION_FUNCTION run
-      STR_VAR
-      file	= "backwards_compatibility"
-    END
   END
 END	// setup_corporal_undead
 

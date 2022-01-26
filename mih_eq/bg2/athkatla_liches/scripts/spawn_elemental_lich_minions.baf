@@ -12,7 +12,7 @@ THEN
     CreateCreatureObjectEffect("elfir01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elear01", "spdimndr", "hllich")
     CreateCreatureObjectEffect("elair01", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("mh#wat12", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elwat01", "spdimndr", "hllich")
 END
 
 IF
@@ -44,10 +44,10 @@ THEN
   RESPONSE #100
     SetGlobal("mh#SpawnMinions", "MYAREA", 1)
     DisplayStringHead("hllich", @1)
-    CreateCreatureObjectEffect("mh#ear20", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("mh#fir20", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("mh#air20", "spdimndr", "hllich")
-    CreateCreatureObjectEffect("mh#wat20", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elfire01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("eleare01", "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elaire01, "spdimndr", "hllich")
+    CreateCreatureObjectEffect("elwate01", "spdimndr", "hllich")
 END
 
 

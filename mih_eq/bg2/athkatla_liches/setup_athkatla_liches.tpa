@@ -1,12 +1,17 @@
 DEFINE_ACTION_FUNCTION setup_athkatla_liches
 BEGIN
-  /*
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "setup_monsters"
+    file	= "water_elementals"
     locbase	= "shared/monsters"
   END
-  */
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "elder_elementals"
+    locbase	= "shared/monsters"
+  END
+
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR

@@ -2,6 +2,13 @@ DEFINE_ACTION_FUNCTION setup_vampires
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
+    file	= "setup_high_level"
+    locbase	= "shared/high_level"
+  END
+
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
     file	= "paws_and_rings vampire_revisions"
   END
 END	// setup_vampires
