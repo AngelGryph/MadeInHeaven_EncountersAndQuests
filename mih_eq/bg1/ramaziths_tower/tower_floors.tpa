@@ -17,7 +17,6 @@ BEGIN
 
   MAKE_PATCH
     add_actor_inline'1=>~actor_name=>"{literal:Greater Wight}" actor_resource=>"mh#wght7" actor_x_coord=>425 actor_y_coord=>245 actor_orientation=>4~
-
     add_actor_inline'2=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wight" actor_x_coord=>360 actor_y_coord=>155 actor_orientation=>2~
     add_actor_inline'3=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght5" actor_x_coord=>345 actor_y_coord=>370 actor_orientation=>5~
     add_actor_inline'4=>~actor_name=>"{literal:Wight}" actor_resource=>"mh#wght6" actor_x_coord=>235 actor_y_coord=>385 actor_orientation=>7~
