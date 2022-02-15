@@ -10,7 +10,7 @@ BEGIN
   hp_plus		=> 4
   general		=> undead
   strip_script		=> "dreadwlf"
-  insert_script_high	=> "mh#reg1t"
+  insert_script_high	=> "mh#reg1x"
   replace_items		=> "mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
 END
 

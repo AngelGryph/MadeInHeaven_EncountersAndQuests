@@ -6,6 +6,12 @@ BEGIN
     locbase	= "shared/high_level"
   END
 
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_lore"
+    locbase	= "shared/lore"
+  END
+
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
