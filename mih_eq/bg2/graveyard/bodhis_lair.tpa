@@ -21,23 +21,23 @@ BEGIN
 
   // Stronger undead minions in ch3 battle
 
-  COPY_EXISTING "ar0801.bcs" "override"
-    DECOMPILE_AND_PATCH
-    BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-       ~SetGlobal("FindLassal","AR0801",1)~
-       ~SetGlobal("FindLassal", "AR0801", 1)
-CreateCreature("bodfgt01", [460.880], 11)
+  LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+    STR_VAR
+    script	= "ar0801"
+    match1	= "FindLassal"
+    swap_out1	= ~SetGlobal("FindLassal","AR0801",1)~
+    swap_in1	= ~CreateCreature("bodfgt01", [460.880], 11)
 CreateCreature("skelwa03", [1250.500], 1)
 CreateCreature("skelwa03", [575.830], 1)
 CreateCreature("bodfgt01", [415.1510], 10)
 CreateCreature("bodfgt01", [690.1445], 6)
 CreateCreature("bodfgt01", [1985.650], 5)
 CreateCreature("bodfgt01", [2175.685], 6)
-CreateCreature("mh#mohrg", [710.1810], 11)~
-      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-       ~ghogr01~ ~mh#bwght~
-    END
+CreateCreature("mh#mohrg", [710.1810], 11)
+SetGlobal("FindLassal", "AR0801", 1)~
+    swap_out2	= ~ghogr01~
+    swap_in2	= ~mh#bwght~
+  END
 
 
   // More difficult ch6 lair

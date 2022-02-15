@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION rift_cavern
 BEGIN
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>8 spawn_base_number=>200 spawn_count=>10 spawn_creature1=>"RDUndead" spawn_creature2=>"RDUndea2" spawn_creature3=>"RDShad" spawn_creature4=>"RDSpider" spawn_creature5=>"RDSpid2" spawn_creature6=>"RDSpid3" spawn_creature7=>"RDSlim1" spawn_creature8=>"RDSlim2" spawn_creature9=>"RDMist1" spawn_creature10=>"RDMist2"~
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>8 spawn_base_number=>20 spawn_count=>10 spawn_creature1=>"RDUndead" spawn_creature2=>"RDUndea2" spawn_creature3=>"RDShad" spawn_creature4=>"RDSpider" spawn_creature5=>"RDSpid2" spawn_creature6=>"RDSpid3" spawn_creature7=>"RDSlim1" spawn_creature8=>"RDSlim2" spawn_creature9=>"RDMist1" spawn_creature10=>"RDMist2"~
     patch_trigger_inline=>~match=>"trigger_script=spwnbeh" trigger_script=>"spwndead"~
     add_actor_inline'1=>~actor_name=>"{literal:Mohrg}" actor_resource=>"mh#mohrg" actor_x_coord=>2910 actor_y_coord=>2595 actor_orientation=>0~
     add_actor_inline'2=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>3025 actor_y_coord=>2600 actor_orientation=>2~

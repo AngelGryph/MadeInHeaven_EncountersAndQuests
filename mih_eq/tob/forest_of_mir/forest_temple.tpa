@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION forest_temple
 BEGIN
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>2 spawn_base_number=>400 spawn_count=>5 spawn_creature1=>"mh#mohrg" spawn_creature2=>"mh#bodak" spawn_creature3=>"mh#eyeff" spawn_creature4=>"hgskl04" spawn_creature5=>"slaysh01"~
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>2 spawn_base_number=>40 spawn_count=>5 spawn_creature1=>"mh#mohrg" spawn_creature2=>"mh#bodak" spawn_creature3=>"mh#eyeff" spawn_creature4=>"hgskl04" spawn_creature5=>"slaysh01"~
     add_actor_inline'1=>~actor_name=>"{literal:Eye of Fear and Flame}" actor_resource=>"mh#eyeff" actor_x_coord=>945 actor_y_coord=>1040 actor_orientation=>15~
     add_actor_inline'2=>~actor_name=>"{literal:Eye of Fear and Flame}" actor_resource=>"mh#eyeff" actor_x_coord=>1220 actor_y_coord=>905 actor_orientation=>0~
 

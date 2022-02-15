@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION southern_tomb
 BEGIN
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>12 spawn_base_number=>200 spawn_count=>3 spawn_creature1=>"RDUndead" spawn_creature2=>"RDUndea2" spawn_creature3=>"RDShad"~
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>8 spawn_base_number=>20 spawn_count=>3 spawn_creature1=>"RDUndead" spawn_creature2=>"RDUndea2" spawn_creature3=>"RDShad"~
 
     add_actor_inline'1=>~actor_name=>"{literal:Mohrg}" actor_resource=>"mh#mohrg" actor_x_coord=>285 actor_y_coord=>1745 actor_orientation=>9~
     add_actor_inline'2=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>230 actor_y_coord=>1690 actor_orientation=>9~
@@ -14,15 +14,16 @@ BEGIN
     edits	= "patch_data"
   END
 
-  COPY_EXISTING "ar0802.bcs" "override"
-    DECOMPILE_AND_PATCH
-    BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-        ~SetGlobal("SpawnMummy","GLOBAL",1)~
-        ~SetGlobal("SpawnMummy", "GLOBAL", 1)
-CreateCreature("mh#mohrg", [1105.2205], 6)
-CreateCreature("mh#bwght", [1305.2185], 5)~
-    END
+
+  LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+    STR_VAR
+    script	= "ar0802"
+    match	= "SpawnMummy"
+    swap_out	= ~SetGlobal("SpawnMummy","GLOBAL",1)~
+    swap_in	= ~CreateCreature("mh#mohrg", [1105.2205], 6)
+CreateCreature("mh#bwght", [1305.2185], 5)
+SetGlobal("SpawnMummy", "GLOBAL", 1)~
+  END
 END	// southern_tomb
 
 

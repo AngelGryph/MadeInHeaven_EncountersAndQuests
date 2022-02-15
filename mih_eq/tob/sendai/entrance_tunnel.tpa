@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION entrance_tunnel
 BEGIN
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_base_number=>400 spawn_maximum=>12~
+    patch_spawn_inline=>~spawn_base_number=>40 spawn_maximum=>12~
     clone_spawn_inline=>~number_to_add=>3 match=>"spawn_xloc = 2663 and spawn_yloc = 1000" spawn_xloc=>"entry_index from [2418 3071 1950]"  spawn_yloc=>"entry_index from [648 1126 1328]"~
   END
 
