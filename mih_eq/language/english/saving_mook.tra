@@ -1,0 +1,15 @@
+@0    = ~Aran's tasks to receive the Shadow Thieves' aid
+
+I found Mook at the docks, who reported to me seeing a man pass by several times, casing the place. When he appeared again, she challenged him... and he tried to kill her. We defeated the man... or whatever he is... and he turned into mist before our eyes, cursing us as he fled.
+
+No doubt that this would classify as an "occurrence" that Aran might wish to know about in the morning.~
+@1    = ~I see.  A good thing you managed to save her, she's a friend.  Seems I was correct in assuming your presence would prevent any deaths.  Well done, <CHARNAME>.~
+@2    = ~It went as you expected.  They tried to kill Mook, but I was able to save her.~
+@3    = ~They attacked, and it was much more dangerous than you said!  I was barely able to save Mook!~
+@4    = ~Mook and the shipment are safe.  Now I want what I paid for, please.~
+@5    = ~...that was way too close for comfort.  Thanks, <CHARNAME>.~
+@6    = ~You're welcome.  Did you know this guy?~
+@7    = ~Don't mention it.  Who was that guy?~
+@8    = ~Just doing what I was here for.  You know this guy?~
+@9    = ~Mm, think I saw him in the Guild once or twice, but he looked decidedly less... feral... then.  Don't recall a name though.~
+@10   = ~Regardless, you saved me and I won't forget that.  You should go and report to Aran.  I'll be fine from here on.~
