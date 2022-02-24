@@ -1,20 +1,20 @@
 DEFINE_ACTION_FUNCTION adamantite_golem
 BEGIN
   MAKE_PATCH
-    strength=>25
-    resist_slashing=>95
-    resist_crushing=>95
-    resist_piercing=>95
-    resist_missile=>95
-    resist_acid=>0
-    resist_electricity=>0
+    resist_slashing=>90
+    resist_crushing=>90
+    resist_piercing=>90
+    resist_missile=>90
+    resist_acid=>40
+    resist_electricity=>40
+    resist_magic=>80
     strength=>24
     dexterity=>17
     constitution=>20
     intelligence=>9
     wisdom=>2
     charisma=>7
-    replace_items=>"immune4(rring)"
+    replace_items=>"immune3(lring) irongol(rring)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

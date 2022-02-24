@@ -24,10 +24,13 @@ BEGIN
     charisma=>3
     resist_fire=>"-25"
     resist_magic_fire=>"-25"
-    resist_electricity=>0
+    resist_cold=>100
+    resist_magic_cold=>100
+    resist_electricity=>50
     resist_acid=>0
+    resist_magic=>60
     insert_script=>"mh#bngol"
-    replace_items=>"immune2(lring)"
+    replace_items=>"immune2(lring) golstone(rring)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

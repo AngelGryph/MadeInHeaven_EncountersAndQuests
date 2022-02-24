@@ -2,19 +2,20 @@ DEFINE_ACTION_FUNCTION iron_golem
 BEGIN
   MAKE_PATCH
     xp_valueGT=>15000
-    resist_slashing=>80
-    resist_crushing=>80
-    resist_piercing=>80
-    resist_missile=>80
+    resist_slashing=>50
+    resist_crushing=>50
+    resist_piercing=>50
+    resist_missile=>100
     resist_acid=>0
     resist_electricity=>0
+    resist_magic=>60
     strength=>24
     dexterity=>17
     constitution=>20
     intelligence=>9
     wisdom=>2
     charisma=>7
-    replace_items=>"immune3(lring)"
+    replace_items=>"immune3(lring) irongol(rring)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

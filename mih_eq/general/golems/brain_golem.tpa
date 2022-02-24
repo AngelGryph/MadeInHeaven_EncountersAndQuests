@@ -17,7 +17,8 @@ BEGIN
     resist_magic_cold=>50
     resist_electricity=>50
     resist_acid=>50
-    replace_items=>"immune2(lring)"
+    resist_magic=>40
+    replace_items=>"immune2(lring) golstone(rring)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

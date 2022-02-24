@@ -8,13 +8,14 @@ BEGIN
     resist_cold=>0
     resist_magic_cold=>0
     resist_acid=>100
+    resist_magic=>20
     strength=>20
     dexterity=>16
     constitution=>20
     intelligence=>10
     wisdom=>2
     charisma=>5
-    replace_items=>"immune2(lring)"
+    replace_items=>"immune2(lring) golstone(rring)"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature

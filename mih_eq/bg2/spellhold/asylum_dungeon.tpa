@@ -93,7 +93,7 @@ BEGIN
     END
 
 
-  // AR1503 - Aribiter (fungus)
+  // AR1503 - Arbiter (fungus)
 
   MAKE_PATCH
     add_actor_inline'1=>~actor_name=>"{literal:Spore Colony}" actor_resource=>"icfung02" actor_x_coord=>535 actor_y_coord=>335 actor_orientation=>0~
