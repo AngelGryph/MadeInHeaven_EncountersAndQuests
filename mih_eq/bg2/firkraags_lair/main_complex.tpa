@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION main_complex
 BEGIN
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_base_numberGT=>20 spawn_maximumGT=>8~
+    patch_spawn_inline=>~spawn_base_numberGT=>50 spawn_maximumGT=>5~
 
     add_actor_inline'01=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>2800 actor_y_coord=>1160 actor_orientation=>2~
     add_actor_inline'02=>~actor_name=>"{literal:Skeleton Warrior}" actor_resource=>"skelwa01" actor_x_coord=>2745 actor_y_coord=>1200 actor_orientation=>2~

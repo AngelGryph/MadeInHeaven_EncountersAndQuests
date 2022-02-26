@@ -4,7 +4,7 @@ BEGIN
   // AR1512 - Maze (starting level)
 
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>5 spawn_base_number=>20 spawn_count=>10 spawn_creature1=>"RDGolem" spawn_creature2=>"RDGolem2" spawn_creature3=>"RDGolem3" spawn_creature4=>"RDMist2" spawn_creature5=>"RDMist3" spawn_creature6=>"RDMephit" spawn_creature7=>"RDSlim2" spawn_creature8=>"RDSpid3" spawn_creature9=>"RDSpid4" spawn_creature10=>"RDSPid5"~
+    patch_spawn_inline=>~spawn_method=>2 spawn_maximum=>5 spawn_base_number=>50 spawn_count=>10 spawn_creature1=>"RDGolem" spawn_creature2=>"RDGolem2" spawn_creature3=>"RDGolem3" spawn_creature4=>"RDMist2" spawn_creature5=>"RDMist3" spawn_creature6=>"RDMephit" spawn_creature7=>"RDSlim2" spawn_creature8=>"RDSpid3" spawn_creature9=>"RDSpid4" spawn_creature10=>"RDSPid5"~
     patch_trigger_inline=>~match=>"trigger_script = spwnmon" trigger_script=>"spwngol"~
   END
 
@@ -48,7 +48,7 @@ BEGIN
     patch_actor_inline'1=>~match=>"actor_resource = troll01" actor_name=>"{literal:Spirit Troll}" actor_resource=>"trolsi01"~
     patch_actor_inline'2=>~match=>"actor_resource = behgau01" actor_name=>"{literal:Observer}" actor_resource=>"behobs01"~
 
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>5 spawn_base_number=>20 spawn_count=>10 spawn_creature1=>"RDGolem" spawn_creature2=>"RDGolem2" spawn_creature3=>"RDGolem3" spawn_creature4=>"RDMist2" spawn_creature5=>"RDMist3" spawn_creature6=>"RDMephit" spawn_creature7=>"RDSlim2" spawn_creature8=>"RDSpid3" spawn_creature9=>"RDSpid4" spawn_creature10=>"RDSPid5"~
+    patch_spawn_inline=>~spawn_method=>2 spawn_maximum=>5 spawn_base_number=>50 spawn_count=>10 spawn_creature1=>"RDGolem" spawn_creature2=>"RDGolem2" spawn_creature3=>"RDGolem3" spawn_creature4=>"RDMist2" spawn_creature5=>"RDMist3" spawn_creature6=>"RDMephit" spawn_creature7=>"RDSlim2" spawn_creature8=>"RDSpid3" spawn_creature9=>"RDSpid4" spawn_creature10=>"RDSPid5"~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area
@@ -62,19 +62,19 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION clone_creature
     STR_VAR
-    creature	= "skelwa03=>mh#sadet"
-    editstring	= ~xp_value=>5000 replace_items=>"bow02(weapon1) sw2h02(weapon2) arow06(quiver1,x2) arow10(quiver2,x40) ring99(lring) immune1(rring)" animation=>"skeleton" dv=>"mh#sadet"~
+    creature	= "skelwa03=>mh#safir"
+    editstring	= ~xp_value=>8000 replace_items=>"bow02(weapon1) sw2h02(weapon2) arow08(quiver1,x40) arow08(quiver2,x40) arow08(quiver3,x40) ring99(lring) immune1(rring)" animation=>"skeleton" dv=>"mh#safir"~
   END
 
   LAUNCH_ACTION_FUNCTION clone_creature
     STR_VAR
-    creature	= "skelwa03=>mh#sadis"
-    editstring	= ~xp_value=>5000 replace_items=>"bow02(weapon1) sw2h02(weapon2) arow07(quiver1,x2) arow11(quiver2,x40) ring99(lring) immune1(rring)" animation=>"skeleton" dv=>"mh#sadis"~
+    creature	= "skelwa03=>mh#sacol"
+    editstring	= ~xp_value=>8000 replace_items=>"bow02(weapon1) sw2h02(weapon2) arow09(quiver1,x40) arow09(quiver2,x40) arow09(quiver3,x40) ring99(lring) immune1(rring)" animation=>"skeleton" dv=>"mh#sacol"~
   END
 
   MAKE_PATCH
-    patch_actor_inline'1=>~match=>"actor_resource = elekob01" actor_name=>"{literal:Skeleton Archer (Detonation)}" actor_resource=>"mh#sadet"~
-    patch_actor_inline'2=>~match=>"actor_resource = elehob01" actor_name=>"{literal:Skeleton Archer (Dispelling)}" actor_resource=>"mh#sadis"~
+    patch_actor_inline'1=>~match=>"actor_resource = elekob01" actor_name=>"{literal:Skeleton Archer (Fire)}" actor_resource=>"mh#safir"~
+    patch_actor_inline'2=>~match=>"actor_resource = elehob01" actor_name=>"{literal:Skeleton Archer (Ice)}" actor_resource=>"mh#sacol"~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area
@@ -83,14 +83,14 @@ BEGIN
     edits	= "patch_data"
   END
 
-  COPY_EXISTING "ar1507.bcs" "override"
-    DECOMPILE_AND_PATCH
-    BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-       "elekob01" "mh#sadet"
-      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-       "elehob01" "mh#sadis"
-    END
+  LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+    STR_VAR
+    script	= "ar1507"
+    swap_out1	= "elekob01"
+    swap_in1	= "mh#safir"
+    swap_out2	= "elehob01"
+    swap_in2	= "mh#sacol"
+  END
 
 
   // AR1503 - Arbiter (fungus)

@@ -6,7 +6,7 @@ BEGIN
   APPEND_COL "spawngrp.2da" "$ $ RDElOoze 300 mh#oozlp mh#oozle mh#oozle mh#oozpe mh#oozel mh#oozel mh#oozgp mh#oozgr"  UNLESS "RDElOoze"
 
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_base_number=>"entry_index from [30 30 30 30 20 20 20 20]" spawn_maximum=>"entry_index from [10 10 10 10 5 5 5 5]" spawn_probability_day=>100 spawn_probability_night=>100 spawn_count=>1 spawn_creature1=>"entry_index from [RDElOoze RDElAir RDElFire RDElIce RDElIce RDELOoze RDElAir RDElFire]"~
+    patch_spawn_inline=>~spawn_base_number=>"entry_index from [80 80 80 80 50 50 50 50]" spawn_maximum=>"entry_index from [8 8 8 8 4 4 4 4]" spawn_probability_day=>100 spawn_probability_night=>100 spawn_count=>1 spawn_creature1=>"entry_index from [RDElOoze RDElAir RDElFire RDElIce RDElIce RDELOoze RDElAir RDElFire]"~
   END
 
   LAUNCH_ACTION_FUNCTION edit_area

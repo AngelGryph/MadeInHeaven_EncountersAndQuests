@@ -1,7 +1,7 @@
 DEFINE_ACTION_FUNCTION undercity_proper
 BEGIN
   MAKE_PATCH
-    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>12 spawn_base_number=>20 spawn_count=>10 spawn_creature1=>"ghast" spawn_creature2=>"mh#wight" spawn_creature3=>"jellgr" spawn_creature4=>"jelloc" spawn_creature5=>"jellmu" spawn_creature6=>"spidph" spawn_creature7=>"spidsw" spawn_creature8=>"spidwr" spawn_creature9=>"dopple" spawn_creature10=>"doppgr"~
+    patch_spawn_inline=>~spawn_method=>1 spawn_maximum=>8 spawn_base_number=>5 spawn_count=>10 spawn_creature1=>"ghast" spawn_creature2=>"mh#wight" spawn_creature3=>"jellgr" spawn_creature4=>"jelloc" spawn_creature5=>"jellmu" spawn_creature6=>"spidph" spawn_creature7=>"spidsw" spawn_creature8=>"spidwr" spawn_creature9=>"dopple" spawn_creature10=>"doppgr"~
 
     add_actor_inline'01=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>2240 actor_y_coord=>3210 actor_orientation=>15~
     add_actor_inline'02=>~actor_name=>"{literal:Barrow Wight}" actor_resource=>"mh#bwght" actor_x_coord=>2370 actor_y_coord=>3220 actor_orientation=>15~
