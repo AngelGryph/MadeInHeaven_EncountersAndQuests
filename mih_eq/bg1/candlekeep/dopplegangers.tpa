@@ -17,13 +17,13 @@ BEGIN
     script_race=>"ldchange"
     script_general=>null
     script_default=>"wtasight"
-    dialog=>"object_index from [erik3 mh#dopkp mh#doppr]"
+    dialog=>"object_index from [mh#dopkp mh#doppr]"
     dv=>null
   END
 
   LAUNCH_ACTION_FUNCTION clone_creature
     STR_VAR
-    creature	= "erik=>erik3 keeper=>mh#dopkp poghma5=>mh#doppr"
+    creature	= "keeper=>mh#dopkp poghma5=>mh#doppr"
     edits	= "patch_data"
   END
 END	// dopplegangers

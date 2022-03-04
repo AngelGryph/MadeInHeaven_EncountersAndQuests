@@ -1,7 +1,6 @@
 DEFINE_ACTION_FUNCTION catacombs_l2
 BEGIN
   MAKE_PATCH
-    add_actor_inline'01=>~actor_name=>"{literal:Doppleganger Erik}" actor_resource=>"erik3" actor_x_coord=>1430 actor_y_coord=>260 actor_orientation=>14~
     add_actor_inline'02=>~actor_name=>"{literal:Doppleganger Priest}" actor_resource=>"mh#doppr" actor_x_coord=>1030 actor_y_coord=>540 actor_orientation=>14~
     add_actor_inline'03=>~actor_name=>"{literal:Doppleganger Keeper}" actor_resource=>"mh#dopkp" actor_x_coord=>1275 actor_y_coord=>960 actor_orientation=>6~
 
