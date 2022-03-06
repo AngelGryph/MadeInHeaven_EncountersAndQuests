@@ -9,7 +9,8 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "paws_and_rings vampire_revisions"
+    file	= "vampire_abilities vampire_revisions"
+    tra		= "vampires"
   END
 END	// setup_vampires
 

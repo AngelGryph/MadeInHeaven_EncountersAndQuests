@@ -17,11 +17,16 @@ BEGIN
 
   // TODO: Add salient abilities to Deirex
 
-  LAUNCH_ACTION_FUNCTION extend_area_script
+  LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    area	= "ar2207"
-    bottom	= "spawn_deirex_minions"
+    file	= "mh#jlich.baf"
     location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "jarlich"
+    editstring	= ~insert_script_high=>"mh#jlich"~
   END
 END	// deirex_battle
 

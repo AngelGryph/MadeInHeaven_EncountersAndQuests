@@ -17,7 +17,7 @@ BEGIN
   move_silentlyGT	=> 90
   insert_script_high	=> "mh#musjl"
   swap_script		=> "wtarsght=>wtasight dw1ranmo=>dw1melmo"
-  replace_items		=> "mh#musjl(weapon1) mh#musjl(weapon2)"
+  replace_items		=> "mh#musjl(weapon1) mh#musjl(weapon2) helmnoan(helmet)"
   add_effect_inline	=> "opcode=>83 target=>1 timing=>9 parameter2=>36"
 END
 

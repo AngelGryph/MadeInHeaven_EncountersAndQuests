@@ -9,4 +9,5 @@ BEGIN
   dexterityGT		=> 17
   charismaGT		=> 15
   replace_items		=> "vamp(weapon1) vampreg(lring) immune1(rring)"
+  insert_script_high	=> "mh#vmp09"
 END

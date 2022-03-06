@@ -2,12 +2,6 @@ DEFINE_ACTION_FUNCTION setup_underdark
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "setup_monsters"
-    locbase	= "shared/monsters"
-  END
-
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
     file	= "setup_high_level"
     locbase	= "shared/high_level"
   END

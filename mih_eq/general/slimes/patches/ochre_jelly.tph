@@ -15,7 +15,7 @@ BEGIN
   resist_piercingGT	=> 30
   resist_missile	=> 100
   swap_script		=> "wtarsght=>wtasight dw1ranmo=>dw1melmo"
-  replace_items		=> "mh#ochjl(weapon1) mh#ochjl(weapon2)"
+  replace_items		=> "mh#ochjl(weapon1) mh#ochjl(weapon2) helmnoan(helmet)"
 END
 
 

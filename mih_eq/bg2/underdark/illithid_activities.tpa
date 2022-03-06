@@ -58,8 +58,6 @@ BEGIN
   // More illithid
 
   MAKE_PATCH
-    patch_actor_inline=>~match=>"actor_x_coord_start = 973 and actor_y_coord_start = 2083" actor_resource=>"mh#umeld" actor_name=>"{literal:Umber Hulk Elder}"~
-
     add_actor_inline'01=>~actor_name=>"{literal:Mind Flayer}" actor_resource=>"mindfl01" actor_x_coord=>3235 actor_y_coord=>2445 actor_orientation=>7~
     add_actor_inline'02=>~actor_name=>"{literal:Mind Flayer}" actor_resource=>"mindfl01" actor_x_coord=>3325 actor_y_coord=>2375 actor_orientation=>5~
     add_actor_inline'03=>~actor_name=>"{literal:Ulitharid}" actor_resource=>"mindul01" actor_x_coord=>3325 actor_y_coord=>2375 actor_orientation=>6~

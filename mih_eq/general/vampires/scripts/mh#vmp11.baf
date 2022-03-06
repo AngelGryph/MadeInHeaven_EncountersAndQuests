@@ -1,0 +1,35 @@
+IF
+  Allegiance(Myself, ENEMY)
+  Global("mh#VampireMinions", "locals", 0)
+  See([PC])
+  ActuallyInCombat()
+THEN
+  RESPONSE #20
+    CreateCreatureObjectEffect("ghoul01", "spraised", Myself)
+    CreateCreatureObjectEffect("ghoul01", "spraised", Myself)
+    CreateCreatureObjectEffect("ghoul01", "spraised", Myself)
+    SetGlobal("mh#VampireMinions", "locals", 1)
+  RESPONSE #20
+    CreateCreatureObjectEffect("mh#wight", "spraised", Myself)
+    CreateCreatureObjectEffect("mh#wight", "spraised", Myself)
+    SetGlobal("mh#VampireMinions", "locals", 1)
+  RESPONSE #20
+    CreateCreatureObjectEffect("ghast01", "spraised", Myself)
+    SetGlobal("mh#VampireMinions", "locals", 1)
+  RESPONSE #40
+    SetGlobal("mh#VampireMinions", "locals", 1)
+END
+
+
+IF
+  HPPercentLT(Myself, 50)
+  Global("mh#VampiricRage", "locals", 0)
+THEN
+  RESPONSE #70
+    SetGlobal("mh#VampiricRage", "locals", 1)
+    ForceSpell(Myself, VAMPIRE_RAGE)
+  RESPONSE #30
+    Continue()
+END
+
+

@@ -7,6 +7,7 @@ BEGIN
   END
 
 
+/*
   // Golden Bones (15 hd Skeleton Warrior)
 
   MAKE_PATCH
@@ -57,6 +58,7 @@ BEGIN
     creature	= "zombie=>mh#zom12 zombie01=>mh#zom12"
     edits	= "patch_data"
   END
+*/
 
 
   // Elite Orcs (12 hd orcs)
@@ -81,6 +83,7 @@ BEGIN
   END
 
 
+/*
   // Umber Hulk Elder
 
   MAKE_PATCH
@@ -99,6 +102,7 @@ BEGIN
     creature	= "umbhul01=>mh#umeld"
     edits	= "patch_data"
   END
+*/
 END	// monster_variants
 
 

@@ -7,122 +7,45 @@ IF
     TimeOfDay(NIGHT)
   !GlobalTimerNotExpired("mh#VampireAmbush", "MYAREA")
   !Dead("c6bodhi")
-  Difficulty(EASY)
+  DifficultyGT(EASY)
+  !ActuallyInCombat()
 THEN
-  RESPONSE #15
+  RESPONSE #30
     SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
     CreateCreatureObjectEffect("vamflf01", "spfleshs", Player1)
-  RESPONSE #15
+  RESPONSE #25
     SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
     CreateCreatureObjectEffect("vamflf01", "spfleshs", Player2)
-  RESPONSE #15
+  RESPONSE #20
     SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
     CreateCreatureObjectEffect("vamflf01", "spfleshs", Player3)
   RESPONSE #15
     SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
     CreateCreatureObjectEffect("vamflf01", "spfleshs", Player4)
-  RESPONSE #15
+  RESPONSE #10
     SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
     CreateCreatureObjectEffect("vamflf01", "spfleshs", Player5)
+  RESPONSE #5
+    SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player6)
+  RESPONSE #30
+    SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player1)
+  RESPONSE #25
+    SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player2)
+  RESPONSE #20
+    SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player3)
   RESPONSE #15
     SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
-    CreateCreatureObjectEffect("vamflf01", "spfleshs", Player6)
-END
-
-
-IF
-  InMyArea(Player1)
-  Global("Chapter", "GLOBAL", %bg2_chapter_6%)
-  Or(3)
-    AreaType(DUNGEON)
-    TimeOfDay(DUSK)
-    TimeOfDay(NIGHT)
-  !GlobalTimerNotExpired("mh#VampireAmbush", "MYAREA")
-  !Dead("c6bodhi")
-  Difficulty(NORMAL)
-THEN
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", EIGHT_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player1)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", EIGHT_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player2)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", EIGHT_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player3)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", EIGHT_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player4)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", EIGHT_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player5)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", EIGHT_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player6)
-END
-
-
-IF
-  InMyArea(Player1)
-  Global("Chapter", "GLOBAL", %bg2_chapter_6%)
-  Or(3)
-    AreaType(DUNGEON)
-    TimeOfDay(DUSK)
-    TimeOfDay(NIGHT)
-  !GlobalTimerNotExpired("mh#VampireAmbush", "MYAREA")
-  !Dead("c6bodhi")
-  Difficulty(HARD)
-THEN
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", SIX_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player1)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", SIX_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player2)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", SIX_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player3)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", SIX_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player4)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", SIX_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player5)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", SIX_MINUTES)
-    CreateCreatureObjectEffect("vammat01", "spfleshs", Player6)
-END
-
-
-IF
-  InMyArea(Player1)
-  Global("Chapter", "GLOBAL", %bg2_chapter_6%)
-  Or(3)
-    AreaType(DUNGEON)
-    TimeOfDay(DUSK)
-    TimeOfDay(NIGHT)
-  !GlobalTimerNotExpired("mh#VampireAmbush", "MYAREA")
-  !Dead("c6bodhi")
-  Difficulty(HARDEST)
-THEN
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", FOUR_MINUTES)
-    CreateCreatureObjectEffect("vamold01", "spfleshs", Player1)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", FOUR_MINUTES)
-    CreateCreatureObjectEffect("vamold01", "spfleshs", Player2)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", FOUR_MINUTES)
-    CreateCreatureObjectEffect("vamold01", "spfleshs", Player3)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", FOUR_MINUTES)
-    CreateCreatureObjectEffect("vamold01", "spfleshs", Player4)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", FOUR_MINUTES)
-    CreateCreatureObjectEffect("vamold01", "spfleshs", Player5)
-  RESPONSE #15
-    SetGlobalTimer("mh#VampireAmbush", "MYAREA", FOUR_MINUTES)
-    CreateCreatureObjectEffect("vamold01", "spfleshs", Player6)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player4)
+  RESPONSE #10
+    SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player5)
+  RESPONSE #5
+    SetGlobalTimer("mh#VampireAmbush", "MYAREA", TEN_MINUTES)
+    CreateCreatureObjectEffect("vamflm01", "spfleshs", Player6)
 END
 
 

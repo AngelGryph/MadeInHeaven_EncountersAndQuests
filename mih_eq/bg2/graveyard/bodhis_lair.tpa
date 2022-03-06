@@ -61,15 +61,6 @@ SetGlobal("FindLassal", "AR0801", 1)~
     area	= "ar0800 ar0808"
     bottom	= "ch6_vampire_ambush"
   END
-
-
-  // Holy water does not slow vampires
-
-  LAUNCH_ACTION_FUNCTION edit_spell
-    STR_VAR
-    spell	= "C6VAMPIRE_WEAKNESS C6BODHI_WEAKNESS"
-    editstring	= ~delete_effect=>"opcode = 40"~
-  END
 END	// bodhis_lair
 
 
