@@ -1,6 +1,7 @@
 IF
   See(NearestEnemyOf(Myself))
   Range(LastSeenBy(Myself), 30)
+  DifficultyGT(NORMAL)
   Global("mh#demilich_curse", "locals", 0)
 THEN
   RESPONSE #100

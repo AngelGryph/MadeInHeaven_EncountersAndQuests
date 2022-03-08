@@ -1,0 +1,47 @@
+IF
+  Allegiance(Myself, ENEMY)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(EASIEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself, @1)
+    CreateCreatureObjectEffect("elfir01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elear01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elair01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elwat01", "spdimndr", Myself)
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  Global("mh#SpawnMinions", "locals", 0)
+  DifficultyGT(EASIEST)
+  DifficultyLT(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself, @1)
+    CreateCreatureObjectEffect("elfirg01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elearg01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elairg01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elwatg01", "spdimndr", Myself)
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  Global("mh#SpawnMinions", "locals", 0)
+  DifficultyGT(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself, @1)
+    CreateCreatureObjectEffect("elfire01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("eleare01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elaire01", "spdimndr", Myself)
+    CreateCreatureObjectEffect("elwate01", "spdimndr", Myself)
+END
+
+
