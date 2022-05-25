@@ -1,0 +1,119 @@
+IF
+  Allegiance(Myself(), ENEMY)
+  HPPercentLT(Myself(), 100)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(EASY)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself(), @30)
+    CreateCreatureObjectEffect("goljug01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("goljug01", "spfleshs", Myself())
+END
+
+IF
+  Allegiance(Myself(), ENEMY)
+  HPPercentLT(Myself(), 100)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself(), @30)
+    CreateCreatureObjectEffect("goljug01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("goljug01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("icsalfir", "spfleshs", Myself())
+    CreateCreatureObjectEffect("icsalfir", "spfleshs", Myself())
+END
+
+IF
+  Allegiance(Myself(), ENEMY)
+  HPPercentLT(Myself(), 100)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself(), @30)
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    CreateCreatureObjectEffect("goliro01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("goliro01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("elfirg01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("elfirg01", "spfleshs", Myself())
+END
+
+IF
+  Allegiance(Myself(), ENEMY)
+  HPPercentLT(Myself(), 100)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself(), @30)
+    CreateCreatureObjectEffect("goliro01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("goliro01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("elfirg01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("elfirg01", "spfleshs", Myself())
+    CreateCreatureObjectEffect("icsalfir", "spfleshs", Myself())
+    CreateCreatureObjectEffect("icsalfir", "spfleshs", Myself())
+END
+
+
+IF
+  Allegiance(Myself(), ENEMY)
+  !GlobalTimerNotExpired("mh#SpawnTimer", "locals")
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT("orc05", %firkraag_minion_count%)
+  NumCreatureVsPartyLT("firarc01", %firkraag_minion_count%)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#SpawnTimer", "locals", %firkraag_minion_interval%)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("firarc01", 0)
+END
+
+
+IF
+  Allegiance(Myself(), ENEMY)
+  !GlobalTimerNotExpired("mh#SpawnTimer", "locals")
+  Difficulty(HARD)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT("orc05", %firkraag_minion_count%)
+  NumCreatureVsPartyLT("firarc01", %firkraag_minion_count%)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#SpawnTimer", "locals", %firkraag_minion_interval%)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("firarc01", 0)
+    CreateCreatureOffscreen("firarc01", 0)
+END
+
+
+IF
+  Allegiance(Myself(), ENEMY)
+  !GlobalTimerNotExpired("mh#SpawnTimer", "locals")
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT("orc05", %firkraag_minion_count%)
+  NumCreatureVsPartyLT("firarc01", %firkraag_minion_count%)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("mh#SpawnTimer", "locals", %firkraag_minion_interval%)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("orc05", 0)
+    CreateCreatureOffscreen("firarc01", 0)
+    CreateCreatureOffscreen("firarc01", 0)
+    CreateCreatureOffscreen("firarc01", 0)
+END
+
+

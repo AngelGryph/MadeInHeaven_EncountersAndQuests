@@ -1,0 +1,49 @@
+@0    = ~Ah, <CHARNAME> ! Alors vous êtes arrivé jusqu'ici. Pour être honnête, je ne pensais pas que vous y arriveriez. Oh et bien, ça veut dire que le prix sur votre tête est pour nous maintenant !~
+@1    = ~Plus d'assassins. Combien d'entre vous pensez-vous que j'ai tué jusqu'à présent ?~
+@2    = ~Attendez ! Qui que ce soit qui vous paie, je paierai plus !~
+@3    = ~S'il vous plaît, ne me tuez pas !~
+@4    = ~SILENCE ! Ces idiots étaient faibles !~
+@5    = ~Bien essayé, <CHARNAME>. Mais comme vous le voyez, mes gars ont tout compris.~
+@6    = ~Eh bien, <CHARNAME>, j'admets que j'étais inquiet quand j'ai appris que vous étiez notre cible, mais il semble que vous n'êtes rien d'autre qu'un faible. Il n'y aura pas de gardes ici pour vous sauver la peau !~
+@7    = ~Allez les gars, attrapez-les !~
+@8    = ~Euh, chef, ils marquent un point là. Tu te souviens de Tarnesh et Neira ?~
+@9    = ~HA ! Je doute que vous ayez autant d'or !~
+@10   = ~Hé, chef, on a un implorant ! On peut les faire supplier un peu plus ?~
+@11   = ~Bien sûr, chef !~
+@12   = ~Et Nimbul aussi ! Je veux pas déjà mourir, chef !~
+@13   = ~Ouais ! Et puis, si on vous tue, on aura votre or de toute façon !~
+@14   = ~Oh ! Oh ! Faites-les se mettre à genoux !~
+@15   = ~Comme tu veux, chef !~
+@16    = ~Drikx,
+
+
+Je vous écris car vos services sont nécessaires. Votre cible est un jeune <PRO_RACE> nommé <CHARNAME>. Vous devez le traquer et le tuer ainsi que tous ceux qui voyagent avec lui.
+
+Ne le sous-estimez pas, il est très compétent et a déjà déjoué plusieurs autres tentatives d'assassinat. Attendez-vous à la résistance d'un groupe bien préparé et lourdement armé.
+
+<CHARNAME> se dirigera très probablement vers Bois Manteau, c'est là que vous devriez tendre votre embuscade. Si vous revenez avec la preuve de sa mort, vous serez payé 1 500 pièces d'or.
+
+
+S.~~Drikx,
+
+
+Je vous écris car vos services sont nécessaires. Votre cible est une jeune <PRO_RACE> nommée <CHARNAME>. Vous devez la traquer et la tuer ainsi que tous ceux qui voyagent avec elle.
+
+Ne la sous-estimez pas, elle est très compétente et a déjà déjoué plusieurs autres tentatives d'assassinat. Attendez-vous à la résistance d'un groupe bien préparé et lourdement armé.
+
+<CHARNAME> se dirigera très probablement vers Bois Manteau, c'est là que vous devriez tendre votre embuscade. Si vous revenez avec la preuve de sa mort, vous serez payé 1 500 pièces d'or.
+
+
+S.~
+@17   = ~Drikx~
+@18   = ~Gnung~
+@19   = ~Strok~
+@20   = ~Hey Blahr, regarde ça. Quelques rats ont rampé hors de leur trou !~
+@21   = ~Ooh, T'as raison Oobah ! On les écrase ?~
+@22   = ~C'est pour ça que le fils du Meurtrier nous paie.~
+@23   = ~Et en plus, toute cette attente m'a donné faim !~
+@24   = ~Alors, on les écrase, et on les fait rôtir pour les manger ?~
+@25   = ~C'est le plan ! Maintenant on va se les faire, soeurette !~
+@26   = ~Je suis avec toi, Oobah !~
+@27   = ~Oobah~
+@28   = ~Blahr~

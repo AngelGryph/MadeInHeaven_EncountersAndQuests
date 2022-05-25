@@ -1,0 +1,130 @@
+IF
+  Allegiance(Myself, ENEMY)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(EASY)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals",1)
+    DisplayStringHead(Myself, @0)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  Global("mh#SpawnMinions", "locals", 0)
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals", 1)
+    DisplayStringHead(Myself,@0)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("hgmis01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("hgmis01", "spfleshs", Myself)
+END
+
+IF
+  Allegiance(Myself,ENEMY)  
+  Global("mh#SpawnMinions", "locals",0)
+  Difficulty(HARD)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@0)  
+    SetGlobal("mh#SpawnMinions", "locals",1)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("hgmis01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("hgmis01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("slaysh01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("slaysh01", "spfleshs", Myself)
+END
+
+IF
+  Allegiance(Myself,ENEMY)  
+  Global("mh#SpawnMinions", "locals",0)
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnMinions", "locals",1)
+    DisplayStringHead(Myself,@0)  
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("shadfi02", "spfleshs", Myself)
+    CreateCreatureObjectEffect("hgmis01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("hgmis01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("slaysh01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("slaysh01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("banshe01", "spfleshs", Myself)
+    CreateCreatureObjectEffect("banshe01", "spfleshs", Myself)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("mh#SpawnTimer", "locals")
+  Difficulty(NORMAL)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT("firwra01", %thaxll_minion_count%)
+THEN
+  RESPONSE #50
+    SetGlobalTimer("mh#SpawnTimer", "locals",%thaxll_minion_interval%)
+    CreateCreature("firwra01", [1064.743], 15)  
+    CreateCreature("firwra01", [1069.738], 15)  
+    CreateCreature("firwra01", [697.917], 13)  
+  RESPONSE #50
+    SetGlobalTimer("mh#SpawnTimer", "locals",%thaxll_minion_interval%)
+    CreateCreature("firwra01", [1064.743], 15)  
+    CreateCreature("firwra01", [697.917], 13)  
+    CreateCreature("firwra01", [692.922], 13)  
+END
+
+IF
+  Allegiance(Myself,ENEMY)  
+  !GlobalTimerNotExpired("mh#SpawnTimer", "locals")
+  Difficulty(HARD)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT("firwra01", %thaxll_minion_count%)
+THEN
+  RESPONSE #50
+    SetGlobalTimer("mh#SpawnTimer", "locals",%thaxll_minion_interval%)
+    CreateCreature("firwra01", [1059.748], 15)  
+    CreateCreature("firwra01", [1064.743], 15)  
+    CreateCreature("firwra01", [1069.738], 15)  
+    CreateCreature("firwra01", [697.917], 13)  
+    CreateCreature("firwra01", [692.922], 13)  
+  RESPONSE #50
+    SetGlobalTimer("mh#SpawnTimer", "locals",%thaxll_minion_interval%)
+    CreateCreature("firwra01", [1064.743], 15)  
+    CreateCreature("firwra01", [1069.738], 15)  
+    CreateCreature("firwra01", [682.912], 13)  
+    CreateCreature("firwra01", [697.917], 13)  
+    CreateCreature("firwra01", [692.922], 13)  
+END
+
+IF
+  Allegiance(Myself,ENEMY)  
+  !GlobalTimerNotExpired("mh#SpawnTimer", "locals")
+  Difficulty(HARDEST)
+  InActiveArea(Myself)
+  NumCreatureVsPartyLT("firwra01", %thaxll_minion_count%)
+THEN
+  RESPONSE #50
+    SetGlobalTimer("mh#SpawnTimer", "locals",%thaxll_minion_interval%)
+    CreateCreature("firwra01", [1059.748], 15)  
+    CreateCreature("firwra01", [1064.743], 15)  
+    CreateCreature("firwra01", [1069.738], 15)  
+    CreateCreature("firwra01", [697.917], 13)  
+    CreateCreature("firwra01", [692.922], 13)  
+  RESPONSE #50
+    SetGlobalTimer("mh#SpawnTimer", "locals",%thaxll_minion_interval%)
+    CreateCreature("firwra01", [1064.743], 15)  
+    CreateCreature("firwra01", [1069.738], 15)  
+    CreateCreature("firwra01", [682.912], 13)  
+    CreateCreature("firwra01", [697.917], 13)  
+    CreateCreature("firwra01", [692.922], 13)  
+END
+
+

@@ -22,22 +22,16 @@ BEGIN
   END
 
 
-  // Add legendary template to Firkraag
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#rdmin.baf"
+    location	= "scripts"
+  END
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "firkra02"
-    editstring	= ~make_legendary=>"%firkraag_legendary_rank%" enforce_xp=>10~
-  END
-
-
-  // Firkraag's minions join the battle
-
-  LAUNCH_ACTION_FUNCTION extend_area_script
-    STR_VAR
-    area	= "ar1203"
-    bottom	= "spawn_firkraag_minions"
-    location	= "scripts"
+    editstring	= ~insert_script_high=>"mh#rdmin" make_legendary=>"%firkraag_legendary_rank%" enforce_xp=>10~
   END
 END	// firkraag_battle
 
