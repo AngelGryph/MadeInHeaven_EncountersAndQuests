@@ -1,13 +1,5 @@
 DEFINE_ACTION_FUNCTION monster_variants
 BEGIN
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "setup_high_level"
-    locbase	= "shared/high_level"
-  END
-
-
-/*
   // Golden Bones (15 hd Skeleton Warrior)
 
   MAKE_PATCH
@@ -58,7 +50,6 @@ BEGIN
     creature	= "zombie=>mh#zom12 zombie01=>mh#zom12"
     edits	= "patch_data"
   END
-*/
 
 
   // Elite Orcs (12 hd orcs)
@@ -83,7 +74,44 @@ BEGIN
   END
 
 
-/*
+  // Elder Air/Earth/Fire Elementals (20 hd elementals)
+
+  MAKE_PATCH
+    level1=>20
+    xp_value=>15000
+    hitpoints=>160
+    thac0=>1
+    enforce_saves=>at_worst
+    say_both_names=>"object_index from [38 39 40]"
+    dv=>DEST_RES
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "elairg01=>mh#air20 elearg01=>mh#ear20 elfirg01=>mh#fir20"
+    edits	= "patch_data"
+  END
+ 
+
+  // Water Elementals (8/12/20 hd elementals)
+
+  MAKE_PATCH
+    level1=>"object_index from [8 12 20]"
+    thac0=>"21 - level1"
+    hitpoints=>"level1 * 8"
+    xp_value=>"(level1 - 5) * 1000"
+    enforce_saves=>always
+    say_both_names=>"object_index from [13 14 41]"
+    dv=>DEST_RES
+  END
+
+  LAUNCH_ACTION_FUNCTION clone_creature
+    STR_VAR
+    creature	= "elwatg01=>mh#wat08 elwatg01=>mh#wat12 elwatg01=>mh#wat20"
+    edits	= "patch_data"
+  END
+
+
   // Umber Hulk Elder
 
   MAKE_PATCH
@@ -102,7 +130,8 @@ BEGIN
     creature	= "umbhul01=>mh#umeld"
     edits	= "patch_data"
   END
-*/
+
+
 END	// monster_variants
 
 

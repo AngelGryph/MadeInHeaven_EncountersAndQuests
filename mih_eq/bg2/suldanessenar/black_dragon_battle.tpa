@@ -22,22 +22,16 @@ BEGIN
   END
 
 
-  // Add legendary template to Nizid
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#bdrag.baf"
+    location	= "scripts"
+  END
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "dragblac"
-    editstring	= ~make_legendary=>"%nizid_legendary_rank%" enforce_xp=>10~
-  END
-
-
-  // Firkraag's minions join the battle
-
-  LAUNCH_ACTION_FUNCTION extend_area_script
-    STR_VAR
-    area	= "ar2807"
-    bottom	= "spawn_black_dragon_minions"
-    location	= "scripts"
+    editstring	= ~insert_script_high=>"mh#bdrag" make_legendary=>"%nizid_legendary_rank%" enforce_xp=>10~
   END
 END	// black_dragon_battle
 

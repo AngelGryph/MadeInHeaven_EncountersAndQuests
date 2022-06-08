@@ -24,14 +24,14 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    file	= "mh#sdmin.baf"
+    file	= "mh#sdrag.baf"
     location	= "scripts"
   END
 
   LAUNCH_ACTION_FUNCTION edit_creature
     STR_VAR
     creature	= "dragshad"
-    editstring	= ~insert_script_high=>"mh#sdmin" make_legendary=>"%thaxll_legendary_rank%" enforce_xp=>10~
+    editstring	= ~insert_script_high=>"mh#sdrag" make_legendary=>"%thaxll_legendary_rank%" enforce_xp=>10~
   END
 END	// shadow_dragon_battle
 

@@ -39,7 +39,7 @@ BEGIN
 
     LAUNCH_ACTION_FUNCTION run
       STR_VAR
-      file	= "huecuva_levels monster_variants monsters_postproc"
+      file	= "huecuva_levels monsters_postproc"
       tra	= "monsters"
       locbase
     END
