@@ -1,7 +1,7 @@
 @0    = ~dummy~
 @1    = ~Prevent chapter 6 cutscene from moving party to Candlekeep~
 @2    = ~Monster Enhancements~
-@3    = ~Revised Lycanthropes~
+@3    = ~Revised Lycanthropes (EXPERIMENTAL)~
 @4    = ~Revised Oozes, Slimes & Jellies~
 @5    = ~Revised Corporal Undead~
 @6    = ~Revised Magical Beasts~
@@ -51,10 +51,12 @@
 @50   = ~Enhanced Battles: Ankheg Pit~
 @51   = ~Revised Liches~
 @52   = ~Enhanced Battles: Yaga-Shura's Army~
-//@53   = ~This component requires InfinityAnimations on non-EE games!~
+@53   = ~This component is not applicable to your game.~
 @54   = ~Enhanced Battles: Thieves' Maze & Undercity~
 @55   = ~Enhanced Battles: Amkethran~
 @56   = ~Revised Dragons~
 @57   = ~Enhanced Battles: Sendai's Enclave~
+@58   = ~Encounters & Quests: Shadows of Amn~
+@59   = ~Minor Quest Tweaks (SoA)~
 
 
