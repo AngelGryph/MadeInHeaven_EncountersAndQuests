@@ -23,6 +23,12 @@ BEGIN
     add_effect_global_inline=>~number_to_add=>4 opcode=>"entry_index from [28 29 85 173]" target=>1 timing=>2 parameter1=>100 parameter2=>1~
   END
 
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "demilich"
+    edits	= "patch_data"
+  END
+
 
   // Demilich Howl
 
