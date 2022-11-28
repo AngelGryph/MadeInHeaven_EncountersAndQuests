@@ -653,19 +653,3 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
-// ====================================
-// Encounters & Quests: Throne of Bhaal
-// ====================================
-
-// Minor Quest Enhancements (ToB)
-
-BEGIN @47
-GROUP @46 GAME_INCLUDES "tob"
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file		= "setup_minor_quests_tob"
-  location	= "tob/minor_quests"
-END
-
-
