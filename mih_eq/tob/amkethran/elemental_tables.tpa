@@ -11,7 +11,7 @@ BEGIN
     DECOMPILE_AND_PATCH
     BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-       ~elairg01~ ~mh#air20~
+       ~elairg01~ ~elaire01~
     END
 
   COPY_EXISTING "trtables.bcs" "override"
@@ -30,7 +30,7 @@ BEGIN
     DECOMPILE_AND_PATCH
     BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
-       ~elfirg01~ ~mh#fir20~
+       ~elfirg01~ ~elfire01~
     END
 
   LAUNCH_ACTION_FUNCTION extend_area_script

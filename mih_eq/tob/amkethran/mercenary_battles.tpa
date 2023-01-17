@@ -1,0 +1,18 @@
+DEFINE_ACTION_FUNCTION mercenary_battles
+BEGIN
+  // Captain Erelon & his archers
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "amarch01"
+    editstring	= ~add_items=>"arow15(quiver1,x20) arow15(quiver2,x20) arow15(quiver3,x20)" remove_items=>"arow01"~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "amarch02"
+    editstring	= ~add_items=>"bow17(weapon1) arow15(quiver1,x20) arow15(quiver2,x20) arow15(quiver3,x20)" remove_items=>"bow04 arow11"~
+  END
+END	// mercenary_battles
+
+

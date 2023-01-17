@@ -8,7 +8,13 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "elemental_tables vongoethe_battle"
+    file	= "elder_elementals"
+    locbase	= "shared/monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "elemental_tables mercenary_battles vongoethe_battle"
     tra		= "amkethran"
   END
 END	// setup_amkethran
