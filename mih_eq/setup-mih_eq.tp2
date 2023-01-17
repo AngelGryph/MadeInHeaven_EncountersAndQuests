@@ -43,6 +43,7 @@ LANGUAGE "Russian (yota13)"
 // Revised Corporal Undead
 
 BEGIN @5
+DESIGNATED 105
 GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
@@ -55,6 +56,7 @@ END
 // Revised Dragons
 
 BEGIN @56
+DESIGNATED 156
 GROUP @2
 
 REQUIRE_PREDICATE GAME_INCLUDES "sod" OR GAME_INCLUDES "bg2" @53
@@ -69,6 +71,7 @@ END
 // Revised Golems
 
 BEGIN @43
+DESIGNATED 143
 GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
@@ -81,6 +84,7 @@ END
 // Revised Liches
 
 BEGIN @51
+DESIGNATED 151
 GROUP @2
 
 REQUIRE_PREDICATE GAME_INCLUDES "sod" OR GAME_INCLUDES "bg2" @53
@@ -95,6 +99,7 @@ END
 // Revised Lycanthropes
 
 BEGIN @3
+DESIGNATED 103
 GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
@@ -107,6 +112,7 @@ END
 // Revised Magical Beasts
 
 BEGIN @6
+DESIGNATED 106
 GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
@@ -119,6 +125,7 @@ END
 // Revised Monstrous Spiders
 
 BEGIN @7
+DESIGNATED 107
 GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
@@ -131,6 +138,7 @@ END
 // Revised Oozes, Slimes & Jellies
 
 BEGIN @4
+DESIGNATED 104
 GROUP @2
 
 LAUNCH_ACTION_FUNCTION run
@@ -143,6 +151,7 @@ END
 // Revised Vampires
 
 BEGIN @8
+DESIGNATED 108
 GROUP @2
 
 REQUIRE_PREDICATE GAME_INCLUDES "sod" OR GAME_INCLUDES "bg2" @53
@@ -161,6 +170,7 @@ END
 // Enhanced Battles: Ankheg Pit
 
 BEGIN @50
+DESIGNATED 150
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -173,6 +183,7 @@ END
 // Enhanced Battles: Candlekeep Catacombs
 
 BEGIN @9
+DESIGNATED 109
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -185,6 +196,7 @@ END
 // Enhanced Battles: Mutamin's Garden
 
 BEGIN @12
+DESIGNATED 112
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -197,6 +209,7 @@ END
 // Enhanced Battles: Ramazith's Tower
 
 BEGIN @13
+DESIGNATED 113
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -209,6 +222,7 @@ END
 // Enhanced Battles: Spider Plague
 
 BEGIN @49
+DESIGNATED 149
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -221,6 +235,7 @@ END
 // Enhanced Battles: Thieves' Maze & Undercity
 
 BEGIN @54
+DESIGNATED 154
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -233,6 +248,7 @@ END
 // Enhanced Battles: Ulcaster Ruins
 
 BEGIN @15
+DESIGNATED 115
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -245,6 +261,7 @@ END
 // Enhanced Battles: Xvart Village
 
 BEGIN @16
+DESIGNATED 116
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -257,6 +274,7 @@ END
 // Enhanced Battles: Zombie Farm
 
 BEGIN @17
+DESIGNATED 117
 GROUP @10 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -269,6 +287,7 @@ END
 // Enhanced Battles: Durlag's Tower
 
 BEGIN @19
+DESIGNATED 119
 GROUP @10 GAME_INCLUDES "totsc"
 
 LAUNCH_ACTION_FUNCTION run
@@ -285,6 +304,7 @@ END
 // The Surgeon's Plight
 
 BEGIN @14
+DESIGNATED 114
 GROUP @44 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -297,6 +317,7 @@ END
 // Sarevok's Assassins
 
 BEGIN @11
+DESIGNATED 111
 GROUP @44 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -309,6 +330,7 @@ END
 // Prevent automatic travel to Candlekeep in ch6
 
 BEGIN @1
+DESIGNATED 101
 GROUP @44 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -321,6 +343,7 @@ END
 // Minor Quest Enhancements (BG1)
 
 BEGIN @18
+DESIGNATED 118
 GROUP @44 GAME_INCLUDES "bg1"
 
 LAUNCH_ACTION_FUNCTION run
@@ -337,6 +360,7 @@ END
 // Enhanced Battles: Bridgefort
 
 BEGIN @27
+DESIGNATED 127
 GROUP @21 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -349,6 +373,7 @@ END
 // Enhanced Battles: Cyric's Temple
 
 BEGIN @26
+DESIGNATED 126
 GROUP @21 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -361,6 +386,7 @@ END
 // Enhanced Battles: Dwarven Dig Site
 
 BEGIN @24
+DESIGNATED 124
 GROUP @21 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -373,6 +399,7 @@ END
 // Enhanced Battles: Korlasz' Tomb
 
 BEGIN @23
+DESIGNATED 123
 GROUP @21 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -385,6 +412,7 @@ END
 // Enhanced Battles: Vampire Encounters
 
 BEGIN @25
+DESIGNATED 125
 GROUP @21 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -401,6 +429,7 @@ END
 // Complete more/all Vision Quest encounters
 
 BEGIN @22
+DESIGNATED 122
 GROUP @45 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -413,6 +442,7 @@ END
 // Increase Enemy Group Size
 
 BEGIN @20
+DESIGNATED 120
 GROUP @45 GAME_INCLUDES "sod"
 
 LAUNCH_ACTION_FUNCTION run
@@ -429,6 +459,7 @@ END
 // Enhanced Battles: Athkatla Liches
 
 BEGIN @37
+DESIGNATED 137
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -441,6 +472,7 @@ END
 // Enhanced Battles: Firkraag's Lair
 
 BEGIN @34
+DESIGNATED 134
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -453,6 +485,7 @@ END
 // Enhanced Battles: Graveyard Catacombs
 
 BEGIN @28
+DESIGNATED 128
 GROUP @29 GAME_INCLUDES "bg2"
 
 
@@ -466,6 +499,7 @@ END
 // Enhanced Battles: Lower Reaches
 
 BEGIN @30
+DESIGNATED 130
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -478,6 +512,7 @@ END
 // Enhanced Battles: Slum Sewers
 
 BEGIN @31
+DESIGNATED 131
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -490,6 +525,7 @@ END
 // Enhanced Battles: Spellhold
 
 BEGIN @35
+DESIGNATED 135
 GROUP @29 GAME_INCLUDES "bg2"
 
 
@@ -503,6 +539,7 @@ END
 // Enhanced Battles: Suldanessenar
 
 BEGIN @38
+DESIGNATED 138
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -515,6 +552,7 @@ END
 // Enhanced Battles: Temple Ruins
 
 BEGIN @33
+DESIGNATED 133
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -527,6 +565,7 @@ END
 // Enhanced Battles: Trademeet
 
 BEGIN @32
+DESIGNATED 132
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -539,6 +578,7 @@ END
 // Enhanced Battles: Underdark
 
 BEGIN @36
+DESIGNATED 136
 GROUP @29 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -555,6 +595,7 @@ END
 // Minor Quest Enhancements (BG2)
 
 BEGIN @59
+DESIGNATED 159
 GROUP @58 GAME_INCLUDES "bg2"
 
 LAUNCH_ACTION_FUNCTION run
@@ -572,6 +613,7 @@ END
 // Enhanced Battles: Amkethran
 
 BEGIN @55
+DESIGNATED 155
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -584,6 +626,7 @@ END
 // Enhanced Battles: Forest of Mir
 
 BEGIN @48
+DESIGNATED 148
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -596,6 +639,7 @@ END
 // Enhanced Battles: Pocket Plane
 
 BEGIN @41
+DESIGNATED 141
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -608,6 +652,7 @@ END
 // Enhanced Battles: Saradush
 
 BEGIN @42
+DESIGNATED 142
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -620,6 +665,7 @@ END
 // Enhanced Battles: Sendai's Enclave
 
 BEGIN @57
+DESIGNATED 157
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -632,6 +678,7 @@ END
 // Enhanced Battles: Watcher's Keep
 
 BEGIN @39
+DESIGNATED 139
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
@@ -644,6 +691,7 @@ END
 // Enhanced Battles: Yaga-Shura's Army
 
 BEGIN @52
+DESIGNATED 152
 GROUP @40 GAME_INCLUDES "tob"
 
 LAUNCH_ACTION_FUNCTION run
