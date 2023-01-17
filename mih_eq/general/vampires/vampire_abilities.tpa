@@ -19,22 +19,7 @@ BEGIN
     delete_effect=>~opcode is_in [31 297 346 37]~
     add_effect_global_inline'1=>~opcode=>31 target=>1 timing=>2 parameter1=>50 parameter2=>1~
     add_effect_global_inline'2=>~opcode=>297 target=>1 timing=>2 parameter2=>1~
-  END
-
-
-  ACTION_IF ENGINE_IS "bgee bg2ee"
-  BEGIN
-    ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
-    BEGIN
-      add_effect_global_inline'3=>~opcode=>346 target=>1 timing=>2 parameter1=>4 mode=>6~
-    END
-  END
-  ELSE
-  BEGIN
-    ACTION_DEFINE_ASSOCIATIVE_ARRAY patch_data
-    BEGIN
-      add_effect_global_inline'3=>~opcode=>37 target=>1 timing=>2 parameter1=>4~
-    END
+    add_effect_global_inline'3=>~opcode=>"if %enhanced_edition% then 346 else 37" target=>1 timing=>2 parameter1=>4 mode=>6~
   END
 
 
@@ -47,11 +32,11 @@ BEGIN
 
   // Vampire Paws
   //
-  // heal vampire 5 hp for every level drained
+  // heal vampire 10 hp for every level drained
 
   MAKE_PATCH
     delete_effect=>~opcode = 17 and target = 1~
-    clone_effect_inline=>~match=>"opcode = 216" opcode=>17 target=>1 parameter1=>"parameter1 * 5" parameter2=>0~
+    clone_effect_inline=>~match=>"opcode = 216" opcode=>17 target=>1 parameter1=>"parameter1 * 10" parameter2=>0~
   END
 
 

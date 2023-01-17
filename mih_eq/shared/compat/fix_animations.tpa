@@ -54,7 +54,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION log_this
       STR_VAR
       file		= "animations.txt"
-      input		= ~Using animation "%animation% for creature "%RESREF%".~
+      input		= ~Using animation "%animation%" for creature "%RESREF%".~
       repeat		= "no"
     END
 

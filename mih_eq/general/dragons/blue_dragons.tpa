@@ -10,7 +10,7 @@ BEGIN
   MAKE_PATCH
     patch_ability_inline=>~ability_dicenum=>3 ability_dicesize=>8~
     delete_effect=>~opcode = 12~
-    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00010000 dicenum=>1 dicesize=>4~
+    add_effect_inline=>~opcode=>12 target=>2 timing=>1 parameter2=>0x00040000 dicenum=>1 dicesize=>4~
   END
 
   LAUNCH_ACTION_FUNCTION edit_item
