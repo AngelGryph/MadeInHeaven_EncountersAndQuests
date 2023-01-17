@@ -1,0 +1,42 @@
+DEFINE_ACTION_FUNCTION cyric_challenge
+BEGIN
+  MAKE_PATCH
+    patch_effect_inline'25=>~match=>"opcode = 25" duration=>30 parameter1=>5~
+    patch_effect_inline'12=>~match=>"opcode = 12" dicenum=>5 dicesize=>6~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_item
+    STR_VAR
+    item	= "chalcy1 chalcy2"
+    edits	= "patch_data"
+  END
+
+  MAKE_PATCH
+    replace_items=>~leat14(armor) belt11(belt) ring31(lring) potn55(qitem1,x5)~
+    patch_item_inline=>~unstealable=>1 undroppable=>1~
+  END
+
+  LAUNCH_ACTION_FUNCTION edit_creature
+    STR_VAR
+    creature	= "chalcy02"
+    edits	= "patch_data"
+  END
+
+  LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+    STR_VAR
+    script	= "ar4500"
+    match	= ~Global("BeginChallenge4","GLOBAL",4)~
+    swap_out	= ~SmallWait(5)~
+    swap_in	= ~CreateVisualEffect("SPDIMNDR",[3067.2310]) CreateVisualEffect("SPDIMNDR",[3586.2231]) CreateVisualEffect("SPDIMNDR",[3501.2432]) SmallWait(5) CreateCreature("chalcy02",[3067.2310],S) CreateCreature("chalcy02",[3586.2231],S) CreateCreature("chalcy02",[3501.2432],S)~
+  END
+
+  LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+    STR_VAR
+    script	= "ar4500"
+    match	= ~Global("BeginChallenge4","GLOBAL",5)~
+    swap_out	= ~NumDead("chalcy02",3)~
+    swap_in	= ~NumDead("chalcy02",6)~
+  END
+END	// cyric_challenge
+
+

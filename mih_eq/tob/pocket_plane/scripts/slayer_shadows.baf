@@ -1,0 +1,43 @@
+IF
+  Global("mh#SpawnShadows", "locals", 0)
+  Difficulty(NORMAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnShadows", "locals", 1)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    Continue()
+END
+
+IF
+  Global("mh#SpawnShadows", "locals", 0)
+  Difficulty(HARD)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnShadows", "locals", 1)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    Continue()
+END
+
+IF
+  Global("mh#SpawnShadows", "locals", 0)
+  Difficulty(HARDEST)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnShadows", "locals", 1)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    CreateCreatureObject("slaysh01", Myself(), 0, 0, 0)
+    Continue()
+END
+
+
