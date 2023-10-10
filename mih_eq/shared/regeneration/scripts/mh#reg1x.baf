@@ -1,3 +1,11 @@
+IF !HasItem("minhp1", Myself)
+   !HasItem("mh#regen", Myself)
+   GlobalLT("mh#regenerate_state", "LOCALS", 2)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself, REGENERATE_RISE)
+END
+
 IF HasItem("minhp1", Myself)
    !Global("mh#regenerate_state", "LOCALS", 0)
 THEN

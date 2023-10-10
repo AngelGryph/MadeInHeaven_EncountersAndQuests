@@ -11,7 +11,7 @@ BEGIN
   general		=> undead
   strip_script		=> "dreadwlf"
   insert_script_high	=> "mh#reg1x"
-  replace_items		=> "mh#drwlf(weapon1) ring95(lring) trollimm(rring) minhp1(amulet)"
+  replace_items		=> "mh#drwlf(weapon1) ring95(lring) trollimm(rring)"
 END
 
 

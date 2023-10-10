@@ -13,7 +13,7 @@ BEGIN
     intelligence=>14
     wisdom=>2
     charisma=>6
-    replace_items=>"immune1(lring) golstone(rring) minhp1(amulet)"
+    replace_items=>"immune1(lring) golstone(rring)"
     insert_script=>"mh#regen"
   END
 
