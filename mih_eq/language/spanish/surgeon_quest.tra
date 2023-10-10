@@ -2,7 +2,7 @@
 @1    = ~Su guarida se encuentra al este de aquí, en las profundidades de las antiguas minas del clan Orothiar.  Creo que allí encontrarás lo que buscas.  Pero ten cuidado, ha reunido a muchos aliados y secuaces a su alrededor.~
 @2    = ~Ojalá hubiera tenido la fuerza para que se hiciera justicia.  Pero no aproveché la oportunidad cuando la tuve.  Parece que eres mi última esperanza para detener su maldad.~
 @3    = ~No soy un asesino, pero si tu hermano es tan malvado como dices, me encargaré de que se haga justicia.~
-@4    = ~No me gusta hacer el trabajo sucio por usted, pero yo iba a derrotar a ese mal lugar de todos modos, así que supongo que estoy en.~
+@4    = ~No me gusta hacer el trabajo sucio , pero yo iba a derrotar al mal que azota ese lugar de todos modos, así que supongo que voy a ello.~
 @5    = ~¡No te atrevas a intervenir, es mío!~
 @6    = ~Parece que mi hermano también te ha agraviado.  No me extraña.  No sé si es la justicia o la venganza lo que te mueve, y supongo que al final no importa.~
 @7    = ~Aquí, he preparado estos pergaminos para ti.  Espero que te ayuden a sobrevivir lo suficiente para hacer lo que debe hacerse.~
@@ -20,11 +20,11 @@ Hoy he vuelto a encontrarme con el Cirujano, en lo más profundo del Bosques de l
 @17   = ~¿Espero que lo hayas quemado en una hoguera?~
 @18   = ~¿¡Por favor dime que no lo resucitaste!?~
 @19   = ~Decidí darle un entierro decente.  Supuse que al menos le debía eso, y una parte de mí temía que también resucitara como un horror muerto viviente si no lo hacía.  Su maldad no debería resurgir nunca más.~
-@20   = ~De hecho, me inclinaba a hacerlo.  He oído demasiadas historias de magos malvados que resucitan de entre los muertos de alguna forma espantosa.  Pero al final no pude, y lo enterré en su lugar.~
+@20   = ~De hecho, me inclinaba a hacerlo.  He oído demasiadas historias de magos malvados que resucitan de entre los muertos de una forma espantosa.  Pero al final no pude, y lo enterré en el lugar.~
 @21   = ~¡Cielos, no!  Aunque sea mi hermano, no seré responsable de que su maldad vuelva a nuestro mundo.  Enterré el cuerpo y realicé ritos para asegurar que no se levantará de nuevo.~
-@22   = ~Ahora debería estar descansando en paz, al menos tanto como puede descansar un hombre tan malvado como él.  Espero que su alma se salve de los horrores de los Planos Inferiores, pero eso lo decidirán los dioses.~
+@22   = ~Ahora debería estar descansando en paz, al menos tanto como pueda descansar un hombre tan malvado como él.  Espero que su alma se salve de los horrores de los Planos Inferiores, pero eso lo decidirán los dioses.~
 @23   = ~Mientras realizaba los ritos, encontré una pequeña bolsa escondida en su cuerpo.  Contenía estas gemas, sin duda obtenidas a través de alguna otra mala acción suya.  Quiero que las tengas, ya que eres una de las personas más nobles que he conocido.  Espero que te ayuden en tu gesta.~
-@24   = ~Bueno, aunque sus malos caminos han terminado, mi viaje de penitencia debe continuar.  Me despido, <CHARNAME>.~
+@24   = ~Bueno, aunque el mal andar de mi hermano ha terminado, mi viaje de penitencia debe continuar.  Me despido, <CHARNAME>.~
 @25   = ~La difícil situación del cirujano
 
 Volví a encontrarme con el Cirujano en la posada del Mezon del Brazo Amigo. Me dijo que el río había arrastrado el cuerpo de su hermano Davaeorn y le dio la extremaunción y un entierro decente.  Esperemos que esto sea suficiente y el malvado mago no resucite en alguna forma de muerto viviente.  El Cirujano se despidió de mí y partió para continuar su viaje de penitencia.~
