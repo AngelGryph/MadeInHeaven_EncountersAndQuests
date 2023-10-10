@@ -1,0 +1,36 @@
+@0    = ~Esta es la daga que te dio el hombre presa del pánico antes de marcharse a toda prisa.  El arma está bien hecha, pero tiene un diseño arcaico poco habitual, y se han grabado runas en la hoja ondulada.
+
+ESTADÍSTICAS:
+
+Habilidades de combate:
+- 20% de cambio de 1d4 de daño de fuego por impacto
+
+THAC0: +1
+Daño: 1d4 (perforante)
+Factor de velocidad: 2
+Tipo de competencia: Daga
+Tipo: Daga A una mano
+Requiere
+ 3 Fuerza
+
+Peso: 1~
+@1    = ~Esta es la daga de Nestor que recuperaste del ankheg que lo mató.  Un arma maestra, esta daga parece haber sido atesorada y cuidada muy bien.  Tal vez si se la das a Quinn, pueda tener un cierre.
+
+ESTADÍSTICAS:
+
+THAC0: +1
+Daño: 1d4 (perforante)
+Factor de velocidad: 2
+Tipo de competencia: Daga
+Tipo: Daga A una mano
+Requiere
+ 3 Fuerza
+
+Peso: 1~
+@2    = ~¡Asesino de mi gente!  ¡Muere como debes!~
+@3    = ~¿Qué buscas aquí, <RACE>?  Estos antiguos bosques no son el lugar para los de tu clase.~
+@4    = ~No quiero hacer daño, gentil espíritu del bosque.  Por favor, déjame pasar.~
+@5    = ~¡Fuera de mi camino si sabes lo que te conviene!~
+@6    = ~Mm, no eres como los profanadores, al menos muestras algo de respeto.  Muy bien, voy a tolerar su presencia por ahora.  ¡Pero será mejor que tengan cuidado!~
+@7    = ~Eres muy diferente de los profanadores.  Por favor, ten cuidado en estos bosques.  Toma, esta poción podría ayudarte.~
+@8    = ~¡A mí, animales del bosque!  ¡Juntos purgaremos a estos profanadores de los bosques!~

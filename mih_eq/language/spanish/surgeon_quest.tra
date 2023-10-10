@@ -1,0 +1,30 @@
+@0    = ~Ah, <CHARNAME>.  Pensé que aparecerías por aquí tarde o temprano.  Para bien o para mal, parece que estás destinado a entrar en conflicto con mi hermano....~
+@1    = ~Su guarida se encuentra al este de aquí, en las profundidades de las antiguas minas del clan Orothiar.  Creo que allí encontrarás lo que buscas.  Pero ten cuidado, ha reunido a muchos aliados y secuaces a su alrededor.~
+@2    = ~Ojalá hubiera tenido la fuerza para que se hiciera justicia.  Pero no aproveché la oportunidad cuando la tuve.  Parece que eres mi última esperanza para detener su maldad.~
+@3    = ~No soy un asesino, pero si tu hermano es tan malvado como dices, me encargaré de que se haga justicia.~
+@4    = ~No me gusta hacer el trabajo sucio por usted, pero yo iba a derrotar a ese mal lugar de todos modos, así que supongo que estoy en.~
+@5    = ~¡No te atrevas a intervenir, es mío!~
+@6    = ~Parece que mi hermano también te ha agraviado.  No me extraña.  No sé si es la justicia o la venganza lo que te mueve, y supongo que al final no importa.~
+@7    = ~Aquí, he preparado estos pergaminos para ti.  Espero que te ayuden a sobrevivir lo suficiente para hacer lo que debe hacerse.~
+@8    = ~La difícil situación del cirujano
+
+Hoy he vuelto a encontrarme con el Cirujano, en lo más profundo del Bosques de las Capas.  Me ha contado que su malvado hermano tiene una especie de guarida, al parecer en el fondo de una antigua mina que antaño perteneció a los enanos del clan Orothiar.  Esto probablemente significa que su hermano está trabajando para el Trono de Hierro.  El Cirujano me advirtió de que su hermano ha reunido a bastantes secuaces y que debería esperar una fuerte resistencia, luego me dio algunos pergaminos de curación para ayudarnos a mantenernos con vida allí dentro.  Espero que sea suficiente...~
+@9    = ~He hecho lo que he podido por ti, ahora mi viaje de penitencia debe continuar.  Pero antes de irme, ¿necesitas alguna curación?~
+@10   = ~Claro, nos vendría bien tu ayuda.  Estos bosques no han sido amables con nosotros.~
+@11   = ~Gracias, pero por ahora estamos bien.~
+@12   = ~Muy bien, quédate quieto y déjame hacer mi trabajo.~
+@13   = ~Entonces me despido de ti por ahora, aunque tengo la sensación de que nos volveremos a ver.~
+@14   = ~Ah, <CHARNAME>.  Esperaba encontrarme contigo aquí.~
+@15   = ~Cuando bajaba por la orilla del río, la corriente empezó a arrastrar cadáveres.  Uno de ellos llegó a la orilla unos cientos de metros por delante de mí.  Era el de mi hermano.  Karma o destino cruel, no lo sé.~
+@16   = ~¿Qué hiciste?~
+@17   = ~¿Espero que lo hayas quemado en una hoguera?~
+@18   = ~¿¡Por favor dime que no lo resucitaste!?~
+@19   = ~Decidí darle un entierro decente.  Supuse que al menos le debía eso, y una parte de mí temía que también resucitara como un horror muerto viviente si no lo hacía.  Su maldad no debería resurgir nunca más.~
+@20   = ~De hecho, me inclinaba a hacerlo.  He oído demasiadas historias de magos malvados que resucitan de entre los muertos de alguna forma espantosa.  Pero al final no pude, y lo enterré en su lugar.~
+@21   = ~¡Cielos, no!  Aunque sea mi hermano, no seré responsable de que su maldad vuelva a nuestro mundo.  Enterré el cuerpo y realicé ritos para asegurar que no se levantará de nuevo.~
+@22   = ~Ahora debería estar descansando en paz, al menos tanto como puede descansar un hombre tan malvado como él.  Espero que su alma se salve de los horrores de los Planos Inferiores, pero eso lo decidirán los dioses.~
+@23   = ~Mientras realizaba los ritos, encontré una pequeña bolsa escondida en su cuerpo.  Contenía estas gemas, sin duda obtenidas a través de alguna otra mala acción suya.  Quiero que las tengas, ya que eres una de las personas más nobles que he conocido.  Espero que te ayuden en tu gesta.~
+@24   = ~Bueno, aunque sus malos caminos han terminado, mi viaje de penitencia debe continuar.  Me despido, <CHARNAME>.~
+@25   = ~La difícil situación del cirujano
+
+Volví a encontrarme con el Cirujano en la posada del Mezon del Brazo Amigo. Me dijo que el río había arrastrado el cuerpo de su hermano Davaeorn y le dio la extremaunción y un entierro decente.  Esperemos que esto sea suficiente y el malvado mago no resucite en alguna forma de muerto viviente.  El Cirujano se despidió de mí y partió para continuar su viaje de penitencia.~

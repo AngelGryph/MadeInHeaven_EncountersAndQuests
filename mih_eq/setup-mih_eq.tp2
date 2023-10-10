@@ -34,6 +34,12 @@ LANGUAGE "Russian (yota13)"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 	 "mih_eq/language/russian/setup-mih_eq.tra"
 	 "weidu_external/lang/mih_eq/russian/setup-mih_eq.tra"
+LANGUAGE "Spanish (alaisFcZ)"
+         "spanish"
+	 "mih_eq/language/english/setup-mih_eq.tra"
+	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
+	 "mih_eq/language/spanish/setup-mih_eq.tra"
+	 "weidu_external/lang/mih_eq/spanish/setup-mih_eq.tra"
 
 
 // =============================
