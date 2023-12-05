@@ -1,25 +1,121 @@
 DEFINE_ACTION_FUNCTION setup_spiders
 BEGIN
-  LAUNCH_ACTION_FUNCTION run
+  LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    file	= "setup_high_level"
-    locbase	= "shared/high_level"
+    ini			= "spider_thac0_bonus"
+    RET
+    spider_thac0_bonus	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "spider_ac_bonus"
+    RET
+    spider_ac_bonus	= value
+  END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "spider_physical_resistance"
+    RET
+    spider_physical_resistance	= value
+  END
+
+  // Read in patching blocks
+
+  ACTION_BASH_FOR "%MOD_FOLDER%/%component_loc%/patches" "^.*\.tph$"
+  BEGIN
+    INCLUDE "%BASH_FOR_FILESPEC%"
   END
 
 
-  LAUNCH_ACTION_FUNCTION grand_unified_installer
-    STR_VAR
-    copy_files	= ""
-    tra		= "magical_beasts"
-  END
+  // Search and patch
 
-  OUTER_SET macro_spellcodes_read=0
-  LAUNCH_ACTION_MACRO read_in_spellcodes
+  COPY_EXISTING_REGEXP "^.*\.cre$" "override"
+    LAUNCH_PATCH_FUNCTION CRE_read_race
+      RET race	= value
+    END
 
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "spider_revisions spiders_postproc"
-  END
+    LAUNCH_PATCH_FUNCTION CRE_read_class
+      RET class	= value
+    END
+
+    PATCH_MATCH "%class%"
+    WITH
+      "spider_giant" WHEN ("%SOURCE_RES%" STRING_EQUAL_CASE "bdspidga")
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a gargantuan spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "gargantuan_spider"
+        END
+      END
+
+      "spider_giant" WHEN ("%race%" STRING_EQUAL_CASE "spider")
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a giant spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "giant_spider"
+	END
+      END
+	
+      "spider_huge" WHEN ("%race%" STRING_EQUAL_CASE "spider")
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a huge spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "huge_spider"
+	END
+      END
+	
+      "spider_phase" WHEN (("%SOURCE_RES%" STRING_EQUAL_CASE "smspid02") OR ("%SOURCE_RES%" STRING_EQUAL_CASE "spidvo01") OR ("%SOURCE_RES%" STRING_EQUAL_CASE "ohbmena7"))
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a vortex spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "vortex_spider"
+	END
+      END
+	
+      "spider_phase" WHEN ("%race%" STRING_EQUAL_CASE "spider")
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a phase spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "phase_spider"
+	END
+      END
+
+      "spider_sword" WHEN ("%race%" STRING_EQUAL_CASE "spider")
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a sword spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "sword_spider"
+	END
+      END
+
+      "spider_wraith" WHEN ("%race%" STRING_EQUAL_CASE "spider")
+      BEGIN
+	PATCH_PRINT "%SOURCE_RES% appears to be a wraith spider; applying patches."
+	LAUNCH_PATCH_FUNCTION apply_patches
+	  STR_VAR
+	  file_ext="CRE"
+	  edits = "wraith_spider"
+	END
+      END
+
+      DEFAULT
+    END
+
+    BUT_ONLY_IF_IT_CHANGES
 END	// setup_spiders
 
 

@@ -2,9 +2,9 @@ DEFINE_ACTION_FUNCTION astral_phase_spiders
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini			= "spider_hd_bonus"
+    ini			= "spider_thac0_bonus"
     RET
-    spider_hd_bonus	= value
+    spider_thac0_bonus	= value
   END
 
   LAUNCH_ACTION_FUNCTION check_ini
@@ -13,6 +13,14 @@ BEGIN
     RET
     spider_ac_bonus	= value
   END
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini			= "spider_physical_resistance"
+    RET
+    spider_physical_resistance	= value
+  END
+
 
   MAKE_PATCH
     patch_ability_inline=>~ability_dicenum=>"ability_dicenum * 2"~
@@ -26,17 +34,12 @@ BEGIN
   END
 
   MAKE_PATCH
-    level1GT=>"10 + %spider_hd_bonus%"
-    enforce_xp=>6
-    hp_maxGT=>"level1 * 7 + 8"
-    hp_currentGT=>"level1 * 7 + 8"
-    thac0LT=>"19 - level1"	// Two better due to 10+8 hd
-    ac_naturalLT=>"3 - %spider_ac_bonus%"
-    ac_effectiveLT=>"3 - %spider_ac_bonus%"
-    ac_vs_missiles=>"-4"
-    enforce_saves=>at_worst
-    resist_crushing=>50
-    resist_missile=>50
+    thac0LT		=> "8 - %spider_thac0_bonus%"
+    ac			=> "3 - %spider_ac_bonus%"
+    ac_vs_missiles	=> "-4"
+    resist_crushing	=> "%spider_physical_resistance%"
+    resist_piercing	=> "%spider_physical_resistance%"
+    resist_slashing	=> "%spider_physical_resistance%"
     resist_magic=>20
     replace_items=>"mh#spdas(weapon1)"
   END

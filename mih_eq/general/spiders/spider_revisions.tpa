@@ -2,7 +2,7 @@ DEFINE_ACTION_FUNCTION spider_revisions
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
-    ini			= "spider_hd_bonus"
+    ini			= "spider_thac0_bonus"
     RET
     spider_hd_bonus	= value
   END

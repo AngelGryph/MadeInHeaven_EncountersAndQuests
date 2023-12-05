@@ -2,14 +2,12 @@ ACTION_CLEAR_ARRAY wraith_spider
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY wraith_spider
 BEGIN
-  levelGT		=> "3 + %spider_hd_bonus%"
-  enforce_hp		=> at_worst
-  enforce_thac0		=> at_worst
-  enforce_saves		=> at_worst
-  hp_plus		=> 2
-  enforce_xp		=> 6
+  thac0LT		=> "17 - %spider_thac0_bonus%"
   ac			=> "5 - %spider_ac_bonus%"
   ac_vs_missiles	=> "-2"
+  resist_crushing	=> "%spider_physical_resistance%"
+  resist_piercing	=> "%spider_physical_resistance%"
+  resist_slashing	=> "%spider_physical_resistance%"
   general		=> undead
   resist_cold		=> 100
   resist_magic_cold	=> 100

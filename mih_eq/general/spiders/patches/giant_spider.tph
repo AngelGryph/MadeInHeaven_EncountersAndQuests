@@ -2,12 +2,10 @@ ACTION_CLEAR_ARRAY giant_spider
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY giant_spider
 BEGIN
-  levelGT		=> "4 + %spider_hd_bonus%"
-  enforce_hp		=> at_worst
-  enforce_thac0		=> at_worst
-  enforce_saves		=> at_worst
-  hp_plus		=> 4
-  enforce_xp		=> 4
+  thac0LT		=> "15 - %spider_thac0_bonus%"
   ac			=> "4 - %spider_ac_bonus%"
   ac_vs_missiles	=> "-2"
+  resist_crushing	=> "%spider_physical_resistance%"
+  resist_piercing	=> "%spider_physical_resistance%"
+  resist_slashing	=> "%spider_physical_resistance%"
 END

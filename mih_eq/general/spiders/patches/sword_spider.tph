@@ -2,14 +2,12 @@ ACTION_CLEAR_ARRAY sword_spider
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY sword_spider
 BEGIN
-  levelGT		=> "5 + %spider_hd_bonus%"
-  enforce_hp		=> at_worst
-  enforce_thac0		=> at_worst
-  enforce_saves		=> at_worst
-  hp_plus		=> 5
-  enforce_xp		=> 4
+  thac0LT		=> "15 - %spider_thac0_bonus%"
   ac			=> "3 - %spider_ac_bonus%"
   ac_vs_missiles	=> "-2"
+  resist_crushing	=> "%spider_physical_resistance%"
+  resist_piercing	=> "%spider_physical_resistance%"
+  resist_slashing	=> "%spider_physical_resistance%"
 END
 
 
