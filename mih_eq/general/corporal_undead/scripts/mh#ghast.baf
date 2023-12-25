@@ -1,9 +1,0 @@
-IF
-  Delay(15)
-THEN
-  RESPONSE #100
-    ReallyForceSpell(Myself, GHAST_STENCH)
-    Continue()
-END
-
-

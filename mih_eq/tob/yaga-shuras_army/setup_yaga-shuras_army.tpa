@@ -1,9 +1,0 @@
-DEFINE_ACTION_FUNCTION setup_yaga-shuras_army
-BEGIN
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "enhance_yagas_army expand_yagas_army"
-  END
-END	// setup_yaga-shuras_army
-
-

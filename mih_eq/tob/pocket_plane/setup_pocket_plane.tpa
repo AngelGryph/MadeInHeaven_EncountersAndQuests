@@ -1,9 +1,0 @@
-DEFINE_ACTION_FUNCTION setup_pocket_plane
-BEGIN
-  LAUNCH_ACTION_FUNCTION run
-    STR_VAR
-    file	= "retribution_challenge sarevok_challenge slayer_challenge cyric_challenge"
-  END
-END	// setup_pocket_plane
-
-
