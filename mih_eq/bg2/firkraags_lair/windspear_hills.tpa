@@ -3,13 +3,13 @@ BEGIN
   APPEND_COL "spawngrp.2da" "$ $ RDBasil  60 basles01 basles01 basgrt01 * * * * *" UNLESS "RDBasil"
   APPEND_COL "spawngrp.2da" "$ $ RDAnkheg 60 ankheg01 ankheg01 ankheg01 ankheg01 ankheg01 * * *" UNLESS "RDAnkheg"
 
-  ADD_JOURNAL @5 @8 @14 @16
-
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
     file	= "windspear_hills.d"
     location	= "dialog"
   END
+
+  ADD_JOURNAL @5 @8 @14 @16
 
   LAUNCH_ACTION_FUNCTION install_creature
     STR_VAR

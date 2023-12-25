@@ -2,7 +2,7 @@ ACTION_CLEAR_ARRAY huge_spider
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY huge_spider
 BEGIN
-  thac0LT		=> "19 - %spider_thac0_bonus%"
+  thac0			=> "19 - %spider_thac0_bonus%"
   ac			=> "6 - %spider_ac_bonus%"
   ac_vs_missiles	=> "-2"
   resist_crushing	=> "%spider_physical_resistance%"

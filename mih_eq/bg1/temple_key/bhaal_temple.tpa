@@ -5,10 +5,10 @@ COPY "%MOD_FOLDER%/items/mh#btkey.itm" "override"
   SAY IDENTIFIED_DESC @1
 
 
-ADD_JOURNAL @1 @7 USING "%MOD_FOLDER%/language/%LANGUAGE%/temple_key_quest.tra"
-
 COMPILE "%MOD_FOLDER%/scripts/mh#temdr.baf"
         "%MOD_FOLDER%/dialog/temple_key_quest.d"
+
+ADD_JOURNAL @1 @7 USING "%MOD_FOLDER%/language/%LANGUAGE%/temple_key_quest.tra"
 
 LAUNCH_ACTION_FUNCTION erase_journal_entries_on_bg2_transition
   STR_VAR

@@ -29,13 +29,13 @@ BEGIN
     edits	= "patch_data"
   END
 
-  ADD_JOURNAL @1 @2
-
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
     file	= "wenric_edits.d"
     location	= "dialog"
   END
+
+  ADD_JOURNAL @1 @2
 
 
   // BGT and NTotSC compatibility hacks

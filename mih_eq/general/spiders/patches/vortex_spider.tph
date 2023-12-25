@@ -2,7 +2,7 @@ ACTION_CLEAR_ARRAY vortex_spider
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY vortex_spider
 BEGIN
-  thac0LT		=> "13 - %spider_thac0_bonus%"
+  thac0			=> "13 - %spider_thac0_bonus%"
   ac			=> "4 - %spider_ac_bonus%"
   ac_vs_missiles	=> "-2"
   resist_crushing	=> "%spider_physical_resistance%"

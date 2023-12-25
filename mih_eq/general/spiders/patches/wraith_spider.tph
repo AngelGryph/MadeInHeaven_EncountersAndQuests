@@ -2,7 +2,7 @@ ACTION_CLEAR_ARRAY wraith_spider
 
 ACTION_DEFINE_ASSOCIATIVE_ARRAY wraith_spider
 BEGIN
-  thac0LT		=> "17 - %spider_thac0_bonus%"
+  thac0			=> "17 - %spider_thac0_bonus%"
   ac			=> "5 - %spider_ac_bonus%"
   ac_vs_missiles	=> "-2"
   resist_crushing	=> "%spider_physical_resistance%"
@@ -11,7 +11,6 @@ BEGIN
   general		=> undead
   resist_cold		=> 100
   resist_magic_cold	=> 100
-  replace_items		=> "mh#spdwr(weapon1)"
 END
 
 
