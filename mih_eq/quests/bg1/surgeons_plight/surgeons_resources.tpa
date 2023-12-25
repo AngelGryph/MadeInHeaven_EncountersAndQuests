@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION surgeons_resources
+BEGIN
+  cre.edit[surgeo]
+  [
+    m_dv := "TheSurgeon"
+  ]
+
+  cre.copy[surgeo=>mh#surg1]
+  [
+    m.cre_remove_items{potn34}
+    m.cre_add_items{scrl56(inv,x2) scrl61(inv)}
+    m_dialog := "mh#surg1"
+    m_script_override := "initdlg"
+  ]
+
+  cre.copy[surgeo=>mh#surg2]
+  [
+    m.cre_remove_items{potn34}
+    m.cre_add_items{misc41(inv) misc44(inv)}
+    m_dialog := "mh#surg2"
+    m_script_override := "initdlg"
+  ]
+END	// surgeons_resources
+
+

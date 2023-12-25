@@ -1,0 +1,10 @@
+DEFINE_ACTION_FUNCTION setup_surgeons_plight
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "surgeons_resources surgeons_scripting"
+    tra		= "surgeons_plight"
+  END
+END	// setup_surgeons_plight
+
+

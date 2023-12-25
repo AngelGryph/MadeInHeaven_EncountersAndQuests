@@ -24,3 +24,17 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
+// The Surgeon's Plight
+
+BEGIN @4
+GROUP @3
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_surgeons_plight"
+  location	= "quests/bg1/surgeons_plight"
+END
+
+

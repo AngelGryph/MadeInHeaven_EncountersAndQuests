@@ -1,0 +1,30 @@
+@0    = ~Ah, <CHARNAME>.  I thought you'd show up here sooner or later.  For good or ill, it seems you are destined to come into conflict with my brother.~
+@1    = ~His lair lies east of here, deep within the ancient mines of the Orothiar clan.  I believe you will find what you are looking for there.  But be careful, he has gathered many allies and henchmen around himself.~
+@2    = ~I wish I had the strength to see justice done.  But I failed to take the chance when I had it.  It would seem you are my last hope to stop his evil.~
+@3    = ~I am no assassin, but if your brother is as evil as you claim, I will see to it that justice is served.~
+@4    = ~I don't like doing your dirty work for you, but I was going to rout that evil place anyway, so I guess I am in.~
+@5    = ~Don't you dare to intervene, he is mine!~
+@6    = ~It seems my brother has wronged you too.  It is no surprise.  I do not know whether it is justice or vengeance that drives you, and I suppose that in the end it does not matter.~
+@7    = ~Here, I prepared these scrolls for you.  I hope they will help you survive long enough in there to do what must be done.~
+@8    = ~The Surgeon's Plight
+
+Today I met The Surgeon again, deep within the Cloakwood forest.  He told me that his evil brother has some kind of lair, apparently at the very bottom of an ancient mine that once belonged to dwarves of the Orothiar clan.  This probably means that his brother is working for the Iron Throne.  The Surgeon warned me that his brother has gathered quite a few henchmen and I should expect heavy resistance, then he gave me some healing scrolls to help us stay alive in there.  I sure hope it will be enough...~
+@9    = ~I have done what I can for you, now my journey of penance must continue.  But before I leave, do you need any healing?~
+@10   = ~Sure, we could use your help.  These woods have not been gentle to us.~
+@11   = ~Thank you, but we're good for now.~
+@12   = ~Very well, hold still and let me do my work.~
+@13   = ~Then I bid you farewell for now, although I have a feeling we shall meet again.~
+@14   = ~Ah, <CHARNAME>.  I was hoping to run into you here.~
+@15   = ~When I was traveling down the river bank, the flow started carrying bodies with it.  One of them washed ashore a few hundred feet ahead of me.  It was my brothers'.  Karma or cruel fate, I do not know.~
+@16   = ~What did you do?~
+@17   = ~I do hope you burned it on a pyre?~
+@18   = ~Please tell me you didn't raise him!?~
+@19   = ~I decided to give him a decent burial.  I figured I at least owed him that much, and part of me feared he might also rise as some undead horror if I did not.  His evil should never rise again.~
+@20   = ~I was inclined to do so actually.  I've heard way too many stories of evil wizards rising from the dead in some ghastly form.  But in the end I could not, and I buried him instead.~
+@21   = ~Heavens no!  Even if he is my brother, I shall not be responsible for his evil returning to our world.  I buried the body and performed rites to ensure he will not rise again.~
+@22   = ~He should be resting in peace now, for at least as easy as a man as evil as him can rest anyway.  I do hope that his soul will be spared the horrors of the Lower Planes, but that is for the gods to decide.~
+@23   = ~While I was performing the rites, I found a small pouch hidden on his body.  It contained these gems, no doubt gained through some other foul deed of his.  I want you to have them, for you are one of the noblest people I have met.  May they help you in your quest.~
+@24   = ~Well, even though his evil ways have ended, my journey of penance must continue.  I bid you farewell, <CHARNAME>.~
+@25   = ~The Surgeon's Plight
+
+I met The Surgeon again at the Friendly Arm Inn.  He told me that the river had washed up the body of his brother Davaeorn and he gave him last rites and a decent burial.  Let's hope that this will be enough and the evil mage will not rise again in some undead form.  The Surgeon then bid me farewell and left to continue his journey of penance.~

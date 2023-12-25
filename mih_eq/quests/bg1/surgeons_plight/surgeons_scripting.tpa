@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION surgeons_scripting
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "surgeons_plight.d"
+    location	= "dialogs"
+  END
+
+  ADD_JOURNAL @8 @25
+
+  ACTION_FOR_EACH dialog IN "mh#surg1" "mh#surg2"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION erase_journal_entries_on_bg2_transition
+      STR_VAR
+      dialog
+    END
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%CloakwoodWyverns%"
+    bottom	= "spawn_surgeon_cw"
+    location	= "scripts"
+  END
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%FriendlyArmInn%"
+    bottom	= "spawn_surgeon_fai"
+    location	= "scripts"
+  END
+END	// setup_surgeons_plight
+
+
