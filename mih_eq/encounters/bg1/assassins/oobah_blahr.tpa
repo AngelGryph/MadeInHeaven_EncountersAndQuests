@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION oobah_blahr
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "all"
+    location	= "portraits"
+    postfix	= "bmp"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "oobah_blahr.d"
+    location	= "dialogs"
+  END
+
+  cre.copy[mh#oobah|source_location="actors"]
+  [
+    m_both_names := @27
+  ]
+
+  cre.copy[mh#blahr|source_location="actors"]
+  [
+    m_both_names := @28
+  ]
+
+  LAUNCH_ACTION_FUNCTION extend_area_script
+    STR_VAR
+    area	= "%Candlekeep_Ch6%"
+    bottom	= "spawn_oogah_blahr"
+    location	= "scripts"
+  END
+END	// oobah_blahr
+
+

@@ -1,0 +1,11 @@
+IF
+  GlobalGT("Chapter", "GLOBAL", 6)
+  Global("mh#SpawnOohahBlahr", "MYAREA", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#SpawnOohahBlahr", "MYAREA", 1)
+    CreateCreature("mh#oobah", [915.3275], 6)
+    CreateCreature("mh#blahr", [850.3335], 7)
+END
+
+

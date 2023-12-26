@@ -1,0 +1,43 @@
+DEFINE_ACTION_FUNCTION drikx_gnung_strok
+BEGIN
+  itm.copy[scrl3b=>mh#cwass]
+  [
+    m_unidentified_description := @16
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "drikx_gnung_strok.d"
+    location	= "dialogs"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#cwass.baf"
+    location	= "scripts"
+  END
+
+  cre.copy[mh#drikx|source_location="actors"]
+  [
+    m_both_names := @17
+  ]
+
+  cre.copy[mh#gnung|source_location="actors"]
+  [
+    m_both_names := @18
+  ]
+
+  cre.copy[mh#strok|source_location="actors"]
+  [
+    m_both_names := @19
+  ]
+
+  are.edit[%CloakwoodWyverns%]
+  [
+    m.actor.add{s_name:="Drikx" s_resref:="mh#drikx" s_x=2335 s_y=3090 s_face:="W"}
+    m.actor.add{s_name:="Gnung" s_resref:="mh#gnung" s_x=2395 s_y=3100 s_face:="NWW"}
+    m.actor.add{s_name:="Strok" s_resref:="mh#strok" s_x=2390 s_y=3010 s_face:="SWW"}
+  ]
+END	// drikx_gnung_strok
+
+

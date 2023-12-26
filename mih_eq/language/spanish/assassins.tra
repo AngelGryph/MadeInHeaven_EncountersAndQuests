@@ -1,0 +1,39 @@
+@0    = ~¡Ah, <CHARNAME>!  Así que has llegado hasta aquí.  Para ser honesto, no pensé que lo harías.  Oh, bueno, ¡eso significa que el premio sobre tu cabeza es nuestro ahora!~
+@1    = ~Más asesinos.  ¿A cuántos crees que he matado ya?~
+@2    = ~¡Espera! ¡A quien te pague, yo te pagaré más!~
+@3    = ~¡Por favor, no me mates!~
+@4    = ~¡SILENCIO!  ¡Esos tontos eran débiles!~
+@5    = ~Buen intento, <CHARNAME>.  Pero como ves, los chicos lo tienen todo resuelto.~
+@6    = ~Je, bueno <CHARNAME>, admito que estaba preocupado cuando me enteré de que eras nuestro objetivo, pero parece que no eres más que un debilucho.  ¡Aquí no habrá guardias que te salven el pellejo!~
+@7    = ~¡Muy bien chicos, a por ellos!~
+@8    = ~Uh, jefe, tienen un punto allí.  ¿Recuerdas a Tarnesh y Neira?~
+@9    = ~¡HAH!  Dudo que tengas tanto oro~
+@10   = ~¡Jefe, tenemos un mendigo!  ¿Podemos hacerles suplicar un poco más?~
+@11   = ~¡Claro, jefe!~
+@12   = ~¡Y Nimbul también!  ¡No quiero morir todavía, jefe!~
+@13   = ~¡Sí!  ¡Además, si te matamos, nos quedamos con tus monedas oro de todos modos!~
+@14   = ~¡Oh! ¡Haz que se sienten de rodillas!~
+@15   = ~¡Lo que tú digas, jefe!~
+@16    = ~Drikx,
+
+
+Te escribo porque necesitamos tus servicios. Tu objetivo es un joven <PRO_RACE> llamado <CHARNAME>.  Debes cazar y matar a <CHARNAME> y a todos los que viajen con ellos.
+
+No los subestimes , son muy capaces y ya ha frustrado varios intentos de asesinato.  Espera resistencia de un grupo bien preparado y fuertemente armados.
+
+Lo más probable es que <CHARNAME> se dirija al Bosque de las Capas, así que deberías tenderle una emboscada allí.  Si regresas con pruebas de la hazaña se te pagará 1.500 de oro.
+
+
+S.~
+@17   = ~Drikx~
+@18   = ~Gnung~
+@19   = ~Strok~
+@20   = ~Hey Blahr, mira esto.  ¡Algunas ratas han salido arrastrándose de su madriguera!~
+@21   = ~¡Ooh, tienes razón Oobah!  ¿Los aplastamos?~
+@22   = ~Bueno, eso es lo que el Hijo del Asesinato nos está pagando.~
+@23   = ~Y además, ¡toda esta espera me ha dado hambre!~
+@24   = ~Entonces, ¿los aplastamos, los asamos y nos los comemos?~
+@25   = ~¡Ese es el plan!  ¡A por ellos, hermanita!~
+@26   = ~¡Estoy contigo, Oobah!~
+@27   = ~Oobah~
+@28   = ~Blahr~

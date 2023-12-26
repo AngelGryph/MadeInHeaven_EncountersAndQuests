@@ -1,0 +1,28 @@
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Allegiance(Myself, NEUTRAL)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#CWAssassinsHostile", "MYAREA", 1)
+    Enemy()
+END
+
+IF
+  Global("mh#CWAssassinsHostile", "MYAREA", 1)
+  Allegiance(Myself, NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  HPPercentLT(Myself, 60)
+  HasItem("potn52", Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself, 31249)	// *quaffs a potion*
+    UseItem("potn52", Myself)
+    Continue()
+END
+
+

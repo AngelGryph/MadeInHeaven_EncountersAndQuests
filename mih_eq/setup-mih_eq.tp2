@@ -24,9 +24,23 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
+// Sarevok's Assassins
+
+BEGIN @100
+GROUP @2
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_assassins"
+  location	= "encounters/bg1/assassins"
+END
+
+
 // The Surgeon's Plight
 
-BEGIN @4
+BEGIN @200
 GROUP @3
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
