@@ -24,9 +24,31 @@ LANGUAGE "English"
 	 "weidu_external/lang/mih_eq/english/setup-mih_eq.tra"
 
 
+/*
+BEGIN "Collect Animations"
+
+REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" "Run this on EE only!"
+
+ACTION_FOR_EACH animation IN "WIGHT_GRAY" "WIGHT_GREEN" "WIGHT_YELLOW" "WIGHT_BARROW"
+BEGIN
+  LAUNCH_ACTION_FUNCTION anim_collect
+    INT_VAR
+    no_log_record	= 1
+    STR_VAR
+    animation
+    resource_loc	= "%MOD_FOLDER%/shared/animations/resources"
+  END
+END
+*/
+
+
+// ==========================
+// New or Enhanced Encounters
+// ==========================
+
 // Sarevok's Assassins
 
-BEGIN @100
+BEGIN @200
 GROUP @2
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
@@ -38,9 +60,13 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// ======================
+// New or Enhanced Quests
+// ======================
+
 // The Surgeon's Plight
 
-BEGIN @200
+BEGIN @300
 GROUP @3
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
@@ -49,6 +75,54 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "setup_surgeons_plight"
   location	= "quests/bg1/surgeons_plight"
+END
+
+
+// ===================
+// Tactical Challenges
+// ===================
+
+// Improved Candlekeep Catacombs
+
+BEGIN @400
+GROUP @4
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_candlekeep_catacombs"
+  location      = "tactical/bg1/candlekeep_catacombs"
+END
+
+
+// Improved Ulcaster Ruins
+
+BEGIN @401
+GROUP @4
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_ulcaster_ruins"
+  location      = "tactical/bg1/ulcaster_ruins"
+END
+
+
+// ===================================
+// Various Tweaks to Encounters/Quests
+// ===================================
+
+// Tougher Spiders
+
+BEGIN @500
+GROUP @5
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_tougher_spiders"
+  location      = "tweaks/encounters/spiders"
 END
 
 

@@ -3,9 +3,15 @@
 @2    = ~Encounters~
 @3    = ~Quests~
 @4    = ~Tactical~
+@5    = ~Tweaks~
 
-@100  = ~Sarevok's Assassins~
+@200  = ~Sarevok's Assassins~
 
-@200  = ~The Surgeon's Plight~
+@300  = ~The Surgeon's Plight~
+
+@400  = ~Enhanced Candlekeep Catacombs~
+@401  = ~Enhanced Ulcaster Ruins~
+
+@500  = ~Tougher Spiders~
 
 
