@@ -1,0 +1,74 @@
+IF
+	See(NearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_STONE_DEATH)
+	!CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+THEN
+	RESPONSE #50
+		SelectWeaponAbility(SLOT_WEAPON,0)
+		AttackReevaluate(LastSeenBy(Myself),30)
+	RESPONSE #50
+		Continue()
+END
+
+IF
+	See(SecondNearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_STONE_DEATH)
+	!CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+THEN
+	RESPONSE #50
+		SelectWeaponAbility(SLOT_WEAPON,0)
+		AttackReevaluate(LastSeenBy(Myself),30)
+	RESPONSE #50
+		Continue()
+END
+
+IF
+	See(ThirdNearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_STONE_DEATH)
+	!CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+THEN
+	RESPONSE #50
+		SelectWeaponAbility(SLOT_WEAPON,0)
+		AttackReevaluate(LastSeenBy(Myself),30)
+	RESPONSE #50
+		Continue()
+END
+
+IF
+	See(FourthNearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_STONE_DEATH)
+	!CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+THEN
+	RESPONSE #50
+		SelectWeaponAbility(SLOT_WEAPON,0)
+		AttackReevaluate(LastSeenBy(Myself),30)
+	RESPONSE #50
+		Continue()
+END
+
+IF
+	See(FifthNearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_STONE_DEATH)
+	!CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+THEN
+	RESPONSE #50
+		SelectWeaponAbility(SLOT_WEAPON,0)
+		AttackReevaluate(LastSeenBy(Myself),30)
+	RESPONSE #50
+		Continue()
+END
+
+
+IF
+	See(SixthNearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_STONE_DEATH)
+	!CheckSpellState(LastSeenBy(Myself),PROTECTION_FROM_PETRIFICATION)
+THEN
+	RESPONSE #50
+		SelectWeaponAbility(SLOT_WEAPON,0)
+		AttackReevaluate(LastSeenBy(Myself),30)
+	RESPONSE #50
+		Continue()
+END
+
+

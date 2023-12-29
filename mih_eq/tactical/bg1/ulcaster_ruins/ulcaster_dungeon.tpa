@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION ulcaster_dungeon
+BEGIN
+  are.edit[%UlcasterRuins%]
+  [
+    m.actor.add{s_name:="Blazing Bones" s_resref:="mh#blaze" s_x=300 s_y=460 s_face:="NE"}
+    m.actor.add{s_name:="Blazing Bones" s_resref:="mh#blaze" s_x=1750 s_y=1090 s_face:="NW"}
+
+    m.actor.add{s_name:="Mustard Jelly" s_resref:="jellmu" s_x=540 s_y=1465 s_face:="SW"}
+
+    m.actor.add{s_name:="Ochre Jelly" s_resref:="jelloc" s_x=1175 s_y=250 s_face:="NE"}
+
+    m.actor.add{s_name:="Dread Wolf" s_resref:="wolfdr" s_x=1825 s_y=600 s_face:="SW"}
+    m.actor.add{s_name:="Dread Wolf" s_resref:="wolfdr" s_x=1715 s_y=610 s_face:="NW"}
+    m.actor.add{s_name:="Dread Wolf" s_resref:="wolfdr" s_x=1970 s_y=640 s_face:="NNW"}
+
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=840 s_y=600 s_face:="E"}
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=955 s_y=660 s_face:="NE"}
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=1065 s_y=730 s_face:="NNE"}
+  ]
+END	// ulcaster_dungeon
+
+

@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION candlekeep_catacombs_l2
+BEGIN
+  are.edit[%Candlekeep_Catacombs_L2%]
+  [
+    m.actor.add{s_name:="Doppleganger Priest" s_resref:="mh#doppr" s_x=1030 s_y=540 s_face:="SE"}
+    m.actor.add{s_name:="Doppleganger Keeper" s_resref:="mh#dopkp" s_x=1275 s_y=960 s_face:="NW"}
+
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=620 s_y=745 s_face:="SSE"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=555 s_y=840 s_face:="SEE"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=710 s_y=810 s_face:="S"}
+
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=880 s_y=1165 s_face:="W"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=965 s_y=1260 s_face:="NWW"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=825 s_y=1290 s_face:="NNW"}
+
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=570 s_y=1110 s_face:="NE"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=655 s_y=1135 s_face:="NNE"}
+
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=455 s_y=1145 s_face:="E"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=365 s_y=1170 s_face:="NNE"}
+    m.actor.add{s_name:="Doppleganger" s_resref:="dopple" s_x=330 s_y=1075 s_face:="SEE"}
+  ]
+END	// candlekeep_catacombs_l2
+
+

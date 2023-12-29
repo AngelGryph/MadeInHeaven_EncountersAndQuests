@@ -1,0 +1,21 @@
+DEFINE_ACTION_FUNCTION candlekeep_spider_cave
+BEGIN
+  are.edit[%CandlekeepCaves%]
+  [
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=1575 s_y=605 s_face:="NNE"}
+    m.actor.add{s_name:="Phase Spider" s_resref:="spidph" s_x=1375 s_y=805 s_face:="SSW"}
+
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=1755 s_y=1255 s_face:="NWW"}
+
+    m.actor.add{s_name:="Medusa" s_resref:="mh#medus" s_x=895 s_y=1790 s_face:="NE"}
+    m.actor.add{s_name:="Medusa" s_resref:="mh#medus" s_x=765 s_y=1340 s_face:="SSE"}
+
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=95 s_y=1435 s_face:="NNE"}
+    m.actor.add{s_name:="Sword Spider" s_resref:="spidsw" s_x=200 s_y=1565 s_face:="NW"}
+
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=340 s_y=685 s_face:="SSW"}
+    m.actor.add{s_name:="Sword Spider" s_resref:="spidsw" s_x=300 s_y=780 s_face:="SW"}
+  ]
+END	// candlekeep_spider_cave
+
+

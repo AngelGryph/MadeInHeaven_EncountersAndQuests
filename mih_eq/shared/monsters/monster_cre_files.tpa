@@ -1,0 +1,41 @@
+DEFINE_ACTION_FUNCTION monster_cre_files
+BEGIN
+  LAUNCH_ACTION_FUNCTION 2da_process_table
+    STR_VAR
+    table	= "monsters.2da"
+    path	= "%MOD_FOLDER%/shared/monsters"
+    function	= "install_monster"
+  END
+END	// setup_monsters
+
+
+DEFINE_ACTION_FUNCTION install_monster
+  STR_VAR
+  name		= ""
+  resref	= ""
+BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "%resref%.cre"
+  BEGIN
+    COPY "%MOD_FOLDER%/shared/monsters/creatures/%resref%.cre" "override"
+      PATCH_IF IS_AN_INT name
+      BEGIN
+        SAY NAME1 ( AT "name" )
+        SAY NAME2 ( AT "name" )
+      END
+      ELSE
+      BEGIN
+        SAY NAME1 "%name%"
+        SAY NAME2 "%name%"
+      END
+
+      READ_LONG 0x0028 anim_num
+      LOOKUP_IDS_SYMBOL_OF_INT animation "animate" "%anim_num%"
+
+
+    LAUNCH_ACTION_FUNCTION anim_install
+      STR_VAR
+      animation
+      resource_loc	= "%MOD_FOLDER%/shared/monsters/animations"
+    END
+  END
+END	// monster_cre_files

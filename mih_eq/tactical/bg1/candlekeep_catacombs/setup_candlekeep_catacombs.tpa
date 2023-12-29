@@ -1,0 +1,17 @@
+DEFINE_ACTION_FUNCTION setup_candlekeep_catacombs
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_monsters"
+    tra		= "shared_monsters"
+    locbase	= "shared/monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "candlekeep_dopplegangers candlekeep_catacombs_l1 candlekeep_catacombs_l2 candlekeep_spider_cave"
+    tra		= "candlekeep"
+  END
+END	// setup_candlekeep_catacombs
+
+

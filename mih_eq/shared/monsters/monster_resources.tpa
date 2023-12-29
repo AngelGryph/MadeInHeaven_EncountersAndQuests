@@ -1,0 +1,49 @@
+DEFINE_ACTION_FUNCTION monster_resources
+BEGIN
+  // Blazing Bones pseudo-items and script
+
+  itm.copy[fireseed=>mh#blazr]
+  [
+    m_magical = 1
+    m_enchantment = 2
+    m.ab.alter{s_number_charges = 0;;s_attack_bonus = 0}
+    m.ab_fx.alter{s_dicenumber = 1;;s_dicesize = 6;;s_parameter1 = 3|match="s_opcode = 12"}
+  ]
+
+  itm.copy[b1-4=>mh#blazm]
+  [
+    m_magical = 1
+    m_enchantment = 2
+    m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter1 = 2}
+  ]
+
+  spl.copy[%WIZARD_FIREBALL%=>BLAZING_BONES_FIREBALL]
+  [
+    m_type := "innate"
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m.ab.delete{s_level > 1}
+    m.ab.alter{s_location := "innate";;s_target=5;;s_casting_time = 1}
+    m.ab_fx.delete{s_opcode != 12}
+    m.ab_fx.alter{s_target = 1;;s_dicenumber = enhanced_edition ? 6 : 3}
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#blaze.baf"
+    location	= "scripts"
+    locbase
+  END
+
+
+  // Medusa script
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#medus.baf"
+    location	= "scripts"
+    locbase
+  END
+END	// monster_resources
+
+

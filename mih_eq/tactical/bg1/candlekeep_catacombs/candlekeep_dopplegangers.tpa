@@ -1,0 +1,42 @@
+DEFINE_ACTION_FUNCTION candlekeep_dopplegangers
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "dopplegangers.d"
+    location	= "dialog"
+  END
+
+  cre.copy[keeper=>mh#dopkp]
+  [
+    m_xp_value=420
+    m_hp=30
+    m_race:="doppleganger"
+    m_class:="doppleganger"
+    m_alignment:="neutral"
+    m_script_override:="initdlg"
+    m_script_class:="null"
+    m_script_race:="ldchange"
+    m_script_general:="null"
+    m_script_default:="wtasight"
+    m_dialog:="mh#dopkp"
+    m_dv:="none"
+  ]
+
+  cre.copy[keeper=>mh#doppr]
+  [
+    m_xp_value=420
+    m_hp=30
+    m_race:="doppleganger"
+    m_class:="doppleganger"
+    m_alignment:="neutral"
+    m_script_override:="initdlg"
+    m_script_class:="null"
+    m_script_race:="ldchange"
+    m_script_general:="null"
+    m_script_default:="wtasight"
+    m_dialog:="mh#doppr"
+    m_dv:="none"
+  ]
+END	// candlekeep_dopplegangers
+
+

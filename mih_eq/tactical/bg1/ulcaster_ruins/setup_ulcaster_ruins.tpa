@@ -1,0 +1,15 @@
+DEFINE_ACTION_FUNCTION setup_ulcaster_ruins
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_monsters"
+    locbase	= "shared/monsters"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "ulcaster_dungeon"
+  END
+END	// setup_ulcaster_ruins
+
+

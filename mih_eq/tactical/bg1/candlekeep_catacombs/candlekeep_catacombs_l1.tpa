@@ -1,0 +1,46 @@
+DEFINE_ACTION_FUNCTION candlekeep_catacombs_l1
+BEGIN
+  are.edit[%Candlekeep_Catacombs_L1%]
+  [
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=1890 s_y=925 s_face:="NE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=1840 s_y=840 s_face:="NEE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=2040 s_y=990 s_face:="NNE"}
+
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=1650 s_y=220 s_face:="SSW"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=1570 s_y=310 s_face:="SE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=1725 s_y=325 s_face:="SW"}
+
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=715 s_y=485 s_face:="E"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=1020 s_y=415 s_face:="SEE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=1070 s_y=530 s_face:="NE"}
+
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=850 s_y=1220 s_face:="SSE"}
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=710 s_y=1140 s_face:="SE"}
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=1030 s_y=1260 s_face:="S"}
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=620 s_y=1195 s_face:="SEE"}
+    m.actor.add{s_name:="Wraith Spider" s_resref:="spidwr" s_x=775 s_y=1075 s_face:="SSE"}
+
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=180 s_y=930 s_face:="SEE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=430 s_y=745 s_face:="SSE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=435 s_y=940 s_face:="SE"}
+
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=475 s_y=1660 s_face:="SE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=475 s_y=1745 s_face:="SEE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=595 s_y=1660 s_face:="SSE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=690 s_y=1730 s_face:="S"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=595 s_y=1845 s_face:="SEE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=715 s_y=1835 s_face:="SE"}
+
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=2369 s_y=1995 s_face:="NE"}
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=2320 s_y=1850 s_face:="NEE"}
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=2590 s_y=1980 s_face:="NNE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=2475 s_y=1805 s_face:="E"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=2585 s_y=1835 s_face:="NE"}
+    m.actor.add{s_name:="Wight" s_resref:="mh#wight" s_x=2640 s_y=1920 s_face:="N"}
+
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=3050 s_y=2000 s_face:="NNE"}
+    m.actor.add{s_name:="Greater Wight" s_resref:="mh#wght7" s_x=3250 s_y=2020 s_face:="NNW"}
+  ]
+END	// candlekeep_catacombs_l1
+
+
