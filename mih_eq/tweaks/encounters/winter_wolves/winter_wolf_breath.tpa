@@ -1,0 +1,48 @@
+DEFINE_ACTION_FUNCTION winter_wolf_breath
+BEGIN
+  spl.copy[wntrwolf=>WINTER_WOLF_BREATH|source_location="resource"]
+  [
+    PATCH_IF NOT enhanced_edition
+    BEGIN
+      m.ab_fx.alter{s_dicenumber/=2|match="s_opcode=12"}
+      m.ab_fx.clone{s_save_vs_spell=0 s_save_vs_breath=0 s_save_vs_poison=0 s_save_vs_wand=0 s_save_vs_polymorph=0|match="s_opcode=12"}
+    END
+  ]
+
+  itm.copy[p2-8=>wntrwolf]
+  [
+    m_magical = 1
+    m_enchantment = 1
+    m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 2;;s_dicesize = 4}
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "wntrwolf.ssl"
+    location	= "resource"
+  END
+
+  COPY_EXISTING_REGEXP "^.+\.cre$" "override"
+    LPF struct_get STR_VAR arguments = "race" RET race_num = value END
+    LPF struct_get STR_VAR arguments = "class" RET class_num = value END
+
+    LOOKUP_IDS_SYMBOL_OF_INT race "race" race_num
+    LOOKUP_IDS_SYMBOL_OF_INT class "class" class_num
+    
+    TO_LOWER race
+    TO_LOWER class
+
+    PATCH_IF "%race%" == "wolf"
+         AND "%class%" == "wolf_winter"
+    BEGIN
+      REPLACE_CRE_ITEM "wntrwolf" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
+      REPLACE_CRE_ITEM "wntrwolf" #0 #0 #0 "unstealable&undroppable" "weapon2"
+
+      WRITE_ASCII SCRIPT_RACE "WNTRWOLF" #8
+      WRITE_ASCII SCRIPT_DEFAULT "WTASIGHT" #8
+    END
+
+    BUT_ONLY_IF_IT_CHANGES
+END	// winter_wolf_breath
+
+

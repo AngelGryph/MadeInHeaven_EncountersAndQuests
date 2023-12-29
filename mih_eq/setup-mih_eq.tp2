@@ -126,3 +126,16 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Winter Wolves
+
+
+BEGIN @501
+GROUP @5
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_winter_wolves"
+  location      = "tweaks/encounters/winter_wolves"
+END
+
+
