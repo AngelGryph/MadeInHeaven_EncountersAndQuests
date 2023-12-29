@@ -1,0 +1,55 @@
+DEFINE_ACTION_FUNCTION slime_resources
+BEGIN
+  spl.make[MUSTARD_JELLY_VAPOR]
+  [
+    m_name := @1
+    m_type := "innate"
+    m_level = 1
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_level = 1;;s_type = 2;;s_location = 4;;s_target = 5;;s_range = 1;;s_projectile = 224}
+
+    m.ab_fx.add{s_opcode = 78;;s_target = 2;;s_duration = 12;;s_parameter2 = 10;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 93;;s_target = 2;;s_duration = 12;;s_parameter1 = 5;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 142;;s_target = 2;;s_duration = 12;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#musjl.baf"
+    location	= "scripts"
+  END
+
+  itm.make[mh#musjr]
+  [
+    m_magical = 1
+    m_enchantment = 1
+    m_icon := "IWOLF"
+    m.ab.add{s_type = 2;;s_location = 1;;s_icon := "IWOLF";;s_target = 1;;s_range = 25;;s_speed = 3;;s_hostile = 1;;s_projectile = 192}
+    m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00010000;;s_dicenumber = 5;;s_dicesize = 4}
+  ]
+
+  itm.make[mh#ochjr]
+  [
+    m_icon := "IWOLF"
+    m.ab.add{s_type = 2;;s_location = 1;;s_icon := "IWOLF";;s_target = 1;;s_range = 25;;s_speed = 3;;s_hostile = 1;;s_projectile = 194}
+    m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter1 = 2;;s_parameter2 = 0x00010000;;s_dicenumber = 1;;s_dicesize = 10}
+  ]
+
+  itm.make[mh#grozr]
+  [
+    m_icon := "IWOLF"
+    m.ab.add{s_type = 2;;s_location = 1;;s_icon := "IWOLF";;s_target = 1;;s_range = 25;;s_speed = 3;;s_hostile = 1;;s_projectile = 193}
+    m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00010000;;s_dicenumber = 2;;s_dicesize = 8}
+  ]
+
+  itm.copy[mh#musjr=>mh#musjm mh#ochjr=>mh#ochjm mh#grozr=>mh#grozm]
+  [
+    m.ab.alter{s_type = 1;;s_range = 1;;s_speed = 1;;s_projectile = 1}
+  ]
+END	// slime_resources
+
+

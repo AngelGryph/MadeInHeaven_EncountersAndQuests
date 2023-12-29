@@ -1,15 +1,30 @@
 DEFINE_ACTION_FUNCTION winter_wolf_breath
 BEGIN
-  spl.copy[wntrwolf=>WINTER_WOLF_BREATH|source_location="resource"]
+  spl.make[WINTER_WOLF_BREATH]
   [
-    PATCH_IF NOT enhanced_edition
+    m_name := @0
+    m_type := "innate"
+    m_level = 1
+    m_hostile = 1
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_level = 1;;s_type = 2;;s_location = 4;;s_target = 1;;s_range = 10;;s_casting_time = 3;;s_projectile = 250}
+
+    PATCH_IF enhanced_edition
     BEGIN
-      m.ab_fx.alter{s_dicenumber/=2|match="s_opcode=12"}
-      m.ab_fx.clone{s_save_vs_spell=0 s_save_vs_breath=0 s_save_vs_poison=0 s_save_vs_wand=0 s_save_vs_polymorph=0|match="s_opcode=12"}
+      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 6;;s_dicesize = 4;;s_save_vs_breath = 1;;s_save_for_half = 1}
+    END
+    ELSE
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 3;;s_dicesize = 4}
+      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 3;;s_dicesize = 4;;s_save_vs_breath = 1}
     END
   ]
 
-  itm.copy[p2-8=>wntrwolf]
+  itm.copy[p2-8=>mh#wntwm]
   [
     m_magical = 1
     m_enchantment = 1
@@ -19,7 +34,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
     file	= "wntrwolf.ssl"
-    location	= "resource"
+    location	= "scripts"
   END
 
   COPY_EXISTING_REGEXP "^.+\.cre$" "override"
@@ -35,11 +50,12 @@ BEGIN
     PATCH_IF "%race%" == "wolf"
          AND "%class%" == "wolf_winter"
     BEGIN
-      REPLACE_CRE_ITEM "wntrwolf" #0 #0 #0 "unstealable&undroppable" "weapon1" EQUIP
-      REPLACE_CRE_ITEM "wntrwolf" #0 #0 #0 "unstealable&undroppable" "weapon2"
-
-      WRITE_ASCII SCRIPT_RACE "WNTRWOLF" #8
-      WRITE_ASCII SCRIPT_DEFAULT "WTASIGHT" #8
+      LPF struct_read RET_ARRAY m = struct END
+      m.cre_add_items{mh#wntwm(weapon1) mh#wntwm(weapon2)|replace:i=1}
+      m.cre_strip_scripts{all}
+      m_script_race := "WNTRWOLF"
+      m_script_default := "WTASIGHT"
+      LPF struct_write STR_VAR struct = "m" END
     END
 
     BUT_ONLY_IF_IT_CHANGES

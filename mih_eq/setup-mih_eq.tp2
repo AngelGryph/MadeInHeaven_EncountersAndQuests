@@ -114,6 +114,30 @@ END
 // Various Tweaks to Encounters/Quests
 // ===================================
 
+// P&P Oozes, Slimes & Jellies
+
+BEGIN @502
+GROUP @5
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_slimes"
+  location      = "tweaks/encounters/slimes"
+END
+
+
+// P&P Winter Wolves
+
+BEGIN @501
+GROUP @5
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_winter_wolves"
+  location      = "tweaks/encounters/winter_wolves"
+END
+
+
 // Tougher Spiders
 
 BEGIN @500
@@ -123,19 +147,6 @@ LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "setup_tougher_spiders"
   location      = "tweaks/encounters/spiders"
-END
-
-
-// P&P Winter Wolves
-
-
-BEGIN @501
-GROUP @5
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file          = "setup_winter_wolves"
-  location      = "tweaks/encounters/winter_wolves"
 END
 
 

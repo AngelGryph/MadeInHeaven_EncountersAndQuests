@@ -1,8 +1,8 @@
-DEFINE_ACTION_FUNCTION setup_winter_wolves
+DEFINE_ACTION_FUNCTION setup_slimes
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
-    file	= "winter_wolf_breath winter_wolf_reduction"
+    file	= "slime_resources slime_resistances"
     tra		= "encounter_tweaks"
   END
 END	// setup_winter_wolves
