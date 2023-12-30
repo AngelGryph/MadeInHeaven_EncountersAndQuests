@@ -1,0 +1,11 @@
+DEFINE_ACTION_FUNCTION dread_wolf_resources
+BEGIN
+  itm.copy[p1-10=>mh#wlfdr]
+  [
+    m.ab_fx.add{s_opcode = 78;;s_target = 2;;s_duration = 2400;;s_parameter1 = 360;;s_parameter2 = 3;;s_save_vs_poison = 1}
+    m.ab_fx.add{s_opcode = 142;;s_target = 2;;s_duration = 2400;;s_parameter2 = 7;;s_save_vs_poison = 1}
+    m.ab_fx.add{s_opcode = 139;;s_target = 2;;s_timing = 1;;s_parameter1 = GAME_IS "bgee" ? 26453 : 39752;;s_save_vs_poison = 1}
+  ]
+END	// dread_wolf_resources
+
+

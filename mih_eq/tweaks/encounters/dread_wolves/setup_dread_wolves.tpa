@@ -1,0 +1,16 @@
+DEFINE_ACTION_FUNCTION setup_dread_wolves
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_regeneration"
+    locbase	= "shared/regeneration"
+  END
+
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "dread_wolf_resources dread_wolf_properties"
+    tra		= "encounter_tweaks"
+  END
+END	// setup_dread_wolves
+
+

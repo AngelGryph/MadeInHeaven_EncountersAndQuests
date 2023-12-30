@@ -138,6 +138,18 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Dread Wolves
+
+BEGIN @503
+GROUP @5
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_dread_wolves"
+  location      = "tweaks/encounters/dread_wolves"
+END
+
+
 // Tougher Spiders
 
 BEGIN @500

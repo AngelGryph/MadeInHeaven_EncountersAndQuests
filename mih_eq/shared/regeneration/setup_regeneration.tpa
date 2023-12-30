@@ -1,0 +1,21 @@
+DEFINE_ACTION_FUNCTION setup_regeneration
+BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
+  BEGIN
+    itm.copy[mh#regen|source_path="%MOD_FOLDER%/shared/regeneration"]
+
+    spl.copy[mh#regdn|source_path="%MOD_FOLDER%/shared/regeneration"]
+
+    spl.copy[mh#regup|source_path="%MOD_FOLDER%/shared/regeneration"]
+
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "all"
+      postfix	= "baf"
+      location	= "scripts"
+      locbase
+    END
+  END	// NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
+END	// setup_regeneration
+
+

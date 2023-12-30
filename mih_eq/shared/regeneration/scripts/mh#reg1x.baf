@@ -1,0 +1,39 @@
+IF !HasItem("minhp1", Myself)
+   !HasItem("mh#regen", Myself)
+   GlobalLT("mh#regenerate_state", "LOCALS", 2)
+THEN
+  RESPONSE #100
+    ApplySpellRES("mh#regup", Myself)
+END
+
+IF HasItem("minhp1", Myself)
+   !Global("mh#regenerate_state", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    DestroyItem("minhp1")
+END
+
+IF HasItem("mh#regen", Myself)
+   !Global("mh#regenerate_state", "LOCALS", 1)
+THEN
+  RESPONSE #100
+    DestroyItem("mh#regen")
+END
+
+IF HPLT(Myself, 2)
+   Global("mh#regenerate_state", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#regenerate_state", "LOCALS", 1)
+    ApplySpellRES("mh#regdn", Myself)
+    PlayDead(300)
+END
+
+IF Global("mh#regenerate_state", "LOCALS", 1)
+THEN
+  RESPONSE #100
+    SetGlobal("mh#regenerate_state", "LOCALS", 2)
+    ApplySpellRES("mh#regup", Myself)
+END
+
+
