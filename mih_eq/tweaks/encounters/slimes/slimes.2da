@@ -1,5 +1,5 @@
 		level1	hp	thac0	attacks	ac	resist_fire	resist_cold	resist_electricity	resist_acid	resist_magic	resist_slashing	resist_crushing	resist_piercing	resist_missile	xp_value
-mustard_jelly	7	70	13	2	4	0		50		100			100		10		0		0		0		100		2000
+mustard_jelly	7	70	13	2	4	0		50		100			100		10		0		0		0		100		4000
 ocre_jelly	6	48	15	1	8	0		0		100			100		0		0		0		0		100		270
 grey_ooze	3	27	17	1	8	100		100		0			100		100		0		0		0		100		270
 green_slime	2	16	19	1	9	0		0		0			100		0		0		0		0		100		65

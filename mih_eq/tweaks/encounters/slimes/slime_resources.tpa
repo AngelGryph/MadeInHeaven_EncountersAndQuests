@@ -28,9 +28,17 @@ BEGIN
     m_magical = 1
     m_enchantment = 1
     m_icon := "IWOLF"
+    m.fx.add{s_opcode = 206;;s_target = 1;;s_timing = 2;;s_resource := "%WIZARD_MAGIC_MISSILE%"}
     m.ab.add{s_type = 2;;s_location = 1;;s_icon := "IWOLF";;s_target = 1;;s_range = 25;;s_speed = 3;;s_hostile = 1;;s_projectile = 192}
     m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00010000;;s_dicenumber = 5;;s_dicesize = 4}
   ]
+
+  COPY_EXISTING "mh#musjr.itm" "override"
+    LAUNCH_PATCH_FUNCTION cd_apply_batch
+      STR_VAR
+      array_name        = "cd_immunity_magic_missile_arrays"
+    END
+    BUT_ONLY_IF_IT_CHANGES
 
   itm.make[mh#ochjr]
   [

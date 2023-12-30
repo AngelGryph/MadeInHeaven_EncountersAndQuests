@@ -19,4 +19,11 @@ THEN
     Continue()
 END
 
+IF
+  SpellCastOnMe([ANYONE], WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself, CLERIC_CURE_LIGHT_WOUNDS)
+END
+
 
