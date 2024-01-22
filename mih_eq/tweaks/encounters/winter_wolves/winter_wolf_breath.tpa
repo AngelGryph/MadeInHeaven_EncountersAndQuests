@@ -24,7 +24,7 @@ BEGIN
     END
   ]
 
-  itm.copy[p2-8=>mh#wntwm]
+  itm.copy[p2-8=>mh#wlfwi]
   [
     m_magical = 1
     m_enchantment = 1
@@ -51,7 +51,7 @@ BEGIN
          AND "%class%" == "wolf_winter"
     BEGIN
       LPF struct_read RET_ARRAY m = struct END
-      m.cre_add_items{mh#wntwm(weapon1) mh#wntwm(weapon2)|replace:i=1}
+      m.cre_add_items{mh#wlfwi(weapon1) mh#wlfwi(weapon2)|replace:i=1}
       m.cre_strip_scripts{all}
       m_script_race := "WNTRWOLF"
       m_script_default := "WTASIGHT"

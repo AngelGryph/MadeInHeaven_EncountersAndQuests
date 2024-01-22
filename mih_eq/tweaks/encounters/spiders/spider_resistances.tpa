@@ -18,7 +18,7 @@ BEGIN
     STR_VAR
     file	= "spiders.2da"
     path	= "%MOD_FOLDER%/%component_loc%"
-    type	= "2da"
+    type	= "table_header"
     case	= "lower"
     RET_ARRAY
     spiders	= array

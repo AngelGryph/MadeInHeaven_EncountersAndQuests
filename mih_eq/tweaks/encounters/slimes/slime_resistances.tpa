@@ -4,7 +4,7 @@ BEGIN
     STR_VAR
     file	= "slimes.2da"
     path	= "%MOD_FOLDER%/%component_loc%"
-    type	= "2da"
+    type	= "table_header"
     case	= "lower"
     RET_ARRAY
     slimes	= array
