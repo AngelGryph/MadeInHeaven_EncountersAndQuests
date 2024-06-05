@@ -25,7 +25,7 @@ LANGUAGE "English"
 
 
 /*
-BEGIN "Collect Animations"
+BEGIN "Collect Animations" 
 
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" "Run this on EE only!"
 
@@ -48,7 +48,7 @@ END
 
 // Sarevok's Assassins
 
-BEGIN @200
+BEGIN @200  DESIGNATED 1
 GROUP @2
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
@@ -66,7 +66,7 @@ END
 
 // The Surgeon's Plight
 
-BEGIN @300
+BEGIN @300 DESIGNATED 2
 GROUP @3
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
@@ -84,7 +84,7 @@ END
 
 // Improved Candlekeep Catacombs
 
-BEGIN @400
+BEGIN @400 DESIGNATED 3
 GROUP @4
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
@@ -98,7 +98,7 @@ END
 
 // Improved Ulcaster Ruins
 
-BEGIN @401
+BEGIN @401 DESIGNATED 4
 GROUP @4
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
@@ -116,7 +116,7 @@ END
 
 // P&P Oozes, Slimes & Jellies
 
-BEGIN @502
+BEGIN @502 DESIGNATED 5
 GROUP @5
 
 LAUNCH_ACTION_FUNCTION run
@@ -128,7 +128,7 @@ END
 
 // P&P Winter Wolves
 
-BEGIN @501
+BEGIN @501 DESIGNATED 6
 GROUP @5
 
 LAUNCH_ACTION_FUNCTION run
@@ -140,7 +140,7 @@ END
 
 // P&P Dread Wolves
 
-BEGIN @503
+BEGIN @503 DESIGNATED 7
 GROUP @5
 
 LAUNCH_ACTION_FUNCTION run
@@ -152,7 +152,7 @@ END
 
 // Tougher Spiders
 
-BEGIN @500
+BEGIN @500 DESIGNATED 8
 GROUP @5
 
 LAUNCH_ACTION_FUNCTION run
