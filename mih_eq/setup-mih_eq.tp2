@@ -51,6 +51,8 @@ END
 BEGIN @200
 GROUP @2
 
+LABEL MH#-MiH_EQ-Sarevoks_Assassins
+
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
 
 LAUNCH_ACTION_FUNCTION run
@@ -68,6 +70,8 @@ END
 
 BEGIN @300
 GROUP @3
+
+LABEL MH#-MiH_EQ-The_Surgeons_Plight
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
 
@@ -87,6 +91,8 @@ END
 BEGIN @400
 GROUP @4
 
+LABEL MH#-MiH_EQ-Improved_Candlekeep_Catacombs
+
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
 
 LAUNCH_ACTION_FUNCTION run
@@ -102,6 +108,8 @@ BEGIN @401
 GROUP @4
 
 REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LABEL MH#-MiH_EQ-Improved_Ulcaster_Ruins
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -119,6 +127,8 @@ END
 BEGIN @502
 GROUP @5
 
+LABEL MH#-MiH_EQ-PandP_Oozes_Slimes_Jellies
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "setup_slimes"
@@ -130,6 +140,8 @@ END
 
 BEGIN @501
 GROUP @5
+
+LABEL MH#-MiH_EQ-PandP_Winter_Wolves
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -143,6 +155,8 @@ END
 BEGIN @503
 GROUP @5
 
+LABEL MH#-MiH_EQ-PandP_Dread_Wolves
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "setup_dread_wolves"
@@ -154,6 +168,8 @@ END
 
 BEGIN @500
 GROUP @5
+
+LABEL MH#-MiH_EQ-Tougher_Spiders
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
