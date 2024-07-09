@@ -1,0 +1,89 @@
+DEFINE_ACTION_FUNCTION winter_wolf_tweak
+BEGIN
+  LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
+
+  spl.make[WINTER_WOLF_BREATH]
+  [
+    m_name := @0
+    m_type := "innate"
+    m_hostile = 1
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_level = 1;;s_type = 2;;s_location = 4;;s_target = 1;;s_range = 10;;s_casting_time = 3;;s_projectile = 250}
+
+    PATCH_IF enhanced_edition
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 6;;s_dicesize = 4;;s_save_vs_breath = 1;;s_save_for_half = 1}
+    END
+    ELSE
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 3;;s_dicesize = 4}
+      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 3;;s_dicesize = 4;;s_save_vs_breath = 1}
+    END
+  ]
+
+  // Just in case we don't have this from MiH Fixes yet.
+  itm.edit[wolfwi2]
+  [
+    m.ab.alter{s_dicenumber = 2;;s_dicesize = 4;;s_damage_type := "piercing"}
+    m.ab_fx.alter{s_dicenumber = 1;;s_dicesize = 6|match=~s_opcode = 12~}
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "wntrwolf.ssl"
+    location	= "scripts"
+  END
+
+  cre.edit[obsice wolfwi wolfwi01 wolfwisu wolfwwsu|allow_missing:i=1]
+  [
+    m.cre_add_items{wolfwi2(weapon1)|replace:i=1}
+    m.cre_strip_scripts{wntrwolf wtarsght dw1ranmo}
+    m.cre_insert_script{wntrwolf|loc=low}
+    PATCH_IF FILE_EXISTS_IN_GAME "dw1melmo.bcs"
+    BEGIN
+      m.cre_insert_script{dw1melmo|loc=low}
+    END
+    ELSE
+    BEGIN
+      m.cre_insert_script{wtasight|loc=low}
+    END
+  ]
+
+
+  // Reduce winter wolf encounters in Nahskel area in BG1.
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "reduce_winter_wolf_encounters"
+    RET
+    reduce_winter_wolf_encounters	= value
+  END
+
+  ACTION_IF is_bg1 AND reduce_winter_wolf_encounters
+  BEGIN
+    are.edit[%DryadFalls% %FireLeafForest% %NashkelMines%]
+    [
+      m.spawn_point.alter{s_resref_3 := "wolfdi"|match=~"%s_resref_3%" == "wolfwi"~}
+    ]
+
+    are.edit[%ValleyoftheTombs%]
+    [
+      m.actor.add{s_name:="Winter Wolf" s_resref:="wolfwi" s_x=4745 s_y=1265 s_face:="NW"}
+      m.actor.add{s_name:="Winter Wolf" s_resref:="wolfwi" s_x=4725 s_y=3565 s_face:="NW"}
+    ]
+
+    are.edit[%GibberlingMountains%]
+    [
+      m.spawn_point.alter{s_resref_1 := "wolfwi";;s_resref_2 := "wolfwi";;s_resref_3 := "bearca";;s_count = 3|match=~"%s_name%" == "Spawn Point 7"~}
+      m.actor.add{s_name:="Winter Wolf" s_resref:="wolfwi" s_x=1980 s_y=2570 s_face:="SWW"}
+      m.actor.add{s_name:="Winter Wolf" s_resref:="wolfwi" s_x=1460 s_y=3630 s_face:="SWW"}
+      m.actor.add{s_name:="Winter Wolf" s_resref:="wolfwi" s_x=4910 s_y=2110 s_face:="SWW"}
+    ]
+  END
+END	// winter_wolf_tweak
+
+

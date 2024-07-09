@@ -145,8 +145,8 @@ LABEL MH#-MiH_EQ-PandP_Winter_Wolves
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "setup_winter_wolves"
-  location      = "tweaks/encounters/winter_wolves"
+  file          = "winter_wolf_tweak"
+  location      = "tweaks/encounters"
 END
 
 
@@ -159,8 +159,8 @@ LABEL MH#-MiH_EQ-PandP_Dread_Wolves
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "setup_dread_wolves"
-  location      = "tweaks/encounters/dread_wolves"
+  file          = "dread_wolf_tweak"
+  location      = "tweaks/encounters"
 END
 
 
