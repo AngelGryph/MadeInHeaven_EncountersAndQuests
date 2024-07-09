@@ -1,21 +1,25 @@
 DEFINE_ACTION_FUNCTION setup_regeneration
 BEGIN
-  ACTION_IF NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
+  LAUNCH_ACTION_FUNCTION check_label
+    STR_VAR
+    label	= "mh#regeneration"
+    RET
+    installed	= value
+  END
+
+  ACTION_IF NOT installed
   BEGIN
-    itm.copy[mh#regen|source_path="%MOD_FOLDER%/shared/regeneration"]
-
-    spl.copy[mh#regdn|source_path="%MOD_FOLDER%/shared/regeneration"]
-
-    spl.copy[mh#regup|source_path="%MOD_FOLDER%/shared/regeneration"]
-
-    LAUNCH_ACTION_FUNCTION install
+    LAUNCH_ACTION_FUNCTION make_label
       STR_VAR
-      file	= "all"
-      postfix	= "baf"
-      location	= "scripts"
+      label	= "mh#regeneration"
+    END
+
+    LAUNCH_ACTION_FUNCTION run
+      STR_VAR
+      file	= "regeneration_items regeneration_spells"
       locbase
     END
-  END	// NOT FILE_EXISTS_IN_GAME "mh#regen.itm"
+  END
 END	// setup_regeneration
 
 

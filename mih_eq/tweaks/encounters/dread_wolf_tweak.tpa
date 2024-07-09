@@ -1,0 +1,40 @@
+DEFINE_ACTION_FUNCTION dread_wolf_tweak
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "setup_regeneration"
+    locbase	= "shared/regeneration"
+  END
+
+
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "dread_wolf_bonus_hp"
+    RET
+    dread_wolf_bonus_hp	= value
+  END
+
+
+  // Install paw, in case we don't have MiH F&R
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "wolfdr1.itm"
+  BEGIN
+    itm.copy[p1-10=>wolfdr1]
+    [
+      m.fx.add{s_opcode = 98;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 2;;s_parameter2 = 3}
+      m.ab_fx.add{s_opcode = 78;;s_target := "PresetTarget";;s_duration = 50400;;s_parameter1 = 300;;s_parameter2 = 3;;s_save_vs_poison = 1}
+      m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 50400;;s_parameter2 = 7;;s_save_vs_poison = 1}
+      m.ab_fx.add{s_opcode = 139;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_parameter1 = GAME_IS "bgee" ? 26453 : 39752;;s_save_vs_poison = 1}
+    ]
+  END
+
+
+  // Patch known dread wolves (excluding SoD ones)
+  cre.edit[wolfd1 wolfdr wolfdr01|allow_missing:i=1]
+  [
+    m_hp = m_hp_max + dread_wolf_bonus_hp
+    m.cre_remove_items{ring95}
+    m.cre_add_items{wolfdr1(weapon1) wolfdr1(weapon2) trollimm(ring) mh#reg1x(belt)|replace:i=1}
+  ]
+END	// dread_wolf_tweak
+
+

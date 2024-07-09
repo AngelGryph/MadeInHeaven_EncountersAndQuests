@@ -1,0 +1,26 @@
+DEFINE_ACTION_FUNCTION regeneration_items
+BEGIN
+  ACTION_FOR_EACH item IN "mh#regen" "mh#reg1x"
+  BEGIN
+    itm.make["%item%"]
+    [
+      m.fx.add{s_opcode = 208;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 1}
+      m.fx.add{s_opcode = 101;;s_target := "Self";;s_timing := "Equipped";;s_parameter2 = 39}
+      m.fx.add{s_opcode = 267;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 14001}
+      m.fx.add{s_opcode = 232;;s_target := "Self";;s_timing := "Equipped";;s_parameter2 = 3;;s_resource := "%item%"}
+    ]
+  END
+
+  itm.make[mh#invul]
+  [
+    PATCH_FOR_EACH opcode IN 28 29 31 85 86 87 88 89 173
+    BEGIN
+      m.fx.add{s_opcode = opcode;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 100;;s_parameter2 = 1}
+    END
+    m.fx.add{s_opcode = 101;;s_target := "Self";;s_timing := "Equipped";;s_parameter2 = 25}
+    m.fx.add{s_opcode = 267;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 14017}
+    m.fx.add{s_opcode = 267;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 14662}
+  ]
+END	// regeneration_items
+
+

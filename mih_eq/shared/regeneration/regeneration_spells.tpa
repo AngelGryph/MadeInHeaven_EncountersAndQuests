@@ -1,0 +1,26 @@
+DEFINE_ACTION_FUNCTION regeneration_spells
+BEGIN
+  spl.make[mh#regen]
+  [
+    m_type := "Innate"
+    m.ab.add{}
+    m.ab_fx.add{s_opcode = 143;;s_target := "Self";;s_timing := "InstantPermanent";;s_parameter1 = 2;;s_resource := "mh#invul"}
+    m.ab_fx.add{s_opcode = 39;;s_target := "Self";;s_duration = 20;;s_parameter2 = 1;;s_special = 14}
+    m.ab_fx.add{s_opcode = 143;;s_target := "Self";;s_timing := "DelayPermanent";;s_duration = 20;;s_parameter1 = 2;;s_resource := "mh#regen"}
+    m.ab_fx.add{s_opcode = 17;;s_target := "Self";;s_timing := "DelayPermanent";;s_duration = 20;;s_parameter1 = 100;;s_parameter2 = 2}
+    m.ab_fx.add{s_opcode = 2;;s_target := "Self";;s_timing := "DelayPermanent";;s_duration = 20}
+  ]
+
+  spl.make[mh#reg1x]
+  [
+    m_type := "Innate"
+    m.ab.add{}
+    m.ab_fx.add{s_opcode = 143;;s_target := "Self";;s_timing := "InstantPermanent";;s_parameter1 = 2;;s_resource := "mh#invul"}
+    m.ab_fx.add{s_opcode = 39;;s_target := "Self";;s_duration = 20;;s_parameter2 = 1;;s_special = 14}
+    m.ab_fx.add{s_opcode = 112;;s_target := "Self";;s_timing := "DelayPermanent";;s_duration = 20;;s_parameter1 = 2;;s_resource := "mh#invul"}
+    m.ab_fx.add{s_opcode = 17;;s_target := "Self";;s_timing := "DelayPermanent";;s_duration = 20;;s_parameter1 = 100;;s_parameter2 = 2}
+    m.ab_fx.add{s_opcode = 2;;s_target := "Self";;s_timing := "DelayPermanent";;s_duration = 20}
+  ]
+END	// regeneration_spells
+
+
