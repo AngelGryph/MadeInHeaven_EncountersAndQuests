@@ -1,0 +1,102 @@
+DEFINE_ACTION_FUNCTION slime_tweaks
+BEGIN
+  LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
+
+
+  // Mustard Jelly
+  //
+  // Damage: 5d4 acid
+  // Resistances: 100% lightning, 50% cold, 10% MR, immune to Magic Missile.
+  // Skills: Stealth 90%
+  // Special: Cloud of lethargy gas, heals if struck by Magic Missiles.
+
+  itm.edit[jellmu1 jellmu2 dw#jelmu|allow_missing:i=1]
+  [
+    m.ab.alter{s_dicenumber = 0;;s_dicesize = 0;;s_damage_bonus = 0;;s_damage_type := "None"}
+    m.ab_fx.delete{}
+    m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_parameter1 = 2;;s_damage_type := "acid";;s_dicenumber = 5;;s_dicesize = 4}
+  ]
+
+  MUSTARD_JELLY_VAPOR=spl.make[MUSTARD_JELLY_VAPOR]
+  [
+    m_name := @1
+    m_type := "innate"
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_target := "caster";;s_projectile = 224}
+
+    m.ab_fx.add{s_opcode = 78;;s_target := "self";;s_duration = 6;;s_parameter2 = 10;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 93;;s_target := "self";;s_duration = 6;;s_parameter1 = 5;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 142;;s_target := "self";;s_duration = 6;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+  ]
+
+  itm.make[mh#musjl]
+  [
+    PATCH_FOR_EACH projectile IN 36 67 68 69 70 71 72 73 74 75 76 77
+    BEGIN
+      m.fx.add{s_opcode = 83;;s_target := "self";;s_timing := "equipped";;s_parameter2 = projectile}
+    END
+    m.fx.add{s_opcode = 206;;s_target := "self";;s_timing := "equipped";;s_resource := "%WIZARD_MAGIC_MISSILE%"}
+    m.fx.add{s_opcode = 206;;s_target := "self";;s_timing := "equipped";;s_resource := "%MUSTARD_JELLY_VAPOR%"}
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#musjl.baf"
+    location	= "scripts"
+  END
+
+  cre.edit[bdjellmu bpjlmu01 jellmu jellmul jellmusu jellymu jelmus01|allow_missing:i=1]
+  [
+    m_attacks = 2
+    m_xp_value = 4000
+    m_resist_magic = 10
+    m_hide_in_shadows = 90
+    m_move_silently = 90
+    m.cre_add_items{mh#musjl(belt)}
+    m.cre_insert_script{mh#musjl|loc=high}
+  ]
+
+
+  // Ochre Jelly
+  //
+  // Damage: 1d10+2 acid
+  // Resistances: 100% lightning.
+  // Special: Splits in two if attacked with lightning.
+
+  itm.edit[jelloc1 dw#jeloc|allow_missing:i=1]
+  [
+    m.ab.alter{s_dicenumber = 0;;s_dicesize = 0;;s_damage_bonus = 0;;s_damage_type := "None"}
+    m.ab_fx.delete{}
+    m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_parameter1 = 2;;s_damage_type := "acid";;s_dicenumber = 1;;s_dicesize = 10}
+  ]
+
+  cre.copy[jelloc=>mh#ochjl]	// This one exists in both BG1 and BG2
+  [
+    m_hp_current /= 2
+    m_hp_max /= 2
+    m_xp /= 2
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#ochjl.baf"
+    location	= "scripts"
+  END
+
+  cre.edit[bdjelloc bdshjell bpjloc01 jelloc jellocsu jellyoc jeloch01|allow_missing:i=1] 
+  [
+    m_resist_fire = 0
+    m_resist_magic_fire = 0
+    m_resist_cold = 0
+    m_resist_magic_cold = 0
+    m_resist_electricity = 100
+    m_resist_magic = 0
+    m.cre_insert_script{mh#ochjl|loc=high}
+  ]
+END	// slime_tweaks
+
+

@@ -131,8 +131,8 @@ LABEL MH#-MiH_EQ-PandP_Oozes_Slimes_Jellies
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "setup_slimes"
-  location      = "tweaks/encounters/slimes"
+  file          = "slime_tweaks"
+  location      = "tweaks/encounters"
 END
 
 

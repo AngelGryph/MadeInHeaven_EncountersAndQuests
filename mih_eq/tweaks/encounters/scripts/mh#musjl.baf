@@ -1,0 +1,27 @@
+IF
+  Delay(6)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself, MUSTARD_JELLY_VAPOR)
+    Continue()
+END
+
+IF
+  SpellCastOnMe([ANYONE], WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself, CLERIC_CURE_LIGHT_WOUNDS)
+    Continue()
+END
+
+IF
+  !ActuallyInCombat()
+  !StateCheck(Myself, STATE_NOT_TARGETABLE)
+  ActionListEmpty()
+  Delay(15)
+THEN
+  RESPONSE #100
+    Hide()
+END
+  
+

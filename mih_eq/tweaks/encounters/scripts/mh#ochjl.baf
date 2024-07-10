@@ -1,0 +1,12 @@
+IF
+  HitBy([ANYONE], ELECTRICITY)
+  HPPercentGT(Myself, 50)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself, @2)
+    CreateCreatureObjectEffect("mh#ochjl", "spstink", Myself())
+    CreateCreatureObjectEffect("mh#ochjl", "spstink", Myself())
+    DestroySelf()
+END
+
+
