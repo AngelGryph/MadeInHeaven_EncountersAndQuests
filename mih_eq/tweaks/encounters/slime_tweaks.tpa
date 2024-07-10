@@ -97,6 +97,18 @@ BEGIN
     m_resist_magic = 0
     m.cre_insert_script{mh#ochjl|loc=high}
   ]
+
+
+  // Gray Ooze
+  //
+  // Damage: 2d8 acid
+  // Resistances: 100% fire, 100% cold, 100% MR. (Already correct everywhere.)
+
+  itm.edit[oozegr1 dw#oozeg|allow_missing:i=1]
+  [
+    m.ab.alter{s_dicenumber = 0;;s_dicesize = 0;;s_damage_bonus = 0;;s_damage_type := "None"}
+    m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_parameter1 = 2;;s_damage_type := "acid";;s_dicenumber = 2;;s_dicesize = 8}
+  ]
 END	// slime_tweaks
 
 

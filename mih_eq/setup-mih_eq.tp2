@@ -173,8 +173,8 @@ LABEL MH#-MiH_EQ-Tougher_Spiders
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "setup_tougher_spiders"
-  location      = "tweaks/encounters/spiders"
+  file          = "spider_tweaks"
+  location      = "tweaks/encounters"
 END
 
 
