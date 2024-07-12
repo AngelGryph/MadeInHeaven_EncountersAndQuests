@@ -12,16 +12,16 @@ BEGIN
     m_can_target_invisible = 1
     m_castable_when_silenced = 1
 
-    m.ab.add{s_level = 1;;s_type = 2;;s_location = 4;;s_target = 1;;s_range = 10;;s_casting_time = 3;;s_projectile = 250}
+    m.ab.add{s_range = 10;;s_casting_time = 3;;s_projectile = 250}
 
     PATCH_IF enhanced_edition
     BEGIN
-      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 6;;s_dicesize = 4;;s_save_vs_breath = 1;;s_save_for_half = 1}
+      m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "cold";;s_dicenumber = 6;;s_dicesize = 4;;s_save_vs_breath = 1;;s_save_for_half = 1}
     END
     ELSE
     BEGIN
-      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 3;;s_dicesize = 4}
-      m.ab_fx.add{s_opcode = 12;;s_target = 2;;s_timing = 1;;s_parameter2 = 0x00020000;;s_dicenumber = 3;;s_dicesize = 4;;s_save_vs_breath = 1}
+      m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "cold";;s_dicenumber = 3;;s_dicesize = 4;;s_save_vs_breath = 1}
+      m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "cold";;s_dicenumber = 3;;s_dicesize = 4}
     END
   ]
 

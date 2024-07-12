@@ -122,6 +122,20 @@ END
 // Various Tweaks to Encounters/Quests
 // ===================================
 
+// P&P Ankhegs
+
+BEGIN @504
+GROUP @5
+
+LABEL MH#-MiH_EQ-PandP_Ankhegs
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "ankheg_tweak"
+  location      = "tweaks/encounters"
+END
+
+
 // P&P Oozes, Slimes & Jellies
 
 BEGIN @502

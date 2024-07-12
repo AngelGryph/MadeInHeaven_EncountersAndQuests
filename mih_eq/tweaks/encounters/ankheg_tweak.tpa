@@ -1,0 +1,53 @@
+DEFINE_ACTION_FUNCTION ankheg_tweak
+BEGIN
+  LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
+
+  spl.make[ANKHEG_ACID_SQUIRT]
+  [
+    m_name := @3
+    m_type := "innate"
+    m_hostile = 1
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_range = 10;;s_casting_time = 3;;s_projectile = 108}
+
+    PATCH_IF enhanced_edition
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "acid";;s_dicenumber = 8;;s_dicesize = 4;;s_save_vs_breath = 1;;s_save_for_half = 1}
+    END
+    ELSE
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target = "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "acid";;s_dicenumber = 4;;s_dicesize = 4}
+      m.ab_fx.add{s_opcode = 12;;s_target = "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "acid";;s_dicenumber = 4;;s_dicesize = 4;;s_save_vs_breath = 1}
+    END
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "ankheg.baf"
+    location	= "scripts"
+  END
+
+  cre.edit[bdankh01 bdankhsu bdneo ankheg ankhegf ankhegg ankhegq ankheg01|allow_missing:i=1]
+  [
+    m_level1  = 8	// Just in case.
+    m_str := "18/25"	// "capable of snapping a small tree in half"
+
+    m.cre_add_items{ankheg2(weapon1)|replace:i=1}
+    m.cre_strip_scripts{ankheg wtarsgt}
+    m.cre_insert_script{ankheg|loc=low}
+    PATCH_IF FILE_EXISTS_IN_GAME "dw1melmo.bcs"
+    BEGIN
+      m.cre_insert_script{dw1melmo|loc=low}
+    END
+    ELSE
+    BEGIN
+      m.cre_insert_script{wtasight|loc=low}
+    END
+  ]
+END	// ankheg_tweak
+
+
