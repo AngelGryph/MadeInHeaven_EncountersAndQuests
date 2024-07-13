@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION dread_wolf_tweak
+DEFINE_ACTION_FUNCTION pnp_dread_wolves
 BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
@@ -35,6 +35,6 @@ BEGIN
     m.cre_remove_items{ring95}
     m.cre_add_items{wolfdr1(weapon1) wolfdr1(weapon2) trollimm(ring) mh#reg1x(belt)|replace:i=1}
   ]
-END	// dread_wolf_tweak
+END	// pnp_dread_wolves
 
 

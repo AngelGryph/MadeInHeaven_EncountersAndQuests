@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION winter_wolf_tweak
+DEFINE_ACTION_FUNCTION pnp_winter_wolves
 BEGIN
   LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
 
@@ -84,6 +84,6 @@ BEGIN
       m.actor.add{s_name:="Winter Wolf" s_resref:="wolfwi" s_x=4910 s_y=2110 s_face:="SWW"}
     ]
   END
-END	// winter_wolf_tweak
+END	// pnp_winter_wolves
 
 

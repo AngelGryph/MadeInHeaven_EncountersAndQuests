@@ -131,7 +131,21 @@ LABEL MH#-MiH_EQ-PandP_Ankhegs
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "ankheg_tweak"
+  file          = "pnp_ankhegs"
+  location      = "tweaks/encounters"
+END
+
+
+// P&P Ghouls & Ghasts
+
+BEGIN @505
+GROUP @5
+
+LABEL MH#-MiH_EQ-PandP_Ghouls_and_Ghasts
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "pnp_ghouls_and_ghasts"
   location      = "tweaks/encounters"
 END
 
@@ -145,21 +159,7 @@ LABEL MH#-MiH_EQ-PandP_Oozes_Slimes_Jellies
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "slime_tweaks"
-  location      = "tweaks/encounters"
-END
-
-
-// P&P Winter Wolves
-
-BEGIN @501
-GROUP @5
-
-LABEL MH#-MiH_EQ-PandP_Winter_Wolves
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file          = "winter_wolf_tweak"
+  file          = "pnp_oozes_slimes_and_jellies"
   location      = "tweaks/encounters"
 END
 
@@ -173,7 +173,21 @@ LABEL MH#-MiH_EQ-PandP_Dread_Wolves
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "dread_wolf_tweak"
+  file          = "pnp_dread_wolves"
+  location      = "tweaks/encounters"
+END
+
+
+// P&P Winter Wolves
+
+BEGIN @501
+GROUP @5
+
+LABEL MH#-MiH_EQ-PandP_Winter_Wolves
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "pnp_winter_wolves"
   location      = "tweaks/encounters"
 END
 
@@ -187,7 +201,7 @@ LABEL MH#-MiH_EQ-Tougher_Spiders
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
-  file          = "spider_tweaks"
+  file          = "tougher_spiders"
   location      = "tweaks/encounters"
 END
 

@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION ankheg_tweak
+DEFINE_ACTION_FUNCTION pnp_ankhegs
 BEGIN
   LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
 
@@ -48,6 +48,6 @@ BEGIN
       m.cre_insert_script{wtasight|loc=low}
     END
   ]
-END	// ankheg_tweak
+END	// pnp_ankhegs
 
 

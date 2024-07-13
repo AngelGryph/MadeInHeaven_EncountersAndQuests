@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION slime_tweaks
+DEFINE_ACTION_FUNCTION pnp_oozes_slimes_and_jellies
 BEGIN
   LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
 
@@ -109,6 +109,6 @@ BEGIN
     m.ab.alter{s_dicenumber = 0;;s_dicesize = 0;;s_damage_bonus = 0;;s_damage_type := "None"}
     m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_parameter1 = 2;;s_damage_type := "acid";;s_dicenumber = 2;;s_dicesize = 8}
   ]
-END	// slime_tweaks
+END	// pnp_oozes_slimes_and_jellies
 
 

@@ -1,4 +1,4 @@
-DEFINE_ACTION_FUNCTION spider_tweaks
+DEFINE_ACTION_FUNCTION tougher_spiders
 BEGIN
   LAUNCH_ACTION_FUNCTION check_ini
     STR_VAR
@@ -170,6 +170,6 @@ BEGIN
     m_resist_crushing = spider_physical_resistance
     m_resist_missile = spider_physical_resistance
   ]
-END	// spider_tweaks
+END	// tougher_spiders
 
 
