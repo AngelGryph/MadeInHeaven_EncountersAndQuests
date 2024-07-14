@@ -27,7 +27,7 @@ BEGIN
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
-    file	= "ankheg.baf"
+    file	= "mh#ankhg.baf"
     location	= "scripts"
   END
 
@@ -38,7 +38,7 @@ BEGIN
 
     m.cre_add_items{ankheg2(weapon1)|replace:i=1}
     m.cre_strip_scripts{ankheg wtarsgt}
-    m.cre_insert_script{ankheg|loc=low}
+    m.cre_insert_script{mh#ankhg|loc=low}
     PATCH_IF FILE_EXISTS_IN_GAME "dw1melmo.bcs"
     BEGIN
       m.cre_insert_script{dw1melmo|loc=low}
