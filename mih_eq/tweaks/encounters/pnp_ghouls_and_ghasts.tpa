@@ -1,6 +1,87 @@
 DEFINE_ACTION_FUNCTION pnp_ghouls_and_ghasts
 BEGIN
-  
+  LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
+
+  // Ghouls
+  //
+  // 1d3/1d3/1d6 claw/claw/bite routine
+  // NB: Wanted to add elven immunity here, but that's already in EEFixpack.
+
+  itm.edit[ghoul1]
+  [
+    m.ab.alter{s_dicesize = 3;;s_damage_type := "slashing"}
+  ]
+
+  itm.copy[ghoul1=>ghoul2]
+  [
+    m.ab.alter{s_dicesize = 6;;s_damage_type := "piercing"}
+  ]
+
+  cre.edit[bhghoul1 ghoul ghoulsu korax ghoul01|allow_missing:i=1]
+  [
+    m.cre_add_items{ghoul2(shield)}
+    m.cre_set_proficiencies{2weapon=>3}
+    m_attacks = 2
+  ]
+
+  // Ghasts
+  //
+  // 1d4/1d4/1d8 claw/claw/bite routine
+  // Remove nausea effect from attacks and make it an aura.
+
+  itm.edit[ghast1]
+  [
+    m.ab.alter{s_dicesize = 4;;s_damage_type := "slashing"}
+    m.ab_fx.delete{s_opcode = 54 OR s_opcode = 142}
+  ]
+
+  itm.copy[ghast1=>ghast2]
+  [
+    m.ab.alter{s_dicesize = 8;;s_damage_type := "piercing"}
+  ]
+
+  GHAST_STENCH=spl.make[GHAST_STENCH]
+  [
+    m_name := @4
+    m_type := "innate"
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_target := "caster";;s_projectile = 224}
+
+    PATCH_IF enhanced_edition
+    BEGIN
+      m.ab_fx.add{s_opcode = 321;;s_target := "PresetTarget";;s_save_vs_poison = 1;;s_bypass_mirror_image = 1;;s_resource := "dw-self"}
+    END
+    m.ab_fx.add{s_opcode = 278;;s_target := "PresetTarget";;s_duration = 6;;s_parameter2 = "-1";;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 6;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    PATCH_IF !enhanced_edition
+    BEGIN
+      m.ab_fx.add{s_opcode = 206;;s_target := "PresetTarget";;s_duration = 6;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1;;s_resource := "dw-self"}
+    END
+  ]
+
+  ACTION_IF NOT FILE_EXISTS_IN_GAME "ghoul.cre"
+  BEGIN
+    COPY_EXISTING "ghoul01.cre" "override/ghoul.cre"
+  END
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#ghast.baf"
+    location	= "scripts"
+  END
+
+  cre.edit[bhghoul2 bhghoul4 ghast ghasts ghast01 ghastf01 gmayor gron theshal xghast1 xghast2|allow_missing:i=1]
+  [
+    m.cre_add_items{ghast2(shield)}
+    m.cre_set_proficiencies{2weapon=>3}
+    m_attacks = 2
+    m.cre_strip_scripts{ghast}
+    m.cre_insert_script{mh#ghast|loc=high}
+  ]
 END	// pnp_ghouls_and_ghasts
 
 

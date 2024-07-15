@@ -1,0 +1,32 @@
+IF
+  OnCreation()
+THEN
+  RESPONSE #25
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    Continue()
+  RESPONSE #25
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    Continue()
+  RESPONSE #25
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    Continue()
+  RESPONSE #25
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    CreateCreatureObject("ghoul", Myself(), 0, 0, 0)
+    Continue()
+END
+
+IF
+  Delay(6)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself, GHAST_STENCH)
+    Continue()
+END
+
+

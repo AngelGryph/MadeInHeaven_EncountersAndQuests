@@ -40,7 +40,6 @@ BEGIN
       m.fx.add{s_opcode = 83;;s_target := "self";;s_timing := "equipped";;s_parameter2 = projectile}
     END
     m.fx.add{s_opcode = 206;;s_target := "self";;s_timing := "equipped";;s_resource := "%WIZARD_MAGIC_MISSILE%"}
-    m.fx.add{s_opcode = 206;;s_target := "self";;s_timing := "equipped";;s_resource := "%MUSTARD_JELLY_VAPOR%"}
   ]
 
   LAUNCH_ACTION_FUNCTION install
