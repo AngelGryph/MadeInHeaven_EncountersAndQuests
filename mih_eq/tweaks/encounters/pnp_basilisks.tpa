@@ -1,0 +1,41 @@
+DEFINE_ACTION_FUNCTION pnp_basilisks
+BEGIN
+  LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
+
+  GREATER_BASILISK_BREATH=spl.make[GREATER_BASILISK_BREATH]
+  [
+    m_name := @5
+    m_type := "innate"
+    m_hostile = 1
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_range = 10;;s_casting_time = 3;;s_projectile = 224}
+
+    PATCH_IF enhanced_edition
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target := "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "poison";;s_dicenumber = 10;;s_dicesize = 8;;s_save_vs_breath = 1;;s_save_for_half = 1}
+    END
+    ELSE
+    BEGIN
+      m.ab_fx.add{s_opcode = 12;;s_target = "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "poison";;s_dicenumber = 5;;s_dicesize = 8}
+      m.ab_fx.add{s_opcode = 12;;s_target = "PresetTarget";;s_timing := "InstantPermanent";;s_damage_type := "poison";;s_dicenumber = 5;;s_dicesize = 8;;s_save_vs_breath = 1}
+    END
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mh#gblsk.baf"
+    location	= "scripts"
+  END
+
+  cre.edit[basilg basilgsu basilmut basilnad bd302bas bpbasg01 basgrt01|allow_missing:i=1]
+  [
+    m.cre_add_items{dragring(ring)}
+    m.cre_insert_script{mh#gblsk|loc=high}
+  ]
+END	// pnp_basilisks
+
+

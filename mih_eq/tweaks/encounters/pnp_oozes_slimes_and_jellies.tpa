@@ -28,9 +28,9 @@ BEGIN
 
     m.ab.add{s_target := "caster";;s_projectile = 224}
 
-    m.ab_fx.add{s_opcode = 78;;s_target := "PresetTarget";;s_duration = 6;;s_parameter2 = 10;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
-    m.ab_fx.add{s_opcode = 93;;s_target := "PresetTarget";;s_duration = 6;;s_parameter1 = 5;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
-    m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 6;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 78;;s_target := "PresetTarget";;s_duration = 18;;s_parameter2 = 10;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 93;;s_target := "PresetTarget";;s_duration = 18;;s_parameter1 = 5;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 18;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
   ]
 
   itm.make[mh#musjl]

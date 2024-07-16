@@ -1,5 +1,5 @@
 IF
-  Delay(6)
+  Delay(15)
 THEN
   RESPONSE #100
     ForceSpell(Myself, MUSTARD_JELLY_VAPOR)

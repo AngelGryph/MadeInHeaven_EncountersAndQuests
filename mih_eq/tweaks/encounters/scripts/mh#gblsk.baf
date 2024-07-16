@@ -1,0 +1,9 @@
+IF
+  Delay(15)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself, GREATER_BASILISK_BREATH)
+    Continue()
+END
+
+

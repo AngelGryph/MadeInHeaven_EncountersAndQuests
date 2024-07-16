@@ -136,6 +136,34 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// P&P Basilisks
+
+BEGIN @506
+GROUP @5
+
+LABEL MH#-MiH_EQ-PandP_Basilisks
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "pnp_basilisks"
+  location      = "tweaks/encounters"
+END
+
+
+// P&P Dread Wolves
+
+BEGIN @503
+GROUP @5
+
+LABEL MH#-MiH_EQ-PandP_Dread_Wolves
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "pnp_dread_wolves"
+  location      = "tweaks/encounters"
+END
+
+
 // P&P Ghouls & Ghasts
 
 BEGIN @505
@@ -160,20 +188,6 @@ LABEL MH#-MiH_EQ-PandP_Oozes_Slimes_Jellies
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "pnp_oozes_slimes_and_jellies"
-  location      = "tweaks/encounters"
-END
-
-
-// P&P Dread Wolves
-
-BEGIN @503
-GROUP @5
-
-LABEL MH#-MiH_EQ-PandP_Dread_Wolves
-
-LAUNCH_ACTION_FUNCTION run
-  STR_VAR
-  file          = "pnp_dread_wolves"
   location      = "tweaks/encounters"
 END
 

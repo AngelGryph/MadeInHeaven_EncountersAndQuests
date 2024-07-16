@@ -2,7 +2,7 @@ DEFINE_ACTION_FUNCTION pnp_ankhegs
 BEGIN
   LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
 
-  spl.make[ANKHEG_ACID_SQUIRT]
+  ANKHEG_ACID_SQUIRT=spl.make[ANKHEG_ACID_SQUIRT]
   [
     m_name := @3
     m_type := "innate"

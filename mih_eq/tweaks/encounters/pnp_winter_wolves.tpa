@@ -2,7 +2,7 @@ DEFINE_ACTION_FUNCTION pnp_winter_wolves
 BEGIN
   LOAD_TRA "%scs_tra_loc%/english/encounter_tweaks.tra" "%scs_tra_loc%/%LANGUAGE%/encounter_tweaks.tra"
 
-  spl.make[WINTER_WOLF_BREATH]
+  WINTER_WOLF_BREATH=spl.make[WINTER_WOLF_BREATH]
   [
     m_name := @0
     m_type := "innate"

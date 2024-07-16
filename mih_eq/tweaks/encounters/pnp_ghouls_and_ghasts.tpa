@@ -55,11 +55,11 @@ BEGIN
     BEGIN
       m.ab_fx.add{s_opcode = 321;;s_target := "PresetTarget";;s_save_vs_poison = 1;;s_bypass_mirror_image = 1;;s_resource := "dw-self"}
     END
-    m.ab_fx.add{s_opcode = 278;;s_target := "PresetTarget";;s_duration = 6;;s_parameter2 = "-1";;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
-    m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 6;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 278;;s_target := "PresetTarget";;s_duration = 18;;s_parameter2 = "-1";;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
+    m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 18;;s_parameter2 = 7;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1}
     PATCH_IF !enhanced_edition
     BEGIN
-      m.ab_fx.add{s_opcode = 206;;s_target := "PresetTarget";;s_duration = 6;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1;;s_resource := "dw-self"}
+      m.ab_fx.add{s_opcode = 206;;s_target := "PresetTarget";;s_duration = 18;;s_save_vs_poison = 1;;s_bypass_mirror_image = 1;;s_resource := "dw-self"}
     END
   ]
 
