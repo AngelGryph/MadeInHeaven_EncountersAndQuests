@@ -9,7 +9,7 @@ BEGIN
 
   itm.edit[ghoul1]
   [
-    m.ab.alter{s_dicesize = 3;;s_damage_type := "slashing"}
+    m.ab.alter{s_dicesize = 3;;s_damage_type := "slashing";;s_add_strength_bonus = 1}
   ]
 
   itm.copy[ghoul1=>ghoul2]
@@ -31,7 +31,7 @@ BEGIN
 
   itm.edit[ghast1]
   [
-    m.ab.alter{s_dicesize = 4;;s_damage_type := "slashing"}
+    m.ab.alter{s_dicesize = 4;;s_damage_type := "slashing";;s_add_strength_bonus = 1}
     m.ab_fx.delete{s_opcode = 54 OR s_opcode = 142}
   ]
 
@@ -63,10 +63,18 @@ BEGIN
     END
   ]
 
-  ACTION_IF NOT FILE_EXISTS_IN_GAME "ghoul.cre"
-  BEGIN
-    COPY_EXISTING "ghoul01.cre" "override/ghoul.cre"
-  END
+  GHAST_GHOUL_CALL=spl.make[GHAST_GHOUL_CALL]
+  [
+    m_name := @6
+    m_type := "innate"
+    m_ignore_dead_magic = 1
+    m_ignore_wild_surge = 1
+    m_can_target_invisible = 1
+    m_castable_when_silenced = 1
+
+    m.ab.add{s_target := "caster";;s_projectile = 1}
+    m.ab_fx.add{s_opcode = 67;;s_target := "Self";;s_timing := "InstantPermanent";;s_probability1 = (4 - entry_index) * 25 - 1;;s_resource := "ghoulsu"|number:i=4}
+  ]
 
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
