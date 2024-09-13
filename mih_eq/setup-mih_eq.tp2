@@ -220,3 +220,17 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// No Chapter 6 Teleport
+
+BEGIN @600
+GROUP @5
+
+LABEL MH#-MiH_EQ-No_Ch6_Teleport
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "no_ch6_teleport"
+  location      = "tweaks/quests"
+END
+
+

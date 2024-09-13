@@ -1,0 +1,22 @@
+DEFINE_ACTION_FUNCTION no_ch6_teleport
+BEGIN
+  ACTION_IF FILE_EXISTS_IN_GAME "cutckeep.bcs"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION ALTER_SCRIPT_BLOCK
+      STR_VAR
+      script	= "cutckeep"
+      swap_out1	= "^.*LeaveAreaLUA.*$"
+      swap_out2	= "^.*AdvanceTime.*$"
+    END
+  END
+  ELSE
+  BEGIN
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "no_ch6_teleport.d"
+      location	= "dialog"
+    END
+  END
+END	// no_ch6_teleport
+
+
