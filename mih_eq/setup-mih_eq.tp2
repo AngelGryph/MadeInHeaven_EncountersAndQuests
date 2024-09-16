@@ -118,6 +118,22 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Improved Zombie Farm
+
+BEGIN @402
+GROUP @4
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LABEL MH#-MiH_EQ-Improved_Zombie_Farm
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_zombie_farm"
+  location      = "tactical/bg1/zombie_farm"
+END
+
+
 // ===================================
 // Various Tweaks to Encounters/Quests
 // ===================================

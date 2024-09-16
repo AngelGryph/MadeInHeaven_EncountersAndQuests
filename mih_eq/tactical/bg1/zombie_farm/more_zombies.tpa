@@ -1,0 +1,60 @@
+DEFINE_ACTION_FUNCTION more_zombies
+BEGIN
+  are.edit[%Farmlands%]
+  [
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 640;;s_y = 3515;;s_face := "E"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 760;;s_y = 3495;;s_face := "SEE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 635;;s_y = 3580;;s_face := "SEE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 1915;;s_y = 2885;;s_face := "SW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 1870;;s_y = 2970;;s_face := "SSW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 1960;;s_y = 3060;;s_face := "SSW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 445;;s_y = 3115;;s_face := "SEE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 545;;s_y = 3075;;s_face := "SSE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 630;;s_y = 2435;;s_face := "SE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 640;;s_y = 2520;;s_face := "SEE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 435;;s_y = 1965;;s_face := "SE"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 520;;s_y = 2025;;s_face := "E"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 1505;;s_y = 1765;;s_face := "SSW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 1500;;s_y = 1870;;s_face := "SW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 1405;;s_y = 1895;;s_face := "SW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 3020;;s_y = 565;;s_face := "W"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 3175;;s_y = 585;;s_face := "SSW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 3905;;s_y = 285;;s_face := "W"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 3885;;s_y = 405;;s_face := "NWW"}
+    m.actor.add{s_name := "Zombie";;s_resref := "zombiew";;s_x = 3965;;s_y = 395;;s_face := "NW"}
+  ]
+
+  ADD_JOURNAL @1 @2
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "wenric_edits.d"
+    location	= "dialog"
+  END
+
+
+  // BGT and NTotSC compatibility hacks
+
+  ACTION_IF FILE_EXISTS_IN_GAME "%Farmlands%.bcs"
+  BEGIN
+    COPY_EXISTING "%Farmlands%.bcs" "override"
+      DECOMPILE_AND_PATCH
+      BEGIN
+        // BGT
+        REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+          ~NumDeadGT("ZombieW",19)~
+	  ~NumDeadGT("ZombieW",39)~
+        REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+          ~SetGlobal("ZombiesDead","GLOBAL",20)~
+          ~SetGlobal("ZombiesDead","GLOBAL",40)~
+
+        // NTotSC
+        REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+          ~Global("ZombiesDead","GLOBAL",21)~
+          ~Global("HelpWenric","GLOBAL",2)~
+      END
+      BUT_ONLY_IF_IT_CHANGES
+  END
+END	// more_zombies
+
+

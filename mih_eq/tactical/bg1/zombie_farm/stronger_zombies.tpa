@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION stronger_zombies
+BEGIN
+  itm.copy[b1-4=>mh#zomjj]
+  [
+    m_magical = 1
+    m_enchantment = 1
+    m.ab.alter{s_dicenumber = 3}
+  ]
+
+  cre.edit[zombiew]
+  [
+    m_both_names := @3
+    m.cre_min_stats{18/51 16 14 12 12 10}
+    m_level1 = 7
+    m_ac = 6
+    m_hp = 33
+    m_thac0 = 15
+    m_attacks = 2
+    m_class := "thief"
+    m.cre_enforce_saves{}
+    m_xp_value = 975
+    m_alignment := "neutral_evil"
+    m_resist_fire = 50
+    m_resist_magic_fire = 50
+    m_resist_electricity = 100
+    m_resist_crushing = 50
+    m_resist_piercing = 50
+    m_resist_missile = 80
+    m.cre_add_items{immune1(amulet) mh#zomjj(weapon1)}
+    m.fx.add{s_opcode = 83;;s_target := "Self";;s_timing := "InstantPermanentAfterDeath";;s_parameter2 = 36}
+  ]
+END	// stronger_zombies
+
+
