@@ -134,6 +134,22 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Improved Trademeet Battles
+
+BEGIN @403
+GROUP @4
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg2" @1
+
+LABEL MH#-MiH_EQ-Improved_Trademeet_Battles
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_trademeet"
+  location      = "tactical/bg2/trademeet"
+END
+
+
 // ===================================
 // Various Tweaks to Encounters/Quests
 // ===================================
@@ -242,6 +258,8 @@ BEGIN @600
 GROUP @5
 
 LABEL MH#-MiH_EQ-No_Ch6_Teleport
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR

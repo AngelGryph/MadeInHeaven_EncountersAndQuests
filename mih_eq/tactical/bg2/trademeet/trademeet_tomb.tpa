@@ -1,0 +1,46 @@
+DEFINE_ACTION_FUNCTION trademeet_tomb
+BEGIN
+  are.edit[ar2000]
+  [
+    m.region.alter{s_destination := "mhtomb";;s_entrance := "fr2000"|match=~"%s_name%" == "Tran2013"~}
+  ]
+
+
+  are.edit[ar2013]
+  [
+    m.region.alter{s_destination := "mhtomb";;s_entrance := "fr2013"|match=~"%s_name%" == "Tran2000"~}
+    m.actor.alter{s_name := "Skeleton Warrior";;s_resref := "skelwa"|match=~"%s_name%" == "Skeleton"~}
+
+    m.actor.add{s_name := "Skeleton Warrior";;s_resref := "skelwa";;s_x = 385;;s_y = 295;;s_face := "SSW"}
+    m.actor.add{s_name := "Mohrg";;s_resref := "mh#mohrg";;s_x = 415;;s_y = 335;;s_face := "SW"}
+    m.actor.add{s_name := "Barrow Wight";;s_resref := "mh#bwght";;s_x = 520;;s_y = 330;;s_face := "SW"}
+    m.actor.add{s_name := "Barrow Wight";;s_resref := "mh#bwght";;s_x = 590;;s_y = 425;;s_face := "SW"}
+    m.actor.add{s_name := "Skeleton Warrior" s_resref := "skelwa";;s_x = 600;;s_y = 505;;s_face := "SWW"}
+    m.actor.add{s_name := "Skeleton Warrior";;s_resref := "skelwa";;s_x = 515;;s_y = 445;;s_face := "SSW"}
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "mhtomb.are mhtomb.wed mhtomb.baf mhtombht.bmp mhtomblm.bmp mhtombsr.bmp"
+    location	= "area"
+  END
+
+  ACTION_IF enhanced_edition
+  BEGIN
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "mhtomb.tis mtomb00.pvrz"
+      location	= "area/ee"
+    END
+  END
+  ELSE
+  BEGIN
+    LAUNCH_ACTION_FUNCTION install
+      STR_VAR
+      file	= "mhtomb.tis"
+      location	= "area/old"
+    END
+  END
+END	// trademeet_tomb
+
+

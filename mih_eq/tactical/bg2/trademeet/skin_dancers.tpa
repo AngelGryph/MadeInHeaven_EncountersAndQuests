@@ -1,0 +1,34 @@
+DEFINE_ACTION_FUNCTION skin_dancers
+BEGIN
+  itm.copy[b1-10=>mh#skind]
+  [
+    m_magical = 1
+    m_enchantment = 1
+    m.fx.add{s_opcode = 98;;s_target := "Self";;s_timing := "Equipped";;s_parameter1 = 2;;s_parameter2 = 3}
+    m.ab_fx.add{s_opcode = 24;;s_target := "PresetTarget";;s_duration = 18;;s_save_vs_spell = 1;;s_dispel_resist := "DispelResist"}
+    m.ab_fx.add{s_opcode = 142;;s_target := "PresetTarget";;s_duration = 18;;s_parameter2 = 36;;s_save_vs_spell = 1;;s_dispel_resist := "DispelResist"}
+  ]
+
+
+  cre.edit[tanner trskin03 trskin06 trskin3b trskin6b trskind1 trskind2]
+  [
+    m_level1 = 14
+    m.cre_enforce_saves{}
+    m_thac0 = 6
+    m_hp = 88
+    m_abils := "18/51,9,9,14,16,9"
+    m_ac = 0
+    m_attacks = 3
+    m_resist_slashing = 50
+    m_resist_piercing = 50
+    m_resist_missile = 85
+    m_resist_cold = 50
+    m_resist_magic_cold = 50
+    m_resist_electricity = 50
+    m_xp_value = 5000
+    m_alignment := "chaotic_evil"
+    m.cre_add_items{mh#skind(weapon1) ring95(ring) immune1(amulet)|replace:i=1}
+  ]
+END	// skin_dancers
+
+
