@@ -22,7 +22,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION install
     STR_VAR
     file	= "mhtomb.are mhtomb.wed mhtomb.baf mhtombht.bmp mhtomblm.bmp mhtombsr.bmp"
-    location	= "area"
+    location	= "areas"
   END
 
   ACTION_IF enhanced_edition
@@ -30,15 +30,15 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install
       STR_VAR
       file	= "mhtomb.tis mtomb00.pvrz"
-      location	= "area/ee"
+      location	= "areas/ee"
     END
   END
   ELSE
   BEGIN
-    LAUNCH_ACTION_FUNCTION install
+    LAUNCH_ACTION_FUNCTION HANDLE_TILESETS
       STR_VAR
-      file	= "mhtomb.tis"
-      location	= "area/old"
+      tiz_path	= "%MOD_FOLDER%/%component_loc%/areas/old"
+      tisunpack_path	= "%MOD_FOLDER%/bin"
     END
   END
 END	// trademeet_tomb
