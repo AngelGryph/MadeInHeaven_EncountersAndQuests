@@ -1,0 +1,25 @@
+DEFINE_ACTION_FUNCTION bounty_notices
+BEGIN
+  itm.edit[scrltar scrlkar scrlnei scrl3b]
+  [
+    m_critical_item = 1
+  ]
+
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "bounty_notices.d"
+    location	= "dialogs"
+  END
+
+  ADD_JOURNAL @2 @14
+
+  ACTION_FOR_EACH dialog IN "vai"
+  BEGIN
+    LAUNCH_ACTION_FUNCTION erase_journal_entries_on_bg2_transition
+      STR_VAR
+      dialog
+    END
+  END
+END	// bounty_notices
+
+

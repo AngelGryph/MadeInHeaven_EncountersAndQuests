@@ -1,0 +1,10 @@
+DEFINE_ACTION_FUNCTION setup_hunted_or_hunter
+BEGIN
+  LAUNCH_ACTION_FUNCTION run
+    STR_VAR
+    file	= "bounty_notices"
+    tra		= "hunted_or_hunter"
+  END
+END	// setup_hunted_or_hunter
+
+

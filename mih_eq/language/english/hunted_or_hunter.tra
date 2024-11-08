@@ -1,0 +1,19 @@
+@0    = ~There is one other thing that bothers me.  Several known assassins have been spotted in the area.  I know not whom or what they may be after, but it can be nothing good.  Should you encounter any of them, you have full permission to use lethal force.  Each of them has already earned the death penalty several times over.~
+@1    = ~The ones we know about are the mage Tarnesh, the dwarf Karlat, the cleric Neira and the rogue Nimbul.  There may very well be others.  Should you have any information on them, come see me.  Be careful, they are very dangerous.~
+@2    = ~Hunted or Hunter?
+
+Officer Vai of the Flaming Fist has warned me about several assassins that have been spotted in the area.  If I have any information on them I should go see her.  Each of them has been declared an outlaw, so I am allowed to use lethal force.~
+@3    = ~There seems to be something on your mind, <CHARNAME>.  What is it?~
+@4    = ~I encountered the mage Tarnesh at the Friendly Arm Inn.  He did not survive our meeting.  This scroll was on him.~
+@5    = ~Karlat the dwarf attacked me in the Red Sheaf here in Beregost.  He had this scroll on him.~
+@6    = ~The cleric Neira ambushed me in Nashkel just when I entered the inn.  She had this scroll on her.~
+@7    = ~I was attacked by Nimbul in Nashkel after I returned from the mines.  He had this scroll on him.~
+@8    = ~Mm... so it was you he was after.  Good job eliminating him, <CHARNAME>.  Here, 200 gold for the job.~
+@9    = ~That murderous money grubber was here in Beregost!?  Well, it's good he has been taken care of.  Here, take this.~
+@10   = ~I don't know which dark deity that bitch worshiped, but she was behind at least half a dozen murders.  Such clergy, we can do without.  Here, some gold for the job and keep up the good work.~
+@11   = ~You took out Nimbul!?  We've been after him forever, but none who confronted him lived to tell the tale.  You are quite something, <CHARNAME>.  Here, the bounty that was on his head is for you.~
+@12   = ~Incredible...  You took out four dangerous assassins like they were nothing.  You should still be careful though.  Someone who is spending this much gold to get you is not going to give up soon.~
+@13   = ~Likely, they will hire even more powerful assassins to come after you, and they will probably no longer make the mistake of confronting you alone.  Be careful out there, <CHARNAME>.~
+@14   = ~Hunted or Hunter?
+
+I took out four dangerous assassins that were after my head, a feat that thoroughly impressed Officer Vai.  We still have no clue who is behind them though, but she warned me that they will likely not give up.  I should expect more assassins to come after me.~

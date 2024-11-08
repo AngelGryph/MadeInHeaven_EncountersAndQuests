@@ -82,6 +82,22 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Hunted or Hunter?
+
+BEGIN @301
+GROUP @3
+
+LABEL MH#-MiH_EQ-Hunted_or_Hunter
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "setup_hunted_or_hunter"
+  location	= "quests/bg1/hunted_or_hunter"
+END
+
+
 // ===================
 // Tactical Challenges
 // ===================
