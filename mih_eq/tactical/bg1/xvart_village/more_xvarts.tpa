@@ -1,0 +1,21 @@
+DEFINE_ACTION_FUNCTION more_xvarts
+BEGIN
+  are.edit[%XvartVillage%]
+  [
+    m.actor.add{s_name := "Xvart";;s_resref := "mh#xvart";;s_x = 3600;;s_y = 2255;;s_face := 0}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 3490;;s_y = 2250;;s_face := "SSW"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 3660;;s_y = 2280;;s_face := "SW"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 3405;;s_y = 915;;s_face := "NE"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 3480;;s_y = 790;;s_face := "NNE"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 3585;;s_y = 795;;s_face := "NNW"}
+    m.actor.add{s_name := "Xvart";;s_resref := "mh#xvart";;s_x = 2715;;s_y = 1965;;s_face := "SEE"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 2735;;s_y = 2060;;s_face := "NE"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 2225;;s_y = 1870;;s_face := "NWW"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 2215;;s_y = 1985;;s_face := "NNW"}
+    m.actor.add{s_name := "Xvart";;s_resref := "xvart2";;s_x = 2040;;s_y = 1815;;s_face := "W"}
+
+    m.spawn_point.alter{s_base_number *= 2;;s_max_number *= 3;;s_probability_day = 100;;s_probability_night = 100;;s_resref_1 := "xvart_a";;s_resref_2 := "xvart_b";;s_resref_3 := "xvart_c";;s_count = 3}
+  ]
+END	// more_xvarts
+
+

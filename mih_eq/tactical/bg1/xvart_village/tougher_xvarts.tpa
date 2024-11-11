@@ -1,0 +1,31 @@
+DEFINE_ACTION_FUNCTION tougher_xvarts
+BEGIN
+  // make Nexlit a 4th level fighter
+  cre.edit[nexlit]
+  [
+    m_xp_value = 120
+    m_gold = 75
+    m_abils := "18/10,10,8,14,16,8"
+    m_class := "fighter"
+    m_level1 = 4
+    m_hp = 32
+    m.cre_enforce_thac0{}
+    m.cre_enforce_saves{}
+    m.cre_set_proficiencies{shortsword=>3 singleweapon=>2}
+    m.cre_remove_items{"sw1h07"}
+    m.cre_add_items{"sw1h08(weapon1)"}
+  ]
+
+  // non-summoned version of xvart protectors
+  cre.copy[xvart=>mh#xvart]
+  [
+    m_xp_value = 65
+    m_power = 6
+    m_level1 = 3
+    m_hp = 21
+    m.cre_enforce_thac0{}
+    m.cre_enforce_saves{}
+  ]
+END	// tougher_xvarts
+
+

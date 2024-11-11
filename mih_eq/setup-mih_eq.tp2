@@ -134,6 +134,22 @@ LAUNCH_ACTION_FUNCTION run
 END
 
 
+// Improved Xvart Village
+
+BEGIN @404
+GROUP @4
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LABEL MH#-MiH_EQ-Improved_Xvart_Village
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_xvart_village"
+  location      = "tactical/bg1/xvart_village"
+END
+
+
 // Improved Zombie Farm
 
 BEGIN @402
