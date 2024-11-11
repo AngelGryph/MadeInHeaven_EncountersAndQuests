@@ -8,6 +8,8 @@ Currently included here are:
 From Sword Coast Stratagems v35.20, updated November 4th 2024:
 
 sfo2e/		- SFO 2e function library, by DavidW.
+- Added gold stat at 0x1c to cre v1.2 definition
+- Removed duplicate definitions of hp and level_all
 
 
 From G3 BG2 Fixpack v13, updated December 16th 2023:
