@@ -1,0 +1,23 @@
+DEFINE_ACTION_FUNCTION ulcaster_stays_put
+BEGIN
+  LAUNCH_ACTION_FUNCTION install
+    STR_VAR
+    file	= "ulcaster_stays_put.d"
+    location	= "dialogs"
+  END
+
+  cre.edit[ulcast]
+  [
+    m.cre_strip_scripts{"randwalk"}
+  ]
+
+  are.edit[%Ulcaster%]
+  [
+    m.actor.alter{s_hours = 0b11111000000000000000001|match=~"%s_resref%" == "ulcast"~}
+  ]
+
+  are.edit[%UlcasterRuins%]
+  [
+    m.actor.add{s_name := "Ulcaster";;s_resref := "Ulcast";;s_x = 1605;;s_y = 687;;s_face := "SW";;s_hours = 0b00000111111111111111110}
+  ]
+END	// ulcaster_stays_put

@@ -280,7 +280,23 @@ REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file		= "no_ch6_teleport"
-  location      = "tweaks/quests"
+  location      = "tweaks/quests/bg1"
+END
+
+
+// Ulcaster Stays Put
+
+BEGIN @601
+GROUP @5
+
+LABEL MH#-MiH_EQ-Ulcaster_Stays_Put
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "ulcaster_stays_put"
+  location      = "tweaks/quests/bg1"
 END
 
 

@@ -14,7 +14,7 @@ BEGIN
     LAUNCH_ACTION_FUNCTION install
       STR_VAR
       file	= "no_ch6_teleport.d"
-      location	= "dialog"
+      location	= "dialogs"
     END
   END
 END	// no_ch6_teleport
