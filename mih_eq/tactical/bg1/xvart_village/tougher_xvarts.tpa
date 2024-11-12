@@ -19,6 +19,7 @@ BEGIN
   // non-summoned version of xvart protectors
   cre.copy[xvart=>mh#xvart]
   [
+    m_both_names := @0
     m_xp_value = 65
     m_power = 6
     m_level1 = 3

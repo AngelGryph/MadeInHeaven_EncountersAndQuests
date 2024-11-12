@@ -3,6 +3,7 @@ BEGIN
   LAUNCH_ACTION_FUNCTION run
     STR_VAR
     file	= "tougher_xvarts more_xvarts"
+    tra		= "xvart_village"
   END
 END	// setup_xvart_village
 
