@@ -1929,6 +1929,7 @@ SET $SFO_cre_v1_offsets(~name_short~)=~12~
 SET $SFO_cre_v1_offsets(~name_short-strref~)=~12~
 SET $SFO_cre_v1_offsets(~both_names~)=~-1~
 SET $SFO_cre_v1_offsets(~both_names-strref~)=~-1~
+SET $SFO_cre_v1_offsets(~ac~)=~-1~
 SET $SFO_cre_v1_offsets(~show_longname~)=~16~
 SET $SFO_cre_v1_offsets(~no_corpse~)=~16~
 SET $SFO_cre_v1_offsets(~permanent_corpse~)=~16~
@@ -2011,7 +2012,6 @@ SET $SFO_cre_v1_offsets(~reputation~)=~68~
 SET $SFO_cre_v1_offsets(~hide_in_shadows~)=~69~
 SET $SFO_cre_v1_offsets(~ac_natural~)=~70~
 SET $SFO_cre_v1_offsets(~ac_effective~)=~72~
-SET $SFO_cre_v1_offsets(~ac~)=~-1~
 SET $SFO_cre_v1_offsets(~ac_mod_crushing~)=~74~
 SET $SFO_cre_v1_offsets(~ac_mod_missile~)=~76~
 SET $SFO_cre_v1_offsets(~ac_mod_piercing~)=~78~
@@ -2289,6 +2289,7 @@ SPRINT $SFO_cre_v1_types(~name_short~) ~strref~
 SPRINT $SFO_cre_v1_types(~name_short-strref~) ~long~
 SPRINT $SFO_cre_v1_types(~both_names~) ~multiple~
 SPRINT $SFO_cre_v1_types(~both_names-strref~) ~multiple~
+SPRINT $SFO_cre_v1_types(~ac~) ~multiple~
 SPRINT $SFO_cre_v1_types(~show_longname~) ~flag~
 SPRINT $SFO_cre_v1_types(~no_corpse~) ~flag~
 SPRINT $SFO_cre_v1_types(~permanent_corpse~) ~flag~
@@ -2371,7 +2372,6 @@ SPRINT $SFO_cre_v1_types(~reputation~) ~sbyte~
 SPRINT $SFO_cre_v1_types(~hide_in_shadows~) ~byte~
 SPRINT $SFO_cre_v1_types(~ac_natural~) ~sshort~
 SPRINT $SFO_cre_v1_types(~ac_effective~) ~sshort~
-SPRINT $SFO_cre_v1_types(~ac~) ~multiple~
 SPRINT $SFO_cre_v1_types(~ac_mod_crushing~) ~sshort~
 SPRINT $SFO_cre_v1_types(~ac_mod_missile~) ~sshort~
 SPRINT $SFO_cre_v1_types(~ac_mod_piercing~) ~sshort~
@@ -2729,8 +2729,8 @@ SPRINT $SFO_cre_v1_commalists(~saves~) ~save_vs_death,save_vs_wands,save_vs_poly
 SPRINT $SFO_cre_v1_commalists(~abils~) ~str,int,wis,dex,con,cha~
 SPRINT $SFO_cre_v1_multiples(~both_names~) ~name_long,name_short~
 SPRINT $SFO_cre_v1_multiples(~both_names-strref~) ~name_long-strref,name_short-strref~
-SPRINT $SFO_cre_v1_multiples(~hp~) ~hp_current,hp_max~
 SPRINT $SFO_cre_v1_multiples(~ac~) ~ac_natural,ac_effective~
+SPRINT $SFO_cre_v1_multiples(~hp~) ~hp_current,hp_max~
 SPRINT $SFO_cre_v1_multiples(~level_all~) ~level1,level2,level3~
 SPRINT $SFO_cre_v1_resrefs(~portrait_small~) ~bmp~
 SPRINT $SFO_cre_v1_resrefs(~portrait_large~) ~bmp~
