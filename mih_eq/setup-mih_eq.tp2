@@ -29,14 +29,14 @@ BEGIN "Collect Animations"
 
 REQUIRE_PREDICATE GAME_IS "bgee bg2ee eet" "Run this on EE only!"
 
-ACTION_FOR_EACH animation IN "WIGHT_GRAY" "WIGHT_GREEN" "WIGHT_YELLOW" "WIGHT_BARROW"
+ACTION_FOR_EACH animation IN "GIANT_HILL" "WIGHT_GRAY" "WIGHT_GREEN" "WIGHT_YELLOW" "WIGHT_BARROW"
 BEGIN
   LAUNCH_ACTION_FUNCTION anim_collect
     INT_VAR
     no_log_record	= 1
     STR_VAR
     animation
-    resource_loc	= "%MOD_FOLDER%/shared/animations/resources"
+    resource_loc	= "%MOD_FOLDER%/shared/monsters/animations"
   END
 END
 */
@@ -116,6 +116,24 @@ LAUNCH_ACTION_FUNCTION run
   file          = "setup_candlekeep_catacombs"
   location      = "tactical/bg1/candlekeep_catacombs"
 END
+
+
+/*
+// Improved Mutamin's Garden
+
+BEGIN @405
+GROUP @4
+
+LABEL MH#-MiH_EQ-Improved_Mutamins_Garden
+
+REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file          = "setup_mutamins_garden"
+  location      = "tactical/bg1/mutamins_garden"
+END
+*/
 
 
 // Improved Ulcaster Ruins
@@ -315,4 +333,19 @@ LAUNCH_ACTION_FUNCTION run
   location      = "tweaks/quests/bg1"
 END
 
+
+// More Spectacles of Spectacle charges
+
+BEGIN @700
+GROUP @5
+
+LABEL MH#-MiH_EQ-Spectacle_Charges
+
+REQUIRE_PREDICATE GAME_INCLUDES "sod" @1
+
+LAUNCH_ACTION_FUNCTION run
+  STR_VAR
+  file		= "spectacle_charges"
+  location      = "tweaks/quests/sod"
+END
 

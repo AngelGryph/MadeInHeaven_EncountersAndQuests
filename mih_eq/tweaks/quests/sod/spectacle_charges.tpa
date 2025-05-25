@@ -1,0 +1,30 @@
+DEFINE_ACTION_FUNCTION spectacle_charges
+BEGIN
+  LAUNCH_ACTION_FUNCTION check_ini
+    STR_VAR
+    ini		= "spectacle_charges"
+    RET
+    spectacle_charges	= value
+  END
+
+  itm.edit[bdmisc01]
+  [
+    m.ab.alter{s_number_charges = spectacle_charges}
+  ]
+
+  cre.edit[bdzaviak]
+  [
+    m.cre_add_items{bdmisc01(helmet,x%spectacle_charges%)|replace:i=1}
+  ]
+
+  COPY_EXISTING "bdbaldur.bcs" "override"
+                "achievem.bcs" "override"
+    DECOMPILE_AND_PATCH
+    BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH
+        ~Global("bd_spect","global",3)~
+        ~Global("bd_spect","global",%charges%)~
+    END
+END	// spectacle_charges
+
+
