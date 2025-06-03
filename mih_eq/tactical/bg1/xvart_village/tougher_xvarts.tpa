@@ -8,7 +8,7 @@ BEGIN
     m_abils := "18/10,10,8,14,16,8"
     m_class := "fighter"
     m_level1 = 4
-    m_hp = 32
+    m_hp = 40
     m.cre_enforce_thac0{}
     m.cre_enforce_saves{}
     m.cre_set_proficiencies{shortsword=>3 singleweapon=>2}
@@ -23,7 +23,7 @@ BEGIN
     m_xp_value = 65
     m_power = 6
     m_level1 = 3
-    m_hp = 21
+    m_hp = 24
     m.cre_enforce_thac0{}
     m.cre_enforce_saves{}
   ]

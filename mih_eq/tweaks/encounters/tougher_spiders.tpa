@@ -19,14 +19,14 @@ BEGIN
   //
   // Base THAC0: 19
   // Base AC: 6
-  // Base HD: 2+2
+  // Base HD: 2+2 (18 hp)
 
   cre.edit[bdspidhu spidhu spidland spidhu01|allow_missing:i=1]
   [
     m_thac0 = 19 - spider_combat_modifier
     m_ac = 6 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 2
+    m_hp = 18 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
@@ -38,14 +38,14 @@ BEGIN
   //
   // Base THAC0: 15
   // Base AC: 4
-  // Base HD: 4+4
+  // Base HD: 4+4 (36 hp)
 
   cre.edit[bdhelp01 bdspidgi bpspid02 plyspid02 rsspidgi spidgi spidgisu spidgi01 spspid05 udspid01 udspid02 udspid03 udspid04 udspid05 udspid06 udspid07 udspid08|allow_missing:i=1]
   [
     m_thac0 = 15 - spider_combat_modifier
     m_ac = 4 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 4
+    m_hp = 36 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
@@ -57,7 +57,7 @@ BEGIN
   //
   // Base THAC0: 15
   // Base AC: 7
-  // Base HD: 5+5
+  // Base HD: 5+5 (45 hp)
   //
   // NB: Astral Phase Spiders are unique to Durlag's Tower,
   // so those are addressed in the tactical challenge.
@@ -67,7 +67,7 @@ BEGIN
     m_thac0 = 15 - spider_combat_modifier
     m_ac = 7 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier - 2
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 5
+    m_hp = 45 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
@@ -79,14 +79,14 @@ BEGIN
   //
   // Base THAC0: 15
   // Base AC: 3
-  // Base HD: 5+5
+  // Base HD: 5+5 (45 hp)
 
   cre.edit[bdhelp03 bdspid7l bpspid03 plyspid spidsw spidswsu spidsw01 spspid07|allow_missing:i=1]
   [
     m_thac0 = 15 - spider_combat_modifier
     m_ac = 3 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier - 4
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 5
+    m_hp = 45 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
@@ -98,14 +98,14 @@ BEGIN
   //
   // Base THAC0: 11
   // Base AC: 4
-  // Base HD: 8+8
+  // Base HD: 8+8 (72 hp)
 
   cre.edit[bdspidga|allow_missing:i=1]
   [
     m_thac0 = 11 - spider_combat_modifier
     m_ac = 4 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 8
+    m_hp = 72 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
@@ -117,7 +117,7 @@ BEGIN
   //
   // Base THAC0: 17
   // Base AC: 5
-  // Base HD: 3+2
+  // Base HD: 3+2 (26 hp)
   //
   // NB: Leave ttspid alone, it's for the tutorial.
 
@@ -138,7 +138,7 @@ BEGIN
     m_thac0 = 17 - spider_combat_modifier
     m_ac = 5 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 2
+    m_hp = 72 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
@@ -155,7 +155,7 @@ BEGIN
   //
   // Base THAC0: 13
   // Base AC: 4
-  // Base HD: 7+4
+  // Base HD: 7+4 (60 hp)
 
   cre.edit[ohbmena7 smspid02 spidvo01|allow_missing:i=1]
   [
@@ -164,7 +164,7 @@ BEGIN
     m_thac0 = 13 - spider_combat_modifier
     m_ac = 4 - spider_combat_modifier
     m_ac_mod_missile = 0 - spider_combat_modifier - 2
-    m_hp = (spider_combat_modifier + 8) * m_level1 + 4
+    m_hp = 60 + spider_combat_modifier * 3
     m_resist_slashing = spider_physical_resistance
     m_resist_piercing = spider_physical_resistance
     m_resist_crushing = spider_physical_resistance
