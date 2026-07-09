@@ -7,7 +7,7 @@ BACKUP "weidu_external/backup/mih_eq"
 SUPPORT "https://www.gibberlings3.net/forums/topic/29992-my-new-made-in-heaven-mods/"
 VERSION "v6"
 
-MODDER setup_tra none area_variables warn missing_extern warn missing_resref warn ict2_actions none missing_eval none overwriting_file none fun_args warn
+//MODDER setup_tra none area_variables warn missing_extern warn missing_resref warn ict2_actions none missing_eval none overwriting_file none fun_args warn
 
 ASK_EVERY_COMPONENT
 NO_IF_EVAL_BUG
@@ -53,7 +53,7 @@ GROUP @2
 
 LABEL MH#-MiH_EQ-Sarevoks_Assassins
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -73,7 +73,7 @@ GROUP @3
 
 LABEL MH#-MiH_EQ-The_Surgeons_Plight
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -89,7 +89,7 @@ GROUP @3
 
 LABEL MH#-MiH_EQ-Hunted_or_Hunter
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -109,7 +109,7 @@ GROUP @4
 
 LABEL MH#-MiH_EQ-Improved_Candlekeep_Catacombs
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -141,7 +141,7 @@ END
 BEGIN @401
 GROUP @4
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LABEL MH#-MiH_EQ-Improved_Ulcaster_Ruins
 
@@ -157,7 +157,7 @@ END
 BEGIN @404
 GROUP @4
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LABEL MH#-MiH_EQ-Improved_Xvart_Village
 
@@ -173,7 +173,7 @@ END
 BEGIN @402
 GROUP @4
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LABEL MH#-MiH_EQ-Improved_Zombie_Farm
 
@@ -189,7 +189,7 @@ END
 BEGIN @403
 GROUP @4
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg2" @1
+REQUIRE_PREDICATE GAME_IS "bg2 bgt bg2ee eet" @1
 
 LABEL MH#-MiH_EQ-Improved_Trademeet_Battles
 
@@ -211,6 +211,8 @@ GROUP @5
 
 LABEL MH#-MiH_EQ-PandP_Ankhegs
 
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "pnp_ankhegs"
@@ -224,6 +226,8 @@ BEGIN @506
 GROUP @5
 
 LABEL MH#-MiH_EQ-PandP_Basilisks
+
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -239,6 +243,8 @@ GROUP @5
 
 LABEL MH#-MiH_EQ-PandP_Dread_Wolves
 
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "pnp_dread_wolves"
@@ -252,6 +258,8 @@ BEGIN @505
 GROUP @5
 
 LABEL MH#-MiH_EQ-PandP_Ghouls_and_Ghasts
+
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -267,6 +275,8 @@ GROUP @5
 
 LABEL MH#-MiH_EQ-PandP_Oozes_Slimes_Jellies
 
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "pnp_oozes_slimes_and_jellies"
@@ -280,6 +290,8 @@ BEGIN @501
 GROUP @5
 
 LABEL MH#-MiH_EQ-PandP_Winter_Wolves
+
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -295,6 +307,8 @@ GROUP @5
 
 LABEL MH#-MiH_EQ-Tougher_Spiders
 
+REQUIRE_PREDICATE GAME_IS "tob bgt bgee bg2ee eet" @1
+
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
   file          = "tougher_spiders"
@@ -309,7 +323,7 @@ GROUP @5
 
 LABEL MH#-MiH_EQ-No_Ch6_Teleport
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -325,7 +339,7 @@ GROUP @5
 
 LABEL MH#-MiH_EQ-Ulcaster_Stays_Put
 
-REQUIRE_PREDICATE GAME_INCLUDES "bg1" @1
+REQUIRE_PREDICATE GAME_IS "bgt bgee eet" @1
 
 LAUNCH_ACTION_FUNCTION run
   STR_VAR
@@ -348,4 +362,5 @@ LAUNCH_ACTION_FUNCTION run
   file		= "spectacle_charges"
   location      = "tweaks/quests/sod"
 END
+
 
